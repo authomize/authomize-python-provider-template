@@ -24,16 +24,16 @@ class BaseHelathChecker:
         return True
 
     def can_connect_to_authomize(self) -> bool:
-        return True
+        return self.authomize_api_client.is_alive().isAlive
 
     def can_write_to_authomize(self) -> bool:
-        return True
+        return self.authomize_api_client.me()
 
     def can_connect_to_data_provider(self) -> bool:
-        return True
+        raise NotImplementedError()
 
     def can_read_from_data_provider(self) -> bool:
-        return True
+        raise NotImplementedError()
 
     def is_healthy(self) -> bool:
         health, explanation = self._is_healthy()
