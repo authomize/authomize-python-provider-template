@@ -1,5 +1,6 @@
 from typing import Iterable
-from provider_name.extractors.base_extactor import BaseExtractor
+
+from provider_base.extractors.base_extactor import BaseExtractor
 
 
 class IntegrationsExtactor(BaseExtractor):

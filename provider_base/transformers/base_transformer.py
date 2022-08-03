@@ -1,15 +1,15 @@
 from typing import Iterable
 
+from authomize.rest_api_client.generated.schemas import ItemsBundleSchema
 from pydantic import ValidationError
 
-from provider_name.models.shared_memory import SharedMemory
-from authomize.rest_api_client.generated.schemas import ItemsBundleSchema
+from provider_base.models.base_shared_memory import BaseSharedMemory
 
 
 class BaseTransfomer:
     def __init__(
         self,
-        shared_memory: SharedMemory
+        shared_memory: BaseSharedMemory
     ) -> None:
         self.shared_memory = shared_memory
     

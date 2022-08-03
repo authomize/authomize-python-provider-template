@@ -1,12 +1,15 @@
-from authomize.rest_api_client.generated.schemas import ItemsBundleSchema
-from authomize.rest_api_client.client import Client
-
 from typing import Iterable
-from provider_name.configuration.application_configuration import ApplicationConfiguration
-from provider_name.configuration.authomize_api_configuration import AuthomizeApiConfiguration
+
+from authomize.rest_api_client.client import Client
+from authomize.rest_api_client.generated.schemas import ItemsBundleSchema
+
+from provider_base.configuration.application_configuration import \
+    ApplicationConfiguration
+from provider_base.configuration.authomize_api_configuration import \
+    AuthomizeApiConfiguration
 
 
-class UnitedLoader:
+class BasicLoader:
     def __init__(
         self,
         authomize_api_configuration: AuthomizeApiConfiguration,

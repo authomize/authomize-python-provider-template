@@ -1,6 +1,8 @@
-from pydantic import BaseModel
+from provider_base.configuration.base_data_provider_configuration import \
+    BaseDataProviderConfiguration
 
-class DataProviderConfiguration(BaseModel):
+
+class DataProviderConfiguration(BaseDataProviderConfiguration):
     base_url: str
 
     domain: str

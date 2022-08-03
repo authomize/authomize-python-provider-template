@@ -1,5 +1,7 @@
-from authomize.rest_api_client.generated.schemas import ItemsBundleSchema, AssetDescription, AccessDescription, AccessTypes
-from provider_name.transformers.base_transformer import BaseTransfomer
+from authomize.rest_api_client.generated.schemas import (AssetDescription,
+                                                         ItemsBundleSchema)
+
+from provider_base.transformers.base_transformer import BaseTransfomer
 
 
 class FilesTransformer(BaseTransfomer):
@@ -24,7 +26,6 @@ class FilesTransformer(BaseTransfomer):
             AssetDescription(
                 id=item_id,
             ),
-
         )
         return bundle
 
