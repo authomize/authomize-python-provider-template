@@ -1,0 +1,27 @@
+from setuptools import find_namespace_packages, setup
+
+setup(
+    version='0.0.1',
+    name='authomize-python-provider-template',
+    author='Authomize inc.',
+    author_email='info@authomize.com',
+    description='Example provider',
+    packages=find_namespace_packages(include=['authomize.*']),
+    include_package_data=True,
+    python_requires='>=3.10.*',
+    install_requires=[
+        'authomize-rest-api-client>=0.0.4',
+        'more-itertools~=8.12',
+    ],
+    extras_require={
+        'test': [
+            'coverage~=5.2',
+            'flake8~=4.0',
+            'flake8-isort~=4.0',
+            'flake8-commas~=2.0',
+            'pyhamcrest~=2.0',
+            'pytest~=6.2',
+            'pytest-html~=2.1',
+        ],
+    },
+)
