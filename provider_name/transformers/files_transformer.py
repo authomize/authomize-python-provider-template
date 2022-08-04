@@ -1,7 +1,4 @@
-from authomize.rest_api_client.generated.schemas import (
-    AssetDescription,
-    ItemsBundleSchema,
-)
+from authomize.rest_api_client.generated.schemas import AssetDescription, RequestsBundleSchema
 
 from provider_base.transformers.base_transformer import BaseTransformer
 
@@ -12,7 +9,7 @@ class FilesTransformer(BaseTransformer):
             raise ValueError("File without an id")
         return True
 
-    def transform_model(self, raw_item: dict) -> ItemsBundleSchema:
+    def transform_model(self, raw_item: dict) -> RequestsBundleSchema:
         bundle = self.create_empty_bundle()
         item_id = raw_item['id']
         # access = [

@@ -10,7 +10,7 @@ setup(
     include_package_data=True,
     python_requires='>=3.10.*',
     install_requires=[
-        'authomize-rest-api-client>=1.3.1',
+        'authomize-rest-api-client>=1.3.2',
         'more-itertools~=8.12',
         'pydantic>=1.9.1',
     ],

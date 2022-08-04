@@ -1,5 +1,6 @@
-from provider_base.configuration.base_data_provider_configuration import \
-    BaseDataProviderConfiguration
+from provider_base.configuration.base_data_provider_configuration import (
+    BaseDataProviderConfiguration,
+)
 
 
 class DataProviderConfiguration(BaseDataProviderConfiguration):

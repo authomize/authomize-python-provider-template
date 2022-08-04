@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from authomize.rest_api_client.generated.schemas import ItemsBundleSchema
+from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
 from pydantic import ValidationError
 
 from provider_base.models.base_shared_memory import BaseSharedMemory
@@ -13,7 +13,7 @@ class BaseTransformer:
     def transform_models(
         self,
         extracted_raw_data: Iterable[dict],
-    ) -> Iterable[ItemsBundleSchema]:
+    ) -> Iterable[RequestsBundleSchema]:
         for raw_item in extracted_raw_data:
             if not self.validate_item_schema(raw_item):
                 # Can continue as well if we prefer to ignore "damaged data"
@@ -23,18 +23,14 @@ class BaseTransformer:
     def validate_item_schema(self, raw_item: dict) -> bool:
         return True
 
-    def transform_model(self, raw_item: dict) -> ItemsBundleSchema:
+    def transform_model(self, raw_item: dict) -> RequestsBundleSchema:
         bundle = self.create_empty_bundle()
         # todo
         return bundle
 
     @staticmethod
-    def create_empty_bundle() -> ItemsBundleSchema:
-        return ItemsBundleSchema(
-            services=[],
-            identities=[],
-            assets=[],
-            inheritanceIdentities=[],
-            inheritanceAssets=[],
-            access=[],
+    def create_empty_bundle() -> RequestsBundleSchema:
+        return RequestsBundleSchema(
+            new_users=[],
+            new_groupings=[],
         )
