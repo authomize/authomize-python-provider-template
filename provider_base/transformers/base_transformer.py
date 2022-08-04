@@ -34,4 +34,5 @@ class BaseTransformer:
             new_users=[],
             new_groupings=[],
             new_assets=[],
+            new_accounts_association=[],
         )
