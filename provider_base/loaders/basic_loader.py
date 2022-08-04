@@ -40,12 +40,12 @@ class BasicLoader:
         if merged.new_users:
             self.authomize_api_client.create_users(
                 app_id=self.application_configuration.app_id,
-                body=merged.new_users,
+                body=[item.dict() for item in merged.new_users],
             )
         if merged.new_groupings:
             self.authomize_api_client.create_groupings(
                 app_id=self.application_configuration.app_id,
-                body=merged.new_groupings,
+                body=[item.dict() for item in merged.new_groupings],
             )
 
     @staticmethod

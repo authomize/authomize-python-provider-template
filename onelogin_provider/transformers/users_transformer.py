@@ -17,12 +17,11 @@ class UsersTransformer(BaseTransformer):
 
     def transform_model(self, raw_item: User) -> RequestsBundleSchema:
         bundle = self.create_empty_bundle()
-        breakpoint()
         new_user = NewUserRequestSchema(
             id=raw_item.id,
             name=raw_item.distinguished_name,
             firstName=raw_item.firstname,
             lastName=raw_item.lastname,
         )
-        bundle.new_users(new_user)
+        bundle.new_users.append(new_user)
         return bundle

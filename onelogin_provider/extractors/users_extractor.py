@@ -1,7 +1,8 @@
 from typing import Iterable
 
-from onelogin_provider.clients.onelogin_client import OneloginClient
 from onelogin.api.models.user import User
+
+from onelogin_provider.clients.onelogin_client import OneloginClient
 from provider_base.extractors.base_extactor import BaseExtractor
 
 

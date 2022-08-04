@@ -17,8 +17,8 @@ class OneloginRunWorkflow(BaseRunWorkflow):
             data_provider_configuration=self.data_provider_configuration,
         )
         shared_memory = SharedMemory()
-        return chain([
-            list(UsersTransformer(shared_memory).transform_models(
-                list(UsersExtactor(client).extact_raw()),
-            )),
+        return chain.from_iterable([
+            UsersTransformer(shared_memory).transform_models(
+                UsersExtactor(client).extact_raw(),
+            ),
         ])
