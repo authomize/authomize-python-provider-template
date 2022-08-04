@@ -21,7 +21,7 @@ class BaseTransformer:
             yield self.transform_model(raw_item)
 
     def validate_item_schema(self, raw_item: dict) -> bool:
-        return True
+        raise NotImplementedError()
 
     def transform_model(self, raw_item: dict) -> RequestsBundleSchema:
         bundle = self.create_empty_bundle()
@@ -33,4 +33,5 @@ class BaseTransformer:
         return RequestsBundleSchema(
             new_users=[],
             new_groupings=[],
+            new_assets=[],
         )

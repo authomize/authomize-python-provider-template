@@ -29,7 +29,7 @@ class BasicLoader:
         batch = []
         for item in items:
             batch.append(item)
-            if len(items) == self.general_configuration:
+            if len(batch) == self.general_configuration:
                 self.load_batch(batch)
                 batch = []
         if batch:
