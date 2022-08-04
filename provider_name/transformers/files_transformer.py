@@ -1,10 +1,12 @@
-from authomize.rest_api_client.generated.schemas import (AssetDescription,
-                                                         ItemsBundleSchema)
+from authomize.rest_api_client.generated.schemas import (
+    AssetDescription,
+    ItemsBundleSchema,
+)
 
-from provider_base.transformers.base_transformer import BaseTransfomer
+from provider_base.transformers.base_transformer import BaseTransformer
 
 
-class FilesTransformer(BaseTransfomer):
+class FilesTransformer(BaseTransformer):
     def validate_item_schema(self, raw_item: dict) -> bool:
         if 'id' not in raw_item:
             raise ValueError("File without an id")

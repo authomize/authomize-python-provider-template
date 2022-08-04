@@ -1,9 +1,6 @@
-from provider_base.configuration.application_configuration import \
-    ApplicationConfiguration
-from provider_base.configuration.authomize_api_configuration import \
-    AuthomizeApiConfiguration
-from provider_name.configuration.data_provider_configuration import \
-    DataProviderConfiguration
+from provider_base.configuration.application_configuration import ApplicationConfiguration
+from provider_base.configuration.authomize_api_configuration import AuthomizeApiConfiguration
+from provider_name.configuration.data_provider_configuration import DataProviderConfiguration
 from provider_name.workflows.health_check import ProviderNameHelathChecker
 from provider_name.workflows.run import RunWorkflow
 
@@ -11,7 +8,7 @@ from provider_name.workflows.run import RunWorkflow
 def example():
     authomize_api_configuration = AuthomizeApiConfiguration(
         auth_token='123',
-        api_url='https://api.authomize.com'
+        api_url='https://api.authomize.com',
     )
     data_provider_configuration = DataProviderConfiguration(
         base_url='https://data.authomize.com',
@@ -30,6 +27,5 @@ def example():
         data_provider_configuration=data_provider_configuration,
         application_configuration=application_configuration,
     )
-    if not health_checker.is_healthy():
-        return
+    health_checker.raise_unhealthy()
     workflow_run.run()

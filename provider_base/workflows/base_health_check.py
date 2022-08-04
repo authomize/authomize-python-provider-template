@@ -2,10 +2,10 @@ from typing import Tuple
 
 from authomize.rest_api_client.client import Client
 
-from provider_base.configuration.authomize_api_configuration import \
-    AuthomizeApiConfiguration
-from provider_base.configuration.base_data_provider_configuration import \
-    BaseDataProviderConfiguration
+from provider_base.configuration.authomize_api_configuration import AuthomizeApiConfiguration
+from provider_base.configuration.base_data_provider_configuration import (
+    BaseDataProviderConfiguration,
+)
 
 
 class BaseHelathChecker:
@@ -19,7 +19,7 @@ class BaseHelathChecker:
             base_url=authomize_api_configuration.api_url,
         )
         self.data_provider_configuration = data_provider_configuration
-    
+
     def is_configuration_defined(self) -> bool:
         return True
 
@@ -38,6 +38,11 @@ class BaseHelathChecker:
     def is_healthy(self) -> bool:
         health, explanation = self._is_healthy()
         return health
+
+    def raise_unhealthy(self):
+        health, explanation = self._is_healthy()
+        if not health:
+            raise ValueError(explanation)
 
     def _is_healthy(self) -> Tuple[bool, str]:
         if not self.is_configuration_defined():
