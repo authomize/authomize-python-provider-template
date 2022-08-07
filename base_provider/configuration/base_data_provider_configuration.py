@@ -1,5 +1,5 @@
 from pydantic import BaseModel
 
 
-class BaseDataProviderConfiguration(BaseModel):
+class DataProviderConfiguration(BaseModel):
     pass

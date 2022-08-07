@@ -2,11 +2,11 @@ from typing import Iterable
 
 from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
 
-from base_provider.models.base_shared_memory import BaseProviderSharedMemory
+from base_provider.models.base_shared_memory import ProviderSharedMemory
 
 
-class BaseTransformer:
-    def __init__(self, shared_memory: BaseProviderSharedMemory) -> None:
+class Transformer:
+    def __init__(self, shared_memory: ProviderSharedMemory) -> None:
         self.shared_memory = shared_memory
 
     def __call__(

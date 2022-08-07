@@ -2,11 +2,11 @@ from typing import Iterable
 
 from onelogin.api.models.user import User
 
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider.extractors.base_extactor import Extractor
 from onelogin_provider.clients.onelogin_client import OneloginClient
 
 
-class UsersExtactor(BaseExtractor):
+class UsersExtactor(Extractor):
     """
     Gets a list of User resources.
 

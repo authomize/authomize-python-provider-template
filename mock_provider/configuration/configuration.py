@@ -1,9 +1,9 @@
 from base_provider.configuration.base_data_provider_configuration import (
-    BaseDataProviderConfiguration,
+    DataProviderConfiguration,
 )
 
 
-class MockProviderConfiguration(BaseDataProviderConfiguration):
+class MockProviderConfiguration(DataProviderConfiguration):
     base_url: str
 
     domain: str

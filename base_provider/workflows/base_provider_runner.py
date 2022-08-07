@@ -5,17 +5,17 @@ from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
 from base_provider.configuration.application_configuration import ApplicationConfiguration
 from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
 from base_provider.configuration.base_data_provider_configuration import (
-    BaseDataProviderConfiguration,
+    DataProviderConfiguration,
 )
 from base_provider.configuration.general_configuration import GeneralConfiguration
 from base_provider.loaders.basic_loader import BasicLoader
 
 
-class BaseProviderRunner:
+class ProviderRunner:
     def __init__(
         self,
         authomize_api_configuration: AuthomizeApiConfiguration,
-        data_provider_configuration: BaseDataProviderConfiguration,
+        data_provider_configuration: DataProviderConfiguration,
         application_configuration: ApplicationConfiguration,
         general_configuration: GeneralConfiguration,
     ) -> None:

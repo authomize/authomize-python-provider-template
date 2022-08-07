@@ -1,10 +1,10 @@
 from authomize.rest_api_client.generated.schemas import NewAssetsRequestSchema, RequestsBundleSchema
 
-from base_provider.transformers.base_transformer import BaseTransformer
+from base_provider.transformers.base_transformer import Transformer
 from mock_provider.models.shared_memory import MockProviderSharedMemory
 
 
-class FilesTransformer(BaseTransformer):
+class FilesTransformer(Transformer):
     def validate_item_schema(self, raw_item: dict) -> bool:
         assert 'id' in raw_item, "File without id"
         assert 'name' in raw_item, "File without name"

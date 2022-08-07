@@ -1,9 +1,9 @@
 from typing import Iterable
 
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider.extractors.base_extactor import Extractor
 
 
-class FilesExtactor(BaseExtractor):
+class FilesExtactor(Extractor):
     def extact_raw(self) -> Iterable[dict]:
         return [
             {

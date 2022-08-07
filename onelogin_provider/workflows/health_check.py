@@ -1,9 +1,9 @@
-from base_provider.workflows.base_provider_health_checker import BaseProviderHealthChecker
+from base_provider.workflows.base_provider_health_checker import ProviderHealthChecker
 from onelogin_provider.clients.onelogin_client import OneloginClient
 from onelogin_provider.configuration.onelogin_configuration import OneloginConfiguration
 
 
-class OneloginHealthChecker(BaseProviderHealthChecker):
+class OneloginHealthChecker(ProviderHealthChecker):
     def can_connect_to_data_provider(self) -> bool:
         return self.can_read_from_data_provider()
 

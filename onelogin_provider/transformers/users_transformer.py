@@ -6,10 +6,10 @@ from authomize.rest_api_client.generated.schemas import (
 )
 from onelogin.api.models.user import User
 
-from base_provider.transformers.base_transformer import BaseTransformer
+from base_provider.transformers.base_transformer import Transformer
 
 
-class UsersTransformer(BaseTransformer):
+class UsersTransformer(Transformer):
     """
     Transform a list of User resources.
 

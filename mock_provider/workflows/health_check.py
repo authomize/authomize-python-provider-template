@@ -1,8 +1,8 @@
-from base_provider.workflows.base_provider_health_checker import BaseProviderHealthChecker
+from base_provider.workflows.base_provider_health_checker import ProviderHealthChecker
 from mock_provider.clients.client import MockProviderClient
 
 
-class MockProviderHelathChecker(BaseProviderHealthChecker):
+class MockProviderHelathChecker(ProviderHealthChecker):
     def can_connect_to_data_provider(self) -> bool:
         client = MockProviderClient(
             data_provider_configuration=self.data_provider_configuration,

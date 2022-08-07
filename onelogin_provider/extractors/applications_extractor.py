@@ -2,11 +2,11 @@ from typing import Iterable
 
 from onelogin.api.models.app import App
 
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider.extractors.base_extactor import Extractor
 from onelogin_provider.clients.onelogin_client import OneloginClient
 
 
-class ApplicationsExtactor(BaseExtractor):
+class ApplicationsExtactor(Extractor):
     """
     Gets a list of all Apps in a OneLogin account.
 

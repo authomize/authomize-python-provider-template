@@ -5,10 +5,10 @@ from authomize.rest_api_client.generated.schemas import (
 )
 from onelogin.api.models.group import Group
 
-from base_provider.transformers.base_transformer import BaseTransformer
+from base_provider.transformers.base_transformer import Transformer
 
 
-class GroupsTransformer(BaseTransformer):
+class GroupsTransformer(Transformer):
     """
     Transorm a list of Group resources
     See https://developers.onelogin.com/api-docs/1/groups/get-groups Get Groups documentation

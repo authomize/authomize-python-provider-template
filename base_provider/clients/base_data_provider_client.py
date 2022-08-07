@@ -1,11 +1,11 @@
 from base_provider.configuration.base_data_provider_configuration import (
-    BaseDataProviderConfiguration,
+    DataProviderConfiguration,
 )
 
 
-class BaseDataProviderClient:
+class DataProviderClient:
     def __init__(
         self,
-        data_provider_configuration: BaseDataProviderConfiguration,
+        data_provider_configuration: DataProviderConfiguration,
     ) -> None:
         self.data_provider_configuration = data_provider_configuration

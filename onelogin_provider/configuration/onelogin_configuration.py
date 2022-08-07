@@ -1,9 +1,9 @@
 from base_provider.configuration.base_data_provider_configuration import (
-    BaseDataProviderConfiguration,
+    DataProviderConfiguration,
 )
 
 
-class OneloginConfiguration(BaseDataProviderConfiguration):
+class OneloginConfiguration(DataProviderConfiguration):
     client_id: str
     client_secret: str
     region: str = 'us'

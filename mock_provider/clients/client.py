@@ -1,7 +1,7 @@
-from base_provider.clients.base_data_provider_client import BaseDataProviderClient
+from base_provider.clients.base_data_provider_client import DataProviderClient
 
 
-class MockProviderClient(BaseDataProviderClient):
+class MockProviderClient(DataProviderClient):
     def is_alive(self) -> bool:
         return True
 
