@@ -15,6 +15,7 @@ class BaseTransformer:
         shared_memory: BaseSharedMemory,
         shared_configuration: BaseSharedConfiguration,
     ) -> None:
+        """Init with standard configuration"""
         self.shared_memory = shared_memory
         self.shared_configuration = shared_configuration
 
@@ -40,12 +41,12 @@ class BaseTransformer:
         )
         for idx, item in enumerate(self.transform_models(extracted_raw_data)):
             yield item
-            if idx % self.log_every_n_raw_items == 0:
+            if (idx + 1) % self.log_every_n_raw_items == 0:
                 logger.info(
                     "Transforming in progess: {transformer_name} with {count} items so far",
                     extra=dict(params=dict(
                         transformer_name=self.transformer_name,
-                        count=idx,
+                        count=(idx + 1),
                     )),
                 )
 
@@ -89,4 +90,4 @@ class BaseTransformer:
 
     @property
     def log_every_n_raw_items(self):
-        return self.shared_configuration.transformer_log_every_n_raw_items
+        return self.shared_configuration.transformer_logs_every_n_raw_items

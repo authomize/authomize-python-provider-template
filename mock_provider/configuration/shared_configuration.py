@@ -2,4 +2,4 @@ from base_provider import BaseSharedConfiguration
 
 
 class MockProviderSharedConfiguration(BaseSharedConfiguration):
-    pass
+    files_to_extract: int = 10

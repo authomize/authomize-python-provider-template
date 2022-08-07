@@ -22,9 +22,16 @@ class BaseAutoProviderRunner(BaseProviderRunner):
         return BaseSharedMemory()
 
     def get_transformed_data(self) -> Iterable[RequestsBundleSchema]:
-        client = self.create_client()
+        data_provider_client = self.create_client()
         shared_memory = self.create_shared_memory()
         for extractor_type, transformer_type in self.get_extactor_and_transfomer_type_list():
-            transfomr = transformer_type(shared_memory, self.shared_configuration)
-            extractor = extractor_type(client, self.shared_configuration)
+            transfomr = transformer_type(
+                shared_memory=shared_memory,
+                shared_configuration=self.shared_configuration,
+            )
+            extractor = extractor_type(
+                data_provider_client=data_provider_client,
+                shared_memory=shared_memory,
+                shared_configuration=self.shared_configuration,
+            )
             yield from transfomr(extractor())

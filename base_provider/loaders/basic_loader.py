@@ -19,6 +19,7 @@ class BasicLoader:
         application_configuration: ApplicationConfiguration,
         shared_configuration: BaseSharedConfiguration,
     ) -> None:
+        """Init with standard configuration"""
         self.authomize_api_client = Client(
             auth_token=authomize_api_configuration.auth_token,
             base_url=authomize_api_configuration.api_url,
@@ -99,7 +100,3 @@ class BasicLoader:
             new_users=new_users,
             new_groupings=new_groupings,
         )
-
-    @property
-    def log_every_n_raw_items(self):
-        return self.shared_configuration.loader_log_every_n_raw_items
