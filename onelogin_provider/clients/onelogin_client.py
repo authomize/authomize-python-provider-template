@@ -1,10 +1,10 @@
 from onelogin.api.client import OneLoginClient as OneLoginApiClient
 
-from base_provider import BaseDataProviderClient
+from base_provider import DataProviderClient
 from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
 
 
-class OneloginClient(BaseDataProviderClient):
+class OneloginClient(DataProviderClient):
     def __init__(
         self,
         data_provider_client_configuration: OneloginClientConfiguration,

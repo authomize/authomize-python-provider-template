@@ -1,5 +1,5 @@
 from pydantic import BaseModel
 
 
-class BaseClientConfiguration(BaseModel):
+class ClientConfiguration(BaseModel):
     pass

@@ -1,7 +1,7 @@
-from base_provider import BaseClientConfiguration
+from base_provider import ClientConfiguration
 
 
-class OneloginClientConfiguration(BaseClientConfiguration):
+class OneloginClientConfiguration(ClientConfiguration):
     client_id: str
     client_secret: str
     region: str = 'us'

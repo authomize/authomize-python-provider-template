@@ -5,7 +5,7 @@ from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
 
 from base_provider.configuration.application_configuration import ApplicationConfiguration
 from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
-from base_provider.configuration.base_shared_configuration import BaseSharedConfiguration
+from base_provider.configuration.base_shared_configuration import SharedConfiguration
 
 
 class BasicLoader:
@@ -13,7 +13,7 @@ class BasicLoader:
         self,
         authomize_api_configuration: AuthomizeApiConfiguration,
         application_configuration: ApplicationConfiguration,
-        general_configuration: BaseSharedConfiguration,
+        general_configuration: SharedConfiguration,
     ) -> None:
         self.authomize_api_client = Client(
             auth_token=authomize_api_configuration.auth_token,

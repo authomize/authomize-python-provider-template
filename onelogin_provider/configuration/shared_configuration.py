@@ -1,5 +1,5 @@
-from base_provider import BaseSharedConfiguration
+from base_provider import SharedConfiguration
 
 
-class OneloginSharedConfiguration(BaseSharedConfiguration):
+class OneloginSharedConfiguration(SharedConfiguration):
     pass

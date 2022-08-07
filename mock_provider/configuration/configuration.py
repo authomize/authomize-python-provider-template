@@ -1,7 +1,7 @@
-from base_provider import BaseClientConfiguration
+from base_provider import ClientConfiguration
 
 
-class MockProviderClientConfiguration(BaseClientConfiguration):
+class MockProviderClientConfiguration(ClientConfiguration):
     base_url: str
 
     domain: str

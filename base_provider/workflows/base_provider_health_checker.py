@@ -3,14 +3,14 @@ from typing import Tuple
 from authomize.rest_api_client.client import Client
 
 from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
-from base_provider.configuration.base_client_configuration import BaseClientConfiguration
+from base_provider.configuration.base_client_configuration import ClientConfiguration
 
 
-class BaseProviderHealthChecker:
+class ProviderHealthChecker:
     def __init__(
         self,
         authomize_api_configuration: AuthomizeApiConfiguration,
-        data_provider_client_configuration: BaseClientConfiguration,
+        data_provider_client_configuration: ClientConfiguration,
     ) -> None:
         self.authomize_api_client = Client(
             auth_token=authomize_api_configuration.auth_token,

@@ -7,10 +7,10 @@ from authomize.rest_api_client.generated.schemas import (
 )
 from onelogin.api.models.role import Role
 
-from base_provider import BaseTransformer
+from base_provider import Transformer
 
 
-class RolesTransformer(BaseTransformer):
+class RolesTransformer(Transformer):
     """
     Transform a list of Role resources.
     Creates a:
