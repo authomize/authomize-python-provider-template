@@ -8,9 +8,9 @@ class OneloginHealthChecker(BaseProviderHealthChecker):
         return self.can_read_from_data_provider()
 
     def can_read_from_data_provider(self) -> bool:
-        data_provider_client_configuration: OneloginClientConfiguration = self.data_provider_client_configuration  # type: ignore
+        client_configuration: OneloginClientConfiguration = self.client_configuration  # type: ignore
         client = OneloginClient(
-            data_provider_client_configuration=data_provider_client_configuration,
+            client_configuration=client_configuration,
         )
         client.client.get_users(limit=1)
         return True

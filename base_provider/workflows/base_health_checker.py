@@ -10,13 +10,13 @@ class BaseProviderHealthChecker:
     def __init__(
         self,
         authomize_api_configuration: AuthomizeApiConfiguration,
-        data_provider_client_configuration: BaseClientConfiguration,
+        client_configuration: BaseClientConfiguration,
     ) -> None:
         self.authomize_api_client = Client(
             auth_token=authomize_api_configuration.auth_token,
             base_url=authomize_api_configuration.api_url,
         )
-        self.data_provider_client_configuration = data_provider_client_configuration
+        self.client_configuration = client_configuration
 
     def is_configuration_defined(self) -> bool:
         return True

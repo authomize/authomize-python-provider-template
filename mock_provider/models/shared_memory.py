@@ -1,6 +1,6 @@
-from base_provider import BaseProviderSharedMemory
+from base_provider import BaseSharedMemory
 
 
-class MockProviderSharedMemory(BaseProviderSharedMemory):
+class MockProviderSharedMemory(BaseSharedMemory):
     def __init__(self, domain: str) -> None:
         self.domain = domain
