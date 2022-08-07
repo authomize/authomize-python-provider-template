@@ -49,7 +49,11 @@ class BaseExtractor:
 
     @property
     def extractor_name(self):
-        """Extractor name. Used in logs"""
+        """
+        Extractor name.
+        
+        Used in logs
+        """
         return type(self).__name__
 
     def __call__(self) -> Iterable[dict]:
@@ -81,7 +85,7 @@ class BaseExtractor:
 
     @property
     def log_every_n_raw_items(self) -> int:
-        """After how many items should we log progress"""
+        """Every how many items should we log the progress"""
         return self.shared_configuration.extactor_logs_every_n_raw_items
 
     def _log_progress(self, count: int):

@@ -10,7 +10,7 @@ from mock_provider.extractors.files_extractor import FilesExtactor
 from mock_provider.models.shared_memory import MockProviderSharedMemory
 
 
-def create_extractor(files_to_extract: int = 10) -> FilesExtactor:
+def _create_extractor(files_to_extract: int = 10) -> FilesExtactor:
     """Create a simple mocked extractor"""
     return FilesExtactor(
         data_provider_client=MockProviderClient(
@@ -29,7 +29,20 @@ def create_extractor(files_to_extract: int = 10) -> FilesExtactor:
 
 
 def test_log_every_n_fetches():
-    extractor_with_some_results = create_extractor(files_to_extract=10)
+    """Test that the extractor logs every N items according to the configuration"""
+    extractor_with_no_results = _create_extractor(files_to_extract=0)
+    with patch.object(
+        extractor_with_no_results,
+        '_log_progress',
+        MagicMock(),
+    ) as log_progress:
+        list(extractor_with_no_results())
+        assert_that(
+            log_progress.call_count,
+            is_(equal_to(0)),
+        )
+
+    extractor_with_some_results = _create_extractor(files_to_extract=10)
     with patch.object(
         extractor_with_some_results,
         '_log_progress',

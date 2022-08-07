@@ -1,7 +1,18 @@
+"""Base transformer with standard configuration"""
 from logging import getLogger
 from typing import Iterable
 
-from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
+from authomize.rest_api_client.generated.schemas import (
+    NewAccountsAssociationRequestSchema,
+    NewAssetsInheritanceRequestSchema,
+    NewAssetsRequestSchema,
+    NewGroupingRequestSchema,
+    NewGroupingsAssociationRequestSchema,
+    NewIdentityRequestSchema,
+    NewPermissionsRequestSchema,
+    NewUserRequestSchema,
+    RequestsBundleSchema,
+)
 
 from base_provider.configuration.base_shared_configuration import BaseSharedConfiguration
 from base_provider.models.base_shared_memory import BaseSharedMemory
@@ -21,9 +32,17 @@ class BaseTransformer:
 
     @property
     def transformer_name(self):
+        """
+        Transformer name.
+        
+        Used in logs
+        """
         return type(self).__name__
 
     def validate_item_schema(self, raw_item: dict) -> bool:
+        """
+        
+        """
         raise NotImplementedError()
 
     def transform_model(self, raw_item: dict) -> RequestsBundleSchema:
@@ -70,24 +89,28 @@ class BaseTransformer:
 
     @staticmethod
     def create_bundle(
-        new_users=None,
-        new_groupings=None,
-        new_assets=None,
-        new_accounts_association=None,
-        new_permissions=None,
-        new_groupings_association=None,
-        new_identities=None,
+        new_users: list[NewUserRequestSchema] = None,
+        new_groupings: list[NewGroupingRequestSchema] = None,
+        new_permissions: list[NewPermissionsRequestSchema] = None,
+        new_accounts_association: list[NewAccountsAssociationRequestSchema] = None,
+        new_groupings_association: list[NewGroupingsAssociationRequestSchema] = None,
+        new_assets: list[NewAssetsRequestSchema] = None,
+        new_assets_inheritance: list[NewAssetsInheritanceRequestSchema] = None,
+        new_identities: list[NewIdentityRequestSchema] = None,
     ) -> RequestsBundleSchema:
+        """Create bundle with everything by default set as empty list"""
         return RequestsBundleSchema(
             new_users=new_users or [],
             new_groupings=new_groupings or [],
-            new_assets=new_assets or [],
-            new_accounts_association=new_accounts_association or [],
             new_permissions=new_permissions or [],
+            new_accounts_association=new_accounts_association or [],
             new_groupings_association=new_groupings_association or [],
+            new_assets=new_assets or [],
+            new_assets_inheritance=new_assets_inheritance or [],
             new_identities=new_identities or [],
         )
 
     @property
     def log_every_n_raw_items(self):
+        """Every how many items should we log the progress"""
         return self.shared_configuration.transformer_logs_every_n_raw_items
