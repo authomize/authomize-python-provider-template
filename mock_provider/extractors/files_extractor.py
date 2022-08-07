@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider import BaseExtractor
 
 
 class FilesExtactor(BaseExtractor):

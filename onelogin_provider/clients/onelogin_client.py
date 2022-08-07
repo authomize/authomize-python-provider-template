@@ -1,17 +1,17 @@
 from onelogin.api.client import OneLoginClient as OneLoginApiClient
 
-from base_provider.clients.base_data_provider_client import BaseDataProviderClient
-from onelogin_provider.configuration.onelogin_configuration import OneloginConfiguration
+from base_provider import BaseDataProviderClient
+from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
 
 
 class OneloginClient(BaseDataProviderClient):
     def __init__(
         self,
-        data_provider_configuration: OneloginConfiguration,
+        data_provider_client_configuration: OneloginClientConfiguration,
     ) -> None:
-        super().__init__(data_provider_configuration=data_provider_configuration)
+        super().__init__(data_provider_client_configuration=data_provider_client_configuration)
         self.client = OneLoginApiClient(
-            client_id=data_provider_configuration.client_id,
-            client_secret=data_provider_configuration.client_secret,
-            region=data_provider_configuration.region,
+            client_id=data_provider_client_configuration.client_id,
+            client_secret=data_provider_client_configuration.client_secret,
+            region=data_provider_client_configuration.region,
         )

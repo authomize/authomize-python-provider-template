@@ -1,4 +1,4 @@
-from base_provider.models.base_shared_memory import BaseProviderSharedMemory
+from base_provider import BaseProviderSharedMemory
 
 
 class OneloginProviderSharedMemory(BaseProviderSharedMemory):

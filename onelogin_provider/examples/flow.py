@@ -1,7 +1,6 @@
-from base_provider.configuration.application_configuration import ApplicationConfiguration
-from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
-from base_provider.configuration.general_configuration import GeneralConfiguration
-from onelogin_provider.configuration.onelogin_configuration import OneloginConfiguration
+from base_provider import ApplicationConfiguration, AuthomizeApiConfiguration
+from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
+from onelogin_provider.configuration.shared_configuration import OneloginSharedConfiguration
 from onelogin_provider.workflows.health_check import OneloginHealthChecker
 from onelogin_provider.workflows.run import OneloginRunWorkflow
 
@@ -11,21 +10,21 @@ def example():
         auth_token='==',
         api_url='https://api.authomize.com',
     )
-    data_provider_configuration = OneloginConfiguration(
+    data_provider_client_configuration = OneloginClientConfiguration(
         client_id='',
         client_secret='',
     )
     application_configuration = ApplicationConfiguration(
         app_id='',
     )
-    general_configuration = GeneralConfiguration()
+    general_configuration = OneloginSharedConfiguration()
     health_checker = OneloginHealthChecker(
         authomize_api_configuration=authomize_api_configuration,
-        data_provider_configuration=data_provider_configuration,
+        data_provider_client_configuration=data_provider_client_configuration,
     )
     workflow_run = OneloginRunWorkflow(
         authomize_api_configuration=authomize_api_configuration,
-        data_provider_configuration=data_provider_configuration,
+        data_provider_client_configuration=data_provider_client_configuration,
         application_configuration=application_configuration,
         general_configuration=general_configuration,
     )

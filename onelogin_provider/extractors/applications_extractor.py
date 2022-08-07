@@ -2,7 +2,7 @@ from typing import Iterable
 
 from onelogin.api.models.app import App
 
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider import BaseExtractor
 from onelogin_provider.clients.onelogin_client import OneloginClient
 
 
