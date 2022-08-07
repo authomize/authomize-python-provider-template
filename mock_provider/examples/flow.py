@@ -8,15 +8,16 @@ from onelogin_provider.workflows.run import OneloginRunWorkflow
 
 def example():
     authomize_api_configuration = AuthomizeApiConfiguration(
-        auth_token='==',
+        auth_token='123',
         api_url='https://api.authomize.com',
     )
     data_provider_configuration = OneloginConfiguration(
-        client_id='',
-        client_secret='',
+        base_url='https://data.authomize.com',
+        domain='mycompany',
+        token='123',
     )
     application_configuration = ApplicationConfiguration(
-        app_id='',
+        app_id='1234',
     )
     general_configuration = GeneralConfiguration()
     health_checker = OneloginHealthChecker(
@@ -31,6 +32,3 @@ def example():
     )
     health_checker.raise_unhealthy()
     workflow_run.run()
-
-
-example()

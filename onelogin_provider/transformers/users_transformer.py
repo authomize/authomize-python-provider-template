@@ -1,7 +1,12 @@
-from authomize.rest_api_client.generated.schemas import NewUserRequestSchema, RequestsBundleSchema, NewAccountsAssociationRequestSchema
+from authomize.rest_api_client.generated.schemas import (
+    NewAccountsAssociationRequestSchema,
+    NewIdentityRequestSchema,
+    NewUserRequestSchema,
+    RequestsBundleSchema,
+)
 from onelogin.api.models.user import User
 
-from provider_base.transformers.base_transformer import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class UsersTransformer(BaseTransformer):
@@ -16,10 +21,16 @@ class UsersTransformer(BaseTransformer):
         return True
 
     def transform_model(self, raw_item: User) -> RequestsBundleSchema:
-        bundle = self.create_empty_bundle()
+        bundle = self.create_bundle()
         user_id = raw_item.id
-        # TODO! this should be an account! not User!
         new_user = NewUserRequestSchema(
+            id=user_id,
+            name=f'{raw_item.firstname} {raw_item.lastname}',
+            firstName=raw_item.firstname,
+            lastName=raw_item.lastname,
+            **(dict(email=raw_item.email) if raw_item.email else dict()),
+        )
+        new_identity = NewIdentityRequestSchema(
             id=user_id,
             name=f'{raw_item.firstname} {raw_item.lastname}',
             firstName=raw_item.firstname,
@@ -34,4 +45,5 @@ class UsersTransformer(BaseTransformer):
             )
             bundle.new_accounts_association.append(association)
         bundle.new_users.append(new_user)
+        bundle.new_identities.append(new_identity)
         return bundle

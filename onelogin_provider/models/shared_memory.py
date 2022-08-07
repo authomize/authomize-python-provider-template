@@ -1,6 +1,6 @@
-from provider_base.models.base_shared_memory import BaseSharedMemory
+from base_provider.models.base_shared_memory import BaseProviderSharedMemory
 
 
-class SharedMemory(BaseSharedMemory):
+class OneloginProviderSharedMemory(BaseProviderSharedMemory):
     def __init__(self) -> None:
         pass

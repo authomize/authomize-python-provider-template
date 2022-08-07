@@ -2,8 +2,8 @@ from typing import Iterable
 
 from onelogin.api.models.user import User
 
+from base_provider.extractors.base_extactor import BaseExtractor
 from onelogin_provider.clients.onelogin_client import OneloginClient
-from provider_base.extractors.base_extactor import BaseExtractor
 
 
 class UsersExtactor(BaseExtractor):
@@ -15,5 +15,5 @@ class UsersExtactor(BaseExtractor):
     """
 
     def extact_raw(self) -> Iterable[User]:
-        data_provider_client: OneloginClient = self.data_provider_client
+        data_provider_client: OneloginClient = self.data_provider_client  # type: ignore
         return data_provider_client.client.get_users()

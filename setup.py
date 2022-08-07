@@ -23,7 +23,8 @@ setup(
             'pyhamcrest~=2.0',
             'pytest~=6.2',
             'pytest-html~=2.1',
-            'flake8-docstrings>=1.0.0',
+            'pyhamcrest~=2.0',
+            # 'flake8-docstrings>=1.0.0',
         ],
     },
 )

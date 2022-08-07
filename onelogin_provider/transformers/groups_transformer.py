@@ -1,7 +1,11 @@
-from authomize.rest_api_client.generated.schemas import NewGroupingRequestSchema, RequestsBundleSchema
+from authomize.rest_api_client.generated.schemas import (
+    GroupingType,
+    NewGroupingRequestSchema,
+    RequestsBundleSchema,
+)
 from onelogin.api.models.group import Group
 
-from provider_base.transformers.base_transformer import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class GroupsTransformer(BaseTransformer):
@@ -14,10 +18,11 @@ class GroupsTransformer(BaseTransformer):
         return True
 
     def transform_model(self, raw_item: Group) -> RequestsBundleSchema:
-        bundle = self.create_empty_bundle()
+        bundle = self.create_bundle()
         new_group = NewGroupingRequestSchema(
             id=raw_item.id,
             name=raw_item.name,
+            type=GroupingType.Group,
         )
         bundle.new_groupings.append(new_group)
         return bundle

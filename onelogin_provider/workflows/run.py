@@ -3,27 +3,39 @@ from typing import Iterable
 
 from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
 
+from base_provider.workflows.base_provider_runner import BaseProviderRunner
 from onelogin_provider.clients.onelogin_client import OneloginClient
+from onelogin_provider.configuration.onelogin_configuration import OneloginConfiguration
+from onelogin_provider.extractors.applications_extractor import ApplicationsExtactor
 from onelogin_provider.extractors.groups_extactor import GroupsExtactor
+from onelogin_provider.extractors.roles_extractor import RolesExtactor
 from onelogin_provider.extractors.users_extractor import UsersExtactor
-from onelogin_provider.models.shared_memory import SharedMemory
+from onelogin_provider.models.shared_memory import OneloginProviderSharedMemory
+from onelogin_provider.transformers.applications_transformer import ApplicationsTransformer
 from onelogin_provider.transformers.groups_transformer import GroupsTransformer
+from onelogin_provider.transformers.roles_transformer import RolesTransformer
 from onelogin_provider.transformers.users_transformer import UsersTransformer
-from provider_base.workflows.base_run import BaseRunWorkflow
 
 
-class OneloginRunWorkflow(BaseRunWorkflow):
+class OneloginRunWorkflow(BaseProviderRunner):
 
     def get_transformed_data(self) -> Iterable[RequestsBundleSchema]:
+        data_provider_configuration: OneloginConfiguration = self.data_provider_configuration  # type: ignore
         client = OneloginClient(
-            data_provider_configuration=self.data_provider_configuration,
+            data_provider_configuration=data_provider_configuration,
         )
-        shared_memory = SharedMemory()
+        shared_memory = OneloginProviderSharedMemory()
         return chain.from_iterable([
-            UsersTransformer(shared_memory).transform_models(
-                UsersExtactor(client).extact_raw(),
+            GroupsTransformer(shared_memory)(
+                GroupsExtactor(client)(),
             ),
-            GroupsTransformer(shared_memory).transform_models(
-                GroupsExtactor(client).extact_raw(),
+            UsersTransformer(shared_memory)(
+                UsersExtactor(client)(),
+            ),
+            ApplicationsTransformer(shared_memory)(
+                ApplicationsExtactor(client)(),
+            ),
+            RolesTransformer(shared_memory)(
+                RolesExtactor(client)(),
             ),
         ])

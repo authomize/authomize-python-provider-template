@@ -1,4 +1,4 @@
-from provider_base.configuration.base_data_provider_configuration import (
+from base_provider.configuration.base_data_provider_configuration import (
     BaseDataProviderConfiguration,
 )
 
