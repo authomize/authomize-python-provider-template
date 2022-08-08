@@ -13,6 +13,7 @@ setup(
         'authomize-rest-api-client>=1.5.1',
         'more-itertools~=8.12',
         'pydantic>=1.9.1',
+        'python-json-logger~=2.0',
     ],
     extras_require={
         'onelogin': [
