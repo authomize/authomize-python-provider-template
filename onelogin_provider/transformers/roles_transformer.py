@@ -4,10 +4,12 @@ from authomize.rest_api_client.generated.schemas import (
     NewGroupingRequestSchema,
     NewPermissionsRequestSchema,
     RequestsBundleSchema,
+    NewPrivilegesRequestSchema,
+    PrivilegeType,
 )
 from onelogin.api.models.role import Role
 
-from base_provider import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class RolesTransformer(BaseTransformer):
@@ -38,11 +40,18 @@ class RolesTransformer(BaseTransformer):
             isRole=len(raw_item.name) != 0,
         )
         bundle.new_groupings.append(new_group)
+        new_privilege = NewPrivilegesRequestSchema(
+            id=raw_item.name,
+            type=PrivilegeType.Use,  # TODO: map oneLogin roles to canonical roles
+            originPrivilegeName=raw_item.name,
+        )
+        bundle.new_privileges.append(new_privilege)
         if raw_item.apps:
             for app_id in raw_item.apps:
                 permission = NewPermissionsRequestSchema(
                     permissionSource=role_id,
                     targetAssets=[app_id],
+                    privilegeId=raw_item.name,
                 )
                 bundle.new_permissions.append(permission)
         if raw_item.users:
@@ -57,6 +66,7 @@ class RolesTransformer(BaseTransformer):
                 permission = NewPermissionsRequestSchema(
                     permissionSource=admin_user_id,
                     targetAssets=[role_id],
+                    privilegeId=raw_item.name,
                 )
                 bundle.new_permissions.append(permission)
 

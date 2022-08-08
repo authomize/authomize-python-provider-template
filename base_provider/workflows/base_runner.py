@@ -35,8 +35,8 @@ class BaseProviderRunner:
             application_configuration=self.application_configuration,
             shared_configuration=self.shared_configuration,
         )
-        transfomed_data = self.get_transformed_data()
-        loader(transfomed_data)
+        transformed_data = self.get_transformed_data()
+        loader(transformed_data)
         logger.info(
             "Provider done",
             extra=dict(params=dict()),

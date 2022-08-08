@@ -2,11 +2,11 @@ from typing import Iterable
 
 from onelogin.api.models.role import Role
 
-from base_provider import BaseExtractor
+from base_provider.extractors.base_extactor import BaseExtractor
 from onelogin_provider.clients.onelogin_client import OneloginClient
 
 
-class RolesExtactor(BaseExtractor):
+class RolesExtractor(BaseExtractor):
     """
     Gets a list of Role resources.
 
@@ -14,6 +14,6 @@ class RolesExtactor(BaseExtractor):
         https://developers.onelogin.com/api-docs/2/roles/list-roles
     """
 
-    def extact_raw(self) -> Iterable[Role]:
+    def extract_raw(self) -> Iterable[Role]:
         data_provider_client: OneloginClient = self.data_provider_client  # type: ignore
         return data_provider_client.client.get_roles()

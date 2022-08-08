@@ -11,7 +11,7 @@ from mock_provider.transformers.files_transformer import FilesTransformer
 
 
 class MockProviderRunner(BaseAutoProviderRunner):
-    def get_extactor_and_transfomer_type_list(
+    def get_extractor_and_transformer_type_list(
         self,
     ) -> list[Tuple[Type[BaseExtractor], Type[BaseTransformer]]]:
         return [

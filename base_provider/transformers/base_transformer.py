@@ -12,6 +12,8 @@ from authomize.rest_api_client.generated.schemas import (
     NewPermissionsRequestSchema,
     NewUserRequestSchema,
     RequestsBundleSchema,
+    NewPrivilegesRequestSchema,
+    NewPrivilegeGrantsRequestSchema,
 )
 
 from base_provider.configuration.base_shared_configuration import BaseSharedConfiguration
@@ -34,15 +36,13 @@ class BaseTransformer:
     def transformer_name(self):
         """
         Transformer name.
-        
+
         Used in logs
         """
         return type(self).__name__
 
     def validate_item_schema(self, raw_item: dict) -> bool:
-        """
-        
-        """
+        """ """
         raise NotImplementedError()
 
     def transform_model(self, raw_item: dict) -> RequestsBundleSchema:
@@ -54,27 +54,33 @@ class BaseTransformer:
     ) -> Iterable[RequestsBundleSchema]:
         logger.info(
             "Starting transformer: {transformer_name}",
-            extra=dict(params=dict(
-                transformer_name=self.transformer_name,
-            )),
+            extra=dict(
+                params=dict(
+                    transformer_name=self.transformer_name,
+                )
+            ),
         )
         for idx, item in enumerate(self.transform_models(extracted_raw_data)):
             yield item
             if (idx + 1) % self.log_every_n_raw_items == 0:
                 logger.info(
                     "Transforming in progess: {transformer_name} with {count} items so far",
-                    extra=dict(params=dict(
-                        transformer_name=self.transformer_name,
-                        count=(idx + 1),
-                    )),
+                    extra=dict(
+                        params=dict(
+                            transformer_name=self.transformer_name,
+                            count=(idx + 1),
+                        )
+                    ),
                 )
 
         logger.info(
             "Transfomer done: {transformer_name} with {count} items",
-            extra=dict(params=dict(
-                transformer_name=self.transformer_name,
-                count=idx,
-            )),
+            extra=dict(
+                params=dict(
+                    transformer_name=self.transformer_name,
+                    count=idx,
+                )
+            ),
         )
 
     def transform_models(
@@ -92,6 +98,8 @@ class BaseTransformer:
         new_users: list[NewUserRequestSchema] = None,
         new_groupings: list[NewGroupingRequestSchema] = None,
         new_permissions: list[NewPermissionsRequestSchema] = None,
+        new_privileges: list[NewPrivilegesRequestSchema] = None,
+        new_privileges_grants: list[NewPrivilegeGrantsRequestSchema] = None,
         new_accounts_association: list[NewAccountsAssociationRequestSchema] = None,
         new_groupings_association: list[NewGroupingsAssociationRequestSchema] = None,
         new_assets: list[NewAssetsRequestSchema] = None,
@@ -103,6 +111,8 @@ class BaseTransformer:
             new_users=new_users or [],
             new_groupings=new_groupings or [],
             new_permissions=new_permissions or [],
+            new_privileges=new_privileges or [],
+            new_privileges_grants=new_privileges_grants or [],
             new_accounts_association=new_accounts_association or [],
             new_groupings_association=new_groupings_association or [],
             new_assets=new_assets or [],

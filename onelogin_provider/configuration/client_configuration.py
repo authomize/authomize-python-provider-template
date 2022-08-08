@@ -1,4 +1,4 @@
-from base_provider import BaseClientConfiguration
+from base_provider.configuration.base_client_configuration import BaseClientConfiguration
 
 
 class OneloginClientConfiguration(BaseClientConfiguration):

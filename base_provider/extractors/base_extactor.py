@@ -23,6 +23,7 @@ class BaseExtractor:
     Should be independent from other extractors - an extractor cannot call another extractor.
     In rare cases, this can be ignored be passing small amount of data with `shared_memory`.
     """
+
     def __init__(
         self,
         data_provider_client: BaseClient,
@@ -34,7 +35,7 @@ class BaseExtractor:
         self.shared_memory = shared_memory
         self.shared_configuration = shared_configuration
 
-    def extact_raw(self) -> Iterable[dict]:
+    def extract_raw(self) -> Iterable[dict]:
         """
         Extract all items from source system
 
@@ -51,7 +52,7 @@ class BaseExtractor:
     def extractor_name(self):
         """
         Extractor name.
-        
+
         Used in logs
         """
         return type(self).__name__
@@ -64,12 +65,14 @@ class BaseExtractor:
         """
         logger.info(
             "Starting extraction: {extractor_name}",
-            extra=dict(params=dict(
-                extractor_name=self.extractor_name,
-            )),
+            extra=dict(
+                params=dict(
+                    extractor_name=self.extractor_name,
+                )
+            ),
         )
         total = 0
-        for idx, result in enumerate(self.extact_raw()):
+        for idx, result in enumerate(self.extract_raw()):
             yield result
             total += 1
             if (idx + 1) % self.log_every_n_raw_items == 0:
@@ -77,10 +80,12 @@ class BaseExtractor:
 
         logger.info(
             "Extraction done: {extractor_name} with {count} items",
-            extra=dict(params=dict(
-                extractor_name=self.extractor_name,
-                count=total,
-            )),
+            extra=dict(
+                params=dict(
+                    extractor_name=self.extractor_name,
+                    count=total,
+                )
+            ),
         )
 
     @property
@@ -91,8 +96,10 @@ class BaseExtractor:
     def _log_progress(self, count: int):
         logger.info(
             "Extraction in progess: {extractor_name} with {count} items so far",
-            extra=dict(params=dict(
-                extractor_name=self.extractor_name,
-                count=count,
-            )),
+            extra=dict(
+                params=dict(
+                    extractor_name=self.extractor_name,
+                    count=count,
+                )
+            ),
         )

@@ -5,7 +5,7 @@ from authomize.rest_api_client.generated.schemas import (
 )
 from onelogin.api.models.group import Group
 
-from base_provider import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class GroupsTransformer(BaseTransformer):
