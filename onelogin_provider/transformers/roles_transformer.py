@@ -35,13 +35,13 @@ class RolesTransformer(BaseTransformer):
             name=raw_item.name,
             # todo - make role
             type=GroupingType.Group,
-            role=raw_item.name,
+            isRole=len(raw_item.name) != 0,
         )
         bundle.new_groupings.append(new_group)
         if raw_item.apps:
             for app_id in raw_item.apps:
                 permission = NewPermissionsRequestSchema(
-                    formId=role_id,
+                    permissionSource=role_id,
                     targetAssets=[app_id],
                 )
                 bundle.new_permissions.append(permission)
@@ -55,7 +55,7 @@ class RolesTransformer(BaseTransformer):
         if raw_item.admins:
             for admin_user_id in raw_item.admins:
                 permission = NewPermissionsRequestSchema(
-                    formId=admin_user_id,
+                    permissionSource=admin_user_id,
                     targetAssets=[role_id],
                 )
                 bundle.new_permissions.append(permission)

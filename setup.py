@@ -15,6 +15,9 @@ setup(
         'pydantic>=1.9.1',
     ],
     extras_require={
+        'onelogin': [
+            'onelogin~=2.0.4',
+        ],
         'test': [
             'coverage~=5.2',
             'flake8~=4.0',

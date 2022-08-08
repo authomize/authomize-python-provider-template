@@ -34,24 +34,30 @@ class BasicLoader:
     def __call__(self, items: Iterable[RequestsBundleSchema]):
         logger.info(
             "Starting loader: {loader_name}",
-            extra=dict(params=dict(
-                loader_name=self.loader_name,
-            )),
+            extra=dict(
+                params=dict(
+                    loader_name=self.loader_name,
+                )
+            ),
         )
         self.load_all(items)
         logger.info(
             "Loading done: {loader_name}",
-            extra=dict(params=dict(
-                loader_name=self.loader_name,
-            )),
+            extra=dict(
+                params=dict(
+                    loader_name=self.loader_name,
+                )
+            ),
         )
 
     def load_all(self, items: Iterable[RequestsBundleSchema]):
         logger.info(
             "Loading progress: Delete old data: {app_id}",
-            extra=dict(params=dict(
-                app_id=self.application_configuration.app_id,
-            )),
+            extra=dict(
+                params=dict(
+                    app_id=self.application_configuration.app_id,
+                )
+            ),
         )
         self.authomize_api_client.delete_app_data(
             app_id=self.application_configuration.app_id,
@@ -59,6 +65,7 @@ class BasicLoader:
         batch = []
         for item in items:
             batch.append(item)
+            # TODO: Count should be per items inside a bundle and not the bundle count itself!
             if len(batch) == self.shared_configuration.loader_batch_size:
                 self.load_batch(batch)
                 batch = []
@@ -66,7 +73,7 @@ class BasicLoader:
             self.load_batch(batch)
 
     def load_batch(self, items: list[RequestsBundleSchema]):
-        merged = self.merge_buntle_schemas(items)
+        merged = self.merge_bundle_schemas(items)
         if merged.new_users:
             self.authomize_api_client.create_users(
                 app_id=self.application_configuration.app_id,
@@ -79,16 +86,18 @@ class BasicLoader:
             )
         logger.info(
             "Loading progress: Saving items to Authomize with {loader_name} on {app_id}",
-            extra=dict(params=dict(
-                loader_name=self.loader_name,
-                app_id=self.application_configuration.app_id,
-                new_users=len(merged.new_users or []),
-                new_groupings=len(merged.new_groupings or []),
-            )),
+            extra=dict(
+                params=dict(
+                    loader_name=self.loader_name,
+                    app_id=self.application_configuration.app_id,
+                    new_users=len(merged.new_users or []),
+                    new_groupings=len(merged.new_groupings or []),
+                )
+            ),
         )
 
     @staticmethod
-    def merge_buntle_schemas(items: list[RequestsBundleSchema]) -> RequestsBundleSchema:
+    def merge_bundle_schemas(items: list[RequestsBundleSchema]) -> RequestsBundleSchema:
         new_users = []
         new_groupings = []
         for item in items:
