@@ -1,11 +1,11 @@
 """Configuration for exsiting authomize application"""
-from pydantic import BaseModel
+from pydantic import BaseSettings, Field
 
 
-class ApplicationConfiguration(BaseModel):
+class ApplicationConfiguration(BaseSettings):
     """
     Configuration for exsiting authomize application
 
     Should not be overwritten
     """
-    app_id: str
+    app_id: str = Field(..., env="AUTHOMIZE_API_APP_ID")

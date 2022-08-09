@@ -1,5 +1,3 @@
-from os import getenv
-
 from base_provider.configuration.application_configuration import ApplicationConfiguration
 from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
 from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
@@ -9,17 +7,9 @@ from onelogin_provider.workflows.runner import OneloginRunner
 
 
 def example():
-    authomize_api_configuration = AuthomizeApiConfiguration(
-        auth_token=getenv("AUTHOMIZE_API_TOKEN"),
-        api_url=getenv("AUTHOMIZE_API_URL"),
-    )
-    application_configuration = ApplicationConfiguration(
-        app_id=getenv("AUTHOMIZE_API_APP_ID"),
-    )
-    client_configuration = OneloginClientConfiguration(
-        client_id=getenv("ONELOGIN_CLIENT_ID"),
-        client_secret=getenv("ONELOGIN_CLIENT_SECRET"),
-    )
+    authomize_api_configuration = AuthomizeApiConfiguration()
+    application_configuration = ApplicationConfiguration()
+    client_configuration = OneloginClientConfiguration()
     shared_configuration = OneloginSharedConfiguration()
     health_checker = OneloginHealthChecker(
         authomize_api_configuration=authomize_api_configuration,

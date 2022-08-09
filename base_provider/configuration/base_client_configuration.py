@@ -1,8 +1,8 @@
 """Configuration for connecting to third party api"""
-from pydantic import BaseModel
+from pydantic import BaseSettings
 
 
-class BaseClientConfiguration(BaseModel):
+class BaseClientConfiguration(BaseSettings):
     """
     Configuration for connecting to authomize api
 
