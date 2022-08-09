@@ -1,4 +1,4 @@
-from base_provider import BaseProviderHealthChecker
+from base_provider.workflows.base_health_checker import BaseProviderHealthChecker
 from mock_provider.clients.client import MockProviderClient
 
 

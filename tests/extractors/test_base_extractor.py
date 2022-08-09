@@ -22,7 +22,7 @@ def _create_extractor(files_to_extract: int = 10) -> FilesExtactor:
         ),
         shared_memory=MockProviderSharedMemory(domain='mock-domain-2'),
         shared_configuration=MockProviderSharedConfiguration(
-            extactor_logs_every_n_raw_items=3,
+            extractor_logs_every_n_raw_items=3,
             files_to_extract=files_to_extract,
         ),
     )

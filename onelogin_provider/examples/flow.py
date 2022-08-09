@@ -1,7 +1,7 @@
-from logging import basicConfig
 from os import getenv
 
-from base_provider import ApplicationConfiguration, AuthomizeApiConfiguration
+from base_provider.configuration.application_configuration import ApplicationConfiguration
+from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
 from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
 from onelogin_provider.configuration.shared_configuration import OneloginSharedConfiguration
 from onelogin_provider.workflows.health_checker import OneloginHealthChecker
@@ -9,11 +9,6 @@ from onelogin_provider.workflows.runner import OneloginRunner
 
 
 def example():
-    basicConfig(
-        level='INFO',
-        format='%(asctime)s - %(levelname)s - %(message)s %(params)s',
-    )
-
     authomize_api_configuration = AuthomizeApiConfiguration(
         auth_token=getenv("AUTHOMIZE_API_TOKEN"),
         api_url=getenv("AUTHOMIZE_API_URL"),

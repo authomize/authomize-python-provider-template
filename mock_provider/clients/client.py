@@ -1,4 +1,4 @@
-from base_provider import BaseClient
+from base_provider.clients.base_client import BaseClient
 
 
 class MockProviderClient(BaseClient):

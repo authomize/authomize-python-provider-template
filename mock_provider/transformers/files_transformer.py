@@ -1,6 +1,6 @@
 from authomize.rest_api_client.generated.schemas import NewAssetsRequestSchema, RequestsBundleSchema
 
-from base_provider import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 from mock_provider.models.shared_memory import MockProviderSharedMemory
 
 

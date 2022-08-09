@@ -1,12 +1,13 @@
 """Base extractor with standard configuration"""
-from logging import getLogger
 from typing import Iterable
+
+import structlog
 
 from base_provider.clients.base_client import BaseClient
 from base_provider.configuration.base_shared_configuration import BaseSharedConfiguration
 from base_provider.models.base_shared_memory import BaseSharedMemory
 
-logger = getLogger(__name__)
+logger = structlog.get_logger()
 
 
 class BaseExtractor:
@@ -23,6 +24,7 @@ class BaseExtractor:
     Should be independent from other extractors - an extractor cannot call another extractor.
     In rare cases, this can be ignored be passing small amount of data with `shared_memory`.
     """
+
     def __init__(
         self,
         data_provider_client: BaseClient,
@@ -33,8 +35,9 @@ class BaseExtractor:
         self.data_provider_client = data_provider_client
         self.shared_memory = shared_memory
         self.shared_configuration = shared_configuration
+        self.logger = logger.bind(extractor_name=self.extractor_name)
 
-    def extact_raw(self) -> Iterable[dict]:
+    def extract_raw(self) -> Iterable[dict]:
         """
         Extract all items from source system
 
@@ -51,7 +54,7 @@ class BaseExtractor:
     def extractor_name(self):
         """
         Extractor name.
-        
+
         Used in logs
         """
         return type(self).__name__
@@ -62,37 +65,23 @@ class BaseExtractor:
 
         This function wraps `extact_raw` with logs
         """
-        logger.info(
-            "Starting extraction: {extractor_name}",
-            extra=dict(params=dict(
-                extractor_name=self.extractor_name,
-            )),
-        )
+        self.logger.info("Starting extraction")
         total = 0
-        for idx, result in enumerate(self.extact_raw()):
+        for idx, result in enumerate(self.extract_raw()):
             yield result
             total += 1
             if (idx + 1) % self.log_every_n_raw_items == 0:
                 self._log_progress(idx + 1)
 
-        logger.info(
-            "Extraction done: {extractor_name} with {count} items",
-            extra=dict(params=dict(
-                extractor_name=self.extractor_name,
-                count=total,
-            )),
-        )
+        self.logger.info(f"Extraction done with {total} items", count=total)
 
     @property
     def log_every_n_raw_items(self) -> int:
         """Every how many items should we log the progress"""
-        return self.shared_configuration.extactor_logs_every_n_raw_items
+        return self.shared_configuration.extractor_logs_every_n_raw_items
 
     def _log_progress(self, count: int):
-        logger.info(
-            "Extraction in progess: {extractor_name} with {count} items so far",
-            extra=dict(params=dict(
-                extractor_name=self.extractor_name,
-                count=count,
-            )),
+        self.logger.info(
+            f"Extraction in progess with {count} items so far",
+            count=count,
         )

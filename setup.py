@@ -1,7 +1,7 @@
 from setuptools import find_namespace_packages, setup
 
 setup(
-    version='0.0.1',
+    version='0.1.0',
     name='authomize-python-provider-template',
     author='Authomize inc.',
     author_email='info@authomize.com',
@@ -10,11 +10,15 @@ setup(
     include_package_data=True,
     python_requires='>=3.10.*',
     install_requires=[
-        'authomize-rest-api-client>=1.3.3',
+        'authomize-rest-api-client>=1.5.1',
         'more-itertools~=8.12',
         'pydantic>=1.9.1',
+        'structlog~=22.1',
     ],
     extras_require={
+        'onelogin': [
+            'onelogin~=2.0.4',
+        ],
         'test': [
             'coverage~=5.2',
             'flake8~=4.0',

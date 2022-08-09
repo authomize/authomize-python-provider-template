@@ -1,7 +1,7 @@
 from authomize.rest_api_client.generated.schemas import NewAssetsRequestSchema, RequestsBundleSchema
 from onelogin.api.models.app import App
 
-from base_provider import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class ApplicationsTransformer(BaseTransformer):

@@ -1,4 +1,4 @@
-from base_provider import BaseProviderHealthChecker
+from base_provider.workflows.base_health_checker import BaseProviderHealthChecker
 from onelogin_provider.clients.onelogin_client import OneloginClient
 from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
 

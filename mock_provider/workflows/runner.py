@@ -1,6 +1,6 @@
 from typing import Tuple, Type
 
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider.extractors.base_extractor import BaseExtractor
 from base_provider.transformers.base_transformer import BaseTransformer
 from base_provider.workflows.base_auto_runner import BaseAutoProviderRunner
 from mock_provider.clients.client import MockProviderClient
@@ -11,7 +11,7 @@ from mock_provider.transformers.files_transformer import FilesTransformer
 
 
 class MockProviderRunner(BaseAutoProviderRunner):
-    def get_extactor_and_transfomer_type_list(
+    def get_extractor_and_transformer_type_list(
         self,
     ) -> list[Tuple[Type[BaseExtractor], Type[BaseTransformer]]]:
         return [

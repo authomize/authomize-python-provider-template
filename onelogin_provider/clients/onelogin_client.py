@@ -1,6 +1,6 @@
 from onelogin.api.client import OneLoginClient as OneLoginApiClient
 
-from base_provider import BaseClient
+from base_provider.clients.base_client import BaseClient
 from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
 
 
