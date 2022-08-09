@@ -1,12 +1,12 @@
 from typing import Tuple, Type
 
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider.extractors.base_extractor import BaseExtractor
 from base_provider.transformers.base_transformer import BaseTransformer
 from base_provider.workflows.base_auto_runner import BaseAutoProviderRunner
 from onelogin_provider.clients.onelogin_client import OneloginClient
 from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
 from onelogin_provider.extractors.applications_extractor import ApplicationsExtractor
-from onelogin_provider.extractors.groups_extactor import GroupsExtractor
+from onelogin_provider.extractors.groups_extractor import GroupsExtractor
 from onelogin_provider.extractors.roles_extractor import RolesExtractor
 from onelogin_provider.extractors.users_extractor import UsersExtractor
 from onelogin_provider.models.shared_memory import OneloginProviderSharedMemory

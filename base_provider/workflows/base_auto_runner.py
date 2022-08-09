@@ -3,7 +3,7 @@ from typing import Iterable, Tuple, Type
 from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
 
 from base_provider.clients.base_client import BaseClient
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider.extractors.base_extractor import BaseExtractor
 from base_provider.models.base_shared_memory import BaseSharedMemory
 from base_provider.transformers.base_transformer import BaseTransformer
 from base_provider.workflows.base_runner import BaseProviderRunner

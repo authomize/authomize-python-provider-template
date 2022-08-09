@@ -78,7 +78,7 @@ class BaseExtractor:
     @property
     def log_every_n_raw_items(self) -> int:
         """Every how many items should we log the progress"""
-        return self.shared_configuration.extactor_logs_every_n_raw_items
+        return self.shared_configuration.extractor_logs_every_n_raw_items
 
     def _log_progress(self, count: int):
         self.logger.info(

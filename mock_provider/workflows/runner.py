@@ -1,6 +1,6 @@
 from typing import Tuple, Type
 
-from base_provider.extractors.base_extactor import BaseExtractor
+from base_provider.extractors.base_extractor import BaseExtractor
 from base_provider.transformers.base_transformer import BaseTransformer
 from base_provider.workflows.base_auto_runner import BaseAutoProviderRunner
 from mock_provider.clients.client import MockProviderClient

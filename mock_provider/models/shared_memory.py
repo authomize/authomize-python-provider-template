@@ -1,4 +1,4 @@
-from base_provider import BaseSharedMemory
+from base_provider.models.base_shared_memory import BaseSharedMemory
 
 
 class MockProviderSharedMemory(BaseSharedMemory):
