@@ -1,6 +1,6 @@
-from logging import getLogger
 from typing import Iterable
 
+import structlog
 from authomize.rest_api_client.client import Client
 from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
 
@@ -9,7 +9,7 @@ from base_provider.configuration.authomize_api_configuration import AuthomizeApi
 from base_provider.configuration.base_shared_configuration import BaseSharedConfiguration
 from base_provider.transformers.base_transformer import BaseTransformer
 
-logger = getLogger(__name__)
+logger = structlog.get_logger()
 
 
 class BasicLoader:
@@ -26,39 +26,24 @@ class BasicLoader:
         )
         self.application_configuration = application_configuration
         self.shared_configuration = shared_configuration
+        self.logger = logger.bind(loader_name=self.loader_name)
 
     @property
     def loader_name(self):
         return type(self).__name__
 
     def __call__(self, items: Iterable[RequestsBundleSchema]):
-        logger.info(
-            "Starting loader: {loader_name}",
-            extra=dict(
-                params=dict(
-                    loader_name=self.loader_name,
-                )
-            ),
-        )
+        self.logger.info("Starting loader")
         self.load_all(items)
-        logger.info(
-            "Loading done: {loader_name}",
-            extra=dict(
-                params=dict(
-                    loader_name=self.loader_name,
-                )
-            ),
-        )
+        self.logger.info("Loading done")
 
     def load_all(self, items: Iterable[RequestsBundleSchema]):
-        logger.info(
-            "Loading progress: Delete old data: {app_id}",
-            extra=dict(
-                params=dict(
-                    app_id=self.application_configuration.app_id,
-                )
-            ),
+        app_id = self.application_configuration.app_id
+        self.logger.info(
+            f"Loading progress: Delete old data: {app_id}",
+            app_id=app_id,
         )
+
         self.authomize_api_client.delete_app_data(
             app_id=self.application_configuration.app_id,
         )

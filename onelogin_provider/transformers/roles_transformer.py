@@ -3,9 +3,9 @@ from authomize.rest_api_client.generated.schemas import (
     NewAccountsAssociationRequestSchema,
     NewGroupingRequestSchema,
     NewPermissionsRequestSchema,
-    RequestsBundleSchema,
     NewPrivilegesRequestSchema,
     PrivilegeType,
+    RequestsBundleSchema,
 )
 from onelogin.api.models.role import Role
 

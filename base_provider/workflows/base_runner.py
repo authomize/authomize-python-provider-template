@@ -1,10 +1,9 @@
 import logging
 import sys
-from datetime import datetime
-from typing import Iterable
+from typing import Any, Iterable, List
 
+import structlog
 from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
-from pythonjsonlogger import jsonlogger
 
 from base_provider.configuration.application_configuration import ApplicationConfiguration
 from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
@@ -13,23 +12,8 @@ from base_provider.configuration.base_shared_configuration import BaseSharedConf
 from base_provider.loaders.basic_loader import BasicLoader
 
 DEFAULT_FORMAT = '%(asctime)s [%(levelname)s] %(name)s - %(message)s'
-DEFAULT_JSON_FORMAT = '%(timestamp)s %(level)s %(name)s %(message)s'
-DEFAULT_DATE_FORMAT = '%Y-%m-%dT%H:%M:%S%z'
 
-logger = logging.getLogger(__name__)
-
-
-class JsonFormatter(jsonlogger.JsonFormatter):
-    """Default json formatter"""
-
-    def add_fields(self, log_record, record, message_dict):
-        """Add default fields to each log record"""
-        if hasattr(record, 'params'):
-            record.message = record.message.format(**record.params)
-        super().add_fields(log_record, record, message_dict)
-        timestamp = datetime.fromtimestamp(record.created)
-        log_record['timestamp'] = timestamp.strftime(DEFAULT_DATE_FORMAT)
-        log_record['level'] = record.levelname
+logger = structlog.get_logger()
 
 
 class BaseProviderRunner:
@@ -47,10 +31,7 @@ class BaseProviderRunner:
         self._init_logger()
 
     def run(self):
-        logger.info(
-            "Starting provider",
-            extra=dict(params=dict()),
-        )
+        logger.info("Starting provider")
         loader = BasicLoader(
             authomize_api_configuration=self.authomize_api_configuration,
             application_configuration=self.application_configuration,
@@ -58,10 +39,7 @@ class BaseProviderRunner:
         )
         transformed_data = self.get_transformed_data()
         loader(transformed_data)
-        logger.info(
-            "Provider done",
-            extra=dict(params=dict()),
-        )
+        logger.info("Provider done")
 
     def get_transformed_data(self) -> Iterable[RequestsBundleSchema]:
         pass
@@ -69,18 +47,49 @@ class BaseProviderRunner:
     def _init_logger(
         self,
         level=logging.INFO,
-        json: bool = True,
+        json: bool = False,
         log_format=DEFAULT_FORMAT,
-        date_format=DEFAULT_DATE_FORMAT,
     ):
-        console_handler = logging.StreamHandler(sys.stdout)
-        if json:
-            console_handler.setFormatter(JsonFormatter(DEFAULT_JSON_FORMAT))
-        else:
-            console_handler.setFormatter(logging.Formatter(log_format, date_format))
-        logging.root.handlers = [console_handler]
+        timestamper = structlog.processors.TimeStamper(fmt="%Y-%m-%d %H:%M:%S")
+        shared_processors: List[Any] = [
+            structlog.stdlib.add_log_level,
+            structlog.stdlib.add_logger_name,
+            # Add extra attributes of LogRecord objects to the event dictionary
+            # so that values passed in the extra parameter of log methods pass
+            # through to log output.
+            structlog.stdlib.ExtraAdder(),
+            structlog.processors.format_exc_info,
+            timestamper,
+        ]
 
-        logging.root.setLevel(level)
+        structlog.configure(
+            processors=shared_processors + [
+                # Prepare event dict for `ProcessorFormatter`.
+                structlog.stdlib.ProcessorFormatter.wrap_for_formatter,
+            ],
+            logger_factory=structlog.stdlib.LoggerFactory(),
+        )
+
+        renderer: Any = structlog.processors.JSONRenderer() if json else structlog.dev.ConsoleRenderer()
+        formatter = structlog.stdlib.ProcessorFormatter(
+            # These run ONLY on `logging` entries that do NOT originate within
+            # structlog.
+            foreign_pre_chain=shared_processors,
+            # These run on ALL entries after the pre_chain is done.
+            processors=[
+                # Remove _record & _from_structlog.
+                structlog.stdlib.ProcessorFormatter.remove_processors_meta,
+                renderer,
+            ],
+        )
+
+        handler = logging.StreamHandler()
+        # Use OUR `ProcessorFormatter` to format all `logging` entries.
+        handler.setFormatter(formatter)
+        root_logger = logging.getLogger()
+        root_logger.addHandler(handler)
+        root_logger.setLevel(level)
+
         sys.excepthook = self.handle_exception
         logging.captureWarnings(capture=True)
         self.configure_common_loggers()

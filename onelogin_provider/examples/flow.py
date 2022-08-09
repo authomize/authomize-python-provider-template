@@ -1,4 +1,3 @@
-from logging import basicConfig
 from os import getenv
 
 from base_provider.configuration.application_configuration import ApplicationConfiguration
@@ -10,11 +9,6 @@ from onelogin_provider.workflows.runner import OneloginRunner
 
 
 def example():
-    basicConfig(
-        level='INFO',
-        format='%(asctime)s - %(levelname)s - %(message)s %(params)s',
-    )
-
     authomize_api_configuration = AuthomizeApiConfiguration(
         auth_token=getenv("AUTHOMIZE_API_TOKEN"),
         api_url=getenv("AUTHOMIZE_API_URL"),

@@ -1,12 +1,13 @@
 """Base extractor with standard configuration"""
-from logging import getLogger
 from typing import Iterable
+
+import structlog
 
 from base_provider.clients.base_client import BaseClient
 from base_provider.configuration.base_shared_configuration import BaseSharedConfiguration
 from base_provider.models.base_shared_memory import BaseSharedMemory
 
-logger = getLogger(__name__)
+logger = structlog.get_logger()
 
 
 class BaseExtractor:
@@ -34,6 +35,7 @@ class BaseExtractor:
         self.data_provider_client = data_provider_client
         self.shared_memory = shared_memory
         self.shared_configuration = shared_configuration
+        self.logger = logger.bind(extractor_name=self.extractor_name)
 
     def extract_raw(self) -> Iterable[dict]:
         """
@@ -63,14 +65,7 @@ class BaseExtractor:
 
         This function wraps `extact_raw` with logs
         """
-        logger.info(
-            "Starting extraction: {extractor_name}",
-            extra=dict(
-                params=dict(
-                    extractor_name=self.extractor_name,
-                )
-            ),
-        )
+        self.logger.info("Starting extraction")
         total = 0
         for idx, result in enumerate(self.extract_raw()):
             yield result
@@ -78,15 +73,7 @@ class BaseExtractor:
             if (idx + 1) % self.log_every_n_raw_items == 0:
                 self._log_progress(idx + 1)
 
-        logger.info(
-            "Extraction done: {extractor_name} with {count} items",
-            extra=dict(
-                params=dict(
-                    extractor_name=self.extractor_name,
-                    count=total,
-                )
-            ),
-        )
+        self.logger.info(f"Extraction done with {total} items", count=total)
 
     @property
     def log_every_n_raw_items(self) -> int:
@@ -94,12 +81,7 @@ class BaseExtractor:
         return self.shared_configuration.extactor_logs_every_n_raw_items
 
     def _log_progress(self, count: int):
-        logger.info(
-            "Extraction in progess: {extractor_name} with {count} items so far",
-            extra=dict(
-                params=dict(
-                    extractor_name=self.extractor_name,
-                    count=count,
-                )
-            ),
+        self.logger.info(
+            f"Extraction in progess with {count} items so far",
+            count=count,
         )
