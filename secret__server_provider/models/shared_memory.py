@@ -1,4 +1,4 @@
-from base_provider import BaseSharedMemory
+from base_provider.transformers.base_transformer import BaseSharedMemory
 
 
 class SecretServerProviderSharedMemory(BaseSharedMemory):

@@ -3,9 +3,9 @@ from authomize.rest_api_client.generated.schemas import (
     NewGroupingRequestSchema,
     RequestsBundleSchema,
 )
-from ..openapi_client.plugins.model.group_model import GroupModel
+from plugins.model.group_model import GroupModel
 
-from base_provider import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class GroupsTransformer(BaseTransformer):

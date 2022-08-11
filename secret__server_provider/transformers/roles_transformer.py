@@ -5,9 +5,9 @@ from authomize.rest_api_client.generated.schemas import (
     NewPermissionsRequestSchema,
     RequestsBundleSchema,
 )
-from ..openapi_client.plugins.model.role_model import RoleModel
+from plugins.model.role_model import RoleModel
 
-from base_provider import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class RolesTransformer(BaseTransformer):
@@ -23,10 +23,10 @@ class RolesTransformer(BaseTransformer):
     See docs/RolesApi.md#roles_service_get_all
     """
 
-    def validate_item_schema(self, raw_item: Role) -> bool:
+    def validate_item_schema(self, raw_item: RoleModel) -> bool:
         return True
 
-    def transform_model(self, raw_item: Role) -> RequestsBundleSchema:
+    def transform_model(self, raw_item: RoleModel) -> RequestsBundleSchema:
         bundle = self.create_bundle()
         role_id = raw_item.id
         new_group = NewGroupingRequestSchema(

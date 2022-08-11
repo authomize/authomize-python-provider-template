@@ -1,4 +1,4 @@
-from base_provider import BaseProviderHealthChecker
+from base_provider.workflows.base_health_checker import BaseProviderHealthChecker
 from secret__server_provider.clients.secret_server_client import SecretServerClient
 from secret__server_provider.configuration.client_configuration import SecretServerConfiguration
 
