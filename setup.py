@@ -19,6 +19,8 @@ setup(
         'onelogin': [
             'onelogin~=2.0.4',
         ],
+        'jumpcloud1': ['jcapiv1 @ git+https://github.com/TheJumpCloud/jcapi-python.git#subdirectory=jcapiv1'],
+        'jumpcloud2': ['jcapiv2 @ git+https://github.com/TheJumpCloud/jcapi-python.git#subdirectory=jcapiv2'],
         'test': [
             'coverage~=5.2',
             'flake8~=4.0',
