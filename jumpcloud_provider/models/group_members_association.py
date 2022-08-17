@@ -1,10 +1,11 @@
 from typing import List
 
-from jcapiv2 import GraphConnection
 from pydantic import BaseModel
+
+from jumpcloud_provider.models.member_association import MemberAssociation
 
 
 class GroupMembersAssociation(BaseModel):
     id: str
     name: str
-    members: List[GraphConnection]
+    members: List[MemberAssociation]

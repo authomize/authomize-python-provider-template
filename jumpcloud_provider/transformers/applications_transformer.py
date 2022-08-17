@@ -6,7 +6,7 @@ from base_provider.transformers.base_transformer import BaseTransformer
 
 class ApplicationsTransformer(BaseTransformer):
     """
-    Tramsform a list of all Apps in a JumpCloud account.
+    Transform a list of all Apps in a JumpCloud account.
 
     See https://github.com/TheJumpCloud/jcapi-python/blob/master/jcapiv1/jcapiv1/api/applications_api.py
         https://docs.jumpcloud.com/api/1.0/index.html#operation/applications_list

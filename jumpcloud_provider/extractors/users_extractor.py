@@ -1,9 +1,9 @@
-from typing import Iterable, Callable
+from typing import Iterable, cast
 
 from jcapiv1 import SystemusersApi, Systemuserreturn
 
+from jumpcloud_provider.extractors import JumpcloudApiResult
 from jumpcloud_provider.extractors.jumpcloud_extractor import JumpcloudExtractor
-from jumpcloud_provider.extractors.jumpcloud_pagination import JumpcloudPagination
 
 
 class UsersExtractor(JumpcloudExtractor):
@@ -17,9 +17,10 @@ class UsersExtractor(JumpcloudExtractor):
     def extract_raw(self) -> Iterable[Systemuserreturn]:
         users_client = SystemusersApi(self.jumpcloud_client.client_v1)
         pagination_api = self._call_users_api(users_client)
-        return self.extract_with_pagination(pagination_api)
+        system_users = self.extract_with_pagination(pagination_api)
+        return cast(Iterable[Systemuserreturn], system_users)
 
-    def _call_users_api(self, users_client: SystemusersApi) -> Callable[[int], JumpcloudPagination]:
+    def _call_users_api(self, users_client: SystemusersApi) -> JumpcloudApiResult:
         client_configuration = self.client_configuration
         return lambda skip: users_client.systemusers_list(
             skip=skip,
