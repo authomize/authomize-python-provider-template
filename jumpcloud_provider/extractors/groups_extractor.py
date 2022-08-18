@@ -17,10 +17,10 @@ class GroupsExtractor(JumpcloudExtractor):
 
     def extract_raw(self) -> Iterable[GroupMembersAssociation]:
         client_v2 = self.jumpcloud_client.client_v2
-        groups = self.get_groups(client_v2)
+        groups = self._get_groups(client_v2)
         return self._associate_members_to_group(groups, client_v2)
 
-    def get_groups(self, jumpcloud_client: ApiClient) -> Iterable[Group]:
+    def _get_groups(self, jumpcloud_client: ApiClient) -> Iterable[Group]:
         groups_api = GroupsApi(jumpcloud_client)
         groups = self.extract_with_pagination(self._call_groups_api(groups_api))
         return cast(Iterable[Group], groups)
