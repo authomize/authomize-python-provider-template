@@ -67,11 +67,11 @@ class BaseExtractor:
         """
         self.logger.info("Starting extraction")
         total = 0
-        for idx, result in enumerate(self.extract_raw()):
+        for result in self.extract_raw():
             yield result
             total += 1
-            if (idx + 1) % self.log_every_n_raw_items == 0:
-                self._log_progress(idx + 1)
+            if total % self.log_every_n_raw_items == 0:
+                self._log_progress(total)
 
         self.logger.info(f"Extraction done with {total} items", count=total)
 

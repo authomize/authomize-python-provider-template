@@ -2,7 +2,12 @@ from typing import Iterable
 
 import structlog
 from authomize.rest_api_client.client import Client
-from authomize.rest_api_client.generated.schemas import RequestsBundleSchema
+from authomize.rest_api_client.generated.schemas import (
+    NewAccountsAssociationResponseSchema,
+    NewIdentitiesListRequestSchema,
+    NewUsersListRequestSchema,
+    RequestsBundleSchema,
+)
 
 from base_provider.configuration.application_configuration import ApplicationConfiguration
 from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
@@ -59,7 +64,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_users(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_users,
+                body=NewUsersListRequestSchema(data=bundle.new_users),
             )
         if bundle.new_groupings and (
             load_all or len(bundle.new_groupings) >= self.shared_configuration.loader_batch_size
@@ -87,7 +92,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_identities(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_identities,
+                body=NewIdentitiesListRequestSchema(data=bundle.new_identities),
             )
         if bundle.new_permissions and (
             load_all or len(bundle.new_permissions) >= self.shared_configuration.loader_batch_size
@@ -110,7 +115,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_accounts_association(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_accounts_association,
+                body=NewAccountsAssociationResponseSchema(data=bundle.new_accounts_association),
             )
         if bundle.new_groupings_association and (
             load_all

@@ -4,14 +4,14 @@ from typing import Iterable
 import structlog
 from authomize.rest_api_client.generated.schemas import (
     NewAccountsAssociationRequestSchema,
-    NewAssetsInheritanceRequestSchema,
-    NewAssetsRequestSchema,
+    NewAssetInheritanceRequestSchema,
+    NewAssetRequestSchema,
     NewGroupingRequestSchema,
     NewGroupingsAssociationRequestSchema,
     NewIdentityRequestSchema,
-    NewPermissionsRequestSchema,
+    NewPermissionRequestSchema,
     NewPrivilegeGrantsRequestSchema,
-    NewPrivilegesRequestSchema,
+    NewPrivilegeRequestSchema,
     NewUserRequestSchema,
     RequestsBundleSchema,
 )
@@ -55,7 +55,6 @@ class BaseTransformer:
     ) -> Iterable[RequestsBundleSchema]:
         self.logger.info(
             "Starting transformer",
-            transformer_name=self.transformer_name,
         )
         idx = -1
         for idx, item in enumerate(self.transform_models(extracted_raw_data)):
@@ -87,13 +86,13 @@ class BaseTransformer:
     def create_bundle(
         new_users: list[NewUserRequestSchema] = None,
         new_groupings: list[NewGroupingRequestSchema] = None,
-        new_permissions: list[NewPermissionsRequestSchema] = None,
-        new_privileges: list[NewPrivilegesRequestSchema] = None,
+        new_permissions: list[NewPermissionRequestSchema] = None,
+        new_privileges: list[NewPrivilegeRequestSchema] = None,
         new_privileges_grants: list[NewPrivilegeGrantsRequestSchema] = None,
         new_accounts_association: list[NewAccountsAssociationRequestSchema] = None,
         new_groupings_association: list[NewGroupingsAssociationRequestSchema] = None,
-        new_assets: list[NewAssetsRequestSchema] = None,
-        new_assets_inheritance: list[NewAssetsInheritanceRequestSchema] = None,
+        new_assets: list[NewAssetRequestSchema] = None,
+        new_assets_inheritance: list[NewAssetInheritanceRequestSchema] = None,
         new_identities: list[NewIdentityRequestSchema] = None,
     ) -> RequestsBundleSchema:
         """Create bundle with everything by default set as empty list"""
