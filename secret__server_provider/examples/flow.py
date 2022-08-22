@@ -16,8 +16,8 @@ def example():
     )
 
     authomize_api_configuration = AuthomizeApiConfiguration(
-        auth_token='atmzNTk5NzExNDg4OTE6R0RSX0ZFRzBENlJBVE9VNkVMV084QkpTQVlYTDdCQUROUjM3VlVBVk9RTQ==',
-        api_url='https://apidev.authomize.com/',
+        auth_token='atmzNjAyMTUyMDk0ODI6VU45T1pFTDBJTkExSFVDOUlWTkJTQ1RET01YVFFCU1k4NkNOVS1SSlJDVw==',
+        api_url='https://apidev.authomize.com',
     )
     application_configuration = ApplicationConfiguration(
         app_id='59971200755',
