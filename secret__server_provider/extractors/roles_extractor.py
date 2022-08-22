@@ -6,14 +6,14 @@ from ..openapi_client.plugins.model.role_model import RoleModel
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret__server_provider.clients.secret_server_client import SecretServerClient
 
-class RolesExtactor(BaseExtractor):
+class RolesExtractor(BaseExtractor):
     """
     Gets a list of Roles records.
 
     See docs/RolesApi.md#roles_service_get_all
     """
 
-    def extact_raw(self) -> Iterable[RoleModel]:
+    def extract_raw(self) -> Iterable[RoleModel]:
         data_provider_client: SecretServerClient = self.data_provider_client 
         api_instance = RolesApi(data_provider_client)
 

@@ -6,14 +6,14 @@ from ..openapi_client.plugins.model.group_model import GroupModel
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret__server_provider.clients.secret_server_client import SecretServerClient
 
-class GroupsExtactor(BaseExtractor):
+class GroupsExtractor(BaseExtractor):
     """
     Gets a list of Group records.
 
     See docs/GroupsApi.md#groups_service_search
     """
 
-    def extact_raw(self) -> Iterable[GroupModel]:
+    def extract_raw(self) -> Iterable[GroupModel]:
         data_provider_client: SecretServerClient = self.data_provider_client 
         api_instance = GroupsApi(data_provider_client)
 

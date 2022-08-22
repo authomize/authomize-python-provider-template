@@ -6,14 +6,14 @@ from ..openapi_client.plugins.model.user_model import UserModel
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret__server_provider.clients.secret_server_client import SecretServerClient
 
-class UsersExtactor(BaseExtractor):
+class UsersExtractor(BaseExtractor):
     """
     Gets a list of User records.
 
     See docs/UsersApi.md#users_service_search_users
     """
 
-    def extact_raw(self) -> Iterable[UserModel]:
+    def extract_raw(self) -> Iterable[UserModel]:
         data_provider_client: SecretServerClient = self.data_provider_client 
         api_instance = UsersApi(data_provider_client)
 

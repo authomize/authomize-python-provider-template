@@ -12,4 +12,4 @@ class SecretServerClient(BaseClient):
         super().__init__(client_configuration=client_configuration)
         configuration = Configuration(host=client_configuration.host)
         configuration.api_key['BearerToken'] = f'bearer {client_configuration.api_key}'
-        self.client = ApiClient(configuration)
+        self.client = ApiClient(configuration=configuration)

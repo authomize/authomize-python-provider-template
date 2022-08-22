@@ -5,11 +5,11 @@ from base_provider.transformers.base_transformer import BaseTransformer
 from base_provider.workflows.base_auto_runner import BaseAutoProviderRunner
 from secret__server_provider.clients.secret_server_client import SecretServerClient
 from secret__server_provider.configuration.client_configuration import SecretServerConfiguration
-from secret__server_provider.extractors.secrets_extractor import SecretsExtactor
-# from secret__server_provider.extractors.  ApplicationsExtactor ApplicationsTransformer,
-from secret__server_provider.extractors.groups_extactor import GroupsExtactor
-from secret__server_provider.extractors.roles_extractor import RolesExtactor
-from secret__server_provider.extractors.users_extractor import UsersExtactor
+from secret__server_provider.extractors.secrets_extractor import SecretsExtractor
+# from secret__server_provider.extractors.  ApplicationsExtractor ApplicationsTransformer,
+from secret__server_provider.extractors.groups_extractor import GroupsExtractor
+from secret__server_provider.extractors.roles_extractor import RolesExtractor
+from secret__server_provider.extractors.users_extractor import UsersExtractor
 from secret__server_provider.models.shared_memory import SecretServerProviderSharedMemory
 from secret__server_provider.transformers.secrets_transformer import  SecretsTransformer
 from secret__server_provider.transformers.groups_transformer import GroupsTransformer
@@ -19,12 +19,13 @@ from secret__server_provider.transformers.users_transformer import UsersTransfor
 
 class SecretServerRunner(BaseAutoProviderRunner):
     ExtractorTransformersList = [
-            (GroupsExtactor, GroupsTransformer),
-            (UsersExtactor, UsersTransformer),
-            (SecretsExtactor, SecretsTransformer),
-            (RolesExtactor, RolesTransformer),
+            (GroupsExtractor, GroupsTransformer),
+            (UsersExtractor, UsersTransformer),
+            (SecretsExtractor, SecretsTransformer),
+            (RolesExtractor, RolesTransformer),
         ]
-    def get_extactor_and_transfomer_type_list(
+
+    def get_extractor_and_transformer_type_list(
         self,
     ) -> list[Tuple[Type[BaseExtractor], Type[BaseTransformer]]]:
         return self.ExtractorTransformersList

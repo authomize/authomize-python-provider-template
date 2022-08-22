@@ -9,14 +9,14 @@ from secret__server_provider.clients.secret_server_client import SecretServerCli
 from ..openapi_client.plugins.apis import SecretsApi
 from ..openapi_client.plugins.model.secret_model_v2 import SecretModelV2 
 
-class SecretsExtactor(BaseExtractor):
+class SecretsExtractor(BaseExtractor):
     """
     Gets a list of Secrets records.
 
     See docs/SecretsApi.md#secrets_service_search_v2)
     """
 
-    def extact_raw(self) -> Iterable[SecretModelV2]:
+    def extract_raw(self) -> Iterable[SecretModelV2]:
         data_provider_client: SecretServerClient = self.data_provider_client 
         api_instance = SecretsApi(data_provider_client)
 

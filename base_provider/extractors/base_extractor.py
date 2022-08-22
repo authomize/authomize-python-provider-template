@@ -17,7 +17,7 @@ class BaseExtractor:
     The extractor should be very simple and should not try to shape the data, only
     call relevant api routes
 
-    `extact_raw` function should be overwritten
+    `extract_raw` function should be overwritten
     the default data that returns is dict, but can be anything as long it is shared
     between the extractor and the relevant transformer
 
@@ -63,7 +63,7 @@ class BaseExtractor:
         """
         Extract all items from source system
 
-        This function wraps `extact_raw` with logs
+        This function wraps `extract_raw` with logs
         """
         self.logger.info("Starting extraction")
         total = 0
