@@ -3,7 +3,7 @@ from typing import Iterable
 from ..openapi_client.plugins.apis import UsersApi
 from ..openapi_client.plugins.model.user_model import UserModel
 
-from base_provider import BaseExtractor
+from base_provider.extractors.base_extractor import BaseExtractor
 from secret__server_provider.clients.secret_server_client import SecretServerClient
 
 class UsersExtactor(BaseExtractor):
