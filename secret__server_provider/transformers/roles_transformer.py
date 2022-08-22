@@ -2,7 +2,7 @@ from authomize.rest_api_client.generated.schemas import (
     GroupingType,
     NewAccountsAssociationRequestSchema,
     NewGroupingRequestSchema,
-    NewPermissionsRequestSchema,
+    NewPermissionRequestSchema,
     RequestsBundleSchema,
 )
 from ..openapi_client.plugins.model.role_model import RoleModel

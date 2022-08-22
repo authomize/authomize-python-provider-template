@@ -2,7 +2,7 @@ from authomize.rest_api_client.generated.schemas import (
     GroupingType,
     NewAccountsAssociationRequestSchema,
     NewGroupingRequestSchema,
-    NewPermissionsRequestSchema,
+    NewPermissionRequestSchema,
     NewPrivilegesRequestSchema,
     PrivilegeType,
     RequestsBundleSchema,
@@ -48,7 +48,7 @@ class RolesTransformer(BaseTransformer):
         bundle.new_privileges.append(new_privilege)
         if raw_item.apps:
             for app_id in raw_item.apps:
-                permission = NewPermissionsRequestSchema(
+                permission = NewPermissionRequestSchema(
                     permissionSource=role_id,
                     targetAssets=[app_id],
                     privilegeId=raw_item.name,
@@ -63,7 +63,7 @@ class RolesTransformer(BaseTransformer):
                 bundle.new_accounts_association.append(association)
         if raw_item.admins:
             for admin_user_id in raw_item.admins:
-                permission = NewPermissionsRequestSchema(
+                permission = NewPermissionRequestSchema(
                     permissionSource=admin_user_id,
                     targetAssets=[role_id],
                     privilegeId=raw_item.name,

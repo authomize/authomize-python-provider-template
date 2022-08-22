@@ -1,4 +1,4 @@
-from authomize.rest_api_client.generated.schemas import NewAssetsRequestSchema, RequestsBundleSchema
+from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema, RequestsBundleSchema
 from onelogin.api.models.app import App
 
 from base_provider.transformers.base_transformer import BaseTransformer
@@ -17,7 +17,7 @@ class ApplicationsTransformer(BaseTransformer):
 
     def transform_model(self, raw_item: App) -> RequestsBundleSchema:
         bundle = self.create_bundle()
-        asset = NewAssetsRequestSchema(
+        asset = NewAssetRequestSchema(
             id=raw_item.id,
             name=raw_item.name,
         )

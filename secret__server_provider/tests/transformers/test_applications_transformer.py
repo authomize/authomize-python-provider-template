@@ -1,4 +1,4 @@
-from authomize.rest_api_client.generated.schemas import NewAssetsRequestSchema
+from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema
 from hamcrest import assert_that, equal_to, is_
 from onelogin.api.models.app import App
 
@@ -40,7 +40,7 @@ def test_transform_model():
     transformer = create_transformer()
     expected_result = ApplicationsTransformer.create_bundle(
         new_assets=[
-            NewAssetsRequestSchema(
+            NewAssetRequestSchema(
                 id=MOCK_RAW_ITEM.id,
                 name=MOCK_RAW_ITEM.name,
             ),
