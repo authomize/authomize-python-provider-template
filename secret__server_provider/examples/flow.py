@@ -15,13 +15,8 @@ def example():
         format='%(asctime)s - %(levelname)s - %(message)s %(params)s',
     )
 
-    authomize_api_configuration = AuthomizeApiConfiguration(
-        auth_token='atmzNjAyMTUyMDk0ODI6VU45T1pFTDBJTkExSFVDOUlWTkJTQ1RET01YVFFCU1k4NkNOVS1SSlJDVw==',
-        api_url='https://apidev.authomize.com',
-    )
-    application_configuration = ApplicationConfiguration(
-        app_id='59971200755',
-    )
+    authomize_api_configuration = AuthomizeApiConfiguration()
+    application_configuration = ApplicationConfiguration()
     client_configuration = SecretServerConfiguration()
     shared_configuration = SecretServerSharedConfiguration()
     health_checker = SecretServerHealthChecker(
