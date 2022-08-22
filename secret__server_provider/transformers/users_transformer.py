@@ -7,7 +7,7 @@ from authomize.rest_api_client.generated.schemas import (
 from ..openapi_client.plugins.model.user_model import UserModel
 
 
-from base_provider import BaseTransformer
+from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class UsersTransformer(BaseTransformer):

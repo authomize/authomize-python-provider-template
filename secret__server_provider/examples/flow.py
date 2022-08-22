@@ -1,7 +1,8 @@
 from logging import basicConfig
 from os import getenv
 
-from base_provider import ApplicationConfiguration, AuthomizeApiConfiguration
+from base_provider.configuration.application_configuration import ApplicationConfiguration
+from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
 from secret__server_provider.configuration.client_configuration import SecretServerConfiguration
 from secret__server_provider.configuration.shared_configuration import SecretServerSharedConfiguration
 from secret__server_provider.workflows.health_checker import SecretServerHealthChecker
@@ -15,19 +16,13 @@ def example():
     )
 
     authomize_api_configuration = AuthomizeApiConfiguration(
-        auth_token=getenv("AUTHOMIZE_API_TOKEN"),
-        api_url=getenv("AUTHOMIZE_API_URL"),
+        auth_token='atmzNTk5NzExNDg4OTE6R0RSX0ZFRzBENlJBVE9VNkVMV084QkpTQVlYTDdCQUROUjM3VlVBVk9RTQ==',
+        api_url='https://apidev.authomize.com/',
     )
     application_configuration = ApplicationConfiguration(
-        app_id=getenv("AUTHOMIZE_API_APP_ID"),
+        app_id='59971200755',
     )
-    client_configuration = SecretServerConfiguration(
-        '''
-        TODO : should not be hard coded token - fix later
-        client_id=getenv("SECRET_SERVER_CLIENT_ID"),
-        client_secret=getenv("SECRET_SERVER_CLIENT_SECRET"),
-        '''
-    )
+    client_configuration = SecretServerConfiguration()
     shared_configuration = SecretServerSharedConfiguration()
     health_checker = SecretServerHealthChecker(
         authomize_api_configuration=authomize_api_configuration,
