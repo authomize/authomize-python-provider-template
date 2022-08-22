@@ -18,7 +18,7 @@ class SecretsExtractor(BaseExtractor):
 
     def extract_raw(self) -> Iterable[SecretModelV2]:
         data_provider_client: SecretServerClient = self.data_provider_client 
-        api_instance = SecretsApi(data_provider_client)
+        api_instance = SecretsApi(data_provider_client.client)
 
         # TODO : errors handling
         api_response = api_instance.secrets_service_search_v2()

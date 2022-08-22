@@ -1,5 +1,7 @@
 from typing import Iterable
 
+from plugins.model.paging_of_group_summary import PagingOfGroupSummary
+
 from ..openapi_client.plugins.apis import GroupsApi
 from ..openapi_client.plugins.model.group_model import GroupModel
 
@@ -15,11 +17,12 @@ class GroupsExtractor(BaseExtractor):
 
     def extract_raw(self) -> Iterable[GroupModel]:
         data_provider_client: SecretServerClient = self.data_provider_client 
-        api_instance = GroupsApi(data_provider_client)
+        api_instance = GroupsApi(data_provider_client.client)
 
         # TODO : errors handling
         api_response = api_instance.groups_service_search()
-        all_groups = api_response.records()
+        all_groups = api_response.records
+        breakpoint()
         '''
         TODO:make skip work later
         while (api_response.hasNext) :

@@ -15,7 +15,7 @@ class RolesExtractor(BaseExtractor):
 
     def extract_raw(self) -> Iterable[RoleModel]:
         data_provider_client: SecretServerClient = self.data_provider_client 
-        api_instance = RolesApi(data_provider_client)
+        api_instance = RolesApi(data_provider_client.client)
 
         # TODO : errors handling
         api_response = api_instance.roles_service_get_all()

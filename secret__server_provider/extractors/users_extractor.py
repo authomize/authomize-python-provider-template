@@ -15,7 +15,7 @@ class UsersExtractor(BaseExtractor):
 
     def extract_raw(self) -> Iterable[UserModel]:
         data_provider_client: SecretServerClient = self.data_provider_client 
-        api_instance = UsersApi(data_provider_client)
+        api_instance = UsersApi(data_provider_client.client)
 
         # TODO : errors handling
         api_response = api_instance.users_service_search_users()
