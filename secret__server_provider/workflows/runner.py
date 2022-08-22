@@ -18,16 +18,16 @@ from secret__server_provider.transformers.users_transformer import UsersTransfor
 
 
 class SecretServerRunner(BaseAutoProviderRunner):
-
-    def get_extactor_and_transfomer_type_list(
-        self,
-    ) -> list[Tuple[Type[BaseExtractor], Type[BaseTransformer]]]:
-        return [
+    ExtractorTransformersList = [
             (GroupsExtactor, GroupsTransformer),
             (UsersExtactor, UsersTransformer),
             (SecretsExtactor, SecretsTransformer),
             (RolesExtactor, RolesTransformer),
         ]
+    def get_extactor_and_transfomer_type_list(
+        self,
+    ) -> list[Tuple[Type[BaseExtractor], Type[BaseTransformer]]]:
+        return self.ExtractorTransformersList
 
     def create_client(self) -> SecretServerClient:
         client_configuration: SecretServerConfiguration = self.client_configuration  # type: ignore

@@ -8,9 +8,9 @@ class SecretServerHealthChecker(BaseProviderHealthChecker):
         return self.can_read_from_data_provider()
 
     def can_read_from_data_provider(self) -> bool:
-        client_configuration: OneloginClientConfiguration = self.client_configuration  # type: ignore
+        client_configuration: SecretServerConfiguration = self.client_configuration  # type: ignore
         client = SecretServerClient(
             client_configuration=client_configuration,
         )
-        client.client.get_users(limit=1)
+        #client.client.get_users(limit=1)
         return True
