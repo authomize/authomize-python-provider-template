@@ -1,13 +1,10 @@
 from authomize.rest_api_client.generated.schemas import (
     GroupingType,
-    NewAccountsAssociationRequestSchema,
     NewGroupingRequestSchema,
-    NewPermissionRequestSchema,
     NewPrivilegeRequestSchema,
     PrivilegeType,
     RequestsBundleSchema,
 )
-from ..openapi_client.plugins.model.role_model import RoleModel
 
 from base_provider.transformers.base_transformer import BaseTransformer
 
@@ -15,6 +12,7 @@ from base_provider.transformers.base_transformer import BaseTransformer
 class RolesTransformer(BaseTransformer):
     """
     Transform a list of Role resources.
+
     Creates a:
     * Role (Groupping)
     * Role -> App permission
@@ -25,7 +23,7 @@ class RolesTransformer(BaseTransformer):
     See docs/RolesApi.md#roles_service_get_all
     """
 
-    from ..openapi_client.plugins.model.role_model import RoleModel
+    from secret__server_provider.openapi_client.plugins.model.role_model import RoleModel
 
     def validate_item_schema(self, raw_item: RoleModel) -> bool:
         return True
@@ -36,15 +34,14 @@ class RolesTransformer(BaseTransformer):
         new_group = NewGroupingRequestSchema(
             id=role_id,
             name=raw_item.name,
-            type=GroupingType.Role,
-            #type="Role",
-            role=raw_item.name,
+            type=GroupingType.Group,
+            isRole=True,
         )
         bundle.new_groupings.append(new_group)
         new_privilege = NewPrivilegeRequestSchema(
-            id=raw_item.name,
-            type=PrivilegeType.Use, 
-            originPrivilegeName=raw_item.name,
+            uniqueId=raw_item.name,
+            type=PrivilegeType.Use,
+            originName=raw_item.name,
         )
         bundle.new_privileges.append(new_privilege)
         return bundle

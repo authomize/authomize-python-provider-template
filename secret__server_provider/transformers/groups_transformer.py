@@ -3,14 +3,16 @@ from authomize.rest_api_client.generated.schemas import (
     NewGroupingRequestSchema,
     RequestsBundleSchema,
 )
-from ..openapi_client.plugins.model.group_model import GroupModel
 
 from base_provider.transformers.base_transformer import BaseTransformer
+
+from ..openapi_client.plugins.model.group_model import GroupModel
 
 
 class GroupsTransformer(BaseTransformer):
     """
     Transorm a list of Group resources
+
     See https://developers.onelogin.com/api-docs/1/groups/get-groups Get Groups documentation
     """
 

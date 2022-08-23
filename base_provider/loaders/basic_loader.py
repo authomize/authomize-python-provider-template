@@ -3,10 +3,15 @@ from typing import Iterable
 import structlog
 from authomize.rest_api_client.client import Client
 from authomize.rest_api_client.generated.schemas import (
-    NewAccountsAssociationResponseSchema,
-    NewPrivilegesListRequestSchema,
+    NewAccountsAssociationsListRequestSchema,
+    NewAssetsInheritanceListRequestSchema,
+    NewAssetsListRequestSchema,
+    NewGroupingsAssociationsListRequestSchema,
     NewGroupingsListRequestSchema,
     NewIdentitiesListRequestSchema,
+    NewPermissionsListRequestSchema,
+    NewPrivilegesGrantsListRequestSchema,
+    NewPrivilegesListRequestSchema,
     NewUsersListRequestSchema,
     RequestsBundleSchema,
 )
@@ -73,21 +78,21 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_groupings(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_groupings,
+                body=NewGroupingsListRequestSchema(data=bundle.new_groupings),
             )
         if bundle.new_privileges and (
             load_all or len(bundle.new_privileges) >= self.shared_configuration.loader_batch_size
         ):
             self.authomize_api_client.create_privileges(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_privileges,
+                body=NewPrivilegesListRequestSchema(data=bundle.new_privileges),
             )
         if bundle.new_assets and (
             load_all or len(bundle.new_assets) >= self.shared_configuration.loader_batch_size
         ):
             self.authomize_api_client.create_assets(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_assets,
+                body=NewAssetsListRequestSchema(data=bundle.new_assets),
             )
         if bundle.new_identities and (
             load_all or len(bundle.new_identities) >= self.shared_configuration.loader_batch_size
@@ -101,7 +106,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_permissions(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_permissions,
+                body=NewPermissionsListRequestSchema(data=bundle.new_permissions),
             )
         if bundle.new_privileges_grants and (
             load_all
@@ -109,7 +114,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_privileges_grants(
                 app_id=self.application_configuration.app_id,
-                body=NewPrivilegesListRequestSchema(data=bundle.new_privileges_grants),
+                body=NewPrivilegesGrantsListRequestSchema(data=bundle.new_privileges_grants),
             )
         if bundle.new_accounts_association and (
             load_all
@@ -117,7 +122,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_accounts_association(
                 app_id=self.application_configuration.app_id,
-                body=NewAccountsAssociationResponseSchema(data=bundle.new_accounts_association),
+                body=NewAccountsAssociationsListRequestSchema(data=bundle.new_accounts_association),
             )
         if bundle.new_groupings_association and (
             load_all
@@ -125,7 +130,9 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_groupings_association(
                 app_id=self.application_configuration.app_id,
-                body=NewGroupingsListRequestSchema(data=bundle.new_groupings_association),
+                body=NewGroupingsAssociationsListRequestSchema(
+                    data=bundle.new_groupings_association,
+                ),
             )
         if bundle.new_assets_inheritance and (
             load_all
@@ -133,7 +140,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_assets_inheritance(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_assets_inheritance,
+                body=NewAssetsInheritanceListRequestSchema(data=bundle.new_assets_inheritance),
             )
 
     @staticmethod

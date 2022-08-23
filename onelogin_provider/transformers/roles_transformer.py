@@ -15,6 +15,7 @@ from base_provider.transformers.base_transformer import BaseTransformer
 class RolesTransformer(BaseTransformer):
     """
     Transform a list of Role resources.
+
     Creates a:
     * Role (Groupping)
     * Role -> App permission

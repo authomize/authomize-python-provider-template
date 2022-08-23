@@ -1,10 +1,11 @@
 from logging import basicConfig
-from os import getenv
 
 from base_provider.configuration.application_configuration import ApplicationConfiguration
 from base_provider.configuration.authomize_api_configuration import AuthomizeApiConfiguration
 from secret__server_provider.configuration.client_configuration import SecretServerConfiguration
-from secret__server_provider.configuration.shared_configuration import SecretServerSharedConfiguration
+from secret__server_provider.configuration.shared_configuration import (
+    SecretServerSharedConfiguration,
+)
 from secret__server_provider.workflows.health_checker import SecretServerHealthChecker
 from secret__server_provider.workflows.runner import SecretServerRunner
 

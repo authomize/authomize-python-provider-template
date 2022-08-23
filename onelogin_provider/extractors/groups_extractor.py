@@ -9,6 +9,7 @@ from onelogin_provider.clients.onelogin_client import OneloginClient
 class GroupsExtractor(BaseExtractor):
     """
     Gets a list of Group resources
+
     See https://developers.onelogin.com/api-docs/1/groups/get-groups Get Groups documentation
     """
 
