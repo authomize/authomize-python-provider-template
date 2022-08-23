@@ -3,6 +3,8 @@ from authomize.rest_api_client.generated.schemas import (
     NewAccountsAssociationRequestSchema,
     NewGroupingRequestSchema,
     NewPermissionRequestSchema,
+    NewPrivilegeRequestSchema,
+    PrivilegeType,
     RequestsBundleSchema,
 )
 from ..openapi_client.plugins.model.role_model import RoleModel
@@ -34,10 +36,15 @@ class RolesTransformer(BaseTransformer):
         new_group = NewGroupingRequestSchema(
             id=role_id,
             name=raw_item.name,
-            # todo - make role
-            type=GroupingType.Group,
+            type=GroupingType.Role,
+            #type="Role",
             role=raw_item.name,
         )
         bundle.new_groupings.append(new_group)
-
+        new_privilege = NewPrivilegeRequestSchema(
+            id=raw_item.name,
+            type=PrivilegeType.Use, 
+            originPrivilegeName=raw_item.name,
+        )
+        bundle.new_privileges.append(new_privilege)
         return bundle

@@ -22,7 +22,7 @@ class GroupsExtractor(BaseExtractor):
         # TODO : errors handling
         api_response = api_instance.groups_service_search()
         all_groups = api_response.records
-        breakpoint()
+        
         '''
         TODO:make skip work later
         while (api_response.hasNext) :

@@ -24,14 +24,14 @@ class UsersTransformer(BaseTransformer):
         bundle = self.create_bundle()
         user_id = raw_item.id
         new_user = NewUserRequestSchema(
-            id=user_id,
-            name=raw_item.userName,
-            **(dict(email=raw_item.email) if raw_item.emailAddress else dict()),
+            uniqueId=user_id,
+            name=raw_item.user_name,
+            **(dict(email=raw_item.email_address) if raw_item.email_address else dict()),
         )
         new_identity = NewIdentityRequestSchema(
-            id=user_id,
-            name=raw_item.userName,
-            **(dict(email=raw_item.email) if raw_item.emailAddress else dict()),
+            uniqueId=user_id,
+            name=raw_item.user_name,
+            **(dict(email=raw_item.email_address) if raw_item.email_address else dict()),
         )
         '''
         TODO : support group info by id from users extractor

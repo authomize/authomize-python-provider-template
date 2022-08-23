@@ -13,3 +13,4 @@ class SecretServerClient(BaseClient):
         configuration = Configuration(host=client_configuration.host)
         configuration.api_key['BearerToken'] = f'bearer {client_configuration.api_key}'
         self.client = ApiClient(configuration=configuration)
+        self.configuration = configuration

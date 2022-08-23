@@ -21,8 +21,14 @@ class SecretsExtractor(BaseExtractor):
         api_instance = SecretsApi(data_provider_client.client)
 
         # TODO : errors handling
+        print ("zoooooo!!\n")
+        breakpoint()
+        # response codes return None Type - swagger.json problem 
         api_response = api_instance.secrets_service_search_v2()
-        all_secrets = api_response.records()
+        
+        print ("zoooooo -2 !!\n\n\n\n\n\n\n")
+        breakpoint()
+        all_secrets = api_response.records
         ''' 
         TODO:make skip work later
         while (api_response.hasNext) :

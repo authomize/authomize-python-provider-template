@@ -19,7 +19,7 @@ class RolesExtractor(BaseExtractor):
 
         # TODO : errors handling
         api_response = api_instance.roles_service_get_all()
-        all_roles = api_response.records()
+        all_roles = api_response.records
         '''
         TODO:make skip work later
         while (api_response.hasNext) :

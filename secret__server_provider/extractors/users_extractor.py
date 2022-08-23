@@ -19,7 +19,7 @@ class UsersExtractor(BaseExtractor):
 
         # TODO : errors handling
         api_response = api_instance.users_service_search_users()
-        all_users = api_response.records()
+        all_users = api_response.records
         '''
         TODO:make skip work later
         while (api_response.hasNext) :

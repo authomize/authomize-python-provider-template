@@ -21,7 +21,7 @@ class SecretServerRunner(BaseAutoProviderRunner):
     ExtractorTransformersList = [
             (GroupsExtractor, GroupsTransformer),
             (UsersExtractor, UsersTransformer),
-            (SecretsExtractor, SecretsTransformer),
+            #(SecretsExtractor, SecretsTransformer),
             (RolesExtractor, RolesTransformer),
         ]
 

@@ -4,6 +4,8 @@ import structlog
 from authomize.rest_api_client.client import Client
 from authomize.rest_api_client.generated.schemas import (
     NewAccountsAssociationResponseSchema,
+    NewPrivilegesListRequestSchema,
+    NewGroupingsListRequestSchema,
     NewIdentitiesListRequestSchema,
     NewUsersListRequestSchema,
     RequestsBundleSchema,
@@ -107,7 +109,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_privileges_grants(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_privileges_grants,
+                body=NewPrivilegesListRequestSchema(data=bundle.new_privileges_grants),
             )
         if bundle.new_accounts_association and (
             load_all
@@ -123,7 +125,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_groupings_association(
                 app_id=self.application_configuration.app_id,
-                body=bundle.new_groupings_association,
+                body=NewGroupingsListRequestSchema(data=bundle.new_groupings_association),
             )
         if bundle.new_assets_inheritance and (
             load_all

@@ -17,8 +17,9 @@ class SecretsTransformer(BaseTransformer):
 
     def transform_model(self, raw_item: SecretModelV2) -> RequestsBundleSchema:
         bundle = self.create_bundle()
+        breakpoint()
         asset = NewAssetRequestSchema(
-            id=raw_item.id,
+            uniqueId=raw_item.id,
             name=raw_item.name,
         )
         bundle.new_assets.append(asset)
