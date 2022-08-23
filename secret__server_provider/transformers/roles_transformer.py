@@ -36,13 +36,14 @@ class RolesTransformer(BaseTransformer):
         new_group = NewGroupingRequestSchema(
             id=role_id,
             name=raw_item.name,
-            type=GroupingType.Role,
+            type=GroupingType.Group,
+            isRole=True,
             #type="Role",
             role=raw_item.name,
         )
         bundle.new_groupings.append(new_group)
         new_privilege = NewPrivilegeRequestSchema(
-            id=raw_item.name,
+            uniqueId=raw_item.name,
             type=PrivilegeType.Use, 
             originPrivilegeName=raw_item.name,
         )
