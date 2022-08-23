@@ -3,17 +3,17 @@ from typing import Iterable
 import structlog
 from authomize.rest_api_client.client import Client
 from authomize.rest_api_client.generated.schemas import (
-    NewPrivilegesGrantsListRequestSchema,
-    NewGroupingsListRequestSchema,
-    NewGroupingsAssociationsListRequestSchema,
-    NewPermissionsListRequestSchema,
-    NewIdentitiesListRequestSchema,
-    NewUsersListRequestSchema,
-    RequestsBundleSchema,
-    NewPrivilegesListRequestSchema,
-    NewAssetsListRequestSchema,
     NewAccountsAssociationsListRequestSchema,
     NewAssetsInheritanceListRequestSchema,
+    NewAssetsListRequestSchema,
+    NewGroupingsAssociationsListRequestSchema,
+    NewGroupingsListRequestSchema,
+    NewIdentitiesListRequestSchema,
+    NewPermissionsListRequestSchema,
+    NewPrivilegesGrantsListRequestSchema,
+    NewPrivilegesListRequestSchema,
+    NewUsersListRequestSchema,
+    RequestsBundleSchema,
 )
 
 from base_provider.configuration.application_configuration import ApplicationConfiguration
@@ -131,7 +131,7 @@ class BasicLoader:
             self.authomize_api_client.create_groupings_association(
                 app_id=self.application_configuration.app_id,
                 body=NewGroupingsAssociationsListRequestSchema(
-                    data=bundle.new_groupings_association
+                    data=bundle.new_groupings_association,
                 ),
             )
         if bundle.new_assets_inheritance and (
