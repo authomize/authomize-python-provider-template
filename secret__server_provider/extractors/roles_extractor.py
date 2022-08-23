@@ -1,10 +1,10 @@
 from typing import Iterable
 
-from ..openapi_client.plugins.apis import RolesApi
-from ..openapi_client.plugins.model.role_model import RoleModel
-
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret__server_provider.clients.secret_server_client import SecretServerClient
+from secret__server_provider.openapi_client.plugins.apis import RolesApi
+from secret__server_provider.openapi_client.plugins.model.role_model import RoleModel
+
 
 class RolesExtractor(BaseExtractor):
     """
@@ -14,7 +14,7 @@ class RolesExtractor(BaseExtractor):
     """
 
     def extract_raw(self) -> Iterable[RoleModel]:
-        data_provider_client: SecretServerClient = self.data_provider_client 
+        data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = RolesApi(data_provider_client.client)
 
         # TODO : errors handling
@@ -24,6 +24,6 @@ class RolesExtractor(BaseExtractor):
         TODO:make skip work later
         while (api_response.hasNext) :
             api_response = api_instance.roles_service_get_all(skip = 10)
-            all_roles.extend(api_response.records())        
+            all_roles.extend(api_response.records())
         '''
         return all_roles

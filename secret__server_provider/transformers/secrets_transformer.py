@@ -2,7 +2,8 @@ from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema, R
 
 from base_provider.transformers.base_transformer import BaseTransformer
 
-from ..openapi_client.plugins.model.secret_model_v2 import SecretModelV2 
+from ..openapi_client.plugins.model.secret_model_v2 import SecretModelV2
+
 
 class SecretsTransformer(BaseTransformer):
     """

@@ -9,10 +9,11 @@ class BaseClient:
 
     Should be overwritten
 
-    Sub classes should include:
+    Subclasses should include:
     * Auth methods
     * Calls / Wrapped calls to relevant APIs used by extractors
     """
+
     def __init__(
         self,
         client_configuration: BaseClientConfiguration,

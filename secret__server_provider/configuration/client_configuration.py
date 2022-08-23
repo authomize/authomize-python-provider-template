@@ -1,5 +1,6 @@
-from base_provider.configuration.base_client_configuration import BaseClientConfiguration
 from pydantic import Field
+
+from base_provider.configuration.base_client_configuration import BaseClientConfiguration
 
 
 class SecretServerConfiguration(BaseClientConfiguration):

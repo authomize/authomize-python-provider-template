@@ -1,13 +1,11 @@
 from authomize.rest_api_client.generated.schemas import (
-    NewAccountsAssociationRequestSchema,
     NewIdentityRequestSchema,
     NewUserRequestSchema,
     RequestsBundleSchema,
 )
-from ..openapi_client.plugins.model.user_model import UserModel
-
 
 from base_provider.transformers.base_transformer import BaseTransformer
+from ..openapi_client.plugins.model.user_model import UserModel
 
 
 class UsersTransformer(BaseTransformer):
@@ -35,7 +33,7 @@ class UsersTransformer(BaseTransformer):
         )
         '''
         TODO : support group info by id from users extractor
-        
+
         # Every user can be member of 0/1 group (but not many groups!)
         if raw_item.group_id:
             association = NewAccountsAssociationRequestSchema(

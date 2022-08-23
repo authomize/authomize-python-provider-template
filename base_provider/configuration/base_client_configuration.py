@@ -10,4 +10,5 @@ class BaseClientConfiguration(BaseSettings):
 
     Should include auth details
     """
+
     pass

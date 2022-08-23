@@ -13,9 +13,7 @@ from base_provider.transformers.base_transformer import BaseTransformer
 
 
 class UsersTransformer(BaseTransformer):
-    """
-    Transform a list of User resources.
-    """
+    """Transform a list of User resources"""
 
     def validate_item_schema(self, raw_item: dict) -> bool:
         return True

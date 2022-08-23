@@ -8,4 +8,5 @@ class ApplicationConfiguration(BaseSettings):
 
     Should not be overwritten
     """
+
     app_id: str = Field(..., env="AUTHOMIZE_API_APP_ID")
