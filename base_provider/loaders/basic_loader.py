@@ -3,15 +3,12 @@ from typing import Iterable
 import structlog
 from authomize.rest_api_client.client import Client
 from authomize.rest_api_client.generated.schemas import (
-    NewAccountsAssociationsListRequestSchema,
-    NewAssetsInheritanceListRequestSchema,
-    NewAssetsListRequestSchema,
-    NewGroupingsAssociationsListRequestSchema,
-    NewGroupingsListRequestSchema,
-    NewIdentitiesListRequestSchema,
-    NewPermissionsListRequestSchema,
+    NewAccountsAssociationResponseSchema,
     NewPrivilegesGrantsListRequestSchema,
-    NewPrivilegesListRequestSchema,
+    NewGroupingsListRequestSchema,
+    NewGroupingsAssociationsListRequestSchema,
+    NewPermissionsListRequestSchema,
+    NewIdentitiesListRequestSchema,
     NewUsersListRequestSchema,
     RequestsBundleSchema,
 )
@@ -85,14 +82,14 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_privileges(
                 app_id=self.application_configuration.app_id,
-                body=NewPrivilegesListRequestSchema(data=bundle.new_privileges),
+                body=bundle.new_privileges,
             )
         if bundle.new_assets and (
             load_all or len(bundle.new_assets) >= self.shared_configuration.loader_batch_size
         ):
             self.authomize_api_client.create_assets(
                 app_id=self.application_configuration.app_id,
-                body=NewAssetsListRequestSchema(data=bundle.new_assets),
+                body=bundle.new_assets,
             )
         if bundle.new_identities and (
             load_all or len(bundle.new_identities) >= self.shared_configuration.loader_batch_size
@@ -122,7 +119,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_accounts_association(
                 app_id=self.application_configuration.app_id,
-                body=NewAccountsAssociationsListRequestSchema(data=bundle.new_accounts_association),
+                body=NewAccountsAssociationResponseSchema(data=bundle.new_accounts_association),
             )
         if bundle.new_groupings_association and (
             load_all
@@ -131,7 +128,7 @@ class BasicLoader:
             self.authomize_api_client.create_groupings_association(
                 app_id=self.application_configuration.app_id,
                 body=NewGroupingsAssociationsListRequestSchema(
-                    data=bundle.new_groupings_association,
+                    data=bundle.new_groupings_association
                 ),
             )
         if bundle.new_assets_inheritance and (
@@ -140,7 +137,7 @@ class BasicLoader:
         ):
             self.authomize_api_client.create_assets_inheritance(
                 app_id=self.application_configuration.app_id,
-                body=NewAssetsInheritanceListRequestSchema(data=bundle.new_assets_inheritance),
+                body=bundle.new_assets_inheritance,
             )
 
     @staticmethod
