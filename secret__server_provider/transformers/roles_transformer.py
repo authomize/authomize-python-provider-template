@@ -40,8 +40,8 @@ class RolesTransformer(BaseTransformer):
         bundle.new_groupings.append(new_group)
         new_privilege = NewPrivilegeRequestSchema(
             uniqueId=raw_item.name,
-            type=PrivilegeType.Use,
-            originName=raw_item.name,
+            type=PrivilegeType.Use, 
+            originPrivilegeName=raw_item.name,
         )
         bundle.new_privileges.append(new_privilege)
         return bundle
