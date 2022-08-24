@@ -1,7 +1,6 @@
 from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema
 from hamcrest import assert_that, equal_to, is_
 from onelogin.api.models.app import App
-
 from onelogin_provider.configuration.shared_configuration import OneloginSharedConfiguration
 from onelogin_provider.models.shared_memory import OneloginProviderSharedMemory
 from onelogin_provider.transformers.applications_transformer import ApplicationsTransformer

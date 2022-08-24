@@ -1,10 +1,12 @@
 from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema, RequestsBundleSchema
-from onelogin.api.models.app import App
 
 from base_provider.transformers.base_transformer import BaseTransformer
+from secret__server_provider.normalize_id import normalize_id
+
+from ..openapi_client.plugins.model.secret_model_v2 import SecretModelV2
 
 
-class ApplicationsTransformer(BaseTransformer):
+class SecretsTransformer(BaseTransformer):
     """
     Tramsform a list of all Apps in a OneLogin account.
 
@@ -12,13 +14,13 @@ class ApplicationsTransformer(BaseTransformer):
         https://developers.onelogin.com/api-docs/2/apps/list-apps
     """
 
-    def validate_item_schema(self, raw_item: App) -> bool:
+    def validate_item_schema(self, raw_item: SecretModelV2) -> bool:
         return True
 
-    def transform_model(self, raw_item: App) -> RequestsBundleSchema:
+    def transform_model(self, raw_item: SecretModelV2) -> RequestsBundleSchema:
         bundle = self.create_bundle()
         asset = NewAssetRequestSchema(
-            id=raw_item.id,
+            uniqueId=normalize_id(raw_item.id),
             name=raw_item.name,
         )
         bundle.new_assets.append(asset)

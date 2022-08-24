@@ -7,6 +7,7 @@ from authomize.rest_api_client.generated.schemas import (
 )
 
 from base_provider.transformers.base_transformer import BaseTransformer
+from secret__server_provider.normalize_id import normalize_id
 
 
 class RolesTransformer(BaseTransformer):
@@ -30,7 +31,7 @@ class RolesTransformer(BaseTransformer):
 
     def transform_model(self, raw_item: RoleModel) -> RequestsBundleSchema:
         bundle = self.create_bundle()
-        role_id = raw_item.id
+        role_id = normalize_id(raw_item.id)
         new_group = NewGroupingRequestSchema(
             id=role_id,
             name=raw_item.name,
@@ -39,9 +40,20 @@ class RolesTransformer(BaseTransformer):
         )
         bundle.new_groupings.append(new_group)
         new_privilege = NewPrivilegeRequestSchema(
-            uniqueId=raw_item.name,
-            type=PrivilegeType.Use,
+            uniqueId=role_id,
+            type=self.get_privilege_type(raw_item.name),
             originPrivilegeName=raw_item.name,
         )
         bundle.new_privileges.append(new_privilege)
         return bundle
+
+    def get_privilege_type(self, access_role_name: str) -> PrivilegeType:
+        if 'owner' in access_role_name.lower():
+            return PrivilegeType.Administrative
+        if 'admin' in access_role_name.lower():
+            return PrivilegeType.Administrative
+        if 'write' in access_role_name.lower():
+            return PrivilegeType.Write
+        if 'read' in access_role_name.lower():
+            return PrivilegeType.Read
+        return PrivilegeType.Use

@@ -1,6 +1,7 @@
 from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema, RequestsBundleSchema
 
 from base_provider.transformers.base_transformer import BaseTransformer
+from secret__server_provider.normalize_id import normalize_id
 
 from ..openapi_client.plugins.model.secret_model_v2 import SecretModelV2
 
@@ -18,9 +19,8 @@ class SecretsTransformer(BaseTransformer):
 
     def transform_model(self, raw_item: SecretModelV2) -> RequestsBundleSchema:
         bundle = self.create_bundle()
-        breakpoint()
         asset = NewAssetRequestSchema(
-            uniqueId=raw_item.id,
+            uniqueId=normalize_id(raw_item.id),
             name=raw_item.name,
         )
         bundle.new_assets.append(asset)

@@ -15,3 +15,7 @@ class SecretServerClient(BaseClient):
         configuration.api_key['BearerToken'] = f'bearer {client_configuration.api_key}'
         self.client = ApiClient(configuration=configuration)
         self.configuration = configuration
+
+    @staticmethod
+    def iter_all(callable, *args, **kwargs):
+        return callable(*args, **kwargs)
