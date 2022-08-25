@@ -16,13 +16,7 @@ class UsersExtractor(BaseExtractor):
         data_provider_client: MicrosoftClient = self.data_provider_client  # type: ignore
         users = data_provider_client.client.get_all_items(
             'users',
-            params={'select': 'userType,displayName,mail,externalUserState'}
+            params={'select': 'id,accountEnabled,deletedDateTime,userType,givenName,surname,mail,externalUserState,'
+                              'country,department,jobTitle,employeeHireDate,employeeLeaveDateTime'}
         )
-        for user in users:
-            if user['externalUserState'] == 'PendingAcceptance':
-                # User is not actually "in" yet - e.g. "PendingAcceptance"
-                continue
-            elif user['externalUserState'] == 'Accepted':
-                user['userType'] = 'External'
-            user.pop('externalUserState')
-            yield user
+        yield from users

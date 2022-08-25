@@ -19,7 +19,7 @@ class PermissionsExtractor(BaseExtractor):
 
         task_runner = ConcurrentTaskRunner(max_workers=10)
         task_results = task_runner.task_map(
-            data_provider_client.client.get_one_item    ,
+            data_provider_client.client.get_one_item,
             ['teams/{}'.format(team) for team in teams]
         )
         for result in task_results:

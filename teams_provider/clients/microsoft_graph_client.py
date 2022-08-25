@@ -51,6 +51,7 @@ class MicrosoftGraphClient(BaseMicrosoftHttpClient):
             headers: additional request headers
             params: query parameters, converted to the $param=value& format
             complete_url: allows to override endpoint URL
+            tag: a tag to add to the results for the caller's convenience
 
         Yields: a generator of results (dict)
         Returns: (as StopIteration) the deltaLink
@@ -62,8 +63,10 @@ class MicrosoftGraphClient(BaseMicrosoftHttpClient):
             params=params,
             complete_url=complete_url,
         )
-        print(response)
-        yield from response['value']
+        # To help identify the result
+        for result in response['value']:
+            result['sub_uri'] = sub_uri
+            yield result
         while '@odata.nextLink' in response:
             data_link = DataLink(
                 url=response['@odata.nextLink'],

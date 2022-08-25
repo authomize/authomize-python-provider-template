@@ -4,15 +4,15 @@ from hamcrest import assert_that
 from extractors.testing_client import create_microsoft_client
 from mock_provider.configuration.shared_configuration import MockProviderSharedConfiguration
 from mock_provider.models.shared_memory import MockProviderSharedMemory
-from teams_provider.extractors.groups_extractor import GroupsExtractor
+from teams_provider.extractors.teams_extractor import TeamsExtractor
 from teams_provider.models.shared_memory import TeamsProviderSharedMemory
 
 
-def _create_extractor(files_to_extract: int = 10) -> GroupsExtractor:
-    """Create a NON MOCKED EXTRACTOR for testing"""
+def _create_extractor(files_to_extract: int = 10) -> TeamsExtractor:
+    """'Create a NON MOCKED EXTRACTOR for manual testing"""
     client = create_microsoft_client()
 
-    return GroupsExtractor(
+    return TeamsExtractor(
         client,
         shared_memory=TeamsProviderSharedMemory(),
         shared_configuration=MockProviderSharedConfiguration(

@@ -9,7 +9,6 @@ class RolesExtractor(BaseExtractor):
     """
     Gets a list of Role resources.
 
-    See
     """
 
     def extract_raw(self) -> Iterator[Dict]:
@@ -21,7 +20,7 @@ class RolesExtractor(BaseExtractor):
         task_runner = ConcurrentTaskRunner(max_workers=10)
         team_task_results = task_runner.task_map(
             data_provider_client.client.get_all_items,
-            ['teams/{}/members'.format(team) for team in teams]
+            ['teams/{}/members'.format(team) for team in teams],
         )
         channel_task_results = task_runner.task_map(
             data_provider_client.client.get_all_items,

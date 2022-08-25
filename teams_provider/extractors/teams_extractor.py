@@ -5,7 +5,7 @@ from teams_provider.clients.microsoft_client import MicrosoftClient
 from teams_provider.models.shared_memory import TeamsProviderSharedMemory
 
 
-class GroupsExtractor(BaseExtractor):
+class TeamsExtractor(BaseExtractor):
     """
     Gets a list of Group resources
     See https://developers.onelogin.com/api-docs/1/groups/get-groups Get Groups documentation
@@ -20,7 +20,5 @@ class GroupsExtractor(BaseExtractor):
             params={'filter': "resourceProvisioningOptions/Any(x:x eq 'Team')"}
         )
         for team in teams:
-            if team['deletedDateTime'] is not None:
-                continue
             shared_memory.teams.append(team['id'])
             yield team

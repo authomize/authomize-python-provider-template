@@ -8,7 +8,7 @@ from teams_provider.models.shared_memory import TeamsProviderSharedMemory
 
 
 def _create_extractor(files_to_extract: int = 10) -> UsersExtractor:
-    """Create a NON MOCKED EXTRACTOR for testing"""
+    """'Create a NON MOCKED EXTRACTOR for manual testing"""
     client = create_microsoft_client()
 
     return UsersExtractor(
@@ -23,5 +23,5 @@ def _create_extractor(files_to_extract: int = 10) -> UsersExtractor:
 
 def test_users_extractor():
     extractor = _create_extractor()
-    print(list(extractor.extract_raw()))
+    print(next(extractor.extract_raw()))
     assert_that(1 == 1)
