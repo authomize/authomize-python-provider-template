@@ -2,32 +2,29 @@ from typing import Iterable
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret__server_provider.clients.secret_server_client import SecretServerClient
+from secret__server_provider.normalize_id import normalize_id
 
-from ..openapi_client.plugins.apis import SecretsApi
-from ..openapi_client.plugins.model.secret_model_v2 import SecretModelV2
+from ..openapi_client.plugins.apis import FoldersApi
+from ..openapi_client.plugins.model.folder_model import FolderModel
 
 
-class SecretsExtractor(BaseExtractor):
+class FoldersExtractor(BaseExtractor):
     """
-    Gets a list of Secrets records.
-
-    See docs/SecretsApi.md#secrets_service_search_v2)
+    Gets a list of Folders records.
     """
 
-    def extract_raw(self) -> Iterable[SecretModelV2]:
+    def extract_raw(self) -> Iterable[FolderModel]:
         data_provider_client: SecretServerClient = self.data_provider_client
-        api_instance = SecretsApi(data_provider_client.client)
+        api_instance = FoldersApi(data_provider_client.client)
 
-        # TODO : errors handling
-        # response codes return None Type - swagger.json problem
-        api_response = api_instance.secrets_service_search_v2()
+        return self.__get_paginated_results(api_instance)
 
-        all_secrets = api_response.records
+    def __get_paginated_results(self, api_instance:FoldersApi) -> Iterable[FolderModel]:
+        cur_skip = 0
+        has_next = True
+        while (has_next) :
+            api_response = api_instance.folders_service_lookup(skip = normalize_id(cur_skip))
+            has_next = api_response.has_next
+            cur_skip += int(api_response.next_skip)
+            yield from api_response.records
 
-        '''
-        TODO:make skip work later
-        while (api_response.hasNext) :
-            api_response = api_instance.secrets_service_search_v2(skip = 10)
-            all_secrets.extend(api_response.records())
-        '''
-        return all_secrets

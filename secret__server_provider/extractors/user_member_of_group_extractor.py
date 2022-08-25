@@ -23,18 +23,19 @@ class UserMemberOfGroupExtractor(BaseExtractor):
         # TODO : errors handling
         api_response = api_instance.users_service_search_users()
         all_users = api_response.records
-        '''
-        TODO:make skip work later
-        while (api_response.hasNext) :
-            api_response = api_instance.users_service_search_users(skip = 10)
-            all_users.extend(api_response.records())
-        '''
-        # TODO : run for earch user GET v1/users/<id>/groups to add to the user info
-        # this will extract the groupName - differs from v1/groups which is actually v1/roles...
-        # TODO : support pagination for groups too!
         for user in all_users:
             user_groups = self._fetch_user_groups(api_instance, user)
             yield from user_groups
 
     def _fetch_user_groups(self, api_instance: UsersApi, user: UserModel) -> Iterable[GroupUserSummary]:
-        return api_instance.users_service_get_user_groups(id=normalize_id(user.id)).records
+        return self.__get_paginated_results(api_instance, user)
+
+    def __get_paginated_results(self, api_instance:UsersApi, user: UserModel) -> Iterable[UserModel]:
+        cur_skip = 0
+        has_next = True
+        while (has_next) :
+            api_response = api_instance.users_service_get_user_groups(id=normalize_id(user.id),skip = normalize_id(cur_skip))
+            has_next = api_response.has_next
+            cur_skip += int(api_response.next_skip)
+            yield from api_response.records
+

@@ -2,6 +2,7 @@ from typing import Iterable
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret__server_provider.clients.secret_server_client import SecretServerClient
+from secret__server_provider.normalize_id import normalize_id
 from secret__server_provider.openapi_client.plugins.apis import RolesApi
 from secret__server_provider.openapi_client.plugins.model.role_model import RoleModel
 
@@ -17,13 +18,14 @@ class RolesExtractor(BaseExtractor):
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = RolesApi(data_provider_client.client)
 
-        # TODO : errors handling
-        api_response = api_instance.roles_service_get_all()
-        all_roles = api_response.records
-        '''
-        TODO:make skip work later
-        while (api_response.hasNext) :
-            api_response = api_instance.roles_service_get_all(skip = 10)
-            all_roles.extend(api_response.records())
-        '''
-        return all_roles
+        return self.__get_paginated_results(api_instance)
+
+    def __get_paginated_results(self, api_instance:RolesApi) -> Iterable[RoleModel]:
+        cur_skip = 0
+        has_next = True
+        while (has_next) :
+            api_response = api_instance.roles_service_get_all(skip = normalize_id(cur_skip))
+            has_next = api_response.has_next
+            cur_skip += int(api_response.next_skip)
+            yield from api_response.records
+
