@@ -9,7 +9,7 @@ from authomize.rest_api_client.generated.schemas import (
 from base_provider.transformers.base_transformer import BaseTransformer
 from secret_server_provider.normalize_id import normalize_id
 
-from secret_server_openapiclient.model.secret_permission_model import SecretPermissionModel
+from secret_server_openapiclient.model.secret_permission_summary import SecretPermissionSummary
 
 
 class UserAccessRoleTransformer(BaseTransformer):
@@ -19,10 +19,10 @@ class UserAccessRoleTransformer(BaseTransformer):
     See docs/UsersApi.md#xxx
     """
 
-    def validate_item_schema(self, raw_item: SecretPermissionModel) -> bool:
+    def validate_item_schema(self, raw_item: SecretPermissionSummary) -> bool:
         return True
 
-    def transform_model(self, raw_item: SecretPermissionModel) -> RequestsBundleSchema:
+    def transform_model(self, raw_item: SecretPermissionSummary) -> RequestsBundleSchema:
         bundle = self.create_bundle()
         privilege_id = normalize_id(raw_item.secret_access_role_id)
         permission = NewPermissionRequestSchema(

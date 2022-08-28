@@ -31,12 +31,12 @@ from secret_server_provider.transformers.users_transformer import UsersTransform
 class SecretServerRunner(BaseAutoProviderRunner):
     ExtractorTransformersList = [
         (SecretsExtractor, SecretsTransformer),
-        # (GroupsExtractor, GroupsTransformer),
-        # (UsersExtractor, UsersTransformer),
-        # (UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
-        # (RolesExtractor, RolesTransformer),
-        # #(UserAccessRoleExtractor, UserAccessRoleTransformer),
-        # (FoldersExtractor, FoldersTransformer),
+         (GroupsExtractor, GroupsTransformer),
+         (UsersExtractor, UsersTransformer),
+         (UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
+         (RolesExtractor, RolesTransformer),
+         (UserAccessRoleExtractor, UserAccessRoleTransformer),
+         (FoldersExtractor, FoldersTransformer),
     ]
 
     def get_extractor_and_transformer_type_list(
