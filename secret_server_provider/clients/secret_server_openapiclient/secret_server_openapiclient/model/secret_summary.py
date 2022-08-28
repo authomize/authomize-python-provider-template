@@ -97,7 +97,7 @@ class SecretSummary(ModelNormal):
             'create_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'days_until_expiration': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'double_lock_enabled': (bool,),  # noqa: E501
-            'extended_fields': ([ISecretSummaryExtendedField],),  # noqa: E501
+            'extended_fields': ([ISecretSummaryExtendedField], none_type,),  # noqa: E501
             'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'has_launcher': (bool,),  # noqa: E501
             'hide_password': (bool,),  # noqa: E501
@@ -112,7 +112,7 @@ class SecretSummary(ModelNormal):
             'out_of_sync_reason': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'requires_approval': (bool,),  # noqa: E501
             'requires_comment': (bool,),  # noqa: E501
-            'response_codes': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
+            'response_codes': ([bool, date, datetime, dict, float, int, list, str, none_type], none_type,),  # noqa: E501
             'secret_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'secret_template_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
