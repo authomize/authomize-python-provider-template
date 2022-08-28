@@ -1,6 +1,6 @@
 # plugins.SecretDependenciesApi
 
-All URIs are relative to *https://integrations.secretservercloud.com//api*
+All URIs are relative to *https://integrations.secretservercloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**secret_dependencies_service_search_dependency_summary**](SecretDependenciesApi.md#secret_dependencies_service_search_dependency_summary) | **GET** /v1/secret-dependencies | Search Secret Dependencies
 [**secret_dependencies_service_stub**](SecretDependenciesApi.md#secret_dependencies_service_stub) | **GET** /v1/secret-dependencies/stub | Get Secret Dependency Stub
 [**secret_dependencies_service_update_dependency**](SecretDependenciesApi.md#secret_dependencies_service_update_dependency) | **PUT** /v1/secret-dependencies/{id} | Update Secret Dependency
+[**secret_dependencies_service_update_secret_dependency_group**](SecretDependenciesApi.md#secret_dependencies_service_update_secret_dependency_group) | **PUT** /v1/secret-dependencies/groups/{secretId} | Update Secret Dependency Group
 
 
 # **secret_dependencies_service_create_dependency**
@@ -39,10 +40,10 @@ from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.secret_dependency_create_args import SecretDependencyCreateArgs
 from plugins.model.secret_dependency_model import SecretDependencyModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -199,10 +200,10 @@ from plugins.model.secret_dependency_group_create_args import SecretDependencyGr
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -297,10 +298,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.deleted_model import DeletedModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -380,10 +381,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -467,10 +468,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.secret_dependency_model import SecretDependencyModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -551,10 +552,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.task_progress import TaskProgress
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -635,10 +636,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.i_logic_result_of_secret_dependency_group_array import ILogicResultOfSecretDependencyGroupArray
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -719,10 +720,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.dependency_script import DependencyScript
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -799,10 +800,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.dependency_template import DependencyTemplate
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -879,10 +880,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.paging_of_secret_dependency_summary import PagingOfSecretDependencySummary
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -992,10 +993,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.secret_dependency_model import SecretDependencyModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1083,10 +1084,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.secret_dependency_update_args import SecretDependencyUpdateArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1227,6 +1228,108 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | SecretDependencyModel object |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **secret_dependencies_service_update_secret_dependency_group**
+> SecretDependencyGroupModel secret_dependencies_service_update_secret_dependency_group(secret_id)
+
+Update Secret Dependency Group
+
+Update a Secret Dependency Group
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import plugins
+from plugins.api import secret_dependencies_api
+from plugins.model.internal_server_error_response import InternalServerErrorResponse
+from plugins.model.authentication_failed_response import AuthenticationFailedResponse
+from plugins.model.bad_request_response import BadRequestResponse
+from plugins.model.update_secret_dependency_group_args import UpdateSecretDependencyGroupArgs
+from plugins.model.secret_dependency_group_model import SecretDependencyGroupModel
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = plugins.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with plugins.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
+    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Id of Secret to assign to Dependency Group.
+    update_secret_dependency_group_args = UpdateSecretDependencyGroupArgs(
+        data=UpdateSecretDependencyGroupModel(
+            secret_dependency_group_id=None,
+            secret_dependency_group_name=None,
+            site_id=None,
+        ),
+    ) # UpdateSecretDependencyGroupArgs | args (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update Secret Dependency Group
+        api_response = api_instance.secret_dependencies_service_update_secret_dependency_group(secret_id)
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling SecretDependenciesApi->secret_dependencies_service_update_secret_dependency_group: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update Secret Dependency Group
+        api_response = api_instance.secret_dependencies_service_update_secret_dependency_group(secret_id, update_secret_dependency_group_args=update_secret_dependency_group_args)
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling SecretDependenciesApi->secret_dependencies_service_update_secret_dependency_group: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Id of Secret to assign to Dependency Group. |
+ **update_secret_dependency_group_args** | [**UpdateSecretDependencyGroupArgs**](UpdateSecretDependencyGroupArgs.md)| args | [optional]
+
+### Return type
+
+[**SecretDependencyGroupModel**](SecretDependencyGroupModel.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | SecretDependencyGroupModel object |  -  |
 **400** | Bad request |  -  |
 **403** | Authentication failed |  -  |
 **500** | Internal server error |  -  |

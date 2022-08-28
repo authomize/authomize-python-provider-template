@@ -90,6 +90,7 @@ class GroupUpdateArgs(ModelNormal):
             'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'enabled': (bool,),  # noqa: E501
             'has_group_owners': (bool,),  # noqa: E501
+            'is_platform': (bool,),  # noqa: E501
             'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'owner_group_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
             'owner_group_names': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
@@ -110,6 +111,7 @@ class GroupUpdateArgs(ModelNormal):
         'domain_id': 'domainId',  # noqa: E501
         'enabled': 'enabled',  # noqa: E501
         'has_group_owners': 'hasGroupOwners',  # noqa: E501
+        'is_platform': 'isPlatform',  # noqa: E501
         'name': 'name',  # noqa: E501
         'owner_group_ids': 'ownerGroupIds',  # noqa: E501
         'owner_group_names': 'ownerGroupNames',  # noqa: E501
@@ -167,6 +169,7 @@ class GroupUpdateArgs(ModelNormal):
             domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain ID. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
             has_group_owners (bool): If true, the group is owned by specific other users/groups. If false, if it is owned by Group Administrators.. [optional]  # noqa: E501
+            is_platform (bool): Whether the group is a Platform Group. [optional]  # noqa: E501
             name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
             owner_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner GroupIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
             owner_group_names ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner Group Names. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
@@ -267,6 +270,7 @@ class GroupUpdateArgs(ModelNormal):
             domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain ID. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
             has_group_owners (bool): If true, the group is owned by specific other users/groups. If false, if it is owned by Group Administrators.. [optional]  # noqa: E501
+            is_platform (bool): Whether the group is a Platform Group. [optional]  # noqa: E501
             name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
             owner_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner GroupIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
             owner_group_names ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner Group Names. Only used if HasGroupOwners is true.. [optional]  # noqa: E501

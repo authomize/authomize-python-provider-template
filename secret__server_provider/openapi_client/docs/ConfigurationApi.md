@@ -1,11 +1,13 @@
 # plugins.ConfigurationApi
 
-All URIs are relative to *https://integrations.secretservercloud.com//api*
+All URIs are relative to *https://integrations.secretservercloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**configuration_service_cancel_rotate_secret_keys**](ConfigurationApi.md#configuration_service_cancel_rotate_secret_keys) | **POST** /v1/configuration/security/cancel-rotate-secret-keys | Cancel Rotate Secret Keys
+[**configuration_service_clear_ad_credentials**](ConfigurationApi.md#configuration_service_clear_ad_credentials) | **POST** /v1/configuration/login/clear-ad-credentials | Clear AD Credentials
 [**configuration_service_clear_system_log**](ConfigurationApi.md#configuration_service_clear_system_log) | **GET** /v1/configuration/system-log/clear | Clear system log
+[**configuration_service_delete_saml_configuration_identity_provider**](ConfigurationApi.md#configuration_service_delete_saml_configuration_identity_provider) | **DELETE** /v1/configuration/saml/identity-provider/{id} | Delete Saml Configuration Identity Provider
 [**configuration_service_get_auto_export_configuration**](ConfigurationApi.md#configuration_service_get_auto_export_configuration) | **GET** /v1/configuration/auto-export | Get Automatic Export Configuration
 [**configuration_service_get_auto_export_configuration_audits**](ConfigurationApi.md#configuration_service_get_auto_export_configuration_audits) | **GET** /v1/configuration/auto-export-audits | Get Automatic Export Configuration Audits
 [**configuration_service_get_auto_export_logs**](ConfigurationApi.md#configuration_service_get_auto_export_logs) | **GET** /v1/configuration/auto-export-logs | Get Automatic Export Logs
@@ -30,6 +32,7 @@ Method | HTTP request | Description
 [**configuration_service_get_rpc_configuration**](ConfigurationApi.md#configuration_service_get_rpc_configuration) | **GET** /v1/configuration/rpc | Get RPC configuration
 [**configuration_service_get_saml_configuration**](ConfigurationApi.md#configuration_service_get_saml_configuration) | **GET** /v1/configuration/saml | Get Saml configuration
 [**configuration_service_get_saml_identity_provider_configuration**](ConfigurationApi.md#configuration_service_get_saml_identity_provider_configuration) | **GET** /v1/configuration/saml/identity-provider/{id} | Get Saml Identity Provider configuration
+[**configuration_service_get_saml_identity_provider_configuration_stub**](ConfigurationApi.md#configuration_service_get_saml_identity_provider_configuration_stub) | **GET** /v1/configuration/saml/identity-provider/stub | Get Saml Identity Provider configuration stub
 [**configuration_service_get_secret_search_indexer_configuration**](ConfigurationApi.md#configuration_service_get_secret_search_indexer_configuration) | **GET** /v1/configuration/secret-search-indexer | Secret Search Indexer Configuration
 [**configuration_service_get_security_configuration**](ConfigurationApi.md#configuration_service_get_security_configuration) | **GET** /v1/configuration/security | Get Security configuration
 [**configuration_service_get_session_recording_advanced_configuration**](ConfigurationApi.md#configuration_service_get_session_recording_advanced_configuration) | **GET** /v1/configuration/sessionrecording-advanced | Get Session Recording Advanced
@@ -37,6 +40,7 @@ Method | HTTP request | Description
 [**configuration_service_get_system_log_configuration**](ConfigurationApi.md#configuration_service_get_system_log_configuration) | **GET** /v1/configuration/system-log | Get system log configuration
 [**configuration_service_get_ticket_system_configuration**](ConfigurationApi.md#configuration_service_get_ticket_system_configuration) | **GET** /v1/configuration/ticket-system | Get the ticket system configuration
 [**configuration_service_get_unlimited_admin**](ConfigurationApi.md#configuration_service_get_unlimited_admin) | **GET** /v1/configuration/unlimited-admin | Get Unlimited Admin
+[**configuration_service_import_saml_configuration**](ConfigurationApi.md#configuration_service_import_saml_configuration) | **PUT** /v1/configuration/saml/identity-provider/import | Import Saml configuration Identity Provider
 [**configuration_service_patch_application_settings_configuration**](ConfigurationApi.md#configuration_service_patch_application_settings_configuration) | **PATCH** /v1/configuration/application-settings | Update the application settings configuration
 [**configuration_service_patch_automatic_export_configuration**](ConfigurationApi.md#configuration_service_patch_automatic_export_configuration) | **PATCH** /v1/configuration/auto-export | Patch Automatic Export Configuration
 [**configuration_service_patch_configuration_read_only_mode**](ConfigurationApi.md#configuration_service_patch_configuration_read_only_mode) | **PATCH** /v1/configuration/read-only-mode | Patch Read Only Mode Configuration
@@ -72,6 +76,7 @@ Method | HTTP request | Description
 [**configuration_service_run_heartbeat_now**](ConfigurationApi.md#configuration_service_run_heartbeat_now) | **POST** /v1/configuration/heartbeat/run-now | Run Heartbeat Now
 [**configuration_service_run_rpc_now**](ConfigurationApi.md#configuration_service_run_rpc_now) | **POST** /v1/configuration/rpc/run-now | Run RPC Now
 [**configuration_service_test_email**](ConfigurationApi.md#configuration_service_test_email) | **POST** /v1/configuration/email/test | TestEmail
+[**configuration_service_test_radius_login**](ConfigurationApi.md#configuration_service_test_radius_login) | **POST** /v1/configuration/login/radius/test | Test Radius Login
 [**configuration_service_update_unlimited_admin**](ConfigurationApi.md#configuration_service_update_unlimited_admin) | **PATCH** /v1/configuration/unlimited-admin | Update Unlimited Admin
 
 
@@ -95,10 +100,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.rotate_secret_keys_status_model import RotateSecretKeysStatusModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -155,6 +160,86 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **configuration_service_clear_ad_credentials**
+> ClearCachedADCredentialsResultModel configuration_service_clear_ad_credentials()
+
+Clear AD Credentials
+
+Clear AD Credentials
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import plugins
+from plugins.api import configuration_api
+from plugins.model.clear_cached_ad_credentials_result_model import ClearCachedADCredentialsResultModel
+from plugins.model.internal_server_error_response import InternalServerErrorResponse
+from plugins.model.authentication_failed_response import AuthenticationFailedResponse
+from plugins.model.bad_request_response import BadRequestResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = plugins.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with plugins.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = configuration_api.ConfigurationApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Clear AD Credentials
+        api_response = api_instance.configuration_service_clear_ad_credentials()
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling ConfigurationApi->configuration_service_clear_ad_credentials: %s\n" % e)
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ClearCachedADCredentialsResultModel**](ClearCachedADCredentialsResultModel.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Clear AD Credentials Result |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **configuration_service_clear_system_log**
 > bool configuration_service_clear_system_log()
 
@@ -174,10 +259,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -234,6 +319,90 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **configuration_service_delete_saml_configuration_identity_provider**
+> ConfigurationSamlIdentityProviderDeleteResultModel configuration_service_delete_saml_configuration_identity_provider(id)
+
+Delete Saml Configuration Identity Provider
+
+Delete Saml Configuration Identity Provider
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import plugins
+from plugins.api import configuration_api
+from plugins.model.internal_server_error_response import InternalServerErrorResponse
+from plugins.model.authentication_failed_response import AuthenticationFailedResponse
+from plugins.model.bad_request_response import BadRequestResponse
+from plugins.model.configuration_saml_identity_provider_delete_result_model import ConfigurationSamlIdentityProviderDeleteResultModel
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = plugins.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with plugins.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = configuration_api.ConfigurationApi(api_client)
+    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete Saml Configuration Identity Provider
+        api_response = api_instance.configuration_service_delete_saml_configuration_identity_provider(id)
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling ConfigurationApi->configuration_service_delete_saml_configuration_identity_provider: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+
+### Return type
+
+[**ConfigurationSamlIdentityProviderDeleteResultModel**](ConfigurationSamlIdentityProviderDeleteResultModel.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **configuration_service_get_auto_export_configuration**
 > AutoExportConfigurationModel configuration_service_get_auto_export_configuration()
 
@@ -254,10 +423,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.auto_export_configuration_model import AutoExportConfigurationModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -334,10 +503,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.paging_of_auto_export_configuration_audit_view_model import PagingOfAutoExportConfigurationAuditViewModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -429,10 +598,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -522,10 +691,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.stream_content import StreamContent
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -606,10 +775,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.paging_of_auto_export_storage_item_view_model import PagingOfAutoExportStorageItemViewModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -709,10 +878,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.paging_of_auto_export_storage_item_view_model import PagingOfAutoExportStorageItemViewModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -802,10 +971,10 @@ from plugins.model.i_paging_of_backup_log_view_model import IPagingOfBackupLogVi
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -895,10 +1064,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.paging_of_configuration_audit_item import PagingOfConfigurationAuditItem
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -992,10 +1161,10 @@ from plugins.model.configuration_read_only_mode_model import ConfigurationReadOn
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1072,10 +1241,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_state_model import ConfigurationStateModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1152,10 +1321,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.backup_configuration_model import BackupConfigurationModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1232,10 +1401,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.configuration_database_model import ConfigurationDatabaseModel
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1312,10 +1481,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_general_v2_model import ConfigurationGeneralV2Model
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1423,10 +1592,10 @@ from plugins.model.configuration_internal_site_connector_model import Configurat
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1503,10 +1672,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_local_user_passwords_model import ConfigurationLocalUserPasswordsModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1583,10 +1752,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_login_v2_model import ConfigurationLoginV2Model
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1663,10 +1832,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1743,10 +1912,10 @@ from plugins.model.platform_configuration_model import PlatformConfigurationMode
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1823,10 +1992,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.paging_of_platform_configuration_audit_view_model import PagingOfPlatformConfigurationAuditViewModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1918,10 +2087,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.public_ssh_key_configuration_view_model import PublicSshKeyConfigurationViewModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1998,10 +2167,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.rotate_secret_keys_status_model import RotateSecretKeysStatusModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2078,10 +2247,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2158,10 +2327,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2238,10 +2407,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.configuration_saml_identity_provider_model import ConfigurationSamlIdentityProviderModel
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2302,6 +2471,86 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **configuration_service_get_saml_identity_provider_configuration_stub**
+> ConfigurationSamlIdentityProviderModel configuration_service_get_saml_identity_provider_configuration_stub()
+
+Get Saml Identity Provider configuration stub
+
+Get Saml Identity Provider Configuration stub
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import plugins
+from plugins.api import configuration_api
+from plugins.model.internal_server_error_response import InternalServerErrorResponse
+from plugins.model.authentication_failed_response import AuthenticationFailedResponse
+from plugins.model.configuration_saml_identity_provider_model import ConfigurationSamlIdentityProviderModel
+from plugins.model.bad_request_response import BadRequestResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = plugins.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with plugins.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = configuration_api.ConfigurationApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Get Saml Identity Provider configuration stub
+        api_response = api_instance.configuration_service_get_saml_identity_provider_configuration_stub()
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling ConfigurationApi->configuration_service_get_saml_identity_provider_configuration_stub: %s\n" % e)
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ConfigurationSamlIdentityProviderModel**](ConfigurationSamlIdentityProviderModel.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Saml Identity Provider configuration |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **configuration_service_get_secret_search_indexer_configuration**
 > SearchIndexerModel configuration_service_get_secret_search_indexer_configuration()
 
@@ -2322,10 +2571,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.search_indexer_model import SearchIndexerModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2402,10 +2651,10 @@ from plugins.model.configuration_security_model import ConfigurationSecurityMode
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2482,10 +2731,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2562,10 +2811,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.site_connectors_summary_model import SiteConnectorsSummaryModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2647,10 +2896,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.system_log_configuration_view_model import SystemLogConfigurationViewModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2727,10 +2976,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2807,10 +3056,10 @@ from plugins.model.unlimited_admin_model import UnlimitedAdminModel
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -2867,6 +3116,95 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **configuration_service_import_saml_configuration**
+> [ConfigurationSamlIdentityProviderModel] configuration_service_import_saml_configuration()
+
+Import Saml configuration Identity Provider
+
+Import Saml configuration Identity Provider
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import plugins
+from plugins.api import configuration_api
+from plugins.model.internal_server_error_response import InternalServerErrorResponse
+from plugins.model.authentication_failed_response import AuthenticationFailedResponse
+from plugins.model.configuration_saml_identity_provider_model import ConfigurationSamlIdentityProviderModel
+from plugins.model.bad_request_response import BadRequestResponse
+from plugins.model.configuration_saml_identity_provider_import_args import ConfigurationSamlIdentityProviderImportArgs
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = plugins.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with plugins.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = configuration_api.ConfigurationApi(api_client)
+    configuration_saml_identity_provider_import_args = ConfigurationSamlIdentityProviderImportArgs(
+null,
+        import_file_data=None,
+    ) # ConfigurationSamlIdentityProviderImportArgs | Saml Identity Provider import args (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Import Saml configuration Identity Provider
+        api_response = api_instance.configuration_service_import_saml_configuration(configuration_saml_identity_provider_import_args=configuration_saml_identity_provider_import_args)
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling ConfigurationApi->configuration_service_import_saml_configuration: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **configuration_saml_identity_provider_import_args** | [**ConfigurationSamlIdentityProviderImportArgs**](ConfigurationSamlIdentityProviderImportArgs.md)| Saml Identity Provider import args | [optional]
+
+### Return type
+
+[**[ConfigurationSamlIdentityProviderModel]**](ConfigurationSamlIdentityProviderModel.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Saml configuration Identity Provider after import |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **configuration_service_patch_application_settings_configuration**
 > ConfigurationApplicationSettingsModel configuration_service_patch_application_settings_configuration()
 
@@ -2888,10 +3226,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_application_settings_patch_args import ConfigurationApplicationSettingsPatchArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -3094,10 +3432,10 @@ from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.auto_export_configuration_model import AutoExportConfigurationModel
 from plugins.model.auto_export_configuration_args import AutoExportConfigurationArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -3215,10 +3553,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.configuration_read_only_mode_args import ConfigurationReadOnlyModeArgs
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -3308,10 +3646,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.backup_configuration_model import BackupConfigurationModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -3457,10 +3795,10 @@ from plugins.model.configuration_database_model import ConfigurationDatabaseMode
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_database_patch_args import ConfigurationDatabasePatchArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -3594,10 +3932,10 @@ from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_email_patch_args import ConfigurationEmailPatchArgs
 from plugins.model.configuration_email_model import ConfigurationEmailModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -3731,10 +4069,10 @@ from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_folders_model import ConfigurationFoldersModel
 from plugins.model.configuration_folders_patch_args import ConfigurationFoldersPatchArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -3844,10 +4182,10 @@ from plugins.model.configuration_general_patch_args import ConfigurationGeneralP
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -4031,10 +4369,10 @@ from plugins.model.configuration_internal_site_connector_model import Configurat
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -4124,10 +4462,10 @@ from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_launcher_settings_patch_args import ConfigurationLauncherSettingsPatchArgs
 from plugins.model.configuration_launcher_settings_model import ConfigurationLauncherSettingsModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -4249,10 +4587,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_local_user_passwords_model import ConfigurationLocalUserPasswordsModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -4406,10 +4744,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_login_v2_model import ConfigurationLoginV2Model
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -4713,10 +5051,10 @@ from plugins.model.configuration_login_policy_patch_args import ConfigurationLog
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -4814,10 +5152,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_permission_options_patch_args import ConfigurationPermissionOptionsPatchArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -4923,10 +5261,10 @@ from plugins.model.platform_configuration_model import PlatformConfigurationMode
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -4946,6 +5284,10 @@ with plugins.ApiClient(configuration) as api_client:
     api_instance = configuration_api.ConfigurationApi(api_client)
     platform_configuration_args = PlatformConfigurationArgs(
         data=PlatformConfigurationUpdateModel(
+            create_groups_during_synchronization=UpdateFieldValueOfBoolean(
+                dirty=True,
+                value=True,
+            ),
             enable_synchronization=UpdateFieldValueOfBoolean(
                 dirty=True,
                 value=True,
@@ -5048,10 +5390,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -5149,10 +5491,10 @@ from plugins.model.configuration_rpc_patch_args import ConfigurationRpcPatchArgs
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -5266,10 +5608,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -5532,10 +5874,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.configuration_saml_identity_provider_model import ConfigurationSamlIdentityProviderModel
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -5766,10 +6108,10 @@ from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.search_indexer_update_args import SearchIndexerUpdateArgs
 from plugins.model.search_indexer_model import SearchIndexerModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -5873,10 +6215,10 @@ from plugins.model.configuration_security_model import ConfigurationSecurityMode
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -6046,10 +6388,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_session_recording_advanced_patch_args import ConfigurationSessionRecordingAdvancedPatchArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -6143,10 +6485,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_session_recording_patch_args import ConfigurationSessionRecordingPatchArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -6173,6 +6515,15 @@ with plugins.ApiClient(configuration) as api_client:
             archive_path=UpdateFieldValueOfString(
                 dirty=True,
                 value=None,
+            ),
+            archive_path_mappings=UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray(
+                dirty=True,
+                value=[
+                    ConfigurationSessionRecordingSiteArchiveUpdateModel(
+                        path=None,
+                        site_id=None,
+                    ),
+                ],
             ),
             days_until_archive=UpdateFieldValueOfInt32(
                 dirty=True,
@@ -6316,10 +6667,10 @@ from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.system_log_configuration_view_model import SystemLogConfigurationViewModel
 from plugins.model.system_log_configuration_update_args import SystemLogConfigurationUpdateArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -6421,10 +6772,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -6617,10 +6968,10 @@ from plugins.model.configuration_user_experience_model import ConfigurationUserE
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -6762,10 +7113,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_user_interface_model import ConfigurationUserInterfaceModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -6875,10 +7226,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.configuration_saml_identity_provider_model import ConfigurationSamlIdentityProviderModel
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -6998,10 +7349,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -7078,10 +7429,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.rotate_secret_keys_status_model import RotateSecretKeysStatusModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -7157,10 +7508,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -7236,10 +7587,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -7316,10 +7667,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_heartbeat_run_now_result_model import ConfigurationHeartbeatRunNowResultModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -7396,10 +7747,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.configuration_rpc_run_now_result_model import ConfigurationRpcRunNowResultModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -7476,10 +7827,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.test_email_response import TestEmailResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -7536,6 +7887,97 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **configuration_service_test_radius_login**
+> TestRadiusLoginResponseModel configuration_service_test_radius_login()
+
+Test Radius Login
+
+Test a Radius Login
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import plugins
+from plugins.api import configuration_api
+from plugins.model.internal_server_error_response import InternalServerErrorResponse
+from plugins.model.test_radius_login_args import TestRadiusLoginArgs
+from plugins.model.authentication_failed_response import AuthenticationFailedResponse
+from plugins.model.bad_request_response import BadRequestResponse
+from plugins.model.test_radius_login_response_model import TestRadiusLoginResponseModel
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = plugins.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with plugins.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = configuration_api.ConfigurationApi(api_client)
+    test_radius_login_args = TestRadiusLoginArgs(
+        data=TestRadiusLoginRequestModel(
+            radius_password=None,
+            radius_username=None,
+        ),
+    ) # TestRadiusLoginArgs | args (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Test Radius Login
+        api_response = api_instance.configuration_service_test_radius_login(test_radius_login_args=test_radius_login_args)
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling ConfigurationApi->configuration_service_test_radius_login: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **test_radius_login_args** | [**TestRadiusLoginArgs**](TestRadiusLoginArgs.md)| args | [optional]
+
+### Return type
+
+[**TestRadiusLoginResponseModel**](TestRadiusLoginResponseModel.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Test Radius Login Response |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **configuration_service_update_unlimited_admin**
 > bool configuration_service_update_unlimited_admin()
 
@@ -7556,10 +7998,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.unlimited_admin_update_args import UnlimitedAdminUpdateArgs
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters

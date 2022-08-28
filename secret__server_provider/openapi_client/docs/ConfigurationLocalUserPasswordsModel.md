@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **minimum_password_age_hours** | **bool, date, datetime, dict, float, int, list, str, none_type** | How many hours until password can be changed | [optional] 
 **minimum_password_age_minutes** | **bool, date, datetime, dict, float, int, list, str, none_type** | How many minutes until password can be changed | [optional] 
 **password_history_items** | **bool, date, datetime, dict, float, int, list, str, none_type** | How many passwords should be stored in history. | [optional] 
+**password_history_items_all** | **bool** | Keep all password history items. | [optional] 
 **password_minimum_length** | **bool, date, datetime, dict, float, int, list, str, none_type** | The minimum length required for local user passwords | [optional] 
 **password_require_lowercase** | **bool** | Whether or not the local password must include a lowercase letter | [optional] 
 **password_require_numbers** | **bool** | Whether or not the local password must include a number | [optional] 

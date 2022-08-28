@@ -1,12 +1,14 @@
 # plugins.LaunchersApi
 
-All URIs are relative to *https://integrations.secretservercloud.com//api*
+All URIs are relative to *https://integrations.secretservercloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**launchers_service_create**](LaunchersApi.md#launchers_service_create) | **POST** /v1/launchers/secret | Launch a secret.
 [**launchers_service_get**](LaunchersApi.md#launchers_service_get) | **GET** /v1/launchers/{id} | Get Launcher
+[**launchers_service_launcher_succeeded**](LaunchersApi.md#launchers_service_launcher_succeeded) | **GET** /v1/launchers/prepare/{id}/result | Get Prepare Launcher Result
 [**launchers_service_lookup**](LaunchersApi.md#launchers_service_lookup) | **GET** /v1/launchers/lookup | Lookup Launchers
+[**launchers_service_prepare_launcher**](LaunchersApi.md#launchers_service_prepare_launcher) | **POST** /v1/launchers/prepare | Prepare Launcher Session
 [**launchers_service_search_launcher_details_v2**](LaunchersApi.md#launchers_service_search_launcher_details_v2) | **GET** /v2/launchers/secret | Get secret launcher details.
 [**launchers_service_search_launchers**](LaunchersApi.md#launchers_service_search_launchers) | **GET** /v1/launchers | Search Launchers
 [**launchers_service_trigger_download**](LaunchersApi.md#launchers_service_trigger_download) | **GET** /v1/launchers/protocol-handler | Triggers a download of the Protocol Handler
@@ -33,10 +35,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.launched_secret_model import LaunchedSecretModel
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -123,10 +125,10 @@ from plugins.model.launcher_model import LauncherModel
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -187,6 +189,90 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **launchers_service_launcher_succeeded**
+> PrepareLauncherQueryResultModel launchers_service_launcher_succeeded(id)
+
+Get Prepare Launcher Result
+
+Get result of prepare Launcher Session request.
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import plugins
+from plugins.api import launchers_api
+from plugins.model.internal_server_error_response import InternalServerErrorResponse
+from plugins.model.prepare_launcher_query_result_model import PrepareLauncherQueryResultModel
+from plugins.model.authentication_failed_response import AuthenticationFailedResponse
+from plugins.model.bad_request_response import BadRequestResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = plugins.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with plugins.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = launchers_api.LaunchersApi(api_client)
+    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get Prepare Launcher Result
+        api_response = api_instance.launchers_service_launcher_succeeded(id)
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling LaunchersApi->launchers_service_launcher_succeeded: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+
+### Return type
+
+[**PrepareLauncherQueryResultModel**](PrepareLauncherQueryResultModel.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Prepare Launcher Query Result |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **launchers_service_lookup**
 > PagingOfLauncherLookup launchers_service_lookup()
 
@@ -207,10 +293,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.paging_of_launcher_lookup import PagingOfLauncherLookup
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -284,6 +370,97 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **launchers_service_prepare_launcher**
+> PrepareLauncherResult launchers_service_prepare_launcher()
+
+Prepare Launcher Session
+
+Prepare a Launcher Session.
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import plugins
+from plugins.api import launchers_api
+from plugins.model.prepare_launcher_result import PrepareLauncherResult
+from plugins.model.internal_server_error_response import InternalServerErrorResponse
+from plugins.model.authentication_failed_response import AuthenticationFailedResponse
+from plugins.model.bad_request_response import BadRequestResponse
+from plugins.model.prepare_launcher_args import PrepareLauncherArgs
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = plugins.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with plugins.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = launchers_api.LaunchersApi(api_client)
+    prepare_launcher_args = PrepareLauncherArgs(
+        launcher_type_id=None,
+        prompt_field_value=None,
+        secret_id=None,
+        site_id=None,
+    ) # PrepareLauncherArgs | args (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Prepare Launcher Session
+        api_response = api_instance.launchers_service_prepare_launcher(prepare_launcher_args=prepare_launcher_args)
+        pprint(api_response)
+    except plugins.ApiException as e:
+        print("Exception when calling LaunchersApi->launchers_service_prepare_launcher: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **prepare_launcher_args** | [**PrepareLauncherArgs**](PrepareLauncherArgs.md)| args | [optional]
+
+### Return type
+
+[**PrepareLauncherResult**](PrepareLauncherResult.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | PrepareLauncherResult |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **launchers_service_search_launcher_details_v2**
 > PagingOfLauncherDetailsV2 launchers_service_search_launcher_details_v2()
 
@@ -304,10 +481,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -399,10 +576,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -495,10 +672,10 @@ from plugins.model.internal_server_error_response import InternalServerErrorResp
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from pprint import pprint
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters

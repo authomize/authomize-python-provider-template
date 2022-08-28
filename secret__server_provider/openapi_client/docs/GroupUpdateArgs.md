@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | Active Directory Domain ID | [optional] 
 **enabled** | **bool** | Whether the group is active | [optional] 
 **has_group_owners** | **bool** | If true, the group is owned by specific other users/groups. If false, if it is owned by Group Administrators. | [optional] 
+**is_platform** | **bool** | Whether the group is a Platform Group | [optional] 
 **name** | **bool, date, datetime, dict, float, int, list, str, none_type** | Group name | [optional] 
 **owner_group_ids** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | List of owner GroupIds. Only used if HasGroupOwners is true. | [optional] 
 **owner_group_names** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | List of owner Group Names. Only used if HasGroupOwners is true. | [optional] 

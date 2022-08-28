@@ -5,6 +5,7 @@ Platform Configuration
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**create_groups_during_synchronization** | **bool** | Whether groups will be created during the Platform synchronization process. | [optional] 
 **enable_synchronization** | **bool** | Whether synchronization with Platform is enabled. | [optional] 
 **open_id_connect_client_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | The client ID for the OpenID Connect registered application. | [optional] 
 **open_id_connect_client_secret** | **bool, date, datetime, dict, float, int, list, str, none_type** | The client secret for the OpenID Connect registered application. | [optional] 

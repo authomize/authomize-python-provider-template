@@ -59,10 +59,10 @@ from plugins.model.authentication_failed_response import AuthenticationFailedRes
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.internal_server_error_response import InternalServerErrorResponse
 from plugins.model.online_activation_args import OnlineActivationArgs
-# Defining the host is optional and defaults to https://integrations.secretservercloud.com//api
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = plugins.Configuration(
-    host = "https://integrations.secretservercloud.com//api"
+    host = "https://integrations.secretservercloud.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -97,7 +97,7 @@ with plugins.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://integrations.secretservercloud.com//api*
+All URIs are relative to *https://integrations.secretservercloud.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -190,7 +190,9 @@ Class | Method | HTTP request | Description
 *CharacterSetsApi* | [**character_sets_service_patch**](docs/CharacterSetsApi.md#character_sets_service_patch) | **PATCH** /v1/character-sets/{id} | Patch Character Set
 *CharacterSetsApi* | [**character_sets_service_search_character_sets**](docs/CharacterSetsApi.md#character_sets_service_search_character_sets) | **GET** /v1/character-sets | Search Character Sets
 *ConfigurationApi* | [**configuration_service_cancel_rotate_secret_keys**](docs/ConfigurationApi.md#configuration_service_cancel_rotate_secret_keys) | **POST** /v1/configuration/security/cancel-rotate-secret-keys | Cancel Rotate Secret Keys
+*ConfigurationApi* | [**configuration_service_clear_ad_credentials**](docs/ConfigurationApi.md#configuration_service_clear_ad_credentials) | **POST** /v1/configuration/login/clear-ad-credentials | Clear AD Credentials
 *ConfigurationApi* | [**configuration_service_clear_system_log**](docs/ConfigurationApi.md#configuration_service_clear_system_log) | **GET** /v1/configuration/system-log/clear | Clear system log
+*ConfigurationApi* | [**configuration_service_delete_saml_configuration_identity_provider**](docs/ConfigurationApi.md#configuration_service_delete_saml_configuration_identity_provider) | **DELETE** /v1/configuration/saml/identity-provider/{id} | Delete Saml Configuration Identity Provider
 *ConfigurationApi* | [**configuration_service_get_auto_export_configuration**](docs/ConfigurationApi.md#configuration_service_get_auto_export_configuration) | **GET** /v1/configuration/auto-export | Get Automatic Export Configuration
 *ConfigurationApi* | [**configuration_service_get_auto_export_configuration_audits**](docs/ConfigurationApi.md#configuration_service_get_auto_export_configuration_audits) | **GET** /v1/configuration/auto-export-audits | Get Automatic Export Configuration Audits
 *ConfigurationApi* | [**configuration_service_get_auto_export_logs**](docs/ConfigurationApi.md#configuration_service_get_auto_export_logs) | **GET** /v1/configuration/auto-export-logs | Get Automatic Export Logs
@@ -215,6 +217,7 @@ Class | Method | HTTP request | Description
 *ConfigurationApi* | [**configuration_service_get_rpc_configuration**](docs/ConfigurationApi.md#configuration_service_get_rpc_configuration) | **GET** /v1/configuration/rpc | Get RPC configuration
 *ConfigurationApi* | [**configuration_service_get_saml_configuration**](docs/ConfigurationApi.md#configuration_service_get_saml_configuration) | **GET** /v1/configuration/saml | Get Saml configuration
 *ConfigurationApi* | [**configuration_service_get_saml_identity_provider_configuration**](docs/ConfigurationApi.md#configuration_service_get_saml_identity_provider_configuration) | **GET** /v1/configuration/saml/identity-provider/{id} | Get Saml Identity Provider configuration
+*ConfigurationApi* | [**configuration_service_get_saml_identity_provider_configuration_stub**](docs/ConfigurationApi.md#configuration_service_get_saml_identity_provider_configuration_stub) | **GET** /v1/configuration/saml/identity-provider/stub | Get Saml Identity Provider configuration stub
 *ConfigurationApi* | [**configuration_service_get_secret_search_indexer_configuration**](docs/ConfigurationApi.md#configuration_service_get_secret_search_indexer_configuration) | **GET** /v1/configuration/secret-search-indexer | Secret Search Indexer Configuration
 *ConfigurationApi* | [**configuration_service_get_security_configuration**](docs/ConfigurationApi.md#configuration_service_get_security_configuration) | **GET** /v1/configuration/security | Get Security configuration
 *ConfigurationApi* | [**configuration_service_get_session_recording_advanced_configuration**](docs/ConfigurationApi.md#configuration_service_get_session_recording_advanced_configuration) | **GET** /v1/configuration/sessionrecording-advanced | Get Session Recording Advanced
@@ -222,6 +225,7 @@ Class | Method | HTTP request | Description
 *ConfigurationApi* | [**configuration_service_get_system_log_configuration**](docs/ConfigurationApi.md#configuration_service_get_system_log_configuration) | **GET** /v1/configuration/system-log | Get system log configuration
 *ConfigurationApi* | [**configuration_service_get_ticket_system_configuration**](docs/ConfigurationApi.md#configuration_service_get_ticket_system_configuration) | **GET** /v1/configuration/ticket-system | Get the ticket system configuration
 *ConfigurationApi* | [**configuration_service_get_unlimited_admin**](docs/ConfigurationApi.md#configuration_service_get_unlimited_admin) | **GET** /v1/configuration/unlimited-admin | Get Unlimited Admin
+*ConfigurationApi* | [**configuration_service_import_saml_configuration**](docs/ConfigurationApi.md#configuration_service_import_saml_configuration) | **PUT** /v1/configuration/saml/identity-provider/import | Import Saml configuration Identity Provider
 *ConfigurationApi* | [**configuration_service_patch_application_settings_configuration**](docs/ConfigurationApi.md#configuration_service_patch_application_settings_configuration) | **PATCH** /v1/configuration/application-settings | Update the application settings configuration
 *ConfigurationApi* | [**configuration_service_patch_automatic_export_configuration**](docs/ConfigurationApi.md#configuration_service_patch_automatic_export_configuration) | **PATCH** /v1/configuration/auto-export | Patch Automatic Export Configuration
 *ConfigurationApi* | [**configuration_service_patch_configuration_read_only_mode**](docs/ConfigurationApi.md#configuration_service_patch_configuration_read_only_mode) | **PATCH** /v1/configuration/read-only-mode | Patch Read Only Mode Configuration
@@ -257,6 +261,7 @@ Class | Method | HTTP request | Description
 *ConfigurationApi* | [**configuration_service_run_heartbeat_now**](docs/ConfigurationApi.md#configuration_service_run_heartbeat_now) | **POST** /v1/configuration/heartbeat/run-now | Run Heartbeat Now
 *ConfigurationApi* | [**configuration_service_run_rpc_now**](docs/ConfigurationApi.md#configuration_service_run_rpc_now) | **POST** /v1/configuration/rpc/run-now | Run RPC Now
 *ConfigurationApi* | [**configuration_service_test_email**](docs/ConfigurationApi.md#configuration_service_test_email) | **POST** /v1/configuration/email/test | TestEmail
+*ConfigurationApi* | [**configuration_service_test_radius_login**](docs/ConfigurationApi.md#configuration_service_test_radius_login) | **POST** /v1/configuration/login/radius/test | Test Radius Login
 *ConfigurationApi* | [**configuration_service_update_unlimited_admin**](docs/ConfigurationApi.md#configuration_service_update_unlimited_admin) | **PATCH** /v1/configuration/unlimited-admin | Update Unlimited Admin
 *ConnectionManagerSettingsApi* | [**connection_manager_settings_service_get**](docs/ConnectionManagerSettingsApi.md#connection_manager_settings_service_get) | **GET** /v1/connection-manager-settings | Get Connection Manager Settings
 *DevOpsSecretsVaultSyncApi* | [**dev_ops_secrets_vault_sync_service_create_sync**](docs/DevOpsSecretsVaultSyncApi.md#dev_ops_secrets_vault_sync_service_create_sync) | **POST** /v1/devops-secrets-vault/add-sync | Create a DevOps sync for a secret.
@@ -550,7 +555,9 @@ Class | Method | HTTP request | Description
 *LauncherAgentsApi* | [**launcher_agents_service_update_collection**](docs/LauncherAgentsApi.md#launcher_agents_service_update_collection) | **PUT** /v1/launcheragents/collections/{id} | Update Launcher Agent Collection
 *LaunchersApi* | [**launchers_service_create**](docs/LaunchersApi.md#launchers_service_create) | **POST** /v1/launchers/secret | Launch a secret.
 *LaunchersApi* | [**launchers_service_get**](docs/LaunchersApi.md#launchers_service_get) | **GET** /v1/launchers/{id} | Get Launcher
+*LaunchersApi* | [**launchers_service_launcher_succeeded**](docs/LaunchersApi.md#launchers_service_launcher_succeeded) | **GET** /v1/launchers/prepare/{id}/result | Get Prepare Launcher Result
 *LaunchersApi* | [**launchers_service_lookup**](docs/LaunchersApi.md#launchers_service_lookup) | **GET** /v1/launchers/lookup | Lookup Launchers
+*LaunchersApi* | [**launchers_service_prepare_launcher**](docs/LaunchersApi.md#launchers_service_prepare_launcher) | **POST** /v1/launchers/prepare | Prepare Launcher Session
 *LaunchersApi* | [**launchers_service_search_launcher_details_v2**](docs/LaunchersApi.md#launchers_service_search_launcher_details_v2) | **GET** /v2/launchers/secret | Get secret launcher details.
 *LaunchersApi* | [**launchers_service_search_launchers**](docs/LaunchersApi.md#launchers_service_search_launchers) | **GET** /v1/launchers | Search Launchers
 *LaunchersApi* | [**launchers_service_trigger_download**](docs/LaunchersApi.md#launchers_service_trigger_download) | **GET** /v1/launchers/protocol-handler | Triggers a download of the Protocol Handler
@@ -708,6 +715,7 @@ Class | Method | HTTP request | Description
 *SecretDependenciesApi* | [**secret_dependencies_service_search_dependency_summary**](docs/SecretDependenciesApi.md#secret_dependencies_service_search_dependency_summary) | **GET** /v1/secret-dependencies | Search Secret Dependencies
 *SecretDependenciesApi* | [**secret_dependencies_service_stub**](docs/SecretDependenciesApi.md#secret_dependencies_service_stub) | **GET** /v1/secret-dependencies/stub | Get Secret Dependency Stub
 *SecretDependenciesApi* | [**secret_dependencies_service_update_dependency**](docs/SecretDependenciesApi.md#secret_dependencies_service_update_dependency) | **PUT** /v1/secret-dependencies/{id} | Update Secret Dependency
+*SecretDependenciesApi* | [**secret_dependencies_service_update_secret_dependency_group**](docs/SecretDependenciesApi.md#secret_dependencies_service_update_secret_dependency_group) | **PUT** /v1/secret-dependencies/groups/{secretId} | Update Secret Dependency Group
 *SecretEraseRequestsApi* | [**secret_erase_requests_service_create_request**](docs/SecretEraseRequestsApi.md#secret_erase_requests_service_create_request) | **POST** /v1/secret-erase-requests | Create a new Secret Erase Request
 *SecretEraseRequestsApi* | [**secret_erase_requests_service_get_history**](docs/SecretEraseRequestsApi.md#secret_erase_requests_service_get_history) | **GET** /v1/secret-erase-requests/{id}/history | Get Secret Erase History by Secret Erase Request ID
 *SecretEraseRequestsApi* | [**secret_erase_requests_service_get_request**](docs/SecretEraseRequestsApi.md#secret_erase_requests_service_get_request) | **GET** /v1/secret-erase-requests/{id} | Get Secret Erase Request by ID
@@ -807,6 +815,7 @@ Class | Method | HTTP request | Description
 *SecretsApi* | [**secrets_service_change_password**](docs/SecretsApi.md#secrets_service_change_password) | **POST** /v1/secrets/{id}/change-password | Change Secret Password
 *SecretsApi* | [**secrets_service_check_in**](docs/SecretsApi.md#secrets_service_check_in) | **POST** /v1/secrets/{id}/check-in | Check In Secret
 *SecretsApi* | [**secrets_service_check_out**](docs/SecretsApi.md#secrets_service_check_out) | **POST** /v1/secrets/{id}/check-out | Check Out Secret
+*SecretsApi* | [**secrets_service_convert_template**](docs/SecretsApi.md#secrets_service_convert_template) | **POST** /v1/secrets/convert-template | Convert template
 *SecretsApi* | [**secrets_service_create_secret**](docs/SecretsApi.md#secrets_service_create_secret) | **POST** /v1/secrets | Create Secret
 *SecretsApi* | [**secrets_service_delete**](docs/SecretsApi.md#secrets_service_delete) | **DELETE** /v1/secrets/{id} | Deactivate a Secret
 *SecretsApi* | [**secrets_service_delete_list_field_list_definitions**](docs/SecretsApi.md#secrets_service_delete_list_field_list_definitions) | **DELETE** /v1/secrets/{id}/fields/{slug}/listdetails | Delete Secret List Field List Data
@@ -815,6 +824,7 @@ Class | Method | HTTP request | Description
 *SecretsApi* | [**secrets_service_extend_check_out**](docs/SecretsApi.md#secrets_service_extend_check_out) | **POST** /v1/secrets/{id}/extend-check-out | Extend Check Out
 *SecretsApi* | [**secrets_service_favorite**](docs/SecretsApi.md#secrets_service_favorite) | **POST** /v1/secrets/{secretId}/favorite | Favorite a Secret
 *SecretsApi* | [**secrets_service_get_active_secret_sessions**](docs/SecretsApi.md#secrets_service_get_active_secret_sessions) | **GET** /v1/secrets/launcher-sessions | Get Secret Launcher Sessions By Id
+*SecretsApi* | [**secrets_service_get_convert_info**](docs/SecretsApi.md#secrets_service_get_convert_info) | **POST** /v1/secrets/get-convert-info | Convert template
 *SecretsApi* | [**secrets_service_get_favorites**](docs/SecretsApi.md#secrets_service_get_favorites) | **GET** /v1/secrets/favorite | List a User&#39;s Favorite Secrets
 *SecretsApi* | [**secrets_service_get_field**](docs/SecretsApi.md#secrets_service_get_field) | **GET** /v1/secrets/{id}/fields/{slug} | Get Secret Field
 *SecretsApi* | [**secrets_service_get_general**](docs/SecretsApi.md#secrets_service_get_general) | **GET** /v1/secrets/secret-detail/{id}/general/{isEditMode?}/{loadReadOnlyFlags?} | Get Secret Detail General
@@ -1052,6 +1062,7 @@ Class | Method | HTTP request | Description
  - [CharacterSetPatchArgs](docs/CharacterSetPatchArgs.md)
  - [CharacterSetPatchModel](docs/CharacterSetPatchModel.md)
  - [CharacterSetSummary](docs/CharacterSetSummary.md)
+ - [ClearCachedADCredentialsResultModel](docs/ClearCachedADCredentialsResultModel.md)
  - [CommandPermissionType](docs/CommandPermissionType.md)
  - [CommandRestrictionType](docs/CommandRestrictionType.md)
  - [ConfigurationAdvancedModel](docs/ConfigurationAdvancedModel.md)
@@ -1118,6 +1129,8 @@ Class | Method | HTTP request | Description
  - [ConfigurationRpcRunNowResultModel](docs/ConfigurationRpcRunNowResultModel.md)
  - [ConfigurationSamlIdentityProviderCreateArgs](docs/ConfigurationSamlIdentityProviderCreateArgs.md)
  - [ConfigurationSamlIdentityProviderCreateModel](docs/ConfigurationSamlIdentityProviderCreateModel.md)
+ - [ConfigurationSamlIdentityProviderDeleteResultModel](docs/ConfigurationSamlIdentityProviderDeleteResultModel.md)
+ - [ConfigurationSamlIdentityProviderImportArgs](docs/ConfigurationSamlIdentityProviderImportArgs.md)
  - [ConfigurationSamlIdentityProviderModel](docs/ConfigurationSamlIdentityProviderModel.md)
  - [ConfigurationSamlIdentityProviderPatchArgs](docs/ConfigurationSamlIdentityProviderPatchArgs.md)
  - [ConfigurationSamlIdentityProviderPatchModel](docs/ConfigurationSamlIdentityProviderPatchModel.md)
@@ -1133,6 +1146,8 @@ Class | Method | HTTP request | Description
  - [ConfigurationSessionRecordingModel](docs/ConfigurationSessionRecordingModel.md)
  - [ConfigurationSessionRecordingPatchArgs](docs/ConfigurationSessionRecordingPatchArgs.md)
  - [ConfigurationSessionRecordingPatchModel](docs/ConfigurationSessionRecordingPatchModel.md)
+ - [ConfigurationSessionRecordingSiteArchiveSummary](docs/ConfigurationSessionRecordingSiteArchiveSummary.md)
+ - [ConfigurationSessionRecordingSiteArchiveUpdateModel](docs/ConfigurationSessionRecordingSiteArchiveUpdateModel.md)
  - [ConfigurationSshCommandExportModel](docs/ConfigurationSshCommandExportModel.md)
  - [ConfigurationSshCommandImportModel](docs/ConfigurationSshCommandImportModel.md)
  - [ConfigurationSshCommandMenuMapModel](docs/ConfigurationSshCommandMenuMapModel.md)
@@ -1154,6 +1169,13 @@ Class | Method | HTTP request | Description
  - [ContentRangeHeaderValue](docs/ContentRangeHeaderValue.md)
  - [ConvertSecretsSecretTypeArgs](docs/ConvertSecretsSecretTypeArgs.md)
  - [ConvertSecretsSecretTypeModel](docs/ConvertSecretsSecretTypeModel.md)
+ - [ConvertTemplateActionModel](docs/ConvertTemplateActionModel.md)
+ - [ConvertTemplateDestinationModel](docs/ConvertTemplateDestinationModel.md)
+ - [ConvertTemplateDetailFieldModel](docs/ConvertTemplateDetailFieldModel.md)
+ - [ConvertTemplateDetailsModel](docs/ConvertTemplateDetailsModel.md)
+ - [ConvertTemplateFieldModel](docs/ConvertTemplateFieldModel.md)
+ - [ConvertTemplateInfoModel](docs/ConvertTemplateInfoModel.md)
+ - [ConvertTemplateSourceModel](docs/ConvertTemplateSourceModel.md)
  - [CurrentUserModel](docs/CurrentUserModel.md)
  - [CustomCommandCreateArgs](docs/CustomCommandCreateArgs.md)
  - [CustomCommandModel](docs/CustomCommandModel.md)
@@ -1595,6 +1617,7 @@ Class | Method | HTTP request | Description
  - [LauncherAgentUpdateArgs](docs/LauncherAgentUpdateArgs.md)
  - [LauncherDeploymentType](docs/LauncherDeploymentType.md)
  - [LauncherDetailsV2](docs/LauncherDetailsV2.md)
+ - [LauncherFileDownload](docs/LauncherFileDownload.md)
  - [LauncherLookup](docs/LauncherLookup.md)
  - [LauncherModel](docs/LauncherModel.md)
  - [LauncherSettingsData](docs/LauncherSettingsData.md)
@@ -1827,6 +1850,9 @@ Class | Method | HTTP request | Description
  - [PlatformSynchronizationStatus](docs/PlatformSynchronizationStatus.md)
  - [PolicyApplyType](docs/PolicyApplyType.md)
  - [PreferenceModel](docs/PreferenceModel.md)
+ - [PrepareLauncherArgs](docs/PrepareLauncherArgs.md)
+ - [PrepareLauncherQueryResultModel](docs/PrepareLauncherQueryResultModel.md)
+ - [PrepareLauncherResult](docs/PrepareLauncherResult.md)
  - [ProcessingLocationType](docs/ProcessingLocationType.md)
  - [ProductHeaderValue](docs/ProductHeaderValue.md)
  - [ProductInfoHeaderValue](docs/ProductInfoHeaderValue.md)
@@ -1858,6 +1884,7 @@ Class | Method | HTTP request | Description
  - [RecurringScheduleUpdateModel](docs/RecurringScheduleUpdateModel.md)
  - [RecurringScheduleValueModel](docs/RecurringScheduleValueModel.md)
  - [RecurringScheduleValueType](docs/RecurringScheduleValueType.md)
+ - [RedirectToLauncherUrl](docs/RedirectToLauncherUrl.md)
  - [RegexValuesSummary](docs/RegexValuesSummary.md)
  - [RemoveUsersFromGroupArgs](docs/RemoveUsersFromGroupArgs.md)
  - [RemoveUsersFromGroupModel](docs/RemoveUsersFromGroupModel.md)
@@ -1989,6 +2016,7 @@ Class | Method | HTTP request | Description
  - [SecretDependencyCreateArgs](docs/SecretDependencyCreateArgs.md)
  - [SecretDependencyGroup](docs/SecretDependencyGroup.md)
  - [SecretDependencyGroupCreateArgs](docs/SecretDependencyGroupCreateArgs.md)
+ - [SecretDependencyGroupModel](docs/SecretDependencyGroupModel.md)
  - [SecretDependencyModel](docs/SecretDependencyModel.md)
  - [SecretDependencyOdbcConnectionArg](docs/SecretDependencyOdbcConnectionArg.md)
  - [SecretDependencyRunScript](docs/SecretDependencyRunScript.md)
@@ -2001,6 +2029,9 @@ Class | Method | HTTP request | Description
  - [SecretDependencyUpdateArgs](docs/SecretDependencyUpdateArgs.md)
  - [SecretDetailActionType](docs/SecretDetailActionType.md)
  - [SecretDetailApprovalType](docs/SecretDetailApprovalType.md)
+ - [SecretDetailConvertTemplateArgs](docs/SecretDetailConvertTemplateArgs.md)
+ - [SecretDetailConvertTemplateInfoArgs](docs/SecretDetailConvertTemplateInfoArgs.md)
+ - [SecretDetailConvertTemplateModel](docs/SecretDetailConvertTemplateModel.md)
  - [SecretDetailEmailUpdateModel](docs/SecretDetailEmailUpdateModel.md)
  - [SecretDetailExpirationType](docs/SecretDetailExpirationType.md)
  - [SecretDetailExpirationUpdateModel](docs/SecretDetailExpirationUpdateModel.md)
@@ -2314,6 +2345,9 @@ Class | Method | HTTP request | Description
  - [TemplateViewModel](docs/TemplateViewModel.md)
  - [TerminalAuthenticateResult](docs/TerminalAuthenticateResult.md)
  - [TestEmailResponse](docs/TestEmailResponse.md)
+ - [TestRadiusLoginArgs](docs/TestRadiusLoginArgs.md)
+ - [TestRadiusLoginRequestModel](docs/TestRadiusLoginRequestModel.md)
+ - [TestRadiusLoginResponseModel](docs/TestRadiusLoginResponseModel.md)
  - [ThreadInformation](docs/ThreadInformation.md)
  - [TicketSystemCreateArgs](docs/TicketSystemCreateArgs.md)
  - [TicketSystemCreateModel](docs/TicketSystemCreateModel.md)
@@ -2340,6 +2374,7 @@ Class | Method | HTTP request | Description
  - [UpdateFieldValueOfApplicationAccessStatusRequestType](docs/UpdateFieldValueOfApplicationAccessStatusRequestType.md)
  - [UpdateFieldValueOfAzureServiceBusTransportType](docs/UpdateFieldValueOfAzureServiceBusTransportType.md)
  - [UpdateFieldValueOfBoolean](docs/UpdateFieldValueOfBoolean.md)
+ - [UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray](docs/UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray.md)
  - [UpdateFieldValueOfDateTime](docs/UpdateFieldValueOfDateTime.md)
  - [UpdateFieldValueOfDefaultSecretPermissionsType](docs/UpdateFieldValueOfDefaultSecretPermissionsType.md)
  - [UpdateFieldValueOfDirectoryServicesSynchronizationUserOption](docs/UpdateFieldValueOfDirectoryServicesSynchronizationUserOption.md)
@@ -2411,6 +2446,8 @@ Class | Method | HTTP request | Description
  - [UpdateFieldValueOfSyslogCefTimeZoneType](docs/UpdateFieldValueOfSyslogCefTimeZoneType.md)
  - [UpdateFieldValueOfTicketSystemTypes](docs/UpdateFieldValueOfTicketSystemTypes.md)
  - [UpdateFieldValueOfUnixAuthenticationMethodType](docs/UpdateFieldValueOfUnixAuthenticationMethodType.md)
+ - [UpdateSecretDependencyGroupArgs](docs/UpdateSecretDependencyGroupArgs.md)
+ - [UpdateSecretDependencyGroupModel](docs/UpdateSecretDependencyGroupModel.md)
  - [UpdateTemplateFieldOfString](docs/UpdateTemplateFieldOfString.md)
  - [Uri](docs/Uri.md)
  - [UriHostNameType](docs/UriHostNameType.md)

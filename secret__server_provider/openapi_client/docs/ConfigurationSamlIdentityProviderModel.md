@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **name** | **bool, date, datetime, dict, float, int, list, str, none_type** | Name of the Identity Provider. | [optional] 
 **override_pending_authn_request** | **bool** | When true, an in-progress SP-initiated login may be interrupted by an IDP-initiated login. | [optional] 
 **public_certificate** | **bool, date, datetime, dict, float, int, list, str, none_type** | The public certificate for the Identity Provider. Base64 encoded | [optional] 
+**public_certificate_thumbprint** | **bool, date, datetime, dict, float, int, list, str, none_type** | The public certificate thumbprint | [optional] 
 **sign_authn_request** | **bool** | When true, the authentication requests sent to this IDP will be signed. | [optional] 
 **sign_logout_request** | **bool** | When true, logout requests sent to this IDP will be signed.&lt; | [optional] 
 **sign_logout_response** | **bool** | When true, logout responses sent to this IDP will be signed. | [optional] 

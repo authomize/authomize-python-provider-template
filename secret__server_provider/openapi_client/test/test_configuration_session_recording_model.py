@@ -13,6 +13,8 @@ import sys
 import unittest
 
 import plugins
+from plugins.model.configuration_session_recording_site_archive_summary import ConfigurationSessionRecordingSiteArchiveSummary
+globals()['ConfigurationSessionRecordingSiteArchiveSummary'] = ConfigurationSessionRecordingSiteArchiveSummary
 from plugins.model.configuration_session_recording_model import ConfigurationSessionRecordingModel
 
 

@@ -105,6 +105,7 @@ class ConfigurationSamlIdentityProviderModel(ModelNormal):
             'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'override_pending_authn_request': (bool,),  # noqa: E501
             'public_certificate': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'public_certificate_thumbprint': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'sign_authn_request': (bool,),  # noqa: E501
             'sign_logout_request': (bool,),  # noqa: E501
             'sign_logout_response': (bool,),  # noqa: E501
@@ -150,6 +151,7 @@ class ConfigurationSamlIdentityProviderModel(ModelNormal):
         'name': 'name',  # noqa: E501
         'override_pending_authn_request': 'overridePendingAuthnRequest',  # noqa: E501
         'public_certificate': 'publicCertificate',  # noqa: E501
+        'public_certificate_thumbprint': 'publicCertificateThumbprint',  # noqa: E501
         'sign_authn_request': 'signAuthnRequest',  # noqa: E501
         'sign_logout_request': 'signLogoutRequest',  # noqa: E501
         'sign_logout_response': 'signLogoutResponse',  # noqa: E501
@@ -230,6 +232,7 @@ class ConfigurationSamlIdentityProviderModel(ModelNormal):
             name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the Identity Provider.. [optional]  # noqa: E501
             override_pending_authn_request (bool): When true, an in-progress SP-initiated login may be interrupted by an IDP-initiated login.. [optional]  # noqa: E501
             public_certificate (bool, date, datetime, dict, float, int, list, str, none_type): The public certificate for the Identity Provider. Base64 encoded. [optional]  # noqa: E501
+            public_certificate_thumbprint (bool, date, datetime, dict, float, int, list, str, none_type): The public certificate thumbprint. [optional]  # noqa: E501
             sign_authn_request (bool): When true, the authentication requests sent to this IDP will be signed.. [optional]  # noqa: E501
             sign_logout_request (bool): When true, logout requests sent to this IDP will be signed.<. [optional]  # noqa: E501
             sign_logout_response (bool): When true, logout responses sent to this IDP will be signed.. [optional]  # noqa: E501
@@ -352,6 +355,7 @@ class ConfigurationSamlIdentityProviderModel(ModelNormal):
             name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the Identity Provider.. [optional]  # noqa: E501
             override_pending_authn_request (bool): When true, an in-progress SP-initiated login may be interrupted by an IDP-initiated login.. [optional]  # noqa: E501
             public_certificate (bool, date, datetime, dict, float, int, list, str, none_type): The public certificate for the Identity Provider. Base64 encoded. [optional]  # noqa: E501
+            public_certificate_thumbprint (bool, date, datetime, dict, float, int, list, str, none_type): The public certificate thumbprint. [optional]  # noqa: E501
             sign_authn_request (bool): When true, the authentication requests sent to this IDP will be signed.. [optional]  # noqa: E501
             sign_logout_request (bool): When true, logout requests sent to this IDP will be signed.<. [optional]  # noqa: E501
             sign_logout_response (bool): When true, logout responses sent to this IDP will be signed.. [optional]  # noqa: E501

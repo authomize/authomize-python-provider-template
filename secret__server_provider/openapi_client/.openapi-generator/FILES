@@ -100,6 +100,7 @@ docs/CharacterSetPatchArgs.md
 docs/CharacterSetPatchModel.md
 docs/CharacterSetSummary.md
 docs/CharacterSetsApi.md
+docs/ClearCachedADCredentialsResultModel.md
 docs/CommandPermissionType.md
 docs/CommandRestrictionType.md
 docs/ConfigurationAdvancedModel.md
@@ -167,6 +168,8 @@ docs/ConfigurationRpcPatchModel.md
 docs/ConfigurationRpcRunNowResultModel.md
 docs/ConfigurationSamlIdentityProviderCreateArgs.md
 docs/ConfigurationSamlIdentityProviderCreateModel.md
+docs/ConfigurationSamlIdentityProviderDeleteResultModel.md
+docs/ConfigurationSamlIdentityProviderImportArgs.md
 docs/ConfigurationSamlIdentityProviderModel.md
 docs/ConfigurationSamlIdentityProviderPatchArgs.md
 docs/ConfigurationSamlIdentityProviderPatchModel.md
@@ -182,6 +185,8 @@ docs/ConfigurationSessionRecordingAdvancedPatchModel.md
 docs/ConfigurationSessionRecordingModel.md
 docs/ConfigurationSessionRecordingPatchArgs.md
 docs/ConfigurationSessionRecordingPatchModel.md
+docs/ConfigurationSessionRecordingSiteArchiveSummary.md
+docs/ConfigurationSessionRecordingSiteArchiveUpdateModel.md
 docs/ConfigurationSshCommandExportModel.md
 docs/ConfigurationSshCommandImportModel.md
 docs/ConfigurationSshCommandMenuMapModel.md
@@ -204,6 +209,13 @@ docs/ContentDispositionHeaderValue.md
 docs/ContentRangeHeaderValue.md
 docs/ConvertSecretsSecretTypeArgs.md
 docs/ConvertSecretsSecretTypeModel.md
+docs/ConvertTemplateActionModel.md
+docs/ConvertTemplateDestinationModel.md
+docs/ConvertTemplateDetailFieldModel.md
+docs/ConvertTemplateDetailsModel.md
+docs/ConvertTemplateFieldModel.md
+docs/ConvertTemplateInfoModel.md
+docs/ConvertTemplateSourceModel.md
 docs/CurrentUserModel.md
 docs/CustomCommandCreateArgs.md
 docs/CustomCommandModel.md
@@ -674,6 +686,7 @@ docs/LauncherAgentUpdateArgs.md
 docs/LauncherAgentsApi.md
 docs/LauncherDeploymentType.md
 docs/LauncherDetailsV2.md
+docs/LauncherFileDownload.md
 docs/LauncherLookup.md
 docs/LauncherModel.md
 docs/LauncherSettingsData.md
@@ -915,6 +928,9 @@ docs/PlatformIntegrationType.md
 docs/PlatformSynchronizationStatus.md
 docs/PolicyApplyType.md
 docs/PreferenceModel.md
+docs/PrepareLauncherArgs.md
+docs/PrepareLauncherQueryResultModel.md
+docs/PrepareLauncherResult.md
 docs/ProcessingLocationType.md
 docs/ProductHeaderValue.md
 docs/ProductInfoHeaderValue.md
@@ -947,6 +963,7 @@ docs/RecurringScheduleUpdateArgs.md
 docs/RecurringScheduleUpdateModel.md
 docs/RecurringScheduleValueModel.md
 docs/RecurringScheduleValueType.md
+docs/RedirectToLauncherUrl.md
 docs/RegexValuesSummary.md
 docs/RemotePasswordChangingApi.md
 docs/RemoveUsersFromGroupArgs.md
@@ -1090,6 +1107,7 @@ docs/SecretDependenciesApi.md
 docs/SecretDependencyCreateArgs.md
 docs/SecretDependencyGroup.md
 docs/SecretDependencyGroupCreateArgs.md
+docs/SecretDependencyGroupModel.md
 docs/SecretDependencyModel.md
 docs/SecretDependencyOdbcConnectionArg.md
 docs/SecretDependencyRunScript.md
@@ -1102,6 +1120,9 @@ docs/SecretDependencyUniversalScriptArgument.md
 docs/SecretDependencyUpdateArgs.md
 docs/SecretDetailActionType.md
 docs/SecretDetailApprovalType.md
+docs/SecretDetailConvertTemplateArgs.md
+docs/SecretDetailConvertTemplateInfoArgs.md
+docs/SecretDetailConvertTemplateModel.md
 docs/SecretDetailEmailUpdateModel.md
 docs/SecretDetailExpirationType.md
 docs/SecretDetailExpirationUpdateModel.md
@@ -1434,6 +1455,9 @@ docs/TeamsApi.md
 docs/TemplateViewModel.md
 docs/TerminalAuthenticateResult.md
 docs/TestEmailResponse.md
+docs/TestRadiusLoginArgs.md
+docs/TestRadiusLoginRequestModel.md
+docs/TestRadiusLoginResponseModel.md
 docs/ThreadInformation.md
 docs/TicketSystemCreateArgs.md
 docs/TicketSystemCreateModel.md
@@ -1461,6 +1485,7 @@ docs/UpdateAssociatedSecretsModel.md
 docs/UpdateFieldValueOfApplicationAccessStatusRequestType.md
 docs/UpdateFieldValueOfAzureServiceBusTransportType.md
 docs/UpdateFieldValueOfBoolean.md
+docs/UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray.md
 docs/UpdateFieldValueOfDateTime.md
 docs/UpdateFieldValueOfDefaultSecretPermissionsType.md
 docs/UpdateFieldValueOfDirectoryServicesSynchronizationUserOption.md
@@ -1532,6 +1557,8 @@ docs/UpdateFieldValueOfSyslogCefProtocolType.md
 docs/UpdateFieldValueOfSyslogCefTimeZoneType.md
 docs/UpdateFieldValueOfTicketSystemTypes.md
 docs/UpdateFieldValueOfUnixAuthenticationMethodType.md
+docs/UpdateSecretDependencyGroupArgs.md
+docs/UpdateSecretDependencyGroupModel.md
 docs/UpdateTemplateFieldOfString.md
 docs/Uri.md
 docs/UriHostNameType.md
@@ -1822,6 +1849,7 @@ plugins/model/character_set_model.py
 plugins/model/character_set_patch_args.py
 plugins/model/character_set_patch_model.py
 plugins/model/character_set_summary.py
+plugins/model/clear_cached_ad_credentials_result_model.py
 plugins/model/command_permission_type.py
 plugins/model/command_restriction_type.py
 plugins/model/configuration_advanced_model.py
@@ -1888,6 +1916,8 @@ plugins/model/configuration_rpc_patch_model.py
 plugins/model/configuration_rpc_run_now_result_model.py
 plugins/model/configuration_saml_identity_provider_create_args.py
 plugins/model/configuration_saml_identity_provider_create_model.py
+plugins/model/configuration_saml_identity_provider_delete_result_model.py
+plugins/model/configuration_saml_identity_provider_import_args.py
 plugins/model/configuration_saml_identity_provider_model.py
 plugins/model/configuration_saml_identity_provider_patch_args.py
 plugins/model/configuration_saml_identity_provider_patch_model.py
@@ -1903,6 +1933,8 @@ plugins/model/configuration_session_recording_advanced_patch_model.py
 plugins/model/configuration_session_recording_model.py
 plugins/model/configuration_session_recording_patch_args.py
 plugins/model/configuration_session_recording_patch_model.py
+plugins/model/configuration_session_recording_site_archive_summary.py
+plugins/model/configuration_session_recording_site_archive_update_model.py
 plugins/model/configuration_ssh_command_export_model.py
 plugins/model/configuration_ssh_command_import_model.py
 plugins/model/configuration_ssh_command_menu_map_model.py
@@ -1924,6 +1956,13 @@ plugins/model/content_disposition_header_value.py
 plugins/model/content_range_header_value.py
 plugins/model/convert_secrets_secret_type_args.py
 plugins/model/convert_secrets_secret_type_model.py
+plugins/model/convert_template_action_model.py
+plugins/model/convert_template_destination_model.py
+plugins/model/convert_template_detail_field_model.py
+plugins/model/convert_template_details_model.py
+plugins/model/convert_template_field_model.py
+plugins/model/convert_template_info_model.py
+plugins/model/convert_template_source_model.py
 plugins/model/current_user_model.py
 plugins/model/custom_command_create_args.py
 plugins/model/custom_command_model.py
@@ -2365,6 +2404,7 @@ plugins/model/launcher_agent_summary.py
 plugins/model/launcher_agent_update_args.py
 plugins/model/launcher_deployment_type.py
 plugins/model/launcher_details_v2.py
+plugins/model/launcher_file_download.py
 plugins/model/launcher_lookup.py
 plugins/model/launcher_model.py
 plugins/model/launcher_settings_data.py
@@ -2597,6 +2637,9 @@ plugins/model/platform_integration_type.py
 plugins/model/platform_synchronization_status.py
 plugins/model/policy_apply_type.py
 plugins/model/preference_model.py
+plugins/model/prepare_launcher_args.py
+plugins/model/prepare_launcher_query_result_model.py
+plugins/model/prepare_launcher_result.py
 plugins/model/processing_location_type.py
 plugins/model/product_header_value.py
 plugins/model/product_info_header_value.py
@@ -2628,6 +2671,7 @@ plugins/model/recurring_schedule_update_args.py
 plugins/model/recurring_schedule_update_model.py
 plugins/model/recurring_schedule_value_model.py
 plugins/model/recurring_schedule_value_type.py
+plugins/model/redirect_to_launcher_url.py
 plugins/model/regex_values_summary.py
 plugins/model/remove_users_from_group_args.py
 plugins/model/remove_users_from_group_model.py
@@ -2759,6 +2803,7 @@ plugins/model/secret_create_args.py
 plugins/model/secret_dependency_create_args.py
 plugins/model/secret_dependency_group.py
 plugins/model/secret_dependency_group_create_args.py
+plugins/model/secret_dependency_group_model.py
 plugins/model/secret_dependency_model.py
 plugins/model/secret_dependency_odbc_connection_arg.py
 plugins/model/secret_dependency_run_script.py
@@ -2771,6 +2816,9 @@ plugins/model/secret_dependency_universal_script_argument.py
 plugins/model/secret_dependency_update_args.py
 plugins/model/secret_detail_action_type.py
 plugins/model/secret_detail_approval_type.py
+plugins/model/secret_detail_convert_template_args.py
+plugins/model/secret_detail_convert_template_info_args.py
+plugins/model/secret_detail_convert_template_model.py
 plugins/model/secret_detail_email_update_model.py
 plugins/model/secret_detail_expiration_type.py
 plugins/model/secret_detail_expiration_update_model.py
@@ -3084,6 +3132,9 @@ plugins/model/team_site_update_args.py
 plugins/model/template_view_model.py
 plugins/model/terminal_authenticate_result.py
 plugins/model/test_email_response.py
+plugins/model/test_radius_login_args.py
+plugins/model/test_radius_login_request_model.py
+plugins/model/test_radius_login_response_model.py
 plugins/model/thread_information.py
 plugins/model/ticket_system_create_args.py
 plugins/model/ticket_system_create_model.py
@@ -3110,6 +3161,7 @@ plugins/model/update_associated_secrets_model.py
 plugins/model/update_field_value_of_application_access_status_request_type.py
 plugins/model/update_field_value_of_azure_service_bus_transport_type.py
 plugins/model/update_field_value_of_boolean.py
+plugins/model/update_field_value_of_configuration_session_recording_site_archive_update_model_array.py
 plugins/model/update_field_value_of_date_time.py
 plugins/model/update_field_value_of_default_secret_permissions_type.py
 plugins/model/update_field_value_of_directory_services_synchronization_user_option.py
@@ -3181,6 +3233,8 @@ plugins/model/update_field_value_of_syslog_cef_protocol_type.py
 plugins/model/update_field_value_of_syslog_cef_time_zone_type.py
 plugins/model/update_field_value_of_ticket_system_types.py
 plugins/model/update_field_value_of_unix_authentication_method_type.py
+plugins/model/update_secret_dependency_group_args.py
+plugins/model/update_secret_dependency_group_model.py
 plugins/model/update_template_field_of_string.py
 plugins/model/uri.py
 plugins/model/uri_host_name_type.py
@@ -3388,6 +3442,7 @@ test/test_character_set_patch_args.py
 test/test_character_set_patch_model.py
 test/test_character_set_summary.py
 test/test_character_sets_api.py
+test/test_clear_cached_ad_credentials_result_model.py
 test/test_command_permission_type.py
 test/test_command_restriction_type.py
 test/test_configuration_advanced_model.py
@@ -3455,6 +3510,8 @@ test/test_configuration_rpc_patch_model.py
 test/test_configuration_rpc_run_now_result_model.py
 test/test_configuration_saml_identity_provider_create_args.py
 test/test_configuration_saml_identity_provider_create_model.py
+test/test_configuration_saml_identity_provider_delete_result_model.py
+test/test_configuration_saml_identity_provider_import_args.py
 test/test_configuration_saml_identity_provider_model.py
 test/test_configuration_saml_identity_provider_patch_args.py
 test/test_configuration_saml_identity_provider_patch_model.py
@@ -3470,6 +3527,8 @@ test/test_configuration_session_recording_advanced_patch_model.py
 test/test_configuration_session_recording_model.py
 test/test_configuration_session_recording_patch_args.py
 test/test_configuration_session_recording_patch_model.py
+test/test_configuration_session_recording_site_archive_summary.py
+test/test_configuration_session_recording_site_archive_update_model.py
 test/test_configuration_ssh_command_export_model.py
 test/test_configuration_ssh_command_import_model.py
 test/test_configuration_ssh_command_menu_map_model.py
@@ -3492,6 +3551,13 @@ test/test_content_disposition_header_value.py
 test/test_content_range_header_value.py
 test/test_convert_secrets_secret_type_args.py
 test/test_convert_secrets_secret_type_model.py
+test/test_convert_template_action_model.py
+test/test_convert_template_destination_model.py
+test/test_convert_template_detail_field_model.py
+test/test_convert_template_details_model.py
+test/test_convert_template_field_model.py
+test/test_convert_template_info_model.py
+test/test_convert_template_source_model.py
 test/test_current_user_model.py
 test/test_custom_command_create_args.py
 test/test_custom_command_model.py
@@ -3962,6 +4028,7 @@ test/test_launcher_agent_update_args.py
 test/test_launcher_agents_api.py
 test/test_launcher_deployment_type.py
 test/test_launcher_details_v2.py
+test/test_launcher_file_download.py
 test/test_launcher_lookup.py
 test/test_launcher_model.py
 test/test_launcher_settings_data.py
@@ -4203,6 +4270,9 @@ test/test_platform_integration_type.py
 test/test_platform_synchronization_status.py
 test/test_policy_apply_type.py
 test/test_preference_model.py
+test/test_prepare_launcher_args.py
+test/test_prepare_launcher_query_result_model.py
+test/test_prepare_launcher_result.py
 test/test_processing_location_type.py
 test/test_product_header_value.py
 test/test_product_info_header_value.py
@@ -4235,6 +4305,7 @@ test/test_recurring_schedule_update_args.py
 test/test_recurring_schedule_update_model.py
 test/test_recurring_schedule_value_model.py
 test/test_recurring_schedule_value_type.py
+test/test_redirect_to_launcher_url.py
 test/test_regex_values_summary.py
 test/test_remote_password_changing_api.py
 test/test_remove_users_from_group_args.py
@@ -4378,6 +4449,7 @@ test/test_secret_dependencies_api.py
 test/test_secret_dependency_create_args.py
 test/test_secret_dependency_group.py
 test/test_secret_dependency_group_create_args.py
+test/test_secret_dependency_group_model.py
 test/test_secret_dependency_model.py
 test/test_secret_dependency_odbc_connection_arg.py
 test/test_secret_dependency_run_script.py
@@ -4390,6 +4462,9 @@ test/test_secret_dependency_universal_script_argument.py
 test/test_secret_dependency_update_args.py
 test/test_secret_detail_action_type.py
 test/test_secret_detail_approval_type.py
+test/test_secret_detail_convert_template_args.py
+test/test_secret_detail_convert_template_info_args.py
+test/test_secret_detail_convert_template_model.py
 test/test_secret_detail_email_update_model.py
 test/test_secret_detail_expiration_type.py
 test/test_secret_detail_expiration_update_model.py
@@ -4722,6 +4797,9 @@ test/test_teams_api.py
 test/test_template_view_model.py
 test/test_terminal_authenticate_result.py
 test/test_test_email_response.py
+test/test_test_radius_login_args.py
+test/test_test_radius_login_request_model.py
+test/test_test_radius_login_response_model.py
 test/test_thread_information.py
 test/test_ticket_system_create_args.py
 test/test_ticket_system_create_model.py
@@ -4749,6 +4827,7 @@ test/test_update_associated_secrets_model.py
 test/test_update_field_value_of_application_access_status_request_type.py
 test/test_update_field_value_of_azure_service_bus_transport_type.py
 test/test_update_field_value_of_boolean.py
+test/test_update_field_value_of_configuration_session_recording_site_archive_update_model_array.py
 test/test_update_field_value_of_date_time.py
 test/test_update_field_value_of_default_secret_permissions_type.py
 test/test_update_field_value_of_directory_services_synchronization_user_option.py
@@ -4820,6 +4899,8 @@ test/test_update_field_value_of_syslog_cef_protocol_type.py
 test/test_update_field_value_of_syslog_cef_time_zone_type.py
 test/test_update_field_value_of_ticket_system_types.py
 test/test_update_field_value_of_unix_authentication_method_type.py
+test/test_update_secret_dependency_group_args.py
+test/test_update_secret_dependency_group_model.py
 test/test_update_template_field_of_string.py
 test/test_uri.py
 test/test_uri_host_name_type.py

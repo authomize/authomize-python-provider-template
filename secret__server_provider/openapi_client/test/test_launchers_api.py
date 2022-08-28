@@ -38,10 +38,24 @@ class TestLaunchersApi(unittest.TestCase):
         """
         pass
 
+    def test_launchers_service_launcher_succeeded(self):
+        """Test case for launchers_service_launcher_succeeded
+
+        Get Prepare Launcher Result  # noqa: E501
+        """
+        pass
+
     def test_launchers_service_lookup(self):
         """Test case for launchers_service_lookup
 
         Lookup Launchers  # noqa: E501
+        """
+        pass
+
+    def test_launchers_service_prepare_launcher(self):
+        """Test case for launchers_service_prepare_launcher
+
+        Prepare Launcher Session  # noqa: E501
         """
         pass
 

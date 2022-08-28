@@ -93,7 +93,11 @@ class ConfigurationSamlModel(ModelNormal):
             'identity_providers': ([ConfigurationSamlIdentityProviderModel],),  # noqa: E501
             'legacy_username_attribute': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'service_provider_certificate': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'service_provider_certificate_expiration_date_string': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'service_provider_certificate_friendly_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'service_provider_certificate_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'service_provider_certificate_subject': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'service_provider_certificate_thumbprint': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'service_provider_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'use_legacy': (bool,),  # noqa: E501
         }
@@ -109,7 +113,11 @@ class ConfigurationSamlModel(ModelNormal):
         'identity_providers': 'identityProviders',  # noqa: E501
         'legacy_username_attribute': 'legacyUsernameAttribute',  # noqa: E501
         'service_provider_certificate': 'serviceProviderCertificate',  # noqa: E501
+        'service_provider_certificate_expiration_date_string': 'serviceProviderCertificateExpirationDateString',  # noqa: E501
+        'service_provider_certificate_friendly_name': 'serviceProviderCertificateFriendlyName',  # noqa: E501
         'service_provider_certificate_password': 'serviceProviderCertificatePassword',  # noqa: E501
+        'service_provider_certificate_subject': 'serviceProviderCertificateSubject',  # noqa: E501
+        'service_provider_certificate_thumbprint': 'serviceProviderCertificateThumbprint',  # noqa: E501
         'service_provider_name': 'serviceProviderName',  # noqa: E501
         'use_legacy': 'useLegacy',  # noqa: E501
     }
@@ -160,7 +168,11 @@ class ConfigurationSamlModel(ModelNormal):
             identity_providers ([ConfigurationSamlIdentityProviderModel]): List of Identity Providers. [optional]  # noqa: E501
             legacy_username_attribute (bool, date, datetime, dict, float, int, list, str, none_type): Optional AttributeName to use for matching a Secret Server user.. [optional]  # noqa: E501
             service_provider_certificate (bool, date, datetime, dict, float, int, list, str, none_type): The Service Provider Certificate. Base64 encoded. [optional]  # noqa: E501
+            service_provider_certificate_expiration_date_string (bool, date, datetime, dict, float, int, list, str, none_type): The expiration date of the Service Provider Certificate. [optional]  # noqa: E501
+            service_provider_certificate_friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): The friendly name of the Service Provider Certificate. [optional]  # noqa: E501
             service_provider_certificate_password (bool, date, datetime, dict, float, int, list, str, none_type): The password for the Service Provider Certificate. [optional]  # noqa: E501
+            service_provider_certificate_subject (bool, date, datetime, dict, float, int, list, str, none_type): The subject of the Service Provider Certificate. [optional]  # noqa: E501
+            service_provider_certificate_thumbprint (bool, date, datetime, dict, float, int, list, str, none_type): The thumbprint of the Service Provider Certificate. [optional]  # noqa: E501
             service_provider_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the Service Provider. [optional]  # noqa: E501
             use_legacy (bool): Use Legacy SAML. [optional]  # noqa: E501
         """
@@ -253,7 +265,11 @@ class ConfigurationSamlModel(ModelNormal):
             identity_providers ([ConfigurationSamlIdentityProviderModel]): List of Identity Providers. [optional]  # noqa: E501
             legacy_username_attribute (bool, date, datetime, dict, float, int, list, str, none_type): Optional AttributeName to use for matching a Secret Server user.. [optional]  # noqa: E501
             service_provider_certificate (bool, date, datetime, dict, float, int, list, str, none_type): The Service Provider Certificate. Base64 encoded. [optional]  # noqa: E501
+            service_provider_certificate_expiration_date_string (bool, date, datetime, dict, float, int, list, str, none_type): The expiration date of the Service Provider Certificate. [optional]  # noqa: E501
+            service_provider_certificate_friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): The friendly name of the Service Provider Certificate. [optional]  # noqa: E501
             service_provider_certificate_password (bool, date, datetime, dict, float, int, list, str, none_type): The password for the Service Provider Certificate. [optional]  # noqa: E501
+            service_provider_certificate_subject (bool, date, datetime, dict, float, int, list, str, none_type): The subject of the Service Provider Certificate. [optional]  # noqa: E501
+            service_provider_certificate_thumbprint (bool, date, datetime, dict, float, int, list, str, none_type): The thumbprint of the Service Provider Certificate. [optional]  # noqa: E501
             service_provider_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the Service Provider. [optional]  # noqa: E501
             use_legacy (bool): Use Legacy SAML. [optional]  # noqa: E501
         """

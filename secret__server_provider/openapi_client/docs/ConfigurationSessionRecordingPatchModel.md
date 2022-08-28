@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **archive_location_by_site** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
 **archive_path** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
+**archive_path_mappings** | [**UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray**](UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray.md) |  | [optional] 
 **days_until_archive** | [**UpdateFieldValueOfInt32**](UpdateFieldValueOfInt32.md) |  | [optional] 
 **days_until_delete** | [**UpdateFieldValueOfInt32**](UpdateFieldValueOfInt32.md) |  | [optional] 
 **enable_archive** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 

@@ -31,10 +31,24 @@ class TestConfigurationApi(unittest.TestCase):
         """
         pass
 
+    def test_configuration_service_clear_ad_credentials(self):
+        """Test case for configuration_service_clear_ad_credentials
+
+        Clear AD Credentials  # noqa: E501
+        """
+        pass
+
     def test_configuration_service_clear_system_log(self):
         """Test case for configuration_service_clear_system_log
 
         Clear system log  # noqa: E501
+        """
+        pass
+
+    def test_configuration_service_delete_saml_configuration_identity_provider(self):
+        """Test case for configuration_service_delete_saml_configuration_identity_provider
+
+        Delete Saml Configuration Identity Provider  # noqa: E501
         """
         pass
 
@@ -206,6 +220,13 @@ class TestConfigurationApi(unittest.TestCase):
         """
         pass
 
+    def test_configuration_service_get_saml_identity_provider_configuration_stub(self):
+        """Test case for configuration_service_get_saml_identity_provider_configuration_stub
+
+        Get Saml Identity Provider configuration stub  # noqa: E501
+        """
+        pass
+
     def test_configuration_service_get_secret_search_indexer_configuration(self):
         """Test case for configuration_service_get_secret_search_indexer_configuration
 
@@ -252,6 +273,13 @@ class TestConfigurationApi(unittest.TestCase):
         """Test case for configuration_service_get_unlimited_admin
 
         Get Unlimited Admin  # noqa: E501
+        """
+        pass
+
+    def test_configuration_service_import_saml_configuration(self):
+        """Test case for configuration_service_import_saml_configuration
+
+        Import Saml configuration Identity Provider  # noqa: E501
         """
         pass
 
@@ -497,6 +525,13 @@ class TestConfigurationApi(unittest.TestCase):
         """Test case for configuration_service_test_email
 
         TestEmail  # noqa: E501
+        """
+        pass
+
+    def test_configuration_service_test_radius_login(self):
+        """Test case for configuration_service_test_radius_login
+
+        Test Radius Login  # noqa: E501
         """
         pass
 

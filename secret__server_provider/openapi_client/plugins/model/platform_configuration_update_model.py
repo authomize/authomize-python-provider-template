@@ -92,6 +92,7 @@ class PlatformConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return {
+            'create_groups_during_synchronization': (UpdateFieldValueOfBoolean,),  # noqa: E501
             'enable_synchronization': (UpdateFieldValueOfBoolean,),  # noqa: E501
             'open_id_connect_client_id': (UpdateFieldValueOfString,),  # noqa: E501
             'open_id_connect_client_secret': (UpdateFieldValueOfString,),  # noqa: E501
@@ -109,6 +110,7 @@ class PlatformConfigurationUpdateModel(ModelNormal):
 
 
     attribute_map = {
+        'create_groups_during_synchronization': 'createGroupsDuringSynchronization',  # noqa: E501
         'enable_synchronization': 'enableSynchronization',  # noqa: E501
         'open_id_connect_client_id': 'openIdConnectClientId',  # noqa: E501
         'open_id_connect_client_secret': 'openIdConnectClientSecret',  # noqa: E501
@@ -161,6 +163,7 @@ class PlatformConfigurationUpdateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            create_groups_during_synchronization (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             enable_synchronization (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             open_id_connect_client_id (UpdateFieldValueOfString): [optional]  # noqa: E501
             open_id_connect_client_secret (UpdateFieldValueOfString): [optional]  # noqa: E501
@@ -255,6 +258,7 @@ class PlatformConfigurationUpdateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            create_groups_during_synchronization (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             enable_synchronization (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             open_id_connect_client_id (UpdateFieldValueOfString): [optional]  # noqa: E501
             open_id_connect_client_secret (UpdateFieldValueOfString): [optional]  # noqa: E501

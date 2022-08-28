@@ -32,9 +32,11 @@ from plugins.exceptions import ApiAttributeError
 
 def lazy_import():
     from plugins.model.update_field_value_of_boolean import UpdateFieldValueOfBoolean
+    from plugins.model.update_field_value_of_configuration_session_recording_site_archive_update_model_array import UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray
     from plugins.model.update_field_value_of_int32 import UpdateFieldValueOfInt32
     from plugins.model.update_field_value_of_string import UpdateFieldValueOfString
     globals()['UpdateFieldValueOfBoolean'] = UpdateFieldValueOfBoolean
+    globals()['UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray'] = UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray
     globals()['UpdateFieldValueOfInt32'] = UpdateFieldValueOfInt32
     globals()['UpdateFieldValueOfString'] = UpdateFieldValueOfString
 
@@ -94,6 +96,7 @@ class ConfigurationSessionRecordingPatchModel(ModelNormal):
         return {
             'archive_location_by_site': (UpdateFieldValueOfBoolean,),  # noqa: E501
             'archive_path': (UpdateFieldValueOfString,),  # noqa: E501
+            'archive_path_mappings': (UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray,),  # noqa: E501
             'days_until_archive': (UpdateFieldValueOfInt32,),  # noqa: E501
             'days_until_delete': (UpdateFieldValueOfInt32,),  # noqa: E501
             'enable_archive': (UpdateFieldValueOfBoolean,),  # noqa: E501
@@ -123,6 +126,7 @@ class ConfigurationSessionRecordingPatchModel(ModelNormal):
     attribute_map = {
         'archive_location_by_site': 'archiveLocationBySite',  # noqa: E501
         'archive_path': 'archivePath',  # noqa: E501
+        'archive_path_mappings': 'archivePathMappings',  # noqa: E501
         'days_until_archive': 'daysUntilArchive',  # noqa: E501
         'days_until_delete': 'daysUntilDelete',  # noqa: E501
         'enable_archive': 'enableArchive',  # noqa: E501
@@ -187,6 +191,7 @@ class ConfigurationSessionRecordingPatchModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             archive_location_by_site (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             archive_path (UpdateFieldValueOfString): [optional]  # noqa: E501
+            archive_path_mappings (UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray): [optional]  # noqa: E501
             days_until_archive (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             days_until_delete (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             enable_archive (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
@@ -293,6 +298,7 @@ class ConfigurationSessionRecordingPatchModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             archive_location_by_site (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             archive_path (UpdateFieldValueOfString): [optional]  # noqa: E501
+            archive_path_mappings (UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray): [optional]  # noqa: E501
             days_until_archive (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             days_until_delete (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             enable_archive (UpdateFieldValueOfBoolean): [optional]  # noqa: E501

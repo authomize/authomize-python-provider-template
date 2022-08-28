@@ -14,9 +14,11 @@ import unittest
 
 import plugins
 from plugins.model.update_field_value_of_boolean import UpdateFieldValueOfBoolean
+from plugins.model.update_field_value_of_configuration_session_recording_site_archive_update_model_array import UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray
 from plugins.model.update_field_value_of_int32 import UpdateFieldValueOfInt32
 from plugins.model.update_field_value_of_string import UpdateFieldValueOfString
 globals()['UpdateFieldValueOfBoolean'] = UpdateFieldValueOfBoolean
+globals()['UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray'] = UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray
 globals()['UpdateFieldValueOfInt32'] = UpdateFieldValueOfInt32
 globals()['UpdateFieldValueOfString'] = UpdateFieldValueOfString
 from plugins.model.configuration_session_recording_patch_model import ConfigurationSessionRecordingPatchModel

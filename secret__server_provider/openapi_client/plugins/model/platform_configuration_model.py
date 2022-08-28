@@ -82,6 +82,7 @@ class PlatformConfigurationModel(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'create_groups_during_synchronization': (bool,),  # noqa: E501
             'enable_synchronization': (bool,),  # noqa: E501
             'open_id_connect_client_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'open_id_connect_client_secret': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
@@ -99,6 +100,7 @@ class PlatformConfigurationModel(ModelNormal):
 
 
     attribute_map = {
+        'create_groups_during_synchronization': 'createGroupsDuringSynchronization',  # noqa: E501
         'enable_synchronization': 'enableSynchronization',  # noqa: E501
         'open_id_connect_client_id': 'openIdConnectClientId',  # noqa: E501
         'open_id_connect_client_secret': 'openIdConnectClientSecret',  # noqa: E501
@@ -151,6 +153,7 @@ class PlatformConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            create_groups_during_synchronization (bool): Whether groups will be created during the Platform synchronization process.. [optional]  # noqa: E501
             enable_synchronization (bool): Whether synchronization with Platform is enabled.. [optional]  # noqa: E501
             open_id_connect_client_id (bool, date, datetime, dict, float, int, list, str, none_type): The client ID for the OpenID Connect registered application.. [optional]  # noqa: E501
             open_id_connect_client_secret (bool, date, datetime, dict, float, int, list, str, none_type): The client secret for the OpenID Connect registered application.. [optional]  # noqa: E501
@@ -245,6 +248,7 @@ class PlatformConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            create_groups_during_synchronization (bool): Whether groups will be created during the Platform synchronization process.. [optional]  # noqa: E501
             enable_synchronization (bool): Whether synchronization with Platform is enabled.. [optional]  # noqa: E501
             open_id_connect_client_id (bool, date, datetime, dict, float, int, list, str, none_type): The client ID for the OpenID Connect registered application.. [optional]  # noqa: E501
             open_id_connect_client_secret (bool, date, datetime, dict, float, int, list, str, none_type): The client secret for the OpenID Connect registered application.. [optional]  # noqa: E501

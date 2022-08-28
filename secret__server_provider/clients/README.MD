@@ -12,5 +12,5 @@
 * Install OpenAPI Generator - https://openapi-generator.tech/docs/installation
 * Run:
 ```
-openapi-generator-cli generate -i original_swagger.json -g python -o openapi_client -p packageVersion=3.0.0 -p infoEmail=info@authomize.com --skip-validate-spec --package-name plugins
+openapi-generator-cli generate -i updated_swagger.json -g python -o openapi_client -p packageVersion=3.0.0 -p infoEmail=info@authomize.com --skip-validate-spec --package-name plugins
 ```

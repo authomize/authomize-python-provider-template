@@ -25,6 +25,7 @@ from plugins.model_utils import (  # noqa: F401
 from plugins.model.authentication_failed_response import AuthenticationFailedResponse
 from plugins.model.bad_request_response import BadRequestResponse
 from plugins.model.categorized_list_item_value_result import CategorizedListItemValueResult
+from plugins.model.convert_template_details_model import ConvertTemplateDetailsModel
 from plugins.model.dashboard_view_secret import DashboardViewSecret
 from plugins.model.deleted_model import DeletedModel
 from plugins.model.favorite_secret_args import FavoriteSecretArgs
@@ -39,6 +40,9 @@ from plugins.model.secret_change_password_args import SecretChangePasswordArgs
 from plugins.model.secret_check_out_extension_args import SecretCheckOutExtensionArgs
 from plugins.model.secret_check_out_extension_response_model import SecretCheckOutExtensionResponseModel
 from plugins.model.secret_create_args import SecretCreateArgs
+from plugins.model.secret_detail_convert_template_args import SecretDetailConvertTemplateArgs
+from plugins.model.secret_detail_convert_template_info_args import SecretDetailConvertTemplateInfoArgs
+from plugins.model.secret_detail_convert_template_model import SecretDetailConvertTemplateModel
 from plugins.model.secret_detail_general_model import SecretDetailGeneralModel
 from plugins.model.secret_detail_general_view_model import SecretDetailGeneralViewModel
 from plugins.model.secret_detail_jumpbox_update_args import SecretDetailJumpboxUpdateArgs
@@ -289,6 +293,56 @@ class SecretsApi(object):
                     'application/json'
                 ],
                 'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.secrets_service_convert_template_endpoint = _Endpoint(
+            settings={
+                'response_type': (SecretDetailConvertTemplateModel,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/secrets/convert-template',
+                'operation_id': 'secrets_service_convert_template',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'secret_detail_convert_template_args',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'secret_detail_convert_template_args':
+                        (SecretDetailConvertTemplateArgs,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'secret_detail_convert_template_args': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
             },
             api_client=api_client
         )
@@ -822,6 +876,56 @@ class SecretsApi(object):
                     'application/json'
                 ],
                 'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.secrets_service_get_convert_info_endpoint = _Endpoint(
+            settings={
+                'response_type': (ConvertTemplateDetailsModel,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/secrets/get-convert-info',
+                'operation_id': 'secrets_service_get_convert_info',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'secret_detail_convert_template_info_args',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'secret_detail_convert_template_info_args':
+                        (SecretDetailConvertTemplateInfoArgs,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'secret_detail_convert_template_info_args': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
             },
             api_client=api_client
         )
@@ -4700,6 +4804,85 @@ class SecretsApi(object):
             id
         return self.secrets_service_check_out_endpoint.call_with_http_info(**kwargs)
 
+    def secrets_service_convert_template(
+        self,
+        **kwargs
+    ):
+        """Convert template  # noqa: E501
+
+        Convert template  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.secrets_service_convert_template(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            secret_detail_convert_template_args (SecretDetailConvertTemplateArgs): args. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            SecretDetailConvertTemplateModel
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        return self.secrets_service_convert_template_endpoint.call_with_http_info(**kwargs)
+
     def secrets_service_create_secret(
         self,
         **kwargs
@@ -5379,6 +5562,85 @@ class SecretsApi(object):
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         return self.secrets_service_get_active_secret_sessions_endpoint.call_with_http_info(**kwargs)
+
+    def secrets_service_get_convert_info(
+        self,
+        **kwargs
+    ):
+        """Convert template  # noqa: E501
+
+        Convert template  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.secrets_service_get_convert_info(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            secret_detail_convert_template_info_args (SecretDetailConvertTemplateInfoArgs): args. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ConvertTemplateDetailsModel
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        return self.secrets_service_get_convert_info_endpoint.call_with_http_info(**kwargs)
 
     def secrets_service_get_favorites(
         self,

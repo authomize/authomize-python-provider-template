@@ -45,6 +45,13 @@ class TestSecretsApi(unittest.TestCase):
         """
         pass
 
+    def test_secrets_service_convert_template(self):
+        """Test case for secrets_service_convert_template
+
+        Convert template  # noqa: E501
+        """
+        pass
+
     def test_secrets_service_create_secret(self):
         """Test case for secrets_service_create_secret
 
@@ -98,6 +105,13 @@ class TestSecretsApi(unittest.TestCase):
         """Test case for secrets_service_get_active_secret_sessions
 
         Get Secret Launcher Sessions By Id  # noqa: E501
+        """
+        pass
+
+    def test_secrets_service_get_convert_info(self):
+        """Test case for secrets_service_get_convert_info
+
+        Convert template  # noqa: E501
         """
         pass
 

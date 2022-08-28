@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **archive_location_by_site** | **bool** | If archive location changes based on site | [optional] 
 **archive_path** | **bool, date, datetime, dict, float, int, list, str, none_type** | The location of the recordings stored on disk | [optional] 
+**archive_path_mappings** | [**[ConfigurationSessionRecordingSiteArchiveSummary]**](ConfigurationSessionRecordingSiteArchiveSummary.md) | A list of archive paths mapped to sites, used when ArchiveLocationBySite is true | [optional] 
 **days_until_archive** | **bool, date, datetime, dict, float, int, list, str, none_type** | The number of days until a recording is archived | [optional] 
 **days_until_delete** | **bool, date, datetime, dict, float, int, list, str, none_type** | The number of days before a session recording is deleted | [optional] 
 **enable_archive** | **bool** | If recordings should be archived | [optional] 

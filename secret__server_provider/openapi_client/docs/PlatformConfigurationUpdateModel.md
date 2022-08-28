@@ -5,6 +5,7 @@ Data
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**create_groups_during_synchronization** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
 **enable_synchronization** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
 **open_id_connect_client_id** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
 **open_id_connect_client_secret** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 

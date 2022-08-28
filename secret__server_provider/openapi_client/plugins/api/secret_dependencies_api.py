@@ -33,9 +33,11 @@ from plugins.model.paging_of_secret_dependency_summary import PagingOfSecretDepe
 from plugins.model.secret_dependency_create_args import SecretDependencyCreateArgs
 from plugins.model.secret_dependency_group import SecretDependencyGroup
 from plugins.model.secret_dependency_group_create_args import SecretDependencyGroupCreateArgs
+from plugins.model.secret_dependency_group_model import SecretDependencyGroupModel
 from plugins.model.secret_dependency_model import SecretDependencyModel
 from plugins.model.secret_dependency_update_args import SecretDependencyUpdateArgs
 from plugins.model.task_progress import TaskProgress
+from plugins.model.update_secret_dependency_group_args import UpdateSecretDependencyGroupArgs
 
 
 class SecretDependenciesApi(object):
@@ -706,6 +708,63 @@ class SecretDependenciesApi(object):
                 'location_map': {
                     'id': 'path',
                     'secret_dependency_update_args': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client
+        )
+        self.secret_dependencies_service_update_secret_dependency_group_endpoint = _Endpoint(
+            settings={
+                'response_type': (SecretDependencyGroupModel,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/secret-dependencies/groups/{secretId}',
+                'operation_id': 'secret_dependencies_service_update_secret_dependency_group',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'secret_id',
+                    'update_secret_dependency_group_args',
+                ],
+                'required': [
+                    'secret_id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'secret_id':
+                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                    'update_secret_dependency_group_args':
+                        (UpdateSecretDependencyGroupArgs,),
+                },
+                'attribute_map': {
+                    'secret_id': 'secretId',
+                },
+                'location_map': {
+                    'secret_id': 'path',
+                    'update_secret_dependency_group_args': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1709,4 +1768,88 @@ class SecretDependenciesApi(object):
         kwargs['id'] = \
             id
         return self.secret_dependencies_service_update_dependency_endpoint.call_with_http_info(**kwargs)
+
+    def secret_dependencies_service_update_secret_dependency_group(
+        self,
+        secret_id,
+        **kwargs
+    ):
+        """Update Secret Dependency Group  # noqa: E501
+
+        Update a Secret Dependency Group  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.secret_dependencies_service_update_secret_dependency_group(secret_id, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Secret to assign to Dependency Group.
+
+        Keyword Args:
+            update_secret_dependency_group_args (UpdateSecretDependencyGroupArgs): args. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            SecretDependencyGroupModel
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        kwargs['secret_id'] = \
+            secret_id
+        return self.secret_dependencies_service_update_secret_dependency_group_endpoint.call_with_http_info(**kwargs)
 

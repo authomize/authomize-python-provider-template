@@ -93,6 +93,7 @@ class ConfigurationLocalUserPasswordsModel(ModelNormal):
             'minimum_password_age_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'minimum_password_age_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'password_history_items': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'password_history_items_all': (bool,),  # noqa: E501
             'password_minimum_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'password_require_lowercase': (bool,),  # noqa: E501
             'password_require_numbers': (bool,),  # noqa: E501
@@ -117,6 +118,7 @@ class ConfigurationLocalUserPasswordsModel(ModelNormal):
         'minimum_password_age_hours': 'minimumPasswordAgeHours',  # noqa: E501
         'minimum_password_age_minutes': 'minimumPasswordAgeMinutes',  # noqa: E501
         'password_history_items': 'passwordHistoryItems',  # noqa: E501
+        'password_history_items_all': 'passwordHistoryItemsAll',  # noqa: E501
         'password_minimum_length': 'passwordMinimumLength',  # noqa: E501
         'password_require_lowercase': 'passwordRequireLowercase',  # noqa: E501
         'password_require_numbers': 'passwordRequireNumbers',  # noqa: E501
@@ -176,6 +178,7 @@ class ConfigurationLocalUserPasswordsModel(ModelNormal):
             minimum_password_age_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours until password can be changed. [optional]  # noqa: E501
             minimum_password_age_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes until password can be changed. [optional]  # noqa: E501
             password_history_items (bool, date, datetime, dict, float, int, list, str, none_type): How many passwords should be stored in history.. [optional]  # noqa: E501
+            password_history_items_all (bool): Keep all password history items.. [optional]  # noqa: E501
             password_minimum_length (bool, date, datetime, dict, float, int, list, str, none_type): The minimum length required for local user passwords. [optional]  # noqa: E501
             password_require_lowercase (bool): Whether or not the local password must include a lowercase letter. [optional]  # noqa: E501
             password_require_numbers (bool): Whether or not the local password must include a number. [optional]  # noqa: E501
@@ -277,6 +280,7 @@ class ConfigurationLocalUserPasswordsModel(ModelNormal):
             minimum_password_age_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours until password can be changed. [optional]  # noqa: E501
             minimum_password_age_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes until password can be changed. [optional]  # noqa: E501
             password_history_items (bool, date, datetime, dict, float, int, list, str, none_type): How many passwords should be stored in history.. [optional]  # noqa: E501
+            password_history_items_all (bool): Keep all password history items.. [optional]  # noqa: E501
             password_minimum_length (bool, date, datetime, dict, float, int, list, str, none_type): The minimum length required for local user passwords. [optional]  # noqa: E501
             password_require_lowercase (bool): Whether or not the local password must include a lowercase letter. [optional]  # noqa: E501
             password_require_numbers (bool): Whether or not the local password must include a number. [optional]  # noqa: E501

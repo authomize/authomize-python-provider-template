@@ -108,6 +108,13 @@ class TestSecretDependenciesApi(unittest.TestCase):
         """
         pass
 
+    def test_secret_dependencies_service_update_secret_dependency_group(self):
+        """Test case for secret_dependencies_service_update_secret_dependency_group
+
+        Update Secret Dependency Group  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

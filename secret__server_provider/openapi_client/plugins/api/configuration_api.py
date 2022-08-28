@@ -28,6 +28,7 @@ from plugins.model.auto_export_configuration_model import AutoExportConfiguratio
 from plugins.model.backup_configuration_args import BackupConfigurationArgs
 from plugins.model.backup_configuration_model import BackupConfigurationModel
 from plugins.model.bad_request_response import BadRequestResponse
+from plugins.model.clear_cached_ad_credentials_result_model import ClearCachedADCredentialsResultModel
 from plugins.model.configuration_application_settings_model import ConfigurationApplicationSettingsModel
 from plugins.model.configuration_application_settings_patch_args import ConfigurationApplicationSettingsPatchArgs
 from plugins.model.configuration_database_model import ConfigurationDatabaseModel
@@ -60,6 +61,8 @@ from plugins.model.configuration_rpc_model import ConfigurationRpcModel
 from plugins.model.configuration_rpc_patch_args import ConfigurationRpcPatchArgs
 from plugins.model.configuration_rpc_run_now_result_model import ConfigurationRpcRunNowResultModel
 from plugins.model.configuration_saml_identity_provider_create_args import ConfigurationSamlIdentityProviderCreateArgs
+from plugins.model.configuration_saml_identity_provider_delete_result_model import ConfigurationSamlIdentityProviderDeleteResultModel
+from plugins.model.configuration_saml_identity_provider_import_args import ConfigurationSamlIdentityProviderImportArgs
 from plugins.model.configuration_saml_identity_provider_model import ConfigurationSamlIdentityProviderModel
 from plugins.model.configuration_saml_identity_provider_patch_args import ConfigurationSamlIdentityProviderPatchArgs
 from plugins.model.configuration_saml_model import ConfigurationSamlModel
@@ -95,6 +98,8 @@ from plugins.model.stream_content import StreamContent
 from plugins.model.system_log_configuration_update_args import SystemLogConfigurationUpdateArgs
 from plugins.model.system_log_configuration_view_model import SystemLogConfigurationViewModel
 from plugins.model.test_email_response import TestEmailResponse
+from plugins.model.test_radius_login_args import TestRadiusLoginArgs
+from plugins.model.test_radius_login_response_model import TestRadiusLoginResponseModel
 from plugins.model.unlimited_admin_model import UnlimitedAdminModel
 from plugins.model.unlimited_admin_update_args import UnlimitedAdminUpdateArgs
 
@@ -118,6 +123,50 @@ class ConfigurationApi(object):
                 ],
                 'endpoint_path': '/v1/configuration/security/cancel-rotate-secret-keys',
                 'operation_id': 'configuration_service_cancel_rotate_secret_keys',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.configuration_service_clear_ad_credentials_endpoint = _Endpoint(
+            settings={
+                'response_type': (ClearCachedADCredentialsResultModel,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/configuration/login/clear-ad-credentials',
+                'operation_id': 'configuration_service_clear_ad_credentials',
                 'http_method': 'POST',
                 'servers': None,
             },
@@ -186,6 +235,57 @@ class ConfigurationApi(object):
                 'attribute_map': {
                 },
                 'location_map': {
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.configuration_service_delete_saml_configuration_identity_provider_endpoint = _Endpoint(
+            settings={
+                'response_type': (ConfigurationSamlIdentityProviderDeleteResultModel,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/configuration/saml/identity-provider/{id}',
+                'operation_id': 'configuration_service_delete_saml_configuration_identity_provider',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'id',
+                ],
+                'required': [
+                    'id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'id':
+                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                },
+                'attribute_map': {
+                    'id': 'id',
+                },
+                'location_map': {
+                    'id': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -1540,6 +1640,50 @@ class ConfigurationApi(object):
             },
             api_client=api_client
         )
+        self.configuration_service_get_saml_identity_provider_configuration_stub_endpoint = _Endpoint(
+            settings={
+                'response_type': (ConfigurationSamlIdentityProviderModel,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/configuration/saml/identity-provider/stub',
+                'operation_id': 'configuration_service_get_saml_identity_provider_configuration_stub',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.configuration_service_get_secret_search_indexer_configuration_endpoint = _Endpoint(
             settings={
                 'response_type': (SearchIndexerModel,),
@@ -1850,6 +1994,56 @@ class ConfigurationApi(object):
                     'application/json'
                 ],
                 'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.configuration_service_import_saml_configuration_endpoint = _Endpoint(
+            settings={
+                'response_type': ([ConfigurationSamlIdentityProviderModel],),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/configuration/saml/identity-provider/import',
+                'operation_id': 'configuration_service_import_saml_configuration',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'configuration_saml_identity_provider_import_args',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'configuration_saml_identity_provider_import_args':
+                        (ConfigurationSamlIdentityProviderImportArgs,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'configuration_saml_identity_provider_import_args': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
             },
             api_client=api_client
         )
@@ -3561,6 +3755,56 @@ class ConfigurationApi(object):
             },
             api_client=api_client
         )
+        self.configuration_service_test_radius_login_endpoint = _Endpoint(
+            settings={
+                'response_type': (TestRadiusLoginResponseModel,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/configuration/login/radius/test',
+                'operation_id': 'configuration_service_test_radius_login',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'test_radius_login_args',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'test_radius_login_args':
+                        (TestRadiusLoginArgs,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'test_radius_login_args': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client
+        )
         self.configuration_service_update_unlimited_admin_endpoint = _Endpoint(
             settings={
                 'response_type': (bool,),
@@ -3690,6 +3934,84 @@ class ConfigurationApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         return self.configuration_service_cancel_rotate_secret_keys_endpoint.call_with_http_info(**kwargs)
 
+    def configuration_service_clear_ad_credentials(
+        self,
+        **kwargs
+    ):
+        """Clear AD Credentials  # noqa: E501
+
+        Clear AD Credentials  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.configuration_service_clear_ad_credentials(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ClearCachedADCredentialsResultModel
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        return self.configuration_service_clear_ad_credentials_endpoint.call_with_http_info(**kwargs)
+
     def configuration_service_clear_system_log(
         self,
         **kwargs
@@ -3767,6 +4089,89 @@ class ConfigurationApi(object):
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         return self.configuration_service_clear_system_log_endpoint.call_with_http_info(**kwargs)
+
+    def configuration_service_delete_saml_configuration_identity_provider(
+        self,
+        id,
+        **kwargs
+    ):
+        """Delete Saml Configuration Identity Provider  # noqa: E501
+
+        Delete Saml Configuration Identity Provider  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.configuration_service_delete_saml_configuration_identity_provider(id, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ConfigurationSamlIdentityProviderDeleteResultModel
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        kwargs['id'] = \
+            id
+        return self.configuration_service_delete_saml_configuration_identity_provider_endpoint.call_with_http_info(**kwargs)
 
     def configuration_service_get_auto_export_configuration(
         self,
@@ -5708,6 +6113,84 @@ class ConfigurationApi(object):
             id
         return self.configuration_service_get_saml_identity_provider_configuration_endpoint.call_with_http_info(**kwargs)
 
+    def configuration_service_get_saml_identity_provider_configuration_stub(
+        self,
+        **kwargs
+    ):
+        """Get Saml Identity Provider configuration stub  # noqa: E501
+
+        Get Saml Identity Provider Configuration stub  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.configuration_service_get_saml_identity_provider_configuration_stub(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ConfigurationSamlIdentityProviderModel
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        return self.configuration_service_get_saml_identity_provider_configuration_stub_endpoint.call_with_http_info(**kwargs)
+
     def configuration_service_get_secret_search_indexer_configuration(
         self,
         **kwargs
@@ -6254,6 +6737,85 @@ class ConfigurationApi(object):
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         return self.configuration_service_get_unlimited_admin_endpoint.call_with_http_info(**kwargs)
+
+    def configuration_service_import_saml_configuration(
+        self,
+        **kwargs
+    ):
+        """Import Saml configuration Identity Provider  # noqa: E501
+
+        Import Saml configuration Identity Provider  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.configuration_service_import_saml_configuration(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            configuration_saml_identity_provider_import_args (ConfigurationSamlIdentityProviderImportArgs): Saml Identity Provider import args. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [ConfigurationSamlIdentityProviderModel]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        return self.configuration_service_import_saml_configuration_endpoint.call_with_http_info(**kwargs)
 
     def configuration_service_patch_application_settings_configuration(
         self,
@@ -9012,6 +9574,85 @@ class ConfigurationApi(object):
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         return self.configuration_service_test_email_endpoint.call_with_http_info(**kwargs)
+
+    def configuration_service_test_radius_login(
+        self,
+        **kwargs
+    ):
+        """Test Radius Login  # noqa: E501
+
+        Test a Radius Login  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.configuration_service_test_radius_login(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            test_radius_login_args (TestRadiusLoginArgs): args. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            TestRadiusLoginResponseModel
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        return self.configuration_service_test_radius_login_endpoint.call_with_http_info(**kwargs)
 
     def configuration_service_update_unlimited_admin(
         self,
