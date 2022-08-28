@@ -1,3 +1,4 @@
+import os
 from setuptools import find_namespace_packages, setup
 
 setup(
@@ -18,6 +19,9 @@ setup(
     extras_require={
         'onelogin': [
             'onelogin~=2.0.4',
+        ],
+        'secretserver': [
+            f'secret-server-openapiclient @ file://localhost/{os.getcwd()}/secret_server_provider/clients/secret_server_openapiclient',
         ],
         'test': [
             'coverage~=5.2',
