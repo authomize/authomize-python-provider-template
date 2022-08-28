@@ -1,6 +1,5 @@
 from authomize.rest_api_client.generated.schemas import (
     NewAccountsAssociationRequestSchema,
-    NewIdentityRequestSchema,
     NewUserRequestSchema,
     RequestsBundleSchema,
 )
@@ -24,14 +23,7 @@ class UsersTransformer(BaseTransformer):
         bundle = self.create_bundle()
         user_id = raw_item.id
         new_user = NewUserRequestSchema(
-            id=user_id,
-            name=f'{raw_item.firstname} {raw_item.lastname}',
-            firstName=raw_item.firstname,
-            lastName=raw_item.lastname,
-            **(dict(email=raw_item.email) if raw_item.email else dict()),
-        )
-        new_identity = NewIdentityRequestSchema(
-            id=user_id,
+            uniqueId=user_id,
             name=f'{raw_item.firstname} {raw_item.lastname}',
             firstName=raw_item.firstname,
             lastName=raw_item.lastname,
@@ -45,5 +37,4 @@ class UsersTransformer(BaseTransformer):
             )
             bundle.new_accounts_association.append(association)
         bundle.new_users.append(new_user)
-        bundle.new_identities.append(new_identity)
         return bundle

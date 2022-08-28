@@ -1,4 +1,4 @@
-from authomize.rest_api_client.generated.schemas import NewAssetsRequestSchema, RequestsBundleSchema
+from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema, RequestsBundleSchema
 
 from base_provider.transformers.base_transformer import BaseTransformer
 from mock_provider.models.shared_memory import MockProviderSharedMemory
@@ -15,7 +15,7 @@ class FilesTransformer(BaseTransformer):
         domain = shared_memory.domain
         bundle = self.create_bundle(
             new_assets=[
-                NewAssetsRequestSchema(
+                NewAssetRequestSchema(
                     id=f"{domain}:{raw_item['id']}",
                     name=raw_item['name'],
                 ),

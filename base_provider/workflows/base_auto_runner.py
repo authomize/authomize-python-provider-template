@@ -24,6 +24,7 @@ class BaseAutoProviderRunner(BaseProviderRunner):
     def get_transformed_data(self) -> Iterable[RequestsBundleSchema]:
         data_provider_client = self.create_client()
         shared_memory = self.create_shared_memory()
+        print(self.get_extractor_and_transformer_type_list())
         for extractor_type, transformer_type in self.get_extractor_and_transformer_type_list():
             transfomr = transformer_type(
                 shared_memory=shared_memory,

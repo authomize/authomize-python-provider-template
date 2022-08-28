@@ -2,8 +2,9 @@ from authomize.rest_api_client.generated.schemas import (
     GroupingType,
     NewAccountsAssociationRequestSchema,
     NewGroupingRequestSchema,
-    NewPermissionsRequestSchema,
-    NewPrivilegesRequestSchema,
+    NewPermissionRequestSchema,
+    NewPrivilegeRequestSchema,
+    PermissionSourceType,
     PrivilegeType,
     RequestsBundleSchema,
 )
@@ -33,24 +34,25 @@ class RolesTransformer(BaseTransformer):
         bundle = self.create_bundle()
         role_id = raw_item.id
         new_group = NewGroupingRequestSchema(
-            id=role_id,
+            unique_id=role_id,
             name=raw_item.name,
             # todo - make role
             type=GroupingType.Group,
             isRole=len(raw_item.name) != 0,
         )
         bundle.new_groupings.append(new_group)
-        new_privilege = NewPrivilegesRequestSchema(
-            id=raw_item.name,
+        new_privilege = NewPrivilegeRequestSchema(
+            uniqueId=raw_item.name,
             type=PrivilegeType.Use,  # TODO: map oneLogin roles to canonical roles
             originPrivilegeName=raw_item.name,
         )
         bundle.new_privileges.append(new_privilege)
         if raw_item.apps:
             for app_id in raw_item.apps:
-                permission = NewPermissionsRequestSchema(
-                    permissionSource=role_id,
-                    targetAssets=[app_id],
+                permission = NewPermissionRequestSchema(
+                    sourceUniqueId=role_id,
+                    sourceType=PermissionSourceType.Grouping,
+                    assetId=app_id,
                     privilegeId=raw_item.name,
                 )
                 bundle.new_permissions.append(permission)
@@ -63,9 +65,10 @@ class RolesTransformer(BaseTransformer):
                 bundle.new_accounts_association.append(association)
         if raw_item.admins:
             for admin_user_id in raw_item.admins:
-                permission = NewPermissionsRequestSchema(
-                    permissionSource=admin_user_id,
-                    targetAssets=[role_id],
+                permission = NewPermissionRequestSchema(
+                    sourceUniqueId=admin_user_id,
+                    sourceType=PermissionSourceType.Account,
+                    assetId=role_id,
                     privilegeId=raw_item.name,
                 )
                 bundle.new_permissions.append(permission)
