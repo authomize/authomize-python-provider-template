@@ -23,13 +23,14 @@ class UserMemberOfGroupExtractor(BaseExtractor):
         # TODO : errors handling
         api_response = api_instance.users_service_search_users()
         all_users = api_response.records
+        return self._get_all_user_groups(api_instance, all_users)
+    
+    def _get_all_user_groups (self, api_instance: UsersApi, all_users: Iterable[UserModel]) -> Iterable[GroupUserSummary]:
         for user in all_users:
-            user_groups = self._fetch_user_groups(api_instance, user)
-            yield from user_groups
-
+            yield from self._fetch_user_groups(api_instance, user)
     def _fetch_user_groups(self, api_instance: UsersApi, user: UserModel) -> Iterable[GroupUserSummary]:
         return self.__get_paginated_results(api_instance, user)
-
+        
     def __get_paginated_results(self, api_instance:UsersApi, user: UserModel) -> Iterable[UserModel]:
         cur_skip = 0
         has_next = True

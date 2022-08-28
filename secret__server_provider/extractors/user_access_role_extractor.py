@@ -23,7 +23,6 @@ class UserAccessRoleExtractor(BaseExtractor):
         api_response = api_instance.users_service_search_users()
         all_users = api_response.records
         
-
         for user in all_users:
             user_access_roles = self._fetch_secret_permissions(secret_instance, user)
             yield from user_access_roles
