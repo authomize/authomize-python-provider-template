@@ -32,7 +32,7 @@ class SecretServerRunner(BaseAutoProviderRunner):
         (UsersExtractor, UsersTransformer),
         (UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
         (RolesExtractor, RolesTransformer),
-        #(UserAccessRoleExtractor, UserAccessRoleTransformer),
+        (UserAccessRoleExtractor, UserAccessRoleTransformer),
         (FoldersExtractor, FoldersTransformer),
     ]
 

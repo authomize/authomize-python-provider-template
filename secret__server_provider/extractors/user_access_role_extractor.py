@@ -1,3 +1,4 @@
+import structlog
 from typing import Iterable
 
 from base_provider.extractors.base_extractor import BaseExtractor
@@ -5,17 +6,17 @@ from secret__server_provider.clients.secret_server_client import SecretServerCli
 from secret__server_provider.normalize_id import normalize_id
 
 from ..openapi_client.plugins.apis import SecretPermissionsApi, UsersApi
-from ..openapi_client.plugins.model.secret_permission_summary import SecretPermissionSummary
+from ..openapi_client.plugins.model.secret_permission_model import SecretPermissionModel
 from ..openapi_client.plugins.model.user_model import UserModel
-
+logger = structlog.get_logger()
 
 class UserAccessRoleExtractor(BaseExtractor):
     """
     Gets a list of access role records.
     See docs/UsersApi.md#users_service_search_users
     """
-
-    def extract_raw(self) -> Iterable[SecretPermissionSummary]:
+    logger = logger.bind(loader_name="UserAccessRoleExtractor")
+    def extract_raw(self) -> Iterable[SecretPermissionModel]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = UsersApi(data_provider_client.client)
         secret_instance = SecretPermissionsApi(data_provider_client.client)
@@ -24,17 +25,19 @@ class UserAccessRoleExtractor(BaseExtractor):
         all_users = api_response.records
         
         for user in all_users:
-            user_access_roles = self._fetch_secret_permissions(secret_instance, user)
-            yield from user_access_roles
+            try:
+                response = self._fetch_secret_permissions(secret_instance, user)
+            except Exception as e:
+                if "API_AccessDenied" in str(e):
+                    self.logger.info("Got API_AccessDenied in secret_permissions_service_get for id {user_id}", user_id=user.id)
+                else:
+                    if "API_SecretPermissionDoesNotExist" in str(e):
+                        self.logger.info("Got API_SecretPermissionDoesNotExist in secret_permissions_service_get for id {user_id}", user_id=user.id)
+                    else:
+                        self.logger.error("Got exception : {exception}", exception=str(e))
+            else:
+                yield response
 
-    def _fetch_secret_permissions(self, api_instance: SecretPermissionsApi, user: UserModel) -> Iterable[SecretPermissionSummary]:
-        return self.__get_paginated_results(api_instance, user)
-
-    def __get_paginated_results(self, api_instance:SecretPermissionsApi, user: UserModel) -> Iterable[SecretPermissionSummary]:
-        cur_skip = 0
-        has_next = True
-        while (has_next) :
-            api_response = api_instance.secret_permissions_service_search_secret_permissions(filter_user_id=normalize_id(user.id),skip = normalize_id(cur_skip))
-            has_next = api_response.has_next
-            cur_skip += int(api_response.next_skip)
-            yield from api_response.records
+    def _fetch_secret_permissions(self, api_instance: SecretPermissionsApi, user: UserModel) -> Iterable[SecretPermissionModel]:
+        return api_instance.secret_permissions_service_get(id=normalize_id(user.id))
+        
