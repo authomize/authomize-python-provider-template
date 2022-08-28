@@ -14,3 +14,4 @@
 ```
 openapi-generator-cli generate -i updated_swagger.json -g python -o secret_server_openapiclient -p packageVersion=3.0.0 -p infoEmail=info@authomize.com --skip-validate-spec --package-name secret_server_openapiclient
 ```
+* Reinstall dependency: pip uninstall secret-server-openapiclient; pip install -e .[secretserver]
