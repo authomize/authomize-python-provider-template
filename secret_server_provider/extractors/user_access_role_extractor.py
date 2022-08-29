@@ -21,15 +21,13 @@ class UserAccessRoleExtractor(BaseExtractor):
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = UsersApi(data_provider_client.client)
         secret_instance = SecretPermissionsApi(data_provider_client.client)
-        # TODO : errors handling
         api_response = api_instance.users_service_search_users()
         all_users = api_response.records
-        
         for user in all_users:
             yield from self._fetch_secret_permissions(secret_instance, user)
 
     def _fetch_secret_permissions(self, api_instance: SecretPermissionsApi, user: UserModel) -> Iterable[SecretPermissionSummary]:
-        return  self.__get_paginated_results(api_instance, user)
+        return self.__get_paginated_results(api_instance, user)
         
     def __get_paginated_results(self, api_instance:UsersApi, user: UserModel) -> Iterable[SecretPermissionSummary]:
         cur_skip = 0
