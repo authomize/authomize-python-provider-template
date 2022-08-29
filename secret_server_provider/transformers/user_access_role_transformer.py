@@ -12,7 +12,7 @@ from secret_server_provider.normalize_id import normalize_id
 from secret_server_openapiclient.model.secret_permission_summary import SecretPermissionSummary
 
 
-class UserAccessRoleTransformer(BaseTransformer):
+class UserAccessRoleToSecretTransformer(BaseTransformer):
     """
     Transform a SecretPermissionModel relevant to users and secrets (not groups / folder).
 

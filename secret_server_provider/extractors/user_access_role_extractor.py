@@ -11,7 +11,7 @@ from secret_server_openapiclient.model.secret_permission_summary import SecretPe
 from secret_server_openapiclient.model.user_model import UserModel
 logger = structlog.get_logger()
 
-class UserAccessRoleExtractor(BaseExtractor):
+class UserAccessRoleToSecretExtractor(BaseExtractor):
     """
     Gets a list of access role records.
     See docs/UsersApi.md#users_service_search_users
