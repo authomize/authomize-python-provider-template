@@ -1,3 +1,4 @@
+from asyncio.log import logger
 from authomize.rest_api_client.generated.schemas import NewAssetInheritanceRequestSchema, RequestsBundleSchema
 
 from base_provider.transformers.base_transformer import BaseTransformer
@@ -21,5 +22,7 @@ class FoldersToSecretsTransformer(BaseTransformer):
             sourceId=normalize_id(raw_item.folder_id),
             targetId=normalize_id(raw_item.id)
         )
-        bundle.new_assets_inheritance.append(inheritance)
+        
+        if raw_item.inherits_permissions == True:
+            bundle.new_assets_inheritance.append(inheritance)
         return bundle

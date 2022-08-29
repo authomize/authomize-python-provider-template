@@ -36,12 +36,12 @@ class SecretServerRunner(BaseAutoProviderRunner):
     ExtractorTransformersList = [
         (SecretsExtractor, SecretsTransformer),
         (FoldersExtractor, FoldersTransformer),
-        (GroupsExtractor, GroupsTransformer),
-        (UsersExtractor, UsersTransformer),
-        (UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
-        (RolesExtractor, RolesTransformer),
-        (UserAccessRoleExtractor, UserAccessRoleTransformer),
-        (UserHasRoleExtractor, UserHasRoleTransformer),
+        #(GroupsExtractor, GroupsTransformer),
+        #(UsersExtractor, UsersTransformer),
+        #(UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
+        #(RolesExtractor, RolesTransformer),
+        #(UserAccessRoleExtractor, UserAccessRoleTransformer),
+        #(UserHasRoleExtractor, UserHasRoleTransformer),
         (FolderToSecretsExtractor, FoldersToSecretsTransformer),
     ]
 
