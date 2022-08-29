@@ -23,7 +23,7 @@ class FoldersExtractor(BaseExtractor):
         cur_skip = 0
         has_next = True
         while (has_next) :
-            api_response = api_instance.folders_service_lookup(skip = normalize_id(cur_skip))
+            api_response = api_instance.folders_service_search(skip = normalize_id(cur_skip))
             has_next = api_response.has_next
             cur_skip += int(api_response.next_skip)
             yield from api_response.records
