@@ -10,6 +10,7 @@ from secret_server_provider.extractors.roles_extractor import RolesExtractor
 from secret_server_provider.extractors.folders_extractor import FoldersExtractor
 from secret_server_provider.extractors.secrets_extractor import SecretsExtractor
 from secret_server_provider.extractors.user_access_role_extractor import UserAccessRoleExtractor
+from secret_server_provider.extractors.user_has_role_extractor import UserHasRoleExtractor
 from secret_server_provider.extractors.user_member_of_group_extractor import (
     UserMemberOfGroupExtractor,
 )
@@ -22,6 +23,7 @@ from secret_server_provider.transformers.secrets_transformer import SecretsTrans
 from secret_server_provider.transformers.user_access_role_transformer import (
     UserAccessRoleTransformer,
 )
+from secret_server_provider.transformers.user_has_role_transformer import UserHasRoleTransformer
 from secret_server_provider.transformers.user_member_of_group_transformer import (
     UserMemberOfGroupTransformer,
 )
@@ -31,12 +33,13 @@ from secret_server_provider.transformers.users_transformer import UsersTransform
 class SecretServerRunner(BaseAutoProviderRunner):
     ExtractorTransformersList = [
         (SecretsExtractor, SecretsTransformer),
-         (GroupsExtractor, GroupsTransformer),
-         (UsersExtractor, UsersTransformer),
-         (UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
-         (RolesExtractor, RolesTransformer),
-         (UserAccessRoleExtractor, UserAccessRoleTransformer),
-         (FoldersExtractor, FoldersTransformer),
+        (FoldersExtractor, FoldersTransformer),
+        (GroupsExtractor, GroupsTransformer),
+        (UsersExtractor, UsersTransformer),
+        (UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
+        (RolesExtractor, RolesTransformer),
+        (UserAccessRoleExtractor, UserAccessRoleTransformer),
+        (UserHasRoleExtractor, UserHasRoleTransformer),
     ]
 
     def get_extractor_and_transformer_type_list(

@@ -33,7 +33,7 @@ class RolesTransformer(BaseTransformer):
         bundle = self.create_bundle()
         role_id = normalize_id(raw_item.id)
         new_group = NewGroupingRequestSchema(
-            unique_id=role_id,
+            uniqueId=role_id,
             name=raw_item.name,
             type=GroupingType.Group,
             isRole=True,
