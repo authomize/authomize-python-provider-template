@@ -6,28 +6,25 @@ from secret_server_provider.clients.secret_server_client import SecretServerClie
 from secret_server_openapiclient.apis import SecretsApi
 from secret_server_openapiclient.model.secret_model_v2 import SecretModelV2
 
+from secret_server_provider.normalize_id import normalize_id
+
 
 class SecretsExtractor(BaseExtractor):
     """
     Gets a list of Secrets records.
-
-    See docs/SecretsApi.md#secrets_service_search_v2)
     """
 
     def extract_raw(self) -> Iterable[SecretModelV2]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = SecretsApi(data_provider_client.client)
 
-        # TODO : errors handling
-        # response codes return None Type - swagger.json problem
-        api_response = api_instance.secrets_service_search_v2()
+        return self.__get_paginated_results(api_instance)
 
-        all_secrets = api_response.records
-
-        '''
-        TODO:make skip work later
-        while (api_response.hasNext) :
-            api_response = api_instance.secrets_service_search_v2(skip = 10)
-            all_secrets.extend(api_response.records())
-        '''
-        return all_secrets
+    def __get_paginated_results(self, api_instance:SecretsApi) -> Iterable[SecretModelV2]:
+        cur_skip = 0
+        has_next = True
+        while (has_next) :
+            api_response = api_instance.secrets_service_search_v2(skip = normalize_id(cur_skip))
+            has_next = api_response.has_next
+            cur_skip += int(api_response.next_skip)
+            yield from api_response.records
