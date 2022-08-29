@@ -5,6 +5,7 @@ from base_provider.transformers.base_transformer import BaseTransformer
 from base_provider.workflows.base_auto_runner import BaseAutoProviderRunner
 from secret_server_provider.clients.secret_server_client import SecretServerClient
 from secret_server_provider.configuration.client_configuration import SecretServerConfiguration
+from secret_server_provider.extractors.folder_to_secrets_extractor import FolderToSecretsExtractor
 from secret_server_provider.extractors.groups_extractor import GroupsExtractor
 from secret_server_provider.extractors.roles_extractor import RolesExtractor
 from secret_server_provider.extractors.folders_extractor import FoldersExtractor
@@ -16,6 +17,7 @@ from secret_server_provider.extractors.user_member_of_group_extractor import (
 )
 from secret_server_provider.extractors.users_extractor import UsersExtractor
 from secret_server_provider.models.shared_memory import SecretServerProviderSharedMemory
+from secret_server_provider.transformers.folder_to_secrets_transformer import FoldersToSecretsTransformer
 from secret_server_provider.transformers.groups_transformer import GroupsTransformer
 from secret_server_provider.transformers.roles_transformer import RolesTransformer
 from secret_server_provider.transformers.folders_transformer import FoldersTransformer
@@ -40,6 +42,7 @@ class SecretServerRunner(BaseAutoProviderRunner):
         (RolesExtractor, RolesTransformer),
         (UserAccessRoleExtractor, UserAccessRoleTransformer),
         (UserHasRoleExtractor, UserHasRoleTransformer),
+        (FolderToSecretsExtractor, FoldersToSecretsTransformer),
     ]
 
     def get_extractor_and_transformer_type_list(
