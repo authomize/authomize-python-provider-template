@@ -11,12 +11,12 @@ from secret_server_openapiclient.model.secret_permission_summary import SecretPe
 from secret_server_openapiclient.model.user_model import UserModel
 logger = structlog.get_logger()
 
-class UserAccessRoleToSecretExtractor(BaseExtractor):
+class UserOrGroupAccessRoleToSecretExtractor(BaseExtractor):
     """
     Gets a list of access role records.
     See docs/UsersApi.md#users_service_search_users
     """
-    logger = logger.bind(loader_name="UserAccessRoleToSecretExtractor")
+    logger = logger.bind(loader_name="UserOrGroupAccessRoleToSecretExtractor")
     def extract_raw(self) -> Iterable[SecretPermissionSummary]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = UsersApi(data_provider_client.client)

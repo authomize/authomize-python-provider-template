@@ -12,7 +12,7 @@ from secret_server_provider.normalize_id import normalize_id
 from secret_server_openapiclient.model.secret_permission_summary import SecretPermissionSummary
 
 
-class UserAccessRoleToSecretTransformer(BaseTransformer):
+class UserOrGroupAccessRoleToSecretTransformer(BaseTransformer):
     """
     Transform a SecretPermissionModel relevant to users and secrets (not groups / folder).
 
@@ -25,8 +25,9 @@ class UserAccessRoleToSecretTransformer(BaseTransformer):
     def transform_model(self, raw_item: SecretPermissionSummary) -> RequestsBundleSchema:
         bundle = self.create_bundle()
         privilege_id = normalize_id(raw_item.secret_access_role_id)
+        id = raw_item.group_id if raw_item.user_id == None else raw_item.user_id
         permission = NewPermissionRequestSchema(
-            sourceUniqueId=normalize_id(raw_item.user_id),
+            sourceUniqueId=normalize_id(id),
             sourceType=PermissionSourceType.Account,
             privilegeId=privilege_id,
             assetId=normalize_id(raw_item.secret_id),

@@ -10,7 +10,7 @@ from secret_server_provider.extractors.groups_extractor import GroupsExtractor
 from secret_server_provider.extractors.roles_extractor import RolesExtractor
 from secret_server_provider.extractors.folders_extractor import FoldersExtractor
 from secret_server_provider.extractors.secrets_extractor import SecretsExtractor
-from secret_server_provider.extractors.user_access_role_extractor import UserAccessRoleToSecretExtractor
+from secret_server_provider.extractors.user_or_group_access_role_secret_extractor import UserOrGroupAccessRoleToSecretExtractor
 from secret_server_provider.extractors.user_or_group_access_role_to_folder_extractor import UserOrGroupAccessRoleToFolderExtractor
 from secret_server_provider.extractors.user_has_role_extractor import UserHasRoleExtractor
 from secret_server_provider.extractors.user_member_of_group_extractor import (
@@ -24,7 +24,7 @@ from secret_server_provider.transformers.roles_transformer import RolesTransform
 from secret_server_provider.transformers.folders_transformer import FoldersTransformer
 from secret_server_provider.transformers.secrets_transformer import SecretsTransformer
 from secret_server_provider.transformers.user_or_group_access_role_to_folder_transformer import UserOrGroupAccessRoleToFolderTransformer
-from secret_server_provider.transformers.user_access_role_transformer import UserAccessRoleToSecretTransformer
+from secret_server_provider.transformers.user_or_group_access_role_secret_transformer import UserOrGroupAccessRoleToSecretTransformer
 from secret_server_provider.transformers.user_has_role_transformer import UserHasRoleTransformer
 from secret_server_provider.transformers.user_member_of_group_transformer import (
     UserMemberOfGroupTransformer,
@@ -40,7 +40,7 @@ class SecretServerRunner(BaseAutoProviderRunner):
         (UsersExtractor, UsersTransformer),
         (UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
         (RolesExtractor, RolesTransformer),
-        (UserAccessRoleToSecretExtractor, UserAccessRoleToSecretTransformer),
+        (UserOrGroupAccessRoleToSecretExtractor, UserOrGroupAccessRoleToSecretTransformer),
         (UserOrGroupAccessRoleToFolderExtractor, UserOrGroupAccessRoleToFolderTransformer),
         (UserHasRoleExtractor, UserHasRoleTransformer),
         (FolderToSecretsExtractor, FoldersToSecretsTransformer),
