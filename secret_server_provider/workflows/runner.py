@@ -10,6 +10,7 @@ from secret_server_provider.extractors.groups_extractor import GroupsExtractor
 from secret_server_provider.extractors.roles_extractor import RolesExtractor
 from secret_server_provider.extractors.folders_extractor import FoldersExtractor
 from secret_server_provider.extractors.secrets_extractor import SecretsExtractor
+from secret_server_provider.extractors.secrets_last_access_key_extractor import SecretsLastAccessKeyExtractor
 from secret_server_provider.extractors.user_or_group_access_role_secret_extractor import UserOrGroupAccessRoleToSecretExtractor
 from secret_server_provider.extractors.user_or_group_access_role_to_folder_extractor import UserOrGroupAccessRoleToFolderExtractor
 from secret_server_provider.extractors.user_has_role_extractor import UserHasRoleExtractor
@@ -22,6 +23,7 @@ from secret_server_provider.transformers.folder_to_secrets_transformer import Fo
 from secret_server_provider.transformers.groups_transformer import GroupsTransformer
 from secret_server_provider.transformers.roles_transformer import RolesTransformer
 from secret_server_provider.transformers.folders_transformer import FoldersTransformer
+from secret_server_provider.transformers.secrets_last_access_key_transformer import SecretsLastAccessKeyTransformer
 from secret_server_provider.transformers.secrets_transformer import SecretsTransformer
 from secret_server_provider.transformers.user_or_group_access_role_to_folder_transformer import UserOrGroupAccessRoleToFolderTransformer
 from secret_server_provider.transformers.user_or_group_access_role_secret_transformer import UserOrGroupAccessRoleToSecretTransformer
@@ -44,6 +46,7 @@ class SecretServerRunner(BaseAutoProviderRunner):
         (UserOrGroupAccessRoleToSecretExtractor, UserOrGroupAccessRoleToSecretTransformer),
         (UserOrGroupAccessRoleToFolderExtractor, UserOrGroupAccessRoleToFolderTransformer),
         (FolderToSecretsExtractor, FoldersToSecretsTransformer),
+        (SecretsLastAccessKeyExtractor, SecretsLastAccessKeyTransformer),
     ]
 
     def get_extractor_and_transformer_type_list(
