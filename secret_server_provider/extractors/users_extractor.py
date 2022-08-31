@@ -5,7 +5,7 @@ from secret_server_provider.clients.secret_server_client import SecretServerClie
 from secret_server_provider.normalize_id import normalize_id
 
 from secret_server_openapiclient.apis import UsersApi
-from secret_server_openapiclient.model.user_model import UserModel
+from secret_server_openapiclient.model.user_summary import UserSummary
 
 
 class UsersExtractor(BaseExtractor):
@@ -15,13 +15,13 @@ class UsersExtractor(BaseExtractor):
     See docs/UsersApi.md#users_service_search_users
     """
 
-    def extract_raw(self) -> Iterable[UserModel]:
+    def extract_raw(self) -> Iterable[UserSummary]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = UsersApi(data_provider_client.client)
         # paginated results
         return self.__get_paginated_results(api_instance)
 
-    def __get_paginated_results(self, api_instance:UsersApi) -> Iterable[UserModel]:
+    def __get_paginated_results(self, api_instance:UsersApi) -> Iterable[UserSummary]:
         cur_skip = 0
         has_next = True
         while (has_next) :
