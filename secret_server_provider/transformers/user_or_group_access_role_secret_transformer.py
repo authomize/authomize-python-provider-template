@@ -28,7 +28,7 @@ class UserOrGroupAccessRoleToSecretTransformer(BaseTransformer):
         id = raw_item.group_id if raw_item.user_id == None else raw_item.user_id
         permission = NewPermissionRequestSchema(
             sourceUniqueId=normalize_id(id),
-            sourceType=PermissionSourceType.Account,
+            sourceType=PermissionSourceType.Account if raw_item.user_id != None else PermissionSourceType.Grouping,
             privilegeId=privilege_id,
             assetId=normalize_id(raw_item.secret_id),
             isRole=False,
