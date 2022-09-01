@@ -73,6 +73,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewUsersListRequestSchema(data=bundle.new_users),
             )
+            bundle.new_users = []
         if bundle.new_groupings and (
             load_all or len(bundle.new_groupings) >= self.shared_configuration.loader_batch_size
         ):
@@ -80,6 +81,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewGroupingsListRequestSchema(data=bundle.new_groupings),
             )
+            bundle.new_groupings = []
         if bundle.new_privileges and (
             load_all or len(bundle.new_privileges) >= self.shared_configuration.loader_batch_size
         ):
@@ -87,6 +89,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewPrivilegesListRequestSchema(data=bundle.new_privileges),
             )
+            bundle.new_privileges = []
         if bundle.new_assets and (
             load_all or len(bundle.new_assets) >= self.shared_configuration.loader_batch_size
         ):
@@ -94,6 +97,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewAssetsListRequestSchema(data=bundle.new_assets),
             )
+            bundle.new_assets = []
         if bundle.new_identities and (
             load_all or len(bundle.new_identities) >= self.shared_configuration.loader_batch_size
         ):
@@ -101,6 +105,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewIdentitiesListRequestSchema(data=bundle.new_identities),
             )
+            bundle.new_identities = []
         if bundle.new_permissions and (
             load_all or len(bundle.new_permissions) >= self.shared_configuration.loader_batch_size
         ):
@@ -108,6 +113,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewPermissionsListRequestSchema(data=bundle.new_permissions),
             )
+            bundle.new_permissions = []
         if bundle.new_privileges_grants and (
             load_all
             or len(bundle.new_privileges_grants) >= self.shared_configuration.loader_batch_size
@@ -116,6 +122,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewPrivilegesGrantsListRequestSchema(data=bundle.new_privileges_grants),
             )
+            bundle.new_privileges_grants = []
         if bundle.new_accounts_association and (
             load_all
             or len(bundle.new_accounts_association) >= self.shared_configuration.loader_batch_size
@@ -124,6 +131,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewAccountsAssociationsListRequestSchema(data=bundle.new_accounts_association),
             )
+            bundle.new_accounts_association = []
         if bundle.new_groupings_association and (
             load_all
             or len(bundle.new_groupings_association) >= self.shared_configuration.loader_batch_size
@@ -134,6 +142,7 @@ class BasicLoader:
                     data=bundle.new_groupings_association,
                 ),
             )
+            bundle.new_groupings_association = []
         if bundle.new_assets_inheritance and (
             load_all
             or len(bundle.new_assets_inheritance) >= self.shared_configuration.loader_batch_size
@@ -142,6 +151,7 @@ class BasicLoader:
                 app_id=self.application_configuration.app_id,
                 body=NewAssetsInheritanceListRequestSchema(data=bundle.new_assets_inheritance),
             )
+            bundle.new_assets_inheritance = []
 
     @staticmethod
     def merge_bundle_schemas(items: list[RequestsBundleSchema]) -> RequestsBundleSchema:
