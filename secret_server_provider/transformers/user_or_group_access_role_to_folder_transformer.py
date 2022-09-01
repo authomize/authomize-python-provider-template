@@ -28,7 +28,7 @@ class UserOrGroupAccessRoleToFolderTransformer(BaseTransformer):
 
         permission = NewPermissionRequestSchema(
             sourceUniqueId=normalize_id(id),
-            sourceType=PermissionSourceType.Account if raw_item.user_id != None else PermissionSourceType.Grouping,
+            sourceType=PermissionSourceType.User if raw_item.user_id != None else PermissionSourceType.Grouping,
             privilegeId=privilege_id,
             assetId=normalize_id(raw_item.folder_id),
             isRole=False,
