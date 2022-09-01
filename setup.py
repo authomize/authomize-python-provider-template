@@ -1,7 +1,7 @@
 from setuptools import find_namespace_packages, setup
 
 setup(
-    version='0.1.0',
+    version='0.1.1',
     name='authomize-python-provider-template',
     author='Authomize inc.',
     author_email='info@authomize.com',
