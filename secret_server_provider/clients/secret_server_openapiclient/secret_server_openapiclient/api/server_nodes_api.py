@@ -72,7 +72,7 @@ class ServerNodesApi(object):
                 },
                 'openapi_types': {
                     'node_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'node_id': 'nodeId',
@@ -168,7 +168,7 @@ class ServerNodesApi(object):
                 },
                 'openapi_types': {
                     'node_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'server_node_configuration_model':
                         (ServerNodeConfigurationModel,),
                 },
@@ -208,7 +208,7 @@ class ServerNodesApi(object):
         >>> result = thread.get()
 
         Args:
-            node_id (bool, date, datetime, dict, float, int, list, str, none_type): nodeId
+            node_id (int): nodeId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -369,7 +369,7 @@ class ServerNodesApi(object):
         >>> result = thread.get()
 
         Args:
-            node_id (bool, date, datetime, dict, float, int, list, str, none_type): nodeId
+            node_id (int): nodeId
 
         Keyword Args:
             server_node_configuration_model (ServerNodeConfigurationModel): nodeConfiguration. [optional]

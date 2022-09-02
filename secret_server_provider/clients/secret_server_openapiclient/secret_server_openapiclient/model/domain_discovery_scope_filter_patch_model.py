@@ -63,10 +63,8 @@ class DomainDiscoveryScopeFilterPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,29 +73,26 @@ class DomainDiscoveryScopeFilterPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'scan_target_type': (UpdateFieldValueOfScanTargetType,),  # noqa: E501
-            'secret_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'site_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
+            'scan_target_type': (UpdateFieldValueOfScanTargetType, none_type,),  # noqa: E501
+            'secret_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'site_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

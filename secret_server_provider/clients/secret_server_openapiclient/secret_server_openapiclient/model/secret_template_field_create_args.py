@@ -63,10 +63,8 @@ class SecretTemplateFieldCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,48 +73,45 @@ class SecretTemplateFieldCreateArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'editable_permission': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'edit_requires': (EditRequiresOptions,),  # noqa: E501
-            'field_slug_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'generate_password_character_set': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'generate_password_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'hide_on_view': (bool,),  # noqa: E501
-            'history_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_expiration_field': (bool,),  # noqa: E501
-            'is_file': (bool,),  # noqa: E501
-            'is_indexable': (bool,),  # noqa: E501
-            'is_notes': (bool,),  # noqa: E501
-            'is_password': (bool,),  # noqa: E501
-            'is_required': (bool,),  # noqa: E501
-            'is_url': (bool,),  # noqa: E501
-            'list_type': (ListType,),  # noqa: E501
-            'must_encrypt': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_requirement_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'editable_permission': (int, none_type,),  # noqa: E501
+            'edit_requires': (EditRequiresOptions, none_type,),  # noqa: E501
+            'field_slug_name': (str, none_type,),  # noqa: E501
+            'generate_password_character_set': (str, none_type,),  # noqa: E501
+            'generate_password_length': (int, none_type,),  # noqa: E501
+            'hide_on_view': (bool, none_type,),  # noqa: E501
+            'history_length': (int, none_type,),  # noqa: E501
+            'is_expiration_field': (bool, none_type,),  # noqa: E501
+            'is_file': (bool, none_type,),  # noqa: E501
+            'is_indexable': (bool, none_type,),  # noqa: E501
+            'is_notes': (bool, none_type,),  # noqa: E501
+            'is_password': (bool, none_type,),  # noqa: E501
+            'is_required': (bool, none_type,),  # noqa: E501
+            'is_url': (bool, none_type,),  # noqa: E501
+            'list_type': (ListType, none_type,),  # noqa: E501
+            'must_encrypt': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'password_requirement_id': (int, none_type,),  # noqa: E501
+            'password_type_field_id': (int, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -185,15 +180,15 @@ class SecretTemplateFieldCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Field description. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Field display name. [optional]  # noqa: E501
-            editable_permission (bool, date, datetime, dict, float, int, list, str, none_type): Who has editing rights. [optional]  # noqa: E501
+            description (str): Field description. [optional]  # noqa: E501
+            display_name (str): Field display name. [optional]  # noqa: E501
+            editable_permission (int): Who has editing rights. [optional]  # noqa: E501
             edit_requires (EditRequiresOptions): [optional]  # noqa: E501
-            field_slug_name (bool, date, datetime, dict, float, int, list, str, none_type): Field Slug Name. [optional]  # noqa: E501
-            generate_password_character_set (bool, date, datetime, dict, float, int, list, str, none_type): Generate password character set. Only returned if user can manage secret templates. [optional]  # noqa: E501
-            generate_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Generate password length.  Only returned if user can manage secret templates. [optional]  # noqa: E501
+            field_slug_name (str): Field Slug Name. [optional]  # noqa: E501
+            generate_password_character_set (str): Generate password character set. Only returned if user can manage secret templates. [optional]  # noqa: E501
+            generate_password_length (int): Generate password length.  Only returned if user can manage secret templates. [optional]  # noqa: E501
             hide_on_view (bool): Hide this field when viewing. [optional]  # noqa: E501
-            history_length (bool, date, datetime, dict, float, int, list, str, none_type): History length. [optional]  # noqa: E501
+            history_length (int): History length. [optional]  # noqa: E501
             is_expiration_field (bool): Is expiration field. [optional]  # noqa: E501
             is_file (bool): Is this field a file type. [optional]  # noqa: E501
             is_indexable (bool): Is able to be indexed. [optional]  # noqa: E501
@@ -203,10 +198,10 @@ class SecretTemplateFieldCreateArgs(ModelNormal):
             is_url (bool): Is this field a url field type. [optional]  # noqa: E501
             list_type (ListType): [optional]  # noqa: E501
             must_encrypt (bool): Must encrypt.  Only returned if user can manage secret templates. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Field name. [optional]  # noqa: E501
-            password_requirement_id (bool, date, datetime, dict, float, int, list, str, none_type): ID For Password Requirement assigned to field. [optional]  # noqa: E501
-            password_type_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Type of password field. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order for Field. [optional]  # noqa: E501
+            name (str): Field name. [optional]  # noqa: E501
+            password_requirement_id (int): ID For Password Requirement assigned to field. [optional]  # noqa: E501
+            password_type_field_id (int): Type of password field. [optional]  # noqa: E501
+            sort_order (int): Sort Order for Field. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -292,15 +287,15 @@ class SecretTemplateFieldCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Field description. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Field display name. [optional]  # noqa: E501
-            editable_permission (bool, date, datetime, dict, float, int, list, str, none_type): Who has editing rights. [optional]  # noqa: E501
+            description (str): Field description. [optional]  # noqa: E501
+            display_name (str): Field display name. [optional]  # noqa: E501
+            editable_permission (int): Who has editing rights. [optional]  # noqa: E501
             edit_requires (EditRequiresOptions): [optional]  # noqa: E501
-            field_slug_name (bool, date, datetime, dict, float, int, list, str, none_type): Field Slug Name. [optional]  # noqa: E501
-            generate_password_character_set (bool, date, datetime, dict, float, int, list, str, none_type): Generate password character set. Only returned if user can manage secret templates. [optional]  # noqa: E501
-            generate_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Generate password length.  Only returned if user can manage secret templates. [optional]  # noqa: E501
+            field_slug_name (str): Field Slug Name. [optional]  # noqa: E501
+            generate_password_character_set (str): Generate password character set. Only returned if user can manage secret templates. [optional]  # noqa: E501
+            generate_password_length (int): Generate password length.  Only returned if user can manage secret templates. [optional]  # noqa: E501
             hide_on_view (bool): Hide this field when viewing. [optional]  # noqa: E501
-            history_length (bool, date, datetime, dict, float, int, list, str, none_type): History length. [optional]  # noqa: E501
+            history_length (int): History length. [optional]  # noqa: E501
             is_expiration_field (bool): Is expiration field. [optional]  # noqa: E501
             is_file (bool): Is this field a file type. [optional]  # noqa: E501
             is_indexable (bool): Is able to be indexed. [optional]  # noqa: E501
@@ -310,10 +305,10 @@ class SecretTemplateFieldCreateArgs(ModelNormal):
             is_url (bool): Is this field a url field type. [optional]  # noqa: E501
             list_type (ListType): [optional]  # noqa: E501
             must_encrypt (bool): Must encrypt.  Only returned if user can manage secret templates. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Field name. [optional]  # noqa: E501
-            password_requirement_id (bool, date, datetime, dict, float, int, list, str, none_type): ID For Password Requirement assigned to field. [optional]  # noqa: E501
-            password_type_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Type of password field. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order for Field. [optional]  # noqa: E501
+            name (str): Field name. [optional]  # noqa: E501
+            password_requirement_id (int): ID For Password Requirement assigned to field. [optional]  # noqa: E501
+            password_type_field_id (int): Type of password field. [optional]  # noqa: E501
+            sort_order (int): Sort Order for Field. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

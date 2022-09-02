@@ -61,10 +61,8 @@ class DirectoryServicesConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,36 +71,33 @@ class DirectoryServicesConfigurationModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'days_to_keep_operational_logs': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'disable_inactive_users_months': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_directory_integration': (bool,),  # noqa: E501
-            'enable_directory_synchronization': (bool,),  # noqa: E501
-            'enable_integrated_windows_authentication': (bool,),  # noqa: E501
-            'enable_user_disabling': (bool,),  # noqa: E501
-            'synchronization_interval_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'synchronization_interval_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'synchronization_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_account_options': (DirectoryServicesSynchronizationUserOption,),  # noqa: E501
+            'days_to_keep_operational_logs': (int, none_type,),  # noqa: E501
+            'disable_inactive_users_months': (int, none_type,),  # noqa: E501
+            'enable_directory_integration': (bool, none_type,),  # noqa: E501
+            'enable_directory_synchronization': (bool, none_type,),  # noqa: E501
+            'enable_integrated_windows_authentication': (bool, none_type,),  # noqa: E501
+            'enable_user_disabling': (bool, none_type,),  # noqa: E501
+            'synchronization_interval_days': (int, none_type,),  # noqa: E501
+            'synchronization_interval_hours': (int, none_type,),  # noqa: E501
+            'synchronization_interval_minutes': (int, none_type,),  # noqa: E501
+            'user_account_options': (DirectoryServicesSynchronizationUserOption, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -159,15 +154,15 @@ class DirectoryServicesConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            days_to_keep_operational_logs (bool, date, datetime, dict, float, int, list, str, none_type): How long to keep operational logs. [optional]  # noqa: E501
-            disable_inactive_users_months (bool, date, datetime, dict, float, int, list, str, none_type): How long to wait before disabling inactive users. [optional]  # noqa: E501
+            days_to_keep_operational_logs (int): How long to keep operational logs. [optional]  # noqa: E501
+            disable_inactive_users_months (int): How long to wait before disabling inactive users. [optional]  # noqa: E501
             enable_directory_integration (bool): Whether or not any Directory Services integrations are enabled or not. [optional]  # noqa: E501
             enable_directory_synchronization (bool): Synchronize users and group membership on a time interval. [optional]  # noqa: E501
             enable_integrated_windows_authentication (bool): Integrated Windows Authentication (IWA) allows users to log into Secret Server automatically if they are logged into a workstation with their Active Directory credentials.. [optional]  # noqa: E501
             enable_user_disabling (bool): When enabled inactive users will be automatically disabled regardless of their Directory status. [optional]  # noqa: E501
-            synchronization_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize days interval for users and group membership. [optional]  # noqa: E501
-            synchronization_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize hours interval for users and group membership. [optional]  # noqa: E501
-            synchronization_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize minutes interval for users and group membership. [optional]  # noqa: E501
+            synchronization_interval_days (int): Synchronize days interval for users and group membership. [optional]  # noqa: E501
+            synchronization_interval_hours (int): Synchronize hours interval for users and group membership. [optional]  # noqa: E501
+            synchronization_interval_minutes (int): Synchronize minutes interval for users and group membership. [optional]  # noqa: E501
             user_account_options (DirectoryServicesSynchronizationUserOption): [optional]  # noqa: E501
         """
 
@@ -254,15 +249,15 @@ class DirectoryServicesConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            days_to_keep_operational_logs (bool, date, datetime, dict, float, int, list, str, none_type): How long to keep operational logs. [optional]  # noqa: E501
-            disable_inactive_users_months (bool, date, datetime, dict, float, int, list, str, none_type): How long to wait before disabling inactive users. [optional]  # noqa: E501
+            days_to_keep_operational_logs (int): How long to keep operational logs. [optional]  # noqa: E501
+            disable_inactive_users_months (int): How long to wait before disabling inactive users. [optional]  # noqa: E501
             enable_directory_integration (bool): Whether or not any Directory Services integrations are enabled or not. [optional]  # noqa: E501
             enable_directory_synchronization (bool): Synchronize users and group membership on a time interval. [optional]  # noqa: E501
             enable_integrated_windows_authentication (bool): Integrated Windows Authentication (IWA) allows users to log into Secret Server automatically if they are logged into a workstation with their Active Directory credentials.. [optional]  # noqa: E501
             enable_user_disabling (bool): When enabled inactive users will be automatically disabled regardless of their Directory status. [optional]  # noqa: E501
-            synchronization_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize days interval for users and group membership. [optional]  # noqa: E501
-            synchronization_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize hours interval for users and group membership. [optional]  # noqa: E501
-            synchronization_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize minutes interval for users and group membership. [optional]  # noqa: E501
+            synchronization_interval_days (int): Synchronize days interval for users and group membership. [optional]  # noqa: E501
+            synchronization_interval_hours (int): Synchronize hours interval for users and group membership. [optional]  # noqa: E501
+            synchronization_interval_minutes (int): Synchronize minutes interval for users and group membership. [optional]  # noqa: E501
             user_account_options (DirectoryServicesSynchronizationUserOption): [optional]  # noqa: E501
         """
 

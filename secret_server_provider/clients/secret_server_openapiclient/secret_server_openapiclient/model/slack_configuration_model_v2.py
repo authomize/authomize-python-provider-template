@@ -57,10 +57,8 @@ class SlackConfigurationModelV2(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class SlackConfigurationModelV2(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'app_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'bot_token': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'current_user_has_slack_id': (bool,),  # noqa: E501
-            'inbox_notifications_enabled': (bool,),  # noqa: E501
-            'secret_interactions_enabled': (bool,),  # noqa: E501
-            'signature_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'app_id': (str, none_type,),  # noqa: E501
+            'bot_token': (str, none_type,),  # noqa: E501
+            'current_user_has_slack_id': (bool, none_type,),  # noqa: E501
+            'inbox_notifications_enabled': (bool, none_type,),  # noqa: E501
+            'secret_interactions_enabled': (bool, none_type,),  # noqa: E501
+            'signature_key': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,12 +140,12 @@ class SlackConfigurationModelV2(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            app_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of App. [optional]  # noqa: E501
-            bot_token (bool, date, datetime, dict, float, int, list, str, none_type): Bot Token. [optional]  # noqa: E501
+            app_id (str): Id of App. [optional]  # noqa: E501
+            bot_token (str): Bot Token. [optional]  # noqa: E501
             current_user_has_slack_id (bool): CurrentUserHasSlackId. [optional]  # noqa: E501
             inbox_notifications_enabled (bool): Enable inbox notifications in Slack. [optional]  # noqa: E501
             secret_interactions_enabled (bool): Enable secret notifications and interactions with Slack. [optional]  # noqa: E501
-            signature_key (bool, date, datetime, dict, float, int, list, str, none_type): Signature Key. [optional]  # noqa: E501
+            signature_key (str): Signature Key. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,12 +231,12 @@ class SlackConfigurationModelV2(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            app_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of App. [optional]  # noqa: E501
-            bot_token (bool, date, datetime, dict, float, int, list, str, none_type): Bot Token. [optional]  # noqa: E501
+            app_id (str): Id of App. [optional]  # noqa: E501
+            bot_token (str): Bot Token. [optional]  # noqa: E501
             current_user_has_slack_id (bool): CurrentUserHasSlackId. [optional]  # noqa: E501
             inbox_notifications_enabled (bool): Enable inbox notifications in Slack. [optional]  # noqa: E501
             secret_interactions_enabled (bool): Enable secret notifications and interactions with Slack. [optional]  # noqa: E501
-            signature_key (bool, date, datetime, dict, float, int, list, str, none_type): Signature Key. [optional]  # noqa: E501
+            signature_key (str): Signature Key. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

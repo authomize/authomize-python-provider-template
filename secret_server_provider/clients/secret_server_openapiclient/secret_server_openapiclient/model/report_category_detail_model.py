@@ -57,10 +57,8 @@ class ReportCategoryDetailModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class ReportCategoryDetailModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'report_category_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'report_category_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'report_category_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'report_category_description': (str, none_type,),  # noqa: E501
+            'report_category_id': (int, none_type,),  # noqa: E501
+            'report_category_name': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class ReportCategoryDetailModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            report_category_description (bool, date, datetime, dict, float, int, list, str, none_type): Report Category Description. [optional]  # noqa: E501
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): Report Category Id. [optional]  # noqa: E501
-            report_category_name (bool, date, datetime, dict, float, int, list, str, none_type): Report Category Name. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order in which the category should appear. [optional]  # noqa: E501
+            report_category_description (str): Report Category Description. [optional]  # noqa: E501
+            report_category_id (int): Report Category Id. [optional]  # noqa: E501
+            report_category_name (str): Report Category Name. [optional]  # noqa: E501
+            sort_order (int): Sort Order in which the category should appear. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class ReportCategoryDetailModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            report_category_description (bool, date, datetime, dict, float, int, list, str, none_type): Report Category Description. [optional]  # noqa: E501
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): Report Category Id. [optional]  # noqa: E501
-            report_category_name (bool, date, datetime, dict, float, int, list, str, none_type): Report Category Name. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order in which the category should appear. [optional]  # noqa: E501
+            report_category_description (str): Report Category Description. [optional]  # noqa: E501
+            report_category_id (int): Report Category Id. [optional]  # noqa: E501
+            report_category_name (str): Report Category Name. [optional]  # noqa: E501
+            sort_order (int): Sort Order in which the category should appear. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

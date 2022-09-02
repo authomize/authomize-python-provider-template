@@ -57,10 +57,8 @@ class ReassignSecretsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,27 +66,24 @@ class ReassignSecretsModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'disable_site': (bool,),  # noqa: E501
-            'new_site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'disable_site': (bool, none_type,),  # noqa: E501
+            'new_site_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -138,7 +133,7 @@ class ReassignSecretsModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             disable_site (bool): Should the site be disabled as part of the reassign. [optional]  # noqa: E501
-            new_site_id (bool, date, datetime, dict, float, int, list, str, none_type): The new site ID to reassign to. [optional]  # noqa: E501
+            new_site_id (int): The new site ID to reassign to. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -225,7 +220,7 @@ class ReassignSecretsModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             disable_site (bool): Should the site be disabled as part of the reassign. [optional]  # noqa: E501
-            new_site_id (bool, date, datetime, dict, float, int, list, str, none_type): The new site ID to reassign to. [optional]  # noqa: E501
+            new_site_id (int): The new site ID to reassign to. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

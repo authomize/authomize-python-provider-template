@@ -61,10 +61,8 @@ class DateTimeOffset(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,43 +71,40 @@ class DateTimeOffset(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'day': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'day_of_week': (DayOfWeek,),  # noqa: E501
-            'day_of_year': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'hour': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'local_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'millisecond': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'minute': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'month': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'offset': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'second': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticks': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'time_of_day': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'utc_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'utc_ticks': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'year': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'date': (datetime, none_type,),  # noqa: E501
+            'date_time': (datetime, none_type,),  # noqa: E501
+            'day': (int, none_type,),  # noqa: E501
+            'day_of_week': (DayOfWeek, none_type,),  # noqa: E501
+            'day_of_year': (int, none_type,),  # noqa: E501
+            'hour': (int, none_type,),  # noqa: E501
+            'local_date_time': (datetime, none_type,),  # noqa: E501
+            'millisecond': (int, none_type,),  # noqa: E501
+            'minute': (int, none_type,),  # noqa: E501
+            'month': (int, none_type,),  # noqa: E501
+            'offset': (str, none_type,),  # noqa: E501
+            'second': (int, none_type,),  # noqa: E501
+            'ticks': (int, none_type,),  # noqa: E501
+            'time_of_day': (str, none_type,),  # noqa: E501
+            'utc_date_time': (datetime, none_type,),  # noqa: E501
+            'utc_ticks': (int, none_type,),  # noqa: E501
+            'year': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -173,23 +168,23 @@ class DateTimeOffset(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            date (bool, date, datetime, dict, float, int, list, str, none_type): Date. [optional]  # noqa: E501
-            date_time (bool, date, datetime, dict, float, int, list, str, none_type): DateTime. [optional]  # noqa: E501
-            day (bool, date, datetime, dict, float, int, list, str, none_type): Day. [optional]  # noqa: E501
+            date (datetime): Date. [optional]  # noqa: E501
+            date_time (datetime): DateTime. [optional]  # noqa: E501
+            day (int): Day. [optional]  # noqa: E501
             day_of_week (DayOfWeek): [optional]  # noqa: E501
-            day_of_year (bool, date, datetime, dict, float, int, list, str, none_type): DayOfYear. [optional]  # noqa: E501
-            hour (bool, date, datetime, dict, float, int, list, str, none_type): Hour. [optional]  # noqa: E501
-            local_date_time (bool, date, datetime, dict, float, int, list, str, none_type): LocalDateTime. [optional]  # noqa: E501
-            millisecond (bool, date, datetime, dict, float, int, list, str, none_type): Millisecond. [optional]  # noqa: E501
-            minute (bool, date, datetime, dict, float, int, list, str, none_type): Minute. [optional]  # noqa: E501
-            month (bool, date, datetime, dict, float, int, list, str, none_type): Month. [optional]  # noqa: E501
-            offset (bool, date, datetime, dict, float, int, list, str, none_type): Offset. [optional]  # noqa: E501
-            second (bool, date, datetime, dict, float, int, list, str, none_type): Second. [optional]  # noqa: E501
-            ticks (bool, date, datetime, dict, float, int, list, str, none_type): Ticks. [optional]  # noqa: E501
-            time_of_day (bool, date, datetime, dict, float, int, list, str, none_type): TimeOfDay. [optional]  # noqa: E501
-            utc_date_time (bool, date, datetime, dict, float, int, list, str, none_type): UtcDateTime. [optional]  # noqa: E501
-            utc_ticks (bool, date, datetime, dict, float, int, list, str, none_type): UtcTicks. [optional]  # noqa: E501
-            year (bool, date, datetime, dict, float, int, list, str, none_type): Year. [optional]  # noqa: E501
+            day_of_year (int): DayOfYear. [optional]  # noqa: E501
+            hour (int): Hour. [optional]  # noqa: E501
+            local_date_time (datetime): LocalDateTime. [optional]  # noqa: E501
+            millisecond (int): Millisecond. [optional]  # noqa: E501
+            minute (int): Minute. [optional]  # noqa: E501
+            month (int): Month. [optional]  # noqa: E501
+            offset (str): Offset. [optional]  # noqa: E501
+            second (int): Second. [optional]  # noqa: E501
+            ticks (int): Ticks. [optional]  # noqa: E501
+            time_of_day (str): TimeOfDay. [optional]  # noqa: E501
+            utc_date_time (datetime): UtcDateTime. [optional]  # noqa: E501
+            utc_ticks (int): UtcTicks. [optional]  # noqa: E501
+            year (int): Year. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -275,23 +270,23 @@ class DateTimeOffset(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            date (bool, date, datetime, dict, float, int, list, str, none_type): Date. [optional]  # noqa: E501
-            date_time (bool, date, datetime, dict, float, int, list, str, none_type): DateTime. [optional]  # noqa: E501
-            day (bool, date, datetime, dict, float, int, list, str, none_type): Day. [optional]  # noqa: E501
+            date (datetime): Date. [optional]  # noqa: E501
+            date_time (datetime): DateTime. [optional]  # noqa: E501
+            day (int): Day. [optional]  # noqa: E501
             day_of_week (DayOfWeek): [optional]  # noqa: E501
-            day_of_year (bool, date, datetime, dict, float, int, list, str, none_type): DayOfYear. [optional]  # noqa: E501
-            hour (bool, date, datetime, dict, float, int, list, str, none_type): Hour. [optional]  # noqa: E501
-            local_date_time (bool, date, datetime, dict, float, int, list, str, none_type): LocalDateTime. [optional]  # noqa: E501
-            millisecond (bool, date, datetime, dict, float, int, list, str, none_type): Millisecond. [optional]  # noqa: E501
-            minute (bool, date, datetime, dict, float, int, list, str, none_type): Minute. [optional]  # noqa: E501
-            month (bool, date, datetime, dict, float, int, list, str, none_type): Month. [optional]  # noqa: E501
-            offset (bool, date, datetime, dict, float, int, list, str, none_type): Offset. [optional]  # noqa: E501
-            second (bool, date, datetime, dict, float, int, list, str, none_type): Second. [optional]  # noqa: E501
-            ticks (bool, date, datetime, dict, float, int, list, str, none_type): Ticks. [optional]  # noqa: E501
-            time_of_day (bool, date, datetime, dict, float, int, list, str, none_type): TimeOfDay. [optional]  # noqa: E501
-            utc_date_time (bool, date, datetime, dict, float, int, list, str, none_type): UtcDateTime. [optional]  # noqa: E501
-            utc_ticks (bool, date, datetime, dict, float, int, list, str, none_type): UtcTicks. [optional]  # noqa: E501
-            year (bool, date, datetime, dict, float, int, list, str, none_type): Year. [optional]  # noqa: E501
+            day_of_year (int): DayOfYear. [optional]  # noqa: E501
+            hour (int): Hour. [optional]  # noqa: E501
+            local_date_time (datetime): LocalDateTime. [optional]  # noqa: E501
+            millisecond (int): Millisecond. [optional]  # noqa: E501
+            minute (int): Minute. [optional]  # noqa: E501
+            month (int): Month. [optional]  # noqa: E501
+            offset (str): Offset. [optional]  # noqa: E501
+            second (int): Second. [optional]  # noqa: E501
+            ticks (int): Ticks. [optional]  # noqa: E501
+            time_of_day (str): TimeOfDay. [optional]  # noqa: E501
+            utc_date_time (datetime): UtcDateTime. [optional]  # noqa: E501
+            utc_ticks (int): UtcTicks. [optional]  # noqa: E501
+            year (int): Year. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

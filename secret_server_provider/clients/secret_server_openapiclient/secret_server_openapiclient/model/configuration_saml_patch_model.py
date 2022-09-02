@@ -65,10 +65,8 @@ class ConfigurationSamlPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,34 +75,31 @@ class ConfigurationSamlPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_legacy_slo': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'identity_providers': ([ConfigurationSamlIdentityProviderPatchModel],),  # noqa: E501
-            'legacy_username_attribute': (UpdateFieldValueOfString,),  # noqa: E501
-            'service_provider_certificate': (UpdateFieldValueOfString,),  # noqa: E501
-            'service_provider_certificate_password': (UpdateFieldValueOfString,),  # noqa: E501
-            'service_provider_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'use_legacy': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_legacy_slo': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'identity_providers': ([ConfigurationSamlIdentityProviderPatchModel], none_type,),  # noqa: E501
+            'legacy_username_attribute': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'service_provider_certificate': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'service_provider_certificate_password': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'service_provider_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'use_legacy': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

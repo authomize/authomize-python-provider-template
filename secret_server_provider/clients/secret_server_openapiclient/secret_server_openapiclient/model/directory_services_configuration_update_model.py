@@ -65,10 +65,8 @@ class DirectoryServicesConfigurationUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,36 +75,33 @@ class DirectoryServicesConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'days_to_keep_operational_logs': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'disable_inactive_users_months': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable_directory_integration': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_directory_synchronization': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_integrated_windows_authentication': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_user_disabling': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'synchronization_interval_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'synchronization_interval_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'synchronization_interval_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'user_account_options': (UpdateFieldValueOfDirectoryServicesSynchronizationUserOption,),  # noqa: E501
+            'days_to_keep_operational_logs': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'disable_inactive_users_months': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable_directory_integration': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_directory_synchronization': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_integrated_windows_authentication': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_user_disabling': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'synchronization_interval_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'synchronization_interval_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'synchronization_interval_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'user_account_options': (UpdateFieldValueOfDirectoryServicesSynchronizationUserOption, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

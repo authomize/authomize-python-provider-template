@@ -57,10 +57,8 @@ class SecretTemplateLauncherFieldValueModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,34 +66,31 @@ class SecretTemplateLauncherFieldValueModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'default_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'default_type_int_max': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'default_type_int_min': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'default_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type_field_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'promptable_field': (bool,),  # noqa: E501
-            'secret_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_field_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'default_type': (str, none_type,),  # noqa: E501
+            'default_type_int_max': (int, none_type,),  # noqa: E501
+            'default_type_int_min': (int, none_type,),  # noqa: E501
+            'default_value': (str, none_type,),  # noqa: E501
+            'launcher_type_field_id': (int, none_type,),  # noqa: E501
+            'launcher_type_field_name': (str, none_type,),  # noqa: E501
+            'promptable_field': (bool, none_type,),  # noqa: E501
+            'secret_field_id': (int, none_type,),  # noqa: E501
+            'secret_field_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,15 +146,15 @@ class SecretTemplateLauncherFieldValueModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            default_type (bool, date, datetime, dict, float, int, list, str, none_type): What is the default type if allowed. [optional]  # noqa: E501
-            default_type_int_max (bool, date, datetime, dict, float, int, list, str, none_type): If the default type is int then a maximum number that can be entered. [optional]  # noqa: E501
-            default_type_int_min (bool, date, datetime, dict, float, int, list, str, none_type): If the default type is int then a minimum number that can be entered. [optional]  # noqa: E501
-            default_value (bool, date, datetime, dict, float, int, list, str, none_type): Default value for this field on a specific template. [optional]  # noqa: E501
-            launcher_type_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Field Id. [optional]  # noqa: E501
-            launcher_type_field_name (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Field Name. [optional]  # noqa: E501
+            default_type (str): What is the default type if allowed. [optional]  # noqa: E501
+            default_type_int_max (int): If the default type is int then a maximum number that can be entered. [optional]  # noqa: E501
+            default_type_int_min (int): If the default type is int then a minimum number that can be entered. [optional]  # noqa: E501
+            default_value (str): Default value for this field on a specific template. [optional]  # noqa: E501
+            launcher_type_field_id (int): Launcher Field Id. [optional]  # noqa: E501
+            launcher_type_field_name (str): Launcher Field Name. [optional]  # noqa: E501
             promptable_field (bool): Whether or not this field can be prompted for input. [optional]  # noqa: E501
-            secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of the Secret Template Field. [optional]  # noqa: E501
-            secret_field_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Field Name of the mapped Secret Template Extended Field. [optional]  # noqa: E501
+            secret_field_id (int): Id of the Secret Template Field. [optional]  # noqa: E501
+            secret_field_name (str): Secret Field Name of the mapped Secret Template Extended Field. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,15 +240,15 @@ class SecretTemplateLauncherFieldValueModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            default_type (bool, date, datetime, dict, float, int, list, str, none_type): What is the default type if allowed. [optional]  # noqa: E501
-            default_type_int_max (bool, date, datetime, dict, float, int, list, str, none_type): If the default type is int then a maximum number that can be entered. [optional]  # noqa: E501
-            default_type_int_min (bool, date, datetime, dict, float, int, list, str, none_type): If the default type is int then a minimum number that can be entered. [optional]  # noqa: E501
-            default_value (bool, date, datetime, dict, float, int, list, str, none_type): Default value for this field on a specific template. [optional]  # noqa: E501
-            launcher_type_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Field Id. [optional]  # noqa: E501
-            launcher_type_field_name (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Field Name. [optional]  # noqa: E501
+            default_type (str): What is the default type if allowed. [optional]  # noqa: E501
+            default_type_int_max (int): If the default type is int then a maximum number that can be entered. [optional]  # noqa: E501
+            default_type_int_min (int): If the default type is int then a minimum number that can be entered. [optional]  # noqa: E501
+            default_value (str): Default value for this field on a specific template. [optional]  # noqa: E501
+            launcher_type_field_id (int): Launcher Field Id. [optional]  # noqa: E501
+            launcher_type_field_name (str): Launcher Field Name. [optional]  # noqa: E501
             promptable_field (bool): Whether or not this field can be prompted for input. [optional]  # noqa: E501
-            secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of the Secret Template Field. [optional]  # noqa: E501
-            secret_field_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Field Name of the mapped Secret Template Extended Field. [optional]  # noqa: E501
+            secret_field_id (int): Id of the Secret Template Field. [optional]  # noqa: E501
+            secret_field_name (str): Secret Field Name of the mapped Secret Template Extended Field. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

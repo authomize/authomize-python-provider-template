@@ -57,10 +57,8 @@ class ConfigurationSecurityModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,46 +66,43 @@ class ConfigurationSecurityModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'allow_web_service_http_get': (bool,),  # noqa: E501
-            'audit_tls_errors': (bool,),  # noqa: E501
-            'audit_tls_errors_debug': (bool,),  # noqa: E501
-            'certificate_chain_policy_options': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'client_certificate_ids': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'database_integrity_monitoring_symmetric_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_database_integrity_monitoring': (bool,),  # noqa: E501
-            'enable_file_restrictions': (bool,),  # noqa: E501
-            'enable_frame_blocking': (bool,),  # noqa: E501
-            'enable_hsts': (bool,),  # noqa: E501
-            'enable_secret_erase': (bool,),  # noqa: E501
-            'file_extension_restrictions': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fips_enabled': (bool,),  # noqa: E501
-            'force_https': (bool,),  # noqa: E501
-            'hide_version_number': (bool,),  # noqa: E501
-            'hsts_max_age': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ignore_certificate_revocation_failures': (bool,),  # noqa: E501
-            'maximum_file_size_bytes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'maximum_file_size_supported': (bool,),  # noqa: E501
-            'secret_erase_workflow': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'web_password_filler_requires_full_domain_match': (bool,),  # noqa: E501
+            'allow_web_service_http_get': (bool, none_type,),  # noqa: E501
+            'audit_tls_errors': (bool, none_type,),  # noqa: E501
+            'audit_tls_errors_debug': (bool, none_type,),  # noqa: E501
+            'certificate_chain_policy_options': (str, none_type,),  # noqa: E501
+            'client_certificate_ids': (str, none_type,),  # noqa: E501
+            'database_integrity_monitoring_symmetric_key': (str, none_type,),  # noqa: E501
+            'enable_database_integrity_monitoring': (bool, none_type,),  # noqa: E501
+            'enable_file_restrictions': (bool, none_type,),  # noqa: E501
+            'enable_frame_blocking': (bool, none_type,),  # noqa: E501
+            'enable_hsts': (bool, none_type,),  # noqa: E501
+            'enable_secret_erase': (bool, none_type,),  # noqa: E501
+            'file_extension_restrictions': (str, none_type,),  # noqa: E501
+            'fips_enabled': (bool, none_type,),  # noqa: E501
+            'force_https': (bool, none_type,),  # noqa: E501
+            'hide_version_number': (bool, none_type,),  # noqa: E501
+            'hsts_max_age': (int, none_type,),  # noqa: E501
+            'ignore_certificate_revocation_failures': (bool, none_type,),  # noqa: E501
+            'maximum_file_size_bytes': (str, none_type,),  # noqa: E501
+            'maximum_file_size_supported': (bool, none_type,),  # noqa: E501
+            'secret_erase_workflow': (int, none_type,),  # noqa: E501
+            'web_password_filler_requires_full_domain_match': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -178,23 +173,23 @@ class ConfigurationSecurityModel(ModelNormal):
             allow_web_service_http_get (bool): Allows the Http Get verb for Web Services.  This allows REST-style calls to many Web Service methods, but reduces security. [optional]  # noqa: E501
             audit_tls_errors (bool): When enabled, this setting will add audits for TLS certificate validation. Auditing will apply to all Active Directory domains using LDAPS and Syslog using TLS. Certificate policy options including ignoring certificate revocation failures applies to Syslog using TLS only. The default is the most strict so the certificate chain policy may need to be updated. TLS errors will be logged to Security Audit Log found on the Administration page. [optional]  # noqa: E501
             audit_tls_errors_debug (bool): Enable TLS Debugging and Connection Tracking. [optional]  # noqa: E501
-            certificate_chain_policy_options (bool, date, datetime, dict, float, int, list, str, none_type): Certificate chain policy options. [optional]  # noqa: E501
-            client_certificate_ids (bool, date, datetime, dict, float, int, list, str, none_type): Client Certificate Thumbprint(s). [optional]  # noqa: E501
-            database_integrity_monitoring_symmetric_key (bool, date, datetime, dict, float, int, list, str, none_type): The secure symmetric key to use when sending data to the separate Database Integrity Monitoring service. This can be retrieved from the configuration utility in the Database Integrity Monitoring service install location. [optional]  # noqa: E501
+            certificate_chain_policy_options (str): Certificate chain policy options. [optional]  # noqa: E501
+            client_certificate_ids (str): Client Certificate Thumbprint(s). [optional]  # noqa: E501
+            database_integrity_monitoring_symmetric_key (str): The secure symmetric key to use when sending data to the separate Database Integrity Monitoring service. This can be retrieved from the configuration utility in the Database Integrity Monitoring service install location. [optional]  # noqa: E501
             enable_database_integrity_monitoring (bool): When enabled, Secret Server will communicate with the separately installed Database Integrity Monitoring service.  This service will send email alerts if it detects possible database tampering.  Access to Secret Server's database and web servers should be restricted to highly trusted individuals only. [optional]  # noqa: E501
             enable_file_restrictions (bool): Enable restrictions on the types or sizes of files that can be uploaded into Secret Server. [optional]  # noqa: E501
             enable_frame_blocking (bool): Enable Frame Blocking. [optional]  # noqa: E501
             enable_hsts (bool): Enable HTTP Strict Transport Security. [optional]  # noqa: E501
             enable_secret_erase (bool): Enable secret erase functionality. [optional]  # noqa: E501
-            file_extension_restrictions (bool, date, datetime, dict, float, int, list, str, none_type): File Extension Restrictions. [optional]  # noqa: E501
+            file_extension_restrictions (str): File Extension Restrictions. [optional]  # noqa: E501
             fips_enabled (bool): Allow only FIPS compliant encryption schemes to be used. [optional]  # noqa: E501
             force_https (bool): By requiring HTTPS, users will not be able to access Secret Server using HTTP. [optional]  # noqa: E501
             hide_version_number (bool): This will disable the VersionGet SOAP call. It will also hide the Secret Server Version Numbers from the Headers and Footer. [optional]  # noqa: E501
-            hsts_max_age (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Age (in seconds). [optional]  # noqa: E501
+            hsts_max_age (int): Maximum Age (in seconds). [optional]  # noqa: E501
             ignore_certificate_revocation_failures (bool): Indicates if X509RevocationMode.NoCheck certificate chain policy option is set. [optional]  # noqa: E501
-            maximum_file_size_bytes (bool, date, datetime, dict, float, int, list, str, none_type): Maximum File Size (bytes). [optional]  # noqa: E501
+            maximum_file_size_bytes (str): Maximum File Size (bytes). [optional]  # noqa: E501
             maximum_file_size_supported (bool): Maximum File Size supported by ASP.NET. [optional]  # noqa: E501
-            secret_erase_workflow (bool, date, datetime, dict, float, int, list, str, none_type): The workflow used by secret erase. [optional]  # noqa: E501
+            secret_erase_workflow (int): The workflow used by secret erase. [optional]  # noqa: E501
             web_password_filler_requires_full_domain_match (bool): When enabled, the Web Password Filler will only allow exact domain matches.  When disabled, subdomains such as https://sub.google.com will match http://google.com Secrets.  The recommended setting is enabled.. [optional]  # noqa: E501
         """
 
@@ -284,23 +279,23 @@ class ConfigurationSecurityModel(ModelNormal):
             allow_web_service_http_get (bool): Allows the Http Get verb for Web Services.  This allows REST-style calls to many Web Service methods, but reduces security. [optional]  # noqa: E501
             audit_tls_errors (bool): When enabled, this setting will add audits for TLS certificate validation. Auditing will apply to all Active Directory domains using LDAPS and Syslog using TLS. Certificate policy options including ignoring certificate revocation failures applies to Syslog using TLS only. The default is the most strict so the certificate chain policy may need to be updated. TLS errors will be logged to Security Audit Log found on the Administration page. [optional]  # noqa: E501
             audit_tls_errors_debug (bool): Enable TLS Debugging and Connection Tracking. [optional]  # noqa: E501
-            certificate_chain_policy_options (bool, date, datetime, dict, float, int, list, str, none_type): Certificate chain policy options. [optional]  # noqa: E501
-            client_certificate_ids (bool, date, datetime, dict, float, int, list, str, none_type): Client Certificate Thumbprint(s). [optional]  # noqa: E501
-            database_integrity_monitoring_symmetric_key (bool, date, datetime, dict, float, int, list, str, none_type): The secure symmetric key to use when sending data to the separate Database Integrity Monitoring service. This can be retrieved from the configuration utility in the Database Integrity Monitoring service install location. [optional]  # noqa: E501
+            certificate_chain_policy_options (str): Certificate chain policy options. [optional]  # noqa: E501
+            client_certificate_ids (str): Client Certificate Thumbprint(s). [optional]  # noqa: E501
+            database_integrity_monitoring_symmetric_key (str): The secure symmetric key to use when sending data to the separate Database Integrity Monitoring service. This can be retrieved from the configuration utility in the Database Integrity Monitoring service install location. [optional]  # noqa: E501
             enable_database_integrity_monitoring (bool): When enabled, Secret Server will communicate with the separately installed Database Integrity Monitoring service.  This service will send email alerts if it detects possible database tampering.  Access to Secret Server's database and web servers should be restricted to highly trusted individuals only. [optional]  # noqa: E501
             enable_file_restrictions (bool): Enable restrictions on the types or sizes of files that can be uploaded into Secret Server. [optional]  # noqa: E501
             enable_frame_blocking (bool): Enable Frame Blocking. [optional]  # noqa: E501
             enable_hsts (bool): Enable HTTP Strict Transport Security. [optional]  # noqa: E501
             enable_secret_erase (bool): Enable secret erase functionality. [optional]  # noqa: E501
-            file_extension_restrictions (bool, date, datetime, dict, float, int, list, str, none_type): File Extension Restrictions. [optional]  # noqa: E501
+            file_extension_restrictions (str): File Extension Restrictions. [optional]  # noqa: E501
             fips_enabled (bool): Allow only FIPS compliant encryption schemes to be used. [optional]  # noqa: E501
             force_https (bool): By requiring HTTPS, users will not be able to access Secret Server using HTTP. [optional]  # noqa: E501
             hide_version_number (bool): This will disable the VersionGet SOAP call. It will also hide the Secret Server Version Numbers from the Headers and Footer. [optional]  # noqa: E501
-            hsts_max_age (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Age (in seconds). [optional]  # noqa: E501
+            hsts_max_age (int): Maximum Age (in seconds). [optional]  # noqa: E501
             ignore_certificate_revocation_failures (bool): Indicates if X509RevocationMode.NoCheck certificate chain policy option is set. [optional]  # noqa: E501
-            maximum_file_size_bytes (bool, date, datetime, dict, float, int, list, str, none_type): Maximum File Size (bytes). [optional]  # noqa: E501
+            maximum_file_size_bytes (str): Maximum File Size (bytes). [optional]  # noqa: E501
             maximum_file_size_supported (bool): Maximum File Size supported by ASP.NET. [optional]  # noqa: E501
-            secret_erase_workflow (bool, date, datetime, dict, float, int, list, str, none_type): The workflow used by secret erase. [optional]  # noqa: E501
+            secret_erase_workflow (int): The workflow used by secret erase. [optional]  # noqa: E501
             web_password_filler_requires_full_domain_match (bool): When enabled, the Web Password Filler will only allow exact domain matches.  When disabled, subdomains such as https://sub.google.com will match http://google.com Secrets.  The recommended setting is enabled.. [optional]  # noqa: E501
         """
 

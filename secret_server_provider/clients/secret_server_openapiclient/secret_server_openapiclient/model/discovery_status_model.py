@@ -61,10 +61,8 @@ class DiscoveryStatusModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,37 +71,34 @@ class DiscoveryStatusModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'actions': ([DiscoveryActionType],),  # noqa: E501
-            'discovery_computer_scan_end_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_computer_scan_start_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_fetch_end_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_fetch_start_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_source_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_discovery_computer_scan_running': (bool,),  # noqa: E501
-            'is_discovery_enabled': (bool,),  # noqa: E501
-            'is_discovery_fetch_running': (bool,),  # noqa: E501
-            'next_computer_scan_discovery_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'next_fetch_discovery_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'actions': ([DiscoveryActionType], none_type,),  # noqa: E501
+            'discovery_computer_scan_end_date_time': (datetime, none_type,),  # noqa: E501
+            'discovery_computer_scan_start_date_time': (datetime, none_type,),  # noqa: E501
+            'discovery_fetch_end_date_time': (datetime, none_type,),  # noqa: E501
+            'discovery_fetch_start_date_time': (datetime, none_type,),  # noqa: E501
+            'discovery_source_count': (int, none_type,),  # noqa: E501
+            'is_discovery_computer_scan_running': (bool, none_type,),  # noqa: E501
+            'is_discovery_enabled': (bool, none_type,),  # noqa: E501
+            'is_discovery_fetch_running': (bool, none_type,),  # noqa: E501
+            'next_computer_scan_discovery_date_time': (datetime, none_type,),  # noqa: E501
+            'next_fetch_discovery_date_time': (datetime, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -162,16 +157,16 @@ class DiscoveryStatusModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             actions ([DiscoveryActionType]): Actions the current user can perform for Discovery. [optional]  # noqa: E501
-            discovery_computer_scan_end_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time the Scan Computer messages completed queueing last.. [optional]  # noqa: E501
-            discovery_computer_scan_start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time Scan Computer messages last started.. [optional]  # noqa: E501
-            discovery_fetch_end_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time the Host Range and Machine fetching last completed.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
-            discovery_fetch_start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time the Host Range and Machine fetching was last run or started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
-            discovery_source_count (bool, date, datetime, dict, float, int, list, str, none_type): Total number of discovery sources either active or inactive. [optional]  # noqa: E501
+            discovery_computer_scan_end_date_time (datetime): The date and time the Scan Computer messages completed queueing last.. [optional]  # noqa: E501
+            discovery_computer_scan_start_date_time (datetime): The date and time Scan Computer messages last started.. [optional]  # noqa: E501
+            discovery_fetch_end_date_time (datetime): The date and time the Host Range and Machine fetching last completed.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
+            discovery_fetch_start_date_time (datetime): The date and time the Host Range and Machine fetching was last run or started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
+            discovery_source_count (int): Total number of discovery sources either active or inactive. [optional]  # noqa: E501
             is_discovery_computer_scan_running (bool): Indicates if computer scanning is actively queueing.. [optional]  # noqa: E501
             is_discovery_enabled (bool): Indicates if Discovery is currently enabled. [optional]  # noqa: E501
             is_discovery_fetch_running (bool): Indicates if the Host Range and Machine fetching is currently running.. [optional]  # noqa: E501
-            next_computer_scan_discovery_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time computer scanning is expected to run. [optional]  # noqa: E501
-            next_fetch_discovery_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time the Host Range and Machine fetching is expected to run. [optional]  # noqa: E501
+            next_computer_scan_discovery_date_time (datetime): The next time computer scanning is expected to run. [optional]  # noqa: E501
+            next_fetch_discovery_date_time (datetime): The next time the Host Range and Machine fetching is expected to run. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -258,16 +253,16 @@ class DiscoveryStatusModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             actions ([DiscoveryActionType]): Actions the current user can perform for Discovery. [optional]  # noqa: E501
-            discovery_computer_scan_end_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time the Scan Computer messages completed queueing last.. [optional]  # noqa: E501
-            discovery_computer_scan_start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time Scan Computer messages last started.. [optional]  # noqa: E501
-            discovery_fetch_end_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time the Host Range and Machine fetching last completed.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
-            discovery_fetch_start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time the Host Range and Machine fetching was last run or started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
-            discovery_source_count (bool, date, datetime, dict, float, int, list, str, none_type): Total number of discovery sources either active or inactive. [optional]  # noqa: E501
+            discovery_computer_scan_end_date_time (datetime): The date and time the Scan Computer messages completed queueing last.. [optional]  # noqa: E501
+            discovery_computer_scan_start_date_time (datetime): The date and time Scan Computer messages last started.. [optional]  # noqa: E501
+            discovery_fetch_end_date_time (datetime): The date and time the Host Range and Machine fetching last completed.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
+            discovery_fetch_start_date_time (datetime): The date and time the Host Range and Machine fetching was last run or started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
+            discovery_source_count (int): Total number of discovery sources either active or inactive. [optional]  # noqa: E501
             is_discovery_computer_scan_running (bool): Indicates if computer scanning is actively queueing.. [optional]  # noqa: E501
             is_discovery_enabled (bool): Indicates if Discovery is currently enabled. [optional]  # noqa: E501
             is_discovery_fetch_running (bool): Indicates if the Host Range and Machine fetching is currently running.. [optional]  # noqa: E501
-            next_computer_scan_discovery_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time computer scanning is expected to run. [optional]  # noqa: E501
-            next_fetch_discovery_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time the Host Range and Machine fetching is expected to run. [optional]  # noqa: E501
+            next_computer_scan_discovery_date_time (datetime): The next time computer scanning is expected to run. [optional]  # noqa: E501
+            next_fetch_discovery_date_time (datetime): The next time the Host Range and Machine fetching is expected to run. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

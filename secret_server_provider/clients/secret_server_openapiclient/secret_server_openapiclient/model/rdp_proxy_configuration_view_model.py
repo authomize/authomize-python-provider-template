@@ -61,10 +61,8 @@ class RdpProxyConfigurationViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,36 +71,33 @@ class RdpProxyConfigurationViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_site_selection_for_active_directory_accounts': (bool,),  # noqa: E501
-            'days_to_keep_operational_logs': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_rdp_proxy': (bool,),  # noqa: E501
-            'enable_remote_host_validation': (bool,),  # noqa: E501
-            'is_cloud': (bool,),  # noqa: E501
-            'proxy_new_secrets_by_default': (bool,),  # noqa: E501
-            'rdp_proxy_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rdp_server_certificate': (RdpProxyCertificateViewModel,),  # noqa: E501
-            'rdp_server_certificate_multipart': (file,),  # noqa: E501
-            'rdp_server_certificate_multipart_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'allow_site_selection_for_active_directory_accounts': (bool, none_type,),  # noqa: E501
+            'days_to_keep_operational_logs': (int, none_type,),  # noqa: E501
+            'enable_rdp_proxy': (bool, none_type,),  # noqa: E501
+            'enable_remote_host_validation': (bool, none_type,),  # noqa: E501
+            'is_cloud': (bool, none_type,),  # noqa: E501
+            'proxy_new_secrets_by_default': (bool, none_type,),  # noqa: E501
+            'rdp_proxy_port': (int, none_type,),  # noqa: E501
+            'rdp_server_certificate': (RdpProxyCertificateViewModel, none_type,),  # noqa: E501
+            'rdp_server_certificate_multipart': (file, none_type,),  # noqa: E501
+            'rdp_server_certificate_multipart_password': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -160,15 +155,15 @@ class RdpProxyConfigurationViewModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             allow_site_selection_for_active_directory_accounts (bool): Allows users to select a site when launching or generating proxy credentials for a RDP proxied secret. [optional]  # noqa: E501
-            days_to_keep_operational_logs (bool, date, datetime, dict, float, int, list, str, none_type): The number of days to store RDP proxy logs before they are rolled over. [optional]  # noqa: E501
+            days_to_keep_operational_logs (int): The number of days to store RDP proxy logs before they are rolled over. [optional]  # noqa: E501
             enable_rdp_proxy (bool): Whether or not to enable the RDP proxy. [optional]  # noqa: E501
             enable_remote_host_validation (bool): Whether or not to enforce certificate validation on remote hosts that the proxy connects to. [optional]  # noqa: E501
             is_cloud (bool): IsCloud. [optional]  # noqa: E501
             proxy_new_secrets_by_default (bool): Whether or not new RDP-enabled secrets should be created with 'Proxy Enabled' set. [optional]  # noqa: E501
-            rdp_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): The port that the RDP proxy will run on. [optional]  # noqa: E501
+            rdp_proxy_port (int): The port that the RDP proxy will run on. [optional]  # noqa: E501
             rdp_server_certificate (RdpProxyCertificateViewModel): [optional]  # noqa: E501
             rdp_server_certificate_multipart (file): The certificate that is server when connections begin to the RDP proxy (used \"Content-Type: multipart/form-data\" only). [optional]  # noqa: E501
-            rdp_server_certificate_multipart_password (bool, date, datetime, dict, float, int, list, str, none_type): The password used to protect the certificate (only used for updating with \"Content-Type: multipart/form-data\" only). [optional]  # noqa: E501
+            rdp_server_certificate_multipart_password (str): The password used to protect the certificate (only used for updating with \"Content-Type: multipart/form-data\" only). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -255,15 +250,15 @@ class RdpProxyConfigurationViewModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             allow_site_selection_for_active_directory_accounts (bool): Allows users to select a site when launching or generating proxy credentials for a RDP proxied secret. [optional]  # noqa: E501
-            days_to_keep_operational_logs (bool, date, datetime, dict, float, int, list, str, none_type): The number of days to store RDP proxy logs before they are rolled over. [optional]  # noqa: E501
+            days_to_keep_operational_logs (int): The number of days to store RDP proxy logs before they are rolled over. [optional]  # noqa: E501
             enable_rdp_proxy (bool): Whether or not to enable the RDP proxy. [optional]  # noqa: E501
             enable_remote_host_validation (bool): Whether or not to enforce certificate validation on remote hosts that the proxy connects to. [optional]  # noqa: E501
             is_cloud (bool): IsCloud. [optional]  # noqa: E501
             proxy_new_secrets_by_default (bool): Whether or not new RDP-enabled secrets should be created with 'Proxy Enabled' set. [optional]  # noqa: E501
-            rdp_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): The port that the RDP proxy will run on. [optional]  # noqa: E501
+            rdp_proxy_port (int): The port that the RDP proxy will run on. [optional]  # noqa: E501
             rdp_server_certificate (RdpProxyCertificateViewModel): [optional]  # noqa: E501
             rdp_server_certificate_multipart (file): The certificate that is server when connections begin to the RDP proxy (used \"Content-Type: multipart/form-data\" only). [optional]  # noqa: E501
-            rdp_server_certificate_multipart_password (bool, date, datetime, dict, float, int, list, str, none_type): The password used to protect the certificate (only used for updating with \"Content-Type: multipart/form-data\" only). [optional]  # noqa: E501
+            rdp_server_certificate_multipart_password (str): The password used to protect the certificate (only used for updating with \"Content-Type: multipart/form-data\" only). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

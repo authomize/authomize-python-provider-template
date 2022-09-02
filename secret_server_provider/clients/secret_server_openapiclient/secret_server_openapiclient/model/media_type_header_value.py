@@ -61,10 +61,8 @@ class MediaTypeHeaderValue(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,29 +71,26 @@ class MediaTypeHeaderValue(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'char_set': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'media_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'parameters': ([NameValueHeaderValue],),  # noqa: E501
+            'char_set': (str, none_type,),  # noqa: E501
+            'media_type': (str, none_type,),  # noqa: E501
+            'parameters': ([NameValueHeaderValue], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,8 +140,8 @@ class MediaTypeHeaderValue(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            char_set (bool, date, datetime, dict, float, int, list, str, none_type): CharSet. [optional]  # noqa: E501
-            media_type (bool, date, datetime, dict, float, int, list, str, none_type): MediaType. [optional]  # noqa: E501
+            char_set (str): CharSet. [optional]  # noqa: E501
+            media_type (str): MediaType. [optional]  # noqa: E501
             parameters ([NameValueHeaderValue]): Parameters. [optional]  # noqa: E501
         """
 
@@ -233,8 +228,8 @@ class MediaTypeHeaderValue(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            char_set (bool, date, datetime, dict, float, int, list, str, none_type): CharSet. [optional]  # noqa: E501
-            media_type (bool, date, datetime, dict, float, int, list, str, none_type): MediaType. [optional]  # noqa: E501
+            char_set (str): CharSet. [optional]  # noqa: E501
+            media_type (str): MediaType. [optional]  # noqa: E501
             parameters ([NameValueHeaderValue]): Parameters. [optional]  # noqa: E501
         """
 

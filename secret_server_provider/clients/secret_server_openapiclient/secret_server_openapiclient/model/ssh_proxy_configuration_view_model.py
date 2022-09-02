@@ -57,10 +57,8 @@ class SshProxyConfigurationViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,49 +66,46 @@ class SshProxyConfigurationViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'available_port_range': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'days_to_keep_operational_logs': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_password_hiding': (bool,),  # noqa: E501
-            'enable_proxy_block_listing': (bool,),  # noqa: E501
-            'enable_proxy_inactivity_timeout': (bool,),  # noqa: E501
-            'enable_ssh_proxy': (bool,),  # noqa: E501
-            'enable_ssh_public_key_auth': (bool,),  # noqa: E501
-            'enable_ssh_terminal': (bool,),  # noqa: E501
-            'enable_ssh_tunneling': (bool,),  # noqa: E501
-            'enable_terminal_inactivity_timeout': (bool,),  # noqa: E501
-            'enable_window_title_change_command': (bool,),  # noqa: E501
-            'is_cloud': (bool,),  # noqa: E501
-            'password_regex_filter': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'proxy_auto_block_listing_max_num': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'proxy_auto_block_listing_time_frame_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'proxy_inactivity_timeout_seconds': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'proxy_new_secrets_by_default': (bool,),  # noqa: E501
-            'ssh_host_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_banner': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_host_fingerprint': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_terminal_banner': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'terminal_inactivity_timeout_seconds': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'tunnel_keep_alive_in_seconds': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'available_port_range': (str, none_type,),  # noqa: E501
+            'days_to_keep_operational_logs': (int, none_type,),  # noqa: E501
+            'enable_password_hiding': (bool, none_type,),  # noqa: E501
+            'enable_proxy_block_listing': (bool, none_type,),  # noqa: E501
+            'enable_proxy_inactivity_timeout': (bool, none_type,),  # noqa: E501
+            'enable_ssh_proxy': (bool, none_type,),  # noqa: E501
+            'enable_ssh_public_key_auth': (bool, none_type,),  # noqa: E501
+            'enable_ssh_terminal': (bool, none_type,),  # noqa: E501
+            'enable_ssh_tunneling': (bool, none_type,),  # noqa: E501
+            'enable_terminal_inactivity_timeout': (bool, none_type,),  # noqa: E501
+            'enable_window_title_change_command': (bool, none_type,),  # noqa: E501
+            'is_cloud': (bool, none_type,),  # noqa: E501
+            'password_regex_filter': (str, none_type,),  # noqa: E501
+            'proxy_auto_block_listing_max_num': (int, none_type,),  # noqa: E501
+            'proxy_auto_block_listing_time_frame_minutes': (int, none_type,),  # noqa: E501
+            'proxy_inactivity_timeout_seconds': (int, none_type,),  # noqa: E501
+            'proxy_new_secrets_by_default': (bool, none_type,),  # noqa: E501
+            'ssh_host_key': (str, none_type,),  # noqa: E501
+            'ssh_proxy_banner': (str, none_type,),  # noqa: E501
+            'ssh_proxy_host_fingerprint': (str, none_type,),  # noqa: E501
+            'ssh_proxy_port': (int, none_type,),  # noqa: E501
+            'ssh_terminal_banner': (str, none_type,),  # noqa: E501
+            'terminal_inactivity_timeout_seconds': (int, none_type,),  # noqa: E501
+            'tunnel_keep_alive_in_seconds': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -181,8 +176,8 @@ class SshProxyConfigurationViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            available_port_range (bool, date, datetime, dict, float, int, list, str, none_type): Range of unused ports available on the SSH Proxy endpoint to be used for Jumpbox port forwarding. [optional]  # noqa: E501
-            days_to_keep_operational_logs (bool, date, datetime, dict, float, int, list, str, none_type): The number of days to store SSH proxy logs before they are rolled over. [optional]  # noqa: E501
+            available_port_range (str): Range of unused ports available on the SSH Proxy endpoint to be used for Jumpbox port forwarding. [optional]  # noqa: E501
+            days_to_keep_operational_logs (int): The number of days to store SSH proxy logs before they are rolled over. [optional]  # noqa: E501
             enable_password_hiding (bool): Enable to hide passwords from SSH keystroke capture. This prevents logging user input on lines that are determined to be a password prompt.. [optional]  # noqa: E501
             enable_proxy_block_listing (bool): Enable block listing of IP Addresses that connect and fail to authenticate too many times. [optional]  # noqa: E501
             enable_proxy_inactivity_timeout (bool): Whether or not the proxy should disconnect inactive sessions. [optional]  # noqa: E501
@@ -193,18 +188,18 @@ class SshProxyConfigurationViewModel(ModelNormal):
             enable_terminal_inactivity_timeout (bool): Whether or not the SSH terminal should disconnect inactive sessions. [optional]  # noqa: E501
             enable_window_title_change_command (bool): Send window title change command on startup. [optional]  # noqa: E501
             is_cloud (bool): IsCloud. [optional]  # noqa: E501
-            password_regex_filter (bool, date, datetime, dict, float, int, list, str, none_type): Regular Expression used to identify password prompts. The default expression search for either prompts beginning with 'sudo password for' or prompts ending with 'password:'. [optional]  # noqa: E501
-            proxy_auto_block_listing_max_num (bool, date, datetime, dict, float, int, list, str, none_type): The number of failed authentication attempts before being blocked. [optional]  # noqa: E501
-            proxy_auto_block_listing_time_frame_minutes (bool, date, datetime, dict, float, int, list, str, none_type): The time frame in which all the failed attempts must happen before being blocked. [optional]  # noqa: E501
-            proxy_inactivity_timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): The amount of time in seconds to wait before disconnecting inactive proxy sessions. [optional]  # noqa: E501
+            password_regex_filter (str): Regular Expression used to identify password prompts. The default expression search for either prompts beginning with 'sudo password for' or prompts ending with 'password:'. [optional]  # noqa: E501
+            proxy_auto_block_listing_max_num (int): The number of failed authentication attempts before being blocked. [optional]  # noqa: E501
+            proxy_auto_block_listing_time_frame_minutes (int): The time frame in which all the failed attempts must happen before being blocked. [optional]  # noqa: E501
+            proxy_inactivity_timeout_seconds (int): The amount of time in seconds to wait before disconnecting inactive proxy sessions. [optional]  # noqa: E501
             proxy_new_secrets_by_default (bool): Whether or not new SSH-enabled secrets should be created with 'Proxy Enabled' set. [optional]  # noqa: E501
-            ssh_host_key (bool, date, datetime, dict, float, int, list, str, none_type): The host key that will the proxy will serve. [optional]  # noqa: E501
-            ssh_proxy_banner (bool, date, datetime, dict, float, int, list, str, none_type): The banner that is display when someone opens an shell connection to the proxy. [optional]  # noqa: E501
-            ssh_proxy_host_fingerprint (bool, date, datetime, dict, float, int, list, str, none_type): The fingerprint of the host key that the proxy will serve. [optional]  # noqa: E501
-            ssh_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): The port that that SSH proxy runs on. [optional]  # noqa: E501
-            ssh_terminal_banner (bool, date, datetime, dict, float, int, list, str, none_type): The banner that is displayed when someone authenticates to the SSH terminal. [optional]  # noqa: E501
-            terminal_inactivity_timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): The amount of time in seconds to wait before disconnecting inactive terminal sessions. [optional]  # noqa: E501
-            tunnel_keep_alive_in_seconds (bool, date, datetime, dict, float, int, list, str, none_type): Keep alive signals to local port forwarding tunnels at this interval (in seconds). Prevents port forwarding tunnels from closing. (0-86400) . [optional]  # noqa: E501
+            ssh_host_key (str): The host key that will the proxy will serve. [optional]  # noqa: E501
+            ssh_proxy_banner (str): The banner that is display when someone opens an shell connection to the proxy. [optional]  # noqa: E501
+            ssh_proxy_host_fingerprint (str): The fingerprint of the host key that the proxy will serve. [optional]  # noqa: E501
+            ssh_proxy_port (int): The port that that SSH proxy runs on. [optional]  # noqa: E501
+            ssh_terminal_banner (str): The banner that is displayed when someone authenticates to the SSH terminal. [optional]  # noqa: E501
+            terminal_inactivity_timeout_seconds (int): The amount of time in seconds to wait before disconnecting inactive terminal sessions. [optional]  # noqa: E501
+            tunnel_keep_alive_in_seconds (int): Keep alive signals to local port forwarding tunnels at this interval (in seconds). Prevents port forwarding tunnels from closing. (0-86400) . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -290,8 +285,8 @@ class SshProxyConfigurationViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            available_port_range (bool, date, datetime, dict, float, int, list, str, none_type): Range of unused ports available on the SSH Proxy endpoint to be used for Jumpbox port forwarding. [optional]  # noqa: E501
-            days_to_keep_operational_logs (bool, date, datetime, dict, float, int, list, str, none_type): The number of days to store SSH proxy logs before they are rolled over. [optional]  # noqa: E501
+            available_port_range (str): Range of unused ports available on the SSH Proxy endpoint to be used for Jumpbox port forwarding. [optional]  # noqa: E501
+            days_to_keep_operational_logs (int): The number of days to store SSH proxy logs before they are rolled over. [optional]  # noqa: E501
             enable_password_hiding (bool): Enable to hide passwords from SSH keystroke capture. This prevents logging user input on lines that are determined to be a password prompt.. [optional]  # noqa: E501
             enable_proxy_block_listing (bool): Enable block listing of IP Addresses that connect and fail to authenticate too many times. [optional]  # noqa: E501
             enable_proxy_inactivity_timeout (bool): Whether or not the proxy should disconnect inactive sessions. [optional]  # noqa: E501
@@ -302,18 +297,18 @@ class SshProxyConfigurationViewModel(ModelNormal):
             enable_terminal_inactivity_timeout (bool): Whether or not the SSH terminal should disconnect inactive sessions. [optional]  # noqa: E501
             enable_window_title_change_command (bool): Send window title change command on startup. [optional]  # noqa: E501
             is_cloud (bool): IsCloud. [optional]  # noqa: E501
-            password_regex_filter (bool, date, datetime, dict, float, int, list, str, none_type): Regular Expression used to identify password prompts. The default expression search for either prompts beginning with 'sudo password for' or prompts ending with 'password:'. [optional]  # noqa: E501
-            proxy_auto_block_listing_max_num (bool, date, datetime, dict, float, int, list, str, none_type): The number of failed authentication attempts before being blocked. [optional]  # noqa: E501
-            proxy_auto_block_listing_time_frame_minutes (bool, date, datetime, dict, float, int, list, str, none_type): The time frame in which all the failed attempts must happen before being blocked. [optional]  # noqa: E501
-            proxy_inactivity_timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): The amount of time in seconds to wait before disconnecting inactive proxy sessions. [optional]  # noqa: E501
+            password_regex_filter (str): Regular Expression used to identify password prompts. The default expression search for either prompts beginning with 'sudo password for' or prompts ending with 'password:'. [optional]  # noqa: E501
+            proxy_auto_block_listing_max_num (int): The number of failed authentication attempts before being blocked. [optional]  # noqa: E501
+            proxy_auto_block_listing_time_frame_minutes (int): The time frame in which all the failed attempts must happen before being blocked. [optional]  # noqa: E501
+            proxy_inactivity_timeout_seconds (int): The amount of time in seconds to wait before disconnecting inactive proxy sessions. [optional]  # noqa: E501
             proxy_new_secrets_by_default (bool): Whether or not new SSH-enabled secrets should be created with 'Proxy Enabled' set. [optional]  # noqa: E501
-            ssh_host_key (bool, date, datetime, dict, float, int, list, str, none_type): The host key that will the proxy will serve. [optional]  # noqa: E501
-            ssh_proxy_banner (bool, date, datetime, dict, float, int, list, str, none_type): The banner that is display when someone opens an shell connection to the proxy. [optional]  # noqa: E501
-            ssh_proxy_host_fingerprint (bool, date, datetime, dict, float, int, list, str, none_type): The fingerprint of the host key that the proxy will serve. [optional]  # noqa: E501
-            ssh_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): The port that that SSH proxy runs on. [optional]  # noqa: E501
-            ssh_terminal_banner (bool, date, datetime, dict, float, int, list, str, none_type): The banner that is displayed when someone authenticates to the SSH terminal. [optional]  # noqa: E501
-            terminal_inactivity_timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): The amount of time in seconds to wait before disconnecting inactive terminal sessions. [optional]  # noqa: E501
-            tunnel_keep_alive_in_seconds (bool, date, datetime, dict, float, int, list, str, none_type): Keep alive signals to local port forwarding tunnels at this interval (in seconds). Prevents port forwarding tunnels from closing. (0-86400) . [optional]  # noqa: E501
+            ssh_host_key (str): The host key that will the proxy will serve. [optional]  # noqa: E501
+            ssh_proxy_banner (str): The banner that is display when someone opens an shell connection to the proxy. [optional]  # noqa: E501
+            ssh_proxy_host_fingerprint (str): The fingerprint of the host key that the proxy will serve. [optional]  # noqa: E501
+            ssh_proxy_port (int): The port that that SSH proxy runs on. [optional]  # noqa: E501
+            ssh_terminal_banner (str): The banner that is displayed when someone authenticates to the SSH terminal. [optional]  # noqa: E501
+            terminal_inactivity_timeout_seconds (int): The amount of time in seconds to wait before disconnecting inactive terminal sessions. [optional]  # noqa: E501
+            tunnel_keep_alive_in_seconds (int): Keep alive signals to local port forwarding tunnels at this interval (in seconds). Prevents port forwarding tunnels from closing. (0-86400) . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

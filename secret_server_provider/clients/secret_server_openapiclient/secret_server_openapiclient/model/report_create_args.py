@@ -61,10 +61,8 @@ class ReportCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,35 +71,32 @@ class ReportCreateArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'category_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'report_sql': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'chart_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dual_control_approval': (DualControlApproval,),  # noqa: E501
-            'is3_d_report': (bool,),  # noqa: E501
-            'page_size': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_database_paging': (bool,),  # noqa: E501
+            'category_id': (int,),  # noqa: E501
+            'description': (str,),  # noqa: E501
+            'name': (str,),  # noqa: E501
+            'report_sql': (str,),  # noqa: E501
+            'chart_type': (str, none_type,),  # noqa: E501
+            'dual_control_approval': (DualControlApproval, none_type,),  # noqa: E501
+            'is3_d_report': (bool, none_type,),  # noqa: E501
+            'page_size': (int, none_type,),  # noqa: E501
+            'use_database_paging': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -127,10 +122,10 @@ class ReportCreateArgs(ModelNormal):
         """ReportCreateArgs - a model defined in OpenAPI
 
         Args:
-            category_id (bool, date, datetime, dict, float, int, list, str, none_type): The Category that the report should be in
-            description (bool, date, datetime, dict, float, int, list, str, none_type): The description of the new report
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the new report
-            report_sql (bool, date, datetime, dict, float, int, list, str, none_type): The SQL query that defines the report
+            category_id (int): The Category that the report should be in
+            description (str): The description of the new report
+            name (str): The name of the new report
+            report_sql (str): The SQL query that defines the report
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -163,10 +158,10 @@ class ReportCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            chart_type (bool, date, datetime, dict, float, int, list, str, none_type): The Chart type to use for the report. [optional]  # noqa: E501
+            chart_type (str): The Chart type to use for the report. [optional]  # noqa: E501
             dual_control_approval (DualControlApproval): [optional]  # noqa: E501
             is3_d_report (bool): If the report chart should be 3D or not. [optional]  # noqa: E501
-            page_size (bool, date, datetime, dict, float, int, list, str, none_type): The number of records that the report should return per page. [optional]  # noqa: E501
+            page_size (int): The number of records that the report should return per page. [optional]  # noqa: E501
             use_database_paging (bool): If true the report will attempt to do paging in the database.  If false the paging will occur on the application server.. [optional]  # noqa: E501
         """
 
@@ -227,10 +222,10 @@ class ReportCreateArgs(ModelNormal):
         """ReportCreateArgs - a model defined in OpenAPI
 
         Args:
-            category_id (bool, date, datetime, dict, float, int, list, str, none_type): The Category that the report should be in
-            description (bool, date, datetime, dict, float, int, list, str, none_type): The description of the new report
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the new report
-            report_sql (bool, date, datetime, dict, float, int, list, str, none_type): The SQL query that defines the report
+            category_id (int): The Category that the report should be in
+            description (str): The description of the new report
+            name (str): The name of the new report
+            report_sql (str): The SQL query that defines the report
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -263,10 +258,10 @@ class ReportCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            chart_type (bool, date, datetime, dict, float, int, list, str, none_type): The Chart type to use for the report. [optional]  # noqa: E501
+            chart_type (str): The Chart type to use for the report. [optional]  # noqa: E501
             dual_control_approval (DualControlApproval): [optional]  # noqa: E501
             is3_d_report (bool): If the report chart should be 3D or not. [optional]  # noqa: E501
-            page_size (bool, date, datetime, dict, float, int, list, str, none_type): The number of records that the report should return per page. [optional]  # noqa: E501
+            page_size (int): The number of records that the report should return per page. [optional]  # noqa: E501
             use_database_paging (bool): If true the report will attempt to do paging in the database.  If false the paging will occur on the application server.. [optional]  # noqa: E501
         """
 

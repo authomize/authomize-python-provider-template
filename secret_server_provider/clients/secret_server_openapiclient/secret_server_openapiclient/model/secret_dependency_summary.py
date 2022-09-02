@@ -61,10 +61,8 @@ class SecretDependencySummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,37 +71,34 @@ class SecretDependencySummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'can_test': (bool,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'machine_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'run_result': (DependencyRunResultStatus,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'service_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'can_test': (bool, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'machine_name': (str, none_type,),  # noqa: E501
+            'order': (int, none_type,),  # noqa: E501
+            'run_result': (DependencyRunResultStatus, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'service_name': (str, none_type,),  # noqa: E501
+            'type_id': (int, none_type,),  # noqa: E501
+            'type_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -163,15 +158,15 @@ class SecretDependencySummary(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             can_test (bool): Whether or not this dependency can be tested. [optional]  # noqa: E501
             enabled (bool): Whether or not this dependency is enabled. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Dependency Group that contains the Secret Dependency. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Dependency. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): The machine name that the Secret Dependency runs on. [optional]  # noqa: E501
-            order (bool, date, datetime, dict, float, int, list, str, none_type): The order for this dependency within its group. [optional]  # noqa: E501
+            group_id (int): The Id of the Dependency Group that contains the Secret Dependency. [optional]  # noqa: E501
+            id (int): The Id of the Secret Dependency. [optional]  # noqa: E501
+            machine_name (str): The machine name that the Secret Dependency runs on. [optional]  # noqa: E501
+            order (int): The order for this dependency within its group. [optional]  # noqa: E501
             run_result (DependencyRunResultStatus): [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret that the Secret Dependency is assigned to. [optional]  # noqa: E501
-            service_name (bool, date, datetime, dict, float, int, list, str, none_type): The service name of the Secret Dependency. [optional]  # noqa: E501
-            type_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the type of Secret Dependency. [optional]  # noqa: E501
-            type_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the type of Secret Dependency. [optional]  # noqa: E501
+            secret_id (int): The Id of the Secret that the Secret Dependency is assigned to. [optional]  # noqa: E501
+            service_name (str): The service name of the Secret Dependency. [optional]  # noqa: E501
+            type_id (int): The Id of the type of Secret Dependency. [optional]  # noqa: E501
+            type_name (str): The name of the type of Secret Dependency. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -259,15 +254,15 @@ class SecretDependencySummary(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             can_test (bool): Whether or not this dependency can be tested. [optional]  # noqa: E501
             enabled (bool): Whether or not this dependency is enabled. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Dependency Group that contains the Secret Dependency. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Dependency. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): The machine name that the Secret Dependency runs on. [optional]  # noqa: E501
-            order (bool, date, datetime, dict, float, int, list, str, none_type): The order for this dependency within its group. [optional]  # noqa: E501
+            group_id (int): The Id of the Dependency Group that contains the Secret Dependency. [optional]  # noqa: E501
+            id (int): The Id of the Secret Dependency. [optional]  # noqa: E501
+            machine_name (str): The machine name that the Secret Dependency runs on. [optional]  # noqa: E501
+            order (int): The order for this dependency within its group. [optional]  # noqa: E501
             run_result (DependencyRunResultStatus): [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret that the Secret Dependency is assigned to. [optional]  # noqa: E501
-            service_name (bool, date, datetime, dict, float, int, list, str, none_type): The service name of the Secret Dependency. [optional]  # noqa: E501
-            type_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the type of Secret Dependency. [optional]  # noqa: E501
-            type_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the type of Secret Dependency. [optional]  # noqa: E501
+            secret_id (int): The Id of the Secret that the Secret Dependency is assigned to. [optional]  # noqa: E501
+            service_name (str): The service name of the Secret Dependency. [optional]  # noqa: E501
+            type_id (int): The Id of the type of Secret Dependency. [optional]  # noqa: E501
+            type_name (str): The name of the type of Secret Dependency. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

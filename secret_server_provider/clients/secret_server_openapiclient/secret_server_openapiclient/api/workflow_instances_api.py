@@ -71,7 +71,7 @@ class WorkflowInstancesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -106,7 +106,7 @@ class WorkflowInstancesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Workflow Template ID
+            id (int): Workflow Template ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

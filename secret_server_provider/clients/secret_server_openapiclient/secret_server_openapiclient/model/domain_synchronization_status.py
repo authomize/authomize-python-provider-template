@@ -57,10 +57,8 @@ class DomainSynchronizationStatus(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class DomainSynchronizationStatus(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'disabled_users': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_users_updated_since_last_synchronization': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_log_entry': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'new_users_created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'new_users_created_as_disabled': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'users_removed_from_groups': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'users_with_group_membership_changes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'disabled_users': (int, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'domain_users_updated_since_last_synchronization': (int, none_type,),  # noqa: E501
+            'last_log_entry': (str, none_type,),  # noqa: E501
+            'new_users_created': (int, none_type,),  # noqa: E501
+            'new_users_created_as_disabled': (int, none_type,),  # noqa: E501
+            'users_removed_from_groups': (int, none_type,),  # noqa: E501
+            'users_with_group_membership_changes': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,14 +144,14 @@ class DomainSynchronizationStatus(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            disabled_users (bool, date, datetime, dict, float, int, list, str, none_type): Number of users that were disabled. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Which domain is this status for. [optional]  # noqa: E501
-            domain_users_updated_since_last_synchronization (bool, date, datetime, dict, float, int, list, str, none_type): Obsolete - Not populated.. [optional]  # noqa: E501
-            last_log_entry (bool, date, datetime, dict, float, int, list, str, none_type): Log Entry used for parsing. [optional]  # noqa: E501
-            new_users_created (bool, date, datetime, dict, float, int, list, str, none_type): Total new users that were created. [optional]  # noqa: E501
-            new_users_created_as_disabled (bool, date, datetime, dict, float, int, list, str, none_type): Total new users that were created and then set as disabled due to either license limits or other settings. [optional]  # noqa: E501
-            users_removed_from_groups (bool, date, datetime, dict, float, int, list, str, none_type): Total users removed from groups. [optional]  # noqa: E501
-            users_with_group_membership_changes (bool, date, datetime, dict, float, int, list, str, none_type): Total number of users that were added or removed from any group in this domain. [optional]  # noqa: E501
+            disabled_users (int): Number of users that were disabled. [optional]  # noqa: E501
+            domain_id (int): Which domain is this status for. [optional]  # noqa: E501
+            domain_users_updated_since_last_synchronization (int): Obsolete - Not populated.. [optional]  # noqa: E501
+            last_log_entry (str): Log Entry used for parsing. [optional]  # noqa: E501
+            new_users_created (int): Total new users that were created. [optional]  # noqa: E501
+            new_users_created_as_disabled (int): Total new users that were created and then set as disabled due to either license limits or other settings. [optional]  # noqa: E501
+            users_removed_from_groups (int): Total users removed from groups. [optional]  # noqa: E501
+            users_with_group_membership_changes (int): Total number of users that were added or removed from any group in this domain. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,14 +237,14 @@ class DomainSynchronizationStatus(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            disabled_users (bool, date, datetime, dict, float, int, list, str, none_type): Number of users that were disabled. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Which domain is this status for. [optional]  # noqa: E501
-            domain_users_updated_since_last_synchronization (bool, date, datetime, dict, float, int, list, str, none_type): Obsolete - Not populated.. [optional]  # noqa: E501
-            last_log_entry (bool, date, datetime, dict, float, int, list, str, none_type): Log Entry used for parsing. [optional]  # noqa: E501
-            new_users_created (bool, date, datetime, dict, float, int, list, str, none_type): Total new users that were created. [optional]  # noqa: E501
-            new_users_created_as_disabled (bool, date, datetime, dict, float, int, list, str, none_type): Total new users that were created and then set as disabled due to either license limits or other settings. [optional]  # noqa: E501
-            users_removed_from_groups (bool, date, datetime, dict, float, int, list, str, none_type): Total users removed from groups. [optional]  # noqa: E501
-            users_with_group_membership_changes (bool, date, datetime, dict, float, int, list, str, none_type): Total number of users that were added or removed from any group in this domain. [optional]  # noqa: E501
+            disabled_users (int): Number of users that were disabled. [optional]  # noqa: E501
+            domain_id (int): Which domain is this status for. [optional]  # noqa: E501
+            domain_users_updated_since_last_synchronization (int): Obsolete - Not populated.. [optional]  # noqa: E501
+            last_log_entry (str): Log Entry used for parsing. [optional]  # noqa: E501
+            new_users_created (int): Total new users that were created. [optional]  # noqa: E501
+            new_users_created_as_disabled (int): Total new users that were created and then set as disabled due to either license limits or other settings. [optional]  # noqa: E501
+            users_removed_from_groups (int): Total users removed from groups. [optional]  # noqa: E501
+            users_with_group_membership_changes (int): Total number of users that were added or removed from any group in this domain. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

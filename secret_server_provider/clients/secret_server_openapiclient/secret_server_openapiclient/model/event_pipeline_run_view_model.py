@@ -61,10 +61,8 @@ class EventPipelineRunViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,41 +71,38 @@ class EventPipelineRunViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'duration': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'end_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'entity_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_details': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_policy_run_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'item_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'queued_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (EventPipelineStatus,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'duration': (str, none_type,),  # noqa: E501
+            'end_date': (datetime, none_type,),  # noqa: E501
+            'entity_type_name': (str, none_type,),  # noqa: E501
+            'event_date_time': (datetime, none_type,),  # noqa: E501
+            'event_details': (str, none_type,),  # noqa: E501
+            'event_name': (str, none_type,),  # noqa: E501
+            'event_pipeline_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_policy_run_id': (str, none_type,),  # noqa: E501
+            'item_id': (int, none_type,),  # noqa: E501
+            'item_name': (str, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'queued_date': (datetime, none_type,),  # noqa: E501
+            'start_date': (datetime, none_type,),  # noqa: E501
+            'status': (EventPipelineStatus, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -169,20 +164,20 @@ class EventPipelineRunViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            duration (bool, date, datetime, dict, float, int, list, str, none_type): Duration. [optional]  # noqa: E501
-            end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]  # noqa: E501
-            entity_type_name (bool, date, datetime, dict, float, int, list, str, none_type): EntityTypeName. [optional]  # noqa: E501
-            event_date_time (bool, date, datetime, dict, float, int, list, str, none_type): EventDateTime. [optional]  # noqa: E501
-            event_details (bool, date, datetime, dict, float, int, list, str, none_type): EventDetails. [optional]  # noqa: E501
-            event_name (bool, date, datetime, dict, float, int, list, str, none_type): EventName. [optional]  # noqa: E501
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
-            event_pipeline_policy_run_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyRunId. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): ItemId. [optional]  # noqa: E501
-            item_name (bool, date, datetime, dict, float, int, list, str, none_type): ItemName. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            queued_date (bool, date, datetime, dict, float, int, list, str, none_type): QueuedDate. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            duration (str): Duration. [optional]  # noqa: E501
+            end_date (datetime): EndDate. [optional]  # noqa: E501
+            entity_type_name (str): EntityTypeName. [optional]  # noqa: E501
+            event_date_time (datetime): EventDateTime. [optional]  # noqa: E501
+            event_details (str): EventDetails. [optional]  # noqa: E501
+            event_name (str): EventName. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_policy_run_id (str): EventPipelinePolicyRunId. [optional]  # noqa: E501
+            item_id (int): ItemId. [optional]  # noqa: E501
+            item_name (str): ItemName. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            queued_date (datetime): QueuedDate. [optional]  # noqa: E501
+            start_date (datetime): StartDate. [optional]  # noqa: E501
             status (EventPipelineStatus): [optional]  # noqa: E501
         """
 
@@ -269,20 +264,20 @@ class EventPipelineRunViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            duration (bool, date, datetime, dict, float, int, list, str, none_type): Duration. [optional]  # noqa: E501
-            end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]  # noqa: E501
-            entity_type_name (bool, date, datetime, dict, float, int, list, str, none_type): EntityTypeName. [optional]  # noqa: E501
-            event_date_time (bool, date, datetime, dict, float, int, list, str, none_type): EventDateTime. [optional]  # noqa: E501
-            event_details (bool, date, datetime, dict, float, int, list, str, none_type): EventDetails. [optional]  # noqa: E501
-            event_name (bool, date, datetime, dict, float, int, list, str, none_type): EventName. [optional]  # noqa: E501
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
-            event_pipeline_policy_run_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyRunId. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): ItemId. [optional]  # noqa: E501
-            item_name (bool, date, datetime, dict, float, int, list, str, none_type): ItemName. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            queued_date (bool, date, datetime, dict, float, int, list, str, none_type): QueuedDate. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            duration (str): Duration. [optional]  # noqa: E501
+            end_date (datetime): EndDate. [optional]  # noqa: E501
+            entity_type_name (str): EntityTypeName. [optional]  # noqa: E501
+            event_date_time (datetime): EventDateTime. [optional]  # noqa: E501
+            event_details (str): EventDetails. [optional]  # noqa: E501
+            event_name (str): EventName. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_policy_run_id (str): EventPipelinePolicyRunId. [optional]  # noqa: E501
+            item_id (int): ItemId. [optional]  # noqa: E501
+            item_name (str): ItemName. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            queued_date (datetime): QueuedDate. [optional]  # noqa: E501
+            start_date (datetime): StartDate. [optional]  # noqa: E501
             status (EventPipelineStatus): [optional]  # noqa: E501
         """
 

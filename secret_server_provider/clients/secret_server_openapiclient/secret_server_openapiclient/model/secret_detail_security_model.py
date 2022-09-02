@@ -69,10 +69,8 @@ class SecretDetailSecurityModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,46 +79,43 @@ class SecretDetailSecurityModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_owners_unrestricted_ssh_commands': (bool,),  # noqa: E501
-            'approval_workflow': (WorkflowTemplate,),  # noqa: E501
-            'approvers': ([SecretDetailUserViewModel],),  # noqa: E501
-            'check_out_change_password_enabled': (bool,),  # noqa: E501
-            'check_out_default_interval_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_enabled': (bool,),  # noqa: E501
-            'check_out_interval_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'command_restriction_type': (CommandRestrictionType,),  # noqa: E501
-            'double_lock_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'double_lock_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'hide_launcher_password': (bool,),  # noqa: E501
-            'is_double_lock': (bool,),  # noqa: E501
-            'password_requirements': (SecretDetailSecurityPasswordRequirements,),  # noqa: E501
-            'proxy_enabled': (bool,),  # noqa: E501
-            'require_approval_type': (SecretDetailApprovalType,),  # noqa: E501
-            'requires_comment': (bool,),  # noqa: E501
-            'restricted_ssh_command_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restrict_ssh_commands': (bool,),  # noqa: E501
-            'session_recording_enabled': (bool,),  # noqa: E501
+            'allow_owners_unrestricted_ssh_commands': (bool, none_type,),  # noqa: E501
+            'approval_workflow': (WorkflowTemplate, none_type,),  # noqa: E501
+            'approvers': ([SecretDetailUserViewModel], none_type,),  # noqa: E501
+            'check_out_change_password_enabled': (bool, none_type,),  # noqa: E501
+            'check_out_default_interval_display': (str, none_type,),  # noqa: E501
+            'check_out_enabled': (bool, none_type,),  # noqa: E501
+            'check_out_interval_display': (str, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (int, none_type,),  # noqa: E501
+            'command_restriction_type': (CommandRestrictionType, none_type,),  # noqa: E501
+            'double_lock_id': (int, none_type,),  # noqa: E501
+            'double_lock_name': (str, none_type,),  # noqa: E501
+            'hide_launcher_password': (bool, none_type,),  # noqa: E501
+            'is_double_lock': (bool, none_type,),  # noqa: E501
+            'password_requirements': (SecretDetailSecurityPasswordRequirements, none_type,),  # noqa: E501
+            'proxy_enabled': (bool, none_type,),  # noqa: E501
+            'require_approval_type': (SecretDetailApprovalType, none_type,),  # noqa: E501
+            'requires_comment': (bool, none_type,),  # noqa: E501
+            'restricted_ssh_command_count': (int, none_type,),  # noqa: E501
+            'restrict_ssh_commands': (bool, none_type,),  # noqa: E501
+            'session_recording_enabled': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -191,20 +186,20 @@ class SecretDetailSecurityModel(ModelNormal):
             approval_workflow (WorkflowTemplate): [optional]  # noqa: E501
             approvers ([SecretDetailUserViewModel]): Approvers. [optional]  # noqa: E501
             check_out_change_password_enabled (bool): Check Out Change Password Enabled. [optional]  # noqa: E501
-            check_out_default_interval_display (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Default Interval Display. [optional]  # noqa: E501
+            check_out_default_interval_display (str): Check Out Default Interval Display. [optional]  # noqa: E501
             check_out_enabled (bool): Whether secret checkout is enabled. [optional]  # noqa: E501
-            check_out_interval_display (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Interval Display. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Checkout interval, in minutes. [optional]  # noqa: E501
+            check_out_interval_display (str): Check Out Interval Display. [optional]  # noqa: E501
+            check_out_interval_minutes (int): Checkout interval, in minutes. [optional]  # noqa: E501
             command_restriction_type (CommandRestrictionType): [optional]  # noqa: E501
-            double_lock_id (bool, date, datetime, dict, float, int, list, str, none_type): DoubleLock Id. [optional]  # noqa: E501
-            double_lock_name (bool, date, datetime, dict, float, int, list, str, none_type): DoubleLock Name. [optional]  # noqa: E501
+            double_lock_id (int): DoubleLock Id. [optional]  # noqa: E501
+            double_lock_name (str): DoubleLock Name. [optional]  # noqa: E501
             hide_launcher_password (bool): Hide Launcher Password. [optional]  # noqa: E501
             is_double_lock (bool): Whether double lock is enabled. [optional]  # noqa: E501
             password_requirements (SecretDetailSecurityPasswordRequirements): [optional]  # noqa: E501
             proxy_enabled (bool): Proxy Enabled. [optional]  # noqa: E501
             require_approval_type (SecretDetailApprovalType): [optional]  # noqa: E501
             requires_comment (bool): Requires Comment. [optional]  # noqa: E501
-            restricted_ssh_command_count (bool, date, datetime, dict, float, int, list, str, none_type): Restricted SSH Command Count. [optional]  # noqa: E501
+            restricted_ssh_command_count (int): Restricted SSH Command Count. [optional]  # noqa: E501
             restrict_ssh_commands (bool): Restrict SSH Commands. [optional]  # noqa: E501
             session_recording_enabled (bool): Whether session recording is enabled. [optional]  # noqa: E501
         """
@@ -296,20 +291,20 @@ class SecretDetailSecurityModel(ModelNormal):
             approval_workflow (WorkflowTemplate): [optional]  # noqa: E501
             approvers ([SecretDetailUserViewModel]): Approvers. [optional]  # noqa: E501
             check_out_change_password_enabled (bool): Check Out Change Password Enabled. [optional]  # noqa: E501
-            check_out_default_interval_display (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Default Interval Display. [optional]  # noqa: E501
+            check_out_default_interval_display (str): Check Out Default Interval Display. [optional]  # noqa: E501
             check_out_enabled (bool): Whether secret checkout is enabled. [optional]  # noqa: E501
-            check_out_interval_display (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Interval Display. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Checkout interval, in minutes. [optional]  # noqa: E501
+            check_out_interval_display (str): Check Out Interval Display. [optional]  # noqa: E501
+            check_out_interval_minutes (int): Checkout interval, in minutes. [optional]  # noqa: E501
             command_restriction_type (CommandRestrictionType): [optional]  # noqa: E501
-            double_lock_id (bool, date, datetime, dict, float, int, list, str, none_type): DoubleLock Id. [optional]  # noqa: E501
-            double_lock_name (bool, date, datetime, dict, float, int, list, str, none_type): DoubleLock Name. [optional]  # noqa: E501
+            double_lock_id (int): DoubleLock Id. [optional]  # noqa: E501
+            double_lock_name (str): DoubleLock Name. [optional]  # noqa: E501
             hide_launcher_password (bool): Hide Launcher Password. [optional]  # noqa: E501
             is_double_lock (bool): Whether double lock is enabled. [optional]  # noqa: E501
             password_requirements (SecretDetailSecurityPasswordRequirements): [optional]  # noqa: E501
             proxy_enabled (bool): Proxy Enabled. [optional]  # noqa: E501
             require_approval_type (SecretDetailApprovalType): [optional]  # noqa: E501
             requires_comment (bool): Requires Comment. [optional]  # noqa: E501
-            restricted_ssh_command_count (bool, date, datetime, dict, float, int, list, str, none_type): Restricted SSH Command Count. [optional]  # noqa: E501
+            restricted_ssh_command_count (int): Restricted SSH Command Count. [optional]  # noqa: E501
             restrict_ssh_commands (bool): Restrict SSH Commands. [optional]  # noqa: E501
             session_recording_enabled (bool): Whether session recording is enabled. [optional]  # noqa: E501
         """

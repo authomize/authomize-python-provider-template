@@ -61,10 +61,8 @@ class PasswordTypeSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,39 +71,36 @@ class PasswordTypeSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'can_edit': (bool,),  # noqa: E501
-            'has_commands': (bool,),  # noqa: E501
-            'heartbeat_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ignore_ssl': (bool,),  # noqa: E501
-            'is_web': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'required_edition': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rpc_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'runner_type': (RunnerType,),  # noqa: E501
-            'scan_item_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_ssl': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'can_edit': (bool, none_type,),  # noqa: E501
+            'has_commands': (bool, none_type,),  # noqa: E501
+            'heartbeat_script_id': (int, none_type,),  # noqa: E501
+            'ignore_ssl': (bool, none_type,),  # noqa: E501
+            'is_web': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'password_type_id': (int, none_type,),  # noqa: E501
+            'required_edition': (str, none_type,),  # noqa: E501
+            'rpc_script_id': (int, none_type,),  # noqa: E501
+            'runner_type': (RunnerType, none_type,),  # noqa: E501
+            'scan_item_template_id': (int, none_type,),  # noqa: E501
+            'use_ssl': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -168,15 +163,15 @@ class PasswordTypeSummary(ModelNormal):
             active (bool): Active. [optional]  # noqa: E501
             can_edit (bool): CanEdit. [optional]  # noqa: E501
             has_commands (bool): HasCommands. [optional]  # noqa: E501
-            heartbeat_script_id (bool, date, datetime, dict, float, int, list, str, none_type): HeartbeatScriptId. [optional]  # noqa: E501
+            heartbeat_script_id (int): HeartbeatScriptId. [optional]  # noqa: E501
             ignore_ssl (bool): IgnoreSSL. [optional]  # noqa: E501
             is_web (bool): IsWeb. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): PasswordTypeId. [optional]  # noqa: E501
-            required_edition (bool, date, datetime, dict, float, int, list, str, none_type): RequiredEdition. [optional]  # noqa: E501
-            rpc_script_id (bool, date, datetime, dict, float, int, list, str, none_type): RPCScriptId. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            password_type_id (int): PasswordTypeId. [optional]  # noqa: E501
+            required_edition (str): RequiredEdition. [optional]  # noqa: E501
+            rpc_script_id (int): RPCScriptId. [optional]  # noqa: E501
             runner_type (RunnerType): [optional]  # noqa: E501
-            scan_item_template_id (bool, date, datetime, dict, float, int, list, str, none_type): ScanItemTemplateId. [optional]  # noqa: E501
+            scan_item_template_id (int): ScanItemTemplateId. [optional]  # noqa: E501
             use_ssl (bool): UseSSL. [optional]  # noqa: E501
         """
 
@@ -266,15 +261,15 @@ class PasswordTypeSummary(ModelNormal):
             active (bool): Active. [optional]  # noqa: E501
             can_edit (bool): CanEdit. [optional]  # noqa: E501
             has_commands (bool): HasCommands. [optional]  # noqa: E501
-            heartbeat_script_id (bool, date, datetime, dict, float, int, list, str, none_type): HeartbeatScriptId. [optional]  # noqa: E501
+            heartbeat_script_id (int): HeartbeatScriptId. [optional]  # noqa: E501
             ignore_ssl (bool): IgnoreSSL. [optional]  # noqa: E501
             is_web (bool): IsWeb. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): PasswordTypeId. [optional]  # noqa: E501
-            required_edition (bool, date, datetime, dict, float, int, list, str, none_type): RequiredEdition. [optional]  # noqa: E501
-            rpc_script_id (bool, date, datetime, dict, float, int, list, str, none_type): RPCScriptId. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            password_type_id (int): PasswordTypeId. [optional]  # noqa: E501
+            required_edition (str): RequiredEdition. [optional]  # noqa: E501
+            rpc_script_id (int): RPCScriptId. [optional]  # noqa: E501
             runner_type (RunnerType): [optional]  # noqa: E501
-            scan_item_template_id (bool, date, datetime, dict, float, int, list, str, none_type): ScanItemTemplateId. [optional]  # noqa: E501
+            scan_item_template_id (int): ScanItemTemplateId. [optional]  # noqa: E501
             use_ssl (bool): UseSSL. [optional]  # noqa: E501
         """
 

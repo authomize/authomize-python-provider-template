@@ -57,10 +57,8 @@ class DashboardViewSecretItem(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,39 +66,36 @@ class DashboardViewSecretItem(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'file_attachment_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_allowed_to_view_password': (bool,),  # noqa: E501
-            'is_file': (bool,),  # noqa: E501
-            'is_notes': (bool,),  # noqa: E501
-            'is_password': (bool,),  # noqa: E501
-            'is_url': (bool,),  # noqa: E501
-            'label': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'never_show_password': (bool,),  # noqa: E501
-            'password_is_masked_by_default': (bool,),  # noqa: E501
-            'secret_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'slug': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'file_attachment_id': (int, none_type,),  # noqa: E501
+            'file_name': (str, none_type,),  # noqa: E501
+            'is_allowed_to_view_password': (bool, none_type,),  # noqa: E501
+            'is_file': (bool, none_type,),  # noqa: E501
+            'is_notes': (bool, none_type,),  # noqa: E501
+            'is_password': (bool, none_type,),  # noqa: E501
+            'is_url': (bool, none_type,),  # noqa: E501
+            'label': (str, none_type,),  # noqa: E501
+            'never_show_password': (bool, none_type,),  # noqa: E501
+            'password_is_masked_by_default': (bool, none_type,),  # noqa: E501
+            'secret_field_id': (int, none_type,),  # noqa: E501
+            'secret_item_id': (int, none_type,),  # noqa: E501
+            'slug': (str, none_type,),  # noqa: E501
+            'value': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -161,20 +156,20 @@ class DashboardViewSecretItem(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            file_attachment_id (bool, date, datetime, dict, float, int, list, str, none_type): fileAttachmentId. [optional]  # noqa: E501
-            file_name (bool, date, datetime, dict, float, int, list, str, none_type): fileName. [optional]  # noqa: E501
+            file_attachment_id (int): fileAttachmentId. [optional]  # noqa: E501
+            file_name (str): fileName. [optional]  # noqa: E501
             is_allowed_to_view_password (bool): isAllowedToViewPassword. [optional]  # noqa: E501
             is_file (bool): isFile. [optional]  # noqa: E501
             is_notes (bool): isNotes. [optional]  # noqa: E501
             is_password (bool): isPassword. [optional]  # noqa: E501
             is_url (bool): isUrl. [optional]  # noqa: E501
-            label (bool, date, datetime, dict, float, int, list, str, none_type): label. [optional]  # noqa: E501
+            label (str): label. [optional]  # noqa: E501
             never_show_password (bool): neverShowPassword. [optional]  # noqa: E501
             password_is_masked_by_default (bool): passwordIsMaskedByDefault. [optional]  # noqa: E501
-            secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): secretFieldId. [optional]  # noqa: E501
-            secret_item_id (bool, date, datetime, dict, float, int, list, str, none_type): secretItemId. [optional]  # noqa: E501
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): slug. [optional]  # noqa: E501
-            value (bool, date, datetime, dict, float, int, list, str, none_type): value. [optional]  # noqa: E501
+            secret_field_id (int): secretFieldId. [optional]  # noqa: E501
+            secret_item_id (int): secretItemId. [optional]  # noqa: E501
+            slug (str): slug. [optional]  # noqa: E501
+            value (str): value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -260,20 +255,20 @@ class DashboardViewSecretItem(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            file_attachment_id (bool, date, datetime, dict, float, int, list, str, none_type): fileAttachmentId. [optional]  # noqa: E501
-            file_name (bool, date, datetime, dict, float, int, list, str, none_type): fileName. [optional]  # noqa: E501
+            file_attachment_id (int): fileAttachmentId. [optional]  # noqa: E501
+            file_name (str): fileName. [optional]  # noqa: E501
             is_allowed_to_view_password (bool): isAllowedToViewPassword. [optional]  # noqa: E501
             is_file (bool): isFile. [optional]  # noqa: E501
             is_notes (bool): isNotes. [optional]  # noqa: E501
             is_password (bool): isPassword. [optional]  # noqa: E501
             is_url (bool): isUrl. [optional]  # noqa: E501
-            label (bool, date, datetime, dict, float, int, list, str, none_type): label. [optional]  # noqa: E501
+            label (str): label. [optional]  # noqa: E501
             never_show_password (bool): neverShowPassword. [optional]  # noqa: E501
             password_is_masked_by_default (bool): passwordIsMaskedByDefault. [optional]  # noqa: E501
-            secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): secretFieldId. [optional]  # noqa: E501
-            secret_item_id (bool, date, datetime, dict, float, int, list, str, none_type): secretItemId. [optional]  # noqa: E501
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): slug. [optional]  # noqa: E501
-            value (bool, date, datetime, dict, float, int, list, str, none_type): value. [optional]  # noqa: E501
+            secret_field_id (int): secretFieldId. [optional]  # noqa: E501
+            secret_item_id (int): secretItemId. [optional]  # noqa: E501
+            slug (str): slug. [optional]  # noqa: E501
+            value (str): value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

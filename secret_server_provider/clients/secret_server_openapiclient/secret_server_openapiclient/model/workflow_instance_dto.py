@@ -61,10 +61,8 @@ class WorkflowInstanceDto(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,39 +71,36 @@ class WorkflowInstanceDto(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'configuration_json': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'current_state': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'current_state_info_json': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'current_step_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'current_step_state': (AccessRequestState,),  # noqa: E501
-            'end_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'entity_workflow_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pending_transaction': (bool,),  # noqa: E501
-            'start_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'workflow_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'configuration_json': (str, none_type,),  # noqa: E501
+            'current_state': (str, none_type,),  # noqa: E501
+            'current_state_info_json': (str, none_type,),  # noqa: E501
+            'current_step_id': (int, none_type,),  # noqa: E501
+            'current_step_state': (AccessRequestState, none_type,),  # noqa: E501
+            'end_time': (datetime, none_type,),  # noqa: E501
+            'entity_workflow_map_id': (int, none_type,),  # noqa: E501
+            'expiration_time': (datetime, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'pending_transaction': (bool, none_type,),  # noqa: E501
+            'start_time': (datetime, none_type,),  # noqa: E501
+            'status': (str, none_type,),  # noqa: E501
+            'workflow_template_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,19 +160,19 @@ class WorkflowInstanceDto(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            configuration_json (bool, date, datetime, dict, float, int, list, str, none_type): ConfigurationJson. [optional]  # noqa: E501
-            current_state (bool, date, datetime, dict, float, int, list, str, none_type): CurrentState. [optional]  # noqa: E501
-            current_state_info_json (bool, date, datetime, dict, float, int, list, str, none_type): CurrentStateInfoJson. [optional]  # noqa: E501
-            current_step_id (bool, date, datetime, dict, float, int, list, str, none_type): CurrentStepId. [optional]  # noqa: E501
+            configuration_json (str): ConfigurationJson. [optional]  # noqa: E501
+            current_state (str): CurrentState. [optional]  # noqa: E501
+            current_state_info_json (str): CurrentStateInfoJson. [optional]  # noqa: E501
+            current_step_id (int): CurrentStepId. [optional]  # noqa: E501
             current_step_state (AccessRequestState): [optional]  # noqa: E501
-            end_time (bool, date, datetime, dict, float, int, list, str, none_type): EndTime. [optional]  # noqa: E501
-            entity_workflow_map_id (bool, date, datetime, dict, float, int, list, str, none_type): EntityWorkflowMapId. [optional]  # noqa: E501
-            expiration_time (bool, date, datetime, dict, float, int, list, str, none_type): ExpirationTime. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
+            end_time (datetime): EndTime. [optional]  # noqa: E501
+            entity_workflow_map_id (int): EntityWorkflowMapId. [optional]  # noqa: E501
+            expiration_time (datetime): ExpirationTime. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
             pending_transaction (bool): PendingTransaction. [optional]  # noqa: E501
-            start_time (bool, date, datetime, dict, float, int, list, str, none_type): StartTime. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]  # noqa: E501
-            workflow_template_id (bool, date, datetime, dict, float, int, list, str, none_type): WorkflowTemplateId. [optional]  # noqa: E501
+            start_time (datetime): StartTime. [optional]  # noqa: E501
+            status (str): Status. [optional]  # noqa: E501
+            workflow_template_id (int): WorkflowTemplateId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -263,19 +258,19 @@ class WorkflowInstanceDto(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            configuration_json (bool, date, datetime, dict, float, int, list, str, none_type): ConfigurationJson. [optional]  # noqa: E501
-            current_state (bool, date, datetime, dict, float, int, list, str, none_type): CurrentState. [optional]  # noqa: E501
-            current_state_info_json (bool, date, datetime, dict, float, int, list, str, none_type): CurrentStateInfoJson. [optional]  # noqa: E501
-            current_step_id (bool, date, datetime, dict, float, int, list, str, none_type): CurrentStepId. [optional]  # noqa: E501
+            configuration_json (str): ConfigurationJson. [optional]  # noqa: E501
+            current_state (str): CurrentState. [optional]  # noqa: E501
+            current_state_info_json (str): CurrentStateInfoJson. [optional]  # noqa: E501
+            current_step_id (int): CurrentStepId. [optional]  # noqa: E501
             current_step_state (AccessRequestState): [optional]  # noqa: E501
-            end_time (bool, date, datetime, dict, float, int, list, str, none_type): EndTime. [optional]  # noqa: E501
-            entity_workflow_map_id (bool, date, datetime, dict, float, int, list, str, none_type): EntityWorkflowMapId. [optional]  # noqa: E501
-            expiration_time (bool, date, datetime, dict, float, int, list, str, none_type): ExpirationTime. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
+            end_time (datetime): EndTime. [optional]  # noqa: E501
+            entity_workflow_map_id (int): EntityWorkflowMapId. [optional]  # noqa: E501
+            expiration_time (datetime): ExpirationTime. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
             pending_transaction (bool): PendingTransaction. [optional]  # noqa: E501
-            start_time (bool, date, datetime, dict, float, int, list, str, none_type): StartTime. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]  # noqa: E501
-            workflow_template_id (bool, date, datetime, dict, float, int, list, str, none_type): WorkflowTemplateId. [optional]  # noqa: E501
+            start_time (datetime): StartTime. [optional]  # noqa: E501
+            status (str): Status. [optional]  # noqa: E501
+            workflow_template_id (int): WorkflowTemplateId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -57,10 +57,8 @@ class EventPipelinePolicyModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class EventPipelinePolicyModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'created_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_entity_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_policy_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_policy_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_system': (bool,),  # noqa: E501
-            'last_modified_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_modified_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'created_date': (datetime, none_type,),  # noqa: E501
+            'event_entity_type_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_policy_description': (str, none_type,),  # noqa: E501
+            'event_pipeline_policy_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_policy_name': (str, none_type,),  # noqa: E501
+            'is_system': (bool, none_type,),  # noqa: E501
+            'last_modified_date': (datetime, none_type,),  # noqa: E501
+            'last_modified_display_name': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -154,15 +149,15 @@ class EventPipelinePolicyModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): If the Policy is Active. [optional]  # noqa: E501
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): The Date the Policy was created. [optional]  # noqa: E501
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Type Id. [optional]  # noqa: E501
-            event_pipeline_policy_description (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy Description. [optional]  # noqa: E501
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy Id. [optional]  # noqa: E501
-            event_pipeline_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy Name. [optional]  # noqa: E501
+            created_date (datetime): The Date the Policy was created. [optional]  # noqa: E501
+            event_entity_type_id (int): Event Pipeline Type Id. [optional]  # noqa: E501
+            event_pipeline_policy_description (str): Event Pipeline Policy Description. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): Event Pipeline Policy Id. [optional]  # noqa: E501
+            event_pipeline_policy_name (str): Event Pipeline Policy Name. [optional]  # noqa: E501
             is_system (bool): Event pipeline policy used by the system. [optional]  # noqa: E501
-            last_modified_date (bool, date, datetime, dict, float, int, list, str, none_type): The Date the Policy was last modified. [optional]  # noqa: E501
-            last_modified_display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name of the user who last modified the Policy. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order. [optional]  # noqa: E501
+            last_modified_date (datetime): The Date the Policy was last modified. [optional]  # noqa: E501
+            last_modified_display_name (str): The display name of the user who last modified the Policy. [optional]  # noqa: E501
+            sort_order (int): Sort Order. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -249,15 +244,15 @@ class EventPipelinePolicyModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): If the Policy is Active. [optional]  # noqa: E501
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): The Date the Policy was created. [optional]  # noqa: E501
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Type Id. [optional]  # noqa: E501
-            event_pipeline_policy_description (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy Description. [optional]  # noqa: E501
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy Id. [optional]  # noqa: E501
-            event_pipeline_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy Name. [optional]  # noqa: E501
+            created_date (datetime): The Date the Policy was created. [optional]  # noqa: E501
+            event_entity_type_id (int): Event Pipeline Type Id. [optional]  # noqa: E501
+            event_pipeline_policy_description (str): Event Pipeline Policy Description. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): Event Pipeline Policy Id. [optional]  # noqa: E501
+            event_pipeline_policy_name (str): Event Pipeline Policy Name. [optional]  # noqa: E501
             is_system (bool): Event pipeline policy used by the system. [optional]  # noqa: E501
-            last_modified_date (bool, date, datetime, dict, float, int, list, str, none_type): The Date the Policy was last modified. [optional]  # noqa: E501
-            last_modified_display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name of the user who last modified the Policy. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order. [optional]  # noqa: E501
+            last_modified_date (datetime): The Date the Policy was last modified. [optional]  # noqa: E501
+            last_modified_display_name (str): The display name of the user who last modified the Policy. [optional]  # noqa: E501
+            sort_order (int): Sort Order. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

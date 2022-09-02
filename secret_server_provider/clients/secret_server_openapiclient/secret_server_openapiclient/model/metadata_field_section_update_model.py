@@ -63,10 +63,8 @@ class MetadataFieldSectionUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,30 +73,27 @@ class MetadataFieldSectionUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'metadata_field_section_description': (UpdateFieldValueOfString,),  # noqa: E501
-            'metadata_field_section_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'metadata_field_section_requires_administer_metadata': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'metadata_field_section_requires_entity_edit': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'metadata_field_section_description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'metadata_field_section_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'metadata_field_section_requires_administer_metadata': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'metadata_field_section_requires_entity_edit': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

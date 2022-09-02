@@ -61,10 +61,8 @@ class PasswordRequirementCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,39 +71,36 @@ class PasswordRequirementCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allowed_character_set_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'allow_minimum_character_sets': (bool,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_default': (bool,),  # noqa: E501
-            'max_password_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'minimum_required_character_sets': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'min_password_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_requirement_rules': ([PasswordRequirementRuleCreateModel],),  # noqa: E501
-            'prevent_dictionary_words': (bool,),  # noqa: E501
-            'prevent_sequential_pattern': (bool,),  # noqa: E501
-            'prevent_spatial_pattern': (bool,),  # noqa: E501
-            'prevent_username': (bool,),  # noqa: E501
+            'allowed_character_set_id': (int, none_type,),  # noqa: E501
+            'allow_minimum_character_sets': (bool, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'is_default': (bool, none_type,),  # noqa: E501
+            'max_password_length': (int, none_type,),  # noqa: E501
+            'minimum_required_character_sets': (int, none_type,),  # noqa: E501
+            'min_password_length': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'password_requirement_rules': ([PasswordRequirementRuleCreateModel], none_type,),  # noqa: E501
+            'prevent_dictionary_words': (bool, none_type,),  # noqa: E501
+            'prevent_sequential_pattern': (bool, none_type,),  # noqa: E501
+            'prevent_spatial_pattern': (bool, none_type,),  # noqa: E501
+            'prevent_username': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,14 +160,14 @@ class PasswordRequirementCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allowed_character_set_id (bool, date, datetime, dict, float, int, list, str, none_type): Allowed Character Set. [optional]  # noqa: E501
+            allowed_character_set_id (int): Allowed Character Set. [optional]  # noqa: E501
             allow_minimum_character_sets (bool): Allow Minimum Character Sets. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
             is_default (bool): Is Default. [optional]  # noqa: E501
-            max_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Password Length. [optional]  # noqa: E501
-            minimum_required_character_sets (bool, date, datetime, dict, float, int, list, str, none_type): Minimum Required Character Sets. [optional]  # noqa: E501
-            min_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Minimum Password Length. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
+            max_password_length (int): Maximum Password Length. [optional]  # noqa: E501
+            minimum_required_character_sets (int): Minimum Required Character Sets. [optional]  # noqa: E501
+            min_password_length (int): Minimum Password Length. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
             password_requirement_rules ([PasswordRequirementRuleCreateModel]): Password Requirement Rule Create Models. [optional]  # noqa: E501
             prevent_dictionary_words (bool): Prevent Dictionary Words. [optional]  # noqa: E501
             prevent_sequential_pattern (bool): Prevent Sequential Pattern. [optional]  # noqa: E501
@@ -263,14 +258,14 @@ class PasswordRequirementCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allowed_character_set_id (bool, date, datetime, dict, float, int, list, str, none_type): Allowed Character Set. [optional]  # noqa: E501
+            allowed_character_set_id (int): Allowed Character Set. [optional]  # noqa: E501
             allow_minimum_character_sets (bool): Allow Minimum Character Sets. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
             is_default (bool): Is Default. [optional]  # noqa: E501
-            max_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Password Length. [optional]  # noqa: E501
-            minimum_required_character_sets (bool, date, datetime, dict, float, int, list, str, none_type): Minimum Required Character Sets. [optional]  # noqa: E501
-            min_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Minimum Password Length. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
+            max_password_length (int): Maximum Password Length. [optional]  # noqa: E501
+            minimum_required_character_sets (int): Minimum Required Character Sets. [optional]  # noqa: E501
+            min_password_length (int): Minimum Password Length. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
             password_requirement_rules ([PasswordRequirementRuleCreateModel]): Password Requirement Rule Create Models. [optional]  # noqa: E501
             prevent_dictionary_words (bool): Prevent Dictionary Words. [optional]  # noqa: E501
             prevent_sequential_pattern (bool): Prevent Sequential Pattern. [optional]  # noqa: E501

@@ -57,10 +57,8 @@ class ConfigurationLoginTwoFactorDuoModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class ConfigurationLoginTwoFactorDuoModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'api_hostname': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable': (bool,),  # noqa: E501
-            'integration_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_radius_username': (bool,),  # noqa: E501
+            'api_hostname': (str, none_type,),  # noqa: E501
+            'enable': (bool, none_type,),  # noqa: E501
+            'integration_key': (str, none_type,),  # noqa: E501
+            'secret_key': (str, none_type,),  # noqa: E501
+            'use_radius_username': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,10 +138,10 @@ class ConfigurationLoginTwoFactorDuoModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            api_hostname (bool, date, datetime, dict, float, int, list, str, none_type): API Hostname. [optional]  # noqa: E501
+            api_hostname (str): API Hostname. [optional]  # noqa: E501
             enable (bool): Enable Duo Integration. [optional]  # noqa: E501
-            integration_key (bool, date, datetime, dict, float, int, list, str, none_type): Integration Key. [optional]  # noqa: E501
-            secret_key (bool, date, datetime, dict, float, int, list, str, none_type): Secret Key. [optional]  # noqa: E501
+            integration_key (str): Integration Key. [optional]  # noqa: E501
+            secret_key (str): Secret Key. [optional]  # noqa: E501
             use_radius_username (bool): Use RADIUS Username for DUO. [optional]  # noqa: E501
         """
 
@@ -233,10 +228,10 @@ class ConfigurationLoginTwoFactorDuoModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            api_hostname (bool, date, datetime, dict, float, int, list, str, none_type): API Hostname. [optional]  # noqa: E501
+            api_hostname (str): API Hostname. [optional]  # noqa: E501
             enable (bool): Enable Duo Integration. [optional]  # noqa: E501
-            integration_key (bool, date, datetime, dict, float, int, list, str, none_type): Integration Key. [optional]  # noqa: E501
-            secret_key (bool, date, datetime, dict, float, int, list, str, none_type): Secret Key. [optional]  # noqa: E501
+            integration_key (str): Integration Key. [optional]  # noqa: E501
+            secret_key (str): Secret Key. [optional]  # noqa: E501
             use_radius_username (bool): Use RADIUS Username for DUO. [optional]  # noqa: E501
         """
 

@@ -61,10 +61,8 @@ class InboxRuleCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,37 +71,34 @@ class InboxRuleCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'can_edit_own_subscription': (bool,),  # noqa: E501
-            'conditions': ([InboxRuleConditionCreateModel],),  # noqa: E501
-            'high_priority': (bool,),  # noqa: E501
-            'inbox_email_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_message_type_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'inbox_slack_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_immediate': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'send_email': (bool,),  # noqa: E501
-            'send_slack': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'can_edit_own_subscription': (bool, none_type,),  # noqa: E501
+            'conditions': ([InboxRuleConditionCreateModel], none_type,),  # noqa: E501
+            'high_priority': (bool, none_type,),  # noqa: E501
+            'inbox_email_template_id': (int, none_type,),  # noqa: E501
+            'inbox_message_type_ids': ([int], none_type,),  # noqa: E501
+            'inbox_slack_template_id': (int, none_type,),  # noqa: E501
+            'is_immediate': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'send_email': (bool, none_type,),  # noqa: E501
+            'send_slack': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,11 +160,11 @@ class InboxRuleCreateModel(ModelNormal):
             can_edit_own_subscription (bool): Can Edit Own Subscription. [optional]  # noqa: E501
             conditions ([InboxRuleConditionCreateModel]): Conditions. [optional]  # noqa: E501
             high_priority (bool): High Priority. [optional]  # noqa: E501
-            inbox_email_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Email Template. [optional]  # noqa: E501
-            inbox_message_type_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Inbox Message Types. [optional]  # noqa: E501
-            inbox_slack_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Slack Template. [optional]  # noqa: E501
+            inbox_email_template_id (int): Email Template. [optional]  # noqa: E501
+            inbox_message_type_ids ([int]): Inbox Message Types. [optional]  # noqa: E501
+            inbox_slack_template_id (int): Slack Template. [optional]  # noqa: E501
             is_immediate (bool): Is Immediate. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
             send_email (bool): Send Email. [optional]  # noqa: E501
             send_slack (bool): Send Slack. [optional]  # noqa: E501
         """
@@ -261,11 +256,11 @@ class InboxRuleCreateModel(ModelNormal):
             can_edit_own_subscription (bool): Can Edit Own Subscription. [optional]  # noqa: E501
             conditions ([InboxRuleConditionCreateModel]): Conditions. [optional]  # noqa: E501
             high_priority (bool): High Priority. [optional]  # noqa: E501
-            inbox_email_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Email Template. [optional]  # noqa: E501
-            inbox_message_type_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Inbox Message Types. [optional]  # noqa: E501
-            inbox_slack_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Slack Template. [optional]  # noqa: E501
+            inbox_email_template_id (int): Email Template. [optional]  # noqa: E501
+            inbox_message_type_ids ([int]): Inbox Message Types. [optional]  # noqa: E501
+            inbox_slack_template_id (int): Slack Template. [optional]  # noqa: E501
             is_immediate (bool): Is Immediate. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
             send_email (bool): Send Email. [optional]  # noqa: E501
             send_slack (bool): Send Slack. [optional]  # noqa: E501
         """

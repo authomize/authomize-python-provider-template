@@ -58,11 +58,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = "id_example" # str | id
     jumpbox_route_level_create_args = JumpboxRouteLevelCreateArgs(
         data=JumpboxRouteLevelCreateModel(
-            port=None,
-            secret_id=None,
+            port=1,
+            secret_id=1,
         ),
     ) # JumpboxRouteLevelCreateArgs | args (optional)
 
@@ -89,7 +89,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **str**| id |
  **jumpbox_route_level_create_args** | [**JumpboxRouteLevelCreateArgs**](JumpboxRouteLevelCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -162,8 +162,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     jumpbox_route_create_args = JumpboxRouteCreateArgs(
         data=JumpboxRouteCreateModel(
             active=True,
-            description=None,
-            name=None,
+            description="description_example",
+            name="name_example",
         ),
     ) # JumpboxRouteCreateArgs | args (optional)
 
@@ -249,8 +249,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
-    order = None # bool, date, datetime, dict, float, int, list, str, none_type | order
+    id = "id_example" # str | id
+    order = 1 # int | order
 
     # example passing only required values which don't have defaults set
     try:
@@ -266,8 +266,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
- **order** | **bool, date, datetime, dict, float, int, list, str, none_type**| order |
+ **id** | **str**| id |
+ **order** | **int**| order |
 
 ### Return type
 
@@ -335,7 +335,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Jumpbox Route Id
+    id = "id_example" # str | Jumpbox Route Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -351,7 +351,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Jumpbox Route Id |
+ **id** | **str**| Jumpbox Route Id |
 
 ### Return type
 
@@ -419,7 +419,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Jumpbox Route Id
+    id = "id_example" # str | Jumpbox Route Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -435,7 +435,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Jumpbox Route Id |
+ **id** | **str**| Jumpbox Route Id |
 
 ### Return type
 
@@ -505,12 +505,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
     filter_include_active = True # bool | IncludeActive (optional)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchTerm (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_term = "filter.searchTerm_example" # str | SearchTerm (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -529,12 +529,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_active** | **bool**| IncludeActive | [optional]
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchTerm | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_term** | **str**| SearchTerm | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -602,14 +602,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = "id_example" # str | id
     is_exporting = True # bool | isExporting (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchTerm (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_term = "filter.searchTerm_example" # str | SearchTerm (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -634,14 +634,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **str**| id |
  **is_exporting** | **bool**| isExporting | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchTerm | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_term** | **str**| SearchTerm | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -710,21 +710,21 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
-    order = None # bool, date, datetime, dict, float, int, list, str, none_type | order
+    id = "id_example" # str | id
+    order = 1 # int | order
     jumpbox_route_level_patch_args = JumpboxRouteLevelPatchArgs(
         data=JumpboxRouteLevelPatchModel(
             order=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             port=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             secret_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # JumpboxRouteLevelPatchArgs | args (optional)
@@ -752,8 +752,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
- **order** | **bool, date, datetime, dict, float, int, list, str, none_type**| order |
+ **id** | **str**| id |
+ **order** | **int**| order |
  **jumpbox_route_level_patch_args** | [**JumpboxRouteLevelPatchArgs**](JumpboxRouteLevelPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -824,12 +824,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
     filter_include_active = True # bool | IncludeActive (optional)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchTerm (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_term = "filter.searchTerm_example" # str | SearchTerm (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -848,12 +848,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_active** | **bool**| IncludeActive | [optional]
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchTerm | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_term** | **str**| SearchTerm | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -922,7 +922,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = jumpbox_route_api.JumpboxRouteApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = "id_example" # str | id
     jumpbox_route_patch_args = JumpboxRoutePatchArgs(
         data=JumpboxRoutePatchModel(
             active=UpdateFieldValueOfBoolean(
@@ -931,12 +931,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
-            jumpbox_route_id=None,
+            jumpbox_route_id="jumpbox_route_id_example",
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # JumpboxRoutePatchArgs | jumpboxRouteUpdateArgs (optional)
@@ -964,7 +964,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **str**| id |
  **jumpbox_route_patch_args** | [**JumpboxRoutePatchArgs**](JumpboxRoutePatchArgs.md)| jumpboxRouteUpdateArgs | [optional]
 
 ### Return type

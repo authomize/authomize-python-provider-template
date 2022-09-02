@@ -71,10 +71,8 @@ class SecretPolicySecurityItemsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,47 +81,44 @@ class SecretPolicySecurityItemsModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_owners_unrestricted_ssh_commands': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'approval_groups': (SecretPolicyItemOfUserGroupMapModelArray,),  # noqa: E501
-            'approval_workflow': (SecretPolicyItemOfOptionalInt32,),  # noqa: E501
-            'check_out_change_password': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'check_out_enabled': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'check_out_interval_minutes': (SecretPolicyItemOfOptionalInt32,),  # noqa: E501
-            'enable_ssh_command_restrictions': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'event_pipeline_policy': (SecretPolicyItemOfOptionalInt32,),  # noqa: E501
-            'hide_launcher_password': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'is_proxy_enabled': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'is_session_recording_enabled': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'require_approval_for_access': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'require_approval_for_access_for_editors': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'require_approval_for_access_for_owners_and_approvers': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'require_view_comment': (SecretPolicyItemOfOptionalBoolean,),  # noqa: E501
-            'run_launcher_using_ssh_key_secret_id': (SecretPolicyItemOfOptionalInt32,),  # noqa: E501
-            'ssh_command_blocklist_editors': (SecretPolicyItemOfOptionalGuid,),  # noqa: E501
-            'ssh_command_blocklist_owners': (SecretPolicyItemOfOptionalGuid,),  # noqa: E501
-            'ssh_command_blocklist_viewers': (SecretPolicyItemOfOptionalGuid,),  # noqa: E501
-            'ssh_command_menu_groups': (SecretPolicyItemOfSshCommandMenuGroupMapModelArray,),  # noqa: E501
-            'ssh_command_restriction_type': (SecretPolicyItemOfOptionalCommandRestrictionType,),  # noqa: E501
+            'allow_owners_unrestricted_ssh_commands': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'approval_groups': (SecretPolicyItemOfUserGroupMapModelArray, none_type,),  # noqa: E501
+            'approval_workflow': (SecretPolicyItemOfOptionalInt32, none_type,),  # noqa: E501
+            'check_out_change_password': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'check_out_enabled': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (SecretPolicyItemOfOptionalInt32, none_type,),  # noqa: E501
+            'enable_ssh_command_restrictions': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'event_pipeline_policy': (SecretPolicyItemOfOptionalInt32, none_type,),  # noqa: E501
+            'hide_launcher_password': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'is_proxy_enabled': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'is_session_recording_enabled': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'require_approval_for_access': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'require_approval_for_access_for_editors': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'require_approval_for_access_for_owners_and_approvers': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'require_view_comment': (SecretPolicyItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'run_launcher_using_ssh_key_secret_id': (SecretPolicyItemOfOptionalInt32, none_type,),  # noqa: E501
+            'ssh_command_blocklist_editors': (SecretPolicyItemOfOptionalGuid, none_type,),  # noqa: E501
+            'ssh_command_blocklist_owners': (SecretPolicyItemOfOptionalGuid, none_type,),  # noqa: E501
+            'ssh_command_blocklist_viewers': (SecretPolicyItemOfOptionalGuid, none_type,),  # noqa: E501
+            'ssh_command_menu_groups': (SecretPolicyItemOfSshCommandMenuGroupMapModelArray, none_type,),  # noqa: E501
+            'ssh_command_restriction_type': (SecretPolicyItemOfOptionalCommandRestrictionType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

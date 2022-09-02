@@ -54,8 +54,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_extensions_api.SecretExtensionsApi(api_client)
     extension_auto_fill_value_args = ExtensionAutoFillValueArgs(
-        secret_id=None,
-        url=None,
+        secret_id=1,
+        url="url_example",
     ) # ExtensionAutoFillValueArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -221,7 +221,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_extensions_api.SecretExtensionsApi(api_client)
-    body = None # bool, date, datetime, dict, float, int, list, str, none_type | url (optional)
+    body = "body_example" # str | url (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -238,7 +238,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **bool, date, datetime, dict, float, int, list, str, none_type**| url | [optional]
+ **body** | **str**| url | [optional]
 
 ### Return type
 
@@ -306,7 +306,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_extensions_api.SecretExtensionsApi(api_client)
-    body = None # bool, date, datetime, dict, float, int, list, str, none_type | domain (optional)
+    body = "body_example" # str | domain (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -323,7 +323,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **bool, date, datetime, dict, float, int, list, str, none_type**| domain | [optional]
+ **body** | **str**| domain | [optional]
 
 ### Return type
 
@@ -391,7 +391,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_extensions_api.SecretExtensionsApi(api_client)
-    body = None # bool, date, datetime, dict, float, int, list, str, none_type | computerName (optional)
+    body = "body_example" # str | computerName (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -408,7 +408,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **bool, date, datetime, dict, float, int, list, str, none_type**| computerName | [optional]
+ **body** | **str**| computerName | [optional]
 
 ### Return type
 

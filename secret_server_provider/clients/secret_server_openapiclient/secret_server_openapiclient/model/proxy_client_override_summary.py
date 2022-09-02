@@ -61,10 +61,8 @@ class ProxyClientOverrideSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,29 +71,26 @@ class ProxyClientOverrideSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'client_override_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ip_address_range': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'terminal_client_type': (ProxyClientType,),  # noqa: E501
+            'client_override_id': (int, none_type,),  # noqa: E501
+            'ip_address_range': (str, none_type,),  # noqa: E501
+            'terminal_client_type': (ProxyClientType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,8 +140,8 @@ class ProxyClientOverrideSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            client_override_id (bool, date, datetime, dict, float, int, list, str, none_type): ClientOverrideId. [optional]  # noqa: E501
-            ip_address_range (bool, date, datetime, dict, float, int, list, str, none_type): IpAddressRange. [optional]  # noqa: E501
+            client_override_id (int): ClientOverrideId. [optional]  # noqa: E501
+            ip_address_range (str): IpAddressRange. [optional]  # noqa: E501
             terminal_client_type (ProxyClientType): [optional]  # noqa: E501
         """
 
@@ -233,8 +228,8 @@ class ProxyClientOverrideSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            client_override_id (bool, date, datetime, dict, float, int, list, str, none_type): ClientOverrideId. [optional]  # noqa: E501
-            ip_address_range (bool, date, datetime, dict, float, int, list, str, none_type): IpAddressRange. [optional]  # noqa: E501
+            client_override_id (int): ClientOverrideId. [optional]  # noqa: E501
+            ip_address_range (str): IpAddressRange. [optional]  # noqa: E501
             terminal_client_type (ProxyClientType): [optional]  # noqa: E501
         """
 

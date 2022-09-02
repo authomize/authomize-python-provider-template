@@ -5,7 +5,7 @@ Data
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**allowed_templates** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | AllowedTemplates | [optional] 
+**allowed_templates** | **[int]** | AllowedTemplates | [optional] 
 **allow_remove_owner** | **bool** | AllowRemoveOwner | [optional] 
 **enable_inherit_permissions** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
 **enable_inherit_secret_policy** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 

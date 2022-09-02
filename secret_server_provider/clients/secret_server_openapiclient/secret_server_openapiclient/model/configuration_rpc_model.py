@@ -57,10 +57,8 @@ class ConfigurationRpcModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class ConfigurationRpcModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'check_out_interval_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_interval_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'days_to_keep_logs': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_heartbeat': (bool,),  # noqa: E501
-            'enable_password_change_on_check_in': (bool,),  # noqa: E501
-            'enable_rpc': (bool,),  # noqa: E501
+            'check_out_interval_days': (int, none_type,),  # noqa: E501
+            'check_out_interval_hours': (int, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (int, none_type,),  # noqa: E501
+            'days_to_keep_logs': (int, none_type,),  # noqa: E501
+            'enable_heartbeat': (bool, none_type,),  # noqa: E501
+            'enable_password_change_on_check_in': (bool, none_type,),  # noqa: E501
+            'enable_rpc': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,10 +142,10 @@ class ConfigurationRpcModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            check_out_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Interval Days. [optional]  # noqa: E501
-            check_out_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Interval Hours. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Interval Minutes. [optional]  # noqa: E501
-            days_to_keep_logs (bool, date, datetime, dict, float, int, list, str, none_type): How many days to keep the operational logs. [optional]  # noqa: E501
+            check_out_interval_days (int): Check Out Interval Days. [optional]  # noqa: E501
+            check_out_interval_hours (int): Check Out Interval Hours. [optional]  # noqa: E501
+            check_out_interval_minutes (int): Check Out Interval Minutes. [optional]  # noqa: E501
+            days_to_keep_logs (int): How many days to keep the operational logs. [optional]  # noqa: E501
             enable_heartbeat (bool): Whether or not heartbeat is enabled. [optional]  # noqa: E501
             enable_password_change_on_check_in (bool): Whether or not to allow changing the password when a Secret is checked in. [optional]  # noqa: E501
             enable_rpc (bool): Whether or not RPC is enabled. [optional]  # noqa: E501
@@ -239,10 +234,10 @@ class ConfigurationRpcModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            check_out_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Interval Days. [optional]  # noqa: E501
-            check_out_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Interval Hours. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Check Out Interval Minutes. [optional]  # noqa: E501
-            days_to_keep_logs (bool, date, datetime, dict, float, int, list, str, none_type): How many days to keep the operational logs. [optional]  # noqa: E501
+            check_out_interval_days (int): Check Out Interval Days. [optional]  # noqa: E501
+            check_out_interval_hours (int): Check Out Interval Hours. [optional]  # noqa: E501
+            check_out_interval_minutes (int): Check Out Interval Minutes. [optional]  # noqa: E501
+            days_to_keep_logs (int): How many days to keep the operational logs. [optional]  # noqa: E501
             enable_heartbeat (bool): Whether or not heartbeat is enabled. [optional]  # noqa: E501
             enable_password_change_on_check_in (bool): Whether or not to allow changing the password when a Secret is checked in. [optional]  # noqa: E501
             enable_rpc (bool): Whether or not RPC is enabled. [optional]  # noqa: E501

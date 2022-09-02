@@ -57,10 +57,8 @@ class ChangeSecretsPasswordsRemotelyModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class ChangeSecretsPasswordsRemotelyModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'force_next_key_reset': (bool,),  # noqa: E501
-            'generate_ssh_key': (bool,),  # noqa: E501
-            'next_passphrase': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'next_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'next_private_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
+            'force_next_key_reset': (bool, none_type,),  # noqa: E501
+            'generate_ssh_key': (bool, none_type,),  # noqa: E501
+            'next_passphrase': (str, none_type,),  # noqa: E501
+            'next_password': (str, none_type,),  # noqa: E501
+            'next_private_key': (str, none_type,),  # noqa: E501
+            'secret_ids': ([int], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,10 +142,10 @@ class ChangeSecretsPasswordsRemotelyModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             force_next_key_reset (bool): Set if the next key reset is forced.. [optional]  # noqa: E501
             generate_ssh_key (bool): Set if a SSH Key should be generated.. [optional]  # noqa: E501
-            next_passphrase (bool, date, datetime, dict, float, int, list, str, none_type): Next passphrase to change secrets to.. [optional]  # noqa: E501
-            next_password (bool, date, datetime, dict, float, int, list, str, none_type): Next password to change secrets to.. [optional]  # noqa: E501
-            next_private_key (bool, date, datetime, dict, float, int, list, str, none_type): Next private key to change secrets to.. [optional]  # noqa: E501
-            secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Ids of Secrets to change password remotely.. [optional]  # noqa: E501
+            next_passphrase (str): Next passphrase to change secrets to.. [optional]  # noqa: E501
+            next_password (str): Next password to change secrets to.. [optional]  # noqa: E501
+            next_private_key (str): Next private key to change secrets to.. [optional]  # noqa: E501
+            secret_ids ([int]): Ids of Secrets to change password remotely.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -238,10 +233,10 @@ class ChangeSecretsPasswordsRemotelyModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             force_next_key_reset (bool): Set if the next key reset is forced.. [optional]  # noqa: E501
             generate_ssh_key (bool): Set if a SSH Key should be generated.. [optional]  # noqa: E501
-            next_passphrase (bool, date, datetime, dict, float, int, list, str, none_type): Next passphrase to change secrets to.. [optional]  # noqa: E501
-            next_password (bool, date, datetime, dict, float, int, list, str, none_type): Next password to change secrets to.. [optional]  # noqa: E501
-            next_private_key (bool, date, datetime, dict, float, int, list, str, none_type): Next private key to change secrets to.. [optional]  # noqa: E501
-            secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Ids of Secrets to change password remotely.. [optional]  # noqa: E501
+            next_passphrase (str): Next passphrase to change secrets to.. [optional]  # noqa: E501
+            next_password (str): Next password to change secrets to.. [optional]  # noqa: E501
+            next_private_key (str): Next private key to change secrets to.. [optional]  # noqa: E501
+            secret_ids ([int]): Ids of Secrets to change password remotely.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

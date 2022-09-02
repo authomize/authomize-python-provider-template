@@ -57,10 +57,8 @@ class SecretPolicyStatusModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class SecretPolicyStatusModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'in_progress_secret_count': (float,),  # noqa: E501
-            'secret_count': (float,),  # noqa: E501
-            'secret_percent_complete': (float,),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'in_progress_secret_count': (float, none_type,),  # noqa: E501
+            'secret_count': (float, none_type,),  # noqa: E501
+            'secret_percent_complete': (float, none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -144,7 +139,7 @@ class SecretPolicyStatusModel(ModelNormal):
             in_progress_secret_count (float): Number of secrets that are queued to change to the queried policy.. [optional]  # noqa: E501
             secret_count (float): Number of secrets the policy is applied to.. [optional]  # noqa: E501
             secret_percent_complete (float): Completion percentage for the applied secrets. Value is between 0 and 1. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of the Secret Policy. [optional]  # noqa: E501
+            secret_policy_id (int): Id of the Secret Policy. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,7 +228,7 @@ class SecretPolicyStatusModel(ModelNormal):
             in_progress_secret_count (float): Number of secrets that are queued to change to the queried policy.. [optional]  # noqa: E501
             secret_count (float): Number of secrets the policy is applied to.. [optional]  # noqa: E501
             secret_percent_complete (float): Completion percentage for the applied secrets. Value is between 0 and 1. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of the Secret Policy. [optional]  # noqa: E501
+            secret_policy_id (int): Id of the Secret Policy. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

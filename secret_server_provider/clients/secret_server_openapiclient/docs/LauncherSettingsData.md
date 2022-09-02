@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **allow_printers** | **bool** | AllowPrinters | [optional] 
 **allow_smart_cards** | **bool** | AllowSmartCards | [optional] 
 **connect_to_console** | **bool** | ConnectToConsole | [optional] 
-**launcher_height** | **bool, date, datetime, dict, float, int, list, str, none_type** | LauncherHeight | [optional] 
-**launcher_width** | **bool, date, datetime, dict, float, int, list, str, none_type** | LauncherWidth | [optional] 
+**launcher_height** | **int** | LauncherHeight | [optional] 
+**launcher_width** | **int** | LauncherWidth | [optional] 
 **use_custom_launcher_resolution** | **bool** | UseCustomLauncherResolution | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

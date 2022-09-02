@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **is_system** | **bool** | Is System | [optional] 
 **rules** | [**[InboxRuleModel]**](InboxRuleModel.md) | Rules leveraging this Template | [optional] 
-**template_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | Inbox Template Id | [optional] 
-**template_name** | **bool, date, datetime, dict, float, int, list, str, none_type** | Inbox Template Name | [optional] 
+**template_id** | **int** | Inbox Template Id | [optional] 
+**template_name** | **str** | Inbox Template Name | [optional] 
 **template_type** | [**InboxTemplateType**](InboxTemplateType.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

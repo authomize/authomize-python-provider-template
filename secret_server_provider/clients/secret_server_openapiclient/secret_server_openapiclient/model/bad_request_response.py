@@ -57,10 +57,8 @@ class BadRequestResponse(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class BadRequestResponse(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'message_detail': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'error_code': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'model_state': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'message': (str,),  # noqa: E501
+            'message_detail': (str, none_type,),  # noqa: E501
+            'error_code': (str, none_type,),  # noqa: E501
+            'model_state': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -111,7 +106,7 @@ class BadRequestResponse(ModelNormal):
         """BadRequestResponse - a model defined in OpenAPI
 
         Args:
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Error message
+            message (str): Error message
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -144,8 +139,8 @@ class BadRequestResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            message_detail (bool, date, datetime, dict, float, int, list, str, none_type): Error message detail. [optional]  # noqa: E501
-            error_code (bool, date, datetime, dict, float, int, list, str, none_type): Error message code. [optional]  # noqa: E501
+            message_detail (str): Error message detail. [optional]  # noqa: E501
+            error_code (str): Error message code. [optional]  # noqa: E501
             model_state ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): An object describing validation errors. [optional]  # noqa: E501
         """
 
@@ -203,7 +198,7 @@ class BadRequestResponse(ModelNormal):
         """BadRequestResponse - a model defined in OpenAPI
 
         Args:
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Error message
+            message (str): Error message
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -236,8 +231,8 @@ class BadRequestResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            message_detail (bool, date, datetime, dict, float, int, list, str, none_type): Error message detail. [optional]  # noqa: E501
-            error_code (bool, date, datetime, dict, float, int, list, str, none_type): Error message code. [optional]  # noqa: E501
+            message_detail (str): Error message detail. [optional]  # noqa: E501
+            error_code (str): Error message code. [optional]  # noqa: E501
             model_state ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): An object describing validation errors. [optional]  # noqa: E501
         """
 

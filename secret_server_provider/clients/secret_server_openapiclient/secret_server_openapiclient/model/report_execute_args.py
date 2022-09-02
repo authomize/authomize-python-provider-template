@@ -63,10 +63,8 @@ class ReportExecuteArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,39 +73,36 @@ class ReportExecuteArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'dual_control_approval': (DualControlApproval,),  # noqa: E501
-            'encode_html': (bool,),  # noqa: E501
-            'end_record_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_ascending': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'order_by_field_ordinal': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'page_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'parameters': ([ReportParameter],),  # noqa: E501
-            'preview_sql': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'records_per_page': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_record_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_default_parameters': (bool,),  # noqa: E501
+            'dual_control_approval': (DualControlApproval, none_type,),  # noqa: E501
+            'encode_html': (bool, none_type,),  # noqa: E501
+            'end_record_number': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_ascending': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'order_by_field_ordinal': (int, none_type,),  # noqa: E501
+            'page_number': (int, none_type,),  # noqa: E501
+            'parameters': ([ReportParameter], none_type,),  # noqa: E501
+            'preview_sql': (str, none_type,),  # noqa: E501
+            'records_per_page': (int, none_type,),  # noqa: E501
+            'start_record_number': (int, none_type,),  # noqa: E501
+            'use_default_parameters': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -169,16 +164,16 @@ class ReportExecuteArgs(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             dual_control_approval (DualControlApproval): [optional]  # noqa: E501
             encode_html (bool): True to encode data as HTML, defaults to true if not provided. [optional]  # noqa: E501
-            end_record_number (bool, date, datetime, dict, float, int, list, str, none_type): End Record Number when taking a specific set of records, passing this will override PageNumber and RecordsPerPage. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the report to run. Optional: will use Name if provided. [optional]  # noqa: E501
+            end_record_number (int): End Record Number when taking a specific set of records, passing this will override PageNumber and RecordsPerPage. [optional]  # noqa: E501
+            id (int): The Id of the report to run. Optional: will use Name if provided. [optional]  # noqa: E501
             is_ascending (bool): Flag determining sort direction of custom sort. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the report to run. Optional: will use Id if provided. [optional]  # noqa: E501
-            order_by_field_ordinal (bool, date, datetime, dict, float, int, list, str, none_type): Ordinal of Field for custom OrderBy of results. [optional]  # noqa: E501
-            page_number (bool, date, datetime, dict, float, int, list, str, none_type): Page number for paging results. All records returned if null. [optional]  # noqa: E501
+            name (str): The name of the report to run. Optional: will use Id if provided. [optional]  # noqa: E501
+            order_by_field_ordinal (int): Ordinal of Field for custom OrderBy of results. [optional]  # noqa: E501
+            page_number (int): Page number for paging results. All records returned if null. [optional]  # noqa: E501
             parameters ([ReportParameter]): The parameters of the report. [optional]  # noqa: E501
-            preview_sql (bool, date, datetime, dict, float, int, list, str, none_type): When passed the report will be previewed with this sql. [optional]  # noqa: E501
-            records_per_page (bool, date, datetime, dict, float, int, list, str, none_type): Number of records per page for paging results. [optional]  # noqa: E501
-            start_record_number (bool, date, datetime, dict, float, int, list, str, none_type): Start Record Number when taking a specific set of records, passing this will override PageNumber and RecordsPerPage. [optional]  # noqa: E501
+            preview_sql (str): When passed the report will be previewed with this sql. [optional]  # noqa: E501
+            records_per_page (int): Number of records per page for paging results. [optional]  # noqa: E501
+            start_record_number (int): Start Record Number when taking a specific set of records, passing this will override PageNumber and RecordsPerPage. [optional]  # noqa: E501
             use_default_parameters (bool): If a report contains a parameter but it is not passed the default value will be used on the server. [optional]  # noqa: E501
         """
 
@@ -267,16 +262,16 @@ class ReportExecuteArgs(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             dual_control_approval (DualControlApproval): [optional]  # noqa: E501
             encode_html (bool): True to encode data as HTML, defaults to true if not provided. [optional]  # noqa: E501
-            end_record_number (bool, date, datetime, dict, float, int, list, str, none_type): End Record Number when taking a specific set of records, passing this will override PageNumber and RecordsPerPage. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the report to run. Optional: will use Name if provided. [optional]  # noqa: E501
+            end_record_number (int): End Record Number when taking a specific set of records, passing this will override PageNumber and RecordsPerPage. [optional]  # noqa: E501
+            id (int): The Id of the report to run. Optional: will use Name if provided. [optional]  # noqa: E501
             is_ascending (bool): Flag determining sort direction of custom sort. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the report to run. Optional: will use Id if provided. [optional]  # noqa: E501
-            order_by_field_ordinal (bool, date, datetime, dict, float, int, list, str, none_type): Ordinal of Field for custom OrderBy of results. [optional]  # noqa: E501
-            page_number (bool, date, datetime, dict, float, int, list, str, none_type): Page number for paging results. All records returned if null. [optional]  # noqa: E501
+            name (str): The name of the report to run. Optional: will use Id if provided. [optional]  # noqa: E501
+            order_by_field_ordinal (int): Ordinal of Field for custom OrderBy of results. [optional]  # noqa: E501
+            page_number (int): Page number for paging results. All records returned if null. [optional]  # noqa: E501
             parameters ([ReportParameter]): The parameters of the report. [optional]  # noqa: E501
-            preview_sql (bool, date, datetime, dict, float, int, list, str, none_type): When passed the report will be previewed with this sql. [optional]  # noqa: E501
-            records_per_page (bool, date, datetime, dict, float, int, list, str, none_type): Number of records per page for paging results. [optional]  # noqa: E501
-            start_record_number (bool, date, datetime, dict, float, int, list, str, none_type): Start Record Number when taking a specific set of records, passing this will override PageNumber and RecordsPerPage. [optional]  # noqa: E501
+            preview_sql (str): When passed the report will be previewed with this sql. [optional]  # noqa: E501
+            records_per_page (int): Number of records per page for paging results. [optional]  # noqa: E501
+            start_record_number (int): Start Record Number when taking a specific set of records, passing this will override PageNumber and RecordsPerPage. [optional]  # noqa: E501
             use_default_parameters (bool): If a report contains a parameter but it is not passed the default value will be used on the server. [optional]  # noqa: E501
         """
 

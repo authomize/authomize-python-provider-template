@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **advanced_settings** | [**[ConfigurationAdvancedUpdateArgs]**](ConfigurationAdvancedUpdateArgs.md) | Advanced Configuration Settings | [optional] 
 **application_settings** | [**ConfigurationApplicationSettingsPatchModel**](ConfigurationApplicationSettingsPatchModel.md) |  | [optional] 
-**configuration_version** | **bool, date, datetime, dict, float, int, list, str, none_type** | Export Configuration Version | [optional] 
+**configuration_version** | **str** | Export Configuration Version | [optional] 
 **email** | [**ConfigurationEmailPatchModel**](ConfigurationEmailPatchModel.md) |  | [optional] 
-**external_instance_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | ID for specific instance | [optional] 
+**external_instance_id** | **str** | ID for specific instance | [optional] 
 **folder_settings** | [**ConfigurationFoldersPatchModel**](ConfigurationFoldersPatchModel.md) |  | [optional] 
 **launcher_settings** | [**ConfigurationLauncherSettingsPatchModel**](ConfigurationLauncherSettingsPatchModel.md) |  | [optional] 
 **licenses** | [**[LicenseModel]**](LicenseModel.md) | Licenses (on-perm only) | [optional] 

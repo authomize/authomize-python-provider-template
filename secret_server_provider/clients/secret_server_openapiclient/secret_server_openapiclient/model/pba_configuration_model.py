@@ -61,10 +61,8 @@ class PbaConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,51 +71,48 @@ class PbaConfigurationModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_import_data': (bool,),  # noqa: E501
-            'challenge_enabled': (bool,),  # noqa: E501
-            'challenge_lockout_integrated_enabled': (bool,),  # noqa: E501
-            'challenge_lockout_saml_enabled': (bool,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'encryption_enabled': (bool,),  # noqa: E501
-            'event_data_upload_interval': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_data_upload_size_threshold': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'external_pba_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_upload_enabled': (bool,),  # noqa: E501
-            'first_enabled_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_interval': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_last_synchronized': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pba_integration_key_set': (bool,),  # noqa: E501
-            'pba_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pba_key_created_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pba_key_status': (ApplicationKeyStatus,),  # noqa: E501
-            'respect_owner_editor_require_approval_enabled': (bool,),  # noqa: E501
-            'retention_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_server_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_server_key_created_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_server_key_status': (ApplicationKeyStatus,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'storage_directory_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'warning_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'allow_import_data': (bool, none_type,),  # noqa: E501
+            'challenge_enabled': (bool, none_type,),  # noqa: E501
+            'challenge_lockout_integrated_enabled': (bool, none_type,),  # noqa: E501
+            'challenge_lockout_saml_enabled': (bool, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'encryption_enabled': (bool, none_type,),  # noqa: E501
+            'event_data_upload_interval': (int, none_type,),  # noqa: E501
+            'event_data_upload_size_threshold': (int, none_type,),  # noqa: E501
+            'external_pba_url': (str, none_type,),  # noqa: E501
+            'file_upload_enabled': (bool, none_type,),  # noqa: E501
+            'first_enabled_date': (datetime, none_type,),  # noqa: E501
+            'metadata_interval': (int, none_type,),  # noqa: E501
+            'metadata_last_synchronized': (datetime, none_type,),  # noqa: E501
+            'pba_integration_key_set': (bool, none_type,),  # noqa: E501
+            'pba_key': (str, none_type,),  # noqa: E501
+            'pba_key_created_date': (datetime, none_type,),  # noqa: E501
+            'pba_key_status': (ApplicationKeyStatus, none_type,),  # noqa: E501
+            'respect_owner_editor_require_approval_enabled': (bool, none_type,),  # noqa: E501
+            'retention_days': (int, none_type,),  # noqa: E501
+            'secret_server_key': (str, none_type,),  # noqa: E501
+            'secret_server_key_created_date': (datetime, none_type,),  # noqa: E501
+            'secret_server_key_status': (ApplicationKeyStatus, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'storage_directory_path': (str, none_type,),  # noqa: E501
+            'warning_message': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -195,25 +190,25 @@ class PbaConfigurationModel(ModelNormal):
             challenge_lockout_saml_enabled (bool): Challenge Lockout SAML Enabled. [optional]  # noqa: E501
             enabled (bool): Enabled. [optional]  # noqa: E501
             encryption_enabled (bool): Encryption Enabled. [optional]  # noqa: E501
-            event_data_upload_interval (bool, date, datetime, dict, float, int, list, str, none_type): Event Data Upload Interval. [optional]  # noqa: E501
-            event_data_upload_size_threshold (bool, date, datetime, dict, float, int, list, str, none_type): Event Data Upload Size Threshold. [optional]  # noqa: E501
-            external_pba_url (bool, date, datetime, dict, float, int, list, str, none_type): External PBA URL. [optional]  # noqa: E501
+            event_data_upload_interval (int): Event Data Upload Interval. [optional]  # noqa: E501
+            event_data_upload_size_threshold (int): Event Data Upload Size Threshold. [optional]  # noqa: E501
+            external_pba_url (str): External PBA URL. [optional]  # noqa: E501
             file_upload_enabled (bool): File Upload Enabled. [optional]  # noqa: E501
-            first_enabled_date (bool, date, datetime, dict, float, int, list, str, none_type): First Enabled Date. [optional]  # noqa: E501
-            metadata_interval (bool, date, datetime, dict, float, int, list, str, none_type): Metadata Interval. [optional]  # noqa: E501
-            metadata_last_synchronized (bool, date, datetime, dict, float, int, list, str, none_type): Metadata Last Synchronized. [optional]  # noqa: E501
+            first_enabled_date (datetime): First Enabled Date. [optional]  # noqa: E501
+            metadata_interval (int): Metadata Interval. [optional]  # noqa: E501
+            metadata_last_synchronized (datetime): Metadata Last Synchronized. [optional]  # noqa: E501
             pba_integration_key_set (bool): PBA Integration Key Set. [optional]  # noqa: E501
-            pba_key (bool, date, datetime, dict, float, int, list, str, none_type): PBA Key. [optional]  # noqa: E501
-            pba_key_created_date (bool, date, datetime, dict, float, int, list, str, none_type): PBA Key Created Date. [optional]  # noqa: E501
+            pba_key (str): PBA Key. [optional]  # noqa: E501
+            pba_key_created_date (datetime): PBA Key Created Date. [optional]  # noqa: E501
             pba_key_status (ApplicationKeyStatus): [optional]  # noqa: E501
             respect_owner_editor_require_approval_enabled (bool): Respect Owner Editor Require Approval Enabled. [optional]  # noqa: E501
-            retention_days (bool, date, datetime, dict, float, int, list, str, none_type): Retention Days. [optional]  # noqa: E501
-            secret_server_key (bool, date, datetime, dict, float, int, list, str, none_type): Secret Server Key. [optional]  # noqa: E501
-            secret_server_key_created_date (bool, date, datetime, dict, float, int, list, str, none_type): Secret Server Key Created Date. [optional]  # noqa: E501
+            retention_days (int): Retention Days. [optional]  # noqa: E501
+            secret_server_key (str): Secret Server Key. [optional]  # noqa: E501
+            secret_server_key_created_date (datetime): Secret Server Key Created Date. [optional]  # noqa: E501
             secret_server_key_status (ApplicationKeyStatus): [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site. [optional]  # noqa: E501
-            storage_directory_path (bool, date, datetime, dict, float, int, list, str, none_type): Storage Directory Path. [optional]  # noqa: E501
-            warning_message (bool, date, datetime, dict, float, int, list, str, none_type): Warning Message. [optional]  # noqa: E501
+            site_id (int): Id of Site. [optional]  # noqa: E501
+            storage_directory_path (str): Storage Directory Path. [optional]  # noqa: E501
+            warning_message (str): Warning Message. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -305,25 +300,25 @@ class PbaConfigurationModel(ModelNormal):
             challenge_lockout_saml_enabled (bool): Challenge Lockout SAML Enabled. [optional]  # noqa: E501
             enabled (bool): Enabled. [optional]  # noqa: E501
             encryption_enabled (bool): Encryption Enabled. [optional]  # noqa: E501
-            event_data_upload_interval (bool, date, datetime, dict, float, int, list, str, none_type): Event Data Upload Interval. [optional]  # noqa: E501
-            event_data_upload_size_threshold (bool, date, datetime, dict, float, int, list, str, none_type): Event Data Upload Size Threshold. [optional]  # noqa: E501
-            external_pba_url (bool, date, datetime, dict, float, int, list, str, none_type): External PBA URL. [optional]  # noqa: E501
+            event_data_upload_interval (int): Event Data Upload Interval. [optional]  # noqa: E501
+            event_data_upload_size_threshold (int): Event Data Upload Size Threshold. [optional]  # noqa: E501
+            external_pba_url (str): External PBA URL. [optional]  # noqa: E501
             file_upload_enabled (bool): File Upload Enabled. [optional]  # noqa: E501
-            first_enabled_date (bool, date, datetime, dict, float, int, list, str, none_type): First Enabled Date. [optional]  # noqa: E501
-            metadata_interval (bool, date, datetime, dict, float, int, list, str, none_type): Metadata Interval. [optional]  # noqa: E501
-            metadata_last_synchronized (bool, date, datetime, dict, float, int, list, str, none_type): Metadata Last Synchronized. [optional]  # noqa: E501
+            first_enabled_date (datetime): First Enabled Date. [optional]  # noqa: E501
+            metadata_interval (int): Metadata Interval. [optional]  # noqa: E501
+            metadata_last_synchronized (datetime): Metadata Last Synchronized. [optional]  # noqa: E501
             pba_integration_key_set (bool): PBA Integration Key Set. [optional]  # noqa: E501
-            pba_key (bool, date, datetime, dict, float, int, list, str, none_type): PBA Key. [optional]  # noqa: E501
-            pba_key_created_date (bool, date, datetime, dict, float, int, list, str, none_type): PBA Key Created Date. [optional]  # noqa: E501
+            pba_key (str): PBA Key. [optional]  # noqa: E501
+            pba_key_created_date (datetime): PBA Key Created Date. [optional]  # noqa: E501
             pba_key_status (ApplicationKeyStatus): [optional]  # noqa: E501
             respect_owner_editor_require_approval_enabled (bool): Respect Owner Editor Require Approval Enabled. [optional]  # noqa: E501
-            retention_days (bool, date, datetime, dict, float, int, list, str, none_type): Retention Days. [optional]  # noqa: E501
-            secret_server_key (bool, date, datetime, dict, float, int, list, str, none_type): Secret Server Key. [optional]  # noqa: E501
-            secret_server_key_created_date (bool, date, datetime, dict, float, int, list, str, none_type): Secret Server Key Created Date. [optional]  # noqa: E501
+            retention_days (int): Retention Days. [optional]  # noqa: E501
+            secret_server_key (str): Secret Server Key. [optional]  # noqa: E501
+            secret_server_key_created_date (datetime): Secret Server Key Created Date. [optional]  # noqa: E501
             secret_server_key_status (ApplicationKeyStatus): [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site. [optional]  # noqa: E501
-            storage_directory_path (bool, date, datetime, dict, float, int, list, str, none_type): Storage Directory Path. [optional]  # noqa: E501
-            warning_message (bool, date, datetime, dict, float, int, list, str, none_type): Warning Message. [optional]  # noqa: E501
+            site_id (int): Id of Site. [optional]  # noqa: E501
+            storage_directory_path (str): Storage Directory Path. [optional]  # noqa: E501
+            warning_message (str): Warning Message. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

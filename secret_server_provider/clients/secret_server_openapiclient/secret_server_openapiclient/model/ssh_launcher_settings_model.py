@@ -61,10 +61,8 @@ class SshLauncherSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class SshLauncherSettingsModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'can_connect_as_credentials': (bool,),  # noqa: E501
-            'launcher_type': (SshRunLauncherType,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_key_extended_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'can_connect_as_credentials': (bool, none_type,),  # noqa: E501
+            'launcher_type': (SshRunLauncherType, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'ssh_key_extended_type_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,9 +146,9 @@ class SshLauncherSettingsModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             can_connect_as_credentials (bool): Can Connect As Credentials. [optional]  # noqa: E501
             launcher_type (SshRunLauncherType): [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Id. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Name. [optional]  # noqa: E501
-            ssh_key_extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): SSH Key Extended Type Id. [optional]  # noqa: E501
+            secret_id (int): Secret Id. [optional]  # noqa: E501
+            secret_name (str): Secret Name. [optional]  # noqa: E501
+            ssh_key_extended_type_id (int): SSH Key Extended Type Id. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -241,9 +236,9 @@ class SshLauncherSettingsModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             can_connect_as_credentials (bool): Can Connect As Credentials. [optional]  # noqa: E501
             launcher_type (SshRunLauncherType): [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Id. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Name. [optional]  # noqa: E501
-            ssh_key_extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): SSH Key Extended Type Id. [optional]  # noqa: E501
+            secret_id (int): Secret Id. [optional]  # noqa: E501
+            secret_name (str): Secret Name. [optional]  # noqa: E501
+            ssh_key_extended_type_id (int): SSH Key Extended Type Id. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

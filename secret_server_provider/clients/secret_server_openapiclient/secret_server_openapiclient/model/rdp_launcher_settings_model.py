@@ -61,10 +61,8 @@ class RdpLauncherSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,34 +71,31 @@ class RdpLauncherSettingsModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_clipboard': (YesNoPreferenceOption,),  # noqa: E501
-            'allow_drives': (YesNoPreferenceOption,),  # noqa: E501
-            'allow_printers': (YesNoPreferenceOption,),  # noqa: E501
-            'allow_smart_cards': (YesNoPreferenceOption,),  # noqa: E501
-            'connect_to_console': (YesNoPreferenceOption,),  # noqa: E501
-            'launcher_height': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_width': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_custom_launcher_resolution': (YesNoPreferenceOption,),  # noqa: E501
+            'allow_clipboard': (YesNoPreferenceOption, none_type,),  # noqa: E501
+            'allow_drives': (YesNoPreferenceOption, none_type,),  # noqa: E501
+            'allow_printers': (YesNoPreferenceOption, none_type,),  # noqa: E501
+            'allow_smart_cards': (YesNoPreferenceOption, none_type,),  # noqa: E501
+            'connect_to_console': (YesNoPreferenceOption, none_type,),  # noqa: E501
+            'launcher_height': (int, none_type,),  # noqa: E501
+            'launcher_width': (int, none_type,),  # noqa: E501
+            'use_custom_launcher_resolution': (YesNoPreferenceOption, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -160,8 +155,8 @@ class RdpLauncherSettingsModel(ModelNormal):
             allow_printers (YesNoPreferenceOption): [optional]  # noqa: E501
             allow_smart_cards (YesNoPreferenceOption): [optional]  # noqa: E501
             connect_to_console (YesNoPreferenceOption): [optional]  # noqa: E501
-            launcher_height (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Height. [optional]  # noqa: E501
-            launcher_width (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Height. [optional]  # noqa: E501
+            launcher_height (int): Launcher Height. [optional]  # noqa: E501
+            launcher_width (int): Launcher Height. [optional]  # noqa: E501
             use_custom_launcher_resolution (YesNoPreferenceOption): [optional]  # noqa: E501
         """
 
@@ -253,8 +248,8 @@ class RdpLauncherSettingsModel(ModelNormal):
             allow_printers (YesNoPreferenceOption): [optional]  # noqa: E501
             allow_smart_cards (YesNoPreferenceOption): [optional]  # noqa: E501
             connect_to_console (YesNoPreferenceOption): [optional]  # noqa: E501
-            launcher_height (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Height. [optional]  # noqa: E501
-            launcher_width (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Height. [optional]  # noqa: E501
+            launcher_height (int): Launcher Height. [optional]  # noqa: E501
+            launcher_width (int): Launcher Height. [optional]  # noqa: E501
             use_custom_launcher_resolution (YesNoPreferenceOption): [optional]  # noqa: E501
         """
 

@@ -61,10 +61,8 @@ class ConfigurationDatabaseModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,39 +71,36 @@ class ConfigurationDatabaseModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'application_pool_identity': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'authentication_type': (SqlAuthenticationType,),  # noqa: E501
-            'connection_timeout': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'database_config_file_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'database_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_multi_subnet_failover': (bool,),  # noqa: E501
-            'enable_ssl_encryption': (bool,),  # noqa: E501
-            'failover_partner': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_disk_write_permissions': (bool,),  # noqa: E501
-            'is_tms_installed': (bool,),  # noqa: E501
-            'server_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'trust_server_certificate': (bool,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'application_pool_identity': (str, none_type,),  # noqa: E501
+            'authentication_type': (SqlAuthenticationType, none_type,),  # noqa: E501
+            'connection_timeout': (int, none_type,),  # noqa: E501
+            'database_config_file_path': (str, none_type,),  # noqa: E501
+            'database_name': (str, none_type,),  # noqa: E501
+            'enable_multi_subnet_failover': (bool, none_type,),  # noqa: E501
+            'enable_ssl_encryption': (bool, none_type,),  # noqa: E501
+            'failover_partner': (str, none_type,),  # noqa: E501
+            'has_disk_write_permissions': (bool, none_type,),  # noqa: E501
+            'is_tms_installed': (bool, none_type,),  # noqa: E501
+            'server_name': (str, none_type,),  # noqa: E501
+            'trust_server_certificate': (bool, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,19 +160,19 @@ class ConfigurationDatabaseModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            application_pool_identity (bool, date, datetime, dict, float, int, list, str, none_type): The current application pool identity.. [optional]  # noqa: E501
+            application_pool_identity (str): The current application pool identity.. [optional]  # noqa: E501
             authentication_type (SqlAuthenticationType): [optional]  # noqa: E501
-            connection_timeout (bool, date, datetime, dict, float, int, list, str, none_type): The network connection timeout for connecting to SQL Server (not for query execution timeouts).. [optional]  # noqa: E501
-            database_config_file_path (bool, date, datetime, dict, float, int, list, str, none_type): The database configuration file path on the current server.. [optional]  # noqa: E501
-            database_name (bool, date, datetime, dict, float, int, list, str, none_type): The database name.. [optional]  # noqa: E501
+            connection_timeout (int): The network connection timeout for connecting to SQL Server (not for query execution timeouts).. [optional]  # noqa: E501
+            database_config_file_path (str): The database configuration file path on the current server.. [optional]  # noqa: E501
+            database_name (str): The database name.. [optional]  # noqa: E501
             enable_multi_subnet_failover (bool): When true Multi-Subnet Failover is configured.. [optional]  # noqa: E501
             enable_ssl_encryption (bool): When true ssl encryption will be enabled when communicating with sql server.. [optional]  # noqa: E501
-            failover_partner (bool, date, datetime, dict, float, int, list, str, none_type): The current failover partner.. [optional]  # noqa: E501
+            failover_partner (str): The current failover partner.. [optional]  # noqa: E501
             has_disk_write_permissions (bool): When true the application pool account has disk write permissions.. [optional]  # noqa: E501
             is_tms_installed (bool): When true the TMS / Privilege manager database exists.. [optional]  # noqa: E501
-            server_name (bool, date, datetime, dict, float, int, list, str, none_type): The sql server name.. [optional]  # noqa: E501
+            server_name (str): The sql server name.. [optional]  # noqa: E501
             trust_server_certificate (bool): When true the sql server ssl certificate will be trusted without validating the certificate chain.. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): The username when using sql authentication.. [optional]  # noqa: E501
+            user_name (str): The username when using sql authentication.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -263,19 +258,19 @@ class ConfigurationDatabaseModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            application_pool_identity (bool, date, datetime, dict, float, int, list, str, none_type): The current application pool identity.. [optional]  # noqa: E501
+            application_pool_identity (str): The current application pool identity.. [optional]  # noqa: E501
             authentication_type (SqlAuthenticationType): [optional]  # noqa: E501
-            connection_timeout (bool, date, datetime, dict, float, int, list, str, none_type): The network connection timeout for connecting to SQL Server (not for query execution timeouts).. [optional]  # noqa: E501
-            database_config_file_path (bool, date, datetime, dict, float, int, list, str, none_type): The database configuration file path on the current server.. [optional]  # noqa: E501
-            database_name (bool, date, datetime, dict, float, int, list, str, none_type): The database name.. [optional]  # noqa: E501
+            connection_timeout (int): The network connection timeout for connecting to SQL Server (not for query execution timeouts).. [optional]  # noqa: E501
+            database_config_file_path (str): The database configuration file path on the current server.. [optional]  # noqa: E501
+            database_name (str): The database name.. [optional]  # noqa: E501
             enable_multi_subnet_failover (bool): When true Multi-Subnet Failover is configured.. [optional]  # noqa: E501
             enable_ssl_encryption (bool): When true ssl encryption will be enabled when communicating with sql server.. [optional]  # noqa: E501
-            failover_partner (bool, date, datetime, dict, float, int, list, str, none_type): The current failover partner.. [optional]  # noqa: E501
+            failover_partner (str): The current failover partner.. [optional]  # noqa: E501
             has_disk_write_permissions (bool): When true the application pool account has disk write permissions.. [optional]  # noqa: E501
             is_tms_installed (bool): When true the TMS / Privilege manager database exists.. [optional]  # noqa: E501
-            server_name (bool, date, datetime, dict, float, int, list, str, none_type): The sql server name.. [optional]  # noqa: E501
+            server_name (str): The sql server name.. [optional]  # noqa: E501
             trust_server_certificate (bool): When true the sql server ssl certificate will be trusted without validating the certificate chain.. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): The username when using sql authentication.. [optional]  # noqa: E501
+            user_name (str): The username when using sql authentication.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

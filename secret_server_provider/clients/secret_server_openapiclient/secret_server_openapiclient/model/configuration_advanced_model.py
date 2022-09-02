@@ -57,10 +57,8 @@ class ConfigurationAdvancedModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class ConfigurationAdvancedModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'advanced_setting_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'advanced_setting_id': (int, none_type,),  # noqa: E501
+            'setting_name': (str, none_type,),  # noqa: E501
+            'value': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -139,9 +134,9 @@ class ConfigurationAdvancedModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            advanced_setting_id (bool, date, datetime, dict, float, int, list, str, none_type): AdvancedSettingId. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): SettingName. [optional]  # noqa: E501
-            value (bool, date, datetime, dict, float, int, list, str, none_type): Value. [optional]  # noqa: E501
+            advanced_setting_id (int): AdvancedSettingId. [optional]  # noqa: E501
+            setting_name (str): SettingName. [optional]  # noqa: E501
+            value (str): Value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,9 +222,9 @@ class ConfigurationAdvancedModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            advanced_setting_id (bool, date, datetime, dict, float, int, list, str, none_type): AdvancedSettingId. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): SettingName. [optional]  # noqa: E501
-            value (bool, date, datetime, dict, float, int, list, str, none_type): Value. [optional]  # noqa: E501
+            advanced_setting_id (int): AdvancedSettingId. [optional]  # noqa: E501
+            setting_name (str): SettingName. [optional]  # noqa: E501
+            value (str): Value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

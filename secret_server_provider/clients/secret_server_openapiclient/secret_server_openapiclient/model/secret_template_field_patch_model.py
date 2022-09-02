@@ -77,10 +77,8 @@ class SecretTemplateFieldPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -89,43 +87,40 @@ class SecretTemplateFieldPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'data_type': (UpdateFieldValueOfFieldDataType,),  # noqa: E501
-            'description': (UpdateFieldValueOfString,),  # noqa: E501
-            'dropdown_options_to_add': (UpdateFieldValueOfStringArray,),  # noqa: E501
-            'dropdown_options_to_remove': (UpdateFieldValueOfSecretTemplateFieldOptionRemoveModelArray,),  # noqa: E501
-            'dropdown_options_to_update': (UpdateFieldValueOfSecretTemplateFieldOptionUpdateModelArray,),  # noqa: E501
-            'edit_requires_permission': (UpdateFieldValueOfFieldPermissionType,),  # noqa: E501
-            'expose_for_display': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'history_length': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'name': (UpdateFieldValueOfString,),  # noqa: E501
-            'password_requirement': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'required': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'save_all_history': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'searchable': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'slug_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'sort_order': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'viewing_requires_edit': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'data_type': (UpdateFieldValueOfFieldDataType, none_type,),  # noqa: E501
+            'description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'dropdown_options_to_add': (UpdateFieldValueOfStringArray, none_type,),  # noqa: E501
+            'dropdown_options_to_remove': (UpdateFieldValueOfSecretTemplateFieldOptionRemoveModelArray, none_type,),  # noqa: E501
+            'dropdown_options_to_update': (UpdateFieldValueOfSecretTemplateFieldOptionUpdateModelArray, none_type,),  # noqa: E501
+            'edit_requires_permission': (UpdateFieldValueOfFieldPermissionType, none_type,),  # noqa: E501
+            'expose_for_display': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'history_length': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'password_requirement': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'required': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'save_all_history': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'searchable': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'slug_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'sort_order': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'viewing_requires_edit': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

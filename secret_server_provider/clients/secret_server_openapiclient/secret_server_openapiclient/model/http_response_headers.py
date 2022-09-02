@@ -83,10 +83,8 @@ class HttpResponseHeaders(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -95,46 +93,43 @@ class HttpResponseHeaders(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'accept_ranges': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'age': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'cache_control': (CacheControlHeaderValue,),  # noqa: E501
-            'connection': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'connection_close': (bool,),  # noqa: E501
-            'date': (OptionalDateTimeOffset,),  # noqa: E501
-            'e_tag': (EntityTagHeaderValue,),  # noqa: E501
-            'location': (Uri,),  # noqa: E501
-            'pragma': ([NameValueHeaderValue],),  # noqa: E501
-            'proxy_authenticate': ([AuthenticationHeaderValue],),  # noqa: E501
-            'retry_after': (RetryConditionHeaderValue,),  # noqa: E501
-            'server': ([ProductInfoHeaderValue],),  # noqa: E501
-            'trailer': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'transfer_encoding': ([TransferCodingHeaderValue],),  # noqa: E501
-            'transfer_encoding_chunked': (bool,),  # noqa: E501
-            'upgrade': ([ProductHeaderValue],),  # noqa: E501
-            'vary': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'via': ([ViaHeaderValue],),  # noqa: E501
-            'warning': ([WarningHeaderValue],),  # noqa: E501
-            'www_authenticate': ([AuthenticationHeaderValue],),  # noqa: E501
+            'accept_ranges': ([str], none_type,),  # noqa: E501
+            'age': (str, none_type,),  # noqa: E501
+            'cache_control': (CacheControlHeaderValue, none_type,),  # noqa: E501
+            'connection': ([str], none_type,),  # noqa: E501
+            'connection_close': (bool, none_type,),  # noqa: E501
+            'date': (OptionalDateTimeOffset, none_type,),  # noqa: E501
+            'e_tag': (EntityTagHeaderValue, none_type,),  # noqa: E501
+            'location': (Uri, none_type,),  # noqa: E501
+            'pragma': ([NameValueHeaderValue], none_type,),  # noqa: E501
+            'proxy_authenticate': ([AuthenticationHeaderValue], none_type,),  # noqa: E501
+            'retry_after': (RetryConditionHeaderValue, none_type,),  # noqa: E501
+            'server': ([ProductInfoHeaderValue], none_type,),  # noqa: E501
+            'trailer': ([str], none_type,),  # noqa: E501
+            'transfer_encoding': ([TransferCodingHeaderValue], none_type,),  # noqa: E501
+            'transfer_encoding_chunked': (bool, none_type,),  # noqa: E501
+            'upgrade': ([ProductHeaderValue], none_type,),  # noqa: E501
+            'vary': ([str], none_type,),  # noqa: E501
+            'via': ([ViaHeaderValue], none_type,),  # noqa: E501
+            'warning': ([WarningHeaderValue], none_type,),  # noqa: E501
+            'www_authenticate': ([AuthenticationHeaderValue], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -201,10 +196,10 @@ class HttpResponseHeaders(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            accept_ranges ([bool, date, datetime, dict, float, int, list, str, none_type]): AcceptRanges. [optional]  # noqa: E501
-            age (bool, date, datetime, dict, float, int, list, str, none_type): Age. [optional]  # noqa: E501
+            accept_ranges ([str]): AcceptRanges. [optional]  # noqa: E501
+            age (str): Age. [optional]  # noqa: E501
             cache_control (CacheControlHeaderValue): [optional]  # noqa: E501
-            connection ([bool, date, datetime, dict, float, int, list, str, none_type]): Connection. [optional]  # noqa: E501
+            connection ([str]): Connection. [optional]  # noqa: E501
             connection_close (bool): ConnectionClose. [optional]  # noqa: E501
             date (OptionalDateTimeOffset): [optional]  # noqa: E501
             e_tag (EntityTagHeaderValue): [optional]  # noqa: E501
@@ -213,11 +208,11 @@ class HttpResponseHeaders(ModelNormal):
             proxy_authenticate ([AuthenticationHeaderValue]): ProxyAuthenticate. [optional]  # noqa: E501
             retry_after (RetryConditionHeaderValue): [optional]  # noqa: E501
             server ([ProductInfoHeaderValue]): Server. [optional]  # noqa: E501
-            trailer ([bool, date, datetime, dict, float, int, list, str, none_type]): Trailer. [optional]  # noqa: E501
+            trailer ([str]): Trailer. [optional]  # noqa: E501
             transfer_encoding ([TransferCodingHeaderValue]): TransferEncoding. [optional]  # noqa: E501
             transfer_encoding_chunked (bool): TransferEncodingChunked. [optional]  # noqa: E501
             upgrade ([ProductHeaderValue]): Upgrade. [optional]  # noqa: E501
-            vary ([bool, date, datetime, dict, float, int, list, str, none_type]): Vary. [optional]  # noqa: E501
+            vary ([str]): Vary. [optional]  # noqa: E501
             via ([ViaHeaderValue]): Via. [optional]  # noqa: E501
             warning ([WarningHeaderValue]): Warning. [optional]  # noqa: E501
             www_authenticate ([AuthenticationHeaderValue]): WwwAuthenticate. [optional]  # noqa: E501
@@ -306,10 +301,10 @@ class HttpResponseHeaders(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            accept_ranges ([bool, date, datetime, dict, float, int, list, str, none_type]): AcceptRanges. [optional]  # noqa: E501
-            age (bool, date, datetime, dict, float, int, list, str, none_type): Age. [optional]  # noqa: E501
+            accept_ranges ([str]): AcceptRanges. [optional]  # noqa: E501
+            age (str): Age. [optional]  # noqa: E501
             cache_control (CacheControlHeaderValue): [optional]  # noqa: E501
-            connection ([bool, date, datetime, dict, float, int, list, str, none_type]): Connection. [optional]  # noqa: E501
+            connection ([str]): Connection. [optional]  # noqa: E501
             connection_close (bool): ConnectionClose. [optional]  # noqa: E501
             date (OptionalDateTimeOffset): [optional]  # noqa: E501
             e_tag (EntityTagHeaderValue): [optional]  # noqa: E501
@@ -318,11 +313,11 @@ class HttpResponseHeaders(ModelNormal):
             proxy_authenticate ([AuthenticationHeaderValue]): ProxyAuthenticate. [optional]  # noqa: E501
             retry_after (RetryConditionHeaderValue): [optional]  # noqa: E501
             server ([ProductInfoHeaderValue]): Server. [optional]  # noqa: E501
-            trailer ([bool, date, datetime, dict, float, int, list, str, none_type]): Trailer. [optional]  # noqa: E501
+            trailer ([str]): Trailer. [optional]  # noqa: E501
             transfer_encoding ([TransferCodingHeaderValue]): TransferEncoding. [optional]  # noqa: E501
             transfer_encoding_chunked (bool): TransferEncodingChunked. [optional]  # noqa: E501
             upgrade ([ProductHeaderValue]): Upgrade. [optional]  # noqa: E501
-            vary ([bool, date, datetime, dict, float, int, list, str, none_type]): Vary. [optional]  # noqa: E501
+            vary ([str]): Vary. [optional]  # noqa: E501
             via ([ViaHeaderValue]): Via. [optional]  # noqa: E501
             warning ([WarningHeaderValue]): Warning. [optional]  # noqa: E501
             www_authenticate ([AuthenticationHeaderValue]): WwwAuthenticate. [optional]  # noqa: E501

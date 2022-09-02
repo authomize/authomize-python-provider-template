@@ -61,10 +61,8 @@ class SecretEraseRequestActionResultModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,28 +71,25 @@ class SecretEraseRequestActionResultModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'action_result_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request': (SecretEraseRequestModel,),  # noqa: E501
+            'action_result_message': (str, none_type,),  # noqa: E501
+            'request': (SecretEraseRequestModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,7 +138,7 @@ class SecretEraseRequestActionResultModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action_result_message (bool, date, datetime, dict, float, int, list, str, none_type): ActionResultMessage. [optional]  # noqa: E501
+            action_result_message (str): ActionResultMessage. [optional]  # noqa: E501
             request (SecretEraseRequestModel): [optional]  # noqa: E501
         """
 
@@ -230,7 +225,7 @@ class SecretEraseRequestActionResultModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action_result_message (bool, date, datetime, dict, float, int, list, str, none_type): ActionResultMessage. [optional]  # noqa: E501
+            action_result_message (str): ActionResultMessage. [optional]  # noqa: E501
             request (SecretEraseRequestModel): [optional]  # noqa: E501
         """
 

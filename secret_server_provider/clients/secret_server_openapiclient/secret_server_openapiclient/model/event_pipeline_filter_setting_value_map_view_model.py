@@ -71,10 +71,8 @@ class EventPipelineFilterSettingValueMapViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,35 +81,32 @@ class EventPipelineFilterSettingValueMapViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'event_pipeline_filter_map_id': (ViewFieldValueOfInt32,),  # noqa: E501
-            'event_pipeline_filter_setting_value_map_id': (ViewFieldValueReadOnlyOfOptionalInt32,),  # noqa: E501
-            'override_default': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'setting': (ViewFieldValueOfSettingForDisplay,),  # noqa: E501
-            'setting_display': (ViewFieldValueReadOnlyOfString,),  # noqa: E501
-            'setting_display_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_id': (ViewFieldValueOfInt32,),  # noqa: E501
-            'setting_value': (ViewFieldValueOfString,),  # noqa: E501
-            'using_default': (ViewFieldValueOfBoolean,),  # noqa: E501
+            'event_pipeline_filter_map_id': (ViewFieldValueOfInt32, none_type,),  # noqa: E501
+            'event_pipeline_filter_setting_value_map_id': (ViewFieldValueReadOnlyOfOptionalInt32, none_type,),  # noqa: E501
+            'override_default': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'setting': (ViewFieldValueOfSettingForDisplay, none_type,),  # noqa: E501
+            'setting_display': (ViewFieldValueReadOnlyOfString, none_type,),  # noqa: E501
+            'setting_display_value': (str, none_type,),  # noqa: E501
+            'setting_id': (ViewFieldValueOfInt32, none_type,),  # noqa: E501
+            'setting_value': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'using_default': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -172,7 +167,7 @@ class EventPipelineFilterSettingValueMapViewModel(ModelNormal):
             override_default (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             setting (ViewFieldValueOfSettingForDisplay): [optional]  # noqa: E501
             setting_display (ViewFieldValueReadOnlyOfString): [optional]  # noqa: E501
-            setting_display_value (bool, date, datetime, dict, float, int, list, str, none_type): SettingDisplayValue. [optional]  # noqa: E501
+            setting_display_value (str): SettingDisplayValue. [optional]  # noqa: E501
             setting_id (ViewFieldValueOfInt32): [optional]  # noqa: E501
             setting_value (ViewFieldValueOfString): [optional]  # noqa: E501
             using_default (ViewFieldValueOfBoolean): [optional]  # noqa: E501
@@ -266,7 +261,7 @@ class EventPipelineFilterSettingValueMapViewModel(ModelNormal):
             override_default (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             setting (ViewFieldValueOfSettingForDisplay): [optional]  # noqa: E501
             setting_display (ViewFieldValueReadOnlyOfString): [optional]  # noqa: E501
-            setting_display_value (bool, date, datetime, dict, float, int, list, str, none_type): SettingDisplayValue. [optional]  # noqa: E501
+            setting_display_value (str): SettingDisplayValue. [optional]  # noqa: E501
             setting_id (ViewFieldValueOfInt32): [optional]  # noqa: E501
             setting_value (ViewFieldValueOfString): [optional]  # noqa: E501
             using_default (ViewFieldValueOfBoolean): [optional]  # noqa: E501

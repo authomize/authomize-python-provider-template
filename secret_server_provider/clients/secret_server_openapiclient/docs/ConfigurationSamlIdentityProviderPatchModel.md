@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **enable_detailed_log** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
 **enable_slo** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
 **force_authentication** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
-**identity_provider_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | SAML Identity Provider Id | [optional] 
+**identity_provider_id** | **int** | SAML Identity Provider Id | [optional] 
 **logout_request_life_time** | [**UpdateFieldValueOfInt32**](UpdateFieldValueOfInt32.md) |  | [optional] 
 **name** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
 **override_pending_authn_request** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 

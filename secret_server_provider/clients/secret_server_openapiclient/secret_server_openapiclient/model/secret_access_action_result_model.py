@@ -61,10 +61,8 @@ class SecretAccessActionResultModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,49 +71,46 @@ class SecretAccessActionResultModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'access_request_workflow_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'action_result_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'approver_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'completed': (bool,),  # noqa: E501
-            'current_user_restricted_from_reviewing': (bool,),  # noqa: E501
-            'expiration_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_workflow': (bool,),  # noqa: E501
-            'request_comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'requesting_user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_username': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'response_comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'response_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'review_status_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_access_request_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (AccessRequestState,),  # noqa: E501
-            'status_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_system_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'access_request_workflow_map_id': (int, none_type,),  # noqa: E501
+            'action_result_message': (str, none_type,),  # noqa: E501
+            'approver_display_name': (str, none_type,),  # noqa: E501
+            'completed': (bool, none_type,),  # noqa: E501
+            'current_user_restricted_from_reviewing': (bool, none_type,),  # noqa: E501
+            'expiration_date': (datetime, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'has_workflow': (bool, none_type,),  # noqa: E501
+            'request_comment': (str, none_type,),  # noqa: E501
+            'request_date': (datetime, none_type,),  # noqa: E501
+            'requesting_user_id': (int, none_type,),  # noqa: E501
+            'request_username': (str, none_type,),  # noqa: E501
+            'response_comment': (str, none_type,),  # noqa: E501
+            'response_date': (datetime, none_type,),  # noqa: E501
+            'review_status_message': (str, none_type,),  # noqa: E501
+            'secret_access_request_id': (int, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'start_date': (datetime, none_type,),  # noqa: E501
+            'status': (AccessRequestState, none_type,),  # noqa: E501
+            'status_description': (str, none_type,),  # noqa: E501
+            'ticket_number': (str, none_type,),  # noqa: E501
+            'ticket_system_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -185,29 +180,29 @@ class SecretAccessActionResultModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            access_request_workflow_map_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Access Request Workflow Map.. [optional]  # noqa: E501
-            action_result_message (bool, date, datetime, dict, float, int, list, str, none_type): ActionResultMessage. [optional]  # noqa: E501
-            approver_display_name (bool, date, datetime, dict, float, int, list, str, none_type): The Display Name of the Approver of the request. [optional]  # noqa: E501
+            access_request_workflow_map_id (int): The Id of the Access Request Workflow Map.. [optional]  # noqa: E501
+            action_result_message (str): ActionResultMessage. [optional]  # noqa: E501
+            approver_display_name (str): The Display Name of the Approver of the request. [optional]  # noqa: E501
             completed (bool): Indicating if request has been completed. [optional]  # noqa: E501
             current_user_restricted_from_reviewing (bool): Indicating if current user is restricted from viewing the request. [optional]  # noqa: E501
-            expiration_date (bool, date, datetime, dict, float, int, list, str, none_type): The Expiration Date of the request. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The Folder Id of the Secret associated to the access request.. [optional]  # noqa: E501
+            expiration_date (datetime): The Expiration Date of the request. [optional]  # noqa: E501
+            folder_id (int): The Folder Id of the Secret associated to the access request.. [optional]  # noqa: E501
             has_workflow (bool): Indicating if request is associated to a Work Flow. [optional]  # noqa: E501
-            request_comment (bool, date, datetime, dict, float, int, list, str, none_type): The Comment of the request.. [optional]  # noqa: E501
-            request_date (bool, date, datetime, dict, float, int, list, str, none_type): The Date of the request.. [optional]  # noqa: E501
-            requesting_user_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the User requesting access.. [optional]  # noqa: E501
-            request_username (bool, date, datetime, dict, float, int, list, str, none_type): The Username of the User requesting access.. [optional]  # noqa: E501
-            response_comment (bool, date, datetime, dict, float, int, list, str, none_type): The Comment of the response to the request. [optional]  # noqa: E501
-            response_date (bool, date, datetime, dict, float, int, list, str, none_type): The Date of the response to the request. [optional]  # noqa: E501
-            review_status_message (bool, date, datetime, dict, float, int, list, str, none_type): The Review Status Message of the request. [optional]  # noqa: E501
-            secret_access_request_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Access Request.. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret associated to the access request.. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Secret associated to the access request.. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): The Start Date of the request.. [optional]  # noqa: E501
+            request_comment (str): The Comment of the request.. [optional]  # noqa: E501
+            request_date (datetime): The Date of the request.. [optional]  # noqa: E501
+            requesting_user_id (int): The Id of the User requesting access.. [optional]  # noqa: E501
+            request_username (str): The Username of the User requesting access.. [optional]  # noqa: E501
+            response_comment (str): The Comment of the response to the request. [optional]  # noqa: E501
+            response_date (datetime): The Date of the response to the request. [optional]  # noqa: E501
+            review_status_message (str): The Review Status Message of the request. [optional]  # noqa: E501
+            secret_access_request_id (int): The Id of the Secret Access Request.. [optional]  # noqa: E501
+            secret_id (int): The Id of the Secret associated to the access request.. [optional]  # noqa: E501
+            secret_name (str): The Name of the Secret associated to the access request.. [optional]  # noqa: E501
+            start_date (datetime): The Start Date of the request.. [optional]  # noqa: E501
             status (AccessRequestState): [optional]  # noqa: E501
-            status_description (bool, date, datetime, dict, float, int, list, str, none_type): The Status Description of the request. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): The Ticket Number of the request. [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): The Ticket System Id of the request. [optional]  # noqa: E501
+            status_description (str): The Status Description of the request. [optional]  # noqa: E501
+            ticket_number (str): The Ticket Number of the request. [optional]  # noqa: E501
+            ticket_system_id (int): The Ticket System Id of the request. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -293,29 +288,29 @@ class SecretAccessActionResultModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            access_request_workflow_map_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Access Request Workflow Map.. [optional]  # noqa: E501
-            action_result_message (bool, date, datetime, dict, float, int, list, str, none_type): ActionResultMessage. [optional]  # noqa: E501
-            approver_display_name (bool, date, datetime, dict, float, int, list, str, none_type): The Display Name of the Approver of the request. [optional]  # noqa: E501
+            access_request_workflow_map_id (int): The Id of the Access Request Workflow Map.. [optional]  # noqa: E501
+            action_result_message (str): ActionResultMessage. [optional]  # noqa: E501
+            approver_display_name (str): The Display Name of the Approver of the request. [optional]  # noqa: E501
             completed (bool): Indicating if request has been completed. [optional]  # noqa: E501
             current_user_restricted_from_reviewing (bool): Indicating if current user is restricted from viewing the request. [optional]  # noqa: E501
-            expiration_date (bool, date, datetime, dict, float, int, list, str, none_type): The Expiration Date of the request. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The Folder Id of the Secret associated to the access request.. [optional]  # noqa: E501
+            expiration_date (datetime): The Expiration Date of the request. [optional]  # noqa: E501
+            folder_id (int): The Folder Id of the Secret associated to the access request.. [optional]  # noqa: E501
             has_workflow (bool): Indicating if request is associated to a Work Flow. [optional]  # noqa: E501
-            request_comment (bool, date, datetime, dict, float, int, list, str, none_type): The Comment of the request.. [optional]  # noqa: E501
-            request_date (bool, date, datetime, dict, float, int, list, str, none_type): The Date of the request.. [optional]  # noqa: E501
-            requesting_user_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the User requesting access.. [optional]  # noqa: E501
-            request_username (bool, date, datetime, dict, float, int, list, str, none_type): The Username of the User requesting access.. [optional]  # noqa: E501
-            response_comment (bool, date, datetime, dict, float, int, list, str, none_type): The Comment of the response to the request. [optional]  # noqa: E501
-            response_date (bool, date, datetime, dict, float, int, list, str, none_type): The Date of the response to the request. [optional]  # noqa: E501
-            review_status_message (bool, date, datetime, dict, float, int, list, str, none_type): The Review Status Message of the request. [optional]  # noqa: E501
-            secret_access_request_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Access Request.. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret associated to the access request.. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Secret associated to the access request.. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): The Start Date of the request.. [optional]  # noqa: E501
+            request_comment (str): The Comment of the request.. [optional]  # noqa: E501
+            request_date (datetime): The Date of the request.. [optional]  # noqa: E501
+            requesting_user_id (int): The Id of the User requesting access.. [optional]  # noqa: E501
+            request_username (str): The Username of the User requesting access.. [optional]  # noqa: E501
+            response_comment (str): The Comment of the response to the request. [optional]  # noqa: E501
+            response_date (datetime): The Date of the response to the request. [optional]  # noqa: E501
+            review_status_message (str): The Review Status Message of the request. [optional]  # noqa: E501
+            secret_access_request_id (int): The Id of the Secret Access Request.. [optional]  # noqa: E501
+            secret_id (int): The Id of the Secret associated to the access request.. [optional]  # noqa: E501
+            secret_name (str): The Name of the Secret associated to the access request.. [optional]  # noqa: E501
+            start_date (datetime): The Start Date of the request.. [optional]  # noqa: E501
             status (AccessRequestState): [optional]  # noqa: E501
-            status_description (bool, date, datetime, dict, float, int, list, str, none_type): The Status Description of the request. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): The Ticket Number of the request. [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): The Ticket System Id of the request. [optional]  # noqa: E501
+            status_description (str): The Status Description of the request. [optional]  # noqa: E501
+            ticket_number (str): The Ticket Number of the request. [optional]  # noqa: E501
+            ticket_system_id (int): The Ticket System Id of the request. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -61,10 +61,8 @@ class SecretTemplateExtendedMappingSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class SecretTemplateExtendedMappingSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'extended_type_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'extended_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'extended_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fields': ([SecretTemplateExtendedMappingFieldSummary],),  # noqa: E501
-            'secret_type_extended_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'extended_type_description': (str, none_type,),  # noqa: E501
+            'extended_type_id': (int, none_type,),  # noqa: E501
+            'extended_type_name': (str, none_type,),  # noqa: E501
+            'fields': ([SecretTemplateExtendedMappingFieldSummary], none_type,),  # noqa: E501
+            'secret_type_extended_map_id': (int, none_type,),  # noqa: E501
+            'secret_type_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,12 +146,12 @@ class SecretTemplateExtendedMappingSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            extended_type_description (bool, date, datetime, dict, float, int, list, str, none_type): A brief description of this extended type. [optional]  # noqa: E501
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): ID for this extended type. [optional]  # noqa: E501
-            extended_type_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of this extended type. [optional]  # noqa: E501
+            extended_type_description (str): A brief description of this extended type. [optional]  # noqa: E501
+            extended_type_id (int): ID for this extended type. [optional]  # noqa: E501
+            extended_type_name (str): The name of this extended type. [optional]  # noqa: E501
             fields ([SecretTemplateExtendedMappingFieldSummary]): The fields that are mapped from the extended type to the secret template field. [optional]  # noqa: E501
-            secret_type_extended_map_id (bool, date, datetime, dict, float, int, list, str, none_type): A unique ID representing this mapping of Secret Template to Extended Type. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret type / template ID. [optional]  # noqa: E501
+            secret_type_extended_map_id (int): A unique ID representing this mapping of Secret Template to Extended Type. [optional]  # noqa: E501
+            secret_type_id (int): Secret type / template ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,12 +237,12 @@ class SecretTemplateExtendedMappingSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            extended_type_description (bool, date, datetime, dict, float, int, list, str, none_type): A brief description of this extended type. [optional]  # noqa: E501
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): ID for this extended type. [optional]  # noqa: E501
-            extended_type_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of this extended type. [optional]  # noqa: E501
+            extended_type_description (str): A brief description of this extended type. [optional]  # noqa: E501
+            extended_type_id (int): ID for this extended type. [optional]  # noqa: E501
+            extended_type_name (str): The name of this extended type. [optional]  # noqa: E501
             fields ([SecretTemplateExtendedMappingFieldSummary]): The fields that are mapped from the extended type to the secret template field. [optional]  # noqa: E501
-            secret_type_extended_map_id (bool, date, datetime, dict, float, int, list, str, none_type): A unique ID representing this mapping of Secret Template to Extended Type. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret type / template ID. [optional]  # noqa: E501
+            secret_type_extended_map_id (int): A unique ID representing this mapping of Secret Template to Extended Type. [optional]  # noqa: E501
+            secret_type_id (int): Secret type / template ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

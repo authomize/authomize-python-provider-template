@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **workflow_step_templates_service_create_step**
-> bool, date, datetime, dict, float, int, list, str, none_type workflow_step_templates_service_create_step(id)
+> int workflow_step_templates_service_create_step(id)
 
 Create Workflow Step
 
@@ -53,27 +53,27 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_step_templates_api.WorkflowStepTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template Id
+    id = 1 # int | Workflow Template Id
     workflow_step_template_create_args = WorkflowStepTemplateCreateArgs(
         configuration=AccessRequestStepConfigurationModel(
             approver_groups=[
                 AccessReviewerModel(
-                    access_reviewer_id=None,
-                    display_name=None,
-                    group_id=None,
+                    access_reviewer_id=1,
+                    display_name="display_name_example",
+                    group_id=1,
                     is_owner=True,
                     is_user=True,
-                    workflow_step_template_id=None,
-                    workflow_template_id=None,
+                    workflow_step_template_id=1,
+                    workflow_template_id=1,
                 ),
             ],
-            approve_step=None,
-            expire_step=None,
-            num_approvals_required=None,
+            approve_step=1,
+            expire_step=1,
+            num_approvals_required=1,
         ),
-        name=None,
-        order=None,
-        workflow_template_id=None,
+        name="name_example",
+        order=1,
+        workflow_template_id=1,
     ) # WorkflowStepTemplateCreateArgs | Workflow Template Step creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -99,12 +99,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template Id |
+ **id** | **int**| Workflow Template Id |
  **workflow_step_template_create_args** | [**WorkflowStepTemplateCreateArgs**](WorkflowStepTemplateCreateArgs.md)| Workflow Template Step creation options | [optional]
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**int**
 
 ### Authorization
 
@@ -168,8 +168,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_step_templates_api.WorkflowStepTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template Id
-    step_num = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Step Number
+    id = 1 # int | Workflow Template Id
+    step_num = 1 # int | Workflow Step Number
 
     # example passing only required values which don't have defaults set
     try:
@@ -185,8 +185,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template Id |
- **step_num** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Step Number |
+ **id** | **int**| Workflow Template Id |
+ **step_num** | **int**| Workflow Step Number |
 
 ### Return type
 
@@ -254,12 +254,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_step_templates_api.WorkflowStepTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template ID
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | Workflow Template ID
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -284,12 +284,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template ID |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| Workflow Template ID |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -438,31 +438,31 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_step_templates_api.WorkflowStepTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template ID
+    id = 1 # int | Workflow Template ID
     workflow_step_template_update_args = WorkflowStepTemplateUpdateArgs(
         workflow_step_templates=[
             WorkflowStepTemplateDetailModel(
                 configuration=AccessRequestStepConfigurationModel(
                     approver_groups=[
                         AccessReviewerModel(
-                            access_reviewer_id=None,
-                            display_name=None,
-                            group_id=None,
+                            access_reviewer_id=1,
+                            display_name="display_name_example",
+                            group_id=1,
                             is_owner=True,
                             is_user=True,
-                            workflow_step_template_id=None,
-                            workflow_template_id=None,
+                            workflow_step_template_id=1,
+                            workflow_template_id=1,
                         ),
                     ],
-                    approve_step=None,
-                    expire_step=None,
-                    num_approvals_required=None,
+                    approve_step=1,
+                    expire_step=1,
+                    num_approvals_required=1,
                 ),
-                expiration_minutes=None,
-                name=None,
-                order=None,
-                workflow_step_template_id=None,
-                workflow_template_id=None,
+                expiration_minutes=1,
+                name="name_example",
+                order=1,
+                workflow_step_template_id=1,
+                workflow_template_id=1,
             ),
         ],
     ) # WorkflowStepTemplateUpdateArgs | Workflow Template Steps creation options (optional)
@@ -490,7 +490,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template ID |
+ **id** | **int**| Workflow Template ID |
  **workflow_step_template_update_args** | [**WorkflowStepTemplateUpdateArgs**](WorkflowStepTemplateUpdateArgs.md)| Workflow Template Steps creation options | [optional]
 
 ### Return type
@@ -560,29 +560,29 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_step_templates_api.WorkflowStepTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template ID
-    step_num = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Step Number
+    id = 1 # int | Workflow Template ID
+    step_num = 1 # int | Workflow Step Number
     workflow_step_template_update_model = WorkflowStepTemplateUpdateModel(
         configuration=AccessRequestStepConfigurationModel(
             approver_groups=[
                 AccessReviewerModel(
-                    access_reviewer_id=None,
-                    display_name=None,
-                    group_id=None,
+                    access_reviewer_id=1,
+                    display_name="display_name_example",
+                    group_id=1,
                     is_owner=True,
                     is_user=True,
-                    workflow_step_template_id=None,
-                    workflow_template_id=None,
+                    workflow_step_template_id=1,
+                    workflow_template_id=1,
                 ),
             ],
-            approve_step=None,
-            expire_step=None,
-            num_approvals_required=None,
+            approve_step=1,
+            expire_step=1,
+            num_approvals_required=1,
         ),
-        expiration_minutes=None,
-        name=None,
-        order=None,
-        workflow_step_template_id=None,
+        expiration_minutes=1,
+        name="name_example",
+        order=1,
+        workflow_step_template_id=1,
     ) # WorkflowStepTemplateUpdateModel | Workflow Template update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -608,8 +608,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template ID |
- **step_num** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Step Number |
+ **id** | **int**| Workflow Template ID |
+ **step_num** | **int**| Workflow Step Number |
  **workflow_step_template_update_model** | [**WorkflowStepTemplateUpdateModel**](WorkflowStepTemplateUpdateModel.md)| Workflow Template update options | [optional]
 
 ### Return type

@@ -63,10 +63,8 @@ class SecretModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,67 +73,64 @@ class SecretModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'access_request_workflow_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'active': (bool,),  # noqa: E501
-            'allow_owners_unrestricted_ssh_commands': (bool,),  # noqa: E501
-            'auto_change_enabled': (bool,),  # noqa: E501
-            'auto_change_next_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'checked_out': (bool,),  # noqa: E501
-            'check_out_change_password_enabled': (bool,),  # noqa: E501
-            'check_out_enabled': (bool,),  # noqa: E501
-            'check_out_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_minutes_remaining': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_user_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'double_lock_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_inherit_permissions': (bool,),  # noqa: E501
-            'enable_inherit_secret_policy': (bool,),  # noqa: E501
-            'failed_password_change_attempts': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_double_lock': (bool,),  # noqa: E501
-            'is_out_of_sync': (bool,),  # noqa: E501
-            'is_restricted': (bool,),  # noqa: E501
-            'items': ([RestSecretItem],),  # noqa: E501
-            'jumpbox_route_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_heart_beat_check': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_heart_beat_status': (HeartbeatStatus,),  # noqa: E501
-            'last_password_change_attempt': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_connect_as_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'out_of_sync_reason': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_web_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'proxy_enabled': (bool,),  # noqa: E501
-            'requires_approval_for_access': (bool,),  # noqa: E501
-            'requires_comment': (bool,),  # noqa: E501
-            'response_codes': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'restrict_ssh_commands': (bool,),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_template_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'session_recording_enabled': (bool,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'web_launcher_requires_incognito_mode': (bool,),  # noqa: E501
+            'access_request_workflow_map_id': (int, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'allow_owners_unrestricted_ssh_commands': (bool, none_type,),  # noqa: E501
+            'auto_change_enabled': (bool, none_type,),  # noqa: E501
+            'auto_change_next_password': (str, none_type,),  # noqa: E501
+            'checked_out': (bool, none_type,),  # noqa: E501
+            'check_out_change_password_enabled': (bool, none_type,),  # noqa: E501
+            'check_out_enabled': (bool, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (int, none_type,),  # noqa: E501
+            'check_out_minutes_remaining': (int, none_type,),  # noqa: E501
+            'check_out_user_display_name': (str, none_type,),  # noqa: E501
+            'check_out_user_id': (int, none_type,),  # noqa: E501
+            'double_lock_id': (int, none_type,),  # noqa: E501
+            'enable_inherit_permissions': (bool, none_type,),  # noqa: E501
+            'enable_inherit_secret_policy': (bool, none_type,),  # noqa: E501
+            'failed_password_change_attempts': (int, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_double_lock': (bool, none_type,),  # noqa: E501
+            'is_out_of_sync': (bool, none_type,),  # noqa: E501
+            'is_restricted': (bool, none_type,),  # noqa: E501
+            'items': ([RestSecretItem], none_type,),  # noqa: E501
+            'jumpbox_route_id': (str, none_type,),  # noqa: E501
+            'last_heart_beat_check': (datetime, none_type,),  # noqa: E501
+            'last_heart_beat_status': (HeartbeatStatus, none_type,),  # noqa: E501
+            'last_password_change_attempt': (datetime, none_type,),  # noqa: E501
+            'launcher_connect_as_secret_id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'out_of_sync_reason': (str, none_type,),  # noqa: E501
+            'password_type_web_script_id': (int, none_type,),  # noqa: E501
+            'proxy_enabled': (bool, none_type,),  # noqa: E501
+            'requires_approval_for_access': (bool, none_type,),  # noqa: E501
+            'requires_comment': (bool, none_type,),  # noqa: E501
+            'response_codes': ([str], none_type,),  # noqa: E501
+            'restrict_ssh_commands': (bool, none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
+            'secret_template_id': (int, none_type,),  # noqa: E501
+            'secret_template_name': (str, none_type,),  # noqa: E501
+            'session_recording_enabled': (bool, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'web_launcher_requires_incognito_mode': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -223,46 +218,46 @@ class SecretModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            access_request_workflow_map_id (bool, date, datetime, dict, float, int, list, str, none_type): AccessRequestWorkflowMapId. [optional]  # noqa: E501
+            access_request_workflow_map_id (int): AccessRequestWorkflowMapId. [optional]  # noqa: E501
             active (bool): Whether the secret is active. [optional]  # noqa: E501
             allow_owners_unrestricted_ssh_commands (bool): AllowOwnersUnrestrictedSshCommands. [optional]  # noqa: E501
             auto_change_enabled (bool): AutoChangeEnabled. [optional]  # noqa: E501
-            auto_change_next_password (bool, date, datetime, dict, float, int, list, str, none_type): AutoChangeNextPassword. [optional]  # noqa: E501
+            auto_change_next_password (str): AutoChangeNextPassword. [optional]  # noqa: E501
             checked_out (bool): Whether the secret is currently checked out. [optional]  # noqa: E501
             check_out_change_password_enabled (bool): CheckOutChangePasswordEnabled. [optional]  # noqa: E501
             check_out_enabled (bool): Whether secret checkout is enabled. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Checkout interval, in minutes. [optional]  # noqa: E501
-            check_out_minutes_remaining (bool, date, datetime, dict, float, int, list, str, none_type): Minutes remaining in current checkout interval. [optional]  # noqa: E501
-            check_out_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of user who has checked out the secret. [optional]  # noqa: E501
-            check_out_user_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of user who has checked out the secret. [optional]  # noqa: E501
-            double_lock_id (bool, date, datetime, dict, float, int, list, str, none_type): DoubleLockId. [optional]  # noqa: E501
+            check_out_interval_minutes (int): Checkout interval, in minutes. [optional]  # noqa: E501
+            check_out_minutes_remaining (int): Minutes remaining in current checkout interval. [optional]  # noqa: E501
+            check_out_user_display_name (str): Name of user who has checked out the secret. [optional]  # noqa: E501
+            check_out_user_id (int): ID of user who has checked out the secret. [optional]  # noqa: E501
+            double_lock_id (int): DoubleLockId. [optional]  # noqa: E501
             enable_inherit_permissions (bool): EnableInheritPermissions. [optional]  # noqa: E501
             enable_inherit_secret_policy (bool): Whether the secret policy is inherited from the containing folder. [optional]  # noqa: E501
-            failed_password_change_attempts (bool, date, datetime, dict, float, int, list, str, none_type): Number of failed password change attempts. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Containing folder ID. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
+            failed_password_change_attempts (int): Number of failed password change attempts. [optional]  # noqa: E501
+            folder_id (int): Containing folder ID. [optional]  # noqa: E501
+            id (int): Secret ID. [optional]  # noqa: E501
             is_double_lock (bool): Whether double lock is enabled. [optional]  # noqa: E501
             is_out_of_sync (bool): Out of sync indicates that a Password is setup for autochange and has failed its last password change attempt or has exceeded the maximum RPC attempts. [optional]  # noqa: E501
             is_restricted (bool): Whether the secret is restricted. [optional]  # noqa: E501
             items ([RestSecretItem]): Secret data fields. [optional]  # noqa: E501
-            jumpbox_route_id (bool, date, datetime, dict, float, int, list, str, none_type): JumpboxRouteId. [optional]  # noqa: E501
-            last_heart_beat_check (bool, date, datetime, dict, float, int, list, str, none_type): Time of last heartbeat check. [optional]  # noqa: E501
+            jumpbox_route_id (str): JumpboxRouteId. [optional]  # noqa: E501
+            last_heart_beat_check (datetime): Time of last heartbeat check. [optional]  # noqa: E501
             last_heart_beat_status (HeartbeatStatus): [optional]  # noqa: E501
-            last_password_change_attempt (bool, date, datetime, dict, float, int, list, str, none_type): Time of most recent password change attempt. [optional]  # noqa: E501
-            launcher_connect_as_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): LauncherConnectAsSecretId. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret name. [optional]  # noqa: E501
-            out_of_sync_reason (bool, date, datetime, dict, float, int, list, str, none_type): Reason message if the secret is out of sync. [optional]  # noqa: E501
-            password_type_web_script_id (bool, date, datetime, dict, float, int, list, str, none_type): PasswordTypeWebScriptId. [optional]  # noqa: E501
+            last_password_change_attempt (datetime): Time of most recent password change attempt. [optional]  # noqa: E501
+            launcher_connect_as_secret_id (int): LauncherConnectAsSecretId. [optional]  # noqa: E501
+            name (str): Secret name. [optional]  # noqa: E501
+            out_of_sync_reason (str): Reason message if the secret is out of sync. [optional]  # noqa: E501
+            password_type_web_script_id (int): PasswordTypeWebScriptId. [optional]  # noqa: E501
             proxy_enabled (bool): ProxyEnabled. [optional]  # noqa: E501
             requires_approval_for_access (bool): RequiresApprovalForAccess. [optional]  # noqa: E501
             requires_comment (bool): RequiresComment. [optional]  # noqa: E501
-            response_codes ([bool, date, datetime, dict, float, int, list, str, none_type]): ResponseCodes. [optional]  # noqa: E501
+            response_codes ([str]): ResponseCodes. [optional]  # noqa: E501
             restrict_ssh_commands (bool): RestrictSshCommands. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretPolicyId. [optional]  # noqa: E501
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID. [optional]  # noqa: E501
-            secret_template_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of secret template. [optional]  # noqa: E501
+            secret_policy_id (int): SecretPolicyId. [optional]  # noqa: E501
+            secret_template_id (int): Secret template ID. [optional]  # noqa: E501
+            secret_template_name (str): Name of secret template. [optional]  # noqa: E501
             session_recording_enabled (bool): Whether session recording is enabled. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]  # noqa: E501
+            site_id (int): SiteId. [optional]  # noqa: E501
             web_launcher_requires_incognito_mode (bool): WebLauncherRequiresIncognitoMode. [optional]  # noqa: E501
         """
 
@@ -349,46 +344,46 @@ class SecretModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            access_request_workflow_map_id (bool, date, datetime, dict, float, int, list, str, none_type): AccessRequestWorkflowMapId. [optional]  # noqa: E501
+            access_request_workflow_map_id (int): AccessRequestWorkflowMapId. [optional]  # noqa: E501
             active (bool): Whether the secret is active. [optional]  # noqa: E501
             allow_owners_unrestricted_ssh_commands (bool): AllowOwnersUnrestrictedSshCommands. [optional]  # noqa: E501
             auto_change_enabled (bool): AutoChangeEnabled. [optional]  # noqa: E501
-            auto_change_next_password (bool, date, datetime, dict, float, int, list, str, none_type): AutoChangeNextPassword. [optional]  # noqa: E501
+            auto_change_next_password (str): AutoChangeNextPassword. [optional]  # noqa: E501
             checked_out (bool): Whether the secret is currently checked out. [optional]  # noqa: E501
             check_out_change_password_enabled (bool): CheckOutChangePasswordEnabled. [optional]  # noqa: E501
             check_out_enabled (bool): Whether secret checkout is enabled. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Checkout interval, in minutes. [optional]  # noqa: E501
-            check_out_minutes_remaining (bool, date, datetime, dict, float, int, list, str, none_type): Minutes remaining in current checkout interval. [optional]  # noqa: E501
-            check_out_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of user who has checked out the secret. [optional]  # noqa: E501
-            check_out_user_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of user who has checked out the secret. [optional]  # noqa: E501
-            double_lock_id (bool, date, datetime, dict, float, int, list, str, none_type): DoubleLockId. [optional]  # noqa: E501
+            check_out_interval_minutes (int): Checkout interval, in minutes. [optional]  # noqa: E501
+            check_out_minutes_remaining (int): Minutes remaining in current checkout interval. [optional]  # noqa: E501
+            check_out_user_display_name (str): Name of user who has checked out the secret. [optional]  # noqa: E501
+            check_out_user_id (int): ID of user who has checked out the secret. [optional]  # noqa: E501
+            double_lock_id (int): DoubleLockId. [optional]  # noqa: E501
             enable_inherit_permissions (bool): EnableInheritPermissions. [optional]  # noqa: E501
             enable_inherit_secret_policy (bool): Whether the secret policy is inherited from the containing folder. [optional]  # noqa: E501
-            failed_password_change_attempts (bool, date, datetime, dict, float, int, list, str, none_type): Number of failed password change attempts. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Containing folder ID. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
+            failed_password_change_attempts (int): Number of failed password change attempts. [optional]  # noqa: E501
+            folder_id (int): Containing folder ID. [optional]  # noqa: E501
+            id (int): Secret ID. [optional]  # noqa: E501
             is_double_lock (bool): Whether double lock is enabled. [optional]  # noqa: E501
             is_out_of_sync (bool): Out of sync indicates that a Password is setup for autochange and has failed its last password change attempt or has exceeded the maximum RPC attempts. [optional]  # noqa: E501
             is_restricted (bool): Whether the secret is restricted. [optional]  # noqa: E501
             items ([RestSecretItem]): Secret data fields. [optional]  # noqa: E501
-            jumpbox_route_id (bool, date, datetime, dict, float, int, list, str, none_type): JumpboxRouteId. [optional]  # noqa: E501
-            last_heart_beat_check (bool, date, datetime, dict, float, int, list, str, none_type): Time of last heartbeat check. [optional]  # noqa: E501
+            jumpbox_route_id (str): JumpboxRouteId. [optional]  # noqa: E501
+            last_heart_beat_check (datetime): Time of last heartbeat check. [optional]  # noqa: E501
             last_heart_beat_status (HeartbeatStatus): [optional]  # noqa: E501
-            last_password_change_attempt (bool, date, datetime, dict, float, int, list, str, none_type): Time of most recent password change attempt. [optional]  # noqa: E501
-            launcher_connect_as_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): LauncherConnectAsSecretId. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret name. [optional]  # noqa: E501
-            out_of_sync_reason (bool, date, datetime, dict, float, int, list, str, none_type): Reason message if the secret is out of sync. [optional]  # noqa: E501
-            password_type_web_script_id (bool, date, datetime, dict, float, int, list, str, none_type): PasswordTypeWebScriptId. [optional]  # noqa: E501
+            last_password_change_attempt (datetime): Time of most recent password change attempt. [optional]  # noqa: E501
+            launcher_connect_as_secret_id (int): LauncherConnectAsSecretId. [optional]  # noqa: E501
+            name (str): Secret name. [optional]  # noqa: E501
+            out_of_sync_reason (str): Reason message if the secret is out of sync. [optional]  # noqa: E501
+            password_type_web_script_id (int): PasswordTypeWebScriptId. [optional]  # noqa: E501
             proxy_enabled (bool): ProxyEnabled. [optional]  # noqa: E501
             requires_approval_for_access (bool): RequiresApprovalForAccess. [optional]  # noqa: E501
             requires_comment (bool): RequiresComment. [optional]  # noqa: E501
-            response_codes ([bool, date, datetime, dict, float, int, list, str, none_type]): ResponseCodes. [optional]  # noqa: E501
+            response_codes ([str]): ResponseCodes. [optional]  # noqa: E501
             restrict_ssh_commands (bool): RestrictSshCommands. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretPolicyId. [optional]  # noqa: E501
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID. [optional]  # noqa: E501
-            secret_template_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of secret template. [optional]  # noqa: E501
+            secret_policy_id (int): SecretPolicyId. [optional]  # noqa: E501
+            secret_template_id (int): Secret template ID. [optional]  # noqa: E501
+            secret_template_name (str): Name of secret template. [optional]  # noqa: E501
             session_recording_enabled (bool): Whether session recording is enabled. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]  # noqa: E501
+            site_id (int): SiteId. [optional]  # noqa: E501
             web_launcher_requires_incognito_mode (bool): WebLauncherRequiresIncognitoMode. [optional]  # noqa: E501
         """
 

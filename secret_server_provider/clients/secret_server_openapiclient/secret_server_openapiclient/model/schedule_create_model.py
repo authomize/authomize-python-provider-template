@@ -61,10 +61,8 @@ class ScheduleCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,50 +71,47 @@ class ScheduleCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'additional_email_addresses': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'change_type': (ScheduleChangeType,),  # noqa: E501
-            'days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'email_groups': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'friday': (bool,),  # noqa: E501
-            'health_check': (bool,),  # noqa: E501
-            'history_size': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'monday': (bool,),  # noqa: E501
-            'monthly_day': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'monthly_day_of_month': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'monthly_day_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'monthly_day_order_recurrence': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'monthly_day_recurrence': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'monthly_schedule_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'saturday': (bool,),  # noqa: E501
-            'schedule_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'send_email': (bool,),  # noqa: E501
-            'send_email_with_high_priority': (bool,),  # noqa: E501
-            'starting_on': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sunday': (bool,),  # noqa: E501
-            'thursday': (bool,),  # noqa: E501
-            'tuesday': (bool,),  # noqa: E501
-            'wednesday': (bool,),  # noqa: E501
-            'weeks': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'additional_email_addresses': (str, none_type,),  # noqa: E501
+            'change_type': (ScheduleChangeType, none_type,),  # noqa: E501
+            'days': (int, none_type,),  # noqa: E501
+            'email_groups': ([int], none_type,),  # noqa: E501
+            'friday': (bool, none_type,),  # noqa: E501
+            'health_check': (bool, none_type,),  # noqa: E501
+            'history_size': (int, none_type,),  # noqa: E501
+            'monday': (bool, none_type,),  # noqa: E501
+            'monthly_day': (str, none_type,),  # noqa: E501
+            'monthly_day_of_month': (int, none_type,),  # noqa: E501
+            'monthly_day_order': (str, none_type,),  # noqa: E501
+            'monthly_day_order_recurrence': (int, none_type,),  # noqa: E501
+            'monthly_day_recurrence': (int, none_type,),  # noqa: E501
+            'monthly_schedule_type': (str, none_type,),  # noqa: E501
+            'saturday': (bool, none_type,),  # noqa: E501
+            'schedule_name': (str, none_type,),  # noqa: E501
+            'send_email': (bool, none_type,),  # noqa: E501
+            'send_email_with_high_priority': (bool, none_type,),  # noqa: E501
+            'starting_on': (datetime, none_type,),  # noqa: E501
+            'sunday': (bool, none_type,),  # noqa: E501
+            'thursday': (bool, none_type,),  # noqa: E501
+            'tuesday': (bool, none_type,),  # noqa: E501
+            'wednesday': (bool, none_type,),  # noqa: E501
+            'weeks': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -187,30 +182,30 @@ class ScheduleCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            additional_email_addresses (bool, date, datetime, dict, float, int, list, str, none_type): Additional email addresses to receive the email. [optional]  # noqa: E501
+            additional_email_addresses (str): Additional email addresses to receive the email. [optional]  # noqa: E501
             change_type (ScheduleChangeType): [optional]  # noqa: E501
-            days (bool, date, datetime, dict, float, int, list, str, none_type): Days of Recurrence if Daily ScheduleType. [optional]  # noqa: E501
-            email_groups ([bool, date, datetime, dict, float, int, list, str, none_type]): Groups to receive the email. [optional]  # noqa: E501
+            days (int): Days of Recurrence if Daily ScheduleType. [optional]  # noqa: E501
+            email_groups ([int]): Groups to receive the email. [optional]  # noqa: E501
             friday (bool): Occurs on Fridays when set if Weekly ScheduleType. [optional]  # noqa: E501
             health_check (bool): Health Check. [optional]  # noqa: E501
-            history_size (bool, date, datetime, dict, float, int, list, str, none_type): The number of generated reports that will be saved. Null if All. [optional]  # noqa: E501
+            history_size (int): The number of generated reports that will be saved. Null if All. [optional]  # noqa: E501
             monday (bool): Occurs on Mondays when set if Weekly ScheduleType. [optional]  # noqa: E501
-            monthly_day (bool, date, datetime, dict, float, int, list, str, none_type): Day(s) used if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_day_of_month (bool, date, datetime, dict, float, int, list, str, none_type): Day of Month if DayOfMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_day_order (bool, date, datetime, dict, float, int, list, str, none_type): Day Order used if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_day_order_recurrence (bool, date, datetime, dict, float, int, list, str, none_type): Months of Recurrence if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_day_recurrence (bool, date, datetime, dict, float, int, list, str, none_type): Months of Recurrence if DayOfMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_schedule_type (bool, date, datetime, dict, float, int, list, str, none_type): Selection used if Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day (str): Day(s) used if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day_of_month (int): Day of Month if DayOfMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day_order (str): Day Order used if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day_order_recurrence (int): Months of Recurrence if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day_recurrence (int): Months of Recurrence if DayOfMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_schedule_type (str): Selection used if Monthly ScheduleType. [optional]  # noqa: E501
             saturday (bool): Occurs on Saturdays when set if Weekly ScheduleType. [optional]  # noqa: E501
-            schedule_name (bool, date, datetime, dict, float, int, list, str, none_type): Schedule Name. [optional]  # noqa: E501
+            schedule_name (str): Schedule Name. [optional]  # noqa: E501
             send_email (bool): Send Report via Email. [optional]  # noqa: E501
             send_email_with_high_priority (bool): Send Email With High Priority. [optional]  # noqa: E501
-            starting_on (bool, date, datetime, dict, float, int, list, str, none_type): Day for Report Schedule to start. [optional]  # noqa: E501
+            starting_on (datetime): Day for Report Schedule to start. [optional]  # noqa: E501
             sunday (bool): Occurs on Sundays when set if Weekly ScheduleType. [optional]  # noqa: E501
             thursday (bool): Occurs on Thursdays when set if Weekly ScheduleType. [optional]  # noqa: E501
             tuesday (bool): Occurs on Tuesdays when set if Weekly ScheduleType. [optional]  # noqa: E501
             wednesday (bool): Occurs on Wednesdays when set if Weekly ScheduleType. [optional]  # noqa: E501
-            weeks (bool, date, datetime, dict, float, int, list, str, none_type): Weeks of Recurrence if Weekly ScheduleType. [optional]  # noqa: E501
+            weeks (int): Weeks of Recurrence if Weekly ScheduleType. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -296,30 +291,30 @@ class ScheduleCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            additional_email_addresses (bool, date, datetime, dict, float, int, list, str, none_type): Additional email addresses to receive the email. [optional]  # noqa: E501
+            additional_email_addresses (str): Additional email addresses to receive the email. [optional]  # noqa: E501
             change_type (ScheduleChangeType): [optional]  # noqa: E501
-            days (bool, date, datetime, dict, float, int, list, str, none_type): Days of Recurrence if Daily ScheduleType. [optional]  # noqa: E501
-            email_groups ([bool, date, datetime, dict, float, int, list, str, none_type]): Groups to receive the email. [optional]  # noqa: E501
+            days (int): Days of Recurrence if Daily ScheduleType. [optional]  # noqa: E501
+            email_groups ([int]): Groups to receive the email. [optional]  # noqa: E501
             friday (bool): Occurs on Fridays when set if Weekly ScheduleType. [optional]  # noqa: E501
             health_check (bool): Health Check. [optional]  # noqa: E501
-            history_size (bool, date, datetime, dict, float, int, list, str, none_type): The number of generated reports that will be saved. Null if All. [optional]  # noqa: E501
+            history_size (int): The number of generated reports that will be saved. Null if All. [optional]  # noqa: E501
             monday (bool): Occurs on Mondays when set if Weekly ScheduleType. [optional]  # noqa: E501
-            monthly_day (bool, date, datetime, dict, float, int, list, str, none_type): Day(s) used if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_day_of_month (bool, date, datetime, dict, float, int, list, str, none_type): Day of Month if DayOfMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_day_order (bool, date, datetime, dict, float, int, list, str, none_type): Day Order used if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_day_order_recurrence (bool, date, datetime, dict, float, int, list, str, none_type): Months of Recurrence if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_day_recurrence (bool, date, datetime, dict, float, int, list, str, none_type): Months of Recurrence if DayOfMonth and Monthly ScheduleType. [optional]  # noqa: E501
-            monthly_schedule_type (bool, date, datetime, dict, float, int, list, str, none_type): Selection used if Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day (str): Day(s) used if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day_of_month (int): Day of Month if DayOfMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day_order (str): Day Order used if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day_order_recurrence (int): Months of Recurrence if DayOfWeekMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_day_recurrence (int): Months of Recurrence if DayOfMonth and Monthly ScheduleType. [optional]  # noqa: E501
+            monthly_schedule_type (str): Selection used if Monthly ScheduleType. [optional]  # noqa: E501
             saturday (bool): Occurs on Saturdays when set if Weekly ScheduleType. [optional]  # noqa: E501
-            schedule_name (bool, date, datetime, dict, float, int, list, str, none_type): Schedule Name. [optional]  # noqa: E501
+            schedule_name (str): Schedule Name. [optional]  # noqa: E501
             send_email (bool): Send Report via Email. [optional]  # noqa: E501
             send_email_with_high_priority (bool): Send Email With High Priority. [optional]  # noqa: E501
-            starting_on (bool, date, datetime, dict, float, int, list, str, none_type): Day for Report Schedule to start. [optional]  # noqa: E501
+            starting_on (datetime): Day for Report Schedule to start. [optional]  # noqa: E501
             sunday (bool): Occurs on Sundays when set if Weekly ScheduleType. [optional]  # noqa: E501
             thursday (bool): Occurs on Thursdays when set if Weekly ScheduleType. [optional]  # noqa: E501
             tuesday (bool): Occurs on Tuesdays when set if Weekly ScheduleType. [optional]  # noqa: E501
             wednesday (bool): Occurs on Wednesdays when set if Weekly ScheduleType. [optional]  # noqa: E501
-            weeks (bool, date, datetime, dict, float, int, list, str, none_type): Weeks of Recurrence if Weekly ScheduleType. [optional]  # noqa: E501
+            weeks (int): Weeks of Recurrence if Weekly ScheduleType. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

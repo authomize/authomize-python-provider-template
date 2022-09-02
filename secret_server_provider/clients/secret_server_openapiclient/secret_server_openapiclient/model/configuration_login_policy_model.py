@@ -57,10 +57,8 @@ class ConfigurationLoginPolicyModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class ConfigurationLoginPolicyModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'enable_login_policy': (bool,),  # noqa: E501
-            'force_login_policy': (bool,),  # noqa: E501
-            'login_policy': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'enable_login_policy': (bool, none_type,),  # noqa: E501
+            'force_login_policy': (bool, none_type,),  # noqa: E501
+            'login_policy': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,7 +136,7 @@ class ConfigurationLoginPolicyModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             enable_login_policy (bool): When true this shows the login policy on the login screen.. [optional]  # noqa: E501
             force_login_policy (bool): When true this will force the user to check that they accept the login policy that is displayed.. [optional]  # noqa: E501
-            login_policy (bool, date, datetime, dict, float, int, list, str, none_type): When EnableLoginPolicy is true this text will be shown to the user on the login page.. [optional]  # noqa: E501
+            login_policy (str): When EnableLoginPolicy is true this text will be shown to the user on the login page.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -229,7 +224,7 @@ class ConfigurationLoginPolicyModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             enable_login_policy (bool): When true this shows the login policy on the login screen.. [optional]  # noqa: E501
             force_login_policy (bool): When true this will force the user to check that they accept the login policy that is displayed.. [optional]  # noqa: E501
-            login_policy (bool, date, datetime, dict, float, int, list, str, none_type): When EnableLoginPolicy is true this text will be shown to the user on the login page.. [optional]  # noqa: E501
+            login_policy (str): When EnableLoginPolicy is true this text will be shown to the user on the login page.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

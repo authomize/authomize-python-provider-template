@@ -61,10 +61,8 @@ class SecretTemplateExtendedMappingModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,30 +71,27 @@ class SecretTemplateExtendedMappingModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'extended_type_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'extended_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'extended_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fields': ([SecretTemplateExtendedMappingFieldModel],),  # noqa: E501
+            'extended_type_description': (str, none_type,),  # noqa: E501
+            'extended_type_id': (int, none_type,),  # noqa: E501
+            'extended_type_name': (str, none_type,),  # noqa: E501
+            'fields': ([SecretTemplateExtendedMappingFieldModel], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,9 +142,9 @@ class SecretTemplateExtendedMappingModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            extended_type_description (bool, date, datetime, dict, float, int, list, str, none_type): A localizaed description for this extended type. [optional]  # noqa: E501
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Extended Type ID. [optional]  # noqa: E501
-            extended_type_name (bool, date, datetime, dict, float, int, list, str, none_type): A localizaed name for this extended type. [optional]  # noqa: E501
+            extended_type_description (str): A localizaed description for this extended type. [optional]  # noqa: E501
+            extended_type_id (int): Extended Type ID. [optional]  # noqa: E501
+            extended_type_name (str): A localizaed name for this extended type. [optional]  # noqa: E501
             fields ([SecretTemplateExtendedMappingFieldModel]): Array of extended fields for the extended mapping. [optional]  # noqa: E501
         """
 
@@ -236,9 +231,9 @@ class SecretTemplateExtendedMappingModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            extended_type_description (bool, date, datetime, dict, float, int, list, str, none_type): A localizaed description for this extended type. [optional]  # noqa: E501
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Extended Type ID. [optional]  # noqa: E501
-            extended_type_name (bool, date, datetime, dict, float, int, list, str, none_type): A localizaed name for this extended type. [optional]  # noqa: E501
+            extended_type_description (str): A localizaed description for this extended type. [optional]  # noqa: E501
+            extended_type_id (int): Extended Type ID. [optional]  # noqa: E501
+            extended_type_name (str): A localizaed name for this extended type. [optional]  # noqa: E501
             fields ([SecretTemplateExtendedMappingFieldModel]): Array of extended fields for the extended mapping. [optional]  # noqa: E501
         """
 

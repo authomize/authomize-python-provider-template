@@ -140,7 +140,7 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'discovery_source_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'discovery_scanner_setting_create_args':
                         (DiscoveryScannerSettingCreateArgs,),
                 },
@@ -196,7 +196,7 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'discovery_source_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'discovery_source_id': 'discoverySourceId',
@@ -291,7 +291,7 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -348,17 +348,17 @@ class DiscoveryApi(object):
                     'is_exporting':
                         (bool,),
                     'filter_discovery_source_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'is_exporting': 'isExporting',
@@ -421,7 +421,7 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -472,7 +472,7 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'type_id': 'typeId',
@@ -614,9 +614,9 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'discovery_source_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'member_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'discovery_source_filter_patch_args':
                         (DiscoverySourceFilterPatchArgs,),
                 },
@@ -724,7 +724,7 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'discovery_source_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'discovery_source_id': 'discoverySourceId',
@@ -781,23 +781,23 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'filter_discovery_source_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_discovery_source_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_include_active':
                         (bool,),
                     'filter_include_inactive':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_discovery_source_name': 'filter.discoverySourceName',
@@ -868,15 +868,15 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'discovery_source_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'include':
                         (bool,),
                     'search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'selected_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([str],),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'discovery_source_id': 'discoverySourceId',
@@ -987,7 +987,7 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'discovery_source_update_args':
                         (DiscoverySourceUpdateArgs,),
                 },
@@ -1044,7 +1044,7 @@ class DiscoveryApi(object):
                 },
                 'openapi_types': {
                     'discovery_source_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'discovery_source_filters_update_args':
                         (DiscoverySourceFiltersUpdateArgs,),
                 },
@@ -1163,7 +1163,7 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): discoverySourceId
+            discovery_source_id (int): discoverySourceId
 
         Keyword Args:
             discovery_scanner_setting_create_args (DiscoveryScannerSettingCreateArgs): args. [optional]
@@ -1247,7 +1247,7 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): discoverySourceId
+            discovery_source_id (int): discoverySourceId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1408,7 +1408,7 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Discovery Source ID
+            id (int): Discovery Source ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1492,12 +1492,12 @@ class DiscoveryApi(object):
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            filter_discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceId. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_discovery_source_id (int): DiscoverySourceId. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1576,7 +1576,7 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1659,7 +1659,7 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            type_id (bool, date, datetime, dict, float, int, list, str, none_type): Discovery Source Type ID
+            type_id (int): Discovery Source Type ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1899,8 +1899,8 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): discoverySourceId
-            member_id (bool, date, datetime, dict, float, int, list, str, none_type): memberId
+            discovery_source_id (int): discoverySourceId
+            member_id (int): memberId
 
         Keyword Args:
             discovery_source_filter_patch_args (DiscoverySourceFilterPatchArgs): args. [optional]
@@ -2065,7 +2065,7 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): discoverySourceId
+            discovery_source_id (int): discoverySourceId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2148,15 +2148,15 @@ class DiscoveryApi(object):
 
 
         Keyword Args:
-            filter_discovery_source_name (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceName. [optional]
-            filter_discovery_source_type (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceType. [optional]
+            filter_discovery_source_name (str): DiscoverySourceName. [optional]
+            filter_discovery_source_type (str): DiscoverySourceType. [optional]
             filter_include_active (bool): IncludeActive. [optional]
             filter_include_inactive (bool): IncludeInactive. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2235,13 +2235,13 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): discoverySourceId
+            discovery_source_id (int): discoverySourceId
 
         Keyword Args:
             include (bool): Only return items that can be included. [optional]
-            search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search for OU items containing this text. [optional]
-            selected_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): When include is false only include items within these exisitng IDs. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): The number of items to return. [optional]
+            search_text (str): Search for OU items containing this text. [optional]
+            selected_ids ([str]): When include is false only include items within these exisitng IDs. [optional]
+            take (int): The number of items to return. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2401,7 +2401,7 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Discovery Source ID
+            id (int): Discovery Source ID
 
         Keyword Args:
             discovery_source_update_args (DiscoverySourceUpdateArgs): args. [optional]
@@ -2485,7 +2485,7 @@ class DiscoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): discoverySourceId
+            discovery_source_id (int): discoverySourceId
 
         Keyword Args:
             discovery_source_filters_update_args (DiscoverySourceFiltersUpdateArgs): args. [optional]

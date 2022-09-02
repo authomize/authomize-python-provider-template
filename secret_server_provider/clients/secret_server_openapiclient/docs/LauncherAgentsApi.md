@@ -58,7 +58,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
     launcher_agent_collection_create_args = LauncherAgentCollectionCreateArgs(
-        name=None,
+        name="name_example",
         record_keystrokes=True,
         record_standalone_sessions=True,
     ) # LauncherAgentCollectionCreateArgs | Launcher Agent Collection creation options (optional)
@@ -146,7 +146,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Launcher Agent ID
+    id = 1 # int | Launcher Agent ID
     include_inactive = True # bool | Whether to include inactive Launcher Agents in the results (optional)
 
     # example passing only required values which don't have defaults set
@@ -172,7 +172,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Launcher Agent ID |
+ **id** | **int**| Launcher Agent ID |
  **include_inactive** | **bool**| Whether to include inactive Launcher Agents in the results | [optional]
 
 ### Return type
@@ -241,7 +241,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Launcher Agent Collection ID
+    id = 1 # int | Launcher Agent Collection ID
     include_inactive = True # bool | Whether to include inactive Launcher Agent Collections in the results (optional)
 
     # example passing only required values which don't have defaults set
@@ -267,7 +267,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Launcher Agent Collection ID |
+ **id** | **int**| Launcher Agent Collection ID |
  **include_inactive** | **bool**| Whether to include inactive Launcher Agent Collections in the results | [optional]
 
 ### Return type
@@ -337,14 +337,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    filter_launcher_agent_collection_id = None # bool, date, datetime, dict, float, int, list, str, none_type | LauncherAgentCollectionId (optional)
+    filter_launcher_agent_collection_id = 1 # int | LauncherAgentCollectionId (optional)
     filter_out_of_date = True # bool | OutOfDate (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchText (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_text = "filter.searchText_example" # str | SearchText (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -362,14 +362,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **filter_launcher_agent_collection_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| LauncherAgentCollectionId | [optional]
+ **filter_launcher_agent_collection_id** | **int**| LauncherAgentCollectionId | [optional]
  **filter_out_of_date** | **bool**| OutOfDate | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchText | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_text** | **str**| SearchText | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -437,13 +437,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
-    filter_launcher_agent_collection_id = None # bool, date, datetime, dict, float, int, list, str, none_type | LauncherAgentCollectionId (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchText (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_launcher_agent_collection_id = 1 # int | LauncherAgentCollectionId (optional)
+    filter_search_text = "filter.searchText_example" # str | SearchText (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -460,13 +460,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_launcher_agent_collection_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| LauncherAgentCollectionId | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchText | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_launcher_agent_collection_id** | **int**| LauncherAgentCollectionId | [optional]
+ **filter_search_text** | **str**| SearchText | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -535,12 +535,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
     filter_include_inactive = True # bool | Whether to include inactive Launcher Agent Collections in the results (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -558,12 +558,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| Whether to include inactive Launcher Agent Collections in the results | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -632,7 +632,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
     include_inactive = True # bool | IncludeInactive (optional)
-    search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchText (optional)
+    search_text = "searchText_example" # str | SearchText (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -650,7 +650,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include_inactive** | **bool**| IncludeInactive | [optional]
- **search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchText | [optional]
+ **search_text** | **str**| SearchText | [optional]
 
 ### Return type
 
@@ -719,10 +719,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Launcher Agent ID
+    id = 1 # int | Launcher Agent ID
     launcher_agent_update_args = LauncherAgentUpdateArgs(
         active=True,
-        id=None,
+        id=1,
         record_keystrokes=True,
         record_standalone_sessions=True,
     ) # LauncherAgentUpdateArgs | Launcher Agent update options (optional)
@@ -750,7 +750,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Launcher Agent ID |
+ **id** | **int**| Launcher Agent ID |
  **launcher_agent_update_args** | [**LauncherAgentUpdateArgs**](LauncherAgentUpdateArgs.md)| Launcher Agent update options | [optional]
 
 ### Return type
@@ -820,11 +820,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = launcher_agents_api.LauncherAgentsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Launcher Agent Collection ID
+    id = 1 # int | Launcher Agent Collection ID
     launcher_agent_collection_update_args = LauncherAgentCollectionUpdateArgs(
         active=True,
-        id=None,
-        name=None,
+        id=1,
+        name="name_example",
         record_keystrokes=True,
         record_standalone_sessions=True,
     ) # LauncherAgentCollectionUpdateArgs | Launcher Agent Collection update options (optional)
@@ -852,7 +852,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Launcher Agent Collection ID |
+ **id** | **int**| Launcher Agent Collection ID |
  **launcher_agent_collection_update_args** | [**LauncherAgentCollectionUpdateArgs**](LauncherAgentCollectionUpdateArgs.md)| Launcher Agent Collection update options | [optional]
 
 ### Return type

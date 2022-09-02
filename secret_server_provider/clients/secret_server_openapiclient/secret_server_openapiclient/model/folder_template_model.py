@@ -57,10 +57,8 @@ class FolderTemplateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class FolderTemplateModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'associated': (bool,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'associated': (bool, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'template_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -140,8 +135,8 @@ class FolderTemplateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             associated (bool): Whether the template is associated with the folder. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID. [optional]  # noqa: E501
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): Template ID. [optional]  # noqa: E501
+            folder_id (int): Folder ID. [optional]  # noqa: E501
+            template_id (int): Template ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -228,8 +223,8 @@ class FolderTemplateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             associated (bool): Whether the template is associated with the folder. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID. [optional]  # noqa: E501
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): Template ID. [optional]  # noqa: E501
+            folder_id (int): Folder ID. [optional]  # noqa: E501
+            template_id (int): Template ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

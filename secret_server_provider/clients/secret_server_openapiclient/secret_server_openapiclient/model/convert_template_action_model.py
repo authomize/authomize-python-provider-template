@@ -61,10 +61,8 @@ class ConvertTemplateActionModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class ConvertTemplateActionModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'field_mapping': ([ConvertTemplateFieldModel],),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_bulk': (bool,),  # noqa: E501
-            'new_secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'secret_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'field_mapping': ([ConvertTemplateFieldModel], none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'is_bulk': (bool, none_type,),  # noqa: E501
+            'new_secret_name': (str, none_type,),  # noqa: E501
+            'secret_ids': ([int], none_type,),  # noqa: E501
+            'secret_template_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -152,11 +147,11 @@ class ConvertTemplateActionModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             field_mapping ([ConvertTemplateFieldModel]): Which source fields should map to which destination fields. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The target folder ID. [optional]  # noqa: E501
+            folder_id (int): The target folder ID. [optional]  # noqa: E501
             is_bulk (bool): Whether or not this is a bulk operation or a single secret. [optional]  # noqa: E501
-            new_secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The new name for the secret. [optional]  # noqa: E501
-            secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): A list of Secret IDs that will be converted. [optional]  # noqa: E501
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): The new secret template ID that will be applied to all secrets. [optional]  # noqa: E501
+            new_secret_name (str): The new name for the secret. [optional]  # noqa: E501
+            secret_ids ([int]): A list of Secret IDs that will be converted. [optional]  # noqa: E501
+            secret_template_id (int): The new secret template ID that will be applied to all secrets. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -243,11 +238,11 @@ class ConvertTemplateActionModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             field_mapping ([ConvertTemplateFieldModel]): Which source fields should map to which destination fields. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The target folder ID. [optional]  # noqa: E501
+            folder_id (int): The target folder ID. [optional]  # noqa: E501
             is_bulk (bool): Whether or not this is a bulk operation or a single secret. [optional]  # noqa: E501
-            new_secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The new name for the secret. [optional]  # noqa: E501
-            secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): A list of Secret IDs that will be converted. [optional]  # noqa: E501
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): The new secret template ID that will be applied to all secrets. [optional]  # noqa: E501
+            new_secret_name (str): The new name for the secret. [optional]  # noqa: E501
+            secret_ids ([int]): A list of Secret IDs that will be converted. [optional]  # noqa: E501
+            secret_template_id (int): The new secret template ID that will be applied to all secrets. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

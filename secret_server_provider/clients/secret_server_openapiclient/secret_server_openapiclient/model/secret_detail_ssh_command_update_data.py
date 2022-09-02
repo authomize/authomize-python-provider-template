@@ -65,10 +65,8 @@ class SecretDetailSshCommandUpdateData(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,31 +75,28 @@ class SecretDetailSshCommandUpdateData(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_owners_unrestricted_commands': (bool,),  # noqa: E501
-            'command_restriction_type': (CommandRestrictionType,),  # noqa: E501
-            'restrict_ssh_commands': (bool,),  # noqa: E501
-            'ssh_command_blocklists': ([SecretDetailRestrictedSshCommandBlocklistPermissionUpdateModel],),  # noqa: E501
-            'ssh_command_menus': ([SecretDetailRestrictedSshCommandMenuPermissionUpdateModel],),  # noqa: E501
+            'allow_owners_unrestricted_commands': (bool, none_type,),  # noqa: E501
+            'command_restriction_type': (CommandRestrictionType, none_type,),  # noqa: E501
+            'restrict_ssh_commands': (bool, none_type,),  # noqa: E501
+            'ssh_command_blocklists': ([SecretDetailRestrictedSshCommandBlocklistPermissionUpdateModel], none_type,),  # noqa: E501
+            'ssh_command_menus': ([SecretDetailRestrictedSshCommandMenuPermissionUpdateModel], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

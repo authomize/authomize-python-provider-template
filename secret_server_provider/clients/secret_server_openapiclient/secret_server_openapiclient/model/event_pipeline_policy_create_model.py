@@ -67,10 +67,8 @@ class EventPipelinePolicyCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,34 +77,31 @@ class EventPipelinePolicyCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'event_entity_type_id': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'event_pipeline_policy_description': (UpdateFieldValueOfString,),  # noqa: E501
-            'event_pipeline_policy_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'external_instance_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_system': (bool,),  # noqa: E501
-            'pipelines': (UpdateFieldValueOfEventPipelineUpdateModelArray,),  # noqa: E501
-            'reuse_existing_pipelines': (bool,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'event_entity_type_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'event_pipeline_policy_description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'event_pipeline_policy_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'external_instance_id': (str, none_type,),  # noqa: E501
+            'is_system': (bool, none_type,),  # noqa: E501
+            'pipelines': (UpdateFieldValueOfEventPipelineUpdateModelArray, none_type,),  # noqa: E501
+            'reuse_existing_pipelines': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,7 +160,7 @@ class EventPipelinePolicyCreateModel(ModelNormal):
             event_entity_type_id (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             event_pipeline_policy_description (UpdateFieldValueOfString): [optional]  # noqa: E501
             event_pipeline_policy_name (UpdateFieldValueOfString): [optional]  # noqa: E501
-            external_instance_id (bool, date, datetime, dict, float, int, list, str, none_type): ExternalInstanceId. [optional]  # noqa: E501
+            external_instance_id (str): ExternalInstanceId. [optional]  # noqa: E501
             is_system (bool): IsSystem. [optional]  # noqa: E501
             pipelines (UpdateFieldValueOfEventPipelineUpdateModelArray): [optional]  # noqa: E501
             reuse_existing_pipelines (bool): ReuseExistingPipelines. [optional]  # noqa: E501
@@ -258,7 +253,7 @@ class EventPipelinePolicyCreateModel(ModelNormal):
             event_entity_type_id (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             event_pipeline_policy_description (UpdateFieldValueOfString): [optional]  # noqa: E501
             event_pipeline_policy_name (UpdateFieldValueOfString): [optional]  # noqa: E501
-            external_instance_id (bool, date, datetime, dict, float, int, list, str, none_type): ExternalInstanceId. [optional]  # noqa: E501
+            external_instance_id (str): ExternalInstanceId. [optional]  # noqa: E501
             is_system (bool): IsSystem. [optional]  # noqa: E501
             pipelines (UpdateFieldValueOfEventPipelineUpdateModelArray): [optional]  # noqa: E501
             reuse_existing_pipelines (bool): ReuseExistingPipelines. [optional]  # noqa: E501

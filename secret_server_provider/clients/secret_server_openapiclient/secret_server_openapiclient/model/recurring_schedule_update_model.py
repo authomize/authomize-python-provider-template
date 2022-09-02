@@ -71,10 +71,8 @@ class RecurringScheduleUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,34 +81,31 @@ class RecurringScheduleUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'duration': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'duration_start_date': (UpdateFieldValueOfDateTime,),  # noqa: E501
-            'notes': (UpdateFieldValueOfString,),  # noqa: E501
-            'recurring_schedule_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'recurring_schedule_type': (UpdateFieldValueOfRecurringScheduleType,),  # noqa: E501
-            'schedule_constraints': (UpdateFieldValueOfRecurringScheduleValueModelArray,),  # noqa: E501
-            'time_zone_id': (UpdateFieldValueOfString,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'duration': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'duration_start_date': (UpdateFieldValueOfDateTime, none_type,),  # noqa: E501
+            'notes': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'recurring_schedule_id': (int, none_type,),  # noqa: E501
+            'recurring_schedule_type': (UpdateFieldValueOfRecurringScheduleType, none_type,),  # noqa: E501
+            'schedule_constraints': (UpdateFieldValueOfRecurringScheduleValueModelArray, none_type,),  # noqa: E501
+            'time_zone_id': (UpdateFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -169,7 +164,7 @@ class RecurringScheduleUpdateModel(ModelNormal):
             duration (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             duration_start_date (UpdateFieldValueOfDateTime): [optional]  # noqa: E501
             notes (UpdateFieldValueOfString): [optional]  # noqa: E501
-            recurring_schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): Unique ID for this schedule. [optional]  # noqa: E501
+            recurring_schedule_id (int): Unique ID for this schedule. [optional]  # noqa: E501
             recurring_schedule_type (UpdateFieldValueOfRecurringScheduleType): [optional]  # noqa: E501
             schedule_constraints (UpdateFieldValueOfRecurringScheduleValueModelArray): [optional]  # noqa: E501
             time_zone_id (UpdateFieldValueOfString): [optional]  # noqa: E501
@@ -262,7 +257,7 @@ class RecurringScheduleUpdateModel(ModelNormal):
             duration (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             duration_start_date (UpdateFieldValueOfDateTime): [optional]  # noqa: E501
             notes (UpdateFieldValueOfString): [optional]  # noqa: E501
-            recurring_schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): Unique ID for this schedule. [optional]  # noqa: E501
+            recurring_schedule_id (int): Unique ID for this schedule. [optional]  # noqa: E501
             recurring_schedule_type (UpdateFieldValueOfRecurringScheduleType): [optional]  # noqa: E501
             schedule_constraints (UpdateFieldValueOfRecurringScheduleValueModelArray): [optional]  # noqa: E501
             time_zone_id (UpdateFieldValueOfString): [optional]  # noqa: E501

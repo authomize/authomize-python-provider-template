@@ -61,10 +61,8 @@ class SecretTemplateGroupedPermissionSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class SecretTemplateGroupedPermissionSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'assignments': ([SecretTemplatePermissionAssignmentSummary],),  # noqa: E501
-            'role_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'role_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'assignments': ([SecretTemplatePermissionAssignmentSummary], none_type,),  # noqa: E501
+            'role_id': (int, none_type,),  # noqa: E501
+            'role_name': (str, none_type,),  # noqa: E501
+            'secret_type_id': (int, none_type,),  # noqa: E501
+            'secret_type_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -150,10 +145,10 @@ class SecretTemplateGroupedPermissionSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             assignments ([SecretTemplatePermissionAssignmentSummary]): All of the specific users and groups assigned to this template. [optional]  # noqa: E501
-            role_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the role assigned. [optional]  # noqa: E501
-            role_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the role assigned. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret templates with assigned permissions. NULL if all templates. [optional]  # noqa: E501
-            secret_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Name. [optional]  # noqa: E501
+            role_id (int): The ID of the role assigned. [optional]  # noqa: E501
+            role_name (str): The name of the role assigned. [optional]  # noqa: E501
+            secret_type_id (int): Secret templates with assigned permissions. NULL if all templates. [optional]  # noqa: E501
+            secret_type_name (str): Secret Template Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,10 +235,10 @@ class SecretTemplateGroupedPermissionSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             assignments ([SecretTemplatePermissionAssignmentSummary]): All of the specific users and groups assigned to this template. [optional]  # noqa: E501
-            role_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the role assigned. [optional]  # noqa: E501
-            role_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the role assigned. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret templates with assigned permissions. NULL if all templates. [optional]  # noqa: E501
-            secret_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Name. [optional]  # noqa: E501
+            role_id (int): The ID of the role assigned. [optional]  # noqa: E501
+            role_name (str): The name of the role assigned. [optional]  # noqa: E501
+            secret_type_id (int): Secret templates with assigned permissions. NULL if all templates. [optional]  # noqa: E501
+            secret_type_name (str): Secret Template Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

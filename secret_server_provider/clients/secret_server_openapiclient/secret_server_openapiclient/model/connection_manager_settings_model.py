@@ -57,10 +57,8 @@ class ConnectionManagerSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class ConnectionManagerSettingsModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'allow_local_connections': (bool,),  # noqa: E501
-            'allow_saving_credentials': (bool,),  # noqa: E501
-            'download_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_valid_license': (bool,),  # noqa: E501
-            'is_trial_license': (bool,),  # noqa: E501
+            'allow_local_connections': (bool, none_type,),  # noqa: E501
+            'allow_saving_credentials': (bool, none_type,),  # noqa: E501
+            'download_url': (str, none_type,),  # noqa: E501
+            'has_valid_license': (bool, none_type,),  # noqa: E501
+            'is_trial_license': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,7 +140,7 @@ class ConnectionManagerSettingsModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             allow_local_connections (bool): Allow Local Connections. [optional]  # noqa: E501
             allow_saving_credentials (bool): Allow Saving Credentials. [optional]  # noqa: E501
-            download_url (bool, date, datetime, dict, float, int, list, str, none_type): Download Url. [optional]  # noqa: E501
+            download_url (str): Download Url. [optional]  # noqa: E501
             has_valid_license (bool): Has Valid License. [optional]  # noqa: E501
             is_trial_license (bool): Is Trial License. [optional]  # noqa: E501
         """
@@ -235,7 +230,7 @@ class ConnectionManagerSettingsModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             allow_local_connections (bool): Allow Local Connections. [optional]  # noqa: E501
             allow_saving_credentials (bool): Allow Saving Credentials. [optional]  # noqa: E501
-            download_url (bool, date, datetime, dict, float, int, list, str, none_type): Download Url. [optional]  # noqa: E501
+            download_url (str): Download Url. [optional]  # noqa: E501
             has_valid_license (bool): Has Valid License. [optional]  # noqa: E501
             is_trial_license (bool): Is Trial License. [optional]  # noqa: E501
         """

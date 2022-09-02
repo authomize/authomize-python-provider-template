@@ -57,10 +57,8 @@ class EventPipeline(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,37 +66,34 @@ class EventPipeline(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'created_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_entity_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_system': (bool,),  # noqa: E501
-            'last_modified_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_modified_user': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_modified_user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'created_date': (datetime, none_type,),  # noqa: E501
+            'event_entity_type_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_description': (str, none_type,),  # noqa: E501
+            'event_pipeline_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_name': (str, none_type,),  # noqa: E501
+            'event_pipeline_policy_id': (int, none_type,),  # noqa: E501
+            'is_system': (bool, none_type,),  # noqa: E501
+            'last_modified_date': (datetime, none_type,),  # noqa: E501
+            'last_modified_user': (str, none_type,),  # noqa: E501
+            'last_modified_user_id': (int, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -158,17 +153,17 @@ class EventPipeline(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): CreatedDate. [optional]  # noqa: E501
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeId. [optional]  # noqa: E501
-            event_pipeline_description (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineDescription. [optional]  # noqa: E501
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
-            event_pipeline_name (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineName. [optional]  # noqa: E501
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]  # noqa: E501
+            created_date (datetime): CreatedDate. [optional]  # noqa: E501
+            event_entity_type_id (int): EventEntityTypeId. [optional]  # noqa: E501
+            event_pipeline_description (str): EventPipelineDescription. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_name (str): EventPipelineName. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]  # noqa: E501
             is_system (bool): IsSystem. [optional]  # noqa: E501
-            last_modified_date (bool, date, datetime, dict, float, int, list, str, none_type): LastModifiedDate. [optional]  # noqa: E501
-            last_modified_user (bool, date, datetime, dict, float, int, list, str, none_type): LastModifiedUser. [optional]  # noqa: E501
-            last_modified_user_id (bool, date, datetime, dict, float, int, list, str, none_type): LastModifiedUserId. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): SortOrder. [optional]  # noqa: E501
+            last_modified_date (datetime): LastModifiedDate. [optional]  # noqa: E501
+            last_modified_user (str): LastModifiedUser. [optional]  # noqa: E501
+            last_modified_user_id (int): LastModifiedUserId. [optional]  # noqa: E501
+            sort_order (int): SortOrder. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -255,17 +250,17 @@ class EventPipeline(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): CreatedDate. [optional]  # noqa: E501
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeId. [optional]  # noqa: E501
-            event_pipeline_description (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineDescription. [optional]  # noqa: E501
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
-            event_pipeline_name (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineName. [optional]  # noqa: E501
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]  # noqa: E501
+            created_date (datetime): CreatedDate. [optional]  # noqa: E501
+            event_entity_type_id (int): EventEntityTypeId. [optional]  # noqa: E501
+            event_pipeline_description (str): EventPipelineDescription. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_name (str): EventPipelineName. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]  # noqa: E501
             is_system (bool): IsSystem. [optional]  # noqa: E501
-            last_modified_date (bool, date, datetime, dict, float, int, list, str, none_type): LastModifiedDate. [optional]  # noqa: E501
-            last_modified_user (bool, date, datetime, dict, float, int, list, str, none_type): LastModifiedUser. [optional]  # noqa: E501
-            last_modified_user_id (bool, date, datetime, dict, float, int, list, str, none_type): LastModifiedUserId. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): SortOrder. [optional]  # noqa: E501
+            last_modified_date (datetime): LastModifiedDate. [optional]  # noqa: E501
+            last_modified_user (str): LastModifiedUser. [optional]  # noqa: E501
+            last_modified_user_id (int): LastModifiedUserId. [optional]  # noqa: E501
+            sort_order (int): SortOrder. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

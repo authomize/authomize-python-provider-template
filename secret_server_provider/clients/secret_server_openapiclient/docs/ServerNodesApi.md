@@ -50,7 +50,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = server_nodes_api.ServerNodesApi(api_client)
-    node_id = None # bool, date, datetime, dict, float, int, list, str, none_type | nodeId
+    node_id = 1 # int | nodeId
 
     # example passing only required values which don't have defaults set
     try:
@@ -66,7 +66,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **node_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| nodeId |
+ **node_id** | **int**| nodeId |
 
 ### Return type
 
@@ -214,13 +214,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = server_nodes_api.ServerNodesApi(api_client)
-    node_id = None # bool, date, datetime, dict, float, int, list, str, none_type | nodeId
+    node_id = 1 # int | nodeId
     server_node_configuration_model = ServerNodeConfigurationModel(
         enable_background_worker=True,
         enable_engine_worker=True,
         enable_session_recording_worker=True,
         in_cluster=True,
-        log_level=None,
+        log_level="log_level_example",
         readonly_mode_enabled=True,
     ) # ServerNodeConfigurationModel | nodeConfiguration (optional)
 
@@ -245,7 +245,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **node_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| nodeId |
+ **node_id** | **int**| nodeId |
  **server_node_configuration_model** | [**ServerNodeConfigurationModel**](ServerNodeConfigurationModel.md)| nodeConfiguration | [optional]
 
 ### Return type

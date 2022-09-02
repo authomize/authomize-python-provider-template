@@ -57,10 +57,8 @@ class WidgetSecretModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class WidgetSecretModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'folder_path': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class WidgetSecretModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): FolderId. [optional]  # noqa: E501
-            folder_path (bool, date, datetime, dict, float, int, list, str, none_type): FolderPath. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): SecretName. [optional]  # noqa: E501
+            folder_id (int): FolderId. [optional]  # noqa: E501
+            folder_path (str): FolderPath. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            secret_name (str): SecretName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class WidgetSecretModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): FolderId. [optional]  # noqa: E501
-            folder_path (bool, date, datetime, dict, float, int, list, str, none_type): FolderPath. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): SecretName. [optional]  # noqa: E501
+            folder_id (int): FolderId. [optional]  # noqa: E501
+            folder_path (str): FolderPath. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            secret_name (str): SecretName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

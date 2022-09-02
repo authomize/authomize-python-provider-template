@@ -57,10 +57,8 @@ class ISecretSessionPointOfInterestSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class ISecretSessionPointOfInterestSummaryModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'activity_type_group': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_session_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'score': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'seconds_from_start': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'timestamp_offset': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'activity_type_group': (str, none_type,),  # noqa: E501
+            'launcher_session_guid': (str, none_type,),  # noqa: E501
+            'score': (int, none_type,),  # noqa: E501
+            'seconds_from_start': (int, none_type,),  # noqa: E501
+            'timestamp_offset': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class ISecretSessionPointOfInterestSummaryModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            activity_type_group (bool, date, datetime, dict, float, int, list, str, none_type): ActivityTypeGroup. [optional]  # noqa: E501
-            launcher_session_guid (bool, date, datetime, dict, float, int, list, str, none_type): LauncherSessionGuid. [optional]  # noqa: E501
-            score (bool, date, datetime, dict, float, int, list, str, none_type): Score. [optional]  # noqa: E501
-            seconds_from_start (bool, date, datetime, dict, float, int, list, str, none_type): SecondsFromStart. [optional]  # noqa: E501
-            timestamp_offset (bool, date, datetime, dict, float, int, list, str, none_type): TimestampOffset. [optional]  # noqa: E501
+            activity_type_group (str): ActivityTypeGroup. [optional]  # noqa: E501
+            launcher_session_guid (str): LauncherSessionGuid. [optional]  # noqa: E501
+            score (int): Score. [optional]  # noqa: E501
+            seconds_from_start (int): SecondsFromStart. [optional]  # noqa: E501
+            timestamp_offset (str): TimestampOffset. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class ISecretSessionPointOfInterestSummaryModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            activity_type_group (bool, date, datetime, dict, float, int, list, str, none_type): ActivityTypeGroup. [optional]  # noqa: E501
-            launcher_session_guid (bool, date, datetime, dict, float, int, list, str, none_type): LauncherSessionGuid. [optional]  # noqa: E501
-            score (bool, date, datetime, dict, float, int, list, str, none_type): Score. [optional]  # noqa: E501
-            seconds_from_start (bool, date, datetime, dict, float, int, list, str, none_type): SecondsFromStart. [optional]  # noqa: E501
-            timestamp_offset (bool, date, datetime, dict, float, int, list, str, none_type): TimestampOffset. [optional]  # noqa: E501
+            activity_type_group (str): ActivityTypeGroup. [optional]  # noqa: E501
+            launcher_session_guid (str): LauncherSessionGuid. [optional]  # noqa: E501
+            score (int): Score. [optional]  # noqa: E501
+            seconds_from_start (int): SecondsFromStart. [optional]  # noqa: E501
+            timestamp_offset (str): TimestampOffset. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -63,10 +63,8 @@ class ConfigurationUserInterfacePatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,32 +73,29 @@ class ConfigurationUserInterfacePatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_user_to_select_theme': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'custom_logo_collapsed': (UpdateFieldValueOfString,),  # noqa: E501
-            'custom_logo_full_size': (UpdateFieldValueOfString,),  # noqa: E501
-            'default_classic_theme': (UpdateFieldValueOfString,),  # noqa: E501
-            'disable_legacy_ui': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'new_ui_default': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'allow_user_to_select_theme': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'custom_logo_collapsed': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'custom_logo_full_size': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'default_classic_theme': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'disable_legacy_ui': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'new_ui_default': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

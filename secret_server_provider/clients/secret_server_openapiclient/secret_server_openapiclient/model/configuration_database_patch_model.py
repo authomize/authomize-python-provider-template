@@ -67,10 +67,8 @@ class ConfigurationDatabasePatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,38 +77,35 @@ class ConfigurationDatabasePatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'authentication_type': (UpdateFieldValueOfSqlAuthenticationType,),  # noqa: E501
-            'connection_timeout': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'database_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'enable_multi_subnet_failover': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'enable_ssl_encryption': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'failover_partner': (UpdateFieldValueOfString,),  # noqa: E501
-            'file_override_password': (UpdateFieldValueOfString,),  # noqa: E501
-            'file_override_user_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'password': (UpdateFieldValueOfString,),  # noqa: E501
-            'server_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'trust_server_certificate': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'user_name': (UpdateFieldValueOfString,),  # noqa: E501
+            'authentication_type': (UpdateFieldValueOfSqlAuthenticationType, none_type,),  # noqa: E501
+            'connection_timeout': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'database_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'enable_multi_subnet_failover': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'enable_ssl_encryption': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'failover_partner': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'file_override_password': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'file_override_user_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'password': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'server_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'trust_server_certificate': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'user_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

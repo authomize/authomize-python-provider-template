@@ -60,21 +60,21 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             entity_actions=[
                 EventSubscriptionEntityActionModel(
                     condition_type=EventSubscriptionConditionType("{}"),
-                    container_id=None,
-                    container_name=None,
-                    event_action_display_name=None,
-                    event_action_id=None,
+                    container_id=1,
+                    container_name="container_name_example",
+                    event_action_display_name="event_action_display_name_example",
+                    event_action_id=1,
                     event_entity_type=EventSubscriptionEntity("{}"),
-                    event_entity_type_display_name=None,
-                    id=None,
+                    event_entity_type_display_name="event_entity_type_display_name_example",
+                    id=1,
                     include_subcontainers=True,
-                    item_id=None,
-                    item_name=None,
+                    item_id=1,
+                    item_name="item_name_example",
                 ),
             ],
             send_email=True,
             send_slack=True,
-            subscription_name=None,
+            subscription_name="subscription_name_example",
         ),
     ) # EventSubscriptionCreateArgs | args (optional)
 
@@ -161,7 +161,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_subscriptions_api.EventSubscriptionsApi(api_client)
-    event_subscription_id = None # bool, date, datetime, dict, float, int, list, str, none_type | eventSubscriptionId
+    event_subscription_id = 1 # int | eventSubscriptionId
 
     # example passing only required values which don't have defaults set
     try:
@@ -177,7 +177,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **event_subscription_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| eventSubscriptionId |
+ **event_subscription_id** | **int**| eventSubscriptionId |
 
 ### Return type
 
@@ -406,11 +406,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_subscriptions_api.EventSubscriptionsApi(api_client)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -428,11 +428,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -501,7 +501,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_subscriptions_api.EventSubscriptionsApi(api_client)
-    event_subscription_id = None # bool, date, datetime, dict, float, int, list, str, none_type | eventSubscriptionId
+    event_subscription_id = 1 # int | eventSubscriptionId
     event_subscription_update_args = EventSubscriptionUpdateArgs(
         data=EventSubscriptionUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -513,32 +513,32 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 value=[
                     EventSubscriptionEntityActionModel(
                         condition_type=EventSubscriptionConditionType("{}"),
-                        container_id=None,
-                        container_name=None,
-                        event_action_display_name=None,
-                        event_action_id=None,
+                        container_id=1,
+                        container_name="container_name_example",
+                        event_action_display_name="event_action_display_name_example",
+                        event_action_id=1,
                         event_entity_type=EventSubscriptionEntity("{}"),
-                        event_entity_type_display_name=None,
-                        id=None,
+                        event_entity_type_display_name="event_entity_type_display_name_example",
+                        id=1,
                         include_subcontainers=True,
-                        item_id=None,
-                        item_name=None,
+                        item_id=1,
+                        item_name="item_name_example",
                     ),
                 ],
             ),
             inbox_expiration=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             subscribers=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
             subscription_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # EventSubscriptionUpdateArgs | args (optional)
@@ -566,7 +566,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **event_subscription_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| eventSubscriptionId |
+ **event_subscription_id** | **int**| eventSubscriptionId |
  **event_subscription_update_args** | [**EventSubscriptionUpdateArgs**](EventSubscriptionUpdateArgs.md)| args | [optional]
 
 ### Return type

@@ -5,7 +5,7 @@ Data
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**template_name** | **bool, date, datetime, dict, float, int, list, str, none_type** | TemplateName | [optional] 
+**template_name** | **str** | TemplateName | [optional] 
 **template_type** | [**InboxTemplateType**](InboxTemplateType.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

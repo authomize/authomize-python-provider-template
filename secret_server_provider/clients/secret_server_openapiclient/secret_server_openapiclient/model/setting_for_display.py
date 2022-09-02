@@ -63,10 +63,8 @@ class SettingForDisplay(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,43 +73,40 @@ class SettingForDisplay(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'can_edit': (bool,),  # noqa: E501
-            'can_edit_value': (bool,),  # noqa: E501
-            'child_load_sql': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'child_settings': ([Setting],),  # noqa: E501
-            'default_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_visible': (bool,),  # noqa: E501
-            'name_localize_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'parent_setting_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'regex_validation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_section_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_type': (SettingType,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sub_setting_section_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'tooltip_localize_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'can_edit': (bool, none_type,),  # noqa: E501
+            'can_edit_value': (bool, none_type,),  # noqa: E501
+            'child_load_sql': (str, none_type,),  # noqa: E501
+            'child_settings': ([Setting], none_type,),  # noqa: E501
+            'default_value': (str, none_type,),  # noqa: E501
+            'is_visible': (bool, none_type,),  # noqa: E501
+            'name_localize_key': (str, none_type,),  # noqa: E501
+            'parent_setting_id': (int, none_type,),  # noqa: E501
+            'regex_validation': (str, none_type,),  # noqa: E501
+            'setting_id': (int, none_type,),  # noqa: E501
+            'setting_name': (str, none_type,),  # noqa: E501
+            'setting_section_id': (int, none_type,),  # noqa: E501
+            'setting_type': (SettingType, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'sub_setting_section_id': (int, none_type,),  # noqa: E501
+            'tooltip_localize_key': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -178,20 +173,20 @@ class SettingForDisplay(ModelNormal):
             active (bool): Active. [optional]  # noqa: E501
             can_edit (bool): CanEdit. [optional]  # noqa: E501
             can_edit_value (bool): CanEditValue. [optional]  # noqa: E501
-            child_load_sql (bool, date, datetime, dict, float, int, list, str, none_type): ChildLoadSQL. [optional]  # noqa: E501
+            child_load_sql (str): ChildLoadSQL. [optional]  # noqa: E501
             child_settings ([Setting]): ChildSettings. [optional]  # noqa: E501
-            default_value (bool, date, datetime, dict, float, int, list, str, none_type): DefaultValue. [optional]  # noqa: E501
+            default_value (str): DefaultValue. [optional]  # noqa: E501
             is_visible (bool): IsVisible. [optional]  # noqa: E501
-            name_localize_key (bool, date, datetime, dict, float, int, list, str, none_type): NameLocalizeKey. [optional]  # noqa: E501
-            parent_setting_id (bool, date, datetime, dict, float, int, list, str, none_type): ParentSettingId. [optional]  # noqa: E501
-            regex_validation (bool, date, datetime, dict, float, int, list, str, none_type): RegexValidation. [optional]  # noqa: E501
-            setting_id (bool, date, datetime, dict, float, int, list, str, none_type): SettingId. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): SettingName. [optional]  # noqa: E501
-            setting_section_id (bool, date, datetime, dict, float, int, list, str, none_type): SettingSectionId. [optional]  # noqa: E501
+            name_localize_key (str): NameLocalizeKey. [optional]  # noqa: E501
+            parent_setting_id (int): ParentSettingId. [optional]  # noqa: E501
+            regex_validation (str): RegexValidation. [optional]  # noqa: E501
+            setting_id (int): SettingId. [optional]  # noqa: E501
+            setting_name (str): SettingName. [optional]  # noqa: E501
+            setting_section_id (int): SettingSectionId. [optional]  # noqa: E501
             setting_type (SettingType): [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): SortOrder. [optional]  # noqa: E501
-            sub_setting_section_id (bool, date, datetime, dict, float, int, list, str, none_type): SubSettingSectionId. [optional]  # noqa: E501
-            tooltip_localize_key (bool, date, datetime, dict, float, int, list, str, none_type): TooltipLocalizeKey. [optional]  # noqa: E501
+            sort_order (int): SortOrder. [optional]  # noqa: E501
+            sub_setting_section_id (int): SubSettingSectionId. [optional]  # noqa: E501
+            tooltip_localize_key (str): TooltipLocalizeKey. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -280,20 +275,20 @@ class SettingForDisplay(ModelNormal):
             active (bool): Active. [optional]  # noqa: E501
             can_edit (bool): CanEdit. [optional]  # noqa: E501
             can_edit_value (bool): CanEditValue. [optional]  # noqa: E501
-            child_load_sql (bool, date, datetime, dict, float, int, list, str, none_type): ChildLoadSQL. [optional]  # noqa: E501
+            child_load_sql (str): ChildLoadSQL. [optional]  # noqa: E501
             child_settings ([Setting]): ChildSettings. [optional]  # noqa: E501
-            default_value (bool, date, datetime, dict, float, int, list, str, none_type): DefaultValue. [optional]  # noqa: E501
+            default_value (str): DefaultValue. [optional]  # noqa: E501
             is_visible (bool): IsVisible. [optional]  # noqa: E501
-            name_localize_key (bool, date, datetime, dict, float, int, list, str, none_type): NameLocalizeKey. [optional]  # noqa: E501
-            parent_setting_id (bool, date, datetime, dict, float, int, list, str, none_type): ParentSettingId. [optional]  # noqa: E501
-            regex_validation (bool, date, datetime, dict, float, int, list, str, none_type): RegexValidation. [optional]  # noqa: E501
-            setting_id (bool, date, datetime, dict, float, int, list, str, none_type): SettingId. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): SettingName. [optional]  # noqa: E501
-            setting_section_id (bool, date, datetime, dict, float, int, list, str, none_type): SettingSectionId. [optional]  # noqa: E501
+            name_localize_key (str): NameLocalizeKey. [optional]  # noqa: E501
+            parent_setting_id (int): ParentSettingId. [optional]  # noqa: E501
+            regex_validation (str): RegexValidation. [optional]  # noqa: E501
+            setting_id (int): SettingId. [optional]  # noqa: E501
+            setting_name (str): SettingName. [optional]  # noqa: E501
+            setting_section_id (int): SettingSectionId. [optional]  # noqa: E501
             setting_type (SettingType): [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): SortOrder. [optional]  # noqa: E501
-            sub_setting_section_id (bool, date, datetime, dict, float, int, list, str, none_type): SubSettingSectionId. [optional]  # noqa: E501
-            tooltip_localize_key (bool, date, datetime, dict, float, int, list, str, none_type): TooltipLocalizeKey. [optional]  # noqa: E501
+            sort_order (int): SortOrder. [optional]  # noqa: E501
+            sub_setting_section_id (int): SubSettingSectionId. [optional]  # noqa: E501
+            tooltip_localize_key (str): TooltipLocalizeKey. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

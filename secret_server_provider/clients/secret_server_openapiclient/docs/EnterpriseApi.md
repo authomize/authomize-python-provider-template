@@ -49,7 +49,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = enterprise_api.EnterpriseApi(api_client)
-    request_id = None # bool, date, datetime, dict, float, int, list, str, none_type | requestId
+    request_id = 1 # int | requestId
 
     # example passing only required values which don't have defaults set
     try:
@@ -65,7 +65,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| requestId |
+ **request_id** | **int**| requestId |
 
 ### Return type
 
@@ -136,15 +136,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = enterprise_api.EnterpriseApi(api_client)
     enterprise_search_request_args = EnterpriseSearchRequestArgs(
         data=EnterpriseSearchRequestFilter(
-            end_date=None,
-            enterprise_name=None,
+            end_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            enterprise_name="enterprise_name_example",
             request_fields=[
                 EnterpriseSearchRequestFieldModel(
-                    field_name=None,
-                    field_value=None,
+                    field_name="field_name_example",
+                    field_value="field_value_example",
                 ),
             ],
-            start_date=None,
+            start_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         ),
     ) # EnterpriseSearchRequestArgs | args (optional)
 

@@ -5,7 +5,7 @@ Query results
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**jumpbox_route_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | JumpboxRouteId | [optional] 
+**jumpbox_route_id** | **str** | JumpboxRouteId | [optional] 
 **order** | [**ViewFieldValueOfInt32**](ViewFieldValueOfInt32.md) |  | [optional] 
 **port** | [**ViewFieldValueOfInt32**](ViewFieldValueOfInt32.md) |  | [optional] 
 **secret_id** | [**ViewFieldValueOfInt32**](ViewFieldValueOfInt32.md) |  | [optional] 

@@ -57,11 +57,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     ssh_command_blocklist_create_args = SshCommandBlocklistCreateArgs(
         data=SshCommandBlocklistCreateModel(
             active=True,
-            description=None,
-            name=None,
-            ssh_command_blocklist_id=None,
+            description="description_example",
+            name="name_example",
+            ssh_command_blocklist_id="ssh_command_blocklist_id_example",
             ssh_command_ids=[
-                None,
+                "ssh_command_ids_example",
             ],
         ),
     ) # SshCommandBlocklistCreateArgs | SSH Command Blocklist add options (optional)
@@ -149,7 +149,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_command_blocklist_api.SshCommandBlocklistApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | SSH Command Blocklist ID
+    id = "id_example" # str | SSH Command Blocklist ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -165,7 +165,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SSH Command Blocklist ID |
+ **id** | **str**| SSH Command Blocklist ID |
 
 ### Return type
 
@@ -233,12 +233,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_command_blocklist_api.SshCommandBlocklistApi(api_client)
-    filter_ssh_command_blocklist_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Results will be associated to the provided blocklist id (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_ssh_command_blocklist_id = "filter.sshCommandBlocklistId_example" # str | Results will be associated to the provided blocklist id (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -255,12 +255,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_ssh_command_blocklist_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Results will be associated to the provided blocklist id | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_ssh_command_blocklist_id** | **str**| Results will be associated to the provided blocklist id | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -410,12 +410,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = ssh_command_blocklist_api.SshCommandBlocklistApi(api_client)
     filter_include_active = True # bool | IncludeActive (optional)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    filter_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Name (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_name = "filter.name_example" # str | Name (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -434,12 +434,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_active** | **bool**| IncludeActive | [optional]
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **filter_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Name | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_name** | **str**| Name | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -508,7 +508,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_command_blocklist_api.SshCommandBlocklistApi(api_client)
-    ssh_command_blocklist_id = None # bool, date, datetime, dict, float, int, list, str, none_type | sshCommandBlocklistId
+    ssh_command_blocklist_id = "sshCommandBlocklistId_example" # str | sshCommandBlocklistId
     ssh_command_blocklist_patch_args = SshCommandBlocklistPatchArgs(
         data=SshCommandBlocklistPatchModel(
             active=UpdateFieldValueOfBoolean(
@@ -517,17 +517,17 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
-            ssh_command_blocklist_id=None,
+            ssh_command_blocklist_id="ssh_command_blocklist_id_example",
             ssh_command_ids=UpdateFieldValueOfGuidArray(
                 dirty=True,
                 value=[
-                    None,
+                    "value_example",
                 ],
             ),
         ),
@@ -556,7 +556,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ssh_command_blocklist_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| sshCommandBlocklistId |
+ **ssh_command_blocklist_id** | **str**| sshCommandBlocklistId |
  **ssh_command_blocklist_patch_args** | [**SshCommandBlocklistPatchArgs**](SshCommandBlocklistPatchArgs.md)| SSH Command Blocklist Update Options | [optional]
 
 ### Return type

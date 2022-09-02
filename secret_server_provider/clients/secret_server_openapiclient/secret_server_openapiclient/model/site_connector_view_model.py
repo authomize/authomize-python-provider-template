@@ -67,10 +67,8 @@ class SiteConnectorViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,37 +77,34 @@ class SiteConnectorViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'host_name': (ViewFieldValueOfString,),  # noqa: E501
-            'port': (ViewFieldValueOfInt32,),  # noqa: E501
-            'queue_type': (ViewFieldDropDownValueOfMessageQueueType,),  # noqa: E501
-            'shared_access_key_name': (ViewFieldValueOfString,),  # noqa: E501
-            'shared_access_key_value': (ViewFieldValueOfString,),  # noqa: E501
-            'site_connector_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_connector_name': (ViewFieldValueOfString,),  # noqa: E501
-            'ssl_certificate_thumbprint': (ViewFieldValueOfString,),  # noqa: E501
-            'use_ssl': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'validated': (ViewFieldValueOfBoolean,),  # noqa: E501
+            'active': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'host_name': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'port': (ViewFieldValueOfInt32, none_type,),  # noqa: E501
+            'queue_type': (ViewFieldDropDownValueOfMessageQueueType, none_type,),  # noqa: E501
+            'shared_access_key_name': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'shared_access_key_value': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'site_connector_id': (int, none_type,),  # noqa: E501
+            'site_connector_name': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'ssl_certificate_thumbprint': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'use_ssl': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'validated': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -173,7 +168,7 @@ class SiteConnectorViewModel(ModelNormal):
             queue_type (ViewFieldDropDownValueOfMessageQueueType): [optional]  # noqa: E501
             shared_access_key_name (ViewFieldValueOfString): [optional]  # noqa: E501
             shared_access_key_value (ViewFieldValueOfString): [optional]  # noqa: E501
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site Connector. [optional]  # noqa: E501
+            site_connector_id (int): Id of Site Connector. [optional]  # noqa: E501
             site_connector_name (ViewFieldValueOfString): [optional]  # noqa: E501
             ssl_certificate_thumbprint (ViewFieldValueOfString): [optional]  # noqa: E501
             use_ssl (ViewFieldValueOfBoolean): [optional]  # noqa: E501
@@ -269,7 +264,7 @@ class SiteConnectorViewModel(ModelNormal):
             queue_type (ViewFieldDropDownValueOfMessageQueueType): [optional]  # noqa: E501
             shared_access_key_name (ViewFieldValueOfString): [optional]  # noqa: E501
             shared_access_key_value (ViewFieldValueOfString): [optional]  # noqa: E501
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site Connector. [optional]  # noqa: E501
+            site_connector_id (int): Id of Site Connector. [optional]  # noqa: E501
             site_connector_name (ViewFieldValueOfString): [optional]  # noqa: E501
             ssl_certificate_thumbprint (ViewFieldValueOfString): [optional]  # noqa: E501
             use_ssl (ViewFieldValueOfBoolean): [optional]  # noqa: E501

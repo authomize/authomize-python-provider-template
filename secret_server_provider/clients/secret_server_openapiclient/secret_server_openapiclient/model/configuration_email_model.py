@@ -57,10 +57,8 @@ class ConfigurationEmailModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,37 +66,34 @@ class ConfigurationEmailModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'from_email_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'from_email_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'send_legacy_emails': (bool,),  # noqa: E501
-            'smtp_check_certificate_revocation': (bool,),  # noqa: E501
-            'smtp_domain': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'smtp_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'smtp_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'smtp_server': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'smtp_use_credentials': (bool,),  # noqa: E501
-            'smtp_use_implicit_ssl': (bool,),  # noqa: E501
-            'smtp_user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'smtp_use_ssl': (bool,),  # noqa: E501
+            'from_email_address': (str, none_type,),  # noqa: E501
+            'from_email_name': (str, none_type,),  # noqa: E501
+            'send_legacy_emails': (bool, none_type,),  # noqa: E501
+            'smtp_check_certificate_revocation': (bool, none_type,),  # noqa: E501
+            'smtp_domain': (str, none_type,),  # noqa: E501
+            'smtp_password': (str, none_type,),  # noqa: E501
+            'smtp_port': (int, none_type,),  # noqa: E501
+            'smtp_server': (str, none_type,),  # noqa: E501
+            'smtp_use_credentials': (bool, none_type,),  # noqa: E501
+            'smtp_use_implicit_ssl': (bool, none_type,),  # noqa: E501
+            'smtp_user_name': (str, none_type,),  # noqa: E501
+            'smtp_use_ssl': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -157,17 +152,17 @@ class ConfigurationEmailModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            from_email_address (bool, date, datetime, dict, float, int, list, str, none_type): All emails will be sent from this address. [optional]  # noqa: E501
-            from_email_name (bool, date, datetime, dict, float, int, list, str, none_type): This is the 'From' friendly name for emails that are sent. It can be left empty.. [optional]  # noqa: E501
+            from_email_address (str): All emails will be sent from this address. [optional]  # noqa: E501
+            from_email_name (str): This is the 'From' friendly name for emails that are sent. It can be left empty.. [optional]  # noqa: E501
             send_legacy_emails (bool): Send Legacy Emails. [optional]  # noqa: E501
             smtp_check_certificate_revocation (bool): Check Certificate Revocation when in Implicit SSL Connection Mode. [optional]  # noqa: E501
-            smtp_domain (bool, date, datetime, dict, float, int, list, str, none_type): SMTP user domain. [optional]  # noqa: E501
-            smtp_password (bool, date, datetime, dict, float, int, list, str, none_type): SMTP user password. [optional]  # noqa: E501
-            smtp_port (bool, date, datetime, dict, float, int, list, str, none_type): Custom port, otherwise the default. [optional]  # noqa: E501
-            smtp_server (bool, date, datetime, dict, float, int, list, str, none_type): The resolvable and reachable host name for the outgoing SMTP server. [optional]  # noqa: E501
+            smtp_domain (str): SMTP user domain. [optional]  # noqa: E501
+            smtp_password (str): SMTP user password. [optional]  # noqa: E501
+            smtp_port (int): Custom port, otherwise the default. [optional]  # noqa: E501
+            smtp_server (str): The resolvable and reachable host name for the outgoing SMTP server. [optional]  # noqa: E501
             smtp_use_credentials (bool): true if credentials are set, false if anonymous. [optional]  # noqa: E501
             smtp_use_implicit_ssl (bool): Implicit SSL Connection Mode. [optional]  # noqa: E501
-            smtp_user_name (bool, date, datetime, dict, float, int, list, str, none_type): SMTP user name. [optional]  # noqa: E501
+            smtp_user_name (str): SMTP user name. [optional]  # noqa: E501
             smtp_use_ssl (bool): Use SSL to connect. [optional]  # noqa: E501
         """
 
@@ -254,17 +249,17 @@ class ConfigurationEmailModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            from_email_address (bool, date, datetime, dict, float, int, list, str, none_type): All emails will be sent from this address. [optional]  # noqa: E501
-            from_email_name (bool, date, datetime, dict, float, int, list, str, none_type): This is the 'From' friendly name for emails that are sent. It can be left empty.. [optional]  # noqa: E501
+            from_email_address (str): All emails will be sent from this address. [optional]  # noqa: E501
+            from_email_name (str): This is the 'From' friendly name for emails that are sent. It can be left empty.. [optional]  # noqa: E501
             send_legacy_emails (bool): Send Legacy Emails. [optional]  # noqa: E501
             smtp_check_certificate_revocation (bool): Check Certificate Revocation when in Implicit SSL Connection Mode. [optional]  # noqa: E501
-            smtp_domain (bool, date, datetime, dict, float, int, list, str, none_type): SMTP user domain. [optional]  # noqa: E501
-            smtp_password (bool, date, datetime, dict, float, int, list, str, none_type): SMTP user password. [optional]  # noqa: E501
-            smtp_port (bool, date, datetime, dict, float, int, list, str, none_type): Custom port, otherwise the default. [optional]  # noqa: E501
-            smtp_server (bool, date, datetime, dict, float, int, list, str, none_type): The resolvable and reachable host name for the outgoing SMTP server. [optional]  # noqa: E501
+            smtp_domain (str): SMTP user domain. [optional]  # noqa: E501
+            smtp_password (str): SMTP user password. [optional]  # noqa: E501
+            smtp_port (int): Custom port, otherwise the default. [optional]  # noqa: E501
+            smtp_server (str): The resolvable and reachable host name for the outgoing SMTP server. [optional]  # noqa: E501
             smtp_use_credentials (bool): true if credentials are set, false if anonymous. [optional]  # noqa: E501
             smtp_use_implicit_ssl (bool): Implicit SSL Connection Mode. [optional]  # noqa: E501
-            smtp_user_name (bool, date, datetime, dict, float, int, list, str, none_type): SMTP user name. [optional]  # noqa: E501
+            smtp_user_name (str): SMTP user name. [optional]  # noqa: E501
             smtp_use_ssl (bool): Use SSL to connect. [optional]  # noqa: E501
         """
 

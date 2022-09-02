@@ -61,10 +61,8 @@ class ReportScheduleSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,37 +71,34 @@ class ReportScheduleSummaryModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'change_type': (ScheduleChangeType,),  # noqa: E501
-            'deleted': (bool,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_run': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_run_history_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'report_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'report_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'schedule_report_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'send_email': (bool,),  # noqa: E501
-            'stored_report_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'change_type': (ScheduleChangeType, none_type,),  # noqa: E501
+            'deleted': (bool, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'last_run': (datetime, none_type,),  # noqa: E501
+            'last_run_history_id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'report_id': (int, none_type,),  # noqa: E501
+            'report_name': (str, none_type,),  # noqa: E501
+            'schedule_report_id': (int, none_type,),  # noqa: E501
+            'send_email': (bool, none_type,),  # noqa: E501
+            'stored_report_count': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -163,15 +158,15 @@ class ReportScheduleSummaryModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             change_type (ScheduleChangeType): [optional]  # noqa: E501
             deleted (bool): Deleted. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            last_run (bool, date, datetime, dict, float, int, list, str, none_type): DateTime of Last Run. [optional]  # noqa: E501
-            last_run_history_id (bool, date, datetime, dict, float, int, list, str, none_type): HistoryId of Last Run. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            report_id (bool, date, datetime, dict, float, int, list, str, none_type): Report Id. [optional]  # noqa: E501
-            report_name (bool, date, datetime, dict, float, int, list, str, none_type): Report Name. [optional]  # noqa: E501
-            schedule_report_id (bool, date, datetime, dict, float, int, list, str, none_type): Schedule Report Id. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            last_run (datetime): DateTime of Last Run. [optional]  # noqa: E501
+            last_run_history_id (int): HistoryId of Last Run. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            report_id (int): Report Id. [optional]  # noqa: E501
+            report_name (str): Report Name. [optional]  # noqa: E501
+            schedule_report_id (int): Schedule Report Id. [optional]  # noqa: E501
             send_email (bool): Send Report via Email. [optional]  # noqa: E501
-            stored_report_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of reports stored for this schedule. [optional]  # noqa: E501
+            stored_report_count (int): Number of reports stored for this schedule. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -259,15 +254,15 @@ class ReportScheduleSummaryModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             change_type (ScheduleChangeType): [optional]  # noqa: E501
             deleted (bool): Deleted. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            last_run (bool, date, datetime, dict, float, int, list, str, none_type): DateTime of Last Run. [optional]  # noqa: E501
-            last_run_history_id (bool, date, datetime, dict, float, int, list, str, none_type): HistoryId of Last Run. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            report_id (bool, date, datetime, dict, float, int, list, str, none_type): Report Id. [optional]  # noqa: E501
-            report_name (bool, date, datetime, dict, float, int, list, str, none_type): Report Name. [optional]  # noqa: E501
-            schedule_report_id (bool, date, datetime, dict, float, int, list, str, none_type): Schedule Report Id. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            last_run (datetime): DateTime of Last Run. [optional]  # noqa: E501
+            last_run_history_id (int): HistoryId of Last Run. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            report_id (int): Report Id. [optional]  # noqa: E501
+            report_name (str): Report Name. [optional]  # noqa: E501
+            schedule_report_id (int): Schedule Report Id. [optional]  # noqa: E501
             send_email (bool): Send Report via Email. [optional]  # noqa: E501
-            stored_report_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of reports stored for this schedule. [optional]  # noqa: E501
+            stored_report_count (int): Number of reports stored for this schedule. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

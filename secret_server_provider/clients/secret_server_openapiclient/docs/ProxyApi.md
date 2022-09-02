@@ -71,8 +71,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
     proxy_client_override_summary = ProxyClientOverrideSummary(
-        client_override_id=None,
-        ip_address_range=None,
+        client_override_id=1,
+        ip_address_range="ip_address_range_example",
         terminal_client_type=ProxyClientType("{}"),
     ) # ProxyClientOverrideSummary | clientOverride (optional)
 
@@ -159,7 +159,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
-    client_override_id = None # bool, date, datetime, dict, float, int, list, str, none_type | clientOverrideId
+    client_override_id = 1 # int | clientOverrideId
 
     # example passing only required values which don't have defaults set
     try:
@@ -175,7 +175,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_override_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| clientOverrideId |
+ **client_override_id** | **int**| clientOverrideId |
 
 ### Return type
 
@@ -245,7 +245,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
     generate_rdp_certificate_args = GenerateRdpCertificateArgs(
-        dns_name=None,
+        dns_name="dns_name_example",
     ) # GenerateRdpCertificateArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -412,11 +412,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -434,11 +434,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **proxy_service_get_endpoint_notification**
-> bool, date, datetime, dict, float, int, list, str, none_type proxy_service_get_endpoint_notification()
+> str proxy_service_get_endpoint_notification()
 
 Get endpoint warnings
 
@@ -521,7 +521,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -785,7 +785,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **proxy_service_get_rdp_endpoint_notification**
-> bool, date, datetime, dict, float, int, list, str, none_type proxy_service_get_rdp_endpoint_notification()
+> str proxy_service_get_rdp_endpoint_notification()
 
 Get a notification of where the RDP proxy is running
 
@@ -840,7 +840,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -944,7 +944,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **proxy_service_get_ssh_endpoint_notification**
-> bool, date, datetime, dict, float, int, list, str, none_type proxy_service_get_ssh_endpoint_notification()
+> str proxy_service_get_ssh_endpoint_notification()
 
 Get a notification of where the SSH proxy is running
 
@@ -999,7 +999,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -1143,16 +1143,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
-    filter_authenticate_result = None # bool, date, datetime, dict, float, int, list, str, none_type | AuthenticateResult (optional)
-    filter_end_date = None # bool, date, datetime, dict, float, int, list, str, none_type | EndDate (optional)
-    filter_engine_identity_guid = None # bool, date, datetime, dict, float, int, list, str, none_type | EngineIdentityGuid (optional)
-    filter_ip_address = None # bool, date, datetime, dict, float, int, list, str, none_type | IpAddress (optional)
-    filter_start_date = None # bool, date, datetime, dict, float, int, list, str, none_type | StartDate (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_authenticate_result = "filter.authenticateResult_example" # str | AuthenticateResult (optional)
+    filter_end_date = "filter.endDate_example" # str | EndDate (optional)
+    filter_engine_identity_guid = "filter.engineIdentityGuid_example" # str | EngineIdentityGuid (optional)
+    filter_ip_address = "filter.ipAddress_example" # str | IpAddress (optional)
+    filter_start_date = "filter.startDate_example" # str | StartDate (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1169,16 +1169,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_authenticate_result** | **bool, date, datetime, dict, float, int, list, str, none_type**| AuthenticateResult | [optional]
- **filter_end_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| EndDate | [optional]
- **filter_engine_identity_guid** | **bool, date, datetime, dict, float, int, list, str, none_type**| EngineIdentityGuid | [optional]
- **filter_ip_address** | **bool, date, datetime, dict, float, int, list, str, none_type**| IpAddress | [optional]
- **filter_start_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| StartDate | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_authenticate_result** | **str**| AuthenticateResult | [optional]
+ **filter_end_date** | **str**| EndDate | [optional]
+ **filter_engine_identity_guid** | **str**| EngineIdentityGuid | [optional]
+ **filter_ip_address** | **str**| IpAddress | [optional]
+ **filter_start_date** | **str**| StartDate | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1326,13 +1326,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
-    filter_ip_address = None # bool, date, datetime, dict, float, int, list, str, none_type | IpAddress (optional)
-    filter_terminal_client_type = None # bool, date, datetime, dict, float, int, list, str, none_type | TerminalClientType (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_ip_address = "filter.ipAddress_example" # str | IpAddress (optional)
+    filter_terminal_client_type = "filter.terminalClientType_example" # str | TerminalClientType (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1349,13 +1349,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_ip_address** | **bool, date, datetime, dict, float, int, list, str, none_type**| IpAddress | [optional]
- **filter_terminal_client_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| TerminalClientType | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_ip_address** | **str**| IpAddress | [optional]
+ **filter_terminal_client_type** | **str**| TerminalClientType | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1424,13 +1424,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     proxy_engine_view_model = ProxyEngineViewModel(
-        bind_ip_address=None,
-        engine_id=None,
-        friendly_name=None,
-        public_host=None,
-        site_name=None,
+        bind_ip_address="bind_ip_address_example",
+        engine_id=1,
+        friendly_name="friendly_name_example",
+        public_host="public_host_example",
+        site_name="site_name_example",
     ) # ProxyEngineViewModel | engine (optional)
 
     # example passing only required values which don't have defaults set
@@ -1456,7 +1456,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **proxy_engine_view_model** | [**ProxyEngineViewModel**](ProxyEngineViewModel.md)| engine | [optional]
 
 ### Return type
@@ -1526,13 +1526,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     proxy_node_view_model = ProxyNodeViewModel(
-        bind_ip_address=None,
-        jumpbox_available_port_range=None,
-        machine_name=None,
-        node_id=None,
-        public_host=None,
+        bind_ip_address="bind_ip_address_example",
+        jumpbox_available_port_range="jumpbox_available_port_range_example",
+        machine_name="machine_name_example",
+        node_id=1,
+        public_host="public_host_example",
     ) # ProxyNodeViewModel | node (optional)
 
     # example passing only required values which don't have defaults set
@@ -1558,7 +1558,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **proxy_node_view_model** | [**ProxyNodeViewModel**](ProxyNodeViewModel.md)| node | [optional]
 
 ### Return type
@@ -1629,19 +1629,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = proxy_api.ProxyApi(api_client)
     rdp_proxy_configuration_view_model = RdpProxyConfigurationViewModel(
         allow_site_selection_for_active_directory_accounts=True,
-        days_to_keep_operational_logs=None,
+        days_to_keep_operational_logs=1,
         enable_rdp_proxy=True,
         enable_remote_host_validation=True,
         is_cloud=True,
         proxy_new_secrets_by_default=True,
-        rdp_proxy_port=None,
+        rdp_proxy_port=1,
         rdp_server_certificate=RdpProxyCertificateViewModel(
-            rdp_server_certificate=None,
-            rdp_server_certificate_file_name=None,
-            rdp_server_certificate_password=None,
+            rdp_server_certificate=open('/path/to/file', 'rb'),
+            rdp_server_certificate_file_name="rdp_server_certificate_file_name_example",
+            rdp_server_certificate_password="rdp_server_certificate_password_example",
         ),
 null,
-        rdp_server_certificate_multipart_password=None,
+        rdp_server_certificate_multipart_password="rdp_server_certificate_multipart_password_example",
     ) # RdpProxyConfigurationViewModel | viewModel (optional)
 
     # example passing only required values which don't have defaults set
@@ -1728,16 +1728,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     proxy_site_view_model = ProxySiteViewModel(
         enable_rdp_proxy=True,
         enable_ssh_proxy=True,
-        rdp_proxy_port=None,
+        rdp_proxy_port=1,
         rdp_proxy_port_inherited=True,
-        site_id=None,
-        site_name=None,
-        ssh_jumpbox_available_port_range=None,
-        ssh_proxy_port=None,
+        site_id=1,
+        site_name="site_name_example",
+        ssh_jumpbox_available_port_range="ssh_jumpbox_available_port_range_example",
+        ssh_proxy_port=1,
         ssh_proxy_port_inherited=True,
     ) # ProxySiteViewModel | site (optional)
 
@@ -1764,7 +1764,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **proxy_site_view_model** | [**ProxySiteViewModel**](ProxySiteViewModel.md)| site | [optional]
 
 ### Return type
@@ -1834,8 +1834,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
     ssh_proxy_configuration_view_model = SshProxyConfigurationViewModel(
-        available_port_range=None,
-        days_to_keep_operational_logs=None,
+        available_port_range="available_port_range_example",
+        days_to_keep_operational_logs=1,
         enable_password_hiding=True,
         enable_proxy_block_listing=True,
         enable_proxy_inactivity_timeout=True,
@@ -1846,18 +1846,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         enable_terminal_inactivity_timeout=True,
         enable_window_title_change_command=True,
         is_cloud=True,
-        password_regex_filter=None,
-        proxy_auto_block_listing_max_num=None,
-        proxy_auto_block_listing_time_frame_minutes=None,
-        proxy_inactivity_timeout_seconds=None,
+        password_regex_filter="password_regex_filter_example",
+        proxy_auto_block_listing_max_num=1,
+        proxy_auto_block_listing_time_frame_minutes=1,
+        proxy_inactivity_timeout_seconds=1,
         proxy_new_secrets_by_default=True,
-        ssh_host_key=None,
-        ssh_proxy_banner=None,
-        ssh_proxy_host_fingerprint=None,
-        ssh_proxy_port=None,
-        ssh_terminal_banner=None,
-        terminal_inactivity_timeout_seconds=None,
-        tunnel_keep_alive_in_seconds=None,
+        ssh_host_key="ssh_host_key_example",
+        ssh_proxy_banner="ssh_proxy_banner_example",
+        ssh_proxy_host_fingerprint="ssh_proxy_host_fingerprint_example",
+        ssh_proxy_port=1,
+        ssh_terminal_banner="ssh_terminal_banner_example",
+        terminal_inactivity_timeout_seconds=1,
+        tunnel_keep_alive_in_seconds=1,
     ) # SshProxyConfigurationViewModel | viewModel (optional)
 
     # example passing only required values which don't have defaults set
@@ -1943,10 +1943,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
-    client_override_id = None # bool, date, datetime, dict, float, int, list, str, none_type | clientOverrideId
+    client_override_id = 1 # int | clientOverrideId
     proxy_client_override_summary = ProxyClientOverrideSummary(
-        client_override_id=None,
-        ip_address_range=None,
+        client_override_id=1,
+        ip_address_range="ip_address_range_example",
         terminal_client_type=ProxyClientType("{}"),
     ) # ProxyClientOverrideSummary | clientOverride (optional)
 
@@ -1973,7 +1973,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_override_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| clientOverrideId |
+ **client_override_id** | **int**| clientOverrideId |
  **proxy_client_override_summary** | [**ProxyClientOverrideSummary**](ProxyClientOverrideSummary.md)| clientOverride | [optional]
 
 ### Return type
@@ -2042,11 +2042,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = proxy_api.ProxyApi(api_client)
-    client_id = None # bool, date, datetime, dict, float, int, list, str, none_type | clientId
+    client_id = 1 # int | clientId
     proxy_client_summary = ProxyClientSummary(
-        client_id=None,
-        ip_address=None,
-        last_connection_date=None,
+        client_id=1,
+        ip_address="ip_address_example",
+        last_connection_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         terminal_client_type=ProxyClientType("{}"),
     ) # ProxyClientSummary | client (optional)
 
@@ -2073,7 +2073,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| clientId |
+ **client_id** | **int**| clientId |
  **proxy_client_summary** | [**ProxyClientSummary**](ProxyClientSummary.md)| client | [optional]
 
 ### Return type

@@ -61,10 +61,8 @@ class EventPipelineOrderUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,28 +71,25 @@ class EventPipelineOrderUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'event_pipeline_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'event_pipeline_policy_id': (int, none_type,),  # noqa: E501
+            'sort_order': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,7 +138,7 @@ class EventPipelineOrderUpdateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]  # noqa: E501
             sort_order (UpdateFieldValueOfInt32): [optional]  # noqa: E501
         """
 
@@ -230,7 +225,7 @@ class EventPipelineOrderUpdateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]  # noqa: E501
             sort_order (UpdateFieldValueOfInt32): [optional]  # noqa: E501
         """
 

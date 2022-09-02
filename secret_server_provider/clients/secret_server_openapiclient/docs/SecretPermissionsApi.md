@@ -57,13 +57,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_permissions_api.SecretPermissionsApi(api_client)
     secret_permission_create_args = SecretPermissionCreateArgs(
-        domain_name=None,
-        group_id=None,
-        group_name=None,
-        secret_access_role_name=None,
-        secret_id=None,
-        user_id=None,
-        user_name=None,
+        domain_name="domain_name_example",
+        group_id=1,
+        group_name="group_name_example",
+        secret_access_role_name="secret_access_role_name_example",
+        secret_id=1,
+        user_id=1,
+        user_name="user_name_example",
     ) # SecretPermissionCreateArgs | Secret permission creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -149,7 +149,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_permissions_api.SecretPermissionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret permission ID
+    id = 1 # int | Secret permission ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -165,7 +165,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret permission ID |
+ **id** | **int**| Secret permission ID |
 
 ### Return type
 
@@ -233,7 +233,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_permissions_api.SecretPermissionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret permission ID
+    id = 1 # int | Secret permission ID
     include_inactive = True # bool | Whether to include inactive permissions in the results (optional)
 
     # example passing only required values which don't have defaults set
@@ -259,7 +259,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret permission ID |
+ **id** | **int**| Secret permission ID |
  **include_inactive** | **bool**| Whether to include inactive permissions in the results | [optional]
 
 ### Return type
@@ -333,8 +333,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=SecretPermissionsIsCurrentUserSecretOwnerModel(
             group_secret_access_roles=[
                 SecretPermissionsGroupSecretAccessRoleModel(
-                    group_id=None,
-                    secret_access_role_id=None,
+                    group_id=1,
+                    secret_access_role_id=1,
                 ),
             ],
         ),
@@ -423,17 +423,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_permissions_api.SecretPermissionsApi(api_client)
-    filter_domain_name = None # bool, date, datetime, dict, float, int, list, str, none_type | DomainName (optional)
-    filter_group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by group ID (optional)
-    filter_group_name = None # bool, date, datetime, dict, float, int, list, str, none_type | GroupName (optional)
-    filter_secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by secret ID (optional)
-    filter_user_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by user ID (optional)
-    filter_user_name = None # bool, date, datetime, dict, float, int, list, str, none_type | UserName (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_domain_name = "filter.domainName_example" # str | DomainName (optional)
+    filter_group_id = 1 # int | Filter by group ID (optional)
+    filter_group_name = "filter.groupName_example" # str | GroupName (optional)
+    filter_secret_id = 1 # int | Filter by secret ID (optional)
+    filter_user_id = 1 # int | Filter by user ID (optional)
+    filter_user_name = "filter.userName_example" # str | UserName (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -450,17 +450,17 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_domain_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| DomainName | [optional]
- **filter_group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by group ID | [optional]
- **filter_group_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| GroupName | [optional]
- **filter_secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by secret ID | [optional]
- **filter_user_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by user ID | [optional]
- **filter_user_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| UserName | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_domain_name** | **str**| DomainName | [optional]
+ **filter_group_id** | **int**| Filter by group ID | [optional]
+ **filter_group_name** | **str**| GroupName | [optional]
+ **filter_secret_id** | **int**| Filter by secret ID | [optional]
+ **filter_user_id** | **int**| Filter by user ID | [optional]
+ **filter_user_name** | **str**| UserName | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -528,7 +528,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_permissions_api.SecretPermissionsApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Options for generating a secret permission stub
+    secret_id = 1 # int | Options for generating a secret permission stub
 
     # example passing only required values which don't have defaults set
     try:
@@ -544,7 +544,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Options for generating a secret permission stub |
+ **secret_id** | **int**| Options for generating a secret permission stub |
 
 ### Return type
 
@@ -613,11 +613,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_permissions_api.SecretPermissionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret permission ID
+    id = 1 # int | Secret permission ID
     secret_permission_update_args = SecretPermissionUpdateArgs(
-        id=None,
-        secret_access_role_name=None,
-        secret_id=None,
+        id=1,
+        secret_access_role_name="secret_access_role_name_example",
+        secret_id=1,
     ) # SecretPermissionUpdateArgs | Secret permission update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -643,7 +643,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret permission ID |
+ **id** | **int**| Secret permission ID |
  **secret_permission_update_args** | [**SecretPermissionUpdateArgs**](SecretPermissionUpdateArgs.md)| Secret permission update options | [optional]
 
 ### Return type
@@ -713,7 +713,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_permissions_api.SecretPermissionsApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    secret_id = 1 # int | Secret ID
     secret_share_update_args = SecretShareUpdateArgs(
         data=SecretShareUpdateModel(
             inherit_permissions=UpdateFieldValueOfBoolean(
@@ -746,7 +746,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **secret_id** | **int**| Secret ID |
  **secret_share_update_args** | [**SecretShareUpdateArgs**](SecretShareUpdateArgs.md)| Secret share update options | [optional]
 
 ### Return type

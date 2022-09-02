@@ -63,10 +63,8 @@ class EventSubscriptionEntityActionModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,37 +73,34 @@ class EventSubscriptionEntityActionModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'condition_type': (EventSubscriptionConditionType,),  # noqa: E501
-            'container_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'container_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_action_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_action_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_entity_type': (EventSubscriptionEntity,),  # noqa: E501
-            'event_entity_type_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'include_subcontainers': (bool,),  # noqa: E501
-            'item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'item_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'condition_type': (EventSubscriptionConditionType, none_type,),  # noqa: E501
+            'container_id': (int, none_type,),  # noqa: E501
+            'container_name': (str, none_type,),  # noqa: E501
+            'event_action_display_name': (str, none_type,),  # noqa: E501
+            'event_action_id': (int, none_type,),  # noqa: E501
+            'event_entity_type': (EventSubscriptionEntity, none_type,),  # noqa: E501
+            'event_entity_type_display_name': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'include_subcontainers': (bool, none_type,),  # noqa: E501
+            'item_id': (int, none_type,),  # noqa: E501
+            'item_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -164,16 +159,16 @@ class EventSubscriptionEntityActionModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             condition_type (EventSubscriptionConditionType): [optional]  # noqa: E501
-            container_id (bool, date, datetime, dict, float, int, list, str, none_type): ContainerId. [optional]  # noqa: E501
-            container_name (bool, date, datetime, dict, float, int, list, str, none_type): Indicates the name of the container, only set on a get.  Not needed on an update. [optional]  # noqa: E501
-            event_action_display_name (bool, date, datetime, dict, float, int, list, str, none_type): EventActionDisplayName. [optional]  # noqa: E501
-            event_action_id (bool, date, datetime, dict, float, int, list, str, none_type): EventActionId. [optional]  # noqa: E501
+            container_id (int): ContainerId. [optional]  # noqa: E501
+            container_name (str): Indicates the name of the container, only set on a get.  Not needed on an update. [optional]  # noqa: E501
+            event_action_display_name (str): EventActionDisplayName. [optional]  # noqa: E501
+            event_action_id (int): EventActionId. [optional]  # noqa: E501
             event_entity_type (EventSubscriptionEntity): [optional]  # noqa: E501
-            event_entity_type_display_name (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeDisplayName. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
+            event_entity_type_display_name (str): EventEntityTypeDisplayName. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
             include_subcontainers (bool): IncludeSubcontainers. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): ItemId. [optional]  # noqa: E501
-            item_name (bool, date, datetime, dict, float, int, list, str, none_type): ItemName. [optional]  # noqa: E501
+            item_id (int): ItemId. [optional]  # noqa: E501
+            item_name (str): ItemName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -260,16 +255,16 @@ class EventSubscriptionEntityActionModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             condition_type (EventSubscriptionConditionType): [optional]  # noqa: E501
-            container_id (bool, date, datetime, dict, float, int, list, str, none_type): ContainerId. [optional]  # noqa: E501
-            container_name (bool, date, datetime, dict, float, int, list, str, none_type): Indicates the name of the container, only set on a get.  Not needed on an update. [optional]  # noqa: E501
-            event_action_display_name (bool, date, datetime, dict, float, int, list, str, none_type): EventActionDisplayName. [optional]  # noqa: E501
-            event_action_id (bool, date, datetime, dict, float, int, list, str, none_type): EventActionId. [optional]  # noqa: E501
+            container_id (int): ContainerId. [optional]  # noqa: E501
+            container_name (str): Indicates the name of the container, only set on a get.  Not needed on an update. [optional]  # noqa: E501
+            event_action_display_name (str): EventActionDisplayName. [optional]  # noqa: E501
+            event_action_id (int): EventActionId. [optional]  # noqa: E501
             event_entity_type (EventSubscriptionEntity): [optional]  # noqa: E501
-            event_entity_type_display_name (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeDisplayName. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
+            event_entity_type_display_name (str): EventEntityTypeDisplayName. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
             include_subcontainers (bool): IncludeSubcontainers. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): ItemId. [optional]  # noqa: E501
-            item_name (bool, date, datetime, dict, float, int, list, str, none_type): ItemName. [optional]  # noqa: E501
+            item_id (int): ItemId. [optional]  # noqa: E501
+            item_name (str): ItemName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

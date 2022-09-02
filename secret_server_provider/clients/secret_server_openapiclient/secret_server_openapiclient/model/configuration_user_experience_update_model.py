@@ -67,10 +67,8 @@ class ConfigurationUserExperienceUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,38 +77,35 @@ class ConfigurationUserExperienceUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'application_language': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'default_date_format': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'default_new_user_role_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'default_time_format': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'force_inactivity_timeout': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'force_inactivity_timeout_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'require_folder_for_secret': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'secret_password_history_restriction_all': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'secret_password_history_restriction_count': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'secret_view_interval_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'server_time_zone_id': (UpdateFieldValueOfString,),  # noqa: E501
-            'ui_inactivity_sleep_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'application_language': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'default_date_format': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'default_new_user_role_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'default_time_format': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'force_inactivity_timeout': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'force_inactivity_timeout_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'require_folder_for_secret': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'secret_password_history_restriction_all': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'secret_password_history_restriction_count': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'secret_view_interval_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'server_time_zone_id': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'ui_inactivity_sleep_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

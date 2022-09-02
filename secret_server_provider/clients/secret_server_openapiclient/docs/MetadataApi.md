@@ -56,24 +56,24 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
-    item_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The item ID of the entity to which this metadata is associated
-    item_type = None # bool, date, datetime, dict, float, int, list, str, none_type | The type of entity to which this metadata is associated
+    item_id = 1 # int | The item ID of the entity to which this metadata is associated
+    item_type = "itemType_example" # str | The type of entity to which this metadata is associated
     metadata_create_args = MetadataCreateArgs(
         data=MetadataCreateModel(
             contains_personal_information=True,
-            field_data_type=None,
-            metadata_field_id=None,
-            metadata_field_name=None,
-            metadata_field_section_description=None,
-            metadata_field_section_id=None,
-            metadata_field_section_name=None,
+            field_data_type="field_data_type_example",
+            metadata_field_id=1,
+            metadata_field_name="metadata_field_name_example",
+            metadata_field_section_description="metadata_field_section_description_example",
+            metadata_field_section_id=1,
+            metadata_field_section_name="metadata_field_section_name_example",
             metadata_field_section_requires_administer_metadata=True,
             metadata_field_section_requires_entity_edit=True,
             value_bit=True,
-            value_date_time=None,
-            value_int=None,
+            value_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            value_int=1,
             value_number=3.14,
-            value_string=None,
+            value_string="value_string_example",
         ),
     ) # MetadataCreateArgs | args (optional)
 
@@ -100,8 +100,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The item ID of the entity to which this metadata is associated |
- **item_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| The type of entity to which this metadata is associated |
+ **item_id** | **int**| The item ID of the entity to which this metadata is associated |
+ **item_type** | **str**| The type of entity to which this metadata is associated |
  **metadata_create_args** | [**MetadataCreateArgs**](MetadataCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -170,9 +170,9 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
-    item_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The item ID of the entity to which this metadata is associated
-    item_type = None # bool, date, datetime, dict, float, int, list, str, none_type | The type of entity to which this metadata is associated
-    metadata_item_data_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The sequence ID of the metadata record to delete
+    item_id = 1 # int | The item ID of the entity to which this metadata is associated
+    item_type = "itemType_example" # str | The type of entity to which this metadata is associated
+    metadata_item_data_id = 1 # int | The sequence ID of the metadata record to delete
 
     # example passing only required values which don't have defaults set
     try:
@@ -188,9 +188,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The item ID of the entity to which this metadata is associated |
- **item_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| The type of entity to which this metadata is associated |
- **metadata_item_data_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The sequence ID of the metadata record to delete |
+ **item_id** | **int**| The item ID of the entity to which this metadata is associated |
+ **item_type** | **str**| The type of entity to which this metadata is associated |
+ **metadata_item_data_id** | **int**| The sequence ID of the metadata record to delete |
 
 ### Return type
 
@@ -258,14 +258,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
-    filter_item_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Return sections that have metadata for this specific item id.  MetadataType will be required. (optional)
-    filter_metadata_section_filter_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Return a specific Metadata Section Field ID. (optional)
-    filter_metadata_type = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return metadata for a specific type of item.  Will also required an ItemId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_item_id = 1 # int | Return sections that have metadata for this specific item id.  MetadataType will be required. (optional)
+    filter_metadata_section_filter_id = 1 # int | Return a specific Metadata Section Field ID. (optional)
+    filter_metadata_type = "filter.metadataType_example" # str | Only return metadata for a specific type of item.  Will also required an ItemId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -282,14 +282,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_item_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Return sections that have metadata for this specific item id.  MetadataType will be required. | [optional]
- **filter_metadata_section_filter_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Return a specific Metadata Section Field ID. | [optional]
- **filter_metadata_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return metadata for a specific type of item.  Will also required an ItemId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_item_id** | **int**| Return sections that have metadata for this specific item id.  MetadataType will be required. | [optional]
+ **filter_metadata_section_filter_id** | **int**| Return a specific Metadata Section Field ID. | [optional]
+ **filter_metadata_type** | **str**| Only return metadata for a specific type of item.  Will also required an ItemId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -437,14 +437,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
-    filter_item_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Will only return metadata for this entity ID.  MetadataType will also be required. (optional)
-    filter_meta_data_field_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Return a specific metadata field (optional)
-    filter_metadata_type = None # bool, date, datetime, dict, float, int, list, str, none_type | Will only return metadata for this type.  ItemId will also be required. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_item_id = 1 # int | Will only return metadata for this entity ID.  MetadataType will also be required. (optional)
+    filter_meta_data_field_id = 1 # int | Return a specific metadata field (optional)
+    filter_metadata_type = "filter.metadataType_example" # str | Will only return metadata for this type.  ItemId will also be required. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -461,14 +461,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_item_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Will only return metadata for this entity ID.  MetadataType will also be required. | [optional]
- **filter_meta_data_field_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Return a specific metadata field | [optional]
- **filter_metadata_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| Will only return metadata for this type.  ItemId will also be required. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_item_id** | **int**| Will only return metadata for this entity ID.  MetadataType will also be required. | [optional]
+ **filter_meta_data_field_id** | **int**| Return a specific metadata field | [optional]
+ **filter_metadata_type** | **str**| Will only return metadata for this type.  ItemId will also be required. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -537,16 +537,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
     is_exporting = True # bool | isExporting (optional)
-    filter_end_date = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return history metadata values that were entered before this time (optional)
-    filter_item_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Will only return metadata for this entity ID.  MetadataType will also be required. (optional)
-    filter_meta_data_field_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Return a specific metadata field (optional)
-    filter_metadata_type = None # bool, date, datetime, dict, float, int, list, str, none_type | Will only return metadata for this type.  ItemId will also be required. (optional)
-    filter_start_date = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return history metadata values that were entered after this time (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_end_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Only return history metadata values that were entered before this time (optional)
+    filter_item_id = 1 # int | Will only return metadata for this entity ID.  MetadataType will also be required. (optional)
+    filter_meta_data_field_id = 1 # int | Return a specific metadata field (optional)
+    filter_metadata_type = "filter.metadataType_example" # str | Will only return metadata for this type.  ItemId will also be required. (optional)
+    filter_start_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Only return history metadata values that were entered after this time (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -564,16 +564,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is_exporting** | **bool**| isExporting | [optional]
- **filter_end_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return history metadata values that were entered before this time | [optional]
- **filter_item_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Will only return metadata for this entity ID.  MetadataType will also be required. | [optional]
- **filter_meta_data_field_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Return a specific metadata field | [optional]
- **filter_metadata_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| Will only return metadata for this type.  ItemId will also be required. | [optional]
- **filter_start_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return history metadata values that were entered after this time | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_end_date** | **datetime**| Only return history metadata values that were entered before this time | [optional]
+ **filter_item_id** | **int**| Will only return metadata for this entity ID.  MetadataType will also be required. | [optional]
+ **filter_meta_data_field_id** | **int**| Return a specific metadata field | [optional]
+ **filter_metadata_type** | **str**| Will only return metadata for this type.  ItemId will also be required. | [optional]
+ **filter_start_date** | **datetime**| Only return history metadata values that were entered after this time | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -642,26 +642,26 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
-    item_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The item ID of the entity to which this metadata is associated
-    item_type = None # bool, date, datetime, dict, float, int, list, str, none_type | The type of entity to which this metadata is associated
+    item_id = 1 # int | The item ID of the entity to which this metadata is associated
+    item_type = "itemType_example" # str | The type of entity to which this metadata is associated
     metadata_update_args = MetadataUpdateArgs(
         data=MetadataUpdateModel(
             contains_personal_information=UpdateFieldValueOfBoolean(
                 dirty=True,
                 value=True,
             ),
-            metadata_item_data_id=None,
+            metadata_item_data_id=1,
             value_bit=UpdateFieldValueOfOptionalBoolean(
                 dirty=True,
                 value=True,
             ),
             value_date_time=UpdateFieldValueOfOptionalDateTime(
                 dirty=True,
-                value=None,
+                value=dateutil_parser('1970-01-01T00:00:00.00Z'),
             ),
             value_int=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             value_number=UpdateFieldValueOfOptionalDouble(
                 dirty=True,
@@ -669,7 +669,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             value_string=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # MetadataUpdateArgs | args (optional)
@@ -697,8 +697,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The item ID of the entity to which this metadata is associated |
- **item_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| The type of entity to which this metadata is associated |
+ **item_id** | **int**| The item ID of the entity to which this metadata is associated |
+ **item_type** | **str**| The type of entity to which this metadata is associated |
  **metadata_update_args** | [**MetadataUpdateArgs**](MetadataUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -768,18 +768,18 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
-    field_section_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The section ID of the field to which this metadata is associated
-    item_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The item ID of the entity to which this metadata is associated (optional)
-    item_type = None # bool, date, datetime, dict, float, int, list, str, none_type | The type of entity to which this metadata is associated (optional)
+    field_section_id = 1 # int | The section ID of the field to which this metadata is associated
+    item_id = 1 # int | The item ID of the entity to which this metadata is associated (optional)
+    item_type = "itemType_example" # str | The type of entity to which this metadata is associated (optional)
     metadata_field_section_update_args = MetadataFieldSectionUpdateArgs(
         data=MetadataFieldSectionUpdateModel(
             metadata_field_section_description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             metadata_field_section_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             metadata_field_section_requires_administer_metadata=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -815,9 +815,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **field_section_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The section ID of the field to which this metadata is associated |
- **item_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The item ID of the entity to which this metadata is associated | [optional]
- **item_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| The type of entity to which this metadata is associated | [optional]
+ **field_section_id** | **int**| The section ID of the field to which this metadata is associated |
+ **item_id** | **int**| The item ID of the entity to which this metadata is associated | [optional]
+ **item_type** | **str**| The type of entity to which this metadata is associated | [optional]
  **metadata_field_section_update_args** | [**MetadataFieldSectionUpdateArgs**](MetadataFieldSectionUpdateArgs.md)| args | [optional]
 
 ### Return type

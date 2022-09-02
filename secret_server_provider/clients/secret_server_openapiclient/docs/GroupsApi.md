@@ -68,9 +68,9 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
+    id = 1 # int | Group ID
     group_user_create_args = GroupUserCreateArgs(
-        user_id=None,
+        user_id=1,
     ) # GroupUserCreateArgs | Group user add options (optional)
 
     # example passing only required values which don't have defaults set
@@ -96,7 +96,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
+ **id** | **int**| Group ID |
  **group_user_create_args** | [**GroupUserCreateArgs**](GroupUserCreateArgs.md)| Group user add options | [optional]
 
 ### Return type
@@ -167,23 +167,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
     group_create_args = GroupCreateArgs(
-        ad_guid=None,
-        domain_id=None,
+        ad_guid="ad_guid_example",
+        domain_id=1,
         enabled=True,
         has_group_owners=True,
         is_platform=True,
-        name=None,
+        name="name_example",
         owner_group_ids=[
-            None,
+            1,
         ],
         owner_group_names=[
-            None,
+            "owner_group_names_example",
         ],
         owner_user_ids=[
-            None,
+            1,
         ],
         owner_user_names=[
-            None,
+            "owner_user_names_example",
         ],
         synchronized=True,
         synchronize_now=True,
@@ -273,10 +273,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     role_assignments = RoleAssignments(
         role_ids=[
-            None,
+            1,
         ],
     ) # RoleAssignments | args (optional)
 
@@ -303,7 +303,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **role_assignments** | [**RoleAssignments**](RoleAssignments.md)| args | [optional]
 
 ### Return type
@@ -372,7 +372,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
+    id = 1 # int | Group ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -388,7 +388,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
+ **id** | **int**| Group ID |
 
 ### Return type
 
@@ -457,10 +457,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     role_removals = RoleRemovals(
         role_ids=[
-            None,
+            1,
         ],
     ) # RoleRemovals | args (optional)
 
@@ -487,7 +487,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **role_removals** | [**RoleRemovals**](RoleRemovals.md)| args | [optional]
 
 ### Return type
@@ -556,7 +556,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
+    id = 1 # int | Group ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -572,7 +572,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
+ **id** | **int**| Group ID |
 
 ### Return type
 
@@ -640,11 +640,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -661,11 +661,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -733,14 +733,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
+    id = 1 # int | Group ID
     filter_include_inactive_users_for_group = True # bool | Whether to include inactive users in the results (optional)
-    filter_user_domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter only users in a specific domain (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_user_domain_id = 1 # int | Filter only users in a specific domain (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -765,14 +765,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
+ **id** | **int**| Group ID |
  **filter_include_inactive_users_for_group** | **bool**| Whether to include inactive users in the results | [optional]
- **filter_user_domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter only users in a specific domain | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_user_domain_id** | **int**| Filter only users in a specific domain | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -840,8 +840,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
-    user_id = None # bool, date, datetime, dict, float, int, list, str, none_type | User ID
+    id = 1 # int | Group ID
+    user_id = 1 # int | User ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -857,8 +857,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
- **user_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| User ID |
+ **id** | **int**| Group ID |
+ **user_id** | **int**| User ID |
 
 ### Return type
 
@@ -926,7 +926,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
+    id = 1 # int | Group ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -942,7 +942,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
+ **id** | **int**| Group ID |
 
 ### Return type
 
@@ -1010,12 +1010,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | id
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1040,12 +1040,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| id |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1113,17 +1113,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    filter_domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Active Directory domain ID (optional)
-    filter_exclude_inbox_rule_id_subscribers = None # bool, date, datetime, dict, float, int, list, str, none_type | Do not include any groups already subscribed this inbox notification rule (optional)
+    filter_domain_id = 1 # int | Active Directory domain ID (optional)
+    filter_exclude_inbox_rule_id_subscribers = 1 # int | Do not include any groups already subscribed this inbox notification rule (optional)
     filter_include_inactive = True # bool | Whether to include inactive groups in the results (optional)
     filter_limit_to_viewable_groups = True # bool | Limit groups to groups that current user can view details of (optional)
     filter_platform_only = True # bool | Limit groups to only Platform groups (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1140,17 +1140,17 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Active Directory domain ID | [optional]
- **filter_exclude_inbox_rule_id_subscribers** | **bool, date, datetime, dict, float, int, list, str, none_type**| Do not include any groups already subscribed this inbox notification rule | [optional]
+ **filter_domain_id** | **int**| Active Directory domain ID | [optional]
+ **filter_exclude_inbox_rule_id_subscribers** | **int**| Do not include any groups already subscribed this inbox notification rule | [optional]
  **filter_include_inactive** | **bool**| Whether to include inactive groups in the results | [optional]
  **filter_limit_to_viewable_groups** | **bool**| Limit groups to groups that current user can view details of | [optional]
  **filter_platform_only** | **bool**| Limit groups to only Platform groups | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1219,11 +1219,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
+    group_id = 1 # int | Group ID
     group_patch_args = GroupPatchArgs(
         data=GroupPatchModel(
             added_owner_group_ids=[
-                None,
+                1,
             ],
             enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1232,21 +1232,21 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ip_address_restriction_ids=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             owner_group_ids=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
             removed_owner_group_ids=[
-                None,
+                1,
             ],
         ),
     ) # GroupPatchArgs | Group update options (optional)
@@ -1274,7 +1274,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
+ **group_id** | **int**| Group ID |
  **group_patch_args** | [**GroupPatchArgs**](GroupPatchArgs.md)| Group update options | [optional]
 
 ### Return type
@@ -1344,13 +1344,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
+    id = 1 # int | Group ID
     group_membership_patch_model = GroupMembershipPatchModel(
         added_user_ids=[
-            None,
+            1,
         ],
         remove_user_ids=[
-            None,
+            1,
         ],
     ) # GroupMembershipPatchModel | Group update options (optional)
 
@@ -1377,7 +1377,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
+ **id** | **int**| Group ID |
  **group_membership_patch_model** | [**GroupMembershipPatchModel**](GroupMembershipPatchModel.md)| Group update options | [optional]
 
 ### Return type
@@ -1446,8 +1446,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
-    user_id = None # bool, date, datetime, dict, float, int, list, str, none_type | User ID
+    id = 1 # int | Group ID
+    user_id = 1 # int | User ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -1463,8 +1463,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
- **user_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| User ID |
+ **id** | **int**| Group ID |
+ **user_id** | **int**| User ID |
 
 ### Return type
 
@@ -1532,17 +1532,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    filter_domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Active Directory domain ID (optional)
-    filter_exclude_inbox_rule_id_subscribers = None # bool, date, datetime, dict, float, int, list, str, none_type | Do not include any groups already subscribed this inbox notification rule (optional)
+    filter_domain_id = 1 # int | Active Directory domain ID (optional)
+    filter_exclude_inbox_rule_id_subscribers = 1 # int | Do not include any groups already subscribed this inbox notification rule (optional)
     filter_include_inactive = True # bool | Whether to include inactive groups in the results (optional)
     filter_limit_to_viewable_groups = True # bool | Limit groups to groups that current user can view details of (optional)
     filter_platform_only = True # bool | Limit groups to only Platform groups (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1559,17 +1559,17 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Active Directory domain ID | [optional]
- **filter_exclude_inbox_rule_id_subscribers** | **bool, date, datetime, dict, float, int, list, str, none_type**| Do not include any groups already subscribed this inbox notification rule | [optional]
+ **filter_domain_id** | **int**| Active Directory domain ID | [optional]
+ **filter_exclude_inbox_rule_id_subscribers** | **int**| Do not include any groups already subscribed this inbox notification rule | [optional]
  **filter_include_inactive** | **bool**| Whether to include inactive groups in the results | [optional]
  **filter_limit_to_viewable_groups** | **bool**| Limit groups to groups that current user can view details of | [optional]
  **filter_platform_only** | **bool**| Limit groups to only Platform groups | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1718,26 +1718,26 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group ID
+    id = 1 # int | Group ID
     group_update_args = GroupUpdateArgs(
-        ad_guid=None,
-        domain_id=None,
+        ad_guid="ad_guid_example",
+        domain_id=1,
         enabled=True,
         has_group_owners=True,
-        id=None,
+        id=1,
         is_platform=True,
-        name=None,
+        name="name_example",
         owner_group_ids=[
-            None,
+            1,
         ],
         owner_group_names=[
-            None,
+            "owner_group_names_example",
         ],
         owner_user_ids=[
-            None,
+            1,
         ],
         owner_user_names=[
-            None,
+            "owner_user_names_example",
         ],
         synchronized=True,
         synchronize_now=True,
@@ -1766,7 +1766,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group ID |
+ **id** | **int**| Group ID |
  **group_update_args** | [**GroupUpdateArgs**](GroupUpdateArgs.md)| Group update options | [optional]
 
 ### Return type
@@ -1836,10 +1836,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | groupId
+    group_id = 1 # int | groupId
     group_member_assignment_request = GroupMemberAssignmentRequest(
         user_ids=[
-            None,
+            1,
         ],
     ) # GroupMemberAssignmentRequest | args (optional)
 
@@ -1866,7 +1866,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| groupId |
+ **group_id** | **int**| groupId |
  **group_member_assignment_request** | [**GroupMemberAssignmentRequest**](GroupMemberAssignmentRequest.md)| args | [optional]
 
 ### Return type
@@ -1936,10 +1936,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = groups_api.GroupsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     role_assignments = RoleAssignments(
         role_ids=[
-            None,
+            1,
         ],
     ) # RoleAssignments | args (optional)
 
@@ -1966,7 +1966,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **role_assignments** | [**RoleAssignments**](RoleAssignments.md)| args | [optional]
 
 ### Return type

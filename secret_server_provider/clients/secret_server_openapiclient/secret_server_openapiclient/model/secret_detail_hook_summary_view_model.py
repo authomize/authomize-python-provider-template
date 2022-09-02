@@ -57,10 +57,8 @@ class SecretDetailHookSummaryViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,36 +66,33 @@ class SecretDetailHookSummaryViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_action_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'hook_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pre_post_option': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'script_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'script_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_hook_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (bool,),  # noqa: E501
-            'stop_on_failure': (bool,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'event_action_name': (str, none_type,),  # noqa: E501
+            'hook_id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'pre_post_option': (str, none_type,),  # noqa: E501
+            'script_name': (str, none_type,),  # noqa: E501
+            'script_type_name': (str, none_type,),  # noqa: E501
+            'secret_hook_id': (int, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'status': (bool, none_type,),  # noqa: E501
+            'stop_on_failure': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,15 +150,15 @@ class SecretDetailHookSummaryViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Hook Description. [optional]  # noqa: E501
-            event_action_name (bool, date, datetime, dict, float, int, list, str, none_type): Event Action Name. [optional]  # noqa: E501
-            hook_id (bool, date, datetime, dict, float, int, list, str, none_type): Hook Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Hook Name. [optional]  # noqa: E501
-            pre_post_option (bool, date, datetime, dict, float, int, list, str, none_type): Hook PRE or POST Option. [optional]  # noqa: E501
-            script_name (bool, date, datetime, dict, float, int, list, str, none_type): Script Name. [optional]  # noqa: E501
-            script_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Script Type Name. [optional]  # noqa: E501
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Hook Id. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Hook Sort Order. [optional]  # noqa: E501
+            description (str): Hook Description. [optional]  # noqa: E501
+            event_action_name (str): Event Action Name. [optional]  # noqa: E501
+            hook_id (int): Hook Id. [optional]  # noqa: E501
+            name (str): Hook Name. [optional]  # noqa: E501
+            pre_post_option (str): Hook PRE or POST Option. [optional]  # noqa: E501
+            script_name (str): Script Name. [optional]  # noqa: E501
+            script_type_name (str): Script Type Name. [optional]  # noqa: E501
+            secret_hook_id (int): Secret Hook Id. [optional]  # noqa: E501
+            sort_order (int): Hook Sort Order. [optional]  # noqa: E501
             status (bool): Hook Status. [optional]  # noqa: E501
             stop_on_failure (bool): Stop On Failure. [optional]  # noqa: E501
         """
@@ -251,15 +246,15 @@ class SecretDetailHookSummaryViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Hook Description. [optional]  # noqa: E501
-            event_action_name (bool, date, datetime, dict, float, int, list, str, none_type): Event Action Name. [optional]  # noqa: E501
-            hook_id (bool, date, datetime, dict, float, int, list, str, none_type): Hook Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Hook Name. [optional]  # noqa: E501
-            pre_post_option (bool, date, datetime, dict, float, int, list, str, none_type): Hook PRE or POST Option. [optional]  # noqa: E501
-            script_name (bool, date, datetime, dict, float, int, list, str, none_type): Script Name. [optional]  # noqa: E501
-            script_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Script Type Name. [optional]  # noqa: E501
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Hook Id. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Hook Sort Order. [optional]  # noqa: E501
+            description (str): Hook Description. [optional]  # noqa: E501
+            event_action_name (str): Event Action Name. [optional]  # noqa: E501
+            hook_id (int): Hook Id. [optional]  # noqa: E501
+            name (str): Hook Name. [optional]  # noqa: E501
+            pre_post_option (str): Hook PRE or POST Option. [optional]  # noqa: E501
+            script_name (str): Script Name. [optional]  # noqa: E501
+            script_type_name (str): Script Type Name. [optional]  # noqa: E501
+            secret_hook_id (int): Secret Hook Id. [optional]  # noqa: E501
+            sort_order (int): Hook Sort Order. [optional]  # noqa: E501
             status (bool): Hook Status. [optional]  # noqa: E501
             stop_on_failure (bool): Stop On Failure. [optional]  # noqa: E501
         """

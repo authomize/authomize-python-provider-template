@@ -57,10 +57,8 @@ class DisasterRecoveryIncomingConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,34 +66,31 @@ class DisasterRecoveryIncomingConfigurationModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'data_replica_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'data_replication_enabled': (bool,),  # noqa: E501
-            'data_replication_group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'data_source_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'data_source_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_replica': (bool,),  # noqa: E501
-            'is_replicating': (bool,),  # noqa: E501
-            'last_replicated': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'replication_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'data_replica_name': (str, none_type,),  # noqa: E501
+            'data_replication_enabled': (bool, none_type,),  # noqa: E501
+            'data_replication_group_id': (int, none_type,),  # noqa: E501
+            'data_source_key': (str, none_type,),  # noqa: E501
+            'data_source_url': (str, none_type,),  # noqa: E501
+            'is_replica': (bool, none_type,),  # noqa: E501
+            'is_replicating': (bool, none_type,),  # noqa: E501
+            'last_replicated': (datetime, none_type,),  # noqa: E501
+            'replication_interval_minutes': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,15 +146,15 @@ class DisasterRecoveryIncomingConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data_replica_name (bool, date, datetime, dict, float, int, list, str, none_type): The data replica name given to it by the data source.. [optional]  # noqa: E501
+            data_replica_name (str): The data replica name given to it by the data source.. [optional]  # noqa: E501
             data_replication_enabled (bool): Whether data replication is enabled.. [optional]  # noqa: E501
-            data_replication_group_id (bool, date, datetime, dict, float, int, list, str, none_type): The group all created secrets will be assigned to.. [optional]  # noqa: E501
-            data_source_key (bool, date, datetime, dict, float, int, list, str, none_type): The data source key.. [optional]  # noqa: E501
-            data_source_url (bool, date, datetime, dict, float, int, list, str, none_type): The data source URL.. [optional]  # noqa: E501
+            data_replication_group_id (int): The group all created secrets will be assigned to.. [optional]  # noqa: E501
+            data_source_key (str): The data source key.. [optional]  # noqa: E501
+            data_source_url (str): The data source URL.. [optional]  # noqa: E501
             is_replica (bool): Whether this instance of Secret Server is a data replica, a data source, or neither.. [optional]  # noqa: E501
             is_replicating (bool): Whether data replication is currently active.. [optional]  # noqa: E501
-            last_replicated (bool, date, datetime, dict, float, int, list, str, none_type): The last time data replication ran.. [optional]  # noqa: E501
-            replication_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How frequently data replication will take place on this data replica.. [optional]  # noqa: E501
+            last_replicated (datetime): The last time data replication ran.. [optional]  # noqa: E501
+            replication_interval_minutes (int): How frequently data replication will take place on this data replica.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,15 +240,15 @@ class DisasterRecoveryIncomingConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data_replica_name (bool, date, datetime, dict, float, int, list, str, none_type): The data replica name given to it by the data source.. [optional]  # noqa: E501
+            data_replica_name (str): The data replica name given to it by the data source.. [optional]  # noqa: E501
             data_replication_enabled (bool): Whether data replication is enabled.. [optional]  # noqa: E501
-            data_replication_group_id (bool, date, datetime, dict, float, int, list, str, none_type): The group all created secrets will be assigned to.. [optional]  # noqa: E501
-            data_source_key (bool, date, datetime, dict, float, int, list, str, none_type): The data source key.. [optional]  # noqa: E501
-            data_source_url (bool, date, datetime, dict, float, int, list, str, none_type): The data source URL.. [optional]  # noqa: E501
+            data_replication_group_id (int): The group all created secrets will be assigned to.. [optional]  # noqa: E501
+            data_source_key (str): The data source key.. [optional]  # noqa: E501
+            data_source_url (str): The data source URL.. [optional]  # noqa: E501
             is_replica (bool): Whether this instance of Secret Server is a data replica, a data source, or neither.. [optional]  # noqa: E501
             is_replicating (bool): Whether data replication is currently active.. [optional]  # noqa: E501
-            last_replicated (bool, date, datetime, dict, float, int, list, str, none_type): The last time data replication ran.. [optional]  # noqa: E501
-            replication_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How frequently data replication will take place on this data replica.. [optional]  # noqa: E501
+            last_replicated (datetime): The last time data replication ran.. [optional]  # noqa: E501
+            replication_interval_minutes (int): How frequently data replication will take place on this data replica.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

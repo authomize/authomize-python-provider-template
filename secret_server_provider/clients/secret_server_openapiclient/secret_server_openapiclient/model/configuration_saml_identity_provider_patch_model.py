@@ -65,10 +65,8 @@ class ConfigurationSamlIdentityProviderPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,63 +75,60 @@ class ConfigurationSamlIdentityProviderPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'authn_context': (UpdateFieldValueOfString,),  # noqa: E501
-            'clock_skew': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'description': (UpdateFieldValueOfString,),  # noqa: E501
-            'disable_assertion_replay_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'disable_audience_restriction_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'disable_authn_context_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'disable_destination_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'disable_inbound_logout': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'disable_in_response_to_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'disable_pending_logout_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'disable_recipient_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'disable_time_period_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'display_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'domain_attribute': (UpdateFieldValueOfString,),  # noqa: E501
-            'enable_detailed_log': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_slo': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'force_authentication': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'identity_provider_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'logout_request_life_time': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'name': (UpdateFieldValueOfString,),  # noqa: E501
-            'override_pending_authn_request': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'public_certificate': (UpdateFieldValueOfString,),  # noqa: E501
-            'sign_authn_request': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'sign_logout_request': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'sign_logout_response': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'single_logout_service_response_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'single_logout_service_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'sso_service_binding': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'sso_service_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'username_attribute': (UpdateFieldValueOfString,),  # noqa: E501
-            'want_assertion_encrypted': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'want_assertion_or_response_signed': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'want_assertion_signed': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'want_logout_request_signed': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'want_logout_response_signed': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'want_saml_response_signed': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'authn_context': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'clock_skew': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'disable_assertion_replay_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'disable_audience_restriction_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'disable_authn_context_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'disable_destination_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'disable_inbound_logout': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'disable_in_response_to_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'disable_pending_logout_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'disable_recipient_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'disable_time_period_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'display_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'domain_attribute': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'enable_detailed_log': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_slo': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'force_authentication': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'identity_provider_id': (int, none_type,),  # noqa: E501
+            'logout_request_life_time': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'override_pending_authn_request': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'public_certificate': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'sign_authn_request': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'sign_logout_request': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'sign_logout_response': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'single_logout_service_response_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'single_logout_service_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'sso_service_binding': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'sso_service_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'username_attribute': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'want_assertion_encrypted': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'want_assertion_or_response_signed': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'want_assertion_signed': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'want_logout_request_signed': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'want_logout_response_signed': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'want_saml_response_signed': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -235,7 +230,7 @@ class ConfigurationSamlIdentityProviderPatchModel(ModelNormal):
             enable_detailed_log (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             enable_slo (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             force_authentication (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
-            identity_provider_id (bool, date, datetime, dict, float, int, list, str, none_type): SAML Identity Provider Id. [optional]  # noqa: E501
+            identity_provider_id (int): SAML Identity Provider Id. [optional]  # noqa: E501
             logout_request_life_time (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             name (UpdateFieldValueOfString): [optional]  # noqa: E501
             override_pending_authn_request (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
@@ -357,7 +352,7 @@ class ConfigurationSamlIdentityProviderPatchModel(ModelNormal):
             enable_detailed_log (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             enable_slo (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             force_authentication (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
-            identity_provider_id (bool, date, datetime, dict, float, int, list, str, none_type): SAML Identity Provider Id. [optional]  # noqa: E501
+            identity_provider_id (int): SAML Identity Provider Id. [optional]  # noqa: E501
             logout_request_life_time (UpdateFieldValueOfInt32): [optional]  # noqa: E501
             name (UpdateFieldValueOfString): [optional]  # noqa: E501
             override_pending_authn_request (UpdateFieldValueOfBoolean): [optional]  # noqa: E501

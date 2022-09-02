@@ -91,7 +91,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_user_create_args':
                         (GroupUserCreateArgs,),
                 },
@@ -198,7 +198,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'role_assignments':
                         (RoleAssignments,),
                 },
@@ -254,7 +254,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -306,7 +306,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'role_removals':
                         (RoleRemovals,),
                 },
@@ -362,7 +362,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -415,15 +415,15 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'skip': 'skip',
@@ -489,21 +489,21 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_inactive_users_for_group':
                         (bool,),
                     'filter_user_domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -570,9 +570,9 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -625,7 +625,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -681,17 +681,17 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -760,9 +760,9 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'filter_domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_exclude_inbox_rule_id_subscribers':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_limit_to_viewable_groups':
@@ -770,17 +770,17 @@ class GroupsApi(object):
                     'filter_platform_only':
                         (bool,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_domain_id': 'filter.domainId',
@@ -852,7 +852,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'group_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_patch_args':
                         (GroupPatchArgs,),
                 },
@@ -909,7 +909,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_membership_patch_model':
                         (GroupMembershipPatchModel,),
                 },
@@ -967,9 +967,9 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1030,9 +1030,9 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'filter_domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_exclude_inbox_rule_id_subscribers':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_limit_to_viewable_groups':
@@ -1040,17 +1040,17 @@ class GroupsApi(object):
                     'filter_platform_only':
                         (bool,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_domain_id': 'filter.domainId',
@@ -1166,7 +1166,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_update_args':
                         (GroupUpdateArgs,),
                 },
@@ -1223,7 +1223,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'group_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_member_assignment_request':
                         (GroupMemberAssignmentRequest,),
                 },
@@ -1280,7 +1280,7 @@ class GroupsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'role_assignments':
                         (RoleAssignments,),
                 },
@@ -1320,7 +1320,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
+            id (int): Group ID
 
         Keyword Args:
             group_user_create_args (GroupUserCreateArgs): Group user add options. [optional]
@@ -1483,7 +1483,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             role_assignments (RoleAssignments): args. [optional]
@@ -1567,7 +1567,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
+            id (int): Group ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1650,7 +1650,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             role_removals (RoleRemovals): args. [optional]
@@ -1734,7 +1734,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
+            id (int): Group ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1817,11 +1817,11 @@ class GroupsApi(object):
 
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1900,16 +1900,16 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
+            id (int): Group ID
 
         Keyword Args:
             filter_include_inactive_users_for_group (bool): Whether to include inactive users in the results. [optional]
-            filter_user_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter only users in a specific domain. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_user_domain_id (int): Filter only users in a specific domain. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1991,8 +1991,8 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            id (int): Group ID
+            user_id (int): User ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2077,7 +2077,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
+            id (int): Group ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2160,14 +2160,14 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2248,17 +2248,17 @@ class GroupsApi(object):
 
 
         Keyword Args:
-            filter_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]
-            filter_exclude_inbox_rule_id_subscribers (bool, date, datetime, dict, float, int, list, str, none_type): Do not include any groups already subscribed this inbox notification rule. [optional]
+            filter_domain_id (int): Active Directory domain ID. [optional]
+            filter_exclude_inbox_rule_id_subscribers (int): Do not include any groups already subscribed this inbox notification rule. [optional]
             filter_include_inactive (bool): Whether to include inactive groups in the results. [optional]
             filter_limit_to_viewable_groups (bool): Limit groups to groups that current user can view details of. [optional]
             filter_platform_only (bool): Limit groups to only Platform groups. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_text (str): Search text. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2337,7 +2337,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
+            group_id (int): Group ID
 
         Keyword Args:
             group_patch_args (GroupPatchArgs): Group update options. [optional]
@@ -2421,7 +2421,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
+            id (int): Group ID
 
         Keyword Args:
             group_membership_patch_model (GroupMembershipPatchModel): Group update options. [optional]
@@ -2506,8 +2506,8 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            id (int): Group ID
+            user_id (int): User ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2592,17 +2592,17 @@ class GroupsApi(object):
 
 
         Keyword Args:
-            filter_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]
-            filter_exclude_inbox_rule_id_subscribers (bool, date, datetime, dict, float, int, list, str, none_type): Do not include any groups already subscribed this inbox notification rule. [optional]
+            filter_domain_id (int): Active Directory domain ID. [optional]
+            filter_exclude_inbox_rule_id_subscribers (int): Do not include any groups already subscribed this inbox notification rule. [optional]
             filter_include_inactive (bool): Whether to include inactive groups in the results. [optional]
             filter_limit_to_viewable_groups (bool): Limit groups to groups that current user can view details of. [optional]
             filter_platform_only (bool): Limit groups to only Platform groups. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_text (str): Search text. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2759,7 +2759,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID
+            id (int): Group ID
 
         Keyword Args:
             group_update_args (GroupUpdateArgs): Group update options. [optional]
@@ -2843,7 +2843,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): groupId
+            group_id (int): groupId
 
         Keyword Args:
             group_member_assignment_request (GroupMemberAssignmentRequest): args. [optional]
@@ -2927,7 +2927,7 @@ class GroupsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             role_assignments (RoleAssignments): args. [optional]

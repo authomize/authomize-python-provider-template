@@ -65,11 +65,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             event_pipeline_description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             event_pipeline_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             filters=UpdateFieldValueOfEventPipelineFilterMapUpdateModelArray(
                 dirty=True,
@@ -77,15 +77,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     EventPipelineFilterMapUpdateModel(
                         event_pipeline_filter_id=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         event_pipeline_filter_map_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         event_pipeline_filter_name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         settings=UpdateFieldValueOfSettingUpdateModelArray(
                             dirty=True,
@@ -93,18 +93,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                                 SettingUpdateModel(
                                     setting_name=UpdateFieldValueOfString(
                                         dirty=True,
-                                        value=None,
+                                        value="value_example",
                                     ),
                                     setting_value=UpdateFieldValueOfString(
                                         dirty=True,
-                                        value=None,
+                                        value="value_example",
                                     ),
                                 ),
                             ],
                         ),
                         sort_order=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                     ),
                 ],
@@ -115,15 +115,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     EventPipelineTaskMapUpdateModel(
                         event_pipeline_task_id=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         event_pipeline_task_map_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         event_pipeline_task_name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         settings=UpdateFieldValueOfSettingUpdateModelArray(
                             dirty=True,
@@ -131,18 +131,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                                 SettingUpdateModel(
                                     setting_name=UpdateFieldValueOfString(
                                         dirty=True,
-                                        value=None,
+                                        value="value_example",
                                     ),
                                     setting_value=UpdateFieldValueOfString(
                                         dirty=True,
-                                        value=None,
+                                        value="value_example",
                                     ),
                                 ),
                             ],
                         ),
                         sort_order=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                     ),
                 ],
@@ -153,14 +153,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     EventPipelineTriggerUpdateModel(
                         event_action_id=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                     ),
                 ],
             ),
         ),
-        event_entity_type_id=None,
-        event_pipeline_policy_id=None,
+        event_entity_type_id=1,
+        event_pipeline_policy_id=1,
     ) # EventPipelineCreateArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -246,7 +246,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_api.EventPipelineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Event Pipeline ID
+    id = 1 # int | Event Pipeline ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -262,7 +262,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Event Pipeline ID |
+ **id** | **int**| Event Pipeline ID |
 
 ### Return type
 
@@ -330,13 +330,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_api.EventPipelineApi(api_client)
-    filter_event_pipeline_id = None # bool, date, datetime, dict, float, int, list, str, none_type | EventPipelineId (optional)
-    filter_event_pipeline_policy_run_id = None # bool, date, datetime, dict, float, int, list, str, none_type | EventPipelinePolicyRunId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_event_pipeline_id = 1 # int | EventPipelineId (optional)
+    filter_event_pipeline_policy_run_id = "filter.eventPipelinePolicyRunId_example" # str | EventPipelinePolicyRunId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -353,13 +353,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_event_pipeline_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventPipelineId | [optional]
- **filter_event_pipeline_policy_run_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventPipelinePolicyRunId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_event_pipeline_id** | **int**| EventPipelineId | [optional]
+ **filter_event_pipeline_policy_run_id** | **str**| EventPipelinePolicyRunId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -507,16 +507,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_api.EventPipelineApi(api_client)
-    filter_event_entity_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | EventEntityTypeId (optional)
-    filter_event_pipeline_name = None # bool, date, datetime, dict, float, int, list, str, none_type | EventPipelineName (optional)
-    filter_event_pipeline_policy_id = None # bool, date, datetime, dict, float, int, list, str, none_type | EventPipelinePolicyId (optional)
+    filter_event_entity_type_id = 1 # int | EventEntityTypeId (optional)
+    filter_event_pipeline_name = "filter.eventPipelineName_example" # str | EventPipelineName (optional)
+    filter_event_pipeline_policy_id = 1 # int | EventPipelinePolicyId (optional)
     filter_include_active = True # bool | IncludeActive (optional)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -533,16 +533,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_event_entity_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventEntityTypeId | [optional]
- **filter_event_pipeline_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventPipelineName | [optional]
- **filter_event_pipeline_policy_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventPipelinePolicyId | [optional]
+ **filter_event_entity_type_id** | **int**| EventEntityTypeId | [optional]
+ **filter_event_pipeline_name** | **str**| EventPipelineName | [optional]
+ **filter_event_pipeline_policy_id** | **int**| EventPipelinePolicyId | [optional]
  **filter_include_active** | **bool**| IncludeActive | [optional]
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -610,16 +610,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_api.EventPipelineApi(api_client)
-    filter_event_entity_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | EventEntityTypeId (optional)
-    filter_event_pipeline_name = None # bool, date, datetime, dict, float, int, list, str, none_type | EventPipelineName (optional)
-    filter_event_pipeline_policy_id = None # bool, date, datetime, dict, float, int, list, str, none_type | EventPipelinePolicyId (optional)
+    filter_event_entity_type_id = 1 # int | EventEntityTypeId (optional)
+    filter_event_pipeline_name = "filter.eventPipelineName_example" # str | EventPipelineName (optional)
+    filter_event_pipeline_policy_id = 1 # int | EventPipelinePolicyId (optional)
     filter_include_active = True # bool | IncludeActive (optional)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -636,16 +636,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_event_entity_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventEntityTypeId | [optional]
- **filter_event_pipeline_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventPipelineName | [optional]
- **filter_event_pipeline_policy_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventPipelinePolicyId | [optional]
+ **filter_event_entity_type_id** | **int**| EventEntityTypeId | [optional]
+ **filter_event_pipeline_name** | **str**| EventPipelineName | [optional]
+ **filter_event_pipeline_policy_id** | **int**| EventPipelinePolicyId | [optional]
  **filter_include_active** | **bool**| IncludeActive | [optional]
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -714,13 +714,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_api.EventPipelineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Event Pipeline Id
+    id = 1 # int | Event Pipeline Id
     event_pipeline_order_update_args = EventPipelineOrderUpdateArgs(
         data=EventPipelineOrderUpdateModel(
-            event_pipeline_policy_id=None,
+            event_pipeline_policy_id=1,
             sort_order=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # EventPipelineOrderUpdateArgs | args (optional)
@@ -748,7 +748,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Event Pipeline Id |
+ **id** | **int**| Event Pipeline Id |
  **event_pipeline_order_update_args** | [**EventPipelineOrderUpdateArgs**](EventPipelineOrderUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -817,7 +817,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_api.EventPipelineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Event Pipeline Id
+    id = 1 # int | Event Pipeline Id
     event_pipeline_activate_update_args = EventPipelineActivateUpdateArgs(
         activate=True,
     ) # EventPipelineActivateUpdateArgs | args (optional)
@@ -845,7 +845,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Event Pipeline Id |
+ **id** | **int**| Event Pipeline Id |
  **event_pipeline_activate_update_args** | [**EventPipelineActivateUpdateArgs**](EventPipelineActivateUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -915,7 +915,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_api.EventPipelineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Event Pipeline ID
+    id = 1 # int | Event Pipeline ID
     event_pipeline_update_args = EventPipelineUpdateArgs(
         data=EventPipelineUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -924,11 +924,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             event_pipeline_description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             event_pipeline_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             filters=UpdateFieldValueOfEventPipelineFilterMapUpdateModelArray(
                 dirty=True,
@@ -936,15 +936,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     EventPipelineFilterMapUpdateModel(
                         event_pipeline_filter_id=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         event_pipeline_filter_map_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         event_pipeline_filter_name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         settings=UpdateFieldValueOfSettingUpdateModelArray(
                             dirty=True,
@@ -952,18 +952,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                                 SettingUpdateModel(
                                     setting_name=UpdateFieldValueOfString(
                                         dirty=True,
-                                        value=None,
+                                        value="value_example",
                                     ),
                                     setting_value=UpdateFieldValueOfString(
                                         dirty=True,
-                                        value=None,
+                                        value="value_example",
                                     ),
                                 ),
                             ],
                         ),
                         sort_order=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                     ),
                 ],
@@ -974,15 +974,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     EventPipelineTaskMapUpdateModel(
                         event_pipeline_task_id=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         event_pipeline_task_map_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         event_pipeline_task_name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         settings=UpdateFieldValueOfSettingUpdateModelArray(
                             dirty=True,
@@ -990,18 +990,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                                 SettingUpdateModel(
                                     setting_name=UpdateFieldValueOfString(
                                         dirty=True,
-                                        value=None,
+                                        value="value_example",
                                     ),
                                     setting_value=UpdateFieldValueOfString(
                                         dirty=True,
-                                        value=None,
+                                        value="value_example",
                                     ),
                                 ),
                             ],
                         ),
                         sort_order=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                     ),
                 ],
@@ -1012,7 +1012,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     EventPipelineTriggerUpdateModel(
                         event_action_id=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                     ),
                 ],
@@ -1043,7 +1043,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Event Pipeline ID |
+ **id** | **int**| Event Pipeline ID |
  **event_pipeline_update_args** | [**EventPipelineUpdateArgs**](EventPipelineUpdateArgs.md)| args | [optional]
 
 ### Return type

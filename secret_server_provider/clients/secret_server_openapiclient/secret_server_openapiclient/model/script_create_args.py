@@ -61,10 +61,8 @@ class ScriptCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,36 +71,33 @@ class ScriptCreateArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'additional_data': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'odbc_connection_string_args': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'script': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'script_category_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'script_category_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'script_type': (UserScriptType,),  # noqa: E501
-            'usage_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'additional_data': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'odbc_connection_string_args': ([str], none_type,),  # noqa: E501
+            'script': (str, none_type,),  # noqa: E501
+            'script_category_id': (int, none_type,),  # noqa: E501
+            'script_category_name': (str, none_type,),  # noqa: E501
+            'script_type': (UserScriptType, none_type,),  # noqa: E501
+            'usage_count': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -160,15 +155,15 @@ class ScriptCreateArgs(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether the Script is Active. [optional]  # noqa: E501
-            additional_data (bool, date, datetime, dict, float, int, list, str, none_type): Additional Data. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Script Description. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Script Name. [optional]  # noqa: E501
-            odbc_connection_string_args ([bool, date, datetime, dict, float, int, list, str, none_type]): ODBC Connection String Options. [optional]  # noqa: E501
-            script (bool, date, datetime, dict, float, int, list, str, none_type): Script Text. [optional]  # noqa: E501
-            script_category_id (bool, date, datetime, dict, float, int, list, str, none_type): Script Category Id. [optional]  # noqa: E501
-            script_category_name (bool, date, datetime, dict, float, int, list, str, none_type): Script Category Name. [optional]  # noqa: E501
+            additional_data (str): Additional Data. [optional]  # noqa: E501
+            description (str): Script Description. [optional]  # noqa: E501
+            name (str): Script Name. [optional]  # noqa: E501
+            odbc_connection_string_args ([str]): ODBC Connection String Options. [optional]  # noqa: E501
+            script (str): Script Text. [optional]  # noqa: E501
+            script_category_id (int): Script Category Id. [optional]  # noqa: E501
+            script_category_name (str): Script Category Name. [optional]  # noqa: E501
             script_type (UserScriptType): [optional]  # noqa: E501
-            usage_count (bool, date, datetime, dict, float, int, list, str, none_type): Usage Count . [optional]  # noqa: E501
+            usage_count (int): Usage Count . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -255,15 +250,15 @@ class ScriptCreateArgs(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether the Script is Active. [optional]  # noqa: E501
-            additional_data (bool, date, datetime, dict, float, int, list, str, none_type): Additional Data. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Script Description. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Script Name. [optional]  # noqa: E501
-            odbc_connection_string_args ([bool, date, datetime, dict, float, int, list, str, none_type]): ODBC Connection String Options. [optional]  # noqa: E501
-            script (bool, date, datetime, dict, float, int, list, str, none_type): Script Text. [optional]  # noqa: E501
-            script_category_id (bool, date, datetime, dict, float, int, list, str, none_type): Script Category Id. [optional]  # noqa: E501
-            script_category_name (bool, date, datetime, dict, float, int, list, str, none_type): Script Category Name. [optional]  # noqa: E501
+            additional_data (str): Additional Data. [optional]  # noqa: E501
+            description (str): Script Description. [optional]  # noqa: E501
+            name (str): Script Name. [optional]  # noqa: E501
+            odbc_connection_string_args ([str]): ODBC Connection String Options. [optional]  # noqa: E501
+            script (str): Script Text. [optional]  # noqa: E501
+            script_category_id (int): Script Category Id. [optional]  # noqa: E501
+            script_category_name (str): Script Category Name. [optional]  # noqa: E501
             script_type (UserScriptType): [optional]  # noqa: E501
-            usage_count (bool, date, datetime, dict, float, int, list, str, none_type): Usage Count . [optional]  # noqa: E501
+            usage_count (int): Usage Count . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

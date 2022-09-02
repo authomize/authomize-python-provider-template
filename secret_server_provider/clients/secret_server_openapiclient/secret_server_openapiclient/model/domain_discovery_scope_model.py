@@ -61,10 +61,8 @@ class DomainDiscoveryScopeModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,29 +71,26 @@ class DomainDiscoveryScopeModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'discovery_source_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'filters': ([DomainDiscoveryScopeFilterModel],),  # noqa: E501
-            'lookup_table_is_ready': (bool,),  # noqa: E501
+            'discovery_source_id': (int, none_type,),  # noqa: E501
+            'filters': ([DomainDiscoveryScopeFilterModel], none_type,),  # noqa: E501
+            'lookup_table_is_ready': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,7 +140,7 @@ class DomainDiscoveryScopeModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): The Secret Server ID of the discovery soure. [optional]  # noqa: E501
+            discovery_source_id (int): The Secret Server ID of the discovery soure. [optional]  # noqa: E501
             filters ([DomainDiscoveryScopeFilterModel]): A list of filter memebers. [optional]  # noqa: E501
             lookup_table_is_ready (bool): Is the look up table ready for the discovery source. [optional]  # noqa: E501
         """
@@ -233,7 +228,7 @@ class DomainDiscoveryScopeModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): The Secret Server ID of the discovery soure. [optional]  # noqa: E501
+            discovery_source_id (int): The Secret Server ID of the discovery soure. [optional]  # noqa: E501
             filters ([DomainDiscoveryScopeFilterModel]): A list of filter memebers. [optional]  # noqa: E501
             lookup_table_is_ready (bool): Is the look up table ready for the discovery source. [optional]  # noqa: E501
         """

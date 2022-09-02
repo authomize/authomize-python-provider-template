@@ -135,7 +135,7 @@ class ProxyApi(object):
                 },
                 'openapi_types': {
                     'client_override_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'client_override_id': 'clientOverrideId',
@@ -285,15 +285,15 @@ class ProxyApi(object):
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'is_exporting': 'isExporting',
@@ -324,7 +324,7 @@ class ProxyApi(object):
         )
         self.proxy_service_get_endpoint_notification_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -500,7 +500,7 @@ class ProxyApi(object):
         )
         self.proxy_service_get_rdp_endpoint_notification_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -588,7 +588,7 @@ class ProxyApi(object):
         )
         self.proxy_service_get_ssh_endpoint_notification_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -713,25 +713,25 @@ class ProxyApi(object):
                 },
                 'openapi_types': {
                     'filter_authenticate_result':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_end_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_engine_identity_guid':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_ip_address':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_start_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_authenticate_result': 'filter.authenticateResult',
@@ -848,19 +848,19 @@ class ProxyApi(object):
                 },
                 'openapi_types': {
                     'filter_ip_address':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_terminal_client_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_ip_address': 'filter.ipAddress',
@@ -924,7 +924,7 @@ class ProxyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'proxy_engine_view_model':
                         (ProxyEngineViewModel,),
                 },
@@ -981,7 +981,7 @@ class ProxyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'proxy_node_view_model':
                         (ProxyNodeViewModel,),
                 },
@@ -1089,7 +1089,7 @@ class ProxyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'proxy_site_view_model':
                         (ProxySiteViewModel,),
                 },
@@ -1196,7 +1196,7 @@ class ProxyApi(object):
                 },
                 'openapi_types': {
                     'client_override_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'proxy_client_override_summary':
                         (ProxyClientOverrideSummary,),
                 },
@@ -1253,7 +1253,7 @@ class ProxyApi(object):
                 },
                 'openapi_types': {
                     'client_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'proxy_client_summary':
                         (ProxyClientSummary,),
                 },
@@ -1372,7 +1372,7 @@ class ProxyApi(object):
         >>> result = thread.get()
 
         Args:
-            client_override_id (bool, date, datetime, dict, float, int, list, str, none_type): clientOverrideId
+            client_override_id (int): clientOverrideId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1613,11 +1613,11 @@ class ProxyApi(object):
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1728,7 +1728,7 @@ class ProxyApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -2040,7 +2040,7 @@ class ProxyApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -2196,7 +2196,7 @@ class ProxyApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -2320,16 +2320,16 @@ class ProxyApi(object):
 
 
         Keyword Args:
-            filter_authenticate_result (bool, date, datetime, dict, float, int, list, str, none_type): AuthenticateResult. [optional]
-            filter_end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]
-            filter_engine_identity_guid (bool, date, datetime, dict, float, int, list, str, none_type): EngineIdentityGuid. [optional]
-            filter_ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]
-            filter_start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_authenticate_result (str): AuthenticateResult. [optional]
+            filter_end_date (str): EndDate. [optional]
+            filter_engine_identity_guid (str): EngineIdentityGuid. [optional]
+            filter_ip_address (str): IpAddress. [optional]
+            filter_start_date (str): StartDate. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2486,13 +2486,13 @@ class ProxyApi(object):
 
 
         Keyword Args:
-            filter_ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]
-            filter_terminal_client_type (bool, date, datetime, dict, float, int, list, str, none_type): TerminalClientType. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_ip_address (str): IpAddress. [optional]
+            filter_terminal_client_type (str): TerminalClientType. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2571,7 +2571,7 @@ class ProxyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             proxy_engine_view_model (ProxyEngineViewModel): engine. [optional]
@@ -2655,7 +2655,7 @@ class ProxyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             proxy_node_view_model (ProxyNodeViewModel): node. [optional]
@@ -2818,7 +2818,7 @@ class ProxyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             proxy_site_view_model (ProxySiteViewModel): site. [optional]
@@ -2981,7 +2981,7 @@ class ProxyApi(object):
         >>> result = thread.get()
 
         Args:
-            client_override_id (bool, date, datetime, dict, float, int, list, str, none_type): clientOverrideId
+            client_override_id (int): clientOverrideId
 
         Keyword Args:
             proxy_client_override_summary (ProxyClientOverrideSummary): clientOverride. [optional]
@@ -3065,7 +3065,7 @@ class ProxyApi(object):
         >>> result = thread.get()
 
         Args:
-            client_id (bool, date, datetime, dict, float, int, list, str, none_type): clientId
+            client_id (int): clientId
 
         Keyword Args:
             proxy_client_summary (ProxyClientSummary): client. [optional]

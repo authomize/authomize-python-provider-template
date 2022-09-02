@@ -57,10 +57,8 @@ class EventPipelineFilterSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class EventPipelineFilterSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'event_entity_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_filter_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_filter_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_filter_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_filter_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_filter_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'event_entity_type_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_filter_description': (str, none_type,),  # noqa: E501
+            'event_pipeline_filter_display_name': (str, none_type,),  # noqa: E501
+            'event_pipeline_filter_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_filter_map_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_filter_name': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,13 +142,13 @@ class EventPipelineFilterSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Entity Type ID. [optional]  # noqa: E501
-            event_pipeline_filter_description (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Description. [optional]  # noqa: E501
-            event_pipeline_filter_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Display Name. [optional]  # noqa: E501
-            event_pipeline_filter_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Id. [optional]  # noqa: E501
-            event_pipeline_filter_map_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Map ID. [optional]  # noqa: E501
-            event_pipeline_filter_name (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Name. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order. [optional]  # noqa: E501
+            event_entity_type_id (int): Event Entity Type ID. [optional]  # noqa: E501
+            event_pipeline_filter_description (str): Event Pipeline Filter Description. [optional]  # noqa: E501
+            event_pipeline_filter_display_name (str): Event Pipeline Filter Display Name. [optional]  # noqa: E501
+            event_pipeline_filter_id (int): Event Pipeline Filter Id. [optional]  # noqa: E501
+            event_pipeline_filter_map_id (int): Event Pipeline Filter Map ID. [optional]  # noqa: E501
+            event_pipeline_filter_name (str): Event Pipeline Filter Name. [optional]  # noqa: E501
+            sort_order (int): Sort Order. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,13 +234,13 @@ class EventPipelineFilterSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Entity Type ID. [optional]  # noqa: E501
-            event_pipeline_filter_description (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Description. [optional]  # noqa: E501
-            event_pipeline_filter_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Display Name. [optional]  # noqa: E501
-            event_pipeline_filter_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Id. [optional]  # noqa: E501
-            event_pipeline_filter_map_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Map ID. [optional]  # noqa: E501
-            event_pipeline_filter_name (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Name. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order. [optional]  # noqa: E501
+            event_entity_type_id (int): Event Entity Type ID. [optional]  # noqa: E501
+            event_pipeline_filter_description (str): Event Pipeline Filter Description. [optional]  # noqa: E501
+            event_pipeline_filter_display_name (str): Event Pipeline Filter Display Name. [optional]  # noqa: E501
+            event_pipeline_filter_id (int): Event Pipeline Filter Id. [optional]  # noqa: E501
+            event_pipeline_filter_map_id (int): Event Pipeline Filter Map ID. [optional]  # noqa: E501
+            event_pipeline_filter_name (str): Event Pipeline Filter Name. [optional]  # noqa: E501
+            sort_order (int): Sort Order. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

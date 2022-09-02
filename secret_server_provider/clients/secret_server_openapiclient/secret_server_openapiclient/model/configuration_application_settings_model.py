@@ -57,10 +57,8 @@ class ConfigurationApplicationSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,54 +66,51 @@ class ConfigurationApplicationSettingsModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'allow_send_telemetry': (bool,),  # noqa: E501
-            'allow_software_update_checks': (bool,),  # noqa: E501
-            'api_refresh_tokens_enabled': (bool,),  # noqa: E501
-            'api_session_timeout_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'api_session_timeout_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'api_session_timeout_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'api_session_timeout_unlimited': (bool,),  # noqa: E501
-            'configuration_early_adopter_enabled': (bool,),  # noqa: E501
-            'custom_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_downtime_message_to_admins_only': (bool,),  # noqa: E501
-            'enable_cred_ssp': (bool,),  # noqa: E501
-            'enable_syslog_cef_logging': (bool,),  # noqa: E501
-            'enable_web_services': (bool,),  # noqa: E501
-            'maximum_token_refreshes_allowed': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'max_secret_log_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'mobile_max_offline_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'mobile_max_offline_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'obfuscate_personally_identifiable_information': (bool,),  # noqa: E501
-            'pii_obfuscation_level': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'prevent_application_from_sleeping': (bool,),  # noqa: E501
-            'prevent_direct_api_authentication': (bool,),  # noqa: E501
-            'syslog_cef_log_site': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'syslog_cef_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'syslog_cef_protocol': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'syslog_cef_server': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'syslog_cef_time_zone': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'tms_installation_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'win_rm_endpoint_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'write_syslog_to_event_log': (bool,),  # noqa: E501
+            'allow_send_telemetry': (bool, none_type,),  # noqa: E501
+            'allow_software_update_checks': (bool, none_type,),  # noqa: E501
+            'api_refresh_tokens_enabled': (bool, none_type,),  # noqa: E501
+            'api_session_timeout_days': (int, none_type,),  # noqa: E501
+            'api_session_timeout_hours': (int, none_type,),  # noqa: E501
+            'api_session_timeout_minutes': (int, none_type,),  # noqa: E501
+            'api_session_timeout_unlimited': (bool, none_type,),  # noqa: E501
+            'configuration_early_adopter_enabled': (bool, none_type,),  # noqa: E501
+            'custom_url': (str, none_type,),  # noqa: E501
+            'display_downtime_message_to_admins_only': (bool, none_type,),  # noqa: E501
+            'enable_cred_ssp': (bool, none_type,),  # noqa: E501
+            'enable_syslog_cef_logging': (bool, none_type,),  # noqa: E501
+            'enable_web_services': (bool, none_type,),  # noqa: E501
+            'maximum_token_refreshes_allowed': (int, none_type,),  # noqa: E501
+            'max_secret_log_length': (int, none_type,),  # noqa: E501
+            'mobile_max_offline_days': (int, none_type,),  # noqa: E501
+            'mobile_max_offline_hours': (int, none_type,),  # noqa: E501
+            'obfuscate_personally_identifiable_information': (bool, none_type,),  # noqa: E501
+            'pii_obfuscation_level': (str, none_type,),  # noqa: E501
+            'prevent_application_from_sleeping': (bool, none_type,),  # noqa: E501
+            'prevent_direct_api_authentication': (bool, none_type,),  # noqa: E501
+            'syslog_cef_log_site': (int, none_type,),  # noqa: E501
+            'syslog_cef_port': (int, none_type,),  # noqa: E501
+            'syslog_cef_protocol': (str, none_type,),  # noqa: E501
+            'syslog_cef_server': (str, none_type,),  # noqa: E501
+            'syslog_cef_time_zone': (str, none_type,),  # noqa: E501
+            'tms_installation_path': (str, none_type,),  # noqa: E501
+            'win_rm_endpoint_url': (str, none_type,),  # noqa: E501
+            'write_syslog_to_event_log': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -194,31 +189,31 @@ class ConfigurationApplicationSettingsModel(ModelNormal):
             allow_send_telemetry (bool): Send Anonymized System Metrics Information. [optional]  # noqa: E501
             allow_software_update_checks (bool): Allow software update checks. This setting is ignored in cloud environments.. [optional]  # noqa: E501
             api_refresh_tokens_enabled (bool): API Refresh Tokens Enabled. [optional]  # noqa: E501
-            api_session_timeout_days (bool, date, datetime, dict, float, int, list, str, none_type): API session timeout days. [optional]  # noqa: E501
-            api_session_timeout_hours (bool, date, datetime, dict, float, int, list, str, none_type): API session timeout hours. [optional]  # noqa: E501
-            api_session_timeout_minutes (bool, date, datetime, dict, float, int, list, str, none_type): API session timeout minutes. [optional]  # noqa: E501
+            api_session_timeout_days (int): API session timeout days. [optional]  # noqa: E501
+            api_session_timeout_hours (int): API session timeout hours. [optional]  # noqa: E501
+            api_session_timeout_minutes (int): API session timeout minutes. [optional]  # noqa: E501
             api_session_timeout_unlimited (bool): API session timeout unlimited. [optional]  # noqa: E501
             configuration_early_adopter_enabled (bool): Notify when preview releases are available. False by default. [optional]  # noqa: E501
-            custom_url (bool, date, datetime, dict, float, int, list, str, none_type): Outward accessible url to get to application. This setting is ignored in cloud environments.. [optional]  # noqa: E501
+            custom_url (str): Outward accessible url to get to application. This setting is ignored in cloud environments.. [optional]  # noqa: E501
             display_downtime_message_to_admins_only (bool): Display Downtime Message To Admins Only. [optional]  # noqa: E501
             enable_cred_ssp (bool): Enable Cred SSP for win RM. [optional]  # noqa: E501
             enable_syslog_cef_logging (bool): Enable Syslog/CEF Logging. [optional]  # noqa: E501
             enable_web_services (bool): Enable Web services. [optional]  # noqa: E501
-            maximum_token_refreshes_allowed (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Token Refreshes Allowed. [optional]  # noqa: E501
-            max_secret_log_length (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of entries in secret log. [optional]  # noqa: E501
-            mobile_max_offline_days (bool, date, datetime, dict, float, int, list, str, none_type): The Maximum Time for Offline Access on Mobile Devices setting in Secret Server determines how long to cache secret data on the mobile device. [optional]  # noqa: E501
-            mobile_max_offline_hours (bool, date, datetime, dict, float, int, list, str, none_type): The Maximum Time for Offline Access on Mobile Devices setting in Secret Server determines how long to cache secret data on the mobile device. [optional]  # noqa: E501
+            maximum_token_refreshes_allowed (int): Maximum Token Refreshes Allowed. [optional]  # noqa: E501
+            max_secret_log_length (int): Maximum number of entries in secret log. [optional]  # noqa: E501
+            mobile_max_offline_days (int): The Maximum Time for Offline Access on Mobile Devices setting in Secret Server determines how long to cache secret data on the mobile device. [optional]  # noqa: E501
+            mobile_max_offline_hours (int): The Maximum Time for Offline Access on Mobile Devices setting in Secret Server determines how long to cache secret data on the mobile device. [optional]  # noqa: E501
             obfuscate_personally_identifiable_information (bool): Should Secret Server obfuscate information that could identify a person. [optional]  # noqa: E501
-            pii_obfuscation_level (bool, date, datetime, dict, float, int, list, str, none_type): Delimit or replace personally identifiable information and automatically remove from Audit Exports . [optional]  # noqa: E501
+            pii_obfuscation_level (str): Delimit or replace personally identifiable information and automatically remove from Audit Exports . [optional]  # noqa: E501
             prevent_application_from_sleeping (bool): A keep alive thread will run in the background pinging the web URL to make sure IIS does not stop running due to inactivity. This setting is ignored in cloud environments.. [optional]  # noqa: E501
             prevent_direct_api_authentication (bool): Prevent non-Application Account users from directly authenticating against the API.. [optional]  # noqa: E501
-            syslog_cef_log_site (bool, date, datetime, dict, float, int, list, str, none_type): This is the site that the CEF/Syslogs will run on. [optional]  # noqa: E501
-            syslog_cef_port (bool, date, datetime, dict, float, int, list, str, none_type): Syslog/CEF Protocol. [optional]  # noqa: E501
-            syslog_cef_protocol (bool, date, datetime, dict, float, int, list, str, none_type): Syslog/CEF Protocol to use when sending logs. [optional]  # noqa: E501
-            syslog_cef_server (bool, date, datetime, dict, float, int, list, str, none_type): Syslog/CEF Server Address. [optional]  # noqa: E501
-            syslog_cef_time_zone (bool, date, datetime, dict, float, int, list, str, none_type): Time Zone to use when sending Syslog/CEF Protocol log entries. [optional]  # noqa: E501
-            tms_installation_path (bool, date, datetime, dict, float, int, list, str, none_type): If TMS is installed, the file location. This setting is ignored in cloud environments.. [optional]  # noqa: E501
-            win_rm_endpoint_url (bool, date, datetime, dict, float, int, list, str, none_type): Win RM endpoint url. [optional]  # noqa: E501
+            syslog_cef_log_site (int): This is the site that the CEF/Syslogs will run on. [optional]  # noqa: E501
+            syslog_cef_port (int): Syslog/CEF Protocol. [optional]  # noqa: E501
+            syslog_cef_protocol (str): Syslog/CEF Protocol to use when sending logs. [optional]  # noqa: E501
+            syslog_cef_server (str): Syslog/CEF Server Address. [optional]  # noqa: E501
+            syslog_cef_time_zone (str): Time Zone to use when sending Syslog/CEF Protocol log entries. [optional]  # noqa: E501
+            tms_installation_path (str): If TMS is installed, the file location. This setting is ignored in cloud environments.. [optional]  # noqa: E501
+            win_rm_endpoint_url (str): Win RM endpoint url. [optional]  # noqa: E501
             write_syslog_to_event_log (bool): Enable syslog events to the windows event log. This setting is ignored in cloud environments.. [optional]  # noqa: E501
         """
 
@@ -308,31 +303,31 @@ class ConfigurationApplicationSettingsModel(ModelNormal):
             allow_send_telemetry (bool): Send Anonymized System Metrics Information. [optional]  # noqa: E501
             allow_software_update_checks (bool): Allow software update checks. This setting is ignored in cloud environments.. [optional]  # noqa: E501
             api_refresh_tokens_enabled (bool): API Refresh Tokens Enabled. [optional]  # noqa: E501
-            api_session_timeout_days (bool, date, datetime, dict, float, int, list, str, none_type): API session timeout days. [optional]  # noqa: E501
-            api_session_timeout_hours (bool, date, datetime, dict, float, int, list, str, none_type): API session timeout hours. [optional]  # noqa: E501
-            api_session_timeout_minutes (bool, date, datetime, dict, float, int, list, str, none_type): API session timeout minutes. [optional]  # noqa: E501
+            api_session_timeout_days (int): API session timeout days. [optional]  # noqa: E501
+            api_session_timeout_hours (int): API session timeout hours. [optional]  # noqa: E501
+            api_session_timeout_minutes (int): API session timeout minutes. [optional]  # noqa: E501
             api_session_timeout_unlimited (bool): API session timeout unlimited. [optional]  # noqa: E501
             configuration_early_adopter_enabled (bool): Notify when preview releases are available. False by default. [optional]  # noqa: E501
-            custom_url (bool, date, datetime, dict, float, int, list, str, none_type): Outward accessible url to get to application. This setting is ignored in cloud environments.. [optional]  # noqa: E501
+            custom_url (str): Outward accessible url to get to application. This setting is ignored in cloud environments.. [optional]  # noqa: E501
             display_downtime_message_to_admins_only (bool): Display Downtime Message To Admins Only. [optional]  # noqa: E501
             enable_cred_ssp (bool): Enable Cred SSP for win RM. [optional]  # noqa: E501
             enable_syslog_cef_logging (bool): Enable Syslog/CEF Logging. [optional]  # noqa: E501
             enable_web_services (bool): Enable Web services. [optional]  # noqa: E501
-            maximum_token_refreshes_allowed (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Token Refreshes Allowed. [optional]  # noqa: E501
-            max_secret_log_length (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of entries in secret log. [optional]  # noqa: E501
-            mobile_max_offline_days (bool, date, datetime, dict, float, int, list, str, none_type): The Maximum Time for Offline Access on Mobile Devices setting in Secret Server determines how long to cache secret data on the mobile device. [optional]  # noqa: E501
-            mobile_max_offline_hours (bool, date, datetime, dict, float, int, list, str, none_type): The Maximum Time for Offline Access on Mobile Devices setting in Secret Server determines how long to cache secret data on the mobile device. [optional]  # noqa: E501
+            maximum_token_refreshes_allowed (int): Maximum Token Refreshes Allowed. [optional]  # noqa: E501
+            max_secret_log_length (int): Maximum number of entries in secret log. [optional]  # noqa: E501
+            mobile_max_offline_days (int): The Maximum Time for Offline Access on Mobile Devices setting in Secret Server determines how long to cache secret data on the mobile device. [optional]  # noqa: E501
+            mobile_max_offline_hours (int): The Maximum Time for Offline Access on Mobile Devices setting in Secret Server determines how long to cache secret data on the mobile device. [optional]  # noqa: E501
             obfuscate_personally_identifiable_information (bool): Should Secret Server obfuscate information that could identify a person. [optional]  # noqa: E501
-            pii_obfuscation_level (bool, date, datetime, dict, float, int, list, str, none_type): Delimit or replace personally identifiable information and automatically remove from Audit Exports . [optional]  # noqa: E501
+            pii_obfuscation_level (str): Delimit or replace personally identifiable information and automatically remove from Audit Exports . [optional]  # noqa: E501
             prevent_application_from_sleeping (bool): A keep alive thread will run in the background pinging the web URL to make sure IIS does not stop running due to inactivity. This setting is ignored in cloud environments.. [optional]  # noqa: E501
             prevent_direct_api_authentication (bool): Prevent non-Application Account users from directly authenticating against the API.. [optional]  # noqa: E501
-            syslog_cef_log_site (bool, date, datetime, dict, float, int, list, str, none_type): This is the site that the CEF/Syslogs will run on. [optional]  # noqa: E501
-            syslog_cef_port (bool, date, datetime, dict, float, int, list, str, none_type): Syslog/CEF Protocol. [optional]  # noqa: E501
-            syslog_cef_protocol (bool, date, datetime, dict, float, int, list, str, none_type): Syslog/CEF Protocol to use when sending logs. [optional]  # noqa: E501
-            syslog_cef_server (bool, date, datetime, dict, float, int, list, str, none_type): Syslog/CEF Server Address. [optional]  # noqa: E501
-            syslog_cef_time_zone (bool, date, datetime, dict, float, int, list, str, none_type): Time Zone to use when sending Syslog/CEF Protocol log entries. [optional]  # noqa: E501
-            tms_installation_path (bool, date, datetime, dict, float, int, list, str, none_type): If TMS is installed, the file location. This setting is ignored in cloud environments.. [optional]  # noqa: E501
-            win_rm_endpoint_url (bool, date, datetime, dict, float, int, list, str, none_type): Win RM endpoint url. [optional]  # noqa: E501
+            syslog_cef_log_site (int): This is the site that the CEF/Syslogs will run on. [optional]  # noqa: E501
+            syslog_cef_port (int): Syslog/CEF Protocol. [optional]  # noqa: E501
+            syslog_cef_protocol (str): Syslog/CEF Protocol to use when sending logs. [optional]  # noqa: E501
+            syslog_cef_server (str): Syslog/CEF Server Address. [optional]  # noqa: E501
+            syslog_cef_time_zone (str): Time Zone to use when sending Syslog/CEF Protocol log entries. [optional]  # noqa: E501
+            tms_installation_path (str): If TMS is installed, the file location. This setting is ignored in cloud environments.. [optional]  # noqa: E501
+            win_rm_endpoint_url (str): Win RM endpoint url. [optional]  # noqa: E501
             write_syslog_to_event_log (bool): Enable syslog events to the windows event log. This setting is ignored in cloud environments.. [optional]  # noqa: E501
         """
 

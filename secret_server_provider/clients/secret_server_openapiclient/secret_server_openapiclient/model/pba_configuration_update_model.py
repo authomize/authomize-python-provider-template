@@ -67,10 +67,8 @@ class PbaConfigurationUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,41 +77,38 @@ class PbaConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'challenge_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'challenge_lockout_integrated_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'challenge_lockout_saml_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'encryption_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'event_data_upload_interval': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'event_data_upload_size_threshold': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'external_pba_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'file_upload_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'metadata_interval': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'pba_integration_key': (UpdateFieldValueOfString,),  # noqa: E501
-            'respect_owner_editor_require_approval_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'retention_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'site_id': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'storage_directory_path': (UpdateFieldValueOfString,),  # noqa: E501
+            'challenge_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'challenge_lockout_integrated_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'challenge_lockout_saml_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'encryption_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'event_data_upload_interval': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'event_data_upload_size_threshold': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'external_pba_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'file_upload_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'metadata_interval': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'pba_integration_key': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'respect_owner_editor_require_approval_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'retention_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'site_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'storage_directory_path': (UpdateFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

@@ -66,16 +66,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
     categorized_list_item_single_create_args = CategorizedListItemSingleCreateArgs(
         option=CategorizedListItemCreateModel(
             category=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             value=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # CategorizedListItemSingleCreateArgs | List option to be added (optional)
@@ -103,7 +103,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
  **categorized_list_item_single_create_args** | [**CategorizedListItemSingleCreateArgs**](CategorizedListItemSingleCreateArgs.md)| List option to be added | [optional]
 
 ### Return type
@@ -173,17 +173,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
     categorized_list_item_create_args = CategorizedListItemCreateArgs(
         data=[
             CategorizedListItemCreateModel(
                 category=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 value=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
             ),
         ],
@@ -212,7 +212,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
  **categorized_list_item_create_args** | [**CategorizedListItemCreateArgs**](CategorizedListItemCreateArgs.md)| List options to be added | [optional]
 
 ### Return type
@@ -282,7 +282,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
     categorized_list_item_create_with_file_args = CategorizedListItemCreateWithFileArgs(
         delimiter={},
 null,
@@ -311,7 +311,7 @@ null,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
  **categorized_list_item_create_with_file_args** | [**CategorizedListItemCreateWithFileArgs**](CategorizedListItemCreateWithFileArgs.md)| File containing list options to add | [optional]
 
 ### Return type
@@ -381,18 +381,18 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
-    category = None # bool, date, datetime, dict, float, int, list, str, none_type | Category to assign
+    categorized_list_id = "categorizedListId_example" # str | List ID
+    category = "category_example" # str | Category to assign
     categorized_list_item_create_args = CategorizedListItemCreateArgs(
         data=[
             CategorizedListItemCreateModel(
                 category=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 value=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
             ),
         ],
@@ -421,8 +421,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
- **category** | **bool, date, datetime, dict, float, int, list, str, none_type**| Category to assign |
+ **categorized_list_id** | **str**| List ID |
+ **category** | **str**| Category to assign |
  **categorized_list_item_create_args** | [**CategorizedListItemCreateArgs**](CategorizedListItemCreateArgs.md)| List options to be added | [optional]
 
 ### Return type
@@ -500,11 +500,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # CategorizedListCreateArgs | List be added (optional)
@@ -592,7 +592,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | ID of list to be deleted
+    categorized_list_id = "categorizedListId_example" # str | ID of list to be deleted
 
     # example passing only required values which don't have defaults set
     try:
@@ -608,7 +608,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| ID of list to be deleted |
+ **categorized_list_id** | **str**| ID of list to be deleted |
 
 ### Return type
 
@@ -756,7 +756,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -772,7 +772,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
 
 ### Return type
 
@@ -840,7 +840,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -856,7 +856,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
 
 ### Return type
 
@@ -924,14 +924,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
-    filter_category = None # bool, date, datetime, dict, float, int, list, str, none_type | Category text to filter by. If empty or not included, will return items for all categories. (optional)
+    categorized_list_id = "categorizedListId_example" # str | List ID
+    filter_category = "filter.category_example" # str | Category text to filter by. If empty or not included, will return items for all categories. (optional)
     filter_null_category_is_uncategorized = True # bool | If true and Category value is an empty string or not included, will return only uncategorized items; otherwise, an empty category filter is treated as no category filter. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -956,14 +956,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
- **filter_category** | **bool, date, datetime, dict, float, int, list, str, none_type**| Category text to filter by. If empty or not included, will return items for all categories. | [optional]
+ **categorized_list_id** | **str**| List ID |
+ **filter_category** | **str**| Category text to filter by. If empty or not included, will return items for all categories. | [optional]
  **filter_null_category_is_uncategorized** | **bool**| If true and Category value is an empty string or not included, will return only uncategorized items; otherwise, an empty category filter is treated as no category filter. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1031,8 +1031,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List id
-    option_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List option id
+    list_id = "listId_example" # str | List id
+    option_id = "optionId_example" # str | List option id
 
     # example passing only required values which don't have defaults set
     try:
@@ -1048,8 +1048,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List id |
- **option_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List option id |
+ **list_id** | **str**| List id |
+ **option_id** | **str**| List option id |
 
 ### Return type
 
@@ -1117,7 +1117,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -1133,7 +1133,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
 
 ### Return type
 
@@ -1202,17 +1202,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
     categorized_list_item_create_args = CategorizedListItemCreateArgs(
         data=[
             CategorizedListItemCreateModel(
                 category=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 value=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
             ),
         ],
@@ -1241,7 +1241,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
  **categorized_list_item_create_args** | [**CategorizedListItemCreateArgs**](CategorizedListItemCreateArgs.md)| List options to be added | [optional]
 
 ### Return type
@@ -1312,12 +1312,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
     filter_include_active = True # bool | Whether to include active lists in results (when excluded equals true) (optional)
     filter_include_inactive = True # bool | Whether to include inactive lists in results (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1336,12 +1336,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_active** | **bool**| Whether to include active lists in results (when excluded equals true) | [optional]
  **filter_include_inactive** | **bool**| Whether to include inactive lists in results | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1409,13 +1409,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List Id
+    categorized_list_id = "categorizedListId_example" # str | List Id
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1440,13 +1440,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List Id |
+ **categorized_list_id** | **str**| List Id |
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1515,17 +1515,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
     categorized_list_item_single_update_args = CategorizedListItemSingleUpdateArgs(
         option=CategorizedListItemUpdateModel(
-            categorized_list_item_id=None,
+            categorized_list_item_id="categorized_list_item_id_example",
             category=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             value=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # CategorizedListItemSingleUpdateArgs | List option to be updated (optional)
@@ -1553,7 +1553,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
  **categorized_list_item_single_update_args** | [**CategorizedListItemSingleUpdateArgs**](CategorizedListItemSingleUpdateArgs.md)| List option to be updated | [optional]
 
 ### Return type
@@ -1623,18 +1623,18 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
     categorized_list_item_update_args = CategorizedListItemUpdateArgs(
         data=[
             CategorizedListItemUpdateModel(
-                categorized_list_item_id=None,
+                categorized_list_item_id="categorized_list_item_id_example",
                 category=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 value=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
             ),
         ],
@@ -1663,7 +1663,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
  **categorized_list_item_update_args** | [**CategorizedListItemUpdateArgs**](CategorizedListItemUpdateArgs.md)| List options to be updated | [optional]
 
 ### Return type
@@ -1733,7 +1733,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categorized_lists_api.CategorizedListsApi(api_client)
-    categorized_list_id = None # bool, date, datetime, dict, float, int, list, str, none_type | List ID
+    categorized_list_id = "categorizedListId_example" # str | List ID
     categorized_list_update_args = CategorizedListUpdateArgs(
         data=CategorizedListUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -1742,11 +1742,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # CategorizedListUpdateArgs | List to be updated (optional)
@@ -1774,7 +1774,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categorized_list_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| List ID |
+ **categorized_list_id** | **str**| List ID |
  **categorized_list_update_args** | [**CategorizedListUpdateArgs**](CategorizedListUpdateArgs.md)| List to be updated | [optional]
 
 ### Return type

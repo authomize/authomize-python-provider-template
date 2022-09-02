@@ -57,10 +57,8 @@ class SecretTemplateGroupSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,34 +66,31 @@ class SecretTemplateGroupSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name_with_domain': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_personal': (bool,),  # noqa: E501
-            'secret_type_access_role_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'display_name_with_domain': (str, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'is_personal': (bool, none_type,),  # noqa: E501
+            'secret_type_access_role_id': (int, none_type,),  # noqa: E501
+            'secret_type_id': (int, none_type,),  # noqa: E501
+            'secret_type_name': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,15 +146,15 @@ class SecretTemplateGroupSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display Name. [optional]  # noqa: E501
-            display_name_with_domain (bool, date, datetime, dict, float, int, list, str, none_type): Display Name with Domain. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Domain Name. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group Id. [optional]  # noqa: E501
+            display_name (str): Display Name. [optional]  # noqa: E501
+            display_name_with_domain (str): Display Name with Domain. [optional]  # noqa: E501
+            domain_name (str): Domain Name. [optional]  # noqa: E501
+            group_id (int): Group Id. [optional]  # noqa: E501
             is_personal (bool): Is Personal. [optional]  # noqa: E501
-            secret_type_access_role_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Access Role Id. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Id. [optional]  # noqa: E501
-            secret_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Name. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): If it is a personal group, the user id of the user. [optional]  # noqa: E501
+            secret_type_access_role_id (int): Secret Type Access Role Id. [optional]  # noqa: E501
+            secret_type_id (int): Secret Type Id. [optional]  # noqa: E501
+            secret_type_name (str): Secret Type Name. [optional]  # noqa: E501
+            user_id (int): If it is a personal group, the user id of the user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,15 +240,15 @@ class SecretTemplateGroupSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display Name. [optional]  # noqa: E501
-            display_name_with_domain (bool, date, datetime, dict, float, int, list, str, none_type): Display Name with Domain. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Domain Name. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group Id. [optional]  # noqa: E501
+            display_name (str): Display Name. [optional]  # noqa: E501
+            display_name_with_domain (str): Display Name with Domain. [optional]  # noqa: E501
+            domain_name (str): Domain Name. [optional]  # noqa: E501
+            group_id (int): Group Id. [optional]  # noqa: E501
             is_personal (bool): Is Personal. [optional]  # noqa: E501
-            secret_type_access_role_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Access Role Id. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Id. [optional]  # noqa: E501
-            secret_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Name. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): If it is a personal group, the user id of the user. [optional]  # noqa: E501
+            secret_type_access_role_id (int): Secret Type Access Role Id. [optional]  # noqa: E501
+            secret_type_id (int): Secret Type Id. [optional]  # noqa: E501
+            secret_type_name (str): Secret Type Name. [optional]  # noqa: E501
+            user_id (int): If it is a personal group, the user id of the user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

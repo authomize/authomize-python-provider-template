@@ -50,7 +50,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = script_api.ScriptApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Script ID
+    id = 1 # int | Script ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -66,7 +66,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Script ID |
+ **id** | **int**| Script ID |
 
 ### Return type
 
@@ -137,17 +137,17 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = script_api.ScriptApi(api_client)
     script_create_args = ScriptCreateArgs(
         active=True,
-        additional_data=None,
-        description=None,
-        name=None,
+        additional_data="additional_data_example",
+        description="description_example",
+        name="name_example",
         odbc_connection_string_args=[
-            None,
+            "odbc_connection_string_args_example",
         ],
-        script=None,
-        script_category_id=None,
-        script_category_name=None,
+        script="script_example",
+        script_category_id=1,
+        script_category_name="script_category_name_example",
         script_type=UserScriptType("{}"),
-        usage_count=None,
+        usage_count=1,
     ) # ScriptCreateArgs | Script creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -234,12 +234,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = script_api.ScriptApi(api_client)
     filter_include_inactive = True # bool | Whether to include inactive scripts in the results (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search Text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_text = "filter.searchText_example" # str | Search Text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -257,12 +257,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| Whether to include inactive scripts in the results | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search Text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_text** | **str**| Search Text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 

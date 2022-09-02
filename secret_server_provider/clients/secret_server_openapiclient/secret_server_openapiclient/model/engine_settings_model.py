@@ -61,10 +61,8 @@ class EngineSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,40 +71,37 @@ class EngineSettingsModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'ad_sync_enabled': (EngineSettingBool,),  # noqa: E501
-            'advanced_auditing_enabled': (EngineSettingBool,),  # noqa: E501
-            'engine_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'engine_settings_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'local_account_discovery_enabled': (EngineSettingBool,),  # noqa: E501
-            'log_level': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_changing_enabled': (EngineSettingBool,),  # noqa: E501
-            'rdp_proxy_enabled': (EngineSettingBool,),  # noqa: E501
-            'secret_workflow_enabled': (EngineSettingBool,),  # noqa: E501
-            'security_analytics_enabled': (EngineSettingBool,),  # noqa: E501
-            'service_account_management_enabled': (EngineSettingBool,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_enabled': (EngineSettingBool,),  # noqa: E501
-            'ssh_terminal_enabled': (EngineSettingBool,),  # noqa: E501
+            'ad_sync_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'advanced_auditing_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'engine_id': (int, none_type,),  # noqa: E501
+            'engine_settings_id': (int, none_type,),  # noqa: E501
+            'local_account_discovery_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'log_level': (str, none_type,),  # noqa: E501
+            'password_changing_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'rdp_proxy_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'secret_workflow_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'security_analytics_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'service_account_management_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'ssh_proxy_enabled': (EngineSettingBool, none_type,),  # noqa: E501
+            'ssh_terminal_enabled': (EngineSettingBool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -169,16 +164,16 @@ class EngineSettingsModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             ad_sync_enabled (EngineSettingBool): [optional]  # noqa: E501
             advanced_auditing_enabled (EngineSettingBool): [optional]  # noqa: E501
-            engine_id (bool, date, datetime, dict, float, int, list, str, none_type): EngineId. [optional]  # noqa: E501
-            engine_settings_id (bool, date, datetime, dict, float, int, list, str, none_type): EngineSettingsId. [optional]  # noqa: E501
+            engine_id (int): EngineId. [optional]  # noqa: E501
+            engine_settings_id (int): EngineSettingsId. [optional]  # noqa: E501
             local_account_discovery_enabled (EngineSettingBool): [optional]  # noqa: E501
-            log_level (bool, date, datetime, dict, float, int, list, str, none_type): LogLevel. [optional]  # noqa: E501
+            log_level (str): LogLevel. [optional]  # noqa: E501
             password_changing_enabled (EngineSettingBool): [optional]  # noqa: E501
             rdp_proxy_enabled (EngineSettingBool): [optional]  # noqa: E501
             secret_workflow_enabled (EngineSettingBool): [optional]  # noqa: E501
             security_analytics_enabled (EngineSettingBool): [optional]  # noqa: E501
             service_account_management_enabled (EngineSettingBool): [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]  # noqa: E501
+            site_id (int): SiteId. [optional]  # noqa: E501
             ssh_proxy_enabled (EngineSettingBool): [optional]  # noqa: E501
             ssh_terminal_enabled (EngineSettingBool): [optional]  # noqa: E501
         """
@@ -268,16 +263,16 @@ class EngineSettingsModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             ad_sync_enabled (EngineSettingBool): [optional]  # noqa: E501
             advanced_auditing_enabled (EngineSettingBool): [optional]  # noqa: E501
-            engine_id (bool, date, datetime, dict, float, int, list, str, none_type): EngineId. [optional]  # noqa: E501
-            engine_settings_id (bool, date, datetime, dict, float, int, list, str, none_type): EngineSettingsId. [optional]  # noqa: E501
+            engine_id (int): EngineId. [optional]  # noqa: E501
+            engine_settings_id (int): EngineSettingsId. [optional]  # noqa: E501
             local_account_discovery_enabled (EngineSettingBool): [optional]  # noqa: E501
-            log_level (bool, date, datetime, dict, float, int, list, str, none_type): LogLevel. [optional]  # noqa: E501
+            log_level (str): LogLevel. [optional]  # noqa: E501
             password_changing_enabled (EngineSettingBool): [optional]  # noqa: E501
             rdp_proxy_enabled (EngineSettingBool): [optional]  # noqa: E501
             secret_workflow_enabled (EngineSettingBool): [optional]  # noqa: E501
             security_analytics_enabled (EngineSettingBool): [optional]  # noqa: E501
             service_account_management_enabled (EngineSettingBool): [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]  # noqa: E501
+            site_id (int): SiteId. [optional]  # noqa: E501
             ssh_proxy_enabled (EngineSettingBool): [optional]  # noqa: E501
             ssh_terminal_enabled (EngineSettingBool): [optional]  # noqa: E501
         """

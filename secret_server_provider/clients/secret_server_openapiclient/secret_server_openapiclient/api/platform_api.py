@@ -165,7 +165,7 @@ class PlatformApi(object):
                 },
                 'openapi_types': {
                     'search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'search_text': 'searchText',
@@ -260,7 +260,7 @@ class PlatformApi(object):
                 },
                 'openapi_types': {
                     'group_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'group_id': 'groupId',
@@ -452,7 +452,7 @@ class PlatformApi(object):
 
 
         Keyword Args:
-            search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. Use * for wildcards, ex: Admin*. Leave empty to return all.. [optional]
+            search_text (str): Search text. Use * for wildcards, ex: Admin*. Leave empty to return all.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -609,7 +609,7 @@ class PlatformApi(object):
         >>> result = thread.get()
 
         Args:
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): groupId
+            group_id (int): groupId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

@@ -57,10 +57,8 @@ class FolderSimpleViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class FolderSimpleViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restricted': (bool,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'path': (str, none_type,),  # noqa: E501
+            'restricted': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,9 +136,9 @@ class FolderSimpleViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            path (bool, date, datetime, dict, float, int, list, str, none_type): Path. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            path (str): Path. [optional]  # noqa: E501
             restricted (bool): Restricted. [optional]  # noqa: E501
         """
 
@@ -230,9 +225,9 @@ class FolderSimpleViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            path (bool, date, datetime, dict, float, int, list, str, none_type): Path. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            path (str): Path. [optional]  # noqa: E501
             restricted (bool): Restricted. [optional]  # noqa: E501
         """
 

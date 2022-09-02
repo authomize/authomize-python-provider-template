@@ -124,7 +124,7 @@ class AppClientsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -176,7 +176,7 @@ class AppClientsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'include_inactive':
                         (bool,),
                 },
@@ -276,7 +276,7 @@ class AppClientsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'app_client_update_args':
                         (AppClientUpdateArgs,),
                 },
@@ -395,7 +395,7 @@ class AppClientsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): App client ID
+            id (int): App client ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -478,7 +478,7 @@ class AppClientsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): App client ID
+            id (int): App client ID
 
         Keyword Args:
             include_inactive (bool): Whether to include inactive app clients. [optional]
@@ -640,7 +640,7 @@ class AppClientsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): App client ID
+            id (int): App client ID
 
         Keyword Args:
             app_client_update_args (AppClientUpdateArgs): App client update options. [optional]

@@ -61,10 +61,8 @@ class RotateSecretKeysStatusModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class RotateSecretKeysStatusModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'last_request_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_run_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'progress_status': (RotateSecretKeysProgressModel,),  # noqa: E501
+            'last_request_date': (datetime, none_type,),  # noqa: E501
+            'last_run_date': (datetime, none_type,),  # noqa: E501
+            'last_status': (str, none_type,),  # noqa: E501
+            'message': (str, none_type,),  # noqa: E501
+            'progress_status': (RotateSecretKeysProgressModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,10 +144,10 @@ class RotateSecretKeysStatusModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            last_request_date (bool, date, datetime, dict, float, int, list, str, none_type): Date of the last time Rotate Secret Keys was requested. Null if never run.. [optional]  # noqa: E501
-            last_run_date (bool, date, datetime, dict, float, int, list, str, none_type): Date of the last time Rotate Secret Keys was executed. Null if never run.. [optional]  # noqa: E501
-            last_status (bool, date, datetime, dict, float, int, list, str, none_type): Status of the last time Rotate Secret Keys was executed.. [optional]  # noqa: E501
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Message about the last time Rotate Secret Keys was executed.. [optional]  # noqa: E501
+            last_request_date (datetime): Date of the last time Rotate Secret Keys was requested. Null if never run.. [optional]  # noqa: E501
+            last_run_date (datetime): Date of the last time Rotate Secret Keys was executed. Null if never run.. [optional]  # noqa: E501
+            last_status (str): Status of the last time Rotate Secret Keys was executed.. [optional]  # noqa: E501
+            message (str): Message about the last time Rotate Secret Keys was executed.. [optional]  # noqa: E501
             progress_status (RotateSecretKeysProgressModel): [optional]  # noqa: E501
         """
 
@@ -239,10 +234,10 @@ class RotateSecretKeysStatusModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            last_request_date (bool, date, datetime, dict, float, int, list, str, none_type): Date of the last time Rotate Secret Keys was requested. Null if never run.. [optional]  # noqa: E501
-            last_run_date (bool, date, datetime, dict, float, int, list, str, none_type): Date of the last time Rotate Secret Keys was executed. Null if never run.. [optional]  # noqa: E501
-            last_status (bool, date, datetime, dict, float, int, list, str, none_type): Status of the last time Rotate Secret Keys was executed.. [optional]  # noqa: E501
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Message about the last time Rotate Secret Keys was executed.. [optional]  # noqa: E501
+            last_request_date (datetime): Date of the last time Rotate Secret Keys was requested. Null if never run.. [optional]  # noqa: E501
+            last_run_date (datetime): Date of the last time Rotate Secret Keys was executed. Null if never run.. [optional]  # noqa: E501
+            last_status (str): Status of the last time Rotate Secret Keys was executed.. [optional]  # noqa: E501
+            message (str): Message about the last time Rotate Secret Keys was executed.. [optional]  # noqa: E501
             progress_status (RotateSecretKeysProgressModel): [optional]  # noqa: E501
         """
 

@@ -75,7 +75,7 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_detail_hook_create_args':
                         (SecretDetailHookCreateArgs,),
                 },
@@ -132,7 +132,7 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_detail_hook_create_args':
                         (SecretDetailHookCreateArgs,),
                 },
@@ -190,9 +190,9 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_hook_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_hook_id': 'secretHookId',
@@ -247,9 +247,9 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_hook_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_hook_id': 'secretHookId',
@@ -304,9 +304,9 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_hook_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_hook_id': 'secretHookId',
@@ -359,7 +359,7 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_id': 'secretId',
@@ -410,7 +410,7 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_id': 'secretId',
@@ -463,9 +463,9 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'script_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'script_id': 'scriptId',
@@ -520,9 +520,9 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'script_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'script_id': 'scriptId',
@@ -578,9 +578,9 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_hook_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_detail_hook_update_args':
                         (SecretDetailHookUpdateArgs,),
                 },
@@ -641,9 +641,9 @@ class SecretHooksApi(object):
                 },
                 'openapi_types': {
                     'secret_hook_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_detail_hook_update_args':
                         (SecretDetailHookUpdateArgs,),
                 },
@@ -685,7 +685,7 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_id (int): secretId
 
         Keyword Args:
             secret_detail_hook_create_args (SecretDetailHookCreateArgs): args. [optional]
@@ -769,7 +769,7 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_id (int): secretId
 
         Keyword Args:
             secret_detail_hook_create_args (SecretDetailHookCreateArgs): args. [optional]
@@ -854,8 +854,8 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): secretHookId
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_hook_id (int): secretHookId
+            secret_id (int): secretId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -941,8 +941,8 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): secretHookId
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_hook_id (int): secretHookId
+            secret_id (int): secretId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1028,8 +1028,8 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): secretHookId
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_hook_id (int): secretHookId
+            secret_id (int): secretId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1114,7 +1114,7 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_id (int): secretId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1197,7 +1197,7 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_id (int): secretId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1281,8 +1281,8 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            script_id (bool, date, datetime, dict, float, int, list, str, none_type): scriptId
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            script_id (int): scriptId
+            secret_id (int): secretId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1368,8 +1368,8 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            script_id (bool, date, datetime, dict, float, int, list, str, none_type): scriptId
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            script_id (int): scriptId
+            secret_id (int): secretId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1455,8 +1455,8 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): secretHookId
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_hook_id (int): secretHookId
+            secret_id (int): secretId
 
         Keyword Args:
             secret_detail_hook_update_args (SecretDetailHookUpdateArgs): args. [optional]
@@ -1543,8 +1543,8 @@ class SecretHooksApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): secretHookId
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_hook_id (int): secretHookId
+            secret_id (int): secretId
 
         Keyword Args:
             secret_detail_hook_update_args (SecretDetailHookUpdateArgs): args. [optional]

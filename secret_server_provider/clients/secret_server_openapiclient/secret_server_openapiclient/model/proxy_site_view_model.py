@@ -57,10 +57,8 @@ class ProxySiteViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,34 +66,31 @@ class ProxySiteViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'enable_rdp_proxy': (bool,),  # noqa: E501
-            'enable_ssh_proxy': (bool,),  # noqa: E501
-            'rdp_proxy_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rdp_proxy_port_inherited': (bool,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_jumpbox_available_port_range': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_port_inherited': (bool,),  # noqa: E501
+            'enable_rdp_proxy': (bool, none_type,),  # noqa: E501
+            'enable_ssh_proxy': (bool, none_type,),  # noqa: E501
+            'rdp_proxy_port': (int, none_type,),  # noqa: E501
+            'rdp_proxy_port_inherited': (bool, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'site_name': (str, none_type,),  # noqa: E501
+            'ssh_jumpbox_available_port_range': (str, none_type,),  # noqa: E501
+            'ssh_proxy_port': (int, none_type,),  # noqa: E501
+            'ssh_proxy_port_inherited': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -153,12 +148,12 @@ class ProxySiteViewModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             enable_rdp_proxy (bool): EnableRdpProxy. [optional]  # noqa: E501
             enable_ssh_proxy (bool): EnableSshProxy. [optional]  # noqa: E501
-            rdp_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): RdpProxyPort. [optional]  # noqa: E501
+            rdp_proxy_port (int): RdpProxyPort. [optional]  # noqa: E501
             rdp_proxy_port_inherited (bool): RdpProxyPortInherited. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): SiteName. [optional]  # noqa: E501
-            ssh_jumpbox_available_port_range (bool, date, datetime, dict, float, int, list, str, none_type): SshJumpboxAvailablePortRange. [optional]  # noqa: E501
-            ssh_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): SshProxyPort. [optional]  # noqa: E501
+            site_id (int): SiteId. [optional]  # noqa: E501
+            site_name (str): SiteName. [optional]  # noqa: E501
+            ssh_jumpbox_available_port_range (str): SshJumpboxAvailablePortRange. [optional]  # noqa: E501
+            ssh_proxy_port (int): SshProxyPort. [optional]  # noqa: E501
             ssh_proxy_port_inherited (bool): SshProxyPortInherited. [optional]  # noqa: E501
         """
 
@@ -247,12 +242,12 @@ class ProxySiteViewModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             enable_rdp_proxy (bool): EnableRdpProxy. [optional]  # noqa: E501
             enable_ssh_proxy (bool): EnableSshProxy. [optional]  # noqa: E501
-            rdp_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): RdpProxyPort. [optional]  # noqa: E501
+            rdp_proxy_port (int): RdpProxyPort. [optional]  # noqa: E501
             rdp_proxy_port_inherited (bool): RdpProxyPortInherited. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): SiteName. [optional]  # noqa: E501
-            ssh_jumpbox_available_port_range (bool, date, datetime, dict, float, int, list, str, none_type): SshJumpboxAvailablePortRange. [optional]  # noqa: E501
-            ssh_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): SshProxyPort. [optional]  # noqa: E501
+            site_id (int): SiteId. [optional]  # noqa: E501
+            site_name (str): SiteName. [optional]  # noqa: E501
+            ssh_jumpbox_available_port_range (str): SshJumpboxAvailablePortRange. [optional]  # noqa: E501
+            ssh_proxy_port (int): SshProxyPort. [optional]  # noqa: E501
             ssh_proxy_port_inherited (bool): SshProxyPortInherited. [optional]  # noqa: E501
         """
 

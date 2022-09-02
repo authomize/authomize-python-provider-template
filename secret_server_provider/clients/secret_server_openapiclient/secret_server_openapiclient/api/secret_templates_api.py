@@ -89,7 +89,6 @@ class SecretTemplatesApi(object):
                 ],
                 'required': [],
                 'nullable': [
-                    'dictionary_name',
                 ],
                 'enum': [
                 ],
@@ -103,7 +102,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'dictionary_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'file':
                         (file,),
                 },
@@ -161,7 +160,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_copy_args':
                         (SecretTemplateCopyArgs,),
                 },
@@ -218,7 +217,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_field_create_args':
                         (SecretTemplateFieldCreateArgs,),
                 },
@@ -277,9 +276,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'extended_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_extended_mapping_create_args':
                         (SecretTemplateExtendedMappingCreateArgs,),
                 },
@@ -340,9 +339,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'launcher_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_launcher_create_args':
                         (SecretTemplateLauncherCreateArgs,),
                 },
@@ -451,7 +450,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_field_create_args':
                         (SecretFieldCreateArgs,),
                 },
@@ -509,9 +508,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'extended_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'extended_type_id': 'extendedTypeId',
@@ -564,7 +563,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -617,9 +616,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'launcher_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'launcher_type_id': 'launcherTypeId',
@@ -672,7 +671,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'template_field_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'template_field_id': 'templateFieldId',
@@ -723,7 +722,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -744,7 +743,7 @@ class SecretTemplatesApi(object):
         )
         self.secret_templates_service_generate_password_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -774,7 +773,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secretfield_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secretfield_id': 'secretfieldId',
@@ -869,7 +868,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -922,9 +921,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'extended_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'extended_type_id': 'extendedTypeId',
@@ -979,9 +978,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'launcher_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'launcher_type_id': 'launcherTypeId',
@@ -1034,7 +1033,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_template_id': 'secretTemplateId',
@@ -1085,7 +1084,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secret_field_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_field_id': 'secretFieldId',
@@ -1134,7 +1133,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'folder_id': 'folderId',
@@ -1185,7 +1184,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_template_id': 'secretTemplateId',
@@ -1287,7 +1286,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_password_type_patch_args':
                         (SecretTemplatePasswordTypePatchArgs,),
                 },
@@ -1344,7 +1343,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secret_template_field_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_field_patch_args':
                         (SecretFieldPatchArgs,),
                 },
@@ -1401,7 +1400,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_detail_patch_args':
                         (SecretTemplateDetailPatchArgs,),
                 },
@@ -1458,7 +1457,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_field_update_args':
                         (SecretTemplateFieldUpdateArgs,),
                 },
@@ -1524,19 +1523,19 @@ class SecretTemplatesApi(object):
                     'filter_include_secret_count':
                         (bool,),
                     'filter_password_type_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_inactive': 'filter.includeInactive',
@@ -1609,21 +1608,21 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'filter_application_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_include_system_launchers':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_application_name': 'filter.applicationName',
@@ -1691,17 +1690,17 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'filter_secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_secret_template_id': 'filter.secretTemplateId',
@@ -1764,15 +1763,15 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'skip': 'skip',
@@ -1834,17 +1833,17 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'filter_secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_secret_template_id': 'filter.secretTemplateId',
@@ -1911,17 +1910,17 @@ class SecretTemplatesApi(object):
                     'filter_include_inactive':
                         (bool,),
                     'filter_secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_inactive': 'filter.includeInactive',
@@ -1985,7 +1984,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_field_sort_args':
                         (SecretTemplateFieldSortArgs,),
                 },
@@ -2043,9 +2042,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'extended_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'extended_type_id': 'extendedTypeId',
@@ -2100,9 +2099,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'launcher_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'launcher_type_id': 'launcherTypeId',
@@ -2186,8 +2185,6 @@ class SecretTemplatesApi(object):
                 ],
                 'required': [],
                 'nullable': [
-                    'dictionary_id',
-                    'dictionary_name',
                 ],
                 'enum': [
                 ],
@@ -2201,9 +2198,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'dictionary_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'dictionary_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'file':
                         (file,),
                 },
@@ -2265,9 +2262,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'extended_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_extended_mapping_update_args':
                         (SecretTemplateExtendedMappingUpdateArgs,),
                 },
@@ -2328,9 +2325,9 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'launcher_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_launcher_update_args':
                         (SecretTemplateLauncherUpdateArgs,),
                 },
@@ -2389,7 +2386,7 @@ class SecretTemplatesApi(object):
                 },
                 'openapi_types': {
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_template_password_type_update_args':
                         (SecretTemplatePasswordTypeUpdateArgs,),
                 },
@@ -2429,7 +2426,7 @@ class SecretTemplatesApi(object):
 
 
         Keyword Args:
-            dictionary_name (bool, date, datetime, dict, float, int, list, str, none_type): Dictionary Name. [optional]
+            dictionary_name (str): Dictionary Name. [optional]
             file (file): Uploaded file. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -2509,7 +2506,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID
+            id (int): Secret template ID
 
         Keyword Args:
             secret_template_copy_args (SecretTemplateCopyArgs): args. [optional]
@@ -2593,7 +2590,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): templateId
+            template_id (int): templateId
 
         Keyword Args:
             secret_template_field_create_args (SecretTemplateFieldCreateArgs): Secret Template Field creation options. [optional]
@@ -2678,8 +2675,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): extendedTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            extended_type_id (int): extendedTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             secret_template_extended_mapping_create_args (SecretTemplateExtendedMappingCreateArgs): args. [optional]
@@ -2766,8 +2763,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): launcherTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            launcher_type_id (int): launcherTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             secret_template_launcher_create_args (SecretTemplateLauncherCreateArgs): args. [optional]
@@ -2932,7 +2929,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             secret_field_create_args (SecretFieldCreateArgs): args. [optional]
@@ -3017,8 +3014,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): extendedTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            extended_type_id (int): extendedTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3103,7 +3100,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3187,8 +3184,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): launcherTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            launcher_type_id (int): launcherTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3273,7 +3270,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            template_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Field to disable
+            template_field_id (int): Secret Template Field to disable
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3356,7 +3353,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID
+            id (int): Secret template ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3439,7 +3436,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secretfield_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret field Id
+            secretfield_id (int): Secret field Id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3474,7 +3471,7 @@ class SecretTemplatesApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -3600,7 +3597,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3684,8 +3681,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): extendedTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            extended_type_id (int): extendedTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3771,8 +3768,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): launcherTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            launcher_type_id (int): launcherTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3857,7 +3854,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3940,7 +3937,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): secretFieldId
+            secret_field_id (int): secretFieldId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4023,7 +4020,7 @@ class SecretTemplatesApi(object):
 
 
         Keyword Args:
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): folderId. [optional]
+            folder_id (int): folderId. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4102,7 +4099,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4264,7 +4261,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             secret_template_password_type_patch_args (SecretTemplatePasswordTypePatchArgs): args. [optional]
@@ -4348,7 +4345,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_template_field_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateFieldId
+            secret_template_field_id (int): secretTemplateFieldId
 
         Keyword Args:
             secret_field_patch_args (SecretFieldPatchArgs): args. [optional]
@@ -4432,7 +4429,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             secret_template_detail_patch_args (SecretTemplateDetailPatchArgs): args. [optional]
@@ -4516,7 +4513,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template ID
+            template_id (int): Secret Template ID
 
         Keyword Args:
             secret_template_field_update_args (SecretTemplateFieldUpdateArgs): Secret Template Options. [optional]
@@ -4602,13 +4599,13 @@ class SecretTemplatesApi(object):
         Keyword Args:
             filter_include_inactive (bool): Whether to include inactive secret templates in the results. [optional]
             filter_include_secret_count (bool): Whether to populate Secret count in the results. [optional]
-            filter_password_type_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): List of Password Type Ids. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_password_type_ids ([int]): List of Password Type Ids. [optional]
+            filter_search_text (str): Search text. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4687,14 +4684,14 @@ class SecretTemplatesApi(object):
 
 
         Keyword Args:
-            filter_application_name (bool, date, datetime, dict, float, int, list, str, none_type): Application name. [optional]
+            filter_application_name (str): Application name. [optional]
             filter_include_inactive (bool): Include inactive launcher types. [optional]
             filter_include_system_launchers (bool): Include system launcher types. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4773,12 +4770,12 @@ class SecretTemplatesApi(object):
 
 
         Keyword Args:
-            filter_secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretTemplateId. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_secret_template_id (int): SecretTemplateId. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4857,11 +4854,11 @@ class SecretTemplatesApi(object):
 
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4940,12 +4937,12 @@ class SecretTemplatesApi(object):
 
 
         Keyword Args:
-            filter_secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretTemplateId. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_secret_template_id (int): SecretTemplateId. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5025,12 +5022,12 @@ class SecretTemplatesApi(object):
 
         Keyword Args:
             filter_include_inactive (bool): Whether to include inactive secret template fields in the results. [optional]
-            filter_secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Id to filter by. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_secret_template_id (int): Secret Template Id to filter by. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5109,7 +5106,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             secret_template_field_sort_args (SecretTemplateFieldSortArgs): args. [optional]
@@ -5194,8 +5191,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): extendedTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            extended_type_id (int): extendedTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -5281,8 +5278,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): launcherTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            launcher_type_id (int): launcherTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -5445,8 +5442,8 @@ class SecretTemplatesApi(object):
 
 
         Keyword Args:
-            dictionary_id (bool, date, datetime, dict, float, int, list, str, none_type): Dictionary ID to Update. [optional]
-            dictionary_name (bool, date, datetime, dict, float, int, list, str, none_type): Dictionary Name. [optional]
+            dictionary_id (int): Dictionary ID to Update. [optional]
+            dictionary_name (str): Dictionary Name. [optional]
             file (file): Uploaded file. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -5527,8 +5524,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): extendedTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            extended_type_id (int): extendedTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             secret_template_extended_mapping_update_args (SecretTemplateExtendedMappingUpdateArgs): args. [optional]
@@ -5615,8 +5612,8 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): launcherTypeId
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): secretTemplateId
+            launcher_type_id (int): launcherTypeId
+            secret_template_id (int): secretTemplateId
 
         Keyword Args:
             secret_template_launcher_update_args (SecretTemplateLauncherUpdateArgs): args. [optional]
@@ -5702,7 +5699,7 @@ class SecretTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID
+            template_id (int): Secret template ID
 
         Keyword Args:
             secret_template_password_type_update_args (SecretTemplatePasswordTypeUpdateArgs): args. [optional]

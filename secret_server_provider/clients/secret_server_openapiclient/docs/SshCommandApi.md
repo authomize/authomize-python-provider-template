@@ -55,10 +55,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = ssh_command_api.SshCommandApi(api_client)
     ssh_command_create_args = SshCommandCreateArgs(
         data=SshCommandCreateModel(
-            command=None,
+            command="command_example",
             command_permission_type=CommandPermissionType("{}"),
-            name=None,
-            ssh_command_guid=None,
+            name="name_example",
+            ssh_command_guid="ssh_command_guid_example",
         ),
     ) # SshCommandCreateArgs | SSH Command add options (optional)
 
@@ -145,7 +145,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_command_api.SshCommandApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | SSH Command ID
+    id = 1 # int | SSH Command ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -161,7 +161,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SSH Command ID |
+ **id** | **int**| SSH Command ID |
 
 ### Return type
 
@@ -309,13 +309,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_command_api.SshCommandApi(api_client)
-    filter_command_permission_type = None # bool, date, datetime, dict, float, int, list, str, none_type | CommandPermissionType (optional)
-    filter_name_or_command = None # bool, date, datetime, dict, float, int, list, str, none_type | NameOrCommand (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_command_permission_type = "filter.commandPermissionType_example" # str | CommandPermissionType (optional)
+    filter_name_or_command = "filter.nameOrCommand_example" # str | NameOrCommand (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -332,13 +332,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_command_permission_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| CommandPermissionType | [optional]
- **filter_name_or_command** | **bool, date, datetime, dict, float, int, list, str, none_type**| NameOrCommand | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_command_permission_type** | **str**| CommandPermissionType | [optional]
+ **filter_name_or_command** | **str**| NameOrCommand | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -407,23 +407,23 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_command_api.SshCommandApi(api_client)
-    ssh_command_id = None # bool, date, datetime, dict, float, int, list, str, none_type | sshCommandId
+    ssh_command_id = "sshCommandId_example" # str | sshCommandId
     ssh_command_patch_args = SshCommandPatchArgs(
         data=SshCommandPatchModel(
             command=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             sort_order=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
-            ssh_command_guid=None,
-            ssh_command_id=None,
+            ssh_command_guid="ssh_command_guid_example",
+            ssh_command_id=1,
         ),
     ) # SshCommandPatchArgs | SSH Command Update Options (optional)
 
@@ -450,7 +450,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ssh_command_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| sshCommandId |
+ **ssh_command_id** | **str**| sshCommandId |
  **ssh_command_patch_args** | [**SshCommandPatchArgs**](SshCommandPatchArgs.md)| SSH Command Update Options | [optional]
 
 ### Return type

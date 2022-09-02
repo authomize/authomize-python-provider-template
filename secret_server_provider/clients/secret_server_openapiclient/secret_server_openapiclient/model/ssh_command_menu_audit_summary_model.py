@@ -57,10 +57,8 @@ class SshCommandMenuAuditSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class SshCommandMenuAuditSummaryModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'action': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'date_recorded': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'new_commands': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'old_commands': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_command_menu_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'action': (str, none_type,),  # noqa: E501
+            'date_recorded': (datetime, none_type,),  # noqa: E501
+            'new_commands': (str, none_type,),  # noqa: E501
+            'notes': (str, none_type,),  # noqa: E501
+            'old_commands': (str, none_type,),  # noqa: E501
+            'ssh_command_menu_name': (str, none_type,),  # noqa: E501
+            'user_display_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,13 +142,13 @@ class SshCommandMenuAuditSummaryModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): The date of the change. [optional]  # noqa: E501
-            new_commands (bool, date, datetime, dict, float, int, list, str, none_type): New Commands. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
-            old_commands (bool, date, datetime, dict, float, int, list, str, none_type): Old Commands. [optional]  # noqa: E501
-            ssh_command_menu_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the command menu. [optional]  # noqa: E501
-            user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display name of the user making the change. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
+            date_recorded (datetime): The date of the change. [optional]  # noqa: E501
+            new_commands (str): New Commands. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
+            old_commands (str): Old Commands. [optional]  # noqa: E501
+            ssh_command_menu_name (str): The name of the command menu. [optional]  # noqa: E501
+            user_display_name (str): Display name of the user making the change. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,13 +234,13 @@ class SshCommandMenuAuditSummaryModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): The date of the change. [optional]  # noqa: E501
-            new_commands (bool, date, datetime, dict, float, int, list, str, none_type): New Commands. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
-            old_commands (bool, date, datetime, dict, float, int, list, str, none_type): Old Commands. [optional]  # noqa: E501
-            ssh_command_menu_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the command menu. [optional]  # noqa: E501
-            user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display name of the user making the change. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
+            date_recorded (datetime): The date of the change. [optional]  # noqa: E501
+            new_commands (str): New Commands. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
+            old_commands (str): Old Commands. [optional]  # noqa: E501
+            ssh_command_menu_name (str): The name of the command menu. [optional]  # noqa: E501
+            user_display_name (str): Display name of the user making the change. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -57,10 +57,8 @@ class TeamGroupMembershipModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class TeamGroupMembershipModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'group_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'team_group_membership_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'team_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'group_display_name': (str, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'team_group_membership_id': (int, none_type,),  # noqa: E501
+            'team_id': (int, none_type,),  # noqa: E501
+            'type': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class TeamGroupMembershipModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            group_display_name (bool, date, datetime, dict, float, int, list, str, none_type): GroupDisplayName. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): GroupId. [optional]  # noqa: E501
-            team_group_membership_id (bool, date, datetime, dict, float, int, list, str, none_type): TeamGroupMembershipId. [optional]  # noqa: E501
-            team_id (bool, date, datetime, dict, float, int, list, str, none_type): TeamId. [optional]  # noqa: E501
-            type (bool, date, datetime, dict, float, int, list, str, none_type): Type. [optional]  # noqa: E501
+            group_display_name (str): GroupDisplayName. [optional]  # noqa: E501
+            group_id (int): GroupId. [optional]  # noqa: E501
+            team_group_membership_id (int): TeamGroupMembershipId. [optional]  # noqa: E501
+            team_id (int): TeamId. [optional]  # noqa: E501
+            type (str): Type. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class TeamGroupMembershipModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            group_display_name (bool, date, datetime, dict, float, int, list, str, none_type): GroupDisplayName. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): GroupId. [optional]  # noqa: E501
-            team_group_membership_id (bool, date, datetime, dict, float, int, list, str, none_type): TeamGroupMembershipId. [optional]  # noqa: E501
-            team_id (bool, date, datetime, dict, float, int, list, str, none_type): TeamId. [optional]  # noqa: E501
-            type (bool, date, datetime, dict, float, int, list, str, none_type): Type. [optional]  # noqa: E501
+            group_display_name (str): GroupDisplayName. [optional]  # noqa: E501
+            group_id (int): GroupId. [optional]  # noqa: E501
+            team_group_membership_id (int): TeamGroupMembershipId. [optional]  # noqa: E501
+            team_id (int): TeamId. [optional]  # noqa: E501
+            type (str): Type. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -126,7 +126,7 @@ class FolderPermissionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'break_inheritance':
                         (bool,),
                 },
@@ -182,7 +182,7 @@ class FolderPermissionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'include_inactive':
                         (bool,),
                 },
@@ -251,21 +251,21 @@ class FolderPermissionsApi(object):
                     'filter_exclude_viewers':
                         (bool,),
                     'filter_folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_group_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_exclude_editors': 'filter.excludeEditors',
@@ -341,7 +341,7 @@ class FolderPermissionsApi(object):
                 },
                 'openapi_types': {
                     'folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'folder_id': 'folderId',
@@ -393,7 +393,7 @@ class FolderPermissionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'folder_permission_update_args':
                         (FolderPermissionUpdateArgs,),
                 },
@@ -512,7 +512,7 @@ class FolderPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder permission ID
+            id (int): Folder permission ID
 
         Keyword Args:
             break_inheritance (bool): Include to remove permission inheritance. [optional]
@@ -596,7 +596,7 @@ class FolderPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder permission ID
+            id (int): Folder permission ID
 
         Keyword Args:
             include_inactive (bool): Whether to include inactive folder permissions in the results. [optional]
@@ -683,14 +683,14 @@ class FolderPermissionsApi(object):
             filter_exclude_editors (bool): If populated with true, will filter editors from results. Will default to false. [optional]
             filter_exclude_owners (bool): If populated with true, will filter owners from results. Will default to false. [optional]
             filter_exclude_viewers (bool): If populated with true, will filter viewers from results. Will default to false. [optional]
-            filter_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Limit results to a certain folder. [optional]
-            filter_group_id (bool, date, datetime, dict, float, int, list, str, none_type): Limit results to a certain group. [optional]
-            filter_user_id (bool, date, datetime, dict, float, int, list, str, none_type): Limit results to a certain user. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_folder_id (int): Limit results to a certain folder. [optional]
+            filter_group_id (int): Limit results to a certain group. [optional]
+            filter_user_id (int): Limit results to a certain user. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -769,7 +769,7 @@ class FolderPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder for which to generate a permission stub
+            folder_id (int): Folder for which to generate a permission stub
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -852,7 +852,7 @@ class FolderPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder permission ID
+            id (int): Folder permission ID
 
         Keyword Args:
             folder_permission_update_args (FolderPermissionUpdateArgs): Folder permission update options. [optional]

@@ -61,10 +61,8 @@ class ReportCategoryPermissionsUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,28 +71,25 @@ class ReportCategoryPermissionsUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_remove_edit': (bool,),  # noqa: E501
-            'permissions': (UpdateFieldValueOfReportCategoryPermissionUpdateModelArray,),  # noqa: E501
+            'allow_remove_edit': (bool, none_type,),  # noqa: E501
+            'permissions': (UpdateFieldValueOfReportCategoryPermissionUpdateModelArray, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

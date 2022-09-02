@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **proxy_enabled** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 
 **require_approval_type** | [**ViewFieldValueOfSecretDetailApprovalType**](ViewFieldValueOfSecretDetailApprovalType.md) |  | [optional] 
 **requires_comment** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 
-**restricted_ssh_command_count** | **bool, date, datetime, dict, float, int, list, str, none_type** | RestrictedSshCommandCount | [optional] 
+**restricted_ssh_command_count** | **int** | RestrictedSshCommandCount | [optional] 
 **restrict_ssh_commands** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 
 **session_recording_enabled** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 
 **web_launcher_requires_incognito_mode** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 

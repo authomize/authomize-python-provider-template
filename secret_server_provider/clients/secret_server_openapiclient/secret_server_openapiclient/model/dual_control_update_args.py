@@ -61,10 +61,8 @@ class DualControlUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class DualControlUpdateArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'active': (bool,),  # noqa: E501
-            'dual_control_approval_groups': ([IDualControlApprovalGroup],),  # noqa: E501
-            'dual_control_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'id': (int,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'dual_control_approval_groups': ([IDualControlApprovalGroup], none_type,),  # noqa: E501
+            'dual_control_type_id': (int, none_type,),  # noqa: E501
+            'item_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -119,7 +114,7 @@ class DualControlUpdateArgs(ModelNormal):
         """DualControlUpdateArgs - a model defined in OpenAPI
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): App client ID. Must match ID in path
+            id (int): App client ID. Must match ID in path
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -154,8 +149,8 @@ class DualControlUpdateArgs(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
             dual_control_approval_groups ([IDualControlApprovalGroup]): Dual control approval groups. [optional]  # noqa: E501
-            dual_control_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Dual control type. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): ItemId. [optional]  # noqa: E501
+            dual_control_type_id (int): Dual control type. [optional]  # noqa: E501
+            item_id (int): ItemId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -212,7 +207,7 @@ class DualControlUpdateArgs(ModelNormal):
         """DualControlUpdateArgs - a model defined in OpenAPI
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): App client ID. Must match ID in path
+            id (int): App client ID. Must match ID in path
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -247,8 +242,8 @@ class DualControlUpdateArgs(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
             dual_control_approval_groups ([IDualControlApprovalGroup]): Dual control approval groups. [optional]  # noqa: E501
-            dual_control_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Dual control type. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): ItemId. [optional]  # noqa: E501
+            dual_control_type_id (int): Dual control type. [optional]  # noqa: E501
+            item_id (int): ItemId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

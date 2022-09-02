@@ -69,10 +69,8 @@ class ConfigurationLoginTwoFactorPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,33 +79,30 @@ class ConfigurationLoginTwoFactorPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_two_factor_remember_me': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'duo': (ConfigurationLoginTwoFactorDuoPatchModel,),  # noqa: E501
-            'open_id_connect': (ConfigurationLoginTwoFactorOpenIdConnectPatchModel,),  # noqa: E501
-            'radius': (ConfigurationLoginTwoFactorRadiusPatchModel,),  # noqa: E501
-            'require_two_factor_for_web_login': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'require_two_factor_for_web_services': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'two_factor_remember_me_time_out_days': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'allow_two_factor_remember_me': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'duo': (ConfigurationLoginTwoFactorDuoPatchModel, none_type,),  # noqa: E501
+            'open_id_connect': (ConfigurationLoginTwoFactorOpenIdConnectPatchModel, none_type,),  # noqa: E501
+            'radius': (ConfigurationLoginTwoFactorRadiusPatchModel, none_type,),  # noqa: E501
+            'require_two_factor_for_web_login': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'require_two_factor_for_web_services': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'two_factor_remember_me_time_out_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

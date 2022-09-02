@@ -135,11 +135,11 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'domain_identifier':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'group_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'domain_id': 'domainId',
@@ -238,7 +238,7 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -287,7 +287,7 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'domain_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'domain_type': 'domainType',
@@ -338,7 +338,7 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -394,21 +394,21 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'filter_end_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_start_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_end_date': 'filter.endDate',
@@ -518,7 +518,7 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'link_external_group_args':
                         (LinkExternalGroupArgs,),
                 },
@@ -625,7 +625,7 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'domain_patch_args':
                         (DomainPatchArgs,),
                 },
@@ -682,7 +682,7 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'ldap_sync_settings_patch_args':
                         (LdapSyncSettingsPatchArgs,),
                 },
@@ -739,9 +739,9 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'domain_id': 'domainId',
@@ -798,19 +798,19 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'filter_domain_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_include_inactive':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_domain_name': 'filter.domainName',
@@ -919,9 +919,9 @@ class DirectoryServicesApi(object):
                 },
                 'openapi_types': {
                     'domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'domain_id': 'domainId',
@@ -1037,11 +1037,11 @@ class DirectoryServicesApi(object):
         >>> result = thread.get()
 
         Args:
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): domainId
+            domain_id (int): domainId
 
         Keyword Args:
-            domain_identifier (bool, date, datetime, dict, float, int, list, str, none_type): The unique directory identifier for the group to be linked.  For example, this is ADGuid in Active Directory. [optional]
-            group_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the Group. [optional]
+            domain_identifier (str): The unique directory identifier for the group to be linked.  For example, this is ADGuid in Active Directory. [optional]
+            group_name (str): Name of the Group. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1200,7 +1200,7 @@ class DirectoryServicesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1283,7 +1283,7 @@ class DirectoryServicesApi(object):
 
 
         Keyword Args:
-            domain_type (bool, date, datetime, dict, float, int, list, str, none_type): domainType. [optional]
+            domain_type (str): domainType. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1362,7 +1362,7 @@ class DirectoryServicesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1445,14 +1445,14 @@ class DirectoryServicesApi(object):
 
 
         Keyword Args:
-            filter_end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): SearchText. [optional]
-            filter_start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_end_date (datetime): EndDate. [optional]
+            filter_search_text (str): SearchText. [optional]
+            filter_start_date (datetime): StartDate. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1609,7 +1609,7 @@ class DirectoryServicesApi(object):
         >>> result = thread.get()
 
         Args:
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): domainId
+            domain_id (int): domainId
 
         Keyword Args:
             link_external_group_args (LinkExternalGroupArgs): args. [optional]
@@ -1772,7 +1772,7 @@ class DirectoryServicesApi(object):
         >>> result = thread.get()
 
         Args:
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): domainId
+            domain_id (int): domainId
 
         Keyword Args:
             domain_patch_args (DomainPatchArgs): args. [optional]
@@ -1856,7 +1856,7 @@ class DirectoryServicesApi(object):
         >>> result = thread.get()
 
         Args:
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): domainId
+            domain_id (int): domainId
 
         Keyword Args:
             ldap_sync_settings_patch_args (LdapSyncSettingsPatchArgs): args. [optional]
@@ -1940,10 +1940,10 @@ class DirectoryServicesApi(object):
         >>> result = thread.get()
 
         Args:
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): domainId
+            domain_id (int): domainId
 
         Keyword Args:
-            search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. Use * for wildcards, ex: Admin*. Leave empty to return all.. [optional]
+            search_text (str): Search text. Use * for wildcards, ex: Admin*. Leave empty to return all.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2024,13 +2024,13 @@ class DirectoryServicesApi(object):
 
 
         Keyword Args:
-            filter_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): DomainName. [optional]
+            filter_domain_name (str): DomainName. [optional]
             filter_include_inactive (bool): IncludeInactive. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2188,8 +2188,8 @@ class DirectoryServicesApi(object):
         >>> result = thread.get()
 
         Args:
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): domainId
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): groupId
+            domain_id (int): domainId
+            group_id (int): groupId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

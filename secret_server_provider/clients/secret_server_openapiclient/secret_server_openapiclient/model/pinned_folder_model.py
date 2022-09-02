@@ -57,10 +57,8 @@ class PinnedFolderModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class PinnedFolderModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active_filter': (bool,),  # noqa: E501
-            'create_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'include_subfolders': (bool,),  # noqa: E501
-            'last_viewed': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'search_text': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'selected_folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'show_cards': (bool,),  # noqa: E501
-            'template_filter': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active_filter': (bool, none_type,),  # noqa: E501
+            'create_date': (datetime, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'include_subfolders': (bool, none_type,),  # noqa: E501
+            'last_viewed': (datetime, none_type,),  # noqa: E501
+            'search_text': (str, none_type,),  # noqa: E501
+            'selected_folder_id': (int, none_type,),  # noqa: E501
+            'show_cards': (bool, none_type,),  # noqa: E501
+            'template_filter': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -154,15 +149,15 @@ class PinnedFolderModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active_filter (bool): Active Filter. [optional]  # noqa: E501
-            create_date (bool, date, datetime, dict, float, int, list, str, none_type): When was this folder pinned. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name to show.  This will be the folder name or an overridable user defined name for this pin. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The pinned folder ID.  This folder will be the root of the tree. [optional]  # noqa: E501
+            create_date (datetime): When was this folder pinned. [optional]  # noqa: E501
+            display_name (str): The display name to show.  This will be the folder name or an overridable user defined name for this pin. [optional]  # noqa: E501
+            folder_id (int): The pinned folder ID.  This folder will be the root of the tree. [optional]  # noqa: E501
             include_subfolders (bool): Include Subfolders. [optional]  # noqa: E501
-            last_viewed (bool, date, datetime, dict, float, int, list, str, none_type): When was this folder last viewed. [optional]  # noqa: E501
-            search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search Text. [optional]  # noqa: E501
-            selected_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Expand this folder in the tree. [optional]  # noqa: E501
+            last_viewed (datetime): When was this folder last viewed. [optional]  # noqa: E501
+            search_text (str): Search Text. [optional]  # noqa: E501
+            selected_folder_id (int): Expand this folder in the tree. [optional]  # noqa: E501
             show_cards (bool): Show Cards. [optional]  # noqa: E501
-            template_filter (bool, date, datetime, dict, float, int, list, str, none_type): Template Filter. [optional]  # noqa: E501
+            template_filter (int): Template Filter. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -249,15 +244,15 @@ class PinnedFolderModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active_filter (bool): Active Filter. [optional]  # noqa: E501
-            create_date (bool, date, datetime, dict, float, int, list, str, none_type): When was this folder pinned. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name to show.  This will be the folder name or an overridable user defined name for this pin. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The pinned folder ID.  This folder will be the root of the tree. [optional]  # noqa: E501
+            create_date (datetime): When was this folder pinned. [optional]  # noqa: E501
+            display_name (str): The display name to show.  This will be the folder name or an overridable user defined name for this pin. [optional]  # noqa: E501
+            folder_id (int): The pinned folder ID.  This folder will be the root of the tree. [optional]  # noqa: E501
             include_subfolders (bool): Include Subfolders. [optional]  # noqa: E501
-            last_viewed (bool, date, datetime, dict, float, int, list, str, none_type): When was this folder last viewed. [optional]  # noqa: E501
-            search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search Text. [optional]  # noqa: E501
-            selected_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Expand this folder in the tree. [optional]  # noqa: E501
+            last_viewed (datetime): When was this folder last viewed. [optional]  # noqa: E501
+            search_text (str): Search Text. [optional]  # noqa: E501
+            selected_folder_id (int): Expand this folder in the tree. [optional]  # noqa: E501
             show_cards (bool): Show Cards. [optional]  # noqa: E501
-            template_filter (bool, date, datetime, dict, float, int, list, str, none_type): Template Filter. [optional]  # noqa: E501
+            template_filter (int): Template Filter. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -67,10 +67,8 @@ class ConfigurationSecurityPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,47 +77,44 @@ class ConfigurationSecurityPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_web_service_http_get': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'audit_tls_errors': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'audit_tls_errors_debug': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'certificate_chain_policy_options': (UpdateFieldValueOfString,),  # noqa: E501
-            'client_certificate_ids': (UpdateFieldValueOfString,),  # noqa: E501
-            'database_integrity_monitoring_symmetric_key': (UpdateFieldValueOfString,),  # noqa: E501
-            'enable_database_integrity_monitoring': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_file_restrictions': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_frame_blocking': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_hsts': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_secret_erase': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'file_extension_restrictions': (UpdateFieldValueOfString,),  # noqa: E501
-            'fips_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'force_https': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'hide_version_number': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'hsts_max_age': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'ignore_certificate_revocation_failures': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'maximum_file_size_bytes': (UpdateFieldValueOfString,),  # noqa: E501
-            'maximum_file_size_supported': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'secret_erase_workflow': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'web_password_filler_requires_full_domain_match': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'allow_web_service_http_get': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'audit_tls_errors': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'audit_tls_errors_debug': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'certificate_chain_policy_options': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'client_certificate_ids': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'database_integrity_monitoring_symmetric_key': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'enable_database_integrity_monitoring': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_file_restrictions': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_frame_blocking': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_hsts': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_secret_erase': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'file_extension_restrictions': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'fips_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'force_https': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'hide_version_number': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'hsts_max_age': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'ignore_certificate_revocation_failures': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'maximum_file_size_bytes': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'maximum_file_size_supported': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'secret_erase_workflow': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'web_password_filler_requires_full_domain_match': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

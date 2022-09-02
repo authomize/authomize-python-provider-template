@@ -196,7 +196,7 @@ class DistributedEngineApi(object):
                     'is64_bit':
                         (bool,),
                     'site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'is64_bit': 'is64Bit',
@@ -249,7 +249,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -352,23 +352,23 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'is_exporting':
                         (bool,),
                     'filter_engine_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_search_term':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'site_id': 'siteId',
@@ -435,7 +435,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'engine_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'engine_id': 'engineId',
@@ -486,7 +486,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'site_id': 'siteId',
@@ -537,7 +537,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -588,7 +588,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -645,19 +645,19 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -720,7 +720,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -771,7 +771,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'site_connector_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'site_connector_id': 'siteConnectorId',
@@ -820,7 +820,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'queue_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'queue_type': 'queueType',
@@ -966,7 +966,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'engine_settings_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'engine_settings_update_args':
                         (EngineSettingsUpdateArgs,),
                 },
@@ -1023,7 +1023,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'engine_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'engine_settings_update_args':
                         (EngineSettingsUpdateArgs,),
                 },
@@ -1080,7 +1080,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'site_update_args':
                         (SiteUpdateArgs,),
                 },
@@ -1137,7 +1137,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'reassign_secrets_args':
                         (ReassignSecretsArgs,),
                 },
@@ -1200,25 +1200,25 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'filter_activation_status':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_connection_status':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_friendly_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_only_include_requiring_action':
                         (bool,),
                     'filter_site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_activation_status': 'filter.activationStatus',
@@ -1292,15 +1292,15 @@ class DistributedEngineApi(object):
                     'filter_include_inactive':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_inactive': 'filter.includeInactive',
@@ -1368,21 +1368,21 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_engine_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_search_term':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1460,19 +1460,19 @@ class DistributedEngineApi(object):
                     'filter_only_include_sites_that_can_add_new_engines':
                         (bool,),
                     'filter_site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_site_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_inactive': 'filter.includeInactive',
@@ -1592,7 +1592,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'site_connector_update_args':
                         (SiteConnectorUpdateArgs,),
                 },
@@ -1649,7 +1649,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'site_connectivity_validation_args':
                         (SiteConnectivityValidationArgs,),
                 },
@@ -1705,7 +1705,7 @@ class DistributedEngineApi(object):
                 },
                 'openapi_types': {
                     'site_connector_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'site_connector_id': 'siteConnectorId',
@@ -1899,7 +1899,7 @@ class DistributedEngineApi(object):
 
         Keyword Args:
             is64_bit (bool): is64Bit. [optional]
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): siteId. [optional]
+            site_id (int): siteId. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1978,7 +1978,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2139,17 +2139,17 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): siteId
+            site_id (int): siteId
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            filter_engine_id (bool, date, datetime, dict, float, int, list, str, none_type): EngineId. [optional]
-            filter_search_term (bool, date, datetime, dict, float, int, list, str, none_type): SearchTerm. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_engine_id (int): EngineId. [optional]
+            filter_search_term (str): SearchTerm. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2230,7 +2230,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            engine_id (bool, date, datetime, dict, float, int, list, str, none_type): engineId
+            engine_id (int): engineId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2313,7 +2313,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): siteId
+            site_id (int): siteId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2396,7 +2396,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2479,7 +2479,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2562,15 +2562,15 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2651,7 +2651,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2734,7 +2734,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): siteConnectorId
+            site_connector_id (int): siteConnectorId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2817,7 +2817,7 @@ class DistributedEngineApi(object):
 
 
         Keyword Args:
-            queue_type (bool, date, datetime, dict, float, int, list, str, none_type): QueueType. [optional]
+            queue_type (str): QueueType. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3053,7 +3053,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            engine_settings_id (bool, date, datetime, dict, float, int, list, str, none_type): engineSettingsId
+            engine_settings_id (int): engineSettingsId
 
         Keyword Args:
             engine_settings_update_args (EngineSettingsUpdateArgs): args. [optional]
@@ -3137,7 +3137,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            engine_id (bool, date, datetime, dict, float, int, list, str, none_type): engineId
+            engine_id (int): engineId
 
         Keyword Args:
             engine_settings_update_args (EngineSettingsUpdateArgs): args. [optional]
@@ -3221,7 +3221,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             site_update_args (SiteUpdateArgs): args. [optional]
@@ -3305,7 +3305,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             reassign_secrets_args (ReassignSecretsArgs): args. [optional]
@@ -3389,16 +3389,16 @@ class DistributedEngineApi(object):
 
 
         Keyword Args:
-            filter_activation_status (bool, date, datetime, dict, float, int, list, str, none_type): Only return engines with this activation status. [optional]
-            filter_connection_status (bool, date, datetime, dict, float, int, list, str, none_type): Only return engines with this connection status. [optional]
-            filter_friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): Only return engines with a friendly name that contains this text. [optional]
+            filter_activation_status (str): Only return engines with this activation status. [optional]
+            filter_connection_status (str): Only return engines with this connection status. [optional]
+            filter_friendly_name (str): Only return engines with a friendly name that contains this text. [optional]
             filter_only_include_requiring_action (bool): Only include engines that require action.  For example, pending but not deleted or no site assigned.. [optional]
-            filter_site_id (bool, date, datetime, dict, float, int, list, str, none_type): Only return engines for this site. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_site_id (int): Only return engines for this site. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3478,11 +3478,11 @@ class DistributedEngineApi(object):
 
         Keyword Args:
             filter_include_inactive (bool): IncludeInactive. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3561,16 +3561,16 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
-            filter_engine_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter by a specific engine ID. [optional]
-            filter_search_term (bool, date, datetime, dict, float, int, list, str, none_type): Term used to search the Engine Name and/or the Message of the Site Log. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_engine_id (int): Filter by a specific engine ID. [optional]
+            filter_search_term (str): Term used to search the Engine Name and/or the Message of the Site Log. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3654,13 +3654,13 @@ class DistributedEngineApi(object):
             filter_include_inactive (bool): Include inactive sites. [optional]
             filter_include_site_metrics (bool): When true metrics are included for returned sites such as how many inactive or active sites. [optional]
             filter_only_include_sites_that_can_add_new_engines (bool): Only returns sites that can have new engines added. [optional]
-            filter_site_id (bool, date, datetime, dict, float, int, list, str, none_type): Return the site with this ID. [optional]
-            filter_site_name (bool, date, datetime, dict, float, int, list, str, none_type): Return sites that partially match this name. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_site_id (int): Return the site with this ID. [optional]
+            filter_site_name (str): Return sites that partially match this name. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3818,7 +3818,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             site_connector_update_args (SiteConnectorUpdateArgs): args. [optional]
@@ -3902,7 +3902,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site
+            site_id (int): Id of Site
 
         Keyword Args:
             site_connectivity_validation_args (SiteConnectivityValidationArgs): args. [optional]
@@ -3986,7 +3986,7 @@ class DistributedEngineApi(object):
         >>> result = thread.get()
 
         Args:
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): siteConnectorId
+            site_connector_id (int): siteConnectorId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

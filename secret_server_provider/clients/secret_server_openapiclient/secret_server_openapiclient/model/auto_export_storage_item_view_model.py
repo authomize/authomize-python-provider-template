@@ -57,10 +57,8 @@ class AutoExportStorageItemViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class AutoExportStorageItemViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'auto_export_configuration_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'can_download': (bool,),  # noqa: E501
-            'filename': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'storage_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'auto_export_configuration_id': (int, none_type,),  # noqa: E501
+            'can_download': (bool, none_type,),  # noqa: E501
+            'filename': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'storage_date': (datetime, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class AutoExportStorageItemViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            auto_export_configuration_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID for the configuration this item used.. [optional]  # noqa: E501
+            auto_export_configuration_id (int): The ID for the configuration this item used.. [optional]  # noqa: E501
             can_download (bool): Whether the user can download this item.. [optional]  # noqa: E501
-            filename (bool, date, datetime, dict, float, int, list, str, none_type): The name of the file stored.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The ID for this item in storage.. [optional]  # noqa: E501
-            storage_date (bool, date, datetime, dict, float, int, list, str, none_type): The date and time this item was stored.. [optional]  # noqa: E501
+            filename (str): The name of the file stored.. [optional]  # noqa: E501
+            id (int): The ID for this item in storage.. [optional]  # noqa: E501
+            storage_date (datetime): The date and time this item was stored.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class AutoExportStorageItemViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            auto_export_configuration_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID for the configuration this item used.. [optional]  # noqa: E501
+            auto_export_configuration_id (int): The ID for the configuration this item used.. [optional]  # noqa: E501
             can_download (bool): Whether the user can download this item.. [optional]  # noqa: E501
-            filename (bool, date, datetime, dict, float, int, list, str, none_type): The name of the file stored.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The ID for this item in storage.. [optional]  # noqa: E501
-            storage_date (bool, date, datetime, dict, float, int, list, str, none_type): The date and time this item was stored.. [optional]  # noqa: E501
+            filename (str): The name of the file stored.. [optional]  # noqa: E501
+            id (int): The ID for this item in storage.. [optional]  # noqa: E501
+            storage_date (datetime): The date and time this item was stored.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

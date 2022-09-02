@@ -61,10 +61,8 @@ class UserTeamSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,33 +71,30 @@ class UserTeamSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_directly_assigned': (bool,),  # noqa: E501
-            'team_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'team_group_memberships': ([TeamGroupSummary],),  # noqa: E501
-            'team_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'team_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'is_directly_assigned': (bool, none_type,),  # noqa: E501
+            'team_description': (str, none_type,),  # noqa: E501
+            'team_group_memberships': ([TeamGroupSummary], none_type,),  # noqa: E501
+            'team_id': (int, none_type,),  # noqa: E501
+            'team_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -154,12 +149,12 @@ class UserTeamSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Team Active State. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Team Domain Id. [optional]  # noqa: E501
+            domain_id (int): Team Domain Id. [optional]  # noqa: E501
             is_directly_assigned (bool): If the user is directly assigned to the team. [optional]  # noqa: E501
-            team_description (bool, date, datetime, dict, float, int, list, str, none_type): Team Description. [optional]  # noqa: E501
+            team_description (str): Team Description. [optional]  # noqa: E501
             team_group_memberships ([TeamGroupSummary]): The memberships a user has to a team.. [optional]  # noqa: E501
-            team_id (bool, date, datetime, dict, float, int, list, str, none_type): Team Id. [optional]  # noqa: E501
-            team_name (bool, date, datetime, dict, float, int, list, str, none_type): Team Name. [optional]  # noqa: E501
+            team_id (int): Team Id. [optional]  # noqa: E501
+            team_name (str): Team Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -246,12 +241,12 @@ class UserTeamSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Team Active State. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Team Domain Id. [optional]  # noqa: E501
+            domain_id (int): Team Domain Id. [optional]  # noqa: E501
             is_directly_assigned (bool): If the user is directly assigned to the team. [optional]  # noqa: E501
-            team_description (bool, date, datetime, dict, float, int, list, str, none_type): Team Description. [optional]  # noqa: E501
+            team_description (str): Team Description. [optional]  # noqa: E501
             team_group_memberships ([TeamGroupSummary]): The memberships a user has to a team.. [optional]  # noqa: E501
-            team_id (bool, date, datetime, dict, float, int, list, str, none_type): Team Id. [optional]  # noqa: E501
-            team_name (bool, date, datetime, dict, float, int, list, str, none_type): Team Name. [optional]  # noqa: E501
+            team_id (int): Team Id. [optional]  # noqa: E501
+            team_name (str): Team Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

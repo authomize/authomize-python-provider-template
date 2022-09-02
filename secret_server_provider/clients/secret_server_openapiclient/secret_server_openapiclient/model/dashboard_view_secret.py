@@ -63,10 +63,8 @@ class DashboardViewSecret(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,39 +73,36 @@ class DashboardViewSecret(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'error_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'favorite': (bool,),  # noqa: E501
-            'has_launcher': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_totp_enabled': (bool,),  # noqa: E501
-            'items': ([DashboardViewSecretItem],),  # noqa: E501
-            'launchers': ([DashboardViewLauncherInfo],),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'show_view_button': (bool,),  # noqa: E501
-            'user_can_edit': (bool,),  # noqa: E501
-            'user_can_share': (bool,),  # noqa: E501
-            'user_can_view_audit': (bool,),  # noqa: E501
-            'uses_click_once': (bool,),  # noqa: E501
+            'error_message': (str, none_type,),  # noqa: E501
+            'favorite': (bool, none_type,),  # noqa: E501
+            'has_launcher': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_totp_enabled': (bool, none_type,),  # noqa: E501
+            'items': ([DashboardViewSecretItem], none_type,),  # noqa: E501
+            'launchers': ([DashboardViewLauncherInfo], none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'show_view_button': (bool, none_type,),  # noqa: E501
+            'user_can_edit': (bool, none_type,),  # noqa: E501
+            'user_can_share': (bool, none_type,),  # noqa: E501
+            'user_can_view_audit': (bool, none_type,),  # noqa: E501
+            'uses_click_once': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -167,14 +162,14 @@ class DashboardViewSecret(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): errorMessage. [optional]  # noqa: E501
+            error_message (str): errorMessage. [optional]  # noqa: E501
             favorite (bool): favorite. [optional]  # noqa: E501
             has_launcher (bool): hasLauncher. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id. [optional]  # noqa: E501
+            id (int): id. [optional]  # noqa: E501
             is_totp_enabled (bool): isTotpEnabled. [optional]  # noqa: E501
             items ([DashboardViewSecretItem]): items. [optional]  # noqa: E501
             launchers ([DashboardViewLauncherInfo]): launchers. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): secretName. [optional]  # noqa: E501
+            secret_name (str): secretName. [optional]  # noqa: E501
             show_view_button (bool): showViewButton. [optional]  # noqa: E501
             user_can_edit (bool): userCanEdit. [optional]  # noqa: E501
             user_can_share (bool): userCanShare. [optional]  # noqa: E501
@@ -265,14 +260,14 @@ class DashboardViewSecret(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): errorMessage. [optional]  # noqa: E501
+            error_message (str): errorMessage. [optional]  # noqa: E501
             favorite (bool): favorite. [optional]  # noqa: E501
             has_launcher (bool): hasLauncher. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id. [optional]  # noqa: E501
+            id (int): id. [optional]  # noqa: E501
             is_totp_enabled (bool): isTotpEnabled. [optional]  # noqa: E501
             items ([DashboardViewSecretItem]): items. [optional]  # noqa: E501
             launchers ([DashboardViewLauncherInfo]): launchers. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): secretName. [optional]  # noqa: E501
+            secret_name (str): secretName. [optional]  # noqa: E501
             show_view_button (bool): showViewButton. [optional]  # noqa: E501
             user_can_edit (bool): userCanEdit. [optional]  # noqa: E501
             user_can_share (bool): userCanShare. [optional]  # noqa: E501

@@ -57,10 +57,8 @@ class FolderPermissionModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,36 +66,33 @@ class FolderPermissionModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'folder_access_role_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_access_role_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'known_as': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_access_role_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_access_role_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'folder_access_role_id': (int, none_type,),  # noqa: E501
+            'folder_access_role_name': (str, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'group_name': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'known_as': (str, none_type,),  # noqa: E501
+            'secret_access_role_id': (int, none_type,),  # noqa: E501
+            'secret_access_role_name': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,17 +150,17 @@ class FolderPermissionModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder_access_role_id (bool, date, datetime, dict, float, int, list, str, none_type): Role ID granted on the folder. [optional]  # noqa: E501
-            folder_access_role_name (bool, date, datetime, dict, float, int, list, str, none_type): Role name granted on the folder. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID having permissions on the folder. [optional]  # noqa: E501
-            group_name (bool, date, datetime, dict, float, int, list, str, none_type): Group name having permissions on the folder. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder permission ID. [optional]  # noqa: E501
-            known_as (bool, date, datetime, dict, float, int, list, str, none_type): KnownAs. [optional]  # noqa: E501
-            secret_access_role_id (bool, date, datetime, dict, float, int, list, str, none_type): Role ID granted on secrets in the folder. [optional]  # noqa: E501
-            secret_access_role_name (bool, date, datetime, dict, float, int, list, str, none_type): Role name granted on secrets in the folder. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID having permissions on the folder. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name having permissions on the folder. [optional]  # noqa: E501
+            folder_access_role_id (int): Role ID granted on the folder. [optional]  # noqa: E501
+            folder_access_role_name (str): Role name granted on the folder. [optional]  # noqa: E501
+            folder_id (int): Folder ID. [optional]  # noqa: E501
+            group_id (int): Group ID having permissions on the folder. [optional]  # noqa: E501
+            group_name (str): Group name having permissions on the folder. [optional]  # noqa: E501
+            id (int): Folder permission ID. [optional]  # noqa: E501
+            known_as (str): KnownAs. [optional]  # noqa: E501
+            secret_access_role_id (int): Role ID granted on secrets in the folder. [optional]  # noqa: E501
+            secret_access_role_name (str): Role name granted on secrets in the folder. [optional]  # noqa: E501
+            user_id (int): User ID having permissions on the folder. [optional]  # noqa: E501
+            user_name (str): User name having permissions on the folder. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -251,17 +246,17 @@ class FolderPermissionModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder_access_role_id (bool, date, datetime, dict, float, int, list, str, none_type): Role ID granted on the folder. [optional]  # noqa: E501
-            folder_access_role_name (bool, date, datetime, dict, float, int, list, str, none_type): Role name granted on the folder. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID having permissions on the folder. [optional]  # noqa: E501
-            group_name (bool, date, datetime, dict, float, int, list, str, none_type): Group name having permissions on the folder. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder permission ID. [optional]  # noqa: E501
-            known_as (bool, date, datetime, dict, float, int, list, str, none_type): KnownAs. [optional]  # noqa: E501
-            secret_access_role_id (bool, date, datetime, dict, float, int, list, str, none_type): Role ID granted on secrets in the folder. [optional]  # noqa: E501
-            secret_access_role_name (bool, date, datetime, dict, float, int, list, str, none_type): Role name granted on secrets in the folder. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID having permissions on the folder. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name having permissions on the folder. [optional]  # noqa: E501
+            folder_access_role_id (int): Role ID granted on the folder. [optional]  # noqa: E501
+            folder_access_role_name (str): Role name granted on the folder. [optional]  # noqa: E501
+            folder_id (int): Folder ID. [optional]  # noqa: E501
+            group_id (int): Group ID having permissions on the folder. [optional]  # noqa: E501
+            group_name (str): Group name having permissions on the folder. [optional]  # noqa: E501
+            id (int): Folder permission ID. [optional]  # noqa: E501
+            known_as (str): KnownAs. [optional]  # noqa: E501
+            secret_access_role_id (int): Role ID granted on secrets in the folder. [optional]  # noqa: E501
+            secret_access_role_name (str): Role name granted on secrets in the folder. [optional]  # noqa: E501
+            user_id (int): User ID having permissions on the folder. [optional]  # noqa: E501
+            user_name (str): User name having permissions on the folder. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

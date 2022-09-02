@@ -72,9 +72,9 @@ class OneTimePasswordCodeApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'number_of_codes_to_generate':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -111,10 +111,10 @@ class OneTimePasswordCodeApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
-            number_of_codes_to_generate (bool, date, datetime, dict, float, int, list, str, none_type): NumberOfCodesToGenerate. [optional]
+            number_of_codes_to_generate (int): NumberOfCodesToGenerate. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

@@ -63,10 +63,8 @@ class TicketSystemCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,52 +73,49 @@ class TicketSystemCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'add_comments_to_ticket': (bool,),  # noqa: E501
-            'bmc_change_management_comment_work_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'bmc_incident_management_comment_work_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'bmc_remedy_authentication': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'bmc_remedy_url_endpoint': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'force_require_ticket_number': (ForceRequireTicketSystemOptions,),  # noqa: E501
-            'is_default': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'power_shell_add_comment_script_arguments': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'power_shell_add_comment_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'power_shell_add_ticket_comment_script_arguments': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'power_shell_add_ticket_comment_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'power_shell_run_as_account_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'power_shell_ticket_status_script_arguments': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'power_shell_ticket_status_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'service_now_allowed_statuses': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'service_now_domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'system_credential_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_number_error_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_number_validation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_system_type': (TicketSystemTypes,),  # noqa: E501
-            'view_ticket_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'add_comments_to_ticket': (bool, none_type,),  # noqa: E501
+            'bmc_change_management_comment_work_type': (str, none_type,),  # noqa: E501
+            'bmc_incident_management_comment_work_type': (str, none_type,),  # noqa: E501
+            'bmc_remedy_authentication': (str, none_type,),  # noqa: E501
+            'bmc_remedy_url_endpoint': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'display_message': (str, none_type,),  # noqa: E501
+            'force_require_ticket_number': (ForceRequireTicketSystemOptions, none_type,),  # noqa: E501
+            'is_default': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'power_shell_add_comment_script_arguments': (str, none_type,),  # noqa: E501
+            'power_shell_add_comment_script_id': (int, none_type,),  # noqa: E501
+            'power_shell_add_ticket_comment_script_arguments': (str, none_type,),  # noqa: E501
+            'power_shell_add_ticket_comment_script_id': (int, none_type,),  # noqa: E501
+            'power_shell_run_as_account_secret_id': (int, none_type,),  # noqa: E501
+            'power_shell_ticket_status_script_arguments': (str, none_type,),  # noqa: E501
+            'power_shell_ticket_status_script_id': (int, none_type,),  # noqa: E501
+            'service_now_allowed_statuses': (str, none_type,),  # noqa: E501
+            'service_now_domain_name': (str, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'system_credential_secret_id': (int, none_type,),  # noqa: E501
+            'ticket_number_error_message': (str, none_type,),  # noqa: E501
+            'ticket_number_validation': (str, none_type,),  # noqa: E501
+            'ticket_system_type': (TicketSystemTypes, none_type,),  # noqa: E501
+            'view_ticket_url': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -195,30 +190,30 @@ class TicketSystemCreateModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Ticket System Active status. [optional]  # noqa: E501
             add_comments_to_ticket (bool): Send comment to your integrated Ticket System and add it to the incident or change request.. [optional]  # noqa: E501
-            bmc_change_management_comment_work_type (bool, date, datetime, dict, float, int, list, str, none_type): BMC Remedy Change Management integration only.  Select work type for comments added.. [optional]  # noqa: E501
-            bmc_incident_management_comment_work_type (bool, date, datetime, dict, float, int, list, str, none_type): BMC Remedy Incident Management integration only.  Select work type for comments added.. [optional]  # noqa: E501
-            bmc_remedy_authentication (bool, date, datetime, dict, float, int, list, str, none_type): BMC Remedy integration only. Authentication value that usually represents a login server.. [optional]  # noqa: E501
-            bmc_remedy_url_endpoint (bool, date, datetime, dict, float, int, list, str, none_type): BMC Remedy integration only.  The SOAP URL endpoint for the BMC Remedy Incident or Change Management.  Should be the CHG_ChangeInterface_WS or HPD_IncidentInterface_WS endpoint.. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Dexcription. [optional]  # noqa: E501
-            display_message (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Ticket Title. [optional]  # noqa: E501
+            bmc_change_management_comment_work_type (str): BMC Remedy Change Management integration only.  Select work type for comments added.. [optional]  # noqa: E501
+            bmc_incident_management_comment_work_type (str): BMC Remedy Incident Management integration only.  Select work type for comments added.. [optional]  # noqa: E501
+            bmc_remedy_authentication (str): BMC Remedy integration only. Authentication value that usually represents a login server.. [optional]  # noqa: E501
+            bmc_remedy_url_endpoint (str): BMC Remedy integration only.  The SOAP URL endpoint for the BMC Remedy Incident or Change Management.  Should be the CHG_ChangeInterface_WS or HPD_IncidentInterface_WS endpoint.. [optional]  # noqa: E501
+            description (str): Ticket System Dexcription. [optional]  # noqa: E501
+            display_message (str): Ticket System Ticket Title. [optional]  # noqa: E501
             force_require_ticket_number (ForceRequireTicketSystemOptions): [optional]  # noqa: E501
             is_default (bool): Indicates the Ticket System is the default choice.. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Name. [optional]  # noqa: E501
-            power_shell_add_comment_script_arguments (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Optional arguments for the comment script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
-            power_shell_add_comment_script_id (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Custom PowerSHell script to add a comment to a ticket system.. [optional]  # noqa: E501
-            power_shell_add_ticket_comment_script_arguments (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Optional arguments for the ticket comment script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
-            power_shell_add_ticket_comment_script_id (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Custom PowerSHell script to add a comment to a ticket in a ticket system.. [optional]  # noqa: E501
-            power_shell_run_as_account_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Secret Id for credentials to use to run the Powershell.. [optional]  # noqa: E501
-            power_shell_ticket_status_script_arguments (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Optional arguments for the ticket status script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
-            power_shell_ticket_status_script_id (bool, date, datetime, dict, float, int, list, str, none_type): Powreshell Integration only.  Custom PowerShell script to get the ticket status.. [optional]  # noqa: E501
-            service_now_allowed_statuses (bool, date, datetime, dict, float, int, list, str, none_type): ServiceNow integration only.  Statuses to accept from ServiceNow, separated by commas.. [optional]  # noqa: E501
-            service_now_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): ServiceNow integration only. The domain name that hosts the RESTful web services for Ticket System integration.. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Site. [optional]  # noqa: E501
-            system_credential_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Privilged Secret Id for credentials to connect to integrated Ticket Systems.. [optional]  # noqa: E501
-            ticket_number_error_message (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number Validation Error Message. [optional]  # noqa: E501
-            ticket_number_validation (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number Validation Regex. [optional]  # noqa: E501
+            name (str): Ticket System Name. [optional]  # noqa: E501
+            power_shell_add_comment_script_arguments (str): PowerShell integration only.  Optional arguments for the comment script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
+            power_shell_add_comment_script_id (int): PowerShell integration only.  Custom PowerSHell script to add a comment to a ticket system.. [optional]  # noqa: E501
+            power_shell_add_ticket_comment_script_arguments (str): PowerShell integration only.  Optional arguments for the ticket comment script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
+            power_shell_add_ticket_comment_script_id (int): PowerShell integration only.  Custom PowerSHell script to add a comment to a ticket in a ticket system.. [optional]  # noqa: E501
+            power_shell_run_as_account_secret_id (int): PowerShell integration only.  Secret Id for credentials to use to run the Powershell.. [optional]  # noqa: E501
+            power_shell_ticket_status_script_arguments (str): PowerShell integration only.  Optional arguments for the ticket status script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
+            power_shell_ticket_status_script_id (int): Powreshell Integration only.  Custom PowerShell script to get the ticket status.. [optional]  # noqa: E501
+            service_now_allowed_statuses (str): ServiceNow integration only.  Statuses to accept from ServiceNow, separated by commas.. [optional]  # noqa: E501
+            service_now_domain_name (str): ServiceNow integration only. The domain name that hosts the RESTful web services for Ticket System integration.. [optional]  # noqa: E501
+            site_id (int): Ticket System Site. [optional]  # noqa: E501
+            system_credential_secret_id (int): Privilged Secret Id for credentials to connect to integrated Ticket Systems.. [optional]  # noqa: E501
+            ticket_number_error_message (str): Ticket Number Validation Error Message. [optional]  # noqa: E501
+            ticket_number_validation (str): Ticket Number Validation Regex. [optional]  # noqa: E501
             ticket_system_type (TicketSystemTypes): [optional]  # noqa: E501
-            view_ticket_url (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System URL pattern. [optional]  # noqa: E501
+            view_ticket_url (str): Ticket System URL pattern. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -306,30 +301,30 @@ class TicketSystemCreateModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Ticket System Active status. [optional]  # noqa: E501
             add_comments_to_ticket (bool): Send comment to your integrated Ticket System and add it to the incident or change request.. [optional]  # noqa: E501
-            bmc_change_management_comment_work_type (bool, date, datetime, dict, float, int, list, str, none_type): BMC Remedy Change Management integration only.  Select work type for comments added.. [optional]  # noqa: E501
-            bmc_incident_management_comment_work_type (bool, date, datetime, dict, float, int, list, str, none_type): BMC Remedy Incident Management integration only.  Select work type for comments added.. [optional]  # noqa: E501
-            bmc_remedy_authentication (bool, date, datetime, dict, float, int, list, str, none_type): BMC Remedy integration only. Authentication value that usually represents a login server.. [optional]  # noqa: E501
-            bmc_remedy_url_endpoint (bool, date, datetime, dict, float, int, list, str, none_type): BMC Remedy integration only.  The SOAP URL endpoint for the BMC Remedy Incident or Change Management.  Should be the CHG_ChangeInterface_WS or HPD_IncidentInterface_WS endpoint.. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Dexcription. [optional]  # noqa: E501
-            display_message (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Ticket Title. [optional]  # noqa: E501
+            bmc_change_management_comment_work_type (str): BMC Remedy Change Management integration only.  Select work type for comments added.. [optional]  # noqa: E501
+            bmc_incident_management_comment_work_type (str): BMC Remedy Incident Management integration only.  Select work type for comments added.. [optional]  # noqa: E501
+            bmc_remedy_authentication (str): BMC Remedy integration only. Authentication value that usually represents a login server.. [optional]  # noqa: E501
+            bmc_remedy_url_endpoint (str): BMC Remedy integration only.  The SOAP URL endpoint for the BMC Remedy Incident or Change Management.  Should be the CHG_ChangeInterface_WS or HPD_IncidentInterface_WS endpoint.. [optional]  # noqa: E501
+            description (str): Ticket System Dexcription. [optional]  # noqa: E501
+            display_message (str): Ticket System Ticket Title. [optional]  # noqa: E501
             force_require_ticket_number (ForceRequireTicketSystemOptions): [optional]  # noqa: E501
             is_default (bool): Indicates the Ticket System is the default choice.. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Name. [optional]  # noqa: E501
-            power_shell_add_comment_script_arguments (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Optional arguments for the comment script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
-            power_shell_add_comment_script_id (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Custom PowerSHell script to add a comment to a ticket system.. [optional]  # noqa: E501
-            power_shell_add_ticket_comment_script_arguments (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Optional arguments for the ticket comment script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
-            power_shell_add_ticket_comment_script_id (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Custom PowerSHell script to add a comment to a ticket in a ticket system.. [optional]  # noqa: E501
-            power_shell_run_as_account_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Secret Id for credentials to use to run the Powershell.. [optional]  # noqa: E501
-            power_shell_ticket_status_script_arguments (bool, date, datetime, dict, float, int, list, str, none_type): PowerShell integration only.  Optional arguments for the ticket status script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
-            power_shell_ticket_status_script_id (bool, date, datetime, dict, float, int, list, str, none_type): Powreshell Integration only.  Custom PowerShell script to get the ticket status.. [optional]  # noqa: E501
-            service_now_allowed_statuses (bool, date, datetime, dict, float, int, list, str, none_type): ServiceNow integration only.  Statuses to accept from ServiceNow, separated by commas.. [optional]  # noqa: E501
-            service_now_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): ServiceNow integration only. The domain name that hosts the RESTful web services for Ticket System integration.. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Site. [optional]  # noqa: E501
-            system_credential_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Privilged Secret Id for credentials to connect to integrated Ticket Systems.. [optional]  # noqa: E501
-            ticket_number_error_message (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number Validation Error Message. [optional]  # noqa: E501
-            ticket_number_validation (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number Validation Regex. [optional]  # noqa: E501
+            name (str): Ticket System Name. [optional]  # noqa: E501
+            power_shell_add_comment_script_arguments (str): PowerShell integration only.  Optional arguments for the comment script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
+            power_shell_add_comment_script_id (int): PowerShell integration only.  Custom PowerSHell script to add a comment to a ticket system.. [optional]  # noqa: E501
+            power_shell_add_ticket_comment_script_arguments (str): PowerShell integration only.  Optional arguments for the ticket comment script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
+            power_shell_add_ticket_comment_script_id (int): PowerShell integration only.  Custom PowerSHell script to add a comment to a ticket in a ticket system.. [optional]  # noqa: E501
+            power_shell_run_as_account_secret_id (int): PowerShell integration only.  Secret Id for credentials to use to run the Powershell.. [optional]  # noqa: E501
+            power_shell_ticket_status_script_arguments (str): PowerShell integration only.  Optional arguments for the ticket status script.  Arguemnts are separated by a space.. [optional]  # noqa: E501
+            power_shell_ticket_status_script_id (int): Powreshell Integration only.  Custom PowerShell script to get the ticket status.. [optional]  # noqa: E501
+            service_now_allowed_statuses (str): ServiceNow integration only.  Statuses to accept from ServiceNow, separated by commas.. [optional]  # noqa: E501
+            service_now_domain_name (str): ServiceNow integration only. The domain name that hosts the RESTful web services for Ticket System integration.. [optional]  # noqa: E501
+            site_id (int): Ticket System Site. [optional]  # noqa: E501
+            system_credential_secret_id (int): Privilged Secret Id for credentials to connect to integrated Ticket Systems.. [optional]  # noqa: E501
+            ticket_number_error_message (str): Ticket Number Validation Error Message. [optional]  # noqa: E501
+            ticket_number_validation (str): Ticket Number Validation Regex. [optional]  # noqa: E501
             ticket_system_type (TicketSystemTypes): [optional]  # noqa: E501
-            view_ticket_url (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System URL pattern. [optional]  # noqa: E501
+            view_ticket_url (str): Ticket System URL pattern. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

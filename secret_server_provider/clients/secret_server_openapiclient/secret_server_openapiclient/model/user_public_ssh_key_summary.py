@@ -57,10 +57,8 @@ class UserPublicSshKeySummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class UserPublicSshKeySummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'date_created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expired': (bool,),  # noqa: E501
-            'format': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'public_ssh_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'date_created': (datetime, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'expired': (bool, none_type,),  # noqa: E501
+            'format': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'public_ssh_key': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -148,12 +143,12 @@ class UserPublicSshKeySummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether the user public ssh key is active. [optional]  # noqa: E501
-            date_created (bool, date, datetime, dict, float, int, list, str, none_type): User public ssh key creation time. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
+            date_created (datetime): User public ssh key creation time. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
             expired (bool): Whether the user public ssh key is expired. [optional]  # noqa: E501
-            format (bool, date, datetime, dict, float, int, list, str, none_type): The Format of the key. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            public_ssh_key (bool, date, datetime, dict, float, int, list, str, none_type): Public ssh key. [optional]  # noqa: E501
+            format (str): The Format of the key. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            public_ssh_key (str): Public ssh key. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,12 +235,12 @@ class UserPublicSshKeySummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether the user public ssh key is active. [optional]  # noqa: E501
-            date_created (bool, date, datetime, dict, float, int, list, str, none_type): User public ssh key creation time. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
+            date_created (datetime): User public ssh key creation time. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
             expired (bool): Whether the user public ssh key is expired. [optional]  # noqa: E501
-            format (bool, date, datetime, dict, float, int, list, str, none_type): The Format of the key. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            public_ssh_key (bool, date, datetime, dict, float, int, list, str, none_type): Public ssh key. [optional]  # noqa: E501
+            format (str): The Format of the key. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            public_ssh_key (str): Public ssh key. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

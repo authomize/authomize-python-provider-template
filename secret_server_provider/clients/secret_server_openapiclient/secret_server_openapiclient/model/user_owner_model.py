@@ -57,10 +57,8 @@ class UserOwnerModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class UserOwnerModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_user': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_user': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,12 +140,12 @@ class UserOwnerModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User owner ID. [optional]  # noqa: E501
+            domain_id (int): Active Directory domain ID. [optional]  # noqa: E501
+            group_id (int): Group ID. [optional]  # noqa: E501
+            id (int): User owner ID. [optional]  # noqa: E501
             is_user (bool): Whether the owner is a user (true) or a group (false). [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): User owner name. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID. [optional]  # noqa: E501
+            name (str): User owner name. [optional]  # noqa: E501
+            user_id (int): User ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,12 +231,12 @@ class UserOwnerModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User owner ID. [optional]  # noqa: E501
+            domain_id (int): Active Directory domain ID. [optional]  # noqa: E501
+            group_id (int): Group ID. [optional]  # noqa: E501
+            id (int): User owner ID. [optional]  # noqa: E501
             is_user (bool): Whether the owner is a user (true) or a group (false). [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): User owner name. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID. [optional]  # noqa: E501
+            name (str): User owner name. [optional]  # noqa: E501
+            user_id (int): User ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

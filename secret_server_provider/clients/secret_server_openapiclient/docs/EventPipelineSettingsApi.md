@@ -52,7 +52,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_settings_api.EventPipelineSettingsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Event Pipeline Filter ID
+    id = 1 # int | Event Pipeline Filter ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -68,7 +68,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Event Pipeline Filter ID |
+ **id** | **int**| Event Pipeline Filter ID |
 
 ### Return type
 
@@ -136,7 +136,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_settings_api.EventPipelineSettingsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Event Pipeline Task ID
+    id = 1 # int | Event Pipeline Task ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -152,7 +152,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Event Pipeline Task ID |
+ **id** | **int**| Event Pipeline Task ID |
 
 ### Return type
 
@@ -220,12 +220,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_settings_api.EventPipelineSettingsApi(api_client)
-    filter_event_action_id = None # bool, date, datetime, dict, float, int, list, str, none_type | EventActionId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_event_action_id = 1 # int | EventActionId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -242,12 +242,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_event_action_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| EventActionId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_event_action_id** | **int**| EventActionId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -315,7 +315,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_settings_api.EventPipelineSettingsApi(api_client)
-    event_entity_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | eventEntityTypeId (optional)
+    event_entity_type_id = 1 # int | eventEntityTypeId (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -332,7 +332,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **event_entity_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| eventEntityTypeId | [optional]
+ **event_entity_type_id** | **int**| eventEntityTypeId | [optional]
 
 ### Return type
 
@@ -400,7 +400,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_settings_api.EventPipelineSettingsApi(api_client)
-    event_entity_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | eventEntityTypeId (optional)
+    event_entity_type_id = 1 # int | eventEntityTypeId (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -417,7 +417,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **event_entity_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| eventEntityTypeId | [optional]
+ **event_entity_type_id** | **int**| eventEntityTypeId | [optional]
 
 ### Return type
 

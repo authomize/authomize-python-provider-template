@@ -57,10 +57,8 @@ class ConfigurationUserInterfaceModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class ConfigurationUserInterfaceModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'allow_user_to_select_theme': (bool,),  # noqa: E501
-            'custom_logo_collapsed': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'custom_logo_full_size': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'default_classic_theme': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'disable_legacy_ui': (bool,),  # noqa: E501
-            'new_ui_default': (bool,),  # noqa: E501
+            'allow_user_to_select_theme': (bool, none_type,),  # noqa: E501
+            'custom_logo_collapsed': (str, none_type,),  # noqa: E501
+            'custom_logo_full_size': (str, none_type,),  # noqa: E501
+            'default_classic_theme': (str, none_type,),  # noqa: E501
+            'disable_legacy_ui': (bool, none_type,),  # noqa: E501
+            'new_ui_default': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -146,9 +141,9 @@ class ConfigurationUserInterfaceModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             allow_user_to_select_theme (bool): Allow users to pick their theme when in classic mode. [optional]  # noqa: E501
-            custom_logo_collapsed (bool, date, datetime, dict, float, int, list, str, none_type): Custom logo when left nav is collapsed. [optional]  # noqa: E501
-            custom_logo_full_size (bool, date, datetime, dict, float, int, list, str, none_type): Custom logo full size. [optional]  # noqa: E501
-            default_classic_theme (bool, date, datetime, dict, float, int, list, str, none_type): Default classic theme. [optional]  # noqa: E501
+            custom_logo_collapsed (str): Custom logo when left nav is collapsed. [optional]  # noqa: E501
+            custom_logo_full_size (str): Custom logo full size. [optional]  # noqa: E501
+            default_classic_theme (str): Default classic theme. [optional]  # noqa: E501
             disable_legacy_ui (bool): When true the legacy UI cannot be used. [optional]  # noqa: E501
             new_ui_default (bool): New users will use the new ui by default. [optional]  # noqa: E501
         """
@@ -237,9 +232,9 @@ class ConfigurationUserInterfaceModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             allow_user_to_select_theme (bool): Allow users to pick their theme when in classic mode. [optional]  # noqa: E501
-            custom_logo_collapsed (bool, date, datetime, dict, float, int, list, str, none_type): Custom logo when left nav is collapsed. [optional]  # noqa: E501
-            custom_logo_full_size (bool, date, datetime, dict, float, int, list, str, none_type): Custom logo full size. [optional]  # noqa: E501
-            default_classic_theme (bool, date, datetime, dict, float, int, list, str, none_type): Default classic theme. [optional]  # noqa: E501
+            custom_logo_collapsed (str): Custom logo when left nav is collapsed. [optional]  # noqa: E501
+            custom_logo_full_size (str): Custom logo full size. [optional]  # noqa: E501
+            default_classic_theme (str): Default classic theme. [optional]  # noqa: E501
             disable_legacy_ui (bool): When true the legacy UI cannot be used. [optional]  # noqa: E501
             new_ui_default (bool): New users will use the new ui by default. [optional]  # noqa: E501
         """

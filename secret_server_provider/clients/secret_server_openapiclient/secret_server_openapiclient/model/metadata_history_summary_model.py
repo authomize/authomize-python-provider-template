@@ -63,10 +63,8 @@ class MetadataHistorySummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,48 +73,45 @@ class MetadataHistorySummaryModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'contains_personal_information': (bool,),  # noqa: E501
-            'create_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'create_user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'create_user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_data_type': (MetadataFieldDataType,),  # noqa: E501
-            'metadata_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_item_data_history_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_item_data_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_type': (MetadataType,),  # noqa: E501
-            'metadata_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_bit': (bool,),  # noqa: E501
-            'value_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_int': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_number': (float,),  # noqa: E501
-            'value_string': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_user_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'contains_personal_information': (bool, none_type,),  # noqa: E501
+            'create_date_time': (datetime, none_type,),  # noqa: E501
+            'create_user_id': (int, none_type,),  # noqa: E501
+            'create_user_name': (str, none_type,),  # noqa: E501
+            'item_id': (int, none_type,),  # noqa: E501
+            'metadata_field_data_type': (MetadataFieldDataType, none_type,),  # noqa: E501
+            'metadata_field_id': (int, none_type,),  # noqa: E501
+            'metadata_field_name': (str, none_type,),  # noqa: E501
+            'metadata_field_section_id': (int, none_type,),  # noqa: E501
+            'metadata_field_section_name': (str, none_type,),  # noqa: E501
+            'metadata_field_type_name': (str, none_type,),  # noqa: E501
+            'metadata_item_data_history_id': (int, none_type,),  # noqa: E501
+            'metadata_item_data_id': (int, none_type,),  # noqa: E501
+            'metadata_type': (MetadataType, none_type,),  # noqa: E501
+            'metadata_type_name': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'value_bit': (bool, none_type,),  # noqa: E501
+            'value_date_time': (datetime, none_type,),  # noqa: E501
+            'value_int': (int, none_type,),  # noqa: E501
+            'value_number': (float, none_type,),  # noqa: E501
+            'value_string': (str, none_type,),  # noqa: E501
+            'value_user_display_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -186,27 +181,27 @@ class MetadataHistorySummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             contains_personal_information (bool): When this is set to true, the metadata will be obfuscated during export. [optional]  # noqa: E501
-            create_date_time (bool, date, datetime, dict, float, int, list, str, none_type): When the field value was created. [optional]  # noqa: E501
-            create_user_id (bool, date, datetime, dict, float, int, list, str, none_type): The user id of who entered the field value. [optional]  # noqa: E501
-            create_user_name (bool, date, datetime, dict, float, int, list, str, none_type): Who entered the field value. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the item to which this metadata is associated. [optional]  # noqa: E501
+            create_date_time (datetime): When the field value was created. [optional]  # noqa: E501
+            create_user_id (int): The user id of who entered the field value. [optional]  # noqa: E501
+            create_user_name (str): Who entered the field value. [optional]  # noqa: E501
+            item_id (int): The ID of the item to which this metadata is associated. [optional]  # noqa: E501
             metadata_field_data_type (MetadataFieldDataType): [optional]  # noqa: E501
-            metadata_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The metadata field id. [optional]  # noqa: E501
-            metadata_field_name (bool, date, datetime, dict, float, int, list, str, none_type): The metadata field name. [optional]  # noqa: E501
-            metadata_field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The Metadata section ID. [optional]  # noqa: E501
-            metadata_field_section_name (bool, date, datetime, dict, float, int, list, str, none_type): The metadata section name. [optional]  # noqa: E501
-            metadata_field_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Not currently populated, see MetadataFieldDataType. [optional]  # noqa: E501
-            metadata_item_data_history_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence for this history ID. [optional]  # noqa: E501
-            metadata_item_data_id (bool, date, datetime, dict, float, int, list, str, none_type): The parent sequence ID for all associated history records. [optional]  # noqa: E501
+            metadata_field_id (int): The metadata field id. [optional]  # noqa: E501
+            metadata_field_name (str): The metadata field name. [optional]  # noqa: E501
+            metadata_field_section_id (int): The Metadata section ID. [optional]  # noqa: E501
+            metadata_field_section_name (str): The metadata section name. [optional]  # noqa: E501
+            metadata_field_type_name (str): Not currently populated, see MetadataFieldDataType. [optional]  # noqa: E501
+            metadata_item_data_history_id (int): The sequence for this history ID. [optional]  # noqa: E501
+            metadata_item_data_id (int): The parent sequence ID for all associated history records. [optional]  # noqa: E501
             metadata_type (MetadataType): [optional]  # noqa: E501
-            metadata_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Not currently populated, see MetadataType. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): The order in which to sort the metadata fields.  This is currently not utilized.. [optional]  # noqa: E501
+            metadata_type_name (str): Not currently populated, see MetadataType. [optional]  # noqa: E501
+            sort_order (int): The order in which to sort the metadata fields.  This is currently not utilized.. [optional]  # noqa: E501
             value_bit (bool): When this metadata field is a boolean this will be the value. [optional]  # noqa: E501
-            value_date_time (bool, date, datetime, dict, float, int, list, str, none_type): When this metadata field is a datetime this will be the value. [optional]  # noqa: E501
-            value_int (bool, date, datetime, dict, float, int, list, str, none_type): When this metadata field is a user this will be the user id. [optional]  # noqa: E501
+            value_date_time (datetime): When this metadata field is a datetime this will be the value. [optional]  # noqa: E501
+            value_int (int): When this metadata field is a user this will be the user id. [optional]  # noqa: E501
             value_number (float): When this metadata field is a number this will be the value. [optional]  # noqa: E501
-            value_string (bool, date, datetime, dict, float, int, list, str, none_type): When this metadata field is a string this will be the value. [optional]  # noqa: E501
-            value_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): When this metadata field is a user this will be the user display name. [optional]  # noqa: E501
+            value_string (str): When this metadata field is a string this will be the value. [optional]  # noqa: E501
+            value_user_display_name (str): When this metadata field is a user this will be the user display name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -293,27 +288,27 @@ class MetadataHistorySummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             contains_personal_information (bool): When this is set to true, the metadata will be obfuscated during export. [optional]  # noqa: E501
-            create_date_time (bool, date, datetime, dict, float, int, list, str, none_type): When the field value was created. [optional]  # noqa: E501
-            create_user_id (bool, date, datetime, dict, float, int, list, str, none_type): The user id of who entered the field value. [optional]  # noqa: E501
-            create_user_name (bool, date, datetime, dict, float, int, list, str, none_type): Who entered the field value. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the item to which this metadata is associated. [optional]  # noqa: E501
+            create_date_time (datetime): When the field value was created. [optional]  # noqa: E501
+            create_user_id (int): The user id of who entered the field value. [optional]  # noqa: E501
+            create_user_name (str): Who entered the field value. [optional]  # noqa: E501
+            item_id (int): The ID of the item to which this metadata is associated. [optional]  # noqa: E501
             metadata_field_data_type (MetadataFieldDataType): [optional]  # noqa: E501
-            metadata_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The metadata field id. [optional]  # noqa: E501
-            metadata_field_name (bool, date, datetime, dict, float, int, list, str, none_type): The metadata field name. [optional]  # noqa: E501
-            metadata_field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The Metadata section ID. [optional]  # noqa: E501
-            metadata_field_section_name (bool, date, datetime, dict, float, int, list, str, none_type): The metadata section name. [optional]  # noqa: E501
-            metadata_field_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Not currently populated, see MetadataFieldDataType. [optional]  # noqa: E501
-            metadata_item_data_history_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence for this history ID. [optional]  # noqa: E501
-            metadata_item_data_id (bool, date, datetime, dict, float, int, list, str, none_type): The parent sequence ID for all associated history records. [optional]  # noqa: E501
+            metadata_field_id (int): The metadata field id. [optional]  # noqa: E501
+            metadata_field_name (str): The metadata field name. [optional]  # noqa: E501
+            metadata_field_section_id (int): The Metadata section ID. [optional]  # noqa: E501
+            metadata_field_section_name (str): The metadata section name. [optional]  # noqa: E501
+            metadata_field_type_name (str): Not currently populated, see MetadataFieldDataType. [optional]  # noqa: E501
+            metadata_item_data_history_id (int): The sequence for this history ID. [optional]  # noqa: E501
+            metadata_item_data_id (int): The parent sequence ID for all associated history records. [optional]  # noqa: E501
             metadata_type (MetadataType): [optional]  # noqa: E501
-            metadata_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Not currently populated, see MetadataType. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): The order in which to sort the metadata fields.  This is currently not utilized.. [optional]  # noqa: E501
+            metadata_type_name (str): Not currently populated, see MetadataType. [optional]  # noqa: E501
+            sort_order (int): The order in which to sort the metadata fields.  This is currently not utilized.. [optional]  # noqa: E501
             value_bit (bool): When this metadata field is a boolean this will be the value. [optional]  # noqa: E501
-            value_date_time (bool, date, datetime, dict, float, int, list, str, none_type): When this metadata field is a datetime this will be the value. [optional]  # noqa: E501
-            value_int (bool, date, datetime, dict, float, int, list, str, none_type): When this metadata field is a user this will be the user id. [optional]  # noqa: E501
+            value_date_time (datetime): When this metadata field is a datetime this will be the value. [optional]  # noqa: E501
+            value_int (int): When this metadata field is a user this will be the user id. [optional]  # noqa: E501
             value_number (float): When this metadata field is a number this will be the value. [optional]  # noqa: E501
-            value_string (bool, date, datetime, dict, float, int, list, str, none_type): When this metadata field is a string this will be the value. [optional]  # noqa: E501
-            value_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): When this metadata field is a user this will be the user display name. [optional]  # noqa: E501
+            value_string (str): When this metadata field is a string this will be the value. [optional]  # noqa: E501
+            value_user_display_name (str): When this metadata field is a user this will be the user display name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

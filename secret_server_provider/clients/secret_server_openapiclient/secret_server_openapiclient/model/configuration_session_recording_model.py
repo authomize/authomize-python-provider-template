@@ -61,10 +61,8 @@ class ConfigurationSessionRecordingModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,48 +71,45 @@ class ConfigurationSessionRecordingModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'archive_location_by_site': (bool,),  # noqa: E501
-            'archive_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'archive_path_mappings': ([ConfigurationSessionRecordingSiteArchiveSummary],),  # noqa: E501
-            'days_until_archive': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'days_until_delete': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_archive': (bool,),  # noqa: E501
-            'enable_delete': (bool,),  # noqa: E501
-            'enable_hardware_acceleration': (bool,),  # noqa: E501
-            'enable_inactivity_timeout': (bool,),  # noqa: E501
-            'enable_on_demand_video_processing': (bool,),  # noqa: E501
-            'enable_session_recording': (bool,),  # noqa: E501
-            'encrypt_archive': (bool,),  # noqa: E501
-            'hide_recording_indicator': (bool,),  # noqa: E501
-            'inactivity_timeout_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'max_session_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rdp_proxy_record_key_strokes': (bool,),  # noqa: E501
-            'rdp_proxy_record_video': (bool,),  # noqa: E501
-            'ssh_proxy_record_key_strokes': (bool,),  # noqa: E501
-            'ssh_proxy_record_video': (bool,),  # noqa: E501
-            'store_in_database': (bool,),  # noqa: E501
-            'use_temporary_archives': (bool,),  # noqa: E501
-            'video_codec_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'archive_location_by_site': (bool, none_type,),  # noqa: E501
+            'archive_path': (str, none_type,),  # noqa: E501
+            'archive_path_mappings': ([ConfigurationSessionRecordingSiteArchiveSummary], none_type,),  # noqa: E501
+            'days_until_archive': (int, none_type,),  # noqa: E501
+            'days_until_delete': (int, none_type,),  # noqa: E501
+            'enable_archive': (bool, none_type,),  # noqa: E501
+            'enable_delete': (bool, none_type,),  # noqa: E501
+            'enable_hardware_acceleration': (bool, none_type,),  # noqa: E501
+            'enable_inactivity_timeout': (bool, none_type,),  # noqa: E501
+            'enable_on_demand_video_processing': (bool, none_type,),  # noqa: E501
+            'enable_session_recording': (bool, none_type,),  # noqa: E501
+            'encrypt_archive': (bool, none_type,),  # noqa: E501
+            'hide_recording_indicator': (bool, none_type,),  # noqa: E501
+            'inactivity_timeout_minutes': (int, none_type,),  # noqa: E501
+            'max_session_length': (int, none_type,),  # noqa: E501
+            'rdp_proxy_record_key_strokes': (bool, none_type,),  # noqa: E501
+            'rdp_proxy_record_video': (bool, none_type,),  # noqa: E501
+            'ssh_proxy_record_key_strokes': (bool, none_type,),  # noqa: E501
+            'ssh_proxy_record_video': (bool, none_type,),  # noqa: E501
+            'store_in_database': (bool, none_type,),  # noqa: E501
+            'use_temporary_archives': (bool, none_type,),  # noqa: E501
+            'video_codec_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -184,10 +179,10 @@ class ConfigurationSessionRecordingModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             archive_location_by_site (bool): If archive location changes based on site. [optional]  # noqa: E501
-            archive_path (bool, date, datetime, dict, float, int, list, str, none_type): The location of the recordings stored on disk. [optional]  # noqa: E501
+            archive_path (str): The location of the recordings stored on disk. [optional]  # noqa: E501
             archive_path_mappings ([ConfigurationSessionRecordingSiteArchiveSummary]): A list of archive paths mapped to sites, used when ArchiveLocationBySite is true. [optional]  # noqa: E501
-            days_until_archive (bool, date, datetime, dict, float, int, list, str, none_type): The number of days until a recording is archived. [optional]  # noqa: E501
-            days_until_delete (bool, date, datetime, dict, float, int, list, str, none_type): The number of days before a session recording is deleted. [optional]  # noqa: E501
+            days_until_archive (int): The number of days until a recording is archived. [optional]  # noqa: E501
+            days_until_delete (int): The number of days before a session recording is deleted. [optional]  # noqa: E501
             enable_archive (bool): If recordings should be archived. [optional]  # noqa: E501
             enable_delete (bool): If session recordings will be automatically deleted. [optional]  # noqa: E501
             enable_hardware_acceleration (bool): If hardware acceleration should be enabled. [optional]  # noqa: E501
@@ -196,15 +191,15 @@ class ConfigurationSessionRecordingModel(ModelNormal):
             enable_session_recording (bool): Whether or not Session Recording is enabled. [optional]  # noqa: E501
             encrypt_archive (bool): If archived session recordings should be encrypted. [optional]  # noqa: E501
             hide_recording_indicator (bool): If the recording indicator should be shown. [optional]  # noqa: E501
-            inactivity_timeout_minutes (bool, date, datetime, dict, float, int, list, str, none_type): The length of inactivity before the session is ended. [optional]  # noqa: E501
-            max_session_length (bool, date, datetime, dict, float, int, list, str, none_type): The longest a session is allowed to be in hours. [optional]  # noqa: E501
+            inactivity_timeout_minutes (int): The length of inactivity before the session is ended. [optional]  # noqa: E501
+            max_session_length (int): The longest a session is allowed to be in hours. [optional]  # noqa: E501
             rdp_proxy_record_key_strokes (bool): If proxied RDP sessions should have keystrokes recorded. [optional]  # noqa: E501
             rdp_proxy_record_video (bool): If proxied RDP sessions should have video recorded. [optional]  # noqa: E501
             ssh_proxy_record_key_strokes (bool): If proxied SSH sessions should have keystrokes recorded. [optional]  # noqa: E501
             ssh_proxy_record_video (bool): If proxied SSH sessions should have video recorded. [optional]  # noqa: E501
             store_in_database (bool): If session recordings should be stored in the database. [optional]  # noqa: E501
             use_temporary_archives (bool): If the archive location should store temporary session recording data instead of the database. [optional]  # noqa: E501
-            video_codec_id (bool, date, datetime, dict, float, int, list, str, none_type): Which video codec to use for session recordings on OSX. [optional]  # noqa: E501
+            video_codec_id (int): Which video codec to use for session recordings on OSX. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -291,10 +286,10 @@ class ConfigurationSessionRecordingModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             archive_location_by_site (bool): If archive location changes based on site. [optional]  # noqa: E501
-            archive_path (bool, date, datetime, dict, float, int, list, str, none_type): The location of the recordings stored on disk. [optional]  # noqa: E501
+            archive_path (str): The location of the recordings stored on disk. [optional]  # noqa: E501
             archive_path_mappings ([ConfigurationSessionRecordingSiteArchiveSummary]): A list of archive paths mapped to sites, used when ArchiveLocationBySite is true. [optional]  # noqa: E501
-            days_until_archive (bool, date, datetime, dict, float, int, list, str, none_type): The number of days until a recording is archived. [optional]  # noqa: E501
-            days_until_delete (bool, date, datetime, dict, float, int, list, str, none_type): The number of days before a session recording is deleted. [optional]  # noqa: E501
+            days_until_archive (int): The number of days until a recording is archived. [optional]  # noqa: E501
+            days_until_delete (int): The number of days before a session recording is deleted. [optional]  # noqa: E501
             enable_archive (bool): If recordings should be archived. [optional]  # noqa: E501
             enable_delete (bool): If session recordings will be automatically deleted. [optional]  # noqa: E501
             enable_hardware_acceleration (bool): If hardware acceleration should be enabled. [optional]  # noqa: E501
@@ -303,15 +298,15 @@ class ConfigurationSessionRecordingModel(ModelNormal):
             enable_session_recording (bool): Whether or not Session Recording is enabled. [optional]  # noqa: E501
             encrypt_archive (bool): If archived session recordings should be encrypted. [optional]  # noqa: E501
             hide_recording_indicator (bool): If the recording indicator should be shown. [optional]  # noqa: E501
-            inactivity_timeout_minutes (bool, date, datetime, dict, float, int, list, str, none_type): The length of inactivity before the session is ended. [optional]  # noqa: E501
-            max_session_length (bool, date, datetime, dict, float, int, list, str, none_type): The longest a session is allowed to be in hours. [optional]  # noqa: E501
+            inactivity_timeout_minutes (int): The length of inactivity before the session is ended. [optional]  # noqa: E501
+            max_session_length (int): The longest a session is allowed to be in hours. [optional]  # noqa: E501
             rdp_proxy_record_key_strokes (bool): If proxied RDP sessions should have keystrokes recorded. [optional]  # noqa: E501
             rdp_proxy_record_video (bool): If proxied RDP sessions should have video recorded. [optional]  # noqa: E501
             ssh_proxy_record_key_strokes (bool): If proxied SSH sessions should have keystrokes recorded. [optional]  # noqa: E501
             ssh_proxy_record_video (bool): If proxied SSH sessions should have video recorded. [optional]  # noqa: E501
             store_in_database (bool): If session recordings should be stored in the database. [optional]  # noqa: E501
             use_temporary_archives (bool): If the archive location should store temporary session recording data instead of the database. [optional]  # noqa: E501
-            video_codec_id (bool, date, datetime, dict, float, int, list, str, none_type): Which video codec to use for session recordings on OSX. [optional]  # noqa: E501
+            video_codec_id (int): Which video codec to use for session recordings on OSX. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

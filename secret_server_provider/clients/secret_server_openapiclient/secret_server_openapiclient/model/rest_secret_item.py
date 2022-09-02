@@ -61,10 +61,8 @@ class RestSecretItem(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,39 +71,36 @@ class RestSecretItem(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'field_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'field_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_attachment_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'filename': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_file': (bool,),  # noqa: E501
-            'is_list': (bool,),  # noqa: E501
-            'is_notes': (bool,),  # noqa: E501
-            'is_password': (bool,),  # noqa: E501
-            'item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'item_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'list_type': (SecretFieldListType,),  # noqa: E501
-            'slug': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'field_description': (str, none_type,),  # noqa: E501
+            'field_id': (int, none_type,),  # noqa: E501
+            'field_name': (str, none_type,),  # noqa: E501
+            'file_attachment_id': (int, none_type,),  # noqa: E501
+            'filename': (str, none_type,),  # noqa: E501
+            'is_file': (bool, none_type,),  # noqa: E501
+            'is_list': (bool, none_type,),  # noqa: E501
+            'is_notes': (bool, none_type,),  # noqa: E501
+            'is_password': (bool, none_type,),  # noqa: E501
+            'item_id': (int, none_type,),  # noqa: E501
+            'item_value': (str, none_type,),  # noqa: E501
+            'list_type': (SecretFieldListType, none_type,),  # noqa: E501
+            'slug': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,19 +160,19 @@ class RestSecretItem(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            field_description (bool, date, datetime, dict, float, int, list, str, none_type): Longer description of the secret field.. [optional]  # noqa: E501
-            field_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the field definition from the secret template.. [optional]  # noqa: E501
-            field_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name of the secret field.. [optional]  # noqa: E501
-            file_attachment_id (bool, date, datetime, dict, float, int, list, str, none_type): If the field is a file attachment field, the id of the file attachment.. [optional]  # noqa: E501
-            filename (bool, date, datetime, dict, float, int, list, str, none_type): If the field is a file attachment field, the name of the attached file.. [optional]  # noqa: E501
+            field_description (str): Longer description of the secret field.. [optional]  # noqa: E501
+            field_id (int): The id of the field definition from the secret template.. [optional]  # noqa: E501
+            field_name (str): The display name of the secret field.. [optional]  # noqa: E501
+            file_attachment_id (int): If the field is a file attachment field, the id of the file attachment.. [optional]  # noqa: E501
+            filename (str): If the field is a file attachment field, the name of the attached file.. [optional]  # noqa: E501
             is_file (bool): Whether the field is a file attachment.. [optional]  # noqa: E501
             is_list (bool): Whether or not the secret field is a list.. [optional]  # noqa: E501
             is_notes (bool): Whether the field is represented as a multi-line text box. Used for long-form text fields.. [optional]  # noqa: E501
             is_password (bool): Whether the field is a password. Password fields are hidden by default in the UI and their value is not returned in GET calls that return secrets. To retrieve a password field value, make a GET call to /api/secrets/{secretId}/fields/{slug}.. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the secret field item. Leave empty when creating a new secret.. [optional]  # noqa: E501
-            item_value (bool, date, datetime, dict, float, int, list, str, none_type): The value of the secret field item. For list fields, this is a comma-delimited list of the list id guids that are assigned to this field.. [optional]  # noqa: E501
+            item_id (int): The id of the secret field item. Leave empty when creating a new secret.. [optional]  # noqa: E501
+            item_value (str): The value of the secret field item. For list fields, this is a comma-delimited list of the list id guids that are assigned to this field.. [optional]  # noqa: E501
             list_type (SecretFieldListType): [optional]  # noqa: E501
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): A unique name for the secret field on the template. Slugs cannot contain spaces and are used in many places to easily refer to a secret field without having to know the field id.. [optional]  # noqa: E501
+            slug (str): A unique name for the secret field on the template. Slugs cannot contain spaces and are used in many places to easily refer to a secret field without having to know the field id.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -263,19 +258,19 @@ class RestSecretItem(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            field_description (bool, date, datetime, dict, float, int, list, str, none_type): Longer description of the secret field.. [optional]  # noqa: E501
-            field_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the field definition from the secret template.. [optional]  # noqa: E501
-            field_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name of the secret field.. [optional]  # noqa: E501
-            file_attachment_id (bool, date, datetime, dict, float, int, list, str, none_type): If the field is a file attachment field, the id of the file attachment.. [optional]  # noqa: E501
-            filename (bool, date, datetime, dict, float, int, list, str, none_type): If the field is a file attachment field, the name of the attached file.. [optional]  # noqa: E501
+            field_description (str): Longer description of the secret field.. [optional]  # noqa: E501
+            field_id (int): The id of the field definition from the secret template.. [optional]  # noqa: E501
+            field_name (str): The display name of the secret field.. [optional]  # noqa: E501
+            file_attachment_id (int): If the field is a file attachment field, the id of the file attachment.. [optional]  # noqa: E501
+            filename (str): If the field is a file attachment field, the name of the attached file.. [optional]  # noqa: E501
             is_file (bool): Whether the field is a file attachment.. [optional]  # noqa: E501
             is_list (bool): Whether or not the secret field is a list.. [optional]  # noqa: E501
             is_notes (bool): Whether the field is represented as a multi-line text box. Used for long-form text fields.. [optional]  # noqa: E501
             is_password (bool): Whether the field is a password. Password fields are hidden by default in the UI and their value is not returned in GET calls that return secrets. To retrieve a password field value, make a GET call to /api/secrets/{secretId}/fields/{slug}.. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the secret field item. Leave empty when creating a new secret.. [optional]  # noqa: E501
-            item_value (bool, date, datetime, dict, float, int, list, str, none_type): The value of the secret field item. For list fields, this is a comma-delimited list of the list id guids that are assigned to this field.. [optional]  # noqa: E501
+            item_id (int): The id of the secret field item. Leave empty when creating a new secret.. [optional]  # noqa: E501
+            item_value (str): The value of the secret field item. For list fields, this is a comma-delimited list of the list id guids that are assigned to this field.. [optional]  # noqa: E501
             list_type (SecretFieldListType): [optional]  # noqa: E501
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): A unique name for the secret field on the template. Slugs cannot contain spaces and are used in many places to easily refer to a secret field without having to know the field id.. [optional]  # noqa: E501
+            slug (str): A unique name for the secret field on the template. Slugs cannot contain spaces and are used in many places to easily refer to a secret field without having to know the field id.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

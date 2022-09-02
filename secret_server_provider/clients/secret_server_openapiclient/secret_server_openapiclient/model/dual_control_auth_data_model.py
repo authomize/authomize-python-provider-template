@@ -57,10 +57,8 @@ class DualControlAuthDataModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class DualControlAuthDataModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'domain': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'two_factor_token': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'username': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'domain': (int, none_type,),  # noqa: E501
+            'password': (str, none_type,),  # noqa: E501
+            'two_factor_token': (str, none_type,),  # noqa: E501
+            'username': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class DualControlAuthDataModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            domain (bool, date, datetime, dict, float, int, list, str, none_type): Domain for the user, null if local. [optional]  # noqa: E501
-            password (bool, date, datetime, dict, float, int, list, str, none_type): User password. [optional]  # noqa: E501
-            two_factor_token (bool, date, datetime, dict, float, int, list, str, none_type): Two Factor Token to login. [optional]  # noqa: E501
-            username (bool, date, datetime, dict, float, int, list, str, none_type): Username that can login. [optional]  # noqa: E501
+            domain (int): Domain for the user, null if local. [optional]  # noqa: E501
+            password (str): User password. [optional]  # noqa: E501
+            two_factor_token (str): Two Factor Token to login. [optional]  # noqa: E501
+            username (str): Username that can login. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class DualControlAuthDataModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            domain (bool, date, datetime, dict, float, int, list, str, none_type): Domain for the user, null if local. [optional]  # noqa: E501
-            password (bool, date, datetime, dict, float, int, list, str, none_type): User password. [optional]  # noqa: E501
-            two_factor_token (bool, date, datetime, dict, float, int, list, str, none_type): Two Factor Token to login. [optional]  # noqa: E501
-            username (bool, date, datetime, dict, float, int, list, str, none_type): Username that can login. [optional]  # noqa: E501
+            domain (int): Domain for the user, null if local. [optional]  # noqa: E501
+            password (str): User password. [optional]  # noqa: E501
+            two_factor_token (str): Two Factor Token to login. [optional]  # noqa: E501
+            username (str): Username that can login. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

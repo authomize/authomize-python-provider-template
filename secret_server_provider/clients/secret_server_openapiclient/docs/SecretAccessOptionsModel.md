@@ -5,9 +5,9 @@ SecretAccessOptionsModel
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**custom_checkout_interval_days** | **bool, date, datetime, dict, float, int, list, str, none_type** | How many days is the checkout interval | [optional] 
-**custom_checkout_interval_hours** | **bool, date, datetime, dict, float, int, list, str, none_type** | How many hours is the checkout interval | [optional] 
-**custom_checkout_interval_minutes** | **bool, date, datetime, dict, float, int, list, str, none_type** | How many minutes is the checkout interval | [optional] 
+**custom_checkout_interval_days** | **int** | How many days is the checkout interval | [optional] 
+**custom_checkout_interval_hours** | **int** | How many hours is the checkout interval | [optional] 
+**custom_checkout_interval_minutes** | **int** | How many minutes is the checkout interval | [optional] 
 **editors_also_require_approval** | **bool** | When true editors cannot bypass approval when enabled | [optional] 
 **enable_double_lock** | **bool** | Is Doublelock enabled | [optional] 
 **enable_requires_approval_for_access** | **bool** | When true approval is required to access this Secret | [optional] 

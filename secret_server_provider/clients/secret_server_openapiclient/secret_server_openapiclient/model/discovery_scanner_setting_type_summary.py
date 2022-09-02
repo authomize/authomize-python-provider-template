@@ -57,10 +57,8 @@ class DiscoveryScannerSettingTypeSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class DiscoveryScannerSettingTypeSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'discovery_item_scanner_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_item_scanner_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_item_scanner_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_scan_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_suggested': (bool,),  # noqa: E501
+            'discovery_item_scanner_description': (str, none_type,),  # noqa: E501
+            'discovery_item_scanner_id': (int, none_type,),  # noqa: E501
+            'discovery_item_scanner_name': (str, none_type,),  # noqa: E501
+            'discovery_scan_type_id': (int, none_type,),  # noqa: E501
+            'is_suggested': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,10 +138,10 @@ class DiscoveryScannerSettingTypeSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_item_scanner_description (bool, date, datetime, dict, float, int, list, str, none_type): Description of the scanner. [optional]  # noqa: E501
-            discovery_item_scanner_id (bool, date, datetime, dict, float, int, list, str, none_type): Item Scanner ID. [optional]  # noqa: E501
-            discovery_item_scanner_name (bool, date, datetime, dict, float, int, list, str, none_type): Scanner name. [optional]  # noqa: E501
-            discovery_scan_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Scanner Type ID. [optional]  # noqa: E501
+            discovery_item_scanner_description (str): Description of the scanner. [optional]  # noqa: E501
+            discovery_item_scanner_id (int): Item Scanner ID. [optional]  # noqa: E501
+            discovery_item_scanner_name (str): Scanner name. [optional]  # noqa: E501
+            discovery_scan_type_id (int): Scanner Type ID. [optional]  # noqa: E501
             is_suggested (bool): True if this scanner is typically created. [optional]  # noqa: E501
         """
 
@@ -233,10 +228,10 @@ class DiscoveryScannerSettingTypeSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_item_scanner_description (bool, date, datetime, dict, float, int, list, str, none_type): Description of the scanner. [optional]  # noqa: E501
-            discovery_item_scanner_id (bool, date, datetime, dict, float, int, list, str, none_type): Item Scanner ID. [optional]  # noqa: E501
-            discovery_item_scanner_name (bool, date, datetime, dict, float, int, list, str, none_type): Scanner name. [optional]  # noqa: E501
-            discovery_scan_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Scanner Type ID. [optional]  # noqa: E501
+            discovery_item_scanner_description (str): Description of the scanner. [optional]  # noqa: E501
+            discovery_item_scanner_id (int): Item Scanner ID. [optional]  # noqa: E501
+            discovery_item_scanner_name (str): Scanner name. [optional]  # noqa: E501
+            discovery_scan_type_id (int): Scanner Type ID. [optional]  # noqa: E501
             is_suggested (bool): True if this scanner is typically created. [optional]  # noqa: E501
         """
 

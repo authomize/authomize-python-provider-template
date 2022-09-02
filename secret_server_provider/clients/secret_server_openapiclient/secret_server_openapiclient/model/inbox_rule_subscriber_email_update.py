@@ -57,10 +57,8 @@ class InboxRuleSubscriberEmailUpdate(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,27 +66,24 @@ class InboxRuleSubscriberEmailUpdate(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'email_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'subscribe': (bool,),  # noqa: E501
+            'email_address': (str, none_type,),  # noqa: E501
+            'subscribe': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -137,7 +132,7 @@ class InboxRuleSubscriberEmailUpdate(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): A specific email address to add / remove.. [optional]  # noqa: E501
+            email_address (str): A specific email address to add / remove.. [optional]  # noqa: E501
             subscribe (bool): Passing true will subscribe this email address, passing false will remove this email address along with any rule action history. [optional]  # noqa: E501
         """
 
@@ -224,7 +219,7 @@ class InboxRuleSubscriberEmailUpdate(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): A specific email address to add / remove.. [optional]  # noqa: E501
+            email_address (str): A specific email address to add / remove.. [optional]  # noqa: E501
             subscribe (bool): Passing true will subscribe this email address, passing false will remove this email address along with any rule action history. [optional]  # noqa: E501
         """
 

@@ -6,7 +6,7 @@ Metadata item to update
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **contains_personal_information** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
-**metadata_item_data_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | The sequence ID for the metadata field | [optional] 
+**metadata_item_data_id** | **int** | The sequence ID for the metadata field | [optional] 
 **value_bit** | [**UpdateFieldValueOfOptionalBoolean**](UpdateFieldValueOfOptionalBoolean.md) |  | [optional] 
 **value_date_time** | [**UpdateFieldValueOfOptionalDateTime**](UpdateFieldValueOfOptionalDateTime.md) |  | [optional] 
 **value_int** | [**UpdateFieldValueOfOptionalInt32**](UpdateFieldValueOfOptionalInt32.md) |  | [optional] 

@@ -61,10 +61,8 @@ class DirectoryServicesSynchronizationStatus(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class DirectoryServicesSynchronizationStatus(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'domain_status': ([DomainSynchronizationStatus],),  # noqa: E501
-            'end_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'error_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'estimated_percent_complete': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'next_synchronization_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'domain_status': ([DomainSynchronizationStatus], none_type,),  # noqa: E501
+            'end_date_time': (datetime, none_type,),  # noqa: E501
+            'error_count': (int, none_type,),  # noqa: E501
+            'estimated_percent_complete': (int, none_type,),  # noqa: E501
+            'next_synchronization_date_time': (datetime, none_type,),  # noqa: E501
+            'start_date_time': (datetime, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -152,11 +147,11 @@ class DirectoryServicesSynchronizationStatus(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             domain_status ([DomainSynchronizationStatus]): Results from the last synchronization for each domain.  If a synchronization is currently running this will indicate the results for the last synchronization and not the current running totals.. [optional]  # noqa: E501
-            end_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time that the last synchronization ended.  If a synchronization is currently running this will be empty.. [optional]  # noqa: E501
-            error_count (bool, date, datetime, dict, float, int, list, str, none_type): The number of errors since the last synchronization start time. [optional]  # noqa: E501
-            estimated_percent_complete (bool, date, datetime, dict, float, int, list, str, none_type): Based on last run time duration the percent complete assumes each run takes approximately the same amount of time. [optional]  # noqa: E501
-            next_synchronization_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time the synchronization is expected to run. [optional]  # noqa: E501
-            start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time that the last synchronization started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
+            end_date_time (datetime): The date and time that the last synchronization ended.  If a synchronization is currently running this will be empty.. [optional]  # noqa: E501
+            error_count (int): The number of errors since the last synchronization start time. [optional]  # noqa: E501
+            estimated_percent_complete (int): Based on last run time duration the percent complete assumes each run takes approximately the same amount of time. [optional]  # noqa: E501
+            next_synchronization_date_time (datetime): The next time the synchronization is expected to run. [optional]  # noqa: E501
+            start_date_time (datetime): The date and time that the last synchronization started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -243,11 +238,11 @@ class DirectoryServicesSynchronizationStatus(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             domain_status ([DomainSynchronizationStatus]): Results from the last synchronization for each domain.  If a synchronization is currently running this will indicate the results for the last synchronization and not the current running totals.. [optional]  # noqa: E501
-            end_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time that the last synchronization ended.  If a synchronization is currently running this will be empty.. [optional]  # noqa: E501
-            error_count (bool, date, datetime, dict, float, int, list, str, none_type): The number of errors since the last synchronization start time. [optional]  # noqa: E501
-            estimated_percent_complete (bool, date, datetime, dict, float, int, list, str, none_type): Based on last run time duration the percent complete assumes each run takes approximately the same amount of time. [optional]  # noqa: E501
-            next_synchronization_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time the synchronization is expected to run. [optional]  # noqa: E501
-            start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time that the last synchronization started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
+            end_date_time (datetime): The date and time that the last synchronization ended.  If a synchronization is currently running this will be empty.. [optional]  # noqa: E501
+            error_count (int): The number of errors since the last synchronization start time. [optional]  # noqa: E501
+            estimated_percent_complete (int): Based on last run time duration the percent complete assumes each run takes approximately the same amount of time. [optional]  # noqa: E501
+            next_synchronization_date_time (datetime): The next time the synchronization is expected to run. [optional]  # noqa: E501
+            start_date_time (datetime): The date and time that the last synchronization started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

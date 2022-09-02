@@ -57,10 +57,8 @@ class SecretDetailScheduleModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,43 +66,40 @@ class SecretDetailScheduleModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'change_every_months': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'change_every_months_day_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'change_every_months_instance': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'change_every_months_instance_target': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'friday': (bool,),  # noqa: E501
-            'monday': (bool,),  # noqa: E501
-            'month_schedule_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'number_monthly_day': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'only_change_if_expired': (bool,),  # noqa: E501
-            'saturday': (bool,),  # noqa: E501
-            'schedule_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'starting_on': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sunday': (bool,),  # noqa: E501
-            'thursday': (bool,),  # noqa: E501
-            'tuesday': (bool,),  # noqa: E501
-            'wednesday': (bool,),  # noqa: E501
-            'weeks': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'change_every_months': (int, none_type,),  # noqa: E501
+            'change_every_months_day_number': (int, none_type,),  # noqa: E501
+            'change_every_months_instance': (str, none_type,),  # noqa: E501
+            'change_every_months_instance_target': (str, none_type,),  # noqa: E501
+            'days': (int, none_type,),  # noqa: E501
+            'friday': (bool, none_type,),  # noqa: E501
+            'monday': (bool, none_type,),  # noqa: E501
+            'month_schedule_type': (str, none_type,),  # noqa: E501
+            'number_monthly_day': (int, none_type,),  # noqa: E501
+            'only_change_if_expired': (bool, none_type,),  # noqa: E501
+            'saturday': (bool, none_type,),  # noqa: E501
+            'schedule_type': (str, none_type,),  # noqa: E501
+            'starting_on': (datetime, none_type,),  # noqa: E501
+            'sunday': (bool, none_type,),  # noqa: E501
+            'thursday': (bool, none_type,),  # noqa: E501
+            'tuesday': (bool, none_type,),  # noqa: E501
+            'wednesday': (bool, none_type,),  # noqa: E501
+            'weeks': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -169,24 +164,24 @@ class SecretDetailScheduleModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            change_every_months (bool, date, datetime, dict, float, int, list, str, none_type): Change Every Months. [optional]  # noqa: E501
-            change_every_months_day_number (bool, date, datetime, dict, float, int, list, str, none_type): Change Every Months Day Number. [optional]  # noqa: E501
-            change_every_months_instance (bool, date, datetime, dict, float, int, list, str, none_type): Change Every Months Instance. [optional]  # noqa: E501
-            change_every_months_instance_target (bool, date, datetime, dict, float, int, list, str, none_type): Change Every MOnths Instance Target. [optional]  # noqa: E501
-            days (bool, date, datetime, dict, float, int, list, str, none_type): Days. [optional]  # noqa: E501
+            change_every_months (int): Change Every Months. [optional]  # noqa: E501
+            change_every_months_day_number (int): Change Every Months Day Number. [optional]  # noqa: E501
+            change_every_months_instance (str): Change Every Months Instance. [optional]  # noqa: E501
+            change_every_months_instance_target (str): Change Every MOnths Instance Target. [optional]  # noqa: E501
+            days (int): Days. [optional]  # noqa: E501
             friday (bool): Friday. [optional]  # noqa: E501
             monday (bool): Monday. [optional]  # noqa: E501
-            month_schedule_type (bool, date, datetime, dict, float, int, list, str, none_type): Month Schedule Type. [optional]  # noqa: E501
-            number_monthly_day (bool, date, datetime, dict, float, int, list, str, none_type): Number Monthly Day. [optional]  # noqa: E501
+            month_schedule_type (str): Month Schedule Type. [optional]  # noqa: E501
+            number_monthly_day (int): Number Monthly Day. [optional]  # noqa: E501
             only_change_if_expired (bool): Only Change If Expired. [optional]  # noqa: E501
             saturday (bool): Saturday. [optional]  # noqa: E501
-            schedule_type (bool, date, datetime, dict, float, int, list, str, none_type): Schedule Type. [optional]  # noqa: E501
-            starting_on (bool, date, datetime, dict, float, int, list, str, none_type): Starting On. [optional]  # noqa: E501
+            schedule_type (str): Schedule Type. [optional]  # noqa: E501
+            starting_on (datetime): Starting On. [optional]  # noqa: E501
             sunday (bool): Sunday. [optional]  # noqa: E501
             thursday (bool): Thursday. [optional]  # noqa: E501
             tuesday (bool): Tuesday. [optional]  # noqa: E501
             wednesday (bool): Wednesday. [optional]  # noqa: E501
-            weeks (bool, date, datetime, dict, float, int, list, str, none_type): Weeks. [optional]  # noqa: E501
+            weeks (int): Weeks. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -272,24 +267,24 @@ class SecretDetailScheduleModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            change_every_months (bool, date, datetime, dict, float, int, list, str, none_type): Change Every Months. [optional]  # noqa: E501
-            change_every_months_day_number (bool, date, datetime, dict, float, int, list, str, none_type): Change Every Months Day Number. [optional]  # noqa: E501
-            change_every_months_instance (bool, date, datetime, dict, float, int, list, str, none_type): Change Every Months Instance. [optional]  # noqa: E501
-            change_every_months_instance_target (bool, date, datetime, dict, float, int, list, str, none_type): Change Every MOnths Instance Target. [optional]  # noqa: E501
-            days (bool, date, datetime, dict, float, int, list, str, none_type): Days. [optional]  # noqa: E501
+            change_every_months (int): Change Every Months. [optional]  # noqa: E501
+            change_every_months_day_number (int): Change Every Months Day Number. [optional]  # noqa: E501
+            change_every_months_instance (str): Change Every Months Instance. [optional]  # noqa: E501
+            change_every_months_instance_target (str): Change Every MOnths Instance Target. [optional]  # noqa: E501
+            days (int): Days. [optional]  # noqa: E501
             friday (bool): Friday. [optional]  # noqa: E501
             monday (bool): Monday. [optional]  # noqa: E501
-            month_schedule_type (bool, date, datetime, dict, float, int, list, str, none_type): Month Schedule Type. [optional]  # noqa: E501
-            number_monthly_day (bool, date, datetime, dict, float, int, list, str, none_type): Number Monthly Day. [optional]  # noqa: E501
+            month_schedule_type (str): Month Schedule Type. [optional]  # noqa: E501
+            number_monthly_day (int): Number Monthly Day. [optional]  # noqa: E501
             only_change_if_expired (bool): Only Change If Expired. [optional]  # noqa: E501
             saturday (bool): Saturday. [optional]  # noqa: E501
-            schedule_type (bool, date, datetime, dict, float, int, list, str, none_type): Schedule Type. [optional]  # noqa: E501
-            starting_on (bool, date, datetime, dict, float, int, list, str, none_type): Starting On. [optional]  # noqa: E501
+            schedule_type (str): Schedule Type. [optional]  # noqa: E501
+            starting_on (datetime): Starting On. [optional]  # noqa: E501
             sunday (bool): Sunday. [optional]  # noqa: E501
             thursday (bool): Thursday. [optional]  # noqa: E501
             tuesday (bool): Tuesday. [optional]  # noqa: E501
             wednesday (bool): Wednesday. [optional]  # noqa: E501
-            weeks (bool, date, datetime, dict, float, int, list, str, none_type): Weeks. [optional]  # noqa: E501
+            weeks (int): Weeks. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

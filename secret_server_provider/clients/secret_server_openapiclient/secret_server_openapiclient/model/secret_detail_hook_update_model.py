@@ -69,10 +69,8 @@ class SecretDetailHookUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,44 +79,41 @@ class SecretDetailHookUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'arguments': (UpdateFieldValueOfString,),  # noqa: E501
-            'database': (UpdateFieldValueOfString,),  # noqa: E501
-            'description': (UpdateFieldValueOfString,),  # noqa: E501
-            'event_action_id': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'failure_message': (UpdateFieldValueOfString,),  # noqa: E501
-            'name': (UpdateFieldValueOfString,),  # noqa: E501
-            'parameters': ([SecretDetailHookParameterViewModel],),  # noqa: E501
-            'port': (UpdateFieldValueOfString,),  # noqa: E501
-            'pre_post_option': (UpdateFieldValueOfString,),  # noqa: E501
-            'privileged_secret_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'script_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'script_type_id': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'server_key_digest': (UpdateFieldValueOfString,),  # noqa: E501
-            'server_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'sort_order': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'ssh_key_secret_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'status': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'stop_on_failure': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'arguments': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'database': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'event_action_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'failure_message': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'parameters': ([SecretDetailHookParameterViewModel], none_type,),  # noqa: E501
+            'port': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'pre_post_option': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'privileged_secret_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'script_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'script_type_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'server_key_digest': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'server_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'sort_order': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'ssh_key_secret_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'status': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'stop_on_failure': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

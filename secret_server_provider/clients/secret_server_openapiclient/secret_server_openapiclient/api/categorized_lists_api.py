@@ -87,7 +87,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'categorized_list_item_single_create_args':
                         (CategorizedListItemSingleCreateArgs,),
                 },
@@ -144,7 +144,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'categorized_list_item_create_args':
                         (CategorizedListItemCreateArgs,),
                 },
@@ -201,7 +201,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'categorized_list_item_create_with_file_args':
                         (CategorizedListItemCreateWithFileArgs,),
                 },
@@ -260,9 +260,9 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'category':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'categorized_list_item_create_args':
                         (CategorizedListItemCreateArgs,),
                 },
@@ -370,7 +370,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'categorized_list_id': 'categorizedListId',
@@ -465,7 +465,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'categorized_list_id': 'categorizedListId',
@@ -516,7 +516,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'categorized_list_id': 'categorizedListId',
@@ -574,21 +574,21 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_category':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_null_category_is_uncategorized':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'categorized_list_id': 'categorizedListId',
@@ -655,9 +655,9 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'option_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'list_id': 'listId',
@@ -710,7 +710,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'categorized_list_id': 'categorizedListId',
@@ -762,7 +762,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'categorized_list_item_create_args':
                         (CategorizedListItemCreateArgs,),
                 },
@@ -827,17 +827,17 @@ class CategorizedListsApi(object):
                     'filter_include_inactive':
                         (bool,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_active': 'filter.includeActive',
@@ -908,19 +908,19 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'categorized_list_id': 'categorizedListId',
@@ -984,7 +984,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'categorized_list_item_single_update_args':
                         (CategorizedListItemSingleUpdateArgs,),
                 },
@@ -1041,7 +1041,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'categorized_list_item_update_args':
                         (CategorizedListItemUpdateArgs,),
                 },
@@ -1098,7 +1098,7 @@ class CategorizedListsApi(object):
                 },
                 'openapi_types': {
                     'categorized_list_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'categorized_list_update_args':
                         (CategorizedListUpdateArgs,),
                 },
@@ -1138,7 +1138,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             categorized_list_item_single_create_args (CategorizedListItemSingleCreateArgs): List option to be added. [optional]
@@ -1222,7 +1222,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             categorized_list_item_create_args (CategorizedListItemCreateArgs): List options to be added. [optional]
@@ -1306,7 +1306,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             categorized_list_item_create_with_file_args (CategorizedListItemCreateWithFileArgs): File containing list options to add. [optional]
@@ -1391,8 +1391,8 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
-            category (bool, date, datetime, dict, float, int, list, str, none_type): Category to assign
+            categorized_list_id (str): List ID
+            category (str): Category to assign
 
         Keyword Args:
             categorized_list_item_create_args (CategorizedListItemCreateArgs): List options to be added. [optional]
@@ -1557,7 +1557,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of list to be deleted
+            categorized_list_id (str): ID of list to be deleted
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1718,7 +1718,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1801,7 +1801,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1884,16 +1884,16 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
-            filter_category (bool, date, datetime, dict, float, int, list, str, none_type): Category text to filter by. If empty or not included, will return items for all categories.. [optional]
+            filter_category (str): Category text to filter by. If empty or not included, will return items for all categories.. [optional]
             filter_null_category_is_uncategorized (bool): If true and Category value is an empty string or not included, will return only uncategorized items; otherwise, an empty category filter is treated as no category filter.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1975,8 +1975,8 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            list_id (bool, date, datetime, dict, float, int, list, str, none_type): List id
-            option_id (bool, date, datetime, dict, float, int, list, str, none_type): List option id
+            list_id (str): List id
+            option_id (str): List option id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2061,7 +2061,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2144,7 +2144,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             categorized_list_item_create_args (CategorizedListItemCreateArgs): List options to be added. [optional]
@@ -2230,12 +2230,12 @@ class CategorizedListsApi(object):
         Keyword Args:
             filter_include_active (bool): Whether to include active lists in results (when excluded equals true). [optional]
             filter_include_inactive (bool): Whether to include inactive lists in results. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_text (str): Search text. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2314,15 +2314,15 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List Id
+            categorized_list_id (str): List Id
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2403,7 +2403,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             categorized_list_item_single_update_args (CategorizedListItemSingleUpdateArgs): List option to be updated. [optional]
@@ -2487,7 +2487,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             categorized_list_item_update_args (CategorizedListItemUpdateArgs): List options to be updated. [optional]
@@ -2571,7 +2571,7 @@ class CategorizedListsApi(object):
         >>> result = thread.get()
 
         Args:
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): List ID
+            categorized_list_id (str): List ID
 
         Keyword Args:
             categorized_list_update_args (CategorizedListUpdateArgs): List to be updated. [optional]

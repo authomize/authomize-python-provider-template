@@ -105,27 +105,27 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_change_password_args = SecretChangePasswordArgs(
-        comment=None,
-        double_lock_password=None,
+        comment="comment_example",
+        double_lock_password="double_lock_password_example",
         force_check_in=True,
         include_inactive=True,
-        new_password=None,
+        new_password="new_password_example",
         no_auto_checkout=True,
         ssh_key_args=RotateSshKeyArgs(
             generate_passphrase=True,
             generate_ssh_keys=True,
-            passphrase=None,
-            private_key=None,
+            passphrase="passphrase_example",
+            private_key="private_key_example",
         ),
-        ticket_number=None,
-        ticket_system_id=None,
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
     ) # SecretChangePasswordArgs | Secret options (optional)
 
     # example passing only required values which don't have defaults set
@@ -151,12 +151,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_change_password_args** | [**SecretChangePasswordArgs**](SecretChangePasswordArgs.md)| Secret options | [optional]
 
 ### Return type
@@ -226,17 +226,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    id = 1 # int | Secret ID
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_restricted_args = SecretRestrictedArgs(
-        comment=None,
-        double_lock_password=None,
+        comment="comment_example",
+        double_lock_password="double_lock_password_example",
         force_check_in=True,
         include_inactive=True,
-        new_password=None,
+        new_password="new_password_example",
         no_auto_checkout=True,
-        ticket_number=None,
-        ticket_system_id=None,
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
     ) # SecretRestrictedArgs | Secret options (optional)
 
     # example passing only required values which don't have defaults set
@@ -262,8 +262,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **id** | **int**| Secret ID |
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_restricted_args** | [**SecretRestrictedArgs**](SecretRestrictedArgs.md)| Secret options | [optional]
 
 ### Return type
@@ -332,8 +332,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    id = 1 # int | Secret ID
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -358,8 +358,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **id** | **int**| Secret ID |
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -432,18 +432,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=ConvertTemplateActionModel(
             field_mapping=[
                 ConvertTemplateFieldModel(
-                    destination_field_id=None,
-                    source_field_id=None,
-                    source_field_value=None,
+                    destination_field_id=1,
+                    source_field_id=1,
+                    source_field_value="source_field_value_example",
                 ),
             ],
-            folder_id=None,
+            folder_id=1,
             is_bulk=True,
-            new_secret_name=None,
+            new_secret_name="new_secret_name_example",
             secret_ids=[
-                None,
+                1,
             ],
-            secret_template_id=None,
+            secret_template_id=1,
         ),
     ) # SecretDetailConvertTemplateArgs | args (optional)
 
@@ -535,37 +535,37 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         auto_change_enabled=True,
         check_out_change_password_enabled=True,
         check_out_enabled=True,
-        check_out_interval_minutes=None,
+        check_out_interval_minutes=1,
         delay_indexing=True,
         enable_inherit_permissions=True,
         enable_inherit_secret_policy=True,
-        folder_id=None,
+        folder_id=1,
         items=[
             RestSecretItem(
-                field_description=None,
-                field_id=None,
-                field_name=None,
-                file_attachment_id=None,
-                filename=None,
+                field_description="field_description_example",
+                field_id=1,
+                field_name="field_name_example",
+                file_attachment_id=1,
+                filename="filename_example",
                 is_file=True,
                 is_list=True,
                 is_notes=True,
                 is_password=True,
-                item_id=None,
-                item_value=None,
+                item_id=1,
+                item_value="item_value_example",
                 list_type=SecretFieldListType("{}"),
-                slug=None,
+                slug="slug_example",
             ),
         ],
-        launcher_connect_as_secret_id=None,
-        name=None,
-        password_type_web_script_id=None,
+        launcher_connect_as_secret_id=1,
+        name="name_example",
+        password_type_web_script_id=1,
         proxy_enabled=True,
         requires_comment=True,
-        secret_policy_id=None,
-        secret_template_id=None,
+        secret_policy_id=1,
+        secret_template_id=1,
         session_recording_enabled=True,
-        site_id=None,
+        site_id=1,
         ssh_key_args=SshKeyArgs(
             generate_passphrase=True,
             generate_ssh_keys=True,
@@ -656,12 +656,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -686,12 +686,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -759,13 +759,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    slug = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret field name
+    id = 1 # int | Secret ID
+    slug = "slug_example" # str | Secret field name
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    list_guid = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret options (optional)
+    list_guid = "listGuid_example" # str | Secret options (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -790,13 +790,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret field name |
+ **id** | **int**| Secret ID |
+ **slug** | **str**| Secret field name |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **list_guid** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret options | [optional]
+ **list_guid** | **str**| Secret options | [optional]
 
 ### Return type
 
@@ -865,21 +865,21 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_restricted_args = SecretRestrictedArgs(
-        comment=None,
-        double_lock_password=None,
+        comment="comment_example",
+        double_lock_password="double_lock_password_example",
         force_check_in=True,
         include_inactive=True,
-        new_password=None,
+        new_password="new_password_example",
         no_auto_checkout=True,
-        ticket_number=None,
-        ticket_system_id=None,
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
     ) # SecretRestrictedArgs | Secret options (optional)
 
     # example passing only required values which don't have defaults set
@@ -905,12 +905,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_restricted_args** | [**SecretRestrictedArgs**](SecretRestrictedArgs.md)| Secret options | [optional]
 
 ### Return type
@@ -982,14 +982,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     secrets_export_args = SecretsExportArgs(
         data=SecretsExportModel(
-            double_lock_password=None,
+            double_lock_password="double_lock_password_example",
             export_child_folders=True,
             export_file_type=ExportFileType("{}"),
             export_folder_path=True,
             export_totp=True,
-            folder_id=None,
-            notes=None,
-            password=None,
+            folder_id=1,
+            notes="notes_example",
+            password="password_example",
         ),
     ) # SecretsExportArgs | args (optional)
 
@@ -1077,11 +1077,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     secret_check_out_extension_args = SecretCheckOutExtensionArgs(
         data=SecretCheckOutExtensionModel(
-            minutes_to_add=None,
-            notes=None,
+            minutes_to_add=1,
+            notes="notes_example",
         ),
     ) # SecretCheckOutExtensionArgs | args (optional)
 
@@ -1108,7 +1108,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **secret_check_out_extension_args** | [**SecretCheckOutExtensionArgs**](SecretCheckOutExtensionArgs.md)| args | [optional]
 
 ### Return type
@@ -1177,8 +1177,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The secret to favorite or unfavorite.
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_id = 1 # int | The secret to favorite or unfavorite.
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     favorite_secret_args = FavoriteSecretArgs(
         is_favorite=True,
     ) # FavoriteSecretArgs | args (optional)
@@ -1206,8 +1206,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The secret to favorite or unfavorite. |
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_id** | **int**| The secret to favorite or unfavorite. |
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **favorite_secret_args** | [**FavoriteSecretArgs**](FavoriteSecretArgs.md)| args | [optional]
 
 ### Return type
@@ -1276,12 +1276,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    filter_secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The Id of the associated Secret. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_secret_id = 1 # int | The Id of the associated Secret. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1298,12 +1298,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The Id of the associated Secret. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_secret_id** | **int**| The Id of the associated Secret. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1374,9 +1374,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     secret_detail_convert_template_info_args = SecretDetailConvertTemplateInfoArgs(
         data=ConvertTemplateInfoModel(
-            destination_template_id=None,
+            destination_template_id=1,
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # SecretDetailConvertTemplateInfoArgs | args (optional)
@@ -1504,7 +1504,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **secrets_service_get_field**
-> bool, date, datetime, dict, float, int, list, str, none_type secrets_service_get_field(id, slug)
+> str secrets_service_get_field(id, slug)
 
 Get Secret Field
 
@@ -1543,15 +1543,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    slug = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret field name
+    id = 1 # int | Secret ID
+    slug = "slug_example" # str | Secret field name
     include_inactive = True # bool | Whether to include inactive secrets in the results (optional)
     no_auto_checkout = True # bool | Don't check out the secret if needed (optional)
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1576,19 +1576,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret field name |
+ **id** | **int**| Secret ID |
+ **slug** | **str**| Secret field name |
  **include_inactive** | **bool**| Whether to include inactive secrets in the results | [optional]
  **no_auto_checkout** | **bool**| Don&#39;t check out the secret if needed | [optional]
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -1652,10 +1652,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     is_edit_mode = True # bool | isEditMode (optional)
     load_read_only_flags = True # bool | loadReadOnlyFlags (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1680,10 +1680,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **is_edit_mode** | **bool**| isEditMode | [optional]
  **load_read_only_flags** | **bool**| loadReadOnlyFlags | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -1751,11 +1751,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    slug = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret field name
+    id = 1 # int | Secret ID
+    slug = "slug_example" # str | Secret field name
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
 
     # example passing only required values which don't have defaults set
@@ -1781,11 +1781,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret field name |
+ **id** | **int**| Secret ID |
+ **slug** | **str**| Secret field name |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
 
 ### Return type
@@ -1854,17 +1854,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    slug = None # bool, date, datetime, dict, float, int, list, str, none_type | The field slug name of the list field. This is the fieldSlugName property of the SecretField object. By default, it is the lower-case field name with all spaces replaced with dashes (-).
+    id = 1 # int | Secret ID
+    slug = "slug_example" # str | The field slug name of the list field. This is the fieldSlugName property of the SecretField object. By default, it is the lower-case field name with all spaces replaced with dashes (-).
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1889,17 +1889,17 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| The field slug name of the list field. This is the fieldSlugName property of the SecretField object. By default, it is the lower-case field name with all spaces replaced with dashes (-). |
+ **id** | **int**| Secret ID |
+ **slug** | **str**| The field slug name of the list field. This is the fieldSlugName property of the SecretField object. By default, it is the lower-case field name with all spaces replaced with dashes (-). |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1967,8 +1967,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    id = 1 # int | Secret ID
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1993,8 +1993,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **id** | **int**| Secret ID |
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -2063,21 +2063,21 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_restricted_args = SecretRestrictedArgs(
-        comment=None,
-        double_lock_password=None,
+        comment="comment_example",
+        double_lock_password="double_lock_password_example",
         force_check_in=True,
         include_inactive=True,
-        new_password=None,
+        new_password="new_password_example",
         no_auto_checkout=True,
-        ticket_number=None,
-        ticket_system_id=None,
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
     ) # SecretRestrictedArgs | Secret options (optional)
 
     # example passing only required values which don't have defaults set
@@ -2103,12 +2103,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_restricted_args** | [**SecretRestrictedArgs**](SecretRestrictedArgs.md)| Secret options | [optional]
 
 ### Return type
@@ -2177,15 +2177,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     is_exporting = True # bool | isExporting (optional)
     filter_include_password_change_log = True # bool | Whether or not to include password changes in data (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2210,15 +2210,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **is_exporting** | **bool**| isExporting | [optional]
  **filter_include_password_change_log** | **bool**| Whether or not to include password changes in data | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -2290,7 +2290,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     secret_search_extended_args = SecretSearchExtendedArgs(
         data=SecretSearchExtendedData(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # SecretSearchExtendedArgs | args (optional)
@@ -2378,12 +2378,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2408,12 +2408,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -2484,13 +2484,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
     secret_proxy_args = SecretProxyArgs(
-        launcher_type=None,
-        machine=None,
-        secret_id=None,
-        site_id=None,
+        launcher_type=1,
+        machine="machine_example",
+        secret_id=1,
+        site_id=1,
     ) # SecretProxyArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -2510,7 +2510,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
  **secret_proxy_args** | [**SecretProxyArgs**](SecretProxyArgs.md)| args | [optional]
 
@@ -2580,12 +2580,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2610,12 +2610,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -2686,13 +2686,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
     secret_proxy_args = SecretProxyArgs(
-        launcher_type=None,
-        machine=None,
-        secret_id=None,
-        site_id=None,
+        launcher_type=1,
+        machine="machine_example",
+        secret_id=1,
+        site_id=1,
     ) # SecretProxyArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -2712,7 +2712,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
  **secret_proxy_args** | [**SecretProxyArgs**](SecretProxyArgs.md)| args | [optional]
 
@@ -2785,10 +2785,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
     secret_ssh_terminal_args = SecretSshTerminalArgs(
-        secret_id=None,
+        secret_id=1,
     ) # SecretSshTerminalArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -2808,7 +2808,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
  **secret_ssh_terminal_args** | [**SecretSshTerminalArgs**](SecretSshTerminalArgs.md)| args | [optional]
 
@@ -2878,12 +2878,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2908,12 +2908,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -2981,14 +2981,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     include_inactive = True # bool | Whether to include inactive secrets in the results (optional)
     no_auto_checkout = True # bool | Don't check out the secret if needed (optional)
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -3013,14 +3013,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **include_inactive** | **bool**| Whether to include inactive secrets in the results | [optional]
  **no_auto_checkout** | **bool**| Don&#39;t check out the secret if needed | [optional]
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -3088,10 +3088,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
 
     # example passing only required values which don't have defaults set
@@ -3117,10 +3117,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
 
 ### Return type
@@ -3189,12 +3189,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -3219,12 +3219,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -3252,7 +3252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **secrets_service_put_field**
-> bool, date, datetime, dict, float, int, list, str, none_type secrets_service_put_field(id, slug)
+> str secrets_service_put_field(id, slug)
 
 Update Secret Field
 
@@ -3292,26 +3292,26 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    slug = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret field name
+    id = 1 # int | Secret ID
+    slug = "slug_example" # str | Secret field name
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_item_update_args = SecretItemUpdateArgs(
-        comment=None,
-        double_lock_password=None,
+        comment="comment_example",
+        double_lock_password="double_lock_password_example",
 null,
-        file_attachment=None,
-        file_name=None,
+        file_attachment=open('/path/to/file', 'rb'),
+        file_name="file_name_example",
         force_check_in=True,
         include_inactive=True,
-        new_password=None,
+        new_password="new_password_example",
         no_auto_checkout=True,
-        ticket_number=None,
-        ticket_system_id=None,
-        value=None,
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
+        value="value_example",
     ) # SecretItemUpdateArgs | Secret options (optional)
 
     # example passing only required values which don't have defaults set
@@ -3337,18 +3337,18 @@ null,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret field name |
+ **id** | **int**| Secret ID |
+ **slug** | **str**| Secret field name |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_item_update_args** | [**SecretItemUpdateArgs**](SecretItemUpdateArgs.md)| Secret options | [optional]
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -3372,7 +3372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **secrets_service_restricted_field**
-> bool, date, datetime, dict, float, int, list, str, none_type secrets_service_restricted_field(id, slug)
+> str secrets_service_restricted_field(id, slug)
 
 Get Restricted Secret Field
 
@@ -3412,22 +3412,22 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    slug = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret field name
+    id = 1 # int | Secret ID
+    slug = "slug_example" # str | Secret field name
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_restricted_args = SecretRestrictedArgs(
-        comment=None,
-        double_lock_password=None,
+        comment="comment_example",
+        double_lock_password="double_lock_password_example",
         force_check_in=True,
         include_inactive=True,
-        new_password=None,
+        new_password="new_password_example",
         no_auto_checkout=True,
-        ticket_number=None,
-        ticket_system_id=None,
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
     ) # SecretRestrictedArgs | Secret options (optional)
 
     # example passing only required values which don't have defaults set
@@ -3453,18 +3453,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret field name |
+ **id** | **int**| Secret ID |
+ **slug** | **str**| Secret field name |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_restricted_args** | [**SecretRestrictedArgs**](SecretRestrictedArgs.md)| Secret options | [optional]
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -3528,12 +3528,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -3558,12 +3558,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -3633,13 +3633,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     filter_allow_double_locks = True # bool | Whether to allow DoubleLocks as part of the search. True by default. (optional)
     filter_do_not_calculate_total = True # bool | Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search. (optional)
-    filter_double_lock_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Only include Secrets with this DoubleLock ID assigned in the search results. (optional)
+    filter_double_lock_id = 1 # int | Only include Secrets with this DoubleLock ID assigned in the search results. (optional)
     filter_extended_fields = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | An array of names of Secret Template fields to return.  Only exposed fields can be returned. (optional)
-    filter_extended_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. (optional)
-    filter_folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets within the specified folder. (optional)
-    filter_heartbeat_status = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets with a certain heartbeat status. (optional)
+        "filter.extendedFields_example",
+    ] # [str] | An array of names of Secret Template fields to return.  Only exposed fields can be returned. (optional)
+    filter_extended_type_id = 1 # int | If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. (optional)
+    filter_folder_id = 1 # int | If not null, returns only secrets within the specified folder. (optional)
+    filter_heartbeat_status = "filter.heartbeatStatus_example" # str | If not null, returns only secrets with a certain heartbeat status. (optional)
     filter_include_active = True # bool | Whether to include active secrets in results (when excluded equals true). (optional)
     filter_include_inactive = True # bool | Whether to include inactive secrets in results. (optional)
     filter_include_restricted = True # bool | Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view. (optional)
@@ -3648,20 +3648,20 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     filter_only_rpc_enabled = True # bool | Whether to only include secrets whose template has Remote Password Changing enabled. (optional)
     filter_only_shared_with_me = True # bool | When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned. (optional)
     filter_password_type_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | If not null, returns only secrets matching the specified password types. (optional)
-    filter_permission_required = None # bool, date, datetime, dict, float, int, list, str, none_type | Specify whether to filter by List, View, Edit, or Owner permission. Default is List. (optional)
-    filter_scope = None # bool, date, datetime, dict, float, int, list, str, none_type | Specify whether to search All, Recent, or Favorites (optional)
-    filter_search_field = None # bool, date, datetime, dict, float, int, list, str, none_type | If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. (optional)
-    filter_search_field_slug = None # bool, date, datetime, dict, float, int, list, str, none_type | If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | The text to match in the secret name, field value, or list field contents. (optional)
-    filter_secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets matching the specified template. (optional)
-    filter_site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets within a the specified site. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+        1,
+    ] # [int] | If not null, returns only secrets matching the specified password types. (optional)
+    filter_permission_required = "filter.permissionRequired_example" # str | Specify whether to filter by List, View, Edit, or Owner permission. Default is List. (optional)
+    filter_scope = "filter.scope_example" # str | Specify whether to search All, Recent, or Favorites (optional)
+    filter_search_field = "filter.searchField_example" # str | If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. (optional)
+    filter_search_field_slug = "filter.searchFieldSlug_example" # str | If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. (optional)
+    filter_search_text = "filter.searchText_example" # str | The text to match in the secret name, field value, or list field contents. (optional)
+    filter_secret_template_id = 1 # int | If not null, returns only secrets matching the specified template. (optional)
+    filter_site_id = 1 # int | If not null, returns only secrets within a the specified site. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -3680,11 +3680,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_allow_double_locks** | **bool**| Whether to allow DoubleLocks as part of the search. True by default. | [optional]
  **filter_do_not_calculate_total** | **bool**| Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search. | [optional]
- **filter_double_lock_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only include Secrets with this DoubleLock ID assigned in the search results. | [optional]
- **filter_extended_fields** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| An array of names of Secret Template fields to return.  Only exposed fields can be returned. | [optional]
- **filter_extended_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. | [optional]
- **filter_folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets within the specified folder. | [optional]
- **filter_heartbeat_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets with a certain heartbeat status. | [optional]
+ **filter_double_lock_id** | **int**| Only include Secrets with this DoubleLock ID assigned in the search results. | [optional]
+ **filter_extended_fields** | **[str]**| An array of names of Secret Template fields to return.  Only exposed fields can be returned. | [optional]
+ **filter_extended_type_id** | **int**| If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. | [optional]
+ **filter_folder_id** | **int**| If not null, returns only secrets within the specified folder. | [optional]
+ **filter_heartbeat_status** | **str**| If not null, returns only secrets with a certain heartbeat status. | [optional]
  **filter_include_active** | **bool**| Whether to include active secrets in results (when excluded equals true). | [optional]
  **filter_include_inactive** | **bool**| Whether to include inactive secrets in results. | [optional]
  **filter_include_restricted** | **bool**| Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view. | [optional]
@@ -3692,19 +3692,19 @@ Name | Type | Description  | Notes
  **filter_is_exact_match** | **bool**| Whether to do an exact match of the search text or a partial match. If an exact match, the entire secret name, field value, or list option in a list field must match the search text. | [optional]
  **filter_only_rpc_enabled** | **bool**| Whether to only include secrets whose template has Remote Password Changing enabled. | [optional]
  **filter_only_shared_with_me** | **bool**| When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned. | [optional]
- **filter_password_type_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| If not null, returns only secrets matching the specified password types. | [optional]
- **filter_permission_required** | **bool, date, datetime, dict, float, int, list, str, none_type**| Specify whether to filter by List, View, Edit, or Owner permission. Default is List. | [optional]
- **filter_scope** | **bool, date, datetime, dict, float, int, list, str, none_type**| Specify whether to search All, Recent, or Favorites | [optional]
- **filter_search_field** | **bool, date, datetime, dict, float, int, list, str, none_type**| If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. | [optional]
- **filter_search_field_slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| The text to match in the secret name, field value, or list field contents. | [optional]
- **filter_secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets matching the specified template. | [optional]
- **filter_site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets within a the specified site. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_password_type_ids** | **[int]**| If not null, returns only secrets matching the specified password types. | [optional]
+ **filter_permission_required** | **str**| Specify whether to filter by List, View, Edit, or Owner permission. Default is List. | [optional]
+ **filter_scope** | **str**| Specify whether to search All, Recent, or Favorites | [optional]
+ **filter_search_field** | **str**| If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. | [optional]
+ **filter_search_field_slug** | **str**| If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. | [optional]
+ **filter_search_text** | **str**| The text to match in the secret name, field value, or list field contents. | [optional]
+ **filter_secret_template_id** | **int**| If not null, returns only secrets matching the specified template. | [optional]
+ **filter_site_id** | **int**| If not null, returns only secrets within a the specified site. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -3732,7 +3732,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **secrets_service_search_total_v2**
-> bool, date, datetime, dict, float, int, list, str, none_type secrets_service_search_total_v2()
+> int secrets_service_search_total_v2()
 
 Get Secret Search Total
 
@@ -3773,14 +3773,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     filter_allow_double_locks = True # bool | Whether to allow DoubleLocks as part of the search. True by default. (optional)
     filter_do_not_calculate_total = True # bool | Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search. (optional)
-    filter_double_lock_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Only include Secrets with this DoubleLock ID assigned in the search results. (optional)
+    filter_double_lock_id = 1 # int | Only include Secrets with this DoubleLock ID assigned in the search results. (optional)
     filter_extended_fields = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | An array of names of Secret Template fields to return.  Only exposed fields can be returned. (optional)
-    filter_extended_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. (optional)
-    filter_folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets within the specified folder. (optional)
+        "filter.extendedFields_example",
+    ] # [str] | An array of names of Secret Template fields to return.  Only exposed fields can be returned. (optional)
+    filter_extended_type_id = 1 # int | If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. (optional)
+    filter_folder_id = 1 # int | If not null, returns only secrets within the specified folder. (optional)
     filter_has_launcher = True # bool | Whether to only return secrets with or without launchers. If null, returns secrets regardless of whether they have launchers. (optional)
-    filter_heartbeat_status = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets with a certain heartbeat status. (optional)
+    filter_heartbeat_status = "filter.heartbeatStatus_example" # str | If not null, returns only secrets with a certain heartbeat status. (optional)
     filter_include_active = True # bool | Whether to include active secrets in results (when excluded equals true). (optional)
     filter_include_inactive = True # bool | Whether to include inactive secrets in results. (optional)
     filter_include_restricted = True # bool | Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view. (optional)
@@ -3789,22 +3789,22 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     filter_only_rpc_enabled = True # bool | Whether to only include secrets whose template has Remote Password Changing enabled. (optional)
     filter_only_shared_with_me = True # bool | When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned. (optional)
     filter_password_type_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | If not null, returns only secrets matching the specified password types. (optional)
-    filter_permission_required = None # bool, date, datetime, dict, float, int, list, str, none_type | Specify whether to filter by List, View, Edit, or Owner permission. Default is List. (optional)
-    filter_scope = None # bool, date, datetime, dict, float, int, list, str, none_type | Specify whether to search All, Recent, or Favorites (optional)
-    filter_search_field = None # bool, date, datetime, dict, float, int, list, str, none_type | If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. (optional)
-    filter_search_field_slug = None # bool, date, datetime, dict, float, int, list, str, none_type | If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | The text to match in the secret name, field value, or list field contents. (optional)
+        1,
+    ] # [int] | If not null, returns only secrets matching the specified password types. (optional)
+    filter_permission_required = "filter.permissionRequired_example" # str | Specify whether to filter by List, View, Edit, or Owner permission. Default is List. (optional)
+    filter_scope = "filter.scope_example" # str | Specify whether to search All, Recent, or Favorites (optional)
+    filter_search_field = "filter.searchField_example" # str | If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. (optional)
+    filter_search_field_slug = "filter.searchFieldSlug_example" # str | If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. (optional)
+    filter_search_text = "filter.searchText_example" # str | The text to match in the secret name, field value, or list field contents. (optional)
     filter_secret_template_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | If not null or empty, returns only secrets matching the specified templates. (optional)
-    filter_site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets within a the specified site. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+        1,
+    ] # [int] | If not null or empty, returns only secrets matching the specified templates. (optional)
+    filter_site_id = 1 # int | If not null, returns only secrets within a the specified site. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -3823,12 +3823,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_allow_double_locks** | **bool**| Whether to allow DoubleLocks as part of the search. True by default. | [optional]
  **filter_do_not_calculate_total** | **bool**| Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search. | [optional]
- **filter_double_lock_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only include Secrets with this DoubleLock ID assigned in the search results. | [optional]
- **filter_extended_fields** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| An array of names of Secret Template fields to return.  Only exposed fields can be returned. | [optional]
- **filter_extended_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. | [optional]
- **filter_folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets within the specified folder. | [optional]
+ **filter_double_lock_id** | **int**| Only include Secrets with this DoubleLock ID assigned in the search results. | [optional]
+ **filter_extended_fields** | **[str]**| An array of names of Secret Template fields to return.  Only exposed fields can be returned. | [optional]
+ **filter_extended_type_id** | **int**| If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. | [optional]
+ **filter_folder_id** | **int**| If not null, returns only secrets within the specified folder. | [optional]
  **filter_has_launcher** | **bool**| Whether to only return secrets with or without launchers. If null, returns secrets regardless of whether they have launchers. | [optional]
- **filter_heartbeat_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets with a certain heartbeat status. | [optional]
+ **filter_heartbeat_status** | **str**| If not null, returns only secrets with a certain heartbeat status. | [optional]
  **filter_include_active** | **bool**| Whether to include active secrets in results (when excluded equals true). | [optional]
  **filter_include_inactive** | **bool**| Whether to include inactive secrets in results. | [optional]
  **filter_include_restricted** | **bool**| Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view. | [optional]
@@ -3836,23 +3836,23 @@ Name | Type | Description  | Notes
  **filter_is_exact_match** | **bool**| Whether to do an exact match of the search text or a partial match. If an exact match, the entire secret name, field value, or list option in a list field must match the search text. | [optional]
  **filter_only_rpc_enabled** | **bool**| Whether to only include secrets whose template has Remote Password Changing enabled. | [optional]
  **filter_only_shared_with_me** | **bool**| When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned. | [optional]
- **filter_password_type_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| If not null, returns only secrets matching the specified password types. | [optional]
- **filter_permission_required** | **bool, date, datetime, dict, float, int, list, str, none_type**| Specify whether to filter by List, View, Edit, or Owner permission. Default is List. | [optional]
- **filter_scope** | **bool, date, datetime, dict, float, int, list, str, none_type**| Specify whether to search All, Recent, or Favorites | [optional]
- **filter_search_field** | **bool, date, datetime, dict, float, int, list, str, none_type**| If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. | [optional]
- **filter_search_field_slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| The text to match in the secret name, field value, or list field contents. | [optional]
- **filter_secret_template_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| If not null or empty, returns only secrets matching the specified templates. | [optional]
- **filter_site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets within a the specified site. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_password_type_ids** | **[int]**| If not null, returns only secrets matching the specified password types. | [optional]
+ **filter_permission_required** | **str**| Specify whether to filter by List, View, Edit, or Owner permission. Default is List. | [optional]
+ **filter_scope** | **str**| Specify whether to search All, Recent, or Favorites | [optional]
+ **filter_search_field** | **str**| If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. | [optional]
+ **filter_search_field_slug** | **str**| If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. | [optional]
+ **filter_search_text** | **str**| The text to match in the secret name, field value, or list field contents. | [optional]
+ **filter_secret_template_ids** | **[int]**| If not null or empty, returns only secrets matching the specified templates. | [optional]
+ **filter_site_id** | **int**| If not null, returns only secrets within a the specified site. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**int**
 
 ### Authorization
 
@@ -3918,14 +3918,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     filter_allow_double_locks = True # bool | Whether to allow DoubleLocks as part of the search. True by default. (optional)
     filter_do_not_calculate_total = True # bool | Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search. (optional)
-    filter_double_lock_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Only include Secrets with this DoubleLock ID assigned in the search results. (optional)
+    filter_double_lock_id = 1 # int | Only include Secrets with this DoubleLock ID assigned in the search results. (optional)
     filter_extended_fields = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | An array of names of Secret Template fields to return.  Only exposed fields can be returned. (optional)
-    filter_extended_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. (optional)
-    filter_folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets within the specified folder. (optional)
+        "filter.extendedFields_example",
+    ] # [str] | An array of names of Secret Template fields to return.  Only exposed fields can be returned. (optional)
+    filter_extended_type_id = 1 # int | If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. (optional)
+    filter_folder_id = 1 # int | If not null, returns only secrets within the specified folder. (optional)
     filter_has_launcher = True # bool | Whether to only return secrets with or without launchers. If null, returns secrets regardless of whether they have launchers. (optional)
-    filter_heartbeat_status = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets with a certain heartbeat status. (optional)
+    filter_heartbeat_status = "filter.heartbeatStatus_example" # str | If not null, returns only secrets with a certain heartbeat status. (optional)
     filter_include_active = True # bool | Whether to include active secrets in results (when excluded equals true). (optional)
     filter_include_inactive = True # bool | Whether to include inactive secrets in results. (optional)
     filter_include_restricted = True # bool | Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view. (optional)
@@ -3934,22 +3934,22 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     filter_only_rpc_enabled = True # bool | Whether to only include secrets whose template has Remote Password Changing enabled. (optional)
     filter_only_shared_with_me = True # bool | When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned. (optional)
     filter_password_type_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | If not null, returns only secrets matching the specified password types. (optional)
-    filter_permission_required = None # bool, date, datetime, dict, float, int, list, str, none_type | Specify whether to filter by List, View, Edit, or Owner permission. Default is List. (optional)
-    filter_scope = None # bool, date, datetime, dict, float, int, list, str, none_type | Specify whether to search All, Recent, or Favorites (optional)
-    filter_search_field = None # bool, date, datetime, dict, float, int, list, str, none_type | If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. (optional)
-    filter_search_field_slug = None # bool, date, datetime, dict, float, int, list, str, none_type | If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | The text to match in the secret name, field value, or list field contents. (optional)
+        1,
+    ] # [int] | If not null, returns only secrets matching the specified password types. (optional)
+    filter_permission_required = "filter.permissionRequired_example" # str | Specify whether to filter by List, View, Edit, or Owner permission. Default is List. (optional)
+    filter_scope = "filter.scope_example" # str | Specify whether to search All, Recent, or Favorites (optional)
+    filter_search_field = "filter.searchField_example" # str | If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. (optional)
+    filter_search_field_slug = "filter.searchFieldSlug_example" # str | If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. (optional)
+    filter_search_text = "filter.searchText_example" # str | The text to match in the secret name, field value, or list field contents. (optional)
     filter_secret_template_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | If not null or empty, returns only secrets matching the specified templates. (optional)
-    filter_site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | If not null, returns only secrets within a the specified site. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+        1,
+    ] # [int] | If not null or empty, returns only secrets matching the specified templates. (optional)
+    filter_site_id = 1 # int | If not null, returns only secrets within a the specified site. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -3968,12 +3968,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_allow_double_locks** | **bool**| Whether to allow DoubleLocks as part of the search. True by default. | [optional]
  **filter_do_not_calculate_total** | **bool**| Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search. | [optional]
- **filter_double_lock_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only include Secrets with this DoubleLock ID assigned in the search results. | [optional]
- **filter_extended_fields** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| An array of names of Secret Template fields to return.  Only exposed fields can be returned. | [optional]
- **filter_extended_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. | [optional]
- **filter_folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets within the specified folder. | [optional]
+ **filter_double_lock_id** | **int**| Only include Secrets with this DoubleLock ID assigned in the search results. | [optional]
+ **filter_extended_fields** | **[str]**| An array of names of Secret Template fields to return.  Only exposed fields can be returned. | [optional]
+ **filter_extended_type_id** | **int**| If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template. | [optional]
+ **filter_folder_id** | **int**| If not null, returns only secrets within the specified folder. | [optional]
  **filter_has_launcher** | **bool**| Whether to only return secrets with or without launchers. If null, returns secrets regardless of whether they have launchers. | [optional]
- **filter_heartbeat_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets with a certain heartbeat status. | [optional]
+ **filter_heartbeat_status** | **str**| If not null, returns only secrets with a certain heartbeat status. | [optional]
  **filter_include_active** | **bool**| Whether to include active secrets in results (when excluded equals true). | [optional]
  **filter_include_inactive** | **bool**| Whether to include inactive secrets in results. | [optional]
  **filter_include_restricted** | **bool**| Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view. | [optional]
@@ -3981,19 +3981,19 @@ Name | Type | Description  | Notes
  **filter_is_exact_match** | **bool**| Whether to do an exact match of the search text or a partial match. If an exact match, the entire secret name, field value, or list option in a list field must match the search text. | [optional]
  **filter_only_rpc_enabled** | **bool**| Whether to only include secrets whose template has Remote Password Changing enabled. | [optional]
  **filter_only_shared_with_me** | **bool**| When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned. | [optional]
- **filter_password_type_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| If not null, returns only secrets matching the specified password types. | [optional]
- **filter_permission_required** | **bool, date, datetime, dict, float, int, list, str, none_type**| Specify whether to filter by List, View, Edit, or Owner permission. Default is List. | [optional]
- **filter_scope** | **bool, date, datetime, dict, float, int, list, str, none_type**| Specify whether to search All, Recent, or Favorites | [optional]
- **filter_search_field** | **bool, date, datetime, dict, float, int, list, str, none_type**| If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. | [optional]
- **filter_search_field_slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| The text to match in the secret name, field value, or list field contents. | [optional]
- **filter_secret_template_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| If not null or empty, returns only secrets matching the specified templates. | [optional]
- **filter_site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| If not null, returns only secrets within a the specified site. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_password_type_ids** | **[int]**| If not null, returns only secrets matching the specified password types. | [optional]
+ **filter_permission_required** | **str**| Specify whether to filter by List, View, Edit, or Owner permission. Default is List. | [optional]
+ **filter_scope** | **str**| Specify whether to search All, Recent, or Favorites | [optional]
+ **filter_search_field** | **str**| If set, restricts the search to only match secrets where the value of the field specified by name contains the search text. | [optional]
+ **filter_search_field_slug** | **str**| If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField. | [optional]
+ **filter_search_text** | **str**| The text to match in the secret name, field value, or list field contents. | [optional]
+ **filter_secret_template_ids** | **[int]**| If not null or empty, returns only secrets matching the specified templates. | [optional]
+ **filter_site_id** | **int**| If not null, returns only secrets within a the specified site. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -4061,8 +4061,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    id = 1 # int | id
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4087,8 +4087,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **id** | **int**| id |
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -4156,8 +4156,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret template ID
-    folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Containing folder ID. May be null unless secrets are required to be in folders. (optional)
+    secret_template_id = 1 # int | Secret template ID
+    folder_id = 1 # int | Containing folder ID. May be null unless secrets are required to be in folders. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4182,8 +4182,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret template ID |
- **folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Containing folder ID. May be null unless secrets are required to be in folders. | [optional]
+ **secret_template_id** | **int**| Secret template ID |
+ **folder_id** | **int**| Containing folder ID. May be null unless secrets are required to be in folders. | [optional]
 
 ### Return type
 
@@ -4251,8 +4251,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    id = 1 # int | id
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4277,8 +4277,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **id** | **int**| id |
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -4346,8 +4346,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    id = 1 # int | id
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4372,8 +4372,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **id** | **int**| id |
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
 
 ### Return type
 
@@ -4442,12 +4442,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_email_args = SecretDetailUpdateEmailArgs(
         data=SecretDetailEmailUpdateModel(
             send_email_when_changed=UpdateFieldValueOfBoolean(
@@ -4488,12 +4488,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_email_args** | [**SecretDetailUpdateEmailArgs**](SecretDetailUpdateEmailArgs.md)| args | [optional]
 
 ### Return type
@@ -4563,12 +4563,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_email_args = SecretDetailUpdateEmailArgs(
         data=SecretDetailEmailUpdateModel(
             send_email_when_changed=UpdateFieldValueOfBoolean(
@@ -4609,12 +4609,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_email_args** | [**SecretDetailUpdateEmailArgs**](SecretDetailUpdateEmailArgs.md)| args | [optional]
 
 ### Return type
@@ -4684,21 +4684,21 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_expiration_args = SecretDetailUpdateExpirationArgs(
         data=SecretDetailExpirationUpdateModel(
             expiration_date=UpdateFieldValueOfOptionalDateTime(
                 dirty=True,
-                value=None,
+                value=dateutil_parser('1970-01-01T00:00:00.00Z'),
             ),
             expiration_day_interval=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             expiration_type=UpdateFieldValueOfSecretDetailExpirationUpdateType(
                 dirty=True,
@@ -4730,12 +4730,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_expiration_args** | [**SecretDetailUpdateExpirationArgs**](SecretDetailUpdateExpirationArgs.md)| args | [optional]
 
 ### Return type
@@ -4805,12 +4805,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_general_args = SecretDetailUpdateGeneralArgs(
         data=SecretDetailGeneralUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -4823,7 +4823,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             folder=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             generate_ssh_keys=True,
             heartbeat_enabled=UpdateFieldValueOfBoolean(
@@ -4836,26 +4836,26 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             secret_fields=[
                 UpdateTemplateFieldOfString(
                     dirty=True,
-                    slug=None,
-                    value=None,
+                    slug="slug_example",
+                    value="value_example",
                 ),
             ],
             secret_policy=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             site=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             template=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # SecretDetailUpdateGeneralArgs | args (optional)
@@ -4883,12 +4883,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_general_args** | [**SecretDetailUpdateGeneralArgs**](SecretDetailUpdateGeneralArgs.md)| args | [optional]
 
 ### Return type
@@ -4958,12 +4958,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_general_args = SecretDetailUpdateGeneralArgs(
         data=SecretDetailGeneralUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -4976,7 +4976,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             folder=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             generate_ssh_keys=True,
             heartbeat_enabled=UpdateFieldValueOfBoolean(
@@ -4989,26 +4989,26 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             secret_fields=[
                 UpdateTemplateFieldOfString(
                     dirty=True,
-                    slug=None,
-                    value=None,
+                    slug="slug_example",
+                    value="value_example",
                 ),
             ],
             secret_policy=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             site=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             template=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # SecretDetailUpdateGeneralArgs | args (optional)
@@ -5036,12 +5036,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_general_args** | [**SecretDetailUpdateGeneralArgs**](SecretDetailUpdateGeneralArgs.md)| args | [optional]
 
 ### Return type
@@ -5111,9 +5111,9 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_id = 1 # int | secretId
     secret_detail_jumpbox_update_args = SecretDetailJumpboxUpdateArgs(
-        jumpbox_route_id=None,
+        jumpbox_route_id="jumpbox_route_id_example",
     ) # SecretDetailJumpboxUpdateArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -5139,7 +5139,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_id** | **int**| secretId |
  **secret_detail_jumpbox_update_args** | [**SecretDetailJumpboxUpdateArgs**](SecretDetailJumpboxUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -5209,15 +5209,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    slug = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret field name
+    id = 1 # int | Secret ID
+    slug = "slug_example" # str | Secret field name
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
     secret_list_field_list_args = SecretListFieldListArgs(
         list_guids=[
-            None,
+            "list_guids_example",
         ],
     ) # SecretListFieldListArgs | Secret options (optional)
 
@@ -5244,11 +5244,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **slug** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret field name |
+ **id** | **int**| Secret ID |
+ **slug** | **str**| Secret field name |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
  **secret_list_field_list_args** | [**SecretListFieldListArgs**](SecretListFieldListArgs.md)| Secret options | [optional]
 
@@ -5319,18 +5319,18 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_rpc_script_secrets_args = SecretDetailUpdateRpcScriptSecretsArgs(
         data=SecretDetailRpcScriptSecretsUpdateModel(
             reset_secret_ids=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
         ),
@@ -5359,12 +5359,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_rpc_script_secrets_args** | [**SecretDetailUpdateRpcScriptSecretsArgs**](SecretDetailUpdateRpcScriptSecretsArgs.md)| args | [optional]
 
 ### Return type
@@ -5434,18 +5434,18 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_rpc_script_secrets_args = SecretDetailUpdateRpcScriptSecretsArgs(
         data=SecretDetailRpcScriptSecretsUpdateModel(
             reset_secret_ids=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
         ),
@@ -5474,12 +5474,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_rpc_script_secrets_args** | [**SecretDetailUpdateRpcScriptSecretsArgs**](SecretDetailUpdateRpcScriptSecretsArgs.md)| args | [optional]
 
 ### Return type
@@ -5549,61 +5549,61 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_update_args = SecretUpdateArgs(
-        access_request_workflow_map_id=None,
+        access_request_workflow_map_id=1,
         active=True,
         auto_change_enabled=True,
-        auto_change_next_password=None,
+        auto_change_next_password="auto_change_next_password_example",
         check_out_change_password_enabled=True,
         check_out_enabled=True,
-        check_out_interval_minutes=None,
-        comment=None,
-        double_lock_password=None,
+        check_out_interval_minutes=1,
+        comment="comment_example",
+        double_lock_password="double_lock_password_example",
         enable_inherit_permissions=True,
         enable_inherit_secret_policy=True,
-        folder_id=None,
+        folder_id=1,
         force_check_in=True,
-        id=None,
+        id=1,
         include_inactive=True,
         items=[
             RestSecretItem(
-                field_description=None,
-                field_id=None,
-                field_name=None,
-                file_attachment_id=None,
-                filename=None,
+                field_description="field_description_example",
+                field_id=1,
+                field_name="field_name_example",
+                file_attachment_id=1,
+                filename="filename_example",
                 is_file=True,
                 is_list=True,
                 is_notes=True,
                 is_password=True,
-                item_id=None,
-                item_value=None,
+                item_id=1,
+                item_value="item_value_example",
                 list_type=SecretFieldListType("{}"),
-                slug=None,
+                slug="slug_example",
             ),
         ],
-        launcher_connect_as_secret_id=None,
-        name=None,
-        new_password=None,
+        launcher_connect_as_secret_id=1,
+        name="name_example",
+        new_password="new_password_example",
         no_auto_checkout=True,
-        password_type_web_script_id=None,
+        password_type_web_script_id=1,
         proxy_enabled=True,
         requires_comment=True,
-        secret_policy_id=None,
+        secret_policy_id=1,
         session_recording_enabled=True,
-        site_id=None,
+        site_id=1,
         ssh_key_args=SshKeyArgs(
             generate_passphrase=True,
             generate_ssh_keys=True,
         ),
-        ticket_number=None,
-        ticket_system_id=None,
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
         web_launcher_requires_incognito_mode=True,
     ) # SecretUpdateArgs | Secret update options (optional)
 
@@ -5630,12 +5630,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_update_args** | [**SecretUpdateArgs**](SecretUpdateArgs.md)| Secret update options | [optional]
 
 ### Return type
@@ -5707,9 +5707,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secrets_api.SecretsApi(api_client)
     secret_launcher_session_args = SecretLauncherSessionArgs(
         action=SessionActions("Terminate"),
-        message=None,
-        secret_id=None,
-        secret_session_id=None,
+        message="message_example",
+        secret_id=1,
+        secret_session_id=1,
     ) # SecretLauncherSessionArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -5796,17 +5796,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_security_general_args = SecretDetailUpdateSecurityGeneralArgs(
         data=SecretDetailSecurityGeneralUpdateModel(
             double_lock_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_double_lock=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5858,12 +5858,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_security_general_args** | [**SecretDetailUpdateSecurityGeneralArgs**](SecretDetailUpdateSecurityGeneralArgs.md)| args | [optional]
 
 ### Return type
@@ -5933,27 +5933,27 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_security_approval_args = SecretDetailUpdateSecurityApprovalArgs(
         data=SecretDetailSecurityApprovalUpdateModel(
             approvers=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
             require_approval_type=UpdateFieldValueOfOptionalSecretDetailApprovalType(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             workflow_template_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # SecretDetailUpdateSecurityApprovalArgs | args (optional)
@@ -5981,12 +5981,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_security_approval_args** | [**SecretDetailUpdateSecurityApprovalArgs**](SecretDetailUpdateSecurityApprovalArgs.md)| args | [optional]
 
 ### Return type
@@ -6056,12 +6056,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_security_checkout_args = SecretDetailUpdateSecurityCheckoutArgs(
         data=SecretDetailSecurityCheckoutUpdateModel(
             check_out_change_password_enabled=UpdateFieldValueOfBoolean(
@@ -6074,7 +6074,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             check_out_interval_minutes=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # SecretDetailUpdateSecurityCheckoutArgs | args (optional)
@@ -6102,12 +6102,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_security_checkout_args** | [**SecretDetailUpdateSecurityCheckoutArgs**](SecretDetailUpdateSecurityCheckoutArgs.md)| args | [optional]
 
 ### Return type
@@ -6177,17 +6177,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
-    secret_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
+    secret_path = "secretPath_example" # str | A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. (optional)
     secret_detail_update_security_general_args = SecretDetailUpdateSecurityGeneralArgs(
         data=SecretDetailSecurityGeneralUpdateModel(
             double_lock_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_double_lock=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6239,12 +6239,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
- **secret_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
+ **secret_path** | **str**| A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path. | [optional]
  **secret_detail_update_security_general_args** | [**SecretDetailUpdateSecurityGeneralArgs**](SecretDetailUpdateSecurityGeneralArgs.md)| args | [optional]
 
 ### Return type
@@ -6313,10 +6313,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secrets_api.SecretsApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_id = 1 # int | secretId
     auto_check_in = True # bool | Automatically check in a secret after finding or updating. (optional)
     auto_checkout = True # bool | Automatically check out secret before finding or updating. (optional)
-    auto_comment = None # bool, date, datetime, dict, float, int, list, str, none_type | Leave a comment when checking in or out. (optional)
+    auto_comment = "autoComment_example" # str | Leave a comment when checking in or out. (optional)
     force_check_in = True # bool | If secret is checked out, then force a check in. (optional)
     secret_detail_ssh_restricted_command_update_args = SecretDetailSshRestrictedCommandUpdateArgs(
         data=SecretDetailSshCommandUpdateData(
@@ -6325,14 +6325,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             restrict_ssh_commands=True,
             ssh_command_blocklists=[
                 SecretDetailRestrictedSshCommandBlocklistPermissionUpdateModel(
-                    role_permission_id=None,
-                    ssh_command_blocklist_id=None,
+                    role_permission_id=1,
+                    ssh_command_blocklist_id="ssh_command_blocklist_id_example",
                 ),
             ],
             ssh_command_menus=[
                 SecretDetailRestrictedSshCommandMenuPermissionUpdateModel(
-                    group_id=None,
-                    ssh_command_menu_id=None,
+                    group_id=1,
+                    ssh_command_menu_id=1,
                 ),
             ],
         ),
@@ -6361,10 +6361,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_id** | **int**| secretId |
  **auto_check_in** | **bool**| Automatically check in a secret after finding or updating. | [optional]
  **auto_checkout** | **bool**| Automatically check out secret before finding or updating. | [optional]
- **auto_comment** | **bool, date, datetime, dict, float, int, list, str, none_type**| Leave a comment when checking in or out. | [optional]
+ **auto_comment** | **str**| Leave a comment when checking in or out. | [optional]
  **force_check_in** | **bool**| If secret is checked out, then force a check in. | [optional]
  **secret_detail_ssh_restricted_command_update_args** | [**SecretDetailSshRestrictedCommandUpdateArgs**](SecretDetailSshRestrictedCommandUpdateArgs.md)| args | [optional]
 

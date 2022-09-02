@@ -69,10 +69,8 @@ class EventPipelineUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,32 +79,29 @@ class EventPipelineUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'event_pipeline_description': (UpdateFieldValueOfString,),  # noqa: E501
-            'event_pipeline_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'filters': (UpdateFieldValueOfEventPipelineFilterMapUpdateModelArray,),  # noqa: E501
-            'tasks': (UpdateFieldValueOfEventPipelineTaskMapUpdateModelArray,),  # noqa: E501
-            'triggers': (UpdateFieldValueOfEventPipelineTriggerUpdateModelArray,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'event_pipeline_description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'event_pipeline_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'filters': (UpdateFieldValueOfEventPipelineFilterMapUpdateModelArray, none_type,),  # noqa: E501
+            'tasks': (UpdateFieldValueOfEventPipelineTaskMapUpdateModelArray, none_type,),  # noqa: E501
+            'triggers': (UpdateFieldValueOfEventPipelineTriggerUpdateModelArray, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

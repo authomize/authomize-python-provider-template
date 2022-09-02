@@ -5,11 +5,11 @@ PrepareLauncherResult
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error_message** | **bool, date, datetime, dict, float, int, list, str, none_type** | ErrorMessage | [optional] 
+**error_message** | **str** | ErrorMessage | [optional] 
 **file_download** | [**LauncherFileDownload**](LauncherFileDownload.md) |  | [optional] 
-**launcher_popup_timeout_seconds** | **bool, date, datetime, dict, float, int, list, str, none_type** | LauncherPopupTimeoutSeconds | [optional] 
+**launcher_popup_timeout_seconds** | **int** | LauncherPopupTimeoutSeconds | [optional] 
 **launcher_url** | [**RedirectToLauncherUrl**](RedirectToLauncherUrl.md) |  | [optional] 
-**redirect_url** | **bool, date, datetime, dict, float, int, list, str, none_type** | RedirectUrl | [optional] 
+**redirect_url** | **str** | RedirectUrl | [optional] 
 **should_download** | **bool** | ShouldDownload | [optional] 
 **should_redirect** | **bool** | ShouldRedirect | [optional] 
 **success** | **bool** | Success | [optional] 

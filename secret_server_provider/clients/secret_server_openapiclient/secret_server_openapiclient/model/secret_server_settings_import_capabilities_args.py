@@ -57,10 +57,8 @@ class SecretServerSettingsImportCapabilitiesArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,27 +66,24 @@ class SecretServerSettingsImportCapabilitiesArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'file': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_import': (bool,),  # noqa: E501
+            'file': (str, none_type,),  # noqa: E501
+            'is_import': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -137,7 +132,7 @@ class SecretServerSettingsImportCapabilitiesArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            file (bool, date, datetime, dict, float, int, list, str, none_type): File. [optional]  # noqa: E501
+            file (str): File. [optional]  # noqa: E501
             is_import (bool): IsImport. [optional]  # noqa: E501
         """
 
@@ -224,7 +219,7 @@ class SecretServerSettingsImportCapabilitiesArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            file (bool, date, datetime, dict, float, int, list, str, none_type): File. [optional]  # noqa: E501
+            file (str): File. [optional]  # noqa: E501
             is_import (bool): IsImport. [optional]  # noqa: E501
         """
 

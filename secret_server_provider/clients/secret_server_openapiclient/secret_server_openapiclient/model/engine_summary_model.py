@@ -63,10 +63,8 @@ class EngineSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,36 +73,33 @@ class EngineSummaryModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'activation_status': (EngineActivationStatusType,),  # noqa: E501
-            'bind_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'connection_status': (EngineConnectionStatusType,),  # noqa: E501
-            'engine_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'friendly_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'host_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_blocked_by_net48': (bool,),  # noqa: E501
-            'last_connected': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'time_mismatch': (bool,),  # noqa: E501
-            'time_mismatch_seconds': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'activation_status': (EngineActivationStatusType, none_type,),  # noqa: E501
+            'bind_address': (str, none_type,),  # noqa: E501
+            'connection_status': (EngineConnectionStatusType, none_type,),  # noqa: E501
+            'engine_id': (int, none_type,),  # noqa: E501
+            'friendly_name': (str, none_type,),  # noqa: E501
+            'host_name': (str, none_type,),  # noqa: E501
+            'is_blocked_by_net48': (bool, none_type,),  # noqa: E501
+            'last_connected': (datetime, none_type,),  # noqa: E501
+            'time_mismatch': (bool, none_type,),  # noqa: E501
+            'time_mismatch_seconds': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -162,15 +157,15 @@ class EngineSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             activation_status (EngineActivationStatusType): [optional]  # noqa: E501
-            bind_address (bool, date, datetime, dict, float, int, list, str, none_type): BindAddress. [optional]  # noqa: E501
+            bind_address (str): BindAddress. [optional]  # noqa: E501
             connection_status (EngineConnectionStatusType): [optional]  # noqa: E501
-            engine_id (bool, date, datetime, dict, float, int, list, str, none_type): EngineId. [optional]  # noqa: E501
-            friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): FriendlyName. [optional]  # noqa: E501
-            host_name (bool, date, datetime, dict, float, int, list, str, none_type): HostName. [optional]  # noqa: E501
+            engine_id (int): EngineId. [optional]  # noqa: E501
+            friendly_name (str): FriendlyName. [optional]  # noqa: E501
+            host_name (str): HostName. [optional]  # noqa: E501
             is_blocked_by_net48 (bool): IsBlockedByNet48. [optional]  # noqa: E501
-            last_connected (bool, date, datetime, dict, float, int, list, str, none_type): LastConnected. [optional]  # noqa: E501
+            last_connected (datetime): LastConnected. [optional]  # noqa: E501
             time_mismatch (bool): TimeMismatch. [optional]  # noqa: E501
-            time_mismatch_seconds (bool, date, datetime, dict, float, int, list, str, none_type): TimeMismatchSeconds. [optional]  # noqa: E501
+            time_mismatch_seconds (int): TimeMismatchSeconds. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -257,15 +252,15 @@ class EngineSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             activation_status (EngineActivationStatusType): [optional]  # noqa: E501
-            bind_address (bool, date, datetime, dict, float, int, list, str, none_type): BindAddress. [optional]  # noqa: E501
+            bind_address (str): BindAddress. [optional]  # noqa: E501
             connection_status (EngineConnectionStatusType): [optional]  # noqa: E501
-            engine_id (bool, date, datetime, dict, float, int, list, str, none_type): EngineId. [optional]  # noqa: E501
-            friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): FriendlyName. [optional]  # noqa: E501
-            host_name (bool, date, datetime, dict, float, int, list, str, none_type): HostName. [optional]  # noqa: E501
+            engine_id (int): EngineId. [optional]  # noqa: E501
+            friendly_name (str): FriendlyName. [optional]  # noqa: E501
+            host_name (str): HostName. [optional]  # noqa: E501
             is_blocked_by_net48 (bool): IsBlockedByNet48. [optional]  # noqa: E501
-            last_connected (bool, date, datetime, dict, float, int, list, str, none_type): LastConnected. [optional]  # noqa: E501
+            last_connected (datetime): LastConnected. [optional]  # noqa: E501
             time_mismatch (bool): TimeMismatch. [optional]  # noqa: E501
-            time_mismatch_seconds (bool, date, datetime, dict, float, int, list, str, none_type): TimeMismatchSeconds. [optional]  # noqa: E501
+            time_mismatch_seconds (int): TimeMismatchSeconds. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

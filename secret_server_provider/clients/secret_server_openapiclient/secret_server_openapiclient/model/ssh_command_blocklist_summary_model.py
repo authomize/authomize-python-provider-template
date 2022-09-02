@@ -57,10 +57,8 @@ class SshCommandBlocklistSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class SshCommandBlocklistSummaryModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_command_blocklist_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'ssh_command_blocklist_id': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -142,9 +137,9 @@ class SshCommandBlocklistSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): If the Command Blocklist is enabled. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): A description of the Command Blocklist. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name the Command Blocklist. [optional]  # noqa: E501
-            ssh_command_blocklist_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of the Command Blocklist. [optional]  # noqa: E501
+            description (str): A description of the Command Blocklist. [optional]  # noqa: E501
+            name (str): Name the Command Blocklist. [optional]  # noqa: E501
+            ssh_command_blocklist_id (str): ID of the Command Blocklist. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -231,9 +226,9 @@ class SshCommandBlocklistSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): If the Command Blocklist is enabled. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): A description of the Command Blocklist. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name the Command Blocklist. [optional]  # noqa: E501
-            ssh_command_blocklist_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of the Command Blocklist. [optional]  # noqa: E501
+            description (str): A description of the Command Blocklist. [optional]  # noqa: E501
+            name (str): Name the Command Blocklist. [optional]  # noqa: E501
+            ssh_command_blocklist_id (str): ID of the Command Blocklist. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

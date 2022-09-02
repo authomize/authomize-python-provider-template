@@ -57,10 +57,8 @@ class EventPipelineTrigger(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class EventPipelineTrigger(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'entity_type_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_action_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_action_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_entity_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_trigger_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'trigger_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'entity_type_display_name': (str, none_type,),  # noqa: E501
+            'event_action_id': (int, none_type,),  # noqa: E501
+            'event_action_name': (str, none_type,),  # noqa: E501
+            'event_entity_type_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_trigger_id': (int, none_type,),  # noqa: E501
+            'trigger_display_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,13 +142,13 @@ class EventPipelineTrigger(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            entity_type_display_name (bool, date, datetime, dict, float, int, list, str, none_type): EntityTypeDisplayName. [optional]  # noqa: E501
-            event_action_id (bool, date, datetime, dict, float, int, list, str, none_type): EventActionId. [optional]  # noqa: E501
-            event_action_name (bool, date, datetime, dict, float, int, list, str, none_type): EventActionName. [optional]  # noqa: E501
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeId. [optional]  # noqa: E501
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
-            event_pipeline_trigger_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineTriggerId. [optional]  # noqa: E501
-            trigger_display_name (bool, date, datetime, dict, float, int, list, str, none_type): TriggerDisplayName. [optional]  # noqa: E501
+            entity_type_display_name (str): EntityTypeDisplayName. [optional]  # noqa: E501
+            event_action_id (int): EventActionId. [optional]  # noqa: E501
+            event_action_name (str): EventActionName. [optional]  # noqa: E501
+            event_entity_type_id (int): EventEntityTypeId. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_trigger_id (int): EventPipelineTriggerId. [optional]  # noqa: E501
+            trigger_display_name (str): TriggerDisplayName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,13 +234,13 @@ class EventPipelineTrigger(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            entity_type_display_name (bool, date, datetime, dict, float, int, list, str, none_type): EntityTypeDisplayName. [optional]  # noqa: E501
-            event_action_id (bool, date, datetime, dict, float, int, list, str, none_type): EventActionId. [optional]  # noqa: E501
-            event_action_name (bool, date, datetime, dict, float, int, list, str, none_type): EventActionName. [optional]  # noqa: E501
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeId. [optional]  # noqa: E501
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
-            event_pipeline_trigger_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineTriggerId. [optional]  # noqa: E501
-            trigger_display_name (bool, date, datetime, dict, float, int, list, str, none_type): TriggerDisplayName. [optional]  # noqa: E501
+            entity_type_display_name (str): EntityTypeDisplayName. [optional]  # noqa: E501
+            event_action_id (int): EventActionId. [optional]  # noqa: E501
+            event_action_name (str): EventActionName. [optional]  # noqa: E501
+            event_entity_type_id (int): EventEntityTypeId. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_trigger_id (int): EventPipelineTriggerId. [optional]  # noqa: E501
+            trigger_display_name (str): TriggerDisplayName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

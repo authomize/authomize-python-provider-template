@@ -57,10 +57,8 @@ class EventPipelineTask(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class EventPipelineTask(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'event_entity_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_task_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_task_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_task_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_multi_select': (bool,),  # noqa: E501
+            'event_entity_type_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_task_description': (str, none_type,),  # noqa: E501
+            'event_pipeline_task_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_task_name': (str, none_type,),  # noqa: E501
+            'is_multi_select': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,10 +138,10 @@ class EventPipelineTask(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeId. [optional]  # noqa: E501
-            event_pipeline_task_description (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineTaskDescription. [optional]  # noqa: E501
-            event_pipeline_task_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineTaskId. [optional]  # noqa: E501
-            event_pipeline_task_name (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineTaskName. [optional]  # noqa: E501
+            event_entity_type_id (int): EventEntityTypeId. [optional]  # noqa: E501
+            event_pipeline_task_description (str): EventPipelineTaskDescription. [optional]  # noqa: E501
+            event_pipeline_task_id (int): EventPipelineTaskId. [optional]  # noqa: E501
+            event_pipeline_task_name (str): EventPipelineTaskName. [optional]  # noqa: E501
             is_multi_select (bool): IsMultiSelect. [optional]  # noqa: E501
         """
 
@@ -233,10 +228,10 @@ class EventPipelineTask(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeId. [optional]  # noqa: E501
-            event_pipeline_task_description (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineTaskDescription. [optional]  # noqa: E501
-            event_pipeline_task_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineTaskId. [optional]  # noqa: E501
-            event_pipeline_task_name (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineTaskName. [optional]  # noqa: E501
+            event_entity_type_id (int): EventEntityTypeId. [optional]  # noqa: E501
+            event_pipeline_task_description (str): EventPipelineTaskDescription. [optional]  # noqa: E501
+            event_pipeline_task_id (int): EventPipelineTaskId. [optional]  # noqa: E501
+            event_pipeline_task_name (str): EventPipelineTaskName. [optional]  # noqa: E501
             is_multi_select (bool): IsMultiSelect. [optional]  # noqa: E501
         """
 

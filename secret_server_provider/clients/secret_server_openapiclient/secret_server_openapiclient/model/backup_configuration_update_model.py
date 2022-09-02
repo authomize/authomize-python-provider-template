@@ -67,10 +67,8 @@ class BackupConfigurationUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,41 +77,38 @@ class BackupConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'backup_database_path': (UpdateFieldValueOfString,),  # noqa: E501
-            'backup_failure_notification': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'backup_path': (UpdateFieldValueOfString,),  # noqa: E501
-            'backup_start_date_time': (UpdateFieldValueOfDateTime,),  # noqa: E501
-            'configuration_sql_backup_timeout_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'copy_only_database_backup': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_database_backup': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_scheduled_backup': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_tms_backup': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_web_application_backup': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'number_of_backups_to_keep': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'repeat_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'repeat_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'repeat_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'tms_installation_path': (UpdateFieldValueOfString,),  # noqa: E501
+            'backup_database_path': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'backup_failure_notification': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'backup_path': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'backup_start_date_time': (UpdateFieldValueOfDateTime, none_type,),  # noqa: E501
+            'configuration_sql_backup_timeout_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'copy_only_database_backup': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_database_backup': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_scheduled_backup': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_tms_backup': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_web_application_backup': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'number_of_backups_to_keep': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'repeat_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'repeat_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'repeat_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'tms_installation_path': (UpdateFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

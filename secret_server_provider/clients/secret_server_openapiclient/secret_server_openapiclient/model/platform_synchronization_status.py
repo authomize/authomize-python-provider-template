@@ -57,10 +57,8 @@ class PlatformSynchronizationStatus(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class PlatformSynchronizationStatus(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'end_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'error_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_log_entry': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_sync_groups_created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_sync_users_added_to_groups': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_sync_users_removed_from_groups': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'next_synchronization_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'end_date_time': (datetime, none_type,),  # noqa: E501
+            'error_count': (int, none_type,),  # noqa: E501
+            'last_log_entry': (str, none_type,),  # noqa: E501
+            'last_sync_groups_created': (int, none_type,),  # noqa: E501
+            'last_sync_users_added_to_groups': (int, none_type,),  # noqa: E501
+            'last_sync_users_removed_from_groups': (int, none_type,),  # noqa: E501
+            'next_synchronization_date_time': (datetime, none_type,),  # noqa: E501
+            'start_date_time': (datetime, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,14 +144,14 @@ class PlatformSynchronizationStatus(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            end_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time that the last synchronization ended.  If a synchronization is currently running this will be empty.. [optional]  # noqa: E501
-            error_count (bool, date, datetime, dict, float, int, list, str, none_type): The number of errors since the last synchronization start time. [optional]  # noqa: E501
-            last_log_entry (bool, date, datetime, dict, float, int, list, str, none_type): Log Entry used for parsing. [optional]  # noqa: E501
-            last_sync_groups_created (bool, date, datetime, dict, float, int, list, str, none_type): Number of groups created during last sync. [optional]  # noqa: E501
-            last_sync_users_added_to_groups (bool, date, datetime, dict, float, int, list, str, none_type): Number of users that were added to any platform group. [optional]  # noqa: E501
-            last_sync_users_removed_from_groups (bool, date, datetime, dict, float, int, list, str, none_type): Number of users that were removed from any platform group. [optional]  # noqa: E501
-            next_synchronization_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time the synchronization is expected to run. [optional]  # noqa: E501
-            start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time that the last synchronization started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
+            end_date_time (datetime): The date and time that the last synchronization ended.  If a synchronization is currently running this will be empty.. [optional]  # noqa: E501
+            error_count (int): The number of errors since the last synchronization start time. [optional]  # noqa: E501
+            last_log_entry (str): Log Entry used for parsing. [optional]  # noqa: E501
+            last_sync_groups_created (int): Number of groups created during last sync. [optional]  # noqa: E501
+            last_sync_users_added_to_groups (int): Number of users that were added to any platform group. [optional]  # noqa: E501
+            last_sync_users_removed_from_groups (int): Number of users that were removed from any platform group. [optional]  # noqa: E501
+            next_synchronization_date_time (datetime): The next time the synchronization is expected to run. [optional]  # noqa: E501
+            start_date_time (datetime): The date and time that the last synchronization started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,14 +237,14 @@ class PlatformSynchronizationStatus(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            end_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time that the last synchronization ended.  If a synchronization is currently running this will be empty.. [optional]  # noqa: E501
-            error_count (bool, date, datetime, dict, float, int, list, str, none_type): The number of errors since the last synchronization start time. [optional]  # noqa: E501
-            last_log_entry (bool, date, datetime, dict, float, int, list, str, none_type): Log Entry used for parsing. [optional]  # noqa: E501
-            last_sync_groups_created (bool, date, datetime, dict, float, int, list, str, none_type): Number of groups created during last sync. [optional]  # noqa: E501
-            last_sync_users_added_to_groups (bool, date, datetime, dict, float, int, list, str, none_type): Number of users that were added to any platform group. [optional]  # noqa: E501
-            last_sync_users_removed_from_groups (bool, date, datetime, dict, float, int, list, str, none_type): Number of users that were removed from any platform group. [optional]  # noqa: E501
-            next_synchronization_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time the synchronization is expected to run. [optional]  # noqa: E501
-            start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The date and time that the last synchronization started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
+            end_date_time (datetime): The date and time that the last synchronization ended.  If a synchronization is currently running this will be empty.. [optional]  # noqa: E501
+            error_count (int): The number of errors since the last synchronization start time. [optional]  # noqa: E501
+            last_log_entry (str): Log Entry used for parsing. [optional]  # noqa: E501
+            last_sync_groups_created (int): Number of groups created during last sync. [optional]  # noqa: E501
+            last_sync_users_added_to_groups (int): Number of users that were added to any platform group. [optional]  # noqa: E501
+            last_sync_users_removed_from_groups (int): Number of users that were removed from any platform group. [optional]  # noqa: E501
+            next_synchronization_date_time (datetime): The next time the synchronization is expected to run. [optional]  # noqa: E501
+            start_date_time (datetime): The date and time that the last synchronization started.  This will be empty if a synchronization has never been run.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

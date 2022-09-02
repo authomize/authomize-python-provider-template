@@ -57,10 +57,8 @@ class ProxyExplanationsViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class ProxyExplanationsViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'rdp_proxy_explanation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_explanation': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'ssh_terminal_block_list_explanation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_terminal_block_list_override_explanation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_terminal_explanation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'rdp_proxy_explanation': (str, none_type,),  # noqa: E501
+            'ssh_proxy_explanation': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
+            'ssh_terminal_block_list_explanation': (str, none_type,),  # noqa: E501
+            'ssh_terminal_block_list_override_explanation': (str, none_type,),  # noqa: E501
+            'ssh_terminal_explanation': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class ProxyExplanationsViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            rdp_proxy_explanation (bool, date, datetime, dict, float, int, list, str, none_type): RdpProxyExplanation. [optional]  # noqa: E501
+            rdp_proxy_explanation (str): RdpProxyExplanation. [optional]  # noqa: E501
             ssh_proxy_explanation ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): DictionaryOfStringAndString. [optional]  # noqa: E501
-            ssh_terminal_block_list_explanation (bool, date, datetime, dict, float, int, list, str, none_type): SshTerminalBlockListExplanation. [optional]  # noqa: E501
-            ssh_terminal_block_list_override_explanation (bool, date, datetime, dict, float, int, list, str, none_type): SshTerminalBlockListOverrideExplanation. [optional]  # noqa: E501
-            ssh_terminal_explanation (bool, date, datetime, dict, float, int, list, str, none_type): SshTerminalExplanation. [optional]  # noqa: E501
+            ssh_terminal_block_list_explanation (str): SshTerminalBlockListExplanation. [optional]  # noqa: E501
+            ssh_terminal_block_list_override_explanation (str): SshTerminalBlockListOverrideExplanation. [optional]  # noqa: E501
+            ssh_terminal_explanation (str): SshTerminalExplanation. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class ProxyExplanationsViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            rdp_proxy_explanation (bool, date, datetime, dict, float, int, list, str, none_type): RdpProxyExplanation. [optional]  # noqa: E501
+            rdp_proxy_explanation (str): RdpProxyExplanation. [optional]  # noqa: E501
             ssh_proxy_explanation ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): DictionaryOfStringAndString. [optional]  # noqa: E501
-            ssh_terminal_block_list_explanation (bool, date, datetime, dict, float, int, list, str, none_type): SshTerminalBlockListExplanation. [optional]  # noqa: E501
-            ssh_terminal_block_list_override_explanation (bool, date, datetime, dict, float, int, list, str, none_type): SshTerminalBlockListOverrideExplanation. [optional]  # noqa: E501
-            ssh_terminal_explanation (bool, date, datetime, dict, float, int, list, str, none_type): SshTerminalExplanation. [optional]  # noqa: E501
+            ssh_terminal_block_list_explanation (str): SshTerminalBlockListExplanation. [optional]  # noqa: E501
+            ssh_terminal_block_list_override_explanation (str): SshTerminalBlockListOverrideExplanation. [optional]  # noqa: E501
+            ssh_terminal_explanation (str): SshTerminalExplanation. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

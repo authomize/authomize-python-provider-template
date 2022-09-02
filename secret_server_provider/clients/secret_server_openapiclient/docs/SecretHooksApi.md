@@ -59,30 +59,30 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_id = 1 # int | secretId
     secret_detail_hook_create_args = SecretDetailHookCreateArgs(
         data=SecretDetailHooksCreateModel(
-            arguments=None,
-            database=None,
-            description=None,
-            event_action_id=None,
-            failure_message=None,
-            name=None,
+            arguments="arguments_example",
+            database="database_example",
+            description="description_example",
+            event_action_id=1,
+            failure_message="failure_message_example",
+            name="name_example",
             parameters=[
                 SecretDetailHookParameterViewModel(
-                    parameter_name=None,
-                    parameter_type=None,
-                    parameter_value=None,
+                    parameter_name="parameter_name_example",
+                    parameter_type="parameter_type_example",
+                    parameter_value="parameter_value_example",
                 ),
             ],
-            port=None,
-            pre_post_option=None,
-            privileged_secret_id=None,
-            script_id=None,
-            secret_id=None,
-            server_key_digest=None,
-            server_name=None,
-            ssh_key_secret_id=None,
+            port="port_example",
+            pre_post_option="pre_post_option_example",
+            privileged_secret_id=1,
+            script_id=1,
+            secret_id=1,
+            server_key_digest="server_key_digest_example",
+            server_name="server_name_example",
+            ssh_key_secret_id=1,
             stop_on_failure=True,
         ),
     ) # SecretDetailHookCreateArgs | args (optional)
@@ -110,7 +110,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_id** | **int**| secretId |
  **secret_detail_hook_create_args** | [**SecretDetailHookCreateArgs**](SecretDetailHookCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -180,30 +180,30 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_id = 1 # int | secretId
     secret_detail_hook_create_args = SecretDetailHookCreateArgs(
         data=SecretDetailHooksCreateModel(
-            arguments=None,
-            database=None,
-            description=None,
-            event_action_id=None,
-            failure_message=None,
-            name=None,
+            arguments="arguments_example",
+            database="database_example",
+            description="description_example",
+            event_action_id=1,
+            failure_message="failure_message_example",
+            name="name_example",
             parameters=[
                 SecretDetailHookParameterViewModel(
-                    parameter_name=None,
-                    parameter_type=None,
-                    parameter_value=None,
+                    parameter_name="parameter_name_example",
+                    parameter_type="parameter_type_example",
+                    parameter_value="parameter_value_example",
                 ),
             ],
-            port=None,
-            pre_post_option=None,
-            privileged_secret_id=None,
-            script_id=None,
-            secret_id=None,
-            server_key_digest=None,
-            server_name=None,
-            ssh_key_secret_id=None,
+            port="port_example",
+            pre_post_option="pre_post_option_example",
+            privileged_secret_id=1,
+            script_id=1,
+            secret_id=1,
+            server_key_digest="server_key_digest_example",
+            server_name="server_name_example",
+            ssh_key_secret_id=1,
             stop_on_failure=True,
         ),
     ) # SecretDetailHookCreateArgs | args (optional)
@@ -231,7 +231,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_id** | **int**| secretId |
  **secret_detail_hook_create_args** | [**SecretDetailHookCreateArgs**](SecretDetailHookCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -299,8 +299,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_hook_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretHookId
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_hook_id = 1 # int | secretHookId
+    secret_id = 1 # int | secretId
 
     # example passing only required values which don't have defaults set
     try:
@@ -316,8 +316,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_hook_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretHookId |
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_hook_id** | **int**| secretHookId |
+ **secret_id** | **int**| secretId |
 
 ### Return type
 
@@ -385,8 +385,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_hook_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretHookId
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_hook_id = 1 # int | secretHookId
+    secret_id = 1 # int | secretId
 
     # example passing only required values which don't have defaults set
     try:
@@ -402,8 +402,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_hook_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretHookId |
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_hook_id** | **int**| secretHookId |
+ **secret_id** | **int**| secretId |
 
 ### Return type
 
@@ -471,8 +471,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_hook_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretHookId
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_hook_id = 1 # int | secretHookId
+    secret_id = 1 # int | secretId
 
     # example passing only required values which don't have defaults set
     try:
@@ -488,8 +488,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_hook_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretHookId |
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_hook_id** | **int**| secretHookId |
+ **secret_id** | **int**| secretId |
 
 ### Return type
 
@@ -557,7 +557,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_id = 1 # int | secretId
 
     # example passing only required values which don't have defaults set
     try:
@@ -573,7 +573,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_id** | **int**| secretId |
 
 ### Return type
 
@@ -641,7 +641,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_id = 1 # int | secretId
 
     # example passing only required values which don't have defaults set
     try:
@@ -657,7 +657,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_id** | **int**| secretId |
 
 ### Return type
 
@@ -725,8 +725,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    script_id = None # bool, date, datetime, dict, float, int, list, str, none_type | scriptId
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    script_id = 1 # int | scriptId
+    secret_id = 1 # int | secretId
 
     # example passing only required values which don't have defaults set
     try:
@@ -742,8 +742,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| scriptId |
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **script_id** | **int**| scriptId |
+ **secret_id** | **int**| secretId |
 
 ### Return type
 
@@ -811,8 +811,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    script_id = None # bool, date, datetime, dict, float, int, list, str, none_type | scriptId
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    script_id = 1 # int | scriptId
+    secret_id = 1 # int | secretId
 
     # example passing only required values which don't have defaults set
     try:
@@ -828,8 +828,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| scriptId |
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **script_id** | **int**| scriptId |
+ **secret_id** | **int**| secretId |
 
 ### Return type
 
@@ -898,76 +898,76 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_hook_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretHookId
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_hook_id = 1 # int | secretHookId
+    secret_id = 1 # int | secretId
     secret_detail_hook_update_args = SecretDetailHookUpdateArgs(
         data=SecretDetailHookUpdateModel(
             arguments=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             database=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             event_action_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             failure_message=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             parameters=[
                 SecretDetailHookParameterViewModel(
-                    parameter_name=None,
-                    parameter_type=None,
-                    parameter_value=None,
+                    parameter_name="parameter_name_example",
+                    parameter_type="parameter_type_example",
+                    parameter_value="parameter_value_example",
                 ),
             ],
             port=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             pre_post_option=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             privileged_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             script_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             script_type_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             server_key_digest=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             server_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             sort_order=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             ssh_key_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             status=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1003,8 +1003,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_hook_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretHookId |
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_hook_id** | **int**| secretHookId |
+ **secret_id** | **int**| secretId |
  **secret_detail_hook_update_args** | [**SecretDetailHookUpdateArgs**](SecretDetailHookUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -1074,76 +1074,76 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_hooks_api.SecretHooksApi(api_client)
-    secret_hook_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretHookId
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_hook_id = 1 # int | secretHookId
+    secret_id = 1 # int | secretId
     secret_detail_hook_update_args = SecretDetailHookUpdateArgs(
         data=SecretDetailHookUpdateModel(
             arguments=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             database=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             event_action_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             failure_message=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             parameters=[
                 SecretDetailHookParameterViewModel(
-                    parameter_name=None,
-                    parameter_type=None,
-                    parameter_value=None,
+                    parameter_name="parameter_name_example",
+                    parameter_type="parameter_type_example",
+                    parameter_value="parameter_value_example",
                 ),
             ],
             port=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             pre_post_option=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             privileged_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             script_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             script_type_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             server_key_digest=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             server_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             sort_order=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             ssh_key_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             status=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1179,8 +1179,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_hook_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretHookId |
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_hook_id** | **int**| secretHookId |
+ **secret_id** | **int**| secretId |
  **secret_detail_hook_update_args** | [**SecretDetailHookUpdateArgs**](SecretDetailHookUpdateArgs.md)| args | [optional]
 
 ### Return type

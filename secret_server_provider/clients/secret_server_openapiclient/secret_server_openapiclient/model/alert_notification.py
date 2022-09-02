@@ -63,10 +63,8 @@ class AlertNotification(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,34 +73,31 @@ class AlertNotification(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'action': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'alert_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_read': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notification_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notification_type': (AlertNotificationType,),  # noqa: E501
-            'type': (AlertNotificationStatus,),  # noqa: E501
+            'action': (str, none_type,),  # noqa: E501
+            'alert_date': (datetime, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'is_read': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'notification_id': (str, none_type,),  # noqa: E501
+            'notification_type': (AlertNotificationType, none_type,),  # noqa: E501
+            'type': (AlertNotificationStatus, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -157,12 +152,12 @@ class AlertNotification(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
-            alert_date (bool, date, datetime, dict, float, int, list, str, none_type): AlertDate. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
+            alert_date (datetime): AlertDate. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
             is_read (bool): IsRead. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            notification_id (bool, date, datetime, dict, float, int, list, str, none_type): NotificationId. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            notification_id (str): NotificationId. [optional]  # noqa: E501
             notification_type (AlertNotificationType): [optional]  # noqa: E501
             type (AlertNotificationStatus): [optional]  # noqa: E501
         """
@@ -250,12 +245,12 @@ class AlertNotification(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
-            alert_date (bool, date, datetime, dict, float, int, list, str, none_type): AlertDate. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
+            alert_date (datetime): AlertDate. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
             is_read (bool): IsRead. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            notification_id (bool, date, datetime, dict, float, int, list, str, none_type): NotificationId. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            notification_id (str): NotificationId. [optional]  # noqa: E501
             notification_type (AlertNotificationType): [optional]  # noqa: E501
             type (AlertNotificationStatus): [optional]  # noqa: E501
         """

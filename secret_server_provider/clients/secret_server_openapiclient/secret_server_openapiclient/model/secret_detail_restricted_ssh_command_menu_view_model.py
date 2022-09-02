@@ -57,10 +57,8 @@ class SecretDetailRestrictedSshCommandMenuViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class SecretDetailRestrictedSshCommandMenuViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_command_menu_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_command_menu_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'ssh_command_menu_id': (int, none_type,),  # noqa: E501
+            'ssh_command_menu_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class SecretDetailRestrictedSshCommandMenuViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): DisplayName. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): GroupId. [optional]  # noqa: E501
-            ssh_command_menu_id (bool, date, datetime, dict, float, int, list, str, none_type): SshCommandMenuId. [optional]  # noqa: E501
-            ssh_command_menu_name (bool, date, datetime, dict, float, int, list, str, none_type): SshCommandMenuName. [optional]  # noqa: E501
+            display_name (str): DisplayName. [optional]  # noqa: E501
+            group_id (int): GroupId. [optional]  # noqa: E501
+            ssh_command_menu_id (int): SshCommandMenuId. [optional]  # noqa: E501
+            ssh_command_menu_name (str): SshCommandMenuName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class SecretDetailRestrictedSshCommandMenuViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): DisplayName. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): GroupId. [optional]  # noqa: E501
-            ssh_command_menu_id (bool, date, datetime, dict, float, int, list, str, none_type): SshCommandMenuId. [optional]  # noqa: E501
-            ssh_command_menu_name (bool, date, datetime, dict, float, int, list, str, none_type): SshCommandMenuName. [optional]  # noqa: E501
+            display_name (str): DisplayName. [optional]  # noqa: E501
+            group_id (int): GroupId. [optional]  # noqa: E501
+            ssh_command_menu_id (int): SshCommandMenuId. [optional]  # noqa: E501
+            ssh_command_menu_name (str): SshCommandMenuName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

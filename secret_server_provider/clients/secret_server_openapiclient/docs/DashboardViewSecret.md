@@ -5,14 +5,14 @@ DashboardViewSecret
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error_message** | **bool, date, datetime, dict, float, int, list, str, none_type** | errorMessage | [optional] 
+**error_message** | **str** | errorMessage | [optional] 
 **favorite** | **bool** | favorite | [optional] 
 **has_launcher** | **bool** | hasLauncher | [optional] 
-**id** | **bool, date, datetime, dict, float, int, list, str, none_type** | id | [optional] 
+**id** | **int** | id | [optional] 
 **is_totp_enabled** | **bool** | isTotpEnabled | [optional] 
 **items** | [**[DashboardViewSecretItem]**](DashboardViewSecretItem.md) | items | [optional] 
 **launchers** | [**[DashboardViewLauncherInfo]**](DashboardViewLauncherInfo.md) | launchers | [optional] 
-**secret_name** | **bool, date, datetime, dict, float, int, list, str, none_type** | secretName | [optional] 
+**secret_name** | **str** | secretName | [optional] 
 **show_view_button** | **bool** | showViewButton | [optional] 
 **user_can_edit** | **bool** | userCanEdit | [optional] 
 **user_can_share** | **bool** | userCanShare | [optional] 

@@ -5,9 +5,9 @@ Secret Detail Settings
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**expiration_date** | **bool, date, datetime, dict, float, int, list, str, none_type** | Expiration Date | [optional] 
-**expiration_day_interval** | **bool, date, datetime, dict, float, int, list, str, none_type** | Expiration Day Interval | [optional] 
-**expiration_template_text** | **bool, date, datetime, dict, float, int, list, str, none_type** | Expiration Template Text | [optional] 
+**expiration_date** | **datetime** | Expiration Date | [optional] 
+**expiration_day_interval** | **int** | Expiration Day Interval | [optional] 
+**expiration_template_text** | **str** | Expiration Template Text | [optional] 
 **expiration_type** | [**SecretDetailExpirationType**](SecretDetailExpirationType.md) |  | [optional] 
 **jumpbox_route_selection** | [**JumpboxRouteSummaryModel**](JumpboxRouteSummaryModel.md) |  | [optional] 
 **one_time_password_settings** | [**OneTimePasswordSettingsModel**](OneTimePasswordSettingsModel.md) |  | [optional] 

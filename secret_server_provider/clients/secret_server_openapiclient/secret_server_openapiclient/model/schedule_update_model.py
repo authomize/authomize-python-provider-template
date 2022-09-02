@@ -79,10 +79,8 @@ class ScheduleUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -91,50 +89,47 @@ class ScheduleUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'additional_email_addresses': (UpdateFieldValueOfString,),  # noqa: E501
-            'change_type': (UpdateFieldValueOfScheduleChangeType,),  # noqa: E501
-            'days': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'email_groups': (UpdateFieldValueOfInt32Array,),  # noqa: E501
-            'friday': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'health_check': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'history_size': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'monday': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'monthly_day': (UpdateFieldValueOfOptionalScheduleMonthlyDayType,),  # noqa: E501
-            'monthly_day_of_month': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'monthly_day_order': (UpdateFieldValueOfOptionalScheduleMonthlyDayOrderType,),  # noqa: E501
-            'monthly_day_order_recurrence': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'monthly_day_recurrence': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'monthly_schedule_type': (UpdateFieldValueOfOptionalScheduleMonthlyType,),  # noqa: E501
-            'saturday': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'schedule_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'send_email': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'send_email_with_high_priority': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'starting_on': (UpdateFieldValueOfDateTime,),  # noqa: E501
-            'sunday': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'thursday': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'tuesday': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'wednesday': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'weeks': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
+            'additional_email_addresses': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'change_type': (UpdateFieldValueOfScheduleChangeType, none_type,),  # noqa: E501
+            'days': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'email_groups': (UpdateFieldValueOfInt32Array, none_type,),  # noqa: E501
+            'friday': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'health_check': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'history_size': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'monday': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'monthly_day': (UpdateFieldValueOfOptionalScheduleMonthlyDayType, none_type,),  # noqa: E501
+            'monthly_day_of_month': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'monthly_day_order': (UpdateFieldValueOfOptionalScheduleMonthlyDayOrderType, none_type,),  # noqa: E501
+            'monthly_day_order_recurrence': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'monthly_day_recurrence': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'monthly_schedule_type': (UpdateFieldValueOfOptionalScheduleMonthlyType, none_type,),  # noqa: E501
+            'saturday': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'schedule_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'send_email': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'send_email_with_high_priority': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'starting_on': (UpdateFieldValueOfDateTime, none_type,),  # noqa: E501
+            'sunday': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'thursday': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'tuesday': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'wednesday': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'weeks': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

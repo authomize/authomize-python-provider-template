@@ -132,14 +132,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_template_permissions_api.SecretTemplatePermissionsApi(api_client)
-    filter_group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Group Id (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    filter_secret_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret type (template) Id (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_group_id = 1 # int | Group Id (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    filter_secret_type_id = 1 # int | Secret type (template) Id (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -156,14 +156,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Group Id | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **filter_secret_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret type (template) Id | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_group_id** | **int**| Group Id | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **filter_secret_type_id** | **int**| Secret type (template) Id | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -231,14 +231,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_template_permissions_api.SecretTemplatePermissionsApi(api_client)
-    filter_group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Will only return permissions that apply to this group (optional)
-    filter_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Will only return permissions that apply to this template (optional)
-    filter_user_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Will only return permissions that apply to this user (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_group_id = 1 # int | Will only return permissions that apply to this group (optional)
+    filter_template_id = 1 # int | Will only return permissions that apply to this template (optional)
+    filter_user_id = 1 # int | Will only return permissions that apply to this user (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -255,14 +255,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Will only return permissions that apply to this group | [optional]
- **filter_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Will only return permissions that apply to this template | [optional]
- **filter_user_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Will only return permissions that apply to this user | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_group_id** | **int**| Will only return permissions that apply to this group | [optional]
+ **filter_template_id** | **int**| Will only return permissions that apply to this template | [optional]
+ **filter_user_id** | **int**| Will only return permissions that apply to this user | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -332,11 +332,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_template_permissions_api.SecretTemplatePermissionsApi(api_client)
     secret_template_permissions_update_args = SecretTemplatePermissionsUpdateArgs(
-        group_id=None,
+        group_id=1,
         permissions=[
             PermissionModel(
-                role_id=None,
-                secret_type_id=None,
+                role_id=1,
+                secret_type_id=1,
             ),
         ],
     ) # SecretTemplatePermissionsUpdateArgs | Secret permission creation options (optional)
@@ -425,13 +425,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_template_permissions_api.SecretTemplatePermissionsApi(api_client)
-    secret_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTypeId
+    secret_type_id = 1 # int | secretTypeId
     secret_template_type_permissions_update_args = SecretTemplateTypePermissionsUpdateArgs(
         data=SecretTemplateTypePermissionsUpdateModel(
             permissions=[
                 SecretTemplateTypePermissionsUpdateGroup(
-                    group_id=None,
-                    role_id=None,
+                    group_id=1,
+                    role_id=1,
                 ),
             ],
         ),
@@ -460,7 +460,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTypeId |
+ **secret_type_id** | **int**| secretTypeId |
  **secret_template_type_permissions_update_args** | [**SecretTemplateTypePermissionsUpdateArgs**](SecretTemplateTypePermissionsUpdateArgs.md)| Secret permission update options | [optional]
 
 ### Return type

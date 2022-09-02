@@ -75,10 +75,8 @@ class EventPipelineViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -87,41 +85,38 @@ class EventPipelineViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'created_date': (ViewFieldValueReadOnlyOfDateTime,),  # noqa: E501
-            'event_entity_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_description': (ViewFieldValueOfString,),  # noqa: E501
-            'event_pipeline_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_name': (ViewFieldValueOfString,),  # noqa: E501
-            'event_pipeline_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_policy_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'filter_list': ([EventPipelineFilterViewModel],),  # noqa: E501
-            'is_system': (bool,),  # noqa: E501
-            'last_modified_date': (ViewFieldValueReadOnlyOfDateTime,),  # noqa: E501
-            'last_modified_display_name': (ViewFieldValueReadOnlyOfString,),  # noqa: E501
-            'sort_order': (ViewFieldValueOfInt32,),  # noqa: E501
-            'task_list': ([EventPipelineTaskViewModel],),  # noqa: E501
-            'triggers': ([EventPipelineTriggerViewModel],),  # noqa: E501
+            'active': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'created_date': (ViewFieldValueReadOnlyOfDateTime, none_type,),  # noqa: E501
+            'event_entity_type_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_description': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'event_pipeline_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_name': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'event_pipeline_policy_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_policy_map_id': (int, none_type,),  # noqa: E501
+            'filter_list': ([EventPipelineFilterViewModel], none_type,),  # noqa: E501
+            'is_system': (bool, none_type,),  # noqa: E501
+            'last_modified_date': (ViewFieldValueReadOnlyOfDateTime, none_type,),  # noqa: E501
+            'last_modified_display_name': (ViewFieldValueReadOnlyOfString, none_type,),  # noqa: E501
+            'sort_order': (ViewFieldValueOfInt32, none_type,),  # noqa: E501
+            'task_list': ([EventPipelineTaskViewModel], none_type,),  # noqa: E501
+            'triggers': ([EventPipelineTriggerViewModel], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -185,12 +180,12 @@ class EventPipelineViewModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             created_date (ViewFieldValueReadOnlyOfDateTime): [optional]  # noqa: E501
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeId. [optional]  # noqa: E501
+            event_entity_type_id (int): EventEntityTypeId. [optional]  # noqa: E501
             event_pipeline_description (ViewFieldValueOfString): [optional]  # noqa: E501
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
             event_pipeline_name (ViewFieldValueOfString): [optional]  # noqa: E501
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]  # noqa: E501
-            event_pipeline_policy_map_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyMapId. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]  # noqa: E501
+            event_pipeline_policy_map_id (int): EventPipelinePolicyMapId. [optional]  # noqa: E501
             filter_list ([EventPipelineFilterViewModel]): FilterList. [optional]  # noqa: E501
             is_system (bool): IsSystem. [optional]  # noqa: E501
             last_modified_date (ViewFieldValueReadOnlyOfDateTime): [optional]  # noqa: E501
@@ -285,12 +280,12 @@ class EventPipelineViewModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             created_date (ViewFieldValueReadOnlyOfDateTime): [optional]  # noqa: E501
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityTypeId. [optional]  # noqa: E501
+            event_entity_type_id (int): EventEntityTypeId. [optional]  # noqa: E501
             event_pipeline_description (ViewFieldValueOfString): [optional]  # noqa: E501
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
             event_pipeline_name (ViewFieldValueOfString): [optional]  # noqa: E501
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]  # noqa: E501
-            event_pipeline_policy_map_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyMapId. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]  # noqa: E501
+            event_pipeline_policy_map_id (int): EventPipelinePolicyMapId. [optional]  # noqa: E501
             filter_list ([EventPipelineFilterViewModel]): FilterList. [optional]  # noqa: E501
             is_system (bool): IsSystem. [optional]  # noqa: E501
             last_modified_date (ViewFieldValueReadOnlyOfDateTime): [optional]  # noqa: E501

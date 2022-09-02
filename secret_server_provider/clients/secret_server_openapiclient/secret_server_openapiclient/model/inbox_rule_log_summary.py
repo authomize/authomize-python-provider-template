@@ -63,10 +63,8 @@ class InboxRuleLogSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,32 +73,29 @@ class InboxRuleLogSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'action_type': (ActionType,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_rule_action_status': (InboxRuleActionStatusType,),  # noqa: E501
-            'status_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'action_type': (ActionType, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'inbox_rule_action_status': (InboxRuleActionStatusType, none_type,),  # noqa: E501
+            'status_date': (datetime, none_type,),  # noqa: E501
+            'status_description': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -154,11 +149,11 @@ class InboxRuleLogSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             action_type (ActionType): [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name for the user or external email address. [optional]  # noqa: E501
+            display_name (str): The display name for the user or external email address. [optional]  # noqa: E501
             inbox_rule_action_status (InboxRuleActionStatusType): [optional]  # noqa: E501
-            status_date (bool, date, datetime, dict, float, int, list, str, none_type): When the action triggered. [optional]  # noqa: E501
-            status_description (bool, date, datetime, dict, float, int, list, str, none_type): Any extra description for this status. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): The specific user id that this action was for. [optional]  # noqa: E501
+            status_date (datetime): When the action triggered. [optional]  # noqa: E501
+            status_description (str): Any extra description for this status. [optional]  # noqa: E501
+            user_id (int): The specific user id that this action was for. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,11 +240,11 @@ class InboxRuleLogSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             action_type (ActionType): [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name for the user or external email address. [optional]  # noqa: E501
+            display_name (str): The display name for the user or external email address. [optional]  # noqa: E501
             inbox_rule_action_status (InboxRuleActionStatusType): [optional]  # noqa: E501
-            status_date (bool, date, datetime, dict, float, int, list, str, none_type): When the action triggered. [optional]  # noqa: E501
-            status_description (bool, date, datetime, dict, float, int, list, str, none_type): Any extra description for this status. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): The specific user id that this action was for. [optional]  # noqa: E501
+            status_date (datetime): When the action triggered. [optional]  # noqa: E501
+            status_description (str): Any extra description for this status. [optional]  # noqa: E501
+            user_id (int): The specific user id that this action was for. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

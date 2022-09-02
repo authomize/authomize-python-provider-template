@@ -57,10 +57,8 @@ class SiteConnectorSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class SiteConnectorSummaryModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'host_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'queue_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_connector_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_connector_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'validated': (bool,),  # noqa: E501
-            'version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'host_name': (str, none_type,),  # noqa: E501
+            'queue_type': (str, none_type,),  # noqa: E501
+            'site_connector_id': (int, none_type,),  # noqa: E501
+            'site_connector_name': (str, none_type,),  # noqa: E501
+            'validated': (bool, none_type,),  # noqa: E501
+            'version': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -148,12 +143,12 @@ class SiteConnectorSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether Site Connector is active or not. [optional]  # noqa: E501
-            host_name (bool, date, datetime, dict, float, int, list, str, none_type): Host Name of Site Connector. [optional]  # noqa: E501
-            queue_type (bool, date, datetime, dict, float, int, list, str, none_type): Queue Type of Site Connector. [optional]  # noqa: E501
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site Connector. [optional]  # noqa: E501
-            site_connector_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Site Connector. [optional]  # noqa: E501
+            host_name (str): Host Name of Site Connector. [optional]  # noqa: E501
+            queue_type (str): Queue Type of Site Connector. [optional]  # noqa: E501
+            site_connector_id (int): Id of Site Connector. [optional]  # noqa: E501
+            site_connector_name (str): Name of Site Connector. [optional]  # noqa: E501
             validated (bool): Whether Site Connector has been validated or not. [optional]  # noqa: E501
-            version (bool, date, datetime, dict, float, int, list, str, none_type): Version of Site Connector. [optional]  # noqa: E501
+            version (str): Version of Site Connector. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,12 +235,12 @@ class SiteConnectorSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether Site Connector is active or not. [optional]  # noqa: E501
-            host_name (bool, date, datetime, dict, float, int, list, str, none_type): Host Name of Site Connector. [optional]  # noqa: E501
-            queue_type (bool, date, datetime, dict, float, int, list, str, none_type): Queue Type of Site Connector. [optional]  # noqa: E501
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site Connector. [optional]  # noqa: E501
-            site_connector_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Site Connector. [optional]  # noqa: E501
+            host_name (str): Host Name of Site Connector. [optional]  # noqa: E501
+            queue_type (str): Queue Type of Site Connector. [optional]  # noqa: E501
+            site_connector_id (int): Id of Site Connector. [optional]  # noqa: E501
+            site_connector_name (str): Name of Site Connector. [optional]  # noqa: E501
             validated (bool): Whether Site Connector has been validated or not. [optional]  # noqa: E501
-            version (bool, date, datetime, dict, float, int, list, str, none_type): Version of Site Connector. [optional]  # noqa: E501
+            version (str): Version of Site Connector. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

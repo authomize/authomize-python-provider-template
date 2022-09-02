@@ -63,10 +63,8 @@ class MEKRotationInfoResponseViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,38 +73,35 @@ class MEKRotationInfoResponseViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'can_request_rotation': (bool,),  # noqa: E501
-            'can_retry_status': (bool,),  # noqa: E501
-            'error_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_permission': (bool,),  # noqa: E501
-            'is_replication_enabled': (bool,),  # noqa: E501
-            'items_to_rotate': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'poll_info': (bool,),  # noqa: E501
-            'process_state': (MEKRotationProcessStateTypes,),  # noqa: E501
-            'rotation_info': (MEKRotationInfoModel,),  # noqa: E501
-            'show_backup_confirmation': (bool,),  # noqa: E501
-            'total_items': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'warning_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'can_request_rotation': (bool, none_type,),  # noqa: E501
+            'can_retry_status': (bool, none_type,),  # noqa: E501
+            'error_message': (str, none_type,),  # noqa: E501
+            'has_permission': (bool, none_type,),  # noqa: E501
+            'is_replication_enabled': (bool, none_type,),  # noqa: E501
+            'items_to_rotate': (int, none_type,),  # noqa: E501
+            'poll_info': (bool, none_type,),  # noqa: E501
+            'process_state': (MEKRotationProcessStateTypes, none_type,),  # noqa: E501
+            'rotation_info': (MEKRotationInfoModel, none_type,),  # noqa: E501
+            'show_backup_confirmation': (bool, none_type,),  # noqa: E501
+            'total_items': (int, none_type,),  # noqa: E501
+            'warning_message': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -167,16 +162,16 @@ class MEKRotationInfoResponseViewModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             can_request_rotation (bool): CanRequestRotation. [optional]  # noqa: E501
             can_retry_status (bool): CanRetryStatus. [optional]  # noqa: E501
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): ErrorMessage. [optional]  # noqa: E501
+            error_message (str): ErrorMessage. [optional]  # noqa: E501
             has_permission (bool): HasPermission. [optional]  # noqa: E501
             is_replication_enabled (bool): IsReplicationEnabled. [optional]  # noqa: E501
-            items_to_rotate (bool, date, datetime, dict, float, int, list, str, none_type): ItemsToRotate. [optional]  # noqa: E501
+            items_to_rotate (int): ItemsToRotate. [optional]  # noqa: E501
             poll_info (bool): PollInfo. [optional]  # noqa: E501
             process_state (MEKRotationProcessStateTypes): [optional]  # noqa: E501
             rotation_info (MEKRotationInfoModel): [optional]  # noqa: E501
             show_backup_confirmation (bool): ShowBackupConfirmation. [optional]  # noqa: E501
-            total_items (bool, date, datetime, dict, float, int, list, str, none_type): TotalItems. [optional]  # noqa: E501
-            warning_message (bool, date, datetime, dict, float, int, list, str, none_type): WarningMessage. [optional]  # noqa: E501
+            total_items (int): TotalItems. [optional]  # noqa: E501
+            warning_message (str): WarningMessage. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -264,16 +259,16 @@ class MEKRotationInfoResponseViewModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             can_request_rotation (bool): CanRequestRotation. [optional]  # noqa: E501
             can_retry_status (bool): CanRetryStatus. [optional]  # noqa: E501
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): ErrorMessage. [optional]  # noqa: E501
+            error_message (str): ErrorMessage. [optional]  # noqa: E501
             has_permission (bool): HasPermission. [optional]  # noqa: E501
             is_replication_enabled (bool): IsReplicationEnabled. [optional]  # noqa: E501
-            items_to_rotate (bool, date, datetime, dict, float, int, list, str, none_type): ItemsToRotate. [optional]  # noqa: E501
+            items_to_rotate (int): ItemsToRotate. [optional]  # noqa: E501
             poll_info (bool): PollInfo. [optional]  # noqa: E501
             process_state (MEKRotationProcessStateTypes): [optional]  # noqa: E501
             rotation_info (MEKRotationInfoModel): [optional]  # noqa: E501
             show_backup_confirmation (bool): ShowBackupConfirmation. [optional]  # noqa: E501
-            total_items (bool, date, datetime, dict, float, int, list, str, none_type): TotalItems. [optional]  # noqa: E501
-            warning_message (bool, date, datetime, dict, float, int, list, str, none_type): WarningMessage. [optional]  # noqa: E501
+            total_items (int): TotalItems. [optional]  # noqa: E501
+            warning_message (str): WarningMessage. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -63,10 +63,8 @@ class FolderBasicModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,38 +73,35 @@ class FolderBasicModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allowed_templates': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'enable_inherit_permissions': (bool,),  # noqa: E501
-            'enable_inherit_secret_policy': (bool,),  # noqa: E501
-            'folder_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_edit': (bool,),  # noqa: E501
-            'has_owner': (bool,),  # noqa: E501
-            'is_personal_folder': (bool,),  # noqa: E501
-            'parent_folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'parent_folder_policy_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policies': ([SecretPolicyModel],),  # noqa: E501
-            'secret_policy': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_templates': ([TemplateViewModel],),  # noqa: E501
+            'allowed_templates': ([int], none_type,),  # noqa: E501
+            'enable_inherit_permissions': (bool, none_type,),  # noqa: E501
+            'enable_inherit_secret_policy': (bool, none_type,),  # noqa: E501
+            'folder_name': (str, none_type,),  # noqa: E501
+            'has_edit': (bool, none_type,),  # noqa: E501
+            'has_owner': (bool, none_type,),  # noqa: E501
+            'is_personal_folder': (bool, none_type,),  # noqa: E501
+            'parent_folder_id': (int, none_type,),  # noqa: E501
+            'parent_folder_policy_name': (str, none_type,),  # noqa: E501
+            'secret_policies': ([SecretPolicyModel], none_type,),  # noqa: E501
+            'secret_policy': (int, none_type,),  # noqa: E501
+            'secret_templates': ([TemplateViewModel], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,17 +160,17 @@ class FolderBasicModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allowed_templates ([bool, date, datetime, dict, float, int, list, str, none_type]): Allowed Templates. [optional]  # noqa: E501
+            allowed_templates ([int]): Allowed Templates. [optional]  # noqa: E501
             enable_inherit_permissions (bool): Should the folder inherit permissions from the parent folder. [optional]  # noqa: E501
             enable_inherit_secret_policy (bool): Should the folder inherit the secret policy from the parent folder. [optional]  # noqa: E501
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): The dispay name for the folder. [optional]  # noqa: E501
+            folder_name (str): The dispay name for the folder. [optional]  # noqa: E501
             has_edit (bool): If the user can edit the folder. [optional]  # noqa: E501
             has_owner (bool): If the user owns the folder. [optional]  # noqa: E501
             is_personal_folder (bool): Whether or not this is a personal folder. [optional]  # noqa: E501
-            parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the parent folder. [optional]  # noqa: E501
-            parent_folder_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Policy name on the parent folder. [optional]  # noqa: E501
+            parent_folder_id (int): The ID of the parent folder. [optional]  # noqa: E501
+            parent_folder_policy_name (str): Policy name on the parent folder. [optional]  # noqa: E501
             secret_policies ([SecretPolicyModel]): SecretPolicies. [optional]  # noqa: E501
-            secret_policy (bool, date, datetime, dict, float, int, list, str, none_type): The secret policy ID that is assigned to the folder. [optional]  # noqa: E501
+            secret_policy (int): The secret policy ID that is assigned to the folder. [optional]  # noqa: E501
             secret_templates ([TemplateViewModel]): Secret Templates. [optional]  # noqa: E501
         """
 
@@ -262,17 +257,17 @@ class FolderBasicModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allowed_templates ([bool, date, datetime, dict, float, int, list, str, none_type]): Allowed Templates. [optional]  # noqa: E501
+            allowed_templates ([int]): Allowed Templates. [optional]  # noqa: E501
             enable_inherit_permissions (bool): Should the folder inherit permissions from the parent folder. [optional]  # noqa: E501
             enable_inherit_secret_policy (bool): Should the folder inherit the secret policy from the parent folder. [optional]  # noqa: E501
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): The dispay name for the folder. [optional]  # noqa: E501
+            folder_name (str): The dispay name for the folder. [optional]  # noqa: E501
             has_edit (bool): If the user can edit the folder. [optional]  # noqa: E501
             has_owner (bool): If the user owns the folder. [optional]  # noqa: E501
             is_personal_folder (bool): Whether or not this is a personal folder. [optional]  # noqa: E501
-            parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the parent folder. [optional]  # noqa: E501
-            parent_folder_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Policy name on the parent folder. [optional]  # noqa: E501
+            parent_folder_id (int): The ID of the parent folder. [optional]  # noqa: E501
+            parent_folder_policy_name (str): Policy name on the parent folder. [optional]  # noqa: E501
             secret_policies ([SecretPolicyModel]): SecretPolicies. [optional]  # noqa: E501
-            secret_policy (bool, date, datetime, dict, float, int, list, str, none_type): The secret policy ID that is assigned to the folder. [optional]  # noqa: E501
+            secret_policy (int): The secret policy ID that is assigned to the folder. [optional]  # noqa: E501
             secret_templates ([TemplateViewModel]): Secret Templates. [optional]  # noqa: E501
         """
 

@@ -134,7 +134,7 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_dependency_group_create_args':
                         (SecretDependencyGroupCreateArgs,),
                 },
@@ -190,7 +190,7 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -211,7 +211,7 @@ class SecretDependenciesApi(object):
         )
         self.secret_dependencies_service_execute_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -239,7 +239,7 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'request_body':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                 },
                 'attribute_map': {
                 },
@@ -291,7 +291,7 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -342,7 +342,7 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'identifier':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'identifier': 'identifier',
@@ -393,7 +393,7 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_id': 'secretId',
@@ -542,27 +542,27 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'filter_secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_group_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_last_run_status':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_secret_id': 'filter.secretId',
@@ -634,13 +634,13 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'script_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'script_id': 'scriptId',
@@ -698,7 +698,7 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_dependency_update_args':
                         (SecretDependencyUpdateArgs,),
                 },
@@ -755,7 +755,7 @@ class SecretDependenciesApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'update_secret_dependency_group_args':
                         (UpdateSecretDependencyGroupArgs,),
                 },
@@ -874,7 +874,7 @@ class SecretDependenciesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            secret_id (int): Secret ID
 
         Keyword Args:
             secret_dependency_group_create_args (SecretDependencyGroupCreateArgs): Secret Dependency create options. [optional]
@@ -958,7 +958,7 @@ class SecretDependenciesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Dependency ID
+            id (int): Secret Dependency ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1041,7 +1041,7 @@ class SecretDependenciesApi(object):
 
 
         Keyword Args:
-            request_body ([bool, date, datetime, dict, float, int, list, str, none_type]): Dependency Id array. [optional]
+            request_body ([int]): Dependency Id array. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1074,7 +1074,7 @@ class SecretDependenciesApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -1120,7 +1120,7 @@ class SecretDependenciesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Dependency ID
+            id (int): Secret Dependency ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1203,7 +1203,7 @@ class SecretDependenciesApi(object):
         >>> result = thread.get()
 
         Args:
-            identifier (bool, date, datetime, dict, float, int, list, str, none_type): Task identifier
+            identifier (str): Task identifier
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1286,7 +1286,7 @@ class SecretDependenciesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            secret_id (int): Secret ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1525,19 +1525,19 @@ class SecretDependenciesApi(object):
         >>> result = thread.get()
 
         Args:
-            filter_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Secret Id to filter on
+            filter_secret_id (int): The Secret Id to filter on
 
         Keyword Args:
-            filter_group_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter by group id. [optional]
+            filter_group_id (int): Filter by group id. [optional]
             filter_include_inactive (bool): Whether or not to include inactive Secret Depenencies. [optional]
-            filter_last_run_status (bool, date, datetime, dict, float, int, list, str, none_type): Filter by last dependency result status. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search in the title / name and machine fields. [optional]
-            filter_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter by dependency template id. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_last_run_status (str): Filter by last dependency result status. [optional]
+            filter_search_text (str): Search in the title / name and machine fields. [optional]
+            filter_template_id (int): Filter by dependency template id. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1618,10 +1618,10 @@ class SecretDependenciesApi(object):
 
 
         Keyword Args:
-            script_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Script that this Dependency will Run.  Only provide this value if the Dependency is running a script directly, and ensure that the type of the script matches the TypeId value passed in.. [optional]
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret that this Dependency will appear on. [optional]
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Dependency Template that this Dependecy will be modeled on. Only provide this value if the Dependency is based on a Template.. [optional]
-            type_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Dependency Type that this Dependecy will be modeled on. Only provide this value if the Dependency is a running a script directly and is NOT based on a Dependency Template.  Valid Values: PowershellScript = 7, SshScript = 8, SqlScript = 9. [optional]
+            script_id (int): The Id of the Script that this Dependency will Run.  Only provide this value if the Dependency is running a script directly, and ensure that the type of the script matches the TypeId value passed in.. [optional]
+            secret_id (int): The Id of the Secret that this Dependency will appear on. [optional]
+            template_id (int): The Id of the Dependency Template that this Dependecy will be modeled on. Only provide this value if the Dependency is based on a Template.. [optional]
+            type_id (int): The Id of the Dependency Type that this Dependecy will be modeled on. Only provide this value if the Dependency is a running a script directly and is NOT based on a Dependency Template.  Valid Values: PowershellScript = 7, SshScript = 8, SqlScript = 9. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1700,7 +1700,7 @@ class SecretDependenciesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Dependency ID
+            id (int): Secret Dependency ID
 
         Keyword Args:
             secret_dependency_update_args (SecretDependencyUpdateArgs): Secret Dependency update options. [optional]
@@ -1784,7 +1784,7 @@ class SecretDependenciesApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Secret to assign to Dependency Group.
+            secret_id (int): Id of Secret to assign to Dependency Group.
 
         Keyword Args:
             update_secret_dependency_group_args (UpdateSecretDependencyGroupArgs): args. [optional]

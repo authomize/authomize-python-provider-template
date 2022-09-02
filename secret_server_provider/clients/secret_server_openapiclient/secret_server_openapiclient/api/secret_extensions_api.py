@@ -154,7 +154,6 @@ class SecretExtensionsApi(object):
                 ],
                 'required': [],
                 'nullable': [
-                    'body',
                 ],
                 'enum': [
                 ],
@@ -168,7 +167,7 @@ class SecretExtensionsApi(object):
                 },
                 'openapi_types': {
                     'body':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                 },
@@ -205,7 +204,6 @@ class SecretExtensionsApi(object):
                 ],
                 'required': [],
                 'nullable': [
-                    'body',
                 ],
                 'enum': [
                 ],
@@ -219,7 +217,7 @@ class SecretExtensionsApi(object):
                 },
                 'openapi_types': {
                     'body':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                 },
@@ -256,7 +254,6 @@ class SecretExtensionsApi(object):
                 ],
                 'required': [],
                 'nullable': [
-                    'body',
                 ],
                 'enum': [
                 ],
@@ -270,7 +267,7 @@ class SecretExtensionsApi(object):
                 },
                 'openapi_types': {
                     'body':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                 },
@@ -463,7 +460,7 @@ class SecretExtensionsApi(object):
 
 
         Keyword Args:
-            body (bool, date, datetime, dict, float, int, list, str, none_type): url. [optional]
+            body (str): url. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -542,7 +539,7 @@ class SecretExtensionsApi(object):
 
 
         Keyword Args:
-            body (bool, date, datetime, dict, float, int, list, str, none_type): domain. [optional]
+            body (str): domain. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -621,7 +618,7 @@ class SecretExtensionsApi(object):
 
 
         Keyword Args:
-            body (bool, date, datetime, dict, float, int, list, str, none_type): computerName. [optional]
+            body (str): computerName. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

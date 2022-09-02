@@ -57,10 +57,8 @@ class AutoExportConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class AutoExportConfigurationModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'enable_auto_export': (bool,),  # noqa: E501
-            'export_child_folders': (bool,),  # noqa: E501
-            'export_folder_paths': (bool,),  # noqa: E501
-            'export_password_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'export_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'export_totp_settings': (bool,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'frequency_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_exported': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'enable_auto_export': (bool, none_type,),  # noqa: E501
+            'export_child_folders': (bool, none_type,),  # noqa: E501
+            'export_folder_paths': (bool, none_type,),  # noqa: E501
+            'export_password_secret_id': (int, none_type,),  # noqa: E501
+            'export_path': (str, none_type,),  # noqa: E501
+            'export_totp_settings': (bool, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'frequency_days': (int, none_type,),  # noqa: E501
+            'last_exported': (datetime, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -156,13 +151,13 @@ class AutoExportConfigurationModel(ModelNormal):
             enable_auto_export (bool): Whether automatic export is enabled.. [optional]  # noqa: E501
             export_child_folders (bool): Whether child folders are included in the export.. [optional]  # noqa: E501
             export_folder_paths (bool): Whether folder paths are included in the export.. [optional]  # noqa: E501
-            export_password_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the Secret whose value is used to password protect exported data.. [optional]  # noqa: E501
-            export_path (bool, date, datetime, dict, float, int, list, str, none_type): Where the exported file is stored if on-prem.. [optional]  # noqa: E501
+            export_password_secret_id (int): The ID of the Secret whose value is used to password protect exported data.. [optional]  # noqa: E501
+            export_path (str): Where the exported file is stored if on-prem.. [optional]  # noqa: E501
             export_totp_settings (bool): Whether TOTP settings are included in the export.. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Which folder to automatically export, if none provided then all are exported.. [optional]  # noqa: E501
-            frequency_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days between each automatic export.. [optional]  # noqa: E501
-            last_exported (bool, date, datetime, dict, float, int, list, str, none_type): The last time the automatic export ran.. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): The user the export will be run as.. [optional]  # noqa: E501
+            folder_id (int): Which folder to automatically export, if none provided then all are exported.. [optional]  # noqa: E501
+            frequency_days (int): How many days between each automatic export.. [optional]  # noqa: E501
+            last_exported (datetime): The last time the automatic export ran.. [optional]  # noqa: E501
+            user_id (int): The user the export will be run as.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -251,13 +246,13 @@ class AutoExportConfigurationModel(ModelNormal):
             enable_auto_export (bool): Whether automatic export is enabled.. [optional]  # noqa: E501
             export_child_folders (bool): Whether child folders are included in the export.. [optional]  # noqa: E501
             export_folder_paths (bool): Whether folder paths are included in the export.. [optional]  # noqa: E501
-            export_password_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the Secret whose value is used to password protect exported data.. [optional]  # noqa: E501
-            export_path (bool, date, datetime, dict, float, int, list, str, none_type): Where the exported file is stored if on-prem.. [optional]  # noqa: E501
+            export_password_secret_id (int): The ID of the Secret whose value is used to password protect exported data.. [optional]  # noqa: E501
+            export_path (str): Where the exported file is stored if on-prem.. [optional]  # noqa: E501
             export_totp_settings (bool): Whether TOTP settings are included in the export.. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Which folder to automatically export, if none provided then all are exported.. [optional]  # noqa: E501
-            frequency_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days between each automatic export.. [optional]  # noqa: E501
-            last_exported (bool, date, datetime, dict, float, int, list, str, none_type): The last time the automatic export ran.. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): The user the export will be run as.. [optional]  # noqa: E501
+            folder_id (int): Which folder to automatically export, if none provided then all are exported.. [optional]  # noqa: E501
+            frequency_days (int): How many days between each automatic export.. [optional]  # noqa: E501
+            last_exported (datetime): The last time the automatic export ran.. [optional]  # noqa: E501
+            user_id (int): The user the export will be run as.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

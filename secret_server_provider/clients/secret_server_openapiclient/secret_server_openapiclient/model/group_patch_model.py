@@ -65,10 +65,8 @@ class GroupPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,32 +75,29 @@ class GroupPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'added_owner_group_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'ip_address_restriction_ids': (UpdateFieldValueOfInt32Array,),  # noqa: E501
-            'name': (UpdateFieldValueOfString,),  # noqa: E501
-            'owner_group_ids': (UpdateFieldValueOfInt32Array,),  # noqa: E501
-            'removed_owner_group_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
+            'added_owner_group_ids': ([int], none_type,),  # noqa: E501
+            'enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'ip_address_restriction_ids': (UpdateFieldValueOfInt32Array, none_type,),  # noqa: E501
+            'name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'owner_group_ids': (UpdateFieldValueOfInt32Array, none_type,),  # noqa: E501
+            'removed_owner_group_ids': ([int], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,12 +150,12 @@ class GroupPatchModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            added_owner_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Only the group IDs to add as owners, this take precedence over the OwnerGroupIds. [optional]  # noqa: E501
+            added_owner_group_ids ([int]): Only the group IDs to add as owners, this take precedence over the OwnerGroupIds. [optional]  # noqa: E501
             enabled (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             ip_address_restriction_ids (UpdateFieldValueOfInt32Array): [optional]  # noqa: E501
             name (UpdateFieldValueOfString): [optional]  # noqa: E501
             owner_group_ids (UpdateFieldValueOfInt32Array): [optional]  # noqa: E501
-            removed_owner_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Only the group IDs to removed as owners, this take precedence over the OwnerGroupIds. [optional]  # noqa: E501
+            removed_owner_group_ids ([int]): Only the group IDs to removed as owners, this take precedence over the OwnerGroupIds. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -246,12 +241,12 @@ class GroupPatchModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            added_owner_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Only the group IDs to add as owners, this take precedence over the OwnerGroupIds. [optional]  # noqa: E501
+            added_owner_group_ids ([int]): Only the group IDs to add as owners, this take precedence over the OwnerGroupIds. [optional]  # noqa: E501
             enabled (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
             ip_address_restriction_ids (UpdateFieldValueOfInt32Array): [optional]  # noqa: E501
             name (UpdateFieldValueOfString): [optional]  # noqa: E501
             owner_group_ids (UpdateFieldValueOfInt32Array): [optional]  # noqa: E501
-            removed_owner_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Only the group IDs to removed as owners, this take precedence over the OwnerGroupIds. [optional]  # noqa: E501
+            removed_owner_group_ids ([int]): Only the group IDs to removed as owners, this take precedence over the OwnerGroupIds. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

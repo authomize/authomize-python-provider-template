@@ -93,10 +93,8 @@ class SecretServerSettingsPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -105,45 +103,42 @@ class SecretServerSettingsPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'advanced_settings': ([ConfigurationAdvancedUpdateArgs],),  # noqa: E501
-            'application_settings': (ConfigurationApplicationSettingsPatchModel,),  # noqa: E501
-            'configuration_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'email': (ConfigurationEmailPatchModel,),  # noqa: E501
-            'external_instance_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_settings': (ConfigurationFoldersPatchModel,),  # noqa: E501
-            'launcher_settings': (ConfigurationLauncherSettingsPatchModel,),  # noqa: E501
-            'licenses': ([LicenseModel],),  # noqa: E501
-            'local_user_passwords': (ConfigurationLocalPasswordPatchModel,),  # noqa: E501
-            'login': (ConfigurationLoginPatchModel,),  # noqa: E501
-            'permission_options': (ConfigurationPermissionOptionsPatchModel,),  # noqa: E501
-            'protocol_handler_settings': (ConfigurationProtocolHandlerSettingsPatchModel,),  # noqa: E501
-            'saml': (ConfigurationSamlPatchModel,),  # noqa: E501
-            'security': (ConfigurationSecurityPatchModel,),  # noqa: E501
-            'session_recording': (ConfigurationSessionRecordingPatchModel,),  # noqa: E501
-            'ssh_commands': (ConfigurationSshCommandImportModel,),  # noqa: E501
-            'ticket_system': (ConfigurationTicketSystemListCreateOrPatchModel,),  # noqa: E501
-            'user_experience': (ConfigurationUserExperiencePatchModel,),  # noqa: E501
-            'user_interface': (ConfigurationUserInterfacePatchModel,),  # noqa: E501
+            'advanced_settings': ([ConfigurationAdvancedUpdateArgs], none_type,),  # noqa: E501
+            'application_settings': (ConfigurationApplicationSettingsPatchModel, none_type,),  # noqa: E501
+            'configuration_version': (str, none_type,),  # noqa: E501
+            'email': (ConfigurationEmailPatchModel, none_type,),  # noqa: E501
+            'external_instance_id': (str, none_type,),  # noqa: E501
+            'folder_settings': (ConfigurationFoldersPatchModel, none_type,),  # noqa: E501
+            'launcher_settings': (ConfigurationLauncherSettingsPatchModel, none_type,),  # noqa: E501
+            'licenses': ([LicenseModel], none_type,),  # noqa: E501
+            'local_user_passwords': (ConfigurationLocalPasswordPatchModel, none_type,),  # noqa: E501
+            'login': (ConfigurationLoginPatchModel, none_type,),  # noqa: E501
+            'permission_options': (ConfigurationPermissionOptionsPatchModel, none_type,),  # noqa: E501
+            'protocol_handler_settings': (ConfigurationProtocolHandlerSettingsPatchModel, none_type,),  # noqa: E501
+            'saml': (ConfigurationSamlPatchModel, none_type,),  # noqa: E501
+            'security': (ConfigurationSecurityPatchModel, none_type,),  # noqa: E501
+            'session_recording': (ConfigurationSessionRecordingPatchModel, none_type,),  # noqa: E501
+            'ssh_commands': (ConfigurationSshCommandImportModel, none_type,),  # noqa: E501
+            'ticket_system': (ConfigurationTicketSystemListCreateOrPatchModel, none_type,),  # noqa: E501
+            'user_experience': (ConfigurationUserExperiencePatchModel, none_type,),  # noqa: E501
+            'user_interface': (ConfigurationUserInterfacePatchModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -211,9 +206,9 @@ class SecretServerSettingsPatchModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             advanced_settings ([ConfigurationAdvancedUpdateArgs]): Advanced Configuration Settings. [optional]  # noqa: E501
             application_settings (ConfigurationApplicationSettingsPatchModel): [optional]  # noqa: E501
-            configuration_version (bool, date, datetime, dict, float, int, list, str, none_type): Export Configuration Version. [optional]  # noqa: E501
+            configuration_version (str): Export Configuration Version. [optional]  # noqa: E501
             email (ConfigurationEmailPatchModel): [optional]  # noqa: E501
-            external_instance_id (bool, date, datetime, dict, float, int, list, str, none_type): ID for specific instance. [optional]  # noqa: E501
+            external_instance_id (str): ID for specific instance. [optional]  # noqa: E501
             folder_settings (ConfigurationFoldersPatchModel): [optional]  # noqa: E501
             launcher_settings (ConfigurationLauncherSettingsPatchModel): [optional]  # noqa: E501
             licenses ([LicenseModel]): Licenses (on-perm only). [optional]  # noqa: E501
@@ -315,9 +310,9 @@ class SecretServerSettingsPatchModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             advanced_settings ([ConfigurationAdvancedUpdateArgs]): Advanced Configuration Settings. [optional]  # noqa: E501
             application_settings (ConfigurationApplicationSettingsPatchModel): [optional]  # noqa: E501
-            configuration_version (bool, date, datetime, dict, float, int, list, str, none_type): Export Configuration Version. [optional]  # noqa: E501
+            configuration_version (str): Export Configuration Version. [optional]  # noqa: E501
             email (ConfigurationEmailPatchModel): [optional]  # noqa: E501
-            external_instance_id (bool, date, datetime, dict, float, int, list, str, none_type): ID for specific instance. [optional]  # noqa: E501
+            external_instance_id (str): ID for specific instance. [optional]  # noqa: E501
             folder_settings (ConfigurationFoldersPatchModel): [optional]  # noqa: E501
             launcher_settings (ConfigurationLauncherSettingsPatchModel): [optional]  # noqa: E501
             licenses ([LicenseModel]): Licenses (on-perm only). [optional]  # noqa: E501

@@ -65,10 +65,8 @@ class ConfigurationLoginTwoFactorModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,33 +75,30 @@ class ConfigurationLoginTwoFactorModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_two_factor_remember_me': (bool,),  # noqa: E501
-            'duo': (ConfigurationLoginTwoFactorDuoModel,),  # noqa: E501
-            'open_id_connect': (ConfigurationLoginTwoFactorOpenIdConnectModel,),  # noqa: E501
-            'radius': (ConfigurationLoginTwoFactorRadiusModel,),  # noqa: E501
-            'require_two_factor_for_web_login': (bool,),  # noqa: E501
-            'require_two_factor_for_web_services': (bool,),  # noqa: E501
-            'two_factor_remember_me_time_out_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'allow_two_factor_remember_me': (bool, none_type,),  # noqa: E501
+            'duo': (ConfigurationLoginTwoFactorDuoModel, none_type,),  # noqa: E501
+            'open_id_connect': (ConfigurationLoginTwoFactorOpenIdConnectModel, none_type,),  # noqa: E501
+            'radius': (ConfigurationLoginTwoFactorRadiusModel, none_type,),  # noqa: E501
+            'require_two_factor_for_web_login': (bool, none_type,),  # noqa: E501
+            'require_two_factor_for_web_services': (bool, none_type,),  # noqa: E501
+            'two_factor_remember_me_time_out_days': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -163,7 +158,7 @@ class ConfigurationLoginTwoFactorModel(ModelNormal):
             radius (ConfigurationLoginTwoFactorRadiusModel): [optional]  # noqa: E501
             require_two_factor_for_web_login (bool): Require Two Factor For Web Login. [optional]  # noqa: E501
             require_two_factor_for_web_services (bool): Require Two Factor For Web Services. [optional]  # noqa: E501
-            two_factor_remember_me_time_out_days (bool, date, datetime, dict, float, int, list, str, none_type): The number of days that you will not be reprompted for 2FA. [optional]  # noqa: E501
+            two_factor_remember_me_time_out_days (int): The number of days that you will not be reprompted for 2FA. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -255,7 +250,7 @@ class ConfigurationLoginTwoFactorModel(ModelNormal):
             radius (ConfigurationLoginTwoFactorRadiusModel): [optional]  # noqa: E501
             require_two_factor_for_web_login (bool): Require Two Factor For Web Login. [optional]  # noqa: E501
             require_two_factor_for_web_services (bool): Require Two Factor For Web Services. [optional]  # noqa: E501
-            two_factor_remember_me_time_out_days (bool, date, datetime, dict, float, int, list, str, none_type): The number of days that you will not be reprompted for 2FA. [optional]  # noqa: E501
+            two_factor_remember_me_time_out_days (int): The number of days that you will not be reprompted for 2FA. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

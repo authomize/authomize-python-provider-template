@@ -125,7 +125,7 @@ class SshCommandApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -224,19 +224,19 @@ class SshCommandApi(object):
                 },
                 'openapi_types': {
                     'filter_command_permission_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_name_or_command':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_command_permission_type': 'filter.commandPermissionType',
@@ -300,7 +300,7 @@ class SshCommandApi(object):
                 },
                 'openapi_types': {
                     'ssh_command_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'ssh_command_patch_args':
                         (SshCommandPatchArgs,),
                 },
@@ -419,7 +419,7 @@ class SshCommandApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): SSH Command ID
+            id (int): SSH Command ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -580,13 +580,13 @@ class SshCommandApi(object):
 
 
         Keyword Args:
-            filter_command_permission_type (bool, date, datetime, dict, float, int, list, str, none_type): CommandPermissionType. [optional]
-            filter_name_or_command (bool, date, datetime, dict, float, int, list, str, none_type): NameOrCommand. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_command_permission_type (str): CommandPermissionType. [optional]
+            filter_name_or_command (str): NameOrCommand. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -665,7 +665,7 @@ class SshCommandApi(object):
         >>> result = thread.get()
 
         Args:
-            ssh_command_id (bool, date, datetime, dict, float, int, list, str, none_type): sshCommandId
+            ssh_command_id (str): sshCommandId
 
         Keyword Args:
             ssh_command_patch_args (SshCommandPatchArgs): SSH Command Update Options. [optional]

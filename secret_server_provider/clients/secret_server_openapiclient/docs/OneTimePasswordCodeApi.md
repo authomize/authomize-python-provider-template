@@ -48,8 +48,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = one_time_password_code_api.OneTimePasswordCodeApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    number_of_codes_to_generate = None # bool, date, datetime, dict, float, int, list, str, none_type | NumberOfCodesToGenerate (optional)
+    id = 1 # int | Secret ID
+    number_of_codes_to_generate = 1 # int | NumberOfCodesToGenerate (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -74,8 +74,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **number_of_codes_to_generate** | **bool, date, datetime, dict, float, int, list, str, none_type**| NumberOfCodesToGenerate | [optional]
+ **id** | **int**| Secret ID |
+ **number_of_codes_to_generate** | **int**| NumberOfCodesToGenerate | [optional]
 
 ### Return type
 

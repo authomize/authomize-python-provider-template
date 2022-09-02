@@ -65,10 +65,8 @@ class PasswordRequirementModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,42 +75,39 @@ class PasswordRequirementModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allowed_character_set': (CharacterSetSummary,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'example': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_default': (bool,),  # noqa: E501
-            'max_password_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'min_password_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_dictionaries': ([PasswordDictionarySummary],),  # noqa: E501
-            'password_requirement_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_requirement_rules': ([PasswordRequirementRuleSummary],),  # noqa: E501
-            'prevent_dictionary_words': (bool,),  # noqa: E501
-            'prevent_sequential_pattern': (bool,),  # noqa: E501
-            'prevent_spatial_pattern': (bool,),  # noqa: E501
-            'prevent_username': (bool,),  # noqa: E501
-            'secret_usage': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type_usage': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
+            'allowed_character_set': (CharacterSetSummary, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'example': (str, none_type,),  # noqa: E501
+            'is_default': (bool, none_type,),  # noqa: E501
+            'max_password_length': (int, none_type,),  # noqa: E501
+            'min_password_length': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'password_dictionaries': ([PasswordDictionarySummary], none_type,),  # noqa: E501
+            'password_requirement_id': (int, none_type,),  # noqa: E501
+            'password_requirement_rules': ([PasswordRequirementRuleSummary], none_type,),  # noqa: E501
+            'prevent_dictionary_words': (bool, none_type,),  # noqa: E501
+            'prevent_sequential_pattern': (bool, none_type,),  # noqa: E501
+            'prevent_spatial_pattern': (bool, none_type,),  # noqa: E501
+            'prevent_username': (bool, none_type,),  # noqa: E501
+            'secret_usage': (int, none_type,),  # noqa: E501
+            'type_usage': ([str], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -176,21 +171,21 @@ class PasswordRequirementModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             allowed_character_set (CharacterSetSummary): [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            example (bool, date, datetime, dict, float, int, list, str, none_type): An example of the password. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            example (str): An example of the password. [optional]  # noqa: E501
             is_default (bool): Is Default. [optional]  # noqa: E501
-            max_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Password Length. [optional]  # noqa: E501
-            min_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Minimum Password Length. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
+            max_password_length (int): Maximum Password Length. [optional]  # noqa: E501
+            min_password_length (int): Minimum Password Length. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
             password_dictionaries ([PasswordDictionarySummary]): Password Dictionaries. [optional]  # noqa: E501
-            password_requirement_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Requirement Id. [optional]  # noqa: E501
+            password_requirement_id (int): Password Requirement Id. [optional]  # noqa: E501
             password_requirement_rules ([PasswordRequirementRuleSummary]): Password Requirement Rules. [optional]  # noqa: E501
             prevent_dictionary_words (bool): Prevent Dictionary Words. [optional]  # noqa: E501
             prevent_sequential_pattern (bool): Prevent Sequential Pattern. [optional]  # noqa: E501
             prevent_spatial_pattern (bool): Prevent Spacial Pattern. [optional]  # noqa: E501
             prevent_username (bool): Prevent Username. [optional]  # noqa: E501
-            secret_usage (bool, date, datetime, dict, float, int, list, str, none_type): A count of secrets using the requirement. [optional]  # noqa: E501
-            type_usage ([bool, date, datetime, dict, float, int, list, str, none_type]): A list of secret templates using the password requirement. [optional]  # noqa: E501
+            secret_usage (int): A count of secrets using the requirement. [optional]  # noqa: E501
+            type_usage ([str]): A list of secret templates using the password requirement. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -277,21 +272,21 @@ class PasswordRequirementModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             allowed_character_set (CharacterSetSummary): [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            example (bool, date, datetime, dict, float, int, list, str, none_type): An example of the password. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            example (str): An example of the password. [optional]  # noqa: E501
             is_default (bool): Is Default. [optional]  # noqa: E501
-            max_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Password Length. [optional]  # noqa: E501
-            min_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Minimum Password Length. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
+            max_password_length (int): Maximum Password Length. [optional]  # noqa: E501
+            min_password_length (int): Minimum Password Length. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
             password_dictionaries ([PasswordDictionarySummary]): Password Dictionaries. [optional]  # noqa: E501
-            password_requirement_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Requirement Id. [optional]  # noqa: E501
+            password_requirement_id (int): Password Requirement Id. [optional]  # noqa: E501
             password_requirement_rules ([PasswordRequirementRuleSummary]): Password Requirement Rules. [optional]  # noqa: E501
             prevent_dictionary_words (bool): Prevent Dictionary Words. [optional]  # noqa: E501
             prevent_sequential_pattern (bool): Prevent Sequential Pattern. [optional]  # noqa: E501
             prevent_spatial_pattern (bool): Prevent Spacial Pattern. [optional]  # noqa: E501
             prevent_username (bool): Prevent Username. [optional]  # noqa: E501
-            secret_usage (bool, date, datetime, dict, float, int, list, str, none_type): A count of secrets using the requirement. [optional]  # noqa: E501
-            type_usage ([bool, date, datetime, dict, float, int, list, str, none_type]): A list of secret templates using the password requirement. [optional]  # noqa: E501
+            secret_usage (int): A count of secrets using the requirement. [optional]  # noqa: E501
+            type_usage ([str]): A list of secret templates using the password requirement. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

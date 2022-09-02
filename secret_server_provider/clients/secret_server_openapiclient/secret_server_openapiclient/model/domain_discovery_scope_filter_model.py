@@ -63,10 +63,8 @@ class DomainDiscoveryScopeFilterModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,35 +73,32 @@ class DomainDiscoveryScopeFilterModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'discovery_filter_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'filter_type': (DiscoveryFilterType,),  # noqa: E501
-            'guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'scan_target_type': (ScanTargetType,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'discovery_filter_id': (int, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'filter_type': (DiscoveryFilterType, none_type,),  # noqa: E501
+            'guid': (str, none_type,),  # noqa: E501
+            'scan_target_type': (ScanTargetType, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'site_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -159,15 +154,15 @@ class DomainDiscoveryScopeFilterModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_filter_id (bool, date, datetime, dict, float, int, list, str, none_type): A filter ID. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name of the member. [optional]  # noqa: E501
+            discovery_filter_id (int): A filter ID. [optional]  # noqa: E501
+            display_name (str): The display name of the member. [optional]  # noqa: E501
             filter_type (DiscoveryFilterType): [optional]  # noqa: E501
-            guid (bool, date, datetime, dict, float, int, list, str, none_type): The GUID of the member. [optional]  # noqa: E501
+            guid (str): The GUID of the member. [optional]  # noqa: E501
             scan_target_type (ScanTargetType): [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The secret ID associated with the member. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The secret name associated with the member. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The site ID. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): The site name of the member. [optional]  # noqa: E501
+            secret_id (int): The secret ID associated with the member. [optional]  # noqa: E501
+            secret_name (str): The secret name associated with the member. [optional]  # noqa: E501
+            site_id (int): The site ID. [optional]  # noqa: E501
+            site_name (str): The site name of the member. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -253,15 +248,15 @@ class DomainDiscoveryScopeFilterModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_filter_id (bool, date, datetime, dict, float, int, list, str, none_type): A filter ID. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name of the member. [optional]  # noqa: E501
+            discovery_filter_id (int): A filter ID. [optional]  # noqa: E501
+            display_name (str): The display name of the member. [optional]  # noqa: E501
             filter_type (DiscoveryFilterType): [optional]  # noqa: E501
-            guid (bool, date, datetime, dict, float, int, list, str, none_type): The GUID of the member. [optional]  # noqa: E501
+            guid (str): The GUID of the member. [optional]  # noqa: E501
             scan_target_type (ScanTargetType): [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The secret ID associated with the member. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The secret name associated with the member. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The site ID. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): The site name of the member. [optional]  # noqa: E501
+            secret_id (int): The secret ID associated with the member. [optional]  # noqa: E501
+            secret_name (str): The secret name associated with the member. [optional]  # noqa: E501
+            site_id (int): The site ID. [optional]  # noqa: E501
+            site_name (str): The site name of the member. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

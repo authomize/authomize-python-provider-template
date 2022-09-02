@@ -67,10 +67,8 @@ class ConfigurationPermissionOptionsUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,31 +77,28 @@ class ConfigurationPermissionOptionsUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_duplicate_secret_names': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'allow_view_user_to_retrieve_auto_change_next_password': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'default_secret_permissions': (UpdateFieldValueOfDefaultSecretPermissionsType,),  # noqa: E501
-            'enable_approval_from_email': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'force_secret_approval': (UpdateFieldValueOfOptionalForceSecretApprovalType,),  # noqa: E501
+            'allow_duplicate_secret_names': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'allow_view_user_to_retrieve_auto_change_next_password': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'default_secret_permissions': (UpdateFieldValueOfDefaultSecretPermissionsType, none_type,),  # noqa: E501
+            'enable_approval_from_email': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'force_secret_approval': (UpdateFieldValueOfOptionalForceSecretApprovalType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

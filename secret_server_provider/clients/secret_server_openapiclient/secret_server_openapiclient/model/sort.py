@@ -61,10 +61,8 @@ class Sort(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,15 +71,12 @@ class Sort(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
@@ -89,13 +84,13 @@ class Sort(ModelNormal):
         lazy_import()
         return {
             'direction': (SortDirection,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'priority': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'name': (str,),  # noqa: E501
+            'priority': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -116,7 +111,7 @@ class Sort(ModelNormal):
 
         Args:
             direction (SortDirection):
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name
+            name (str): Sort field name
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -149,7 +144,7 @@ class Sort(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]  # noqa: E501
+            priority (int): Priority index. Sorts with lower values are executed earlier. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -208,7 +203,7 @@ class Sort(ModelNormal):
 
         Args:
             direction (SortDirection):
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name
+            name (str): Sort field name
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -241,7 +236,7 @@ class Sort(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]  # noqa: E501
+            priority (int): Priority index. Sorts with lower values are executed earlier. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

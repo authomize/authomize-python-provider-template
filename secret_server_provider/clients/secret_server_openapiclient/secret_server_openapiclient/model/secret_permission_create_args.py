@@ -57,10 +57,8 @@ class SecretPermissionCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class SecretPermissionCreateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_access_role_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'group_name': (str, none_type,),  # noqa: E501
+            'secret_access_role_name': (str, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,13 +142,13 @@ class SecretPermissionCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Domain Name. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID being granted permission. Leave empty if granting to a user. [optional]  # noqa: E501
-            group_name (bool, date, datetime, dict, float, int, list, str, none_type): Group Name. [optional]  # noqa: E501
-            secret_access_role_name (bool, date, datetime, dict, float, int, list, str, none_type): Role name being granted. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID being granted permission. Leave empty if granting to a group. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User Name. [optional]  # noqa: E501
+            domain_name (str): Domain Name. [optional]  # noqa: E501
+            group_id (int): Group ID being granted permission. Leave empty if granting to a user. [optional]  # noqa: E501
+            group_name (str): Group Name. [optional]  # noqa: E501
+            secret_access_role_name (str): Role name being granted. [optional]  # noqa: E501
+            secret_id (int): Secret ID. [optional]  # noqa: E501
+            user_id (int): User ID being granted permission. Leave empty if granting to a group. [optional]  # noqa: E501
+            user_name (str): User Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,13 +234,13 @@ class SecretPermissionCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Domain Name. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID being granted permission. Leave empty if granting to a user. [optional]  # noqa: E501
-            group_name (bool, date, datetime, dict, float, int, list, str, none_type): Group Name. [optional]  # noqa: E501
-            secret_access_role_name (bool, date, datetime, dict, float, int, list, str, none_type): Role name being granted. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID being granted permission. Leave empty if granting to a group. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User Name. [optional]  # noqa: E501
+            domain_name (str): Domain Name. [optional]  # noqa: E501
+            group_id (int): Group ID being granted permission. Leave empty if granting to a user. [optional]  # noqa: E501
+            group_name (str): Group Name. [optional]  # noqa: E501
+            secret_access_role_name (str): Role name being granted. [optional]  # noqa: E501
+            secret_id (int): Secret ID. [optional]  # noqa: E501
+            user_id (int): User ID being granted permission. Leave empty if granting to a group. [optional]  # noqa: E501
+            user_name (str): User Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -57,10 +57,8 @@ class LauncherAgentModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class LauncherAgentModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'collection_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'collection_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'host_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_activity': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'record_keystrokes': (bool,),  # noqa: E501
-            'record_standalone_sessions': (bool,),  # noqa: E501
-            'version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'collection_id': (int, none_type,),  # noqa: E501
+            'collection_name': (str, none_type,),  # noqa: E501
+            'created': (datetime, none_type,),  # noqa: E501
+            'host_name': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'last_activity': (datetime, none_type,),  # noqa: E501
+            'record_keystrokes': (bool, none_type,),  # noqa: E501
+            'record_standalone_sessions': (bool, none_type,),  # noqa: E501
+            'version': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -154,15 +149,15 @@ class LauncherAgentModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether or not the agent is active. [optional]  # noqa: E501
-            collection_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the collection the agent belongs to. [optional]  # noqa: E501
-            collection_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the collection the agent belongs to. [optional]  # noqa: E501
-            created (bool, date, datetime, dict, float, int, list, str, none_type): When the agent was created. [optional]  # noqa: E501
-            host_name (bool, date, datetime, dict, float, int, list, str, none_type): The hostname of the machine the agent is installed on. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the agent. [optional]  # noqa: E501
-            last_activity (bool, date, datetime, dict, float, int, list, str, none_type): The date the agent was last active. [optional]  # noqa: E501
+            collection_id (int): The ID of the collection the agent belongs to. [optional]  # noqa: E501
+            collection_name (str): The name of the collection the agent belongs to. [optional]  # noqa: E501
+            created (datetime): When the agent was created. [optional]  # noqa: E501
+            host_name (str): The hostname of the machine the agent is installed on. [optional]  # noqa: E501
+            id (int): The ID of the agent. [optional]  # noqa: E501
+            last_activity (datetime): The date the agent was last active. [optional]  # noqa: E501
             record_keystrokes (bool): Whether or not this agent will record keystrokes. [optional]  # noqa: E501
             record_standalone_sessions (bool): Whether or not headless session recording is enabled. [optional]  # noqa: E501
-            version (bool, date, datetime, dict, float, int, list, str, none_type): The version number currently installed. [optional]  # noqa: E501
+            version (str): The version number currently installed. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -249,15 +244,15 @@ class LauncherAgentModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether or not the agent is active. [optional]  # noqa: E501
-            collection_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the collection the agent belongs to. [optional]  # noqa: E501
-            collection_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the collection the agent belongs to. [optional]  # noqa: E501
-            created (bool, date, datetime, dict, float, int, list, str, none_type): When the agent was created. [optional]  # noqa: E501
-            host_name (bool, date, datetime, dict, float, int, list, str, none_type): The hostname of the machine the agent is installed on. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the agent. [optional]  # noqa: E501
-            last_activity (bool, date, datetime, dict, float, int, list, str, none_type): The date the agent was last active. [optional]  # noqa: E501
+            collection_id (int): The ID of the collection the agent belongs to. [optional]  # noqa: E501
+            collection_name (str): The name of the collection the agent belongs to. [optional]  # noqa: E501
+            created (datetime): When the agent was created. [optional]  # noqa: E501
+            host_name (str): The hostname of the machine the agent is installed on. [optional]  # noqa: E501
+            id (int): The ID of the agent. [optional]  # noqa: E501
+            last_activity (datetime): The date the agent was last active. [optional]  # noqa: E501
             record_keystrokes (bool): Whether or not this agent will record keystrokes. [optional]  # noqa: E501
             record_standalone_sessions (bool): Whether or not headless session recording is enabled. [optional]  # noqa: E501
-            version (bool, date, datetime, dict, float, int, list, str, none_type): The version number currently installed. [optional]  # noqa: E501
+            version (str): The version number currently installed. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

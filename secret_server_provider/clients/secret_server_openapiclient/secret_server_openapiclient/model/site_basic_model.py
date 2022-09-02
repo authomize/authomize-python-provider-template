@@ -61,10 +61,8 @@ class SiteBasicModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,44 +71,41 @@ class SiteBasicModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'enable_cred_ssp_for_win_rm': (bool,),  # noqa: E501
-            'enable_rdp_proxy': (bool,),  # noqa: E501
-            'enable_ssh_proxy': (bool,),  # noqa: E501
-            'heartbeat_interval': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'jump_box_available_port_range': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'powershell_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'processing_location': (ProcessingLocationType,),  # noqa: E501
-            'rdp_proxy_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rdp_proxy_port_inherited': (bool,),  # noqa: E501
-            'secret_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_connector_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_proxy_port_inherited': (bool,),  # noqa: E501
-            'system_site': (bool,),  # noqa: E501
-            'win_rm_end_point_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'enable_cred_ssp_for_win_rm': (bool, none_type,),  # noqa: E501
+            'enable_rdp_proxy': (bool, none_type,),  # noqa: E501
+            'enable_ssh_proxy': (bool, none_type,),  # noqa: E501
+            'heartbeat_interval': (int, none_type,),  # noqa: E501
+            'jump_box_available_port_range': (str, none_type,),  # noqa: E501
+            'powershell_secret_id': (int, none_type,),  # noqa: E501
+            'processing_location': (ProcessingLocationType, none_type,),  # noqa: E501
+            'rdp_proxy_port': (int, none_type,),  # noqa: E501
+            'rdp_proxy_port_inherited': (bool, none_type,),  # noqa: E501
+            'secret_count': (int, none_type,),  # noqa: E501
+            'site_connector_id': (int, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'site_name': (str, none_type,),  # noqa: E501
+            'ssh_proxy_port': (int, none_type,),  # noqa: E501
+            'ssh_proxy_port_inherited': (bool, none_type,),  # noqa: E501
+            'system_site': (bool, none_type,),  # noqa: E501
+            'win_rm_end_point_url': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -179,20 +174,20 @@ class SiteBasicModel(ModelNormal):
             enable_cred_ssp_for_win_rm (bool): Enable CredSSP For WinRM. [optional]  # noqa: E501
             enable_rdp_proxy (bool): Enable RDP Proxy. [optional]  # noqa: E501
             enable_ssh_proxy (bool): Enable SSH Proxy. [optional]  # noqa: E501
-            heartbeat_interval (bool, date, datetime, dict, float, int, list, str, none_type): Heartbeat Interval of Site. [optional]  # noqa: E501
-            jump_box_available_port_range (bool, date, datetime, dict, float, int, list, str, none_type): JumpBoxAvailablePortRange. [optional]  # noqa: E501
-            powershell_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Powershell Secret Id of Site if set. [optional]  # noqa: E501
+            heartbeat_interval (int): Heartbeat Interval of Site. [optional]  # noqa: E501
+            jump_box_available_port_range (str): JumpBoxAvailablePortRange. [optional]  # noqa: E501
+            powershell_secret_id (int): Powershell Secret Id of Site if set. [optional]  # noqa: E501
             processing_location (ProcessingLocationType): [optional]  # noqa: E501
-            rdp_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): RDP Proxy Port. [optional]  # noqa: E501
+            rdp_proxy_port (int): RDP Proxy Port. [optional]  # noqa: E501
             rdp_proxy_port_inherited (bool): RDP Proxy Port Inherited. [optional]  # noqa: E501
-            secret_count (bool, date, datetime, dict, float, int, list, str, none_type): Secret Count of Site. [optional]  # noqa: E501
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site Connector of Site. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Site. [optional]  # noqa: E501
-            ssh_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): SSH Proxy Port. [optional]  # noqa: E501
+            secret_count (int): Secret Count of Site. [optional]  # noqa: E501
+            site_connector_id (int): Id of Site Connector of Site. [optional]  # noqa: E501
+            site_id (int): Id of Site. [optional]  # noqa: E501
+            site_name (str): Name of Site. [optional]  # noqa: E501
+            ssh_proxy_port (int): SSH Proxy Port. [optional]  # noqa: E501
             ssh_proxy_port_inherited (bool): SSH Proxy Port Inherited. [optional]  # noqa: E501
             system_site (bool): Is this a system site. [optional]  # noqa: E501
-            win_rm_end_point_url (bool, date, datetime, dict, float, int, list, str, none_type): WinRM End Point URL of Site. [optional]  # noqa: E501
+            win_rm_end_point_url (str): WinRM End Point URL of Site. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -282,20 +277,20 @@ class SiteBasicModel(ModelNormal):
             enable_cred_ssp_for_win_rm (bool): Enable CredSSP For WinRM. [optional]  # noqa: E501
             enable_rdp_proxy (bool): Enable RDP Proxy. [optional]  # noqa: E501
             enable_ssh_proxy (bool): Enable SSH Proxy. [optional]  # noqa: E501
-            heartbeat_interval (bool, date, datetime, dict, float, int, list, str, none_type): Heartbeat Interval of Site. [optional]  # noqa: E501
-            jump_box_available_port_range (bool, date, datetime, dict, float, int, list, str, none_type): JumpBoxAvailablePortRange. [optional]  # noqa: E501
-            powershell_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Powershell Secret Id of Site if set. [optional]  # noqa: E501
+            heartbeat_interval (int): Heartbeat Interval of Site. [optional]  # noqa: E501
+            jump_box_available_port_range (str): JumpBoxAvailablePortRange. [optional]  # noqa: E501
+            powershell_secret_id (int): Powershell Secret Id of Site if set. [optional]  # noqa: E501
             processing_location (ProcessingLocationType): [optional]  # noqa: E501
-            rdp_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): RDP Proxy Port. [optional]  # noqa: E501
+            rdp_proxy_port (int): RDP Proxy Port. [optional]  # noqa: E501
             rdp_proxy_port_inherited (bool): RDP Proxy Port Inherited. [optional]  # noqa: E501
-            secret_count (bool, date, datetime, dict, float, int, list, str, none_type): Secret Count of Site. [optional]  # noqa: E501
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site Connector of Site. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Site. [optional]  # noqa: E501
-            ssh_proxy_port (bool, date, datetime, dict, float, int, list, str, none_type): SSH Proxy Port. [optional]  # noqa: E501
+            secret_count (int): Secret Count of Site. [optional]  # noqa: E501
+            site_connector_id (int): Id of Site Connector of Site. [optional]  # noqa: E501
+            site_id (int): Id of Site. [optional]  # noqa: E501
+            site_name (str): Name of Site. [optional]  # noqa: E501
+            ssh_proxy_port (int): SSH Proxy Port. [optional]  # noqa: E501
             ssh_proxy_port_inherited (bool): SSH Proxy Port Inherited. [optional]  # noqa: E501
             system_site (bool): Is this a system site. [optional]  # noqa: E501
-            win_rm_end_point_url (bool, date, datetime, dict, float, int, list, str, none_type): WinRM End Point URL of Site. [optional]  # noqa: E501
+            win_rm_end_point_url (str): WinRM End Point URL of Site. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -61,10 +61,8 @@ class SecretDetailPasswordStatus(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class SecretDetailPasswordStatus(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'failed_attempts': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'failed_dependency': (bool,),  # noqa: E501
-            'last_rpc_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'next_rpc_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rpc_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (PasswordChangeResult,),  # noqa: E501
+            'failed_attempts': (int, none_type,),  # noqa: E501
+            'failed_dependency': (bool, none_type,),  # noqa: E501
+            'last_rpc_date': (datetime, none_type,),  # noqa: E501
+            'next_rpc_date': (datetime, none_type,),  # noqa: E501
+            'rpc_message': (str, none_type,),  # noqa: E501
+            'status': (PasswordChangeResult, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,11 +146,11 @@ class SecretDetailPasswordStatus(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            failed_attempts (bool, date, datetime, dict, float, int, list, str, none_type): FailedAttempts. [optional]  # noqa: E501
+            failed_attempts (int): FailedAttempts. [optional]  # noqa: E501
             failed_dependency (bool): FailedDependency. [optional]  # noqa: E501
-            last_rpc_date (bool, date, datetime, dict, float, int, list, str, none_type): LastRpcDate. [optional]  # noqa: E501
-            next_rpc_date (bool, date, datetime, dict, float, int, list, str, none_type): NextRpcDate. [optional]  # noqa: E501
-            rpc_message (bool, date, datetime, dict, float, int, list, str, none_type): RpcMessage. [optional]  # noqa: E501
+            last_rpc_date (datetime): LastRpcDate. [optional]  # noqa: E501
+            next_rpc_date (datetime): NextRpcDate. [optional]  # noqa: E501
+            rpc_message (str): RpcMessage. [optional]  # noqa: E501
             status (PasswordChangeResult): [optional]  # noqa: E501
         """
 
@@ -242,11 +237,11 @@ class SecretDetailPasswordStatus(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            failed_attempts (bool, date, datetime, dict, float, int, list, str, none_type): FailedAttempts. [optional]  # noqa: E501
+            failed_attempts (int): FailedAttempts. [optional]  # noqa: E501
             failed_dependency (bool): FailedDependency. [optional]  # noqa: E501
-            last_rpc_date (bool, date, datetime, dict, float, int, list, str, none_type): LastRpcDate. [optional]  # noqa: E501
-            next_rpc_date (bool, date, datetime, dict, float, int, list, str, none_type): NextRpcDate. [optional]  # noqa: E501
-            rpc_message (bool, date, datetime, dict, float, int, list, str, none_type): RpcMessage. [optional]  # noqa: E501
+            last_rpc_date (datetime): LastRpcDate. [optional]  # noqa: E501
+            next_rpc_date (datetime): NextRpcDate. [optional]  # noqa: E501
+            rpc_message (str): RpcMessage. [optional]  # noqa: E501
             status (PasswordChangeResult): [optional]  # noqa: E501
         """
 

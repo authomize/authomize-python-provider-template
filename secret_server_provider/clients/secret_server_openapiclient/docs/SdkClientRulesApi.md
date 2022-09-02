@@ -56,10 +56,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sdk_client_rules_api.SdkClientRulesApi(api_client)
     sdk_client_rule_create_args = SdkClientRuleCreateArgs(
-        details=None,
-        name=None,
+        details="details_example",
+        name="name_example",
         require_onboarding_key=True,
-        user_id=None,
+        user_id=1,
     ) # SdkClientRuleCreateArgs | SDK Client Rule creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -145,7 +145,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sdk_client_rules_api.SdkClientRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | SDK Client Rule Id
+    id = 1 # int | SDK Client Rule Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -161,7 +161,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SDK Client Rule Id |
+ **id** | **int**| SDK Client Rule Id |
 
 ### Return type
 
@@ -229,7 +229,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sdk_client_rules_api.SdkClientRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | SDK Client Rule Id
+    id = 1 # int | SDK Client Rule Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -245,7 +245,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SDK Client Rule Id |
+ **id** | **int**| SDK Client Rule Id |
 
 ### Return type
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sdk_client_rules_service_get_onboarding_key**
-> bool, date, datetime, dict, float, int, list, str, none_type sdk_client_rules_service_get_onboarding_key(id)
+> str sdk_client_rules_service_get_onboarding_key(id)
 
 Get Onboarding Key for SDK Client Rule
 
@@ -312,7 +312,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sdk_client_rules_api.SdkClientRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | SDK Client Rule Id
+    id = 1 # int | SDK Client Rule Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -328,11 +328,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SDK Client Rule Id |
+ **id** | **int**| SDK Client Rule Id |
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -396,14 +396,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sdk_client_rules_api.SdkClientRulesApi(api_client)
-    filter_operator = None # bool, date, datetime, dict, float, int, list, str, none_type | Operator (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchText (optional)
-    filter_user_id = None # bool, date, datetime, dict, float, int, list, str, none_type | UserId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_operator = "filter.operator_example" # str | Operator (optional)
+    filter_search_text = "filter.searchText_example" # str | SearchText (optional)
+    filter_user_id = 1 # int | UserId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -420,14 +420,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_operator** | **bool, date, datetime, dict, float, int, list, str, none_type**| Operator | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchText | [optional]
- **filter_user_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| UserId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_operator** | **str**| Operator | [optional]
+ **filter_search_text** | **str**| SearchText | [optional]
+ **filter_user_id** | **int**| UserId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -576,12 +576,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sdk_client_rules_api.SdkClientRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | SDK Client Rule Id
+    id = 1 # int | SDK Client Rule Id
     sdk_client_rule_update_args = SdkClientRuleUpdateArgs(
-        details=None,
-        name=None,
+        details="details_example",
+        name="name_example",
         require_onboarding_key=True,
-        user_id=None,
+        user_id=1,
     ) # SdkClientRuleUpdateArgs | SDK Client Rule update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -607,7 +607,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SDK Client Rule Id |
+ **id** | **int**| SDK Client Rule Id |
  **sdk_client_rule_update_args** | [**SdkClientRuleUpdateArgs**](SdkClientRuleUpdateArgs.md)| SDK Client Rule update options | [optional]
 
 ### Return type

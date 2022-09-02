@@ -57,10 +57,8 @@ class SecretDetailLauncher(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class SecretDetailLauncher(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'has_proxy_credentials': (bool,),  # noqa: E501
-            'image_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_recorded': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'has_proxy_credentials': (bool, none_type,),  # noqa: E501
+            'image_path': (str, none_type,),  # noqa: E501
+            'is_recorded': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'type_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -144,10 +139,10 @@ class SecretDetailLauncher(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             has_proxy_credentials (bool): HasProxyCredentials. [optional]  # noqa: E501
-            image_path (bool, date, datetime, dict, float, int, list, str, none_type): ImagePath. [optional]  # noqa: E501
+            image_path (str): ImagePath. [optional]  # noqa: E501
             is_recorded (bool): IsRecorded. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            type_id (bool, date, datetime, dict, float, int, list, str, none_type): TypeId. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            type_id (int): TypeId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,10 +229,10 @@ class SecretDetailLauncher(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             has_proxy_credentials (bool): HasProxyCredentials. [optional]  # noqa: E501
-            image_path (bool, date, datetime, dict, float, int, list, str, none_type): ImagePath. [optional]  # noqa: E501
+            image_path (str): ImagePath. [optional]  # noqa: E501
             is_recorded (bool): IsRecorded. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            type_id (bool, date, datetime, dict, float, int, list, str, none_type): TypeId. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            type_id (int): TypeId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

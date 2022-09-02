@@ -129,7 +129,7 @@ class SecretPermissionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -181,7 +181,7 @@ class SecretPermissionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'include_inactive':
                         (bool,),
                 },
@@ -294,27 +294,27 @@ class SecretPermissionsApi(object):
                 },
                 'openapi_types': {
                     'filter_domain_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_group_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_group_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_user_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_domain_name': 'filter.domainName',
@@ -390,7 +390,7 @@ class SecretPermissionsApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_id': 'secretId',
@@ -442,7 +442,7 @@ class SecretPermissionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_permission_update_args':
                         (SecretPermissionUpdateArgs,),
                 },
@@ -499,7 +499,7 @@ class SecretPermissionsApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_share_update_args':
                         (SecretShareUpdateArgs,),
                 },
@@ -618,7 +618,7 @@ class SecretPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret permission ID
+            id (int): Secret permission ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -701,7 +701,7 @@ class SecretPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret permission ID
+            id (int): Secret permission ID
 
         Keyword Args:
             include_inactive (bool): Whether to include inactive permissions in the results. [optional]
@@ -864,17 +864,17 @@ class SecretPermissionsApi(object):
 
 
         Keyword Args:
-            filter_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): DomainName. [optional]
-            filter_group_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter by group ID. [optional]
-            filter_group_name (bool, date, datetime, dict, float, int, list, str, none_type): GroupName. [optional]
-            filter_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter by secret ID. [optional]
-            filter_user_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter by user ID. [optional]
-            filter_user_name (bool, date, datetime, dict, float, int, list, str, none_type): UserName. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_domain_name (str): DomainName. [optional]
+            filter_group_id (int): Filter by group ID. [optional]
+            filter_group_name (str): GroupName. [optional]
+            filter_secret_id (int): Filter by secret ID. [optional]
+            filter_user_id (int): Filter by user ID. [optional]
+            filter_user_name (str): UserName. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -953,7 +953,7 @@ class SecretPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Options for generating a secret permission stub
+            secret_id (int): Options for generating a secret permission stub
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1036,7 +1036,7 @@ class SecretPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret permission ID
+            id (int): Secret permission ID
 
         Keyword Args:
             secret_permission_update_args (SecretPermissionUpdateArgs): Secret permission update options. [optional]
@@ -1120,7 +1120,7 @@ class SecretPermissionsApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            secret_id (int): Secret ID
 
         Keyword Args:
             secret_share_update_args (SecretShareUpdateArgs): Secret share update options. [optional]

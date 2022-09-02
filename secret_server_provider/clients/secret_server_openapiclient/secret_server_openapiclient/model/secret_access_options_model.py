@@ -57,10 +57,8 @@ class SecretAccessOptionsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class SecretAccessOptionsModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'custom_checkout_interval_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'custom_checkout_interval_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'custom_checkout_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'editors_also_require_approval': (bool,),  # noqa: E501
-            'enable_double_lock': (bool,),  # noqa: E501
-            'enable_requires_approval_for_access': (bool,),  # noqa: E501
-            'is_default_checkout_interval': (bool,),  # noqa: E501
-            'owners_and_approvers_also_require_approval': (bool,),  # noqa: E501
-            'require_checkout': (bool,),  # noqa: E501
-            'require_comment_ticket_number': (bool,),  # noqa: E501
+            'custom_checkout_interval_days': (int, none_type,),  # noqa: E501
+            'custom_checkout_interval_hours': (int, none_type,),  # noqa: E501
+            'custom_checkout_interval_minutes': (int, none_type,),  # noqa: E501
+            'editors_also_require_approval': (bool, none_type,),  # noqa: E501
+            'enable_double_lock': (bool, none_type,),  # noqa: E501
+            'enable_requires_approval_for_access': (bool, none_type,),  # noqa: E501
+            'is_default_checkout_interval': (bool, none_type,),  # noqa: E501
+            'owners_and_approvers_also_require_approval': (bool, none_type,),  # noqa: E501
+            'require_checkout': (bool, none_type,),  # noqa: E501
+            'require_comment_ticket_number': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -153,9 +148,9 @@ class SecretAccessOptionsModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            custom_checkout_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days is the checkout interval. [optional]  # noqa: E501
-            custom_checkout_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours is the checkout interval. [optional]  # noqa: E501
-            custom_checkout_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes is the checkout interval. [optional]  # noqa: E501
+            custom_checkout_interval_days (int): How many days is the checkout interval. [optional]  # noqa: E501
+            custom_checkout_interval_hours (int): How many hours is the checkout interval. [optional]  # noqa: E501
+            custom_checkout_interval_minutes (int): How many minutes is the checkout interval. [optional]  # noqa: E501
             editors_also_require_approval (bool): When true editors cannot bypass approval when enabled. [optional]  # noqa: E501
             enable_double_lock (bool): Is Doublelock enabled. [optional]  # noqa: E501
             enable_requires_approval_for_access (bool): When true approval is required to access this Secret. [optional]  # noqa: E501
@@ -248,9 +243,9 @@ class SecretAccessOptionsModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            custom_checkout_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days is the checkout interval. [optional]  # noqa: E501
-            custom_checkout_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours is the checkout interval. [optional]  # noqa: E501
-            custom_checkout_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes is the checkout interval. [optional]  # noqa: E501
+            custom_checkout_interval_days (int): How many days is the checkout interval. [optional]  # noqa: E501
+            custom_checkout_interval_hours (int): How many hours is the checkout interval. [optional]  # noqa: E501
+            custom_checkout_interval_minutes (int): How many minutes is the checkout interval. [optional]  # noqa: E501
             editors_also_require_approval (bool): When true editors cannot bypass approval when enabled. [optional]  # noqa: E501
             enable_double_lock (bool): Is Doublelock enabled. [optional]  # noqa: E501
             enable_requires_approval_for_access (bool): When true approval is required to access this Secret. [optional]  # noqa: E501

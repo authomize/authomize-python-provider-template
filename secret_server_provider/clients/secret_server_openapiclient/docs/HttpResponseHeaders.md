@@ -5,10 +5,10 @@ Headers
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**accept_ranges** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | AcceptRanges | [optional] 
-**age** | **bool, date, datetime, dict, float, int, list, str, none_type** | Age | [optional] 
+**accept_ranges** | **[str]** | AcceptRanges | [optional] 
+**age** | **str** | Age | [optional] 
 **cache_control** | [**CacheControlHeaderValue**](CacheControlHeaderValue.md) |  | [optional] 
-**connection** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | Connection | [optional] 
+**connection** | **[str]** | Connection | [optional] 
 **connection_close** | **bool** | ConnectionClose | [optional] 
 **date** | [**OptionalDateTimeOffset**](OptionalDateTimeOffset.md) |  | [optional] 
 **e_tag** | [**EntityTagHeaderValue**](EntityTagHeaderValue.md) |  | [optional] 
@@ -17,11 +17,11 @@ Name | Type | Description | Notes
 **proxy_authenticate** | [**[AuthenticationHeaderValue]**](AuthenticationHeaderValue.md) | ProxyAuthenticate | [optional] 
 **retry_after** | [**RetryConditionHeaderValue**](RetryConditionHeaderValue.md) |  | [optional] 
 **server** | [**[ProductInfoHeaderValue]**](ProductInfoHeaderValue.md) | Server | [optional] 
-**trailer** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | Trailer | [optional] 
+**trailer** | **[str]** | Trailer | [optional] 
 **transfer_encoding** | [**[TransferCodingHeaderValue]**](TransferCodingHeaderValue.md) | TransferEncoding | [optional] 
 **transfer_encoding_chunked** | **bool** | TransferEncodingChunked | [optional] 
 **upgrade** | [**[ProductHeaderValue]**](ProductHeaderValue.md) | Upgrade | [optional] 
-**vary** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | Vary | [optional] 
+**vary** | **[str]** | Vary | [optional] 
 **via** | [**[ViaHeaderValue]**](ViaHeaderValue.md) | Via | [optional] 
 **warning** | [**[WarningHeaderValue]**](WarningHeaderValue.md) | Warning | [optional] 
 **www_authenticate** | [**[AuthenticationHeaderValue]**](AuthenticationHeaderValue.md) | WwwAuthenticate | [optional] 

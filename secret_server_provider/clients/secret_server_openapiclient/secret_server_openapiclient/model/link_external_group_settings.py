@@ -57,10 +57,8 @@ class LinkExternalGroupSettings(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,27 +66,24 @@ class LinkExternalGroupSettings(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'domain_identifier': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'domain_identifier': (str, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -137,8 +132,8 @@ class LinkExternalGroupSettings(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            domain_identifier (bool, date, datetime, dict, float, int, list, str, none_type): The unique directory identifier for the group to be linked. For Active Directory this must be in hex format, NOT guid format.  For example, this is ADGuid in Active Directory. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the group in the directory. [optional]  # noqa: E501
+            domain_identifier (str): The unique directory identifier for the group to be linked. For Active Directory this must be in hex format, NOT guid format.  For example, this is ADGuid in Active Directory. [optional]  # noqa: E501
+            name (str): Name of the group in the directory. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -224,8 +219,8 @@ class LinkExternalGroupSettings(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            domain_identifier (bool, date, datetime, dict, float, int, list, str, none_type): The unique directory identifier for the group to be linked. For Active Directory this must be in hex format, NOT guid format.  For example, this is ADGuid in Active Directory. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the group in the directory. [optional]  # noqa: E501
+            domain_identifier (str): The unique directory identifier for the group to be linked. For Active Directory this must be in hex format, NOT guid format.  For example, this is ADGuid in Active Directory. [optional]  # noqa: E501
+            name (str): Name of the group in the directory. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

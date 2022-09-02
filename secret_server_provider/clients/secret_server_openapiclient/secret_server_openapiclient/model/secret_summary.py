@@ -63,10 +63,8 @@ class SecretSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,52 +73,49 @@ class SecretSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'auto_change_enabled': (bool,),  # noqa: E501
-            'checked_out': (bool,),  # noqa: E501
-            'check_out_enabled': (bool,),  # noqa: E501
-            'create_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'days_until_expiration': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'double_lock_enabled': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'auto_change_enabled': (bool, none_type,),  # noqa: E501
+            'checked_out': (bool, none_type,),  # noqa: E501
+            'check_out_enabled': (bool, none_type,),  # noqa: E501
+            'create_date': (datetime, none_type,),  # noqa: E501
+            'days_until_expiration': (int, none_type,),  # noqa: E501
+            'double_lock_enabled': (bool, none_type,),  # noqa: E501
             'extended_fields': ([ISecretSummaryExtendedField], none_type,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_launcher': (bool,),  # noqa: E501
-            'hide_password': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inherits_permissions': (bool,),  # noqa: E501
-            'is_out_of_sync': (bool,),  # noqa: E501
-            'is_restricted': (bool,),  # noqa: E501
-            'last_accessed': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_heart_beat_status': (HeartbeatStatus,),  # noqa: E501
-            'last_password_change_attempt': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'out_of_sync_reason': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'requires_approval': (bool,),  # noqa: E501
-            'requires_comment': (bool,),  # noqa: E501
-            'response_codes': ([bool, date, datetime, dict, float, int, list, str, none_type], none_type,),  # noqa: E501
-            'secret_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_template_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'has_launcher': (bool, none_type,),  # noqa: E501
+            'hide_password': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'inherits_permissions': (bool, none_type,),  # noqa: E501
+            'is_out_of_sync': (bool, none_type,),  # noqa: E501
+            'is_restricted': (bool, none_type,),  # noqa: E501
+            'last_accessed': (datetime, none_type,),  # noqa: E501
+            'last_heart_beat_status': (HeartbeatStatus, none_type,),  # noqa: E501
+            'last_password_change_attempt': (datetime, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'out_of_sync_reason': (str, none_type,),  # noqa: E501
+            'requires_approval': (bool, none_type,),  # noqa: E501
+            'requires_comment': (bool, none_type,),  # noqa: E501
+            'response_codes': ([str], none_type,),  # noqa: E501
+            'secret_template_id': (int, none_type,),  # noqa: E501
+            'secret_template_name': (str, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -197,28 +192,28 @@ class SecretSummary(ModelNormal):
             auto_change_enabled (bool): Indicates whether or not this Secret an auto changing password. [optional]  # noqa: E501
             checked_out (bool): Whether the secret is currently checked out. [optional]  # noqa: E501
             check_out_enabled (bool): Indicates whether or not checkout is enabled for the Secret. [optional]  # noqa: E501
-            create_date (bool, date, datetime, dict, float, int, list, str, none_type): When the Secret was created. [optional]  # noqa: E501
-            days_until_expiration (bool, date, datetime, dict, float, int, list, str, none_type): How many days until this Secret expires. [optional]  # noqa: E501
+            create_date (datetime): When the Secret was created. [optional]  # noqa: E501
+            days_until_expiration (int): How many days until this Secret expires. [optional]  # noqa: E501
             double_lock_enabled (bool): Indicates whether or not DoubleLock is enabled for this password. [optional]  # noqa: E501
             extended_fields ([ISecretSummaryExtendedField]): Any requested extended fields from a lookup request. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Containing folder ID. [optional]  # noqa: E501
+            folder_id (int): Containing folder ID. [optional]  # noqa: E501
             has_launcher (bool): Indicates if this Secret has any launchers. [optional]  # noqa: E501
             hide_password (bool): Indicates if the launcher password is set to be hidden. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
+            id (int): Secret ID. [optional]  # noqa: E501
             inherits_permissions (bool): Indicates if this Secret inherits permissions from its folder. [optional]  # noqa: E501
             is_out_of_sync (bool): Out of sync indicates that a Password is setup for autochange and has failed its last password change attempt or has exceeded the maximum RPC attempts. [optional]  # noqa: E501
             is_restricted (bool): Whether the secret is restricted. [optional]  # noqa: E501
-            last_accessed (bool, date, datetime, dict, float, int, list, str, none_type): When the Secret was last viewed, only populated when scope is Recent. [optional]  # noqa: E501
+            last_accessed (datetime): When the Secret was last viewed, only populated when scope is Recent. [optional]  # noqa: E501
             last_heart_beat_status (HeartbeatStatus): [optional]  # noqa: E501
-            last_password_change_attempt (bool, date, datetime, dict, float, int, list, str, none_type): Time of most recent password change attempt. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret name. [optional]  # noqa: E501
-            out_of_sync_reason (bool, date, datetime, dict, float, int, list, str, none_type): Reason message if the secret is out of sync. [optional]  # noqa: E501
+            last_password_change_attempt (datetime): Time of most recent password change attempt. [optional]  # noqa: E501
+            name (str): Secret name. [optional]  # noqa: E501
+            out_of_sync_reason (str): Reason message if the secret is out of sync. [optional]  # noqa: E501
             requires_approval (bool): Indicates if this Secret requires approval. [optional]  # noqa: E501
             requires_comment (bool): Indicates if this Secret requires comment. [optional]  # noqa: E501
-            response_codes ([bool, date, datetime, dict, float, int, list, str, none_type]): ResponseCodes. [optional]  # noqa: E501
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID. [optional]  # noqa: E501
-            secret_template_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of secret template. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]  # noqa: E501
+            response_codes ([str]): ResponseCodes. [optional]  # noqa: E501
+            secret_template_id (int): Secret template ID. [optional]  # noqa: E501
+            secret_template_name (str): Name of secret template. [optional]  # noqa: E501
+            site_id (int): SiteId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -308,28 +303,28 @@ class SecretSummary(ModelNormal):
             auto_change_enabled (bool): Indicates whether or not this Secret an auto changing password. [optional]  # noqa: E501
             checked_out (bool): Whether the secret is currently checked out. [optional]  # noqa: E501
             check_out_enabled (bool): Indicates whether or not checkout is enabled for the Secret. [optional]  # noqa: E501
-            create_date (bool, date, datetime, dict, float, int, list, str, none_type): When the Secret was created. [optional]  # noqa: E501
-            days_until_expiration (bool, date, datetime, dict, float, int, list, str, none_type): How many days until this Secret expires. [optional]  # noqa: E501
+            create_date (datetime): When the Secret was created. [optional]  # noqa: E501
+            days_until_expiration (int): How many days until this Secret expires. [optional]  # noqa: E501
             double_lock_enabled (bool): Indicates whether or not DoubleLock is enabled for this password. [optional]  # noqa: E501
             extended_fields ([ISecretSummaryExtendedField]): Any requested extended fields from a lookup request. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Containing folder ID. [optional]  # noqa: E501
+            folder_id (int): Containing folder ID. [optional]  # noqa: E501
             has_launcher (bool): Indicates if this Secret has any launchers. [optional]  # noqa: E501
             hide_password (bool): Indicates if the launcher password is set to be hidden. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
+            id (int): Secret ID. [optional]  # noqa: E501
             inherits_permissions (bool): Indicates if this Secret inherits permissions from its folder. [optional]  # noqa: E501
             is_out_of_sync (bool): Out of sync indicates that a Password is setup for autochange and has failed its last password change attempt or has exceeded the maximum RPC attempts. [optional]  # noqa: E501
             is_restricted (bool): Whether the secret is restricted. [optional]  # noqa: E501
-            last_accessed (bool, date, datetime, dict, float, int, list, str, none_type): When the Secret was last viewed, only populated when scope is Recent. [optional]  # noqa: E501
+            last_accessed (datetime): When the Secret was last viewed, only populated when scope is Recent. [optional]  # noqa: E501
             last_heart_beat_status (HeartbeatStatus): [optional]  # noqa: E501
-            last_password_change_attempt (bool, date, datetime, dict, float, int, list, str, none_type): Time of most recent password change attempt. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret name. [optional]  # noqa: E501
-            out_of_sync_reason (bool, date, datetime, dict, float, int, list, str, none_type): Reason message if the secret is out of sync. [optional]  # noqa: E501
+            last_password_change_attempt (datetime): Time of most recent password change attempt. [optional]  # noqa: E501
+            name (str): Secret name. [optional]  # noqa: E501
+            out_of_sync_reason (str): Reason message if the secret is out of sync. [optional]  # noqa: E501
             requires_approval (bool): Indicates if this Secret requires approval. [optional]  # noqa: E501
             requires_comment (bool): Indicates if this Secret requires comment. [optional]  # noqa: E501
-            response_codes ([bool, date, datetime, dict, float, int, list, str, none_type]): ResponseCodes. [optional]  # noqa: E501
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID. [optional]  # noqa: E501
-            secret_template_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of secret template. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]  # noqa: E501
+            response_codes ([str]): ResponseCodes. [optional]  # noqa: E501
+            secret_template_id (int): Secret template ID. [optional]  # noqa: E501
+            secret_template_name (str): Name of secret template. [optional]  # noqa: E501
+            site_id (int): SiteId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

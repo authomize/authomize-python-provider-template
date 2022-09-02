@@ -65,10 +65,8 @@ class ConfigurationLocalPasswordPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,43 +75,40 @@ class ConfigurationLocalPasswordPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_users_to_reset_forgotten_passwords': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_local_user_password_expiration': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_minimum_password_age': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_password_history': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'local_user_password_expiration_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'local_user_password_expiration_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'local_user_password_expiration_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'minimum_password_age_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'minimum_password_age_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'minimum_password_age_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'password_history_items': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'password_history_items_all': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'password_minimum_length': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'password_require_lowercase': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'password_require_numbers': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'password_require_symbols': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'password_require_uppercase': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'allow_users_to_reset_forgotten_passwords': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_local_user_password_expiration': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_minimum_password_age': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_password_history': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'local_user_password_expiration_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'local_user_password_expiration_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'local_user_password_expiration_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'minimum_password_age_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'minimum_password_age_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'minimum_password_age_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'password_history_items': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'password_history_items_all': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'password_minimum_length': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'password_require_lowercase': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'password_require_numbers': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'password_require_symbols': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'password_require_uppercase': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

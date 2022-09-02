@@ -63,10 +63,8 @@ class PrepareLauncherResult(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,34 +73,31 @@ class PrepareLauncherResult(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'error_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_download': (LauncherFileDownload,),  # noqa: E501
-            'launcher_popup_timeout_seconds': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_url': (RedirectToLauncherUrl,),  # noqa: E501
-            'redirect_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'should_download': (bool,),  # noqa: E501
-            'should_redirect': (bool,),  # noqa: E501
-            'success': (bool,),  # noqa: E501
+            'error_message': (str, none_type,),  # noqa: E501
+            'file_download': (LauncherFileDownload, none_type,),  # noqa: E501
+            'launcher_popup_timeout_seconds': (int, none_type,),  # noqa: E501
+            'launcher_url': (RedirectToLauncherUrl, none_type,),  # noqa: E501
+            'redirect_url': (str, none_type,),  # noqa: E501
+            'should_download': (bool, none_type,),  # noqa: E501
+            'should_redirect': (bool, none_type,),  # noqa: E501
+            'success': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -157,11 +152,11 @@ class PrepareLauncherResult(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): ErrorMessage. [optional]  # noqa: E501
+            error_message (str): ErrorMessage. [optional]  # noqa: E501
             file_download (LauncherFileDownload): [optional]  # noqa: E501
-            launcher_popup_timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): LauncherPopupTimeoutSeconds. [optional]  # noqa: E501
+            launcher_popup_timeout_seconds (int): LauncherPopupTimeoutSeconds. [optional]  # noqa: E501
             launcher_url (RedirectToLauncherUrl): [optional]  # noqa: E501
-            redirect_url (bool, date, datetime, dict, float, int, list, str, none_type): RedirectUrl. [optional]  # noqa: E501
+            redirect_url (str): RedirectUrl. [optional]  # noqa: E501
             should_download (bool): ShouldDownload. [optional]  # noqa: E501
             should_redirect (bool): ShouldRedirect. [optional]  # noqa: E501
             success (bool): Success. [optional]  # noqa: E501
@@ -250,11 +245,11 @@ class PrepareLauncherResult(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): ErrorMessage. [optional]  # noqa: E501
+            error_message (str): ErrorMessage. [optional]  # noqa: E501
             file_download (LauncherFileDownload): [optional]  # noqa: E501
-            launcher_popup_timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): LauncherPopupTimeoutSeconds. [optional]  # noqa: E501
+            launcher_popup_timeout_seconds (int): LauncherPopupTimeoutSeconds. [optional]  # noqa: E501
             launcher_url (RedirectToLauncherUrl): [optional]  # noqa: E501
-            redirect_url (bool, date, datetime, dict, float, int, list, str, none_type): RedirectUrl. [optional]  # noqa: E501
+            redirect_url (str): RedirectUrl. [optional]  # noqa: E501
             should_download (bool): ShouldDownload. [optional]  # noqa: E501
             should_redirect (bool): ShouldRedirect. [optional]  # noqa: E501
             success (bool): Success. [optional]  # noqa: E501

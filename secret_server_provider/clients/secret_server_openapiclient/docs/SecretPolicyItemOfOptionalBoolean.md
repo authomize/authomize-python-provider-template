@@ -5,9 +5,9 @@ Web Launcher Requires Incognito Mode
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**parent_policy_item_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | ParentPolicyItemId | [optional] 
+**parent_policy_item_id** | **int** | ParentPolicyItemId | [optional] 
 **policy_apply_type** | [**PolicyApplyType**](PolicyApplyType.md) |  | [optional] 
-**policy_item_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | PolicyItemId | [optional] 
+**policy_item_id** | **int** | PolicyItemId | [optional] 
 **value** | **bool** | Value | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

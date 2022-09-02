@@ -69,10 +69,8 @@ class ConfigurationLoginV2PatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,40 +79,37 @@ class ConfigurationLoginV2PatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_remember_me': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'cache_ad_credentials': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'default_login_domain': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable_domain_selector': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable_login_failure_captcha': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'max_concurrent_logins_per_user': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'maximum_login_failures': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'max_login_failures_before_captcha': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'remember_me_time_out_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'ssh_key_integration': (ConfigurationLoginSshKeyIntegrationPatchModel,),  # noqa: E501
-            'two_factor': (ConfigurationLoginTwoFactorPatchModel,),  # noqa: E501
-            'user_lockout_time_minutes': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'visual_encrypted_keyboard_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'visual_encrypted_keyboard_required': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'allow_remember_me': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'cache_ad_credentials': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'default_login_domain': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable_domain_selector': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable_login_failure_captcha': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'max_concurrent_logins_per_user': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'maximum_login_failures': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'max_login_failures_before_captcha': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'remember_me_time_out_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'ssh_key_integration': (ConfigurationLoginSshKeyIntegrationPatchModel, none_type,),  # noqa: E501
+            'two_factor': (ConfigurationLoginTwoFactorPatchModel, none_type,),  # noqa: E501
+            'user_lockout_time_minutes': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'visual_encrypted_keyboard_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'visual_encrypted_keyboard_required': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

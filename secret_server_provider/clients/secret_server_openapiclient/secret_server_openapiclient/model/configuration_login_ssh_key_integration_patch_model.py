@@ -63,10 +63,8 @@ class ConfigurationLoginSshKeyIntegrationPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,31 +73,28 @@ class ConfigurationLoginSshKeyIntegrationPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'authentication_method': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'expiration_in_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'key_expires': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'two_factor_bypass': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'authentication_method': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'expiration_in_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'key_expires': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'two_factor_bypass': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

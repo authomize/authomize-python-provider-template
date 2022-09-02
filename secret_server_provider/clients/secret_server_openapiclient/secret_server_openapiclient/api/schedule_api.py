@@ -123,7 +123,7 @@ class ScheduleApi(object):
                 },
                 'openapi_types': {
                     'schedule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'schedule_id': 'scheduleId',
@@ -175,7 +175,7 @@ class ScheduleApi(object):
                 },
                 'openapi_types': {
                     'schedule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'recurring_schedule_update_args':
                         (RecurringScheduleUpdateArgs,),
                 },
@@ -294,7 +294,7 @@ class ScheduleApi(object):
         >>> result = thread.get()
 
         Args:
-            schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): scheduleId
+            schedule_id (int): scheduleId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -377,7 +377,7 @@ class ScheduleApi(object):
         >>> result = thread.get()
 
         Args:
-            schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): scheduleId
+            schedule_id (int): scheduleId
 
         Keyword Args:
             recurring_schedule_update_args (RecurringScheduleUpdateArgs): args. [optional]

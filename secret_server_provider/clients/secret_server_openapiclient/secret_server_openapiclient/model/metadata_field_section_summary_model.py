@@ -61,10 +61,8 @@ class MetadataFieldSectionSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class MetadataFieldSectionSummaryModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'actions': ([MetadataFieldSectionActionType],),  # noqa: E501
-            'metadata_field_section_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'requires_administer_metadata': (bool,),  # noqa: E501
-            'requires_entity_edit': (bool,),  # noqa: E501
+            'actions': ([MetadataFieldSectionActionType], none_type,),  # noqa: E501
+            'metadata_field_section_description': (str, none_type,),  # noqa: E501
+            'metadata_field_section_id': (int, none_type,),  # noqa: E501
+            'metadata_field_section_name': (str, none_type,),  # noqa: E501
+            'requires_administer_metadata': (bool, none_type,),  # noqa: E501
+            'requires_entity_edit': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -152,9 +147,9 @@ class MetadataFieldSectionSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             actions ([MetadataFieldSectionActionType]): What actions can the current user perform. [optional]  # noqa: E501
-            metadata_field_section_description (bool, date, datetime, dict, float, int, list, str, none_type): The description of this section. [optional]  # noqa: E501
-            metadata_field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence ID for this section. [optional]  # noqa: E501
-            metadata_field_section_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of this section. [optional]  # noqa: E501
+            metadata_field_section_description (str): The description of this section. [optional]  # noqa: E501
+            metadata_field_section_id (int): The sequence ID for this section. [optional]  # noqa: E501
+            metadata_field_section_name (str): The name of this section. [optional]  # noqa: E501
             requires_administer_metadata (bool): Is the user required to have the Administer Metadata role permission in order to edit fields in this metadata section. [optional]  # noqa: E501
             requires_entity_edit (bool): Is the user required to be able to edit the entity to which the metadata is associated to in order to edit metadata. [optional]  # noqa: E501
         """
@@ -243,9 +238,9 @@ class MetadataFieldSectionSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             actions ([MetadataFieldSectionActionType]): What actions can the current user perform. [optional]  # noqa: E501
-            metadata_field_section_description (bool, date, datetime, dict, float, int, list, str, none_type): The description of this section. [optional]  # noqa: E501
-            metadata_field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence ID for this section. [optional]  # noqa: E501
-            metadata_field_section_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of this section. [optional]  # noqa: E501
+            metadata_field_section_description (str): The description of this section. [optional]  # noqa: E501
+            metadata_field_section_id (int): The sequence ID for this section. [optional]  # noqa: E501
+            metadata_field_section_name (str): The name of this section. [optional]  # noqa: E501
             requires_administer_metadata (bool): Is the user required to have the Administer Metadata role permission in order to edit fields in this metadata section. [optional]  # noqa: E501
             requires_entity_edit (bool): Is the user required to be able to edit the entity to which the metadata is associated to in order to edit metadata. [optional]  # noqa: E501
         """

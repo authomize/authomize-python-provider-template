@@ -57,10 +57,8 @@ class RotateSecretKeysProgressModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class RotateSecretKeysProgressModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'is_cancelling': (bool,),  # noqa: E501
-            'message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secrets_processed': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'total_secrets_to_process': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'is_cancelling': (bool, none_type,),  # noqa: E501
+            'message': (str, none_type,),  # noqa: E501
+            'secrets_processed': (int, none_type,),  # noqa: E501
+            'total_secrets_to_process': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -142,9 +137,9 @@ class RotateSecretKeysProgressModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             is_cancelling (bool): Flag indicating if the request is being cancelled.. [optional]  # noqa: E501
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Message displayed during processing.. [optional]  # noqa: E501
-            secrets_processed (bool, date, datetime, dict, float, int, list, str, none_type): Number of Secrets processed thus far in the run.. [optional]  # noqa: E501
-            total_secrets_to_process (bool, date, datetime, dict, float, int, list, str, none_type): Total number of secrets to process in the run.. [optional]  # noqa: E501
+            message (str): Message displayed during processing.. [optional]  # noqa: E501
+            secrets_processed (int): Number of Secrets processed thus far in the run.. [optional]  # noqa: E501
+            total_secrets_to_process (int): Total number of secrets to process in the run.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -231,9 +226,9 @@ class RotateSecretKeysProgressModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             is_cancelling (bool): Flag indicating if the request is being cancelled.. [optional]  # noqa: E501
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Message displayed during processing.. [optional]  # noqa: E501
-            secrets_processed (bool, date, datetime, dict, float, int, list, str, none_type): Number of Secrets processed thus far in the run.. [optional]  # noqa: E501
-            total_secrets_to_process (bool, date, datetime, dict, float, int, list, str, none_type): Total number of secrets to process in the run.. [optional]  # noqa: E501
+            message (str): Message displayed during processing.. [optional]  # noqa: E501
+            secrets_processed (int): Number of Secrets processed thus far in the run.. [optional]  # noqa: E501
+            total_secrets_to_process (int): Total number of secrets to process in the run.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

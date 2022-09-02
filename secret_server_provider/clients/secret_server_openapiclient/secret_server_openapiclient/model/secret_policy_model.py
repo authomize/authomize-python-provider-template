@@ -57,10 +57,8 @@ class SecretPolicyModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class SecretPolicyModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'secret_policy_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policy_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'secret_policy_description': (str, none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
+            'secret_policy_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -142,9 +137,9 @@ class SecretPolicyModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether or not the Secret Policy is Active. [optional]  # noqa: E501
-            secret_policy_description (bool, date, datetime, dict, float, int, list, str, none_type): The Description of the Secret Policy. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Policy. [optional]  # noqa: E501
-            secret_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Secret Policy. [optional]  # noqa: E501
+            secret_policy_description (str): The Description of the Secret Policy. [optional]  # noqa: E501
+            secret_policy_id (int): The Id of the Secret Policy. [optional]  # noqa: E501
+            secret_policy_name (str): The Name of the Secret Policy. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -231,9 +226,9 @@ class SecretPolicyModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether or not the Secret Policy is Active. [optional]  # noqa: E501
-            secret_policy_description (bool, date, datetime, dict, float, int, list, str, none_type): The Description of the Secret Policy. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Policy. [optional]  # noqa: E501
-            secret_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Secret Policy. [optional]  # noqa: E501
+            secret_policy_description (str): The Description of the Secret Policy. [optional]  # noqa: E501
+            secret_policy_id (int): The Id of the Secret Policy. [optional]  # noqa: E501
+            secret_policy_name (str): The Name of the Secret Policy. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

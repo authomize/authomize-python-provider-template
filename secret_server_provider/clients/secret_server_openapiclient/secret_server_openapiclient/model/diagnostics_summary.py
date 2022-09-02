@@ -57,10 +57,8 @@ class DiagnosticsSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,60 +66,57 @@ class DiagnosticsSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active_directory_synchronization_thread_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'backbone_class': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'backbone_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'hsm_cache_map_size': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'hsm_timing': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_domain_controller': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_upgrade': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ldap_provider': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'max_degree_of_parallelism': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'net_fx_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'operating_system': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'operating_system_architecture': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'physical_memory': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'product_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'proxy_configuration': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'read_only_mode': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'search_indexer_thread_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_server_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_time_zone': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_database_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_is_database_replicated': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_collation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_connection_string': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_edition': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_is_published': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_is_replication_running': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_is_subscribed': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sql_server_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'upgrade_available': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'upgrade_in_progress': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'up_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active_directory_synchronization_thread_status': (str, none_type,),  # noqa: E501
+            'backbone_class': (str, none_type,),  # noqa: E501
+            'backbone_type': (str, none_type,),  # noqa: E501
+            'hsm_cache_map_size': (str, none_type,),  # noqa: E501
+            'hsm_timing': (str, none_type,),  # noqa: E501
+            'is_domain_controller': (str, none_type,),  # noqa: E501
+            'last_upgrade': (str, none_type,),  # noqa: E501
+            'ldap_provider': (str, none_type,),  # noqa: E501
+            'max_degree_of_parallelism': (str, none_type,),  # noqa: E501
+            'net_fx_version': (str, none_type,),  # noqa: E501
+            'operating_system': (str, none_type,),  # noqa: E501
+            'operating_system_architecture': (str, none_type,),  # noqa: E501
+            'physical_memory': (str, none_type,),  # noqa: E501
+            'product_version': (str, none_type,),  # noqa: E501
+            'proxy_configuration': (str, none_type,),  # noqa: E501
+            'read_only_mode': (str, none_type,),  # noqa: E501
+            'search_indexer_thread_status': (str, none_type,),  # noqa: E501
+            'secret_server_url': (str, none_type,),  # noqa: E501
+            'server_name': (str, none_type,),  # noqa: E501
+            'server_time': (str, none_type,),  # noqa: E501
+            'server_time_zone': (str, none_type,),  # noqa: E501
+            'sql_database_name': (str, none_type,),  # noqa: E501
+            'sql_is_database_replicated': (str, none_type,),  # noqa: E501
+            'sql_server_collation': (str, none_type,),  # noqa: E501
+            'sql_server_connection_string': (str, none_type,),  # noqa: E501
+            'sql_server_edition': (str, none_type,),  # noqa: E501
+            'sql_server_is_published': (str, none_type,),  # noqa: E501
+            'sql_server_is_replication_running': (str, none_type,),  # noqa: E501
+            'sql_server_is_subscribed': (str, none_type,),  # noqa: E501
+            'sql_server_name': (str, none_type,),  # noqa: E501
+            'sql_server_time': (str, none_type,),  # noqa: E501
+            'sql_server_version': (str, none_type,),  # noqa: E501
+            'upgrade_available': (str, none_type,),  # noqa: E501
+            'upgrade_in_progress': (str, none_type,),  # noqa: E501
+            'up_time': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -203,41 +198,41 @@ class DiagnosticsSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            active_directory_synchronization_thread_status (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Synchronization Status. [optional]  # noqa: E501
-            backbone_class (bool, date, datetime, dict, float, int, list, str, none_type): Backbone Class Name. [optional]  # noqa: E501
-            backbone_type (bool, date, datetime, dict, float, int, list, str, none_type): Backbone Type. [optional]  # noqa: E501
-            hsm_cache_map_size (bool, date, datetime, dict, float, int, list, str, none_type): HSM Cache Map Size. [optional]  # noqa: E501
-            hsm_timing (bool, date, datetime, dict, float, int, list, str, none_type): HSM Timing. [optional]  # noqa: E501
-            is_domain_controller (bool, date, datetime, dict, float, int, list, str, none_type): Is Domain Controller. [optional]  # noqa: E501
-            last_upgrade (bool, date, datetime, dict, float, int, list, str, none_type): Last Upgrade. [optional]  # noqa: E501
-            ldap_provider (bool, date, datetime, dict, float, int, list, str, none_type): LDAP Provider. [optional]  # noqa: E501
-            max_degree_of_parallelism (bool, date, datetime, dict, float, int, list, str, none_type): Max Degrees Of Parallelism. [optional]  # noqa: E501
-            net_fx_version (bool, date, datetime, dict, float, int, list, str, none_type): Net FX Version. [optional]  # noqa: E501
-            operating_system (bool, date, datetime, dict, float, int, list, str, none_type): Operating System. [optional]  # noqa: E501
-            operating_system_architecture (bool, date, datetime, dict, float, int, list, str, none_type): Operating System Architecture. [optional]  # noqa: E501
-            physical_memory (bool, date, datetime, dict, float, int, list, str, none_type): Physical Memory. [optional]  # noqa: E501
-            product_version (bool, date, datetime, dict, float, int, list, str, none_type): Product Version. [optional]  # noqa: E501
-            proxy_configuration (bool, date, datetime, dict, float, int, list, str, none_type): Proxy Configuration. [optional]  # noqa: E501
-            read_only_mode (bool, date, datetime, dict, float, int, list, str, none_type): Read Only Mode. [optional]  # noqa: E501
-            search_indexer_thread_status (bool, date, datetime, dict, float, int, list, str, none_type): Search Indexer Status. [optional]  # noqa: E501
-            secret_server_url (bool, date, datetime, dict, float, int, list, str, none_type): Secret Server URL. [optional]  # noqa: E501
-            server_name (bool, date, datetime, dict, float, int, list, str, none_type): Server Name. [optional]  # noqa: E501
-            server_time (bool, date, datetime, dict, float, int, list, str, none_type): Server Time. [optional]  # noqa: E501
-            server_time_zone (bool, date, datetime, dict, float, int, list, str, none_type): Server TimeZone. [optional]  # noqa: E501
-            sql_database_name (bool, date, datetime, dict, float, int, list, str, none_type): SQL Database Name. [optional]  # noqa: E501
-            sql_is_database_replicated (bool, date, datetime, dict, float, int, list, str, none_type): SQL Is Database Replicated. [optional]  # noqa: E501
-            sql_server_collation (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Collation. [optional]  # noqa: E501
-            sql_server_connection_string (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Connection String. [optional]  # noqa: E501
-            sql_server_edition (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Edition. [optional]  # noqa: E501
-            sql_server_is_published (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Is Published. [optional]  # noqa: E501
-            sql_server_is_replication_running (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Is Replication Running. [optional]  # noqa: E501
-            sql_server_is_subscribed (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Is Subscribed. [optional]  # noqa: E501
-            sql_server_name (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Name. [optional]  # noqa: E501
-            sql_server_time (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Time. [optional]  # noqa: E501
-            sql_server_version (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Version. [optional]  # noqa: E501
-            upgrade_available (bool, date, datetime, dict, float, int, list, str, none_type): Upgrade Available. [optional]  # noqa: E501
-            upgrade_in_progress (bool, date, datetime, dict, float, int, list, str, none_type): Upgrade In Progress. [optional]  # noqa: E501
-            up_time (bool, date, datetime, dict, float, int, list, str, none_type): Up Time. [optional]  # noqa: E501
+            active_directory_synchronization_thread_status (str): Active Directory Synchronization Status. [optional]  # noqa: E501
+            backbone_class (str): Backbone Class Name. [optional]  # noqa: E501
+            backbone_type (str): Backbone Type. [optional]  # noqa: E501
+            hsm_cache_map_size (str): HSM Cache Map Size. [optional]  # noqa: E501
+            hsm_timing (str): HSM Timing. [optional]  # noqa: E501
+            is_domain_controller (str): Is Domain Controller. [optional]  # noqa: E501
+            last_upgrade (str): Last Upgrade. [optional]  # noqa: E501
+            ldap_provider (str): LDAP Provider. [optional]  # noqa: E501
+            max_degree_of_parallelism (str): Max Degrees Of Parallelism. [optional]  # noqa: E501
+            net_fx_version (str): Net FX Version. [optional]  # noqa: E501
+            operating_system (str): Operating System. [optional]  # noqa: E501
+            operating_system_architecture (str): Operating System Architecture. [optional]  # noqa: E501
+            physical_memory (str): Physical Memory. [optional]  # noqa: E501
+            product_version (str): Product Version. [optional]  # noqa: E501
+            proxy_configuration (str): Proxy Configuration. [optional]  # noqa: E501
+            read_only_mode (str): Read Only Mode. [optional]  # noqa: E501
+            search_indexer_thread_status (str): Search Indexer Status. [optional]  # noqa: E501
+            secret_server_url (str): Secret Server URL. [optional]  # noqa: E501
+            server_name (str): Server Name. [optional]  # noqa: E501
+            server_time (str): Server Time. [optional]  # noqa: E501
+            server_time_zone (str): Server TimeZone. [optional]  # noqa: E501
+            sql_database_name (str): SQL Database Name. [optional]  # noqa: E501
+            sql_is_database_replicated (str): SQL Is Database Replicated. [optional]  # noqa: E501
+            sql_server_collation (str): SQL Server Collation. [optional]  # noqa: E501
+            sql_server_connection_string (str): SQL Server Connection String. [optional]  # noqa: E501
+            sql_server_edition (str): SQL Server Edition. [optional]  # noqa: E501
+            sql_server_is_published (str): SQL Server Is Published. [optional]  # noqa: E501
+            sql_server_is_replication_running (str): SQL Server Is Replication Running. [optional]  # noqa: E501
+            sql_server_is_subscribed (str): SQL Server Is Subscribed. [optional]  # noqa: E501
+            sql_server_name (str): SQL Server Name. [optional]  # noqa: E501
+            sql_server_time (str): SQL Server Time. [optional]  # noqa: E501
+            sql_server_version (str): SQL Server Version. [optional]  # noqa: E501
+            upgrade_available (str): Upgrade Available. [optional]  # noqa: E501
+            upgrade_in_progress (str): Upgrade In Progress. [optional]  # noqa: E501
+            up_time (str): Up Time. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -323,41 +318,41 @@ class DiagnosticsSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            active_directory_synchronization_thread_status (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Synchronization Status. [optional]  # noqa: E501
-            backbone_class (bool, date, datetime, dict, float, int, list, str, none_type): Backbone Class Name. [optional]  # noqa: E501
-            backbone_type (bool, date, datetime, dict, float, int, list, str, none_type): Backbone Type. [optional]  # noqa: E501
-            hsm_cache_map_size (bool, date, datetime, dict, float, int, list, str, none_type): HSM Cache Map Size. [optional]  # noqa: E501
-            hsm_timing (bool, date, datetime, dict, float, int, list, str, none_type): HSM Timing. [optional]  # noqa: E501
-            is_domain_controller (bool, date, datetime, dict, float, int, list, str, none_type): Is Domain Controller. [optional]  # noqa: E501
-            last_upgrade (bool, date, datetime, dict, float, int, list, str, none_type): Last Upgrade. [optional]  # noqa: E501
-            ldap_provider (bool, date, datetime, dict, float, int, list, str, none_type): LDAP Provider. [optional]  # noqa: E501
-            max_degree_of_parallelism (bool, date, datetime, dict, float, int, list, str, none_type): Max Degrees Of Parallelism. [optional]  # noqa: E501
-            net_fx_version (bool, date, datetime, dict, float, int, list, str, none_type): Net FX Version. [optional]  # noqa: E501
-            operating_system (bool, date, datetime, dict, float, int, list, str, none_type): Operating System. [optional]  # noqa: E501
-            operating_system_architecture (bool, date, datetime, dict, float, int, list, str, none_type): Operating System Architecture. [optional]  # noqa: E501
-            physical_memory (bool, date, datetime, dict, float, int, list, str, none_type): Physical Memory. [optional]  # noqa: E501
-            product_version (bool, date, datetime, dict, float, int, list, str, none_type): Product Version. [optional]  # noqa: E501
-            proxy_configuration (bool, date, datetime, dict, float, int, list, str, none_type): Proxy Configuration. [optional]  # noqa: E501
-            read_only_mode (bool, date, datetime, dict, float, int, list, str, none_type): Read Only Mode. [optional]  # noqa: E501
-            search_indexer_thread_status (bool, date, datetime, dict, float, int, list, str, none_type): Search Indexer Status. [optional]  # noqa: E501
-            secret_server_url (bool, date, datetime, dict, float, int, list, str, none_type): Secret Server URL. [optional]  # noqa: E501
-            server_name (bool, date, datetime, dict, float, int, list, str, none_type): Server Name. [optional]  # noqa: E501
-            server_time (bool, date, datetime, dict, float, int, list, str, none_type): Server Time. [optional]  # noqa: E501
-            server_time_zone (bool, date, datetime, dict, float, int, list, str, none_type): Server TimeZone. [optional]  # noqa: E501
-            sql_database_name (bool, date, datetime, dict, float, int, list, str, none_type): SQL Database Name. [optional]  # noqa: E501
-            sql_is_database_replicated (bool, date, datetime, dict, float, int, list, str, none_type): SQL Is Database Replicated. [optional]  # noqa: E501
-            sql_server_collation (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Collation. [optional]  # noqa: E501
-            sql_server_connection_string (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Connection String. [optional]  # noqa: E501
-            sql_server_edition (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Edition. [optional]  # noqa: E501
-            sql_server_is_published (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Is Published. [optional]  # noqa: E501
-            sql_server_is_replication_running (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Is Replication Running. [optional]  # noqa: E501
-            sql_server_is_subscribed (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Is Subscribed. [optional]  # noqa: E501
-            sql_server_name (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Name. [optional]  # noqa: E501
-            sql_server_time (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Time. [optional]  # noqa: E501
-            sql_server_version (bool, date, datetime, dict, float, int, list, str, none_type): SQL Server Version. [optional]  # noqa: E501
-            upgrade_available (bool, date, datetime, dict, float, int, list, str, none_type): Upgrade Available. [optional]  # noqa: E501
-            upgrade_in_progress (bool, date, datetime, dict, float, int, list, str, none_type): Upgrade In Progress. [optional]  # noqa: E501
-            up_time (bool, date, datetime, dict, float, int, list, str, none_type): Up Time. [optional]  # noqa: E501
+            active_directory_synchronization_thread_status (str): Active Directory Synchronization Status. [optional]  # noqa: E501
+            backbone_class (str): Backbone Class Name. [optional]  # noqa: E501
+            backbone_type (str): Backbone Type. [optional]  # noqa: E501
+            hsm_cache_map_size (str): HSM Cache Map Size. [optional]  # noqa: E501
+            hsm_timing (str): HSM Timing. [optional]  # noqa: E501
+            is_domain_controller (str): Is Domain Controller. [optional]  # noqa: E501
+            last_upgrade (str): Last Upgrade. [optional]  # noqa: E501
+            ldap_provider (str): LDAP Provider. [optional]  # noqa: E501
+            max_degree_of_parallelism (str): Max Degrees Of Parallelism. [optional]  # noqa: E501
+            net_fx_version (str): Net FX Version. [optional]  # noqa: E501
+            operating_system (str): Operating System. [optional]  # noqa: E501
+            operating_system_architecture (str): Operating System Architecture. [optional]  # noqa: E501
+            physical_memory (str): Physical Memory. [optional]  # noqa: E501
+            product_version (str): Product Version. [optional]  # noqa: E501
+            proxy_configuration (str): Proxy Configuration. [optional]  # noqa: E501
+            read_only_mode (str): Read Only Mode. [optional]  # noqa: E501
+            search_indexer_thread_status (str): Search Indexer Status. [optional]  # noqa: E501
+            secret_server_url (str): Secret Server URL. [optional]  # noqa: E501
+            server_name (str): Server Name. [optional]  # noqa: E501
+            server_time (str): Server Time. [optional]  # noqa: E501
+            server_time_zone (str): Server TimeZone. [optional]  # noqa: E501
+            sql_database_name (str): SQL Database Name. [optional]  # noqa: E501
+            sql_is_database_replicated (str): SQL Is Database Replicated. [optional]  # noqa: E501
+            sql_server_collation (str): SQL Server Collation. [optional]  # noqa: E501
+            sql_server_connection_string (str): SQL Server Connection String. [optional]  # noqa: E501
+            sql_server_edition (str): SQL Server Edition. [optional]  # noqa: E501
+            sql_server_is_published (str): SQL Server Is Published. [optional]  # noqa: E501
+            sql_server_is_replication_running (str): SQL Server Is Replication Running. [optional]  # noqa: E501
+            sql_server_is_subscribed (str): SQL Server Is Subscribed. [optional]  # noqa: E501
+            sql_server_name (str): SQL Server Name. [optional]  # noqa: E501
+            sql_server_time (str): SQL Server Time. [optional]  # noqa: E501
+            sql_server_version (str): SQL Server Version. [optional]  # noqa: E501
+            upgrade_available (str): Upgrade Available. [optional]  # noqa: E501
+            upgrade_in_progress (str): Upgrade In Progress. [optional]  # noqa: E501
+            up_time (str): Up Time. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

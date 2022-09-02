@@ -61,10 +61,8 @@ class InboxRuleConditionCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,34 +71,31 @@ class InboxRuleConditionCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'display_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_data_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_rule_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_rule_operand': (InboxRuleConditionOperand,),  # noqa: E501
-            'value_bool': (bool,),  # noqa: E501
-            'value_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_int': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_string': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'display_value': (str, none_type,),  # noqa: E501
+            'inbox_data_id': (int, none_type,),  # noqa: E501
+            'inbox_rule_id': (int, none_type,),  # noqa: E501
+            'inbox_rule_operand': (InboxRuleConditionOperand, none_type,),  # noqa: E501
+            'value_bool': (bool, none_type,),  # noqa: E501
+            'value_date_time': (datetime, none_type,),  # noqa: E501
+            'value_int': (int, none_type,),  # noqa: E501
+            'value_string': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,14 +150,14 @@ class InboxRuleConditionCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_value (bool, date, datetime, dict, float, int, list, str, none_type): Display Value. [optional]  # noqa: E501
-            inbox_data_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Data. [optional]  # noqa: E501
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Rule. [optional]  # noqa: E501
+            display_value (str): Display Value. [optional]  # noqa: E501
+            inbox_data_id (int): Inbox Data. [optional]  # noqa: E501
+            inbox_rule_id (int): Inbox Rule. [optional]  # noqa: E501
             inbox_rule_operand (InboxRuleConditionOperand): [optional]  # noqa: E501
             value_bool (bool): Boolean Value. [optional]  # noqa: E501
-            value_date_time (bool, date, datetime, dict, float, int, list, str, none_type): DateTime Value. [optional]  # noqa: E501
-            value_int (bool, date, datetime, dict, float, int, list, str, none_type): Integer Value. [optional]  # noqa: E501
-            value_string (bool, date, datetime, dict, float, int, list, str, none_type): String Value. [optional]  # noqa: E501
+            value_date_time (datetime): DateTime Value. [optional]  # noqa: E501
+            value_int (int): Integer Value. [optional]  # noqa: E501
+            value_string (str): String Value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -248,14 +243,14 @@ class InboxRuleConditionCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_value (bool, date, datetime, dict, float, int, list, str, none_type): Display Value. [optional]  # noqa: E501
-            inbox_data_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Data. [optional]  # noqa: E501
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Rule. [optional]  # noqa: E501
+            display_value (str): Display Value. [optional]  # noqa: E501
+            inbox_data_id (int): Inbox Data. [optional]  # noqa: E501
+            inbox_rule_id (int): Inbox Rule. [optional]  # noqa: E501
             inbox_rule_operand (InboxRuleConditionOperand): [optional]  # noqa: E501
             value_bool (bool): Boolean Value. [optional]  # noqa: E501
-            value_date_time (bool, date, datetime, dict, float, int, list, str, none_type): DateTime Value. [optional]  # noqa: E501
-            value_int (bool, date, datetime, dict, float, int, list, str, none_type): Integer Value. [optional]  # noqa: E501
-            value_string (bool, date, datetime, dict, float, int, list, str, none_type): String Value. [optional]  # noqa: E501
+            value_date_time (datetime): DateTime Value. [optional]  # noqa: E501
+            value_int (int): Integer Value. [optional]  # noqa: E501
+            value_string (str): String Value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

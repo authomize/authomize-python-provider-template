@@ -338,7 +338,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **diagnostics_service_get_computer_scan_logs**
-> bool, date, datetime, dict, float, int, list, str, none_type diagnostics_service_get_computer_scan_logs()
+> str diagnostics_service_get_computer_scan_logs()
 
 Get ComputerScan Logs
 
@@ -393,7 +393,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -417,7 +417,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **diagnostics_service_get_connectivity_report**
-> bool, date, datetime, dict, float, int, list, str, none_type diagnostics_service_get_connectivity_report()
+> str diagnostics_service_get_connectivity_report()
 
 Get Connectivity Report
 
@@ -472,7 +472,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -576,7 +576,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **diagnostics_service_get_discovery_logs**
-> bool, date, datetime, dict, float, int, list, str, none_type diagnostics_service_get_discovery_logs()
+> str diagnostics_service_get_discovery_logs()
 
 Get Discovery Logs
 
@@ -631,7 +631,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -655,7 +655,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **diagnostics_service_get_general_logs**
-> bool, date, datetime, dict, float, int, list, str, none_type diagnostics_service_get_general_logs()
+> str diagnostics_service_get_general_logs()
 
 Get General Logs
 
@@ -710,7 +710,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -734,7 +734,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **diagnostics_service_get_heartbeat_logs**
-> bool, date, datetime, dict, float, int, list, str, none_type diagnostics_service_get_heartbeat_logs()
+> str diagnostics_service_get_heartbeat_logs()
 
 Get Heartbeat Logs
 
@@ -789,7 +789,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -893,7 +893,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **diagnostics_service_get_rpc_logs**
-> bool, date, datetime, dict, float, int, list, str, none_type diagnostics_service_get_rpc_logs()
+> str diagnostics_service_get_rpc_logs()
 
 Get RPC Logs
 
@@ -948,7 +948,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -972,7 +972,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **diagnostics_service_get_system_logs**
-> bool, date, datetime, dict, float, int, list, str, none_type diagnostics_service_get_system_logs()
+> str diagnostics_service_get_system_logs()
 
 Get System Logs
 
@@ -1027,7 +1027,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 

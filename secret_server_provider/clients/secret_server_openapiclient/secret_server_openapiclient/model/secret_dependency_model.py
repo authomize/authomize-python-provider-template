@@ -65,10 +65,8 @@ class SecretDependencyModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,46 +75,43 @@ class SecretDependencyModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'child_dependency_status': (bool,),  # noqa: E501
-            'condition_dependency_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'condition_mode': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dependency_template': (SecretDependencyTemplate,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'log_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'privileged_account_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'run_script': (SecretDependencyRunScript,),  # noqa: E501
-            'secret_dependency_status': (bool,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'settings': ([SecretDependencySettingMapForDisplay],),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_key_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_key_secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'child_dependency_status': (bool, none_type,),  # noqa: E501
+            'condition_dependency_id': (int, none_type,),  # noqa: E501
+            'condition_mode': (str, none_type,),  # noqa: E501
+            'dependency_template': (SecretDependencyTemplate, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'log_message': (str, none_type,),  # noqa: E501
+            'privileged_account_secret_id': (int, none_type,),  # noqa: E501
+            'run_script': (SecretDependencyRunScript, none_type,),  # noqa: E501
+            'secret_dependency_status': (bool, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'settings': ([SecretDependencySettingMapForDisplay], none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'ssh_key_secret_id': (int, none_type,),  # noqa: E501
+            'ssh_key_secret_name': (str, none_type,),  # noqa: E501
+            'type_id': (int, none_type,),  # noqa: E501
+            'type_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -185,24 +180,24 @@ class SecretDependencyModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether or not the Secret Dependency is active.. [optional]  # noqa: E501
             child_dependency_status (bool): The last run status of the child Secret Dependency.. [optional]  # noqa: E501
-            condition_dependency_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the dependency that will be looked at when  Condition Mode is set to 'DEPENDENCYPASS', 'DEPENDENCYFAIL'. The Dependency must have a SortOrder lower than the current one.. [optional]  # noqa: E501
-            condition_mode (bool, date, datetime, dict, float, int, list, str, none_type): Condition Mode governs if this dependency's run relies on the result of other dependencies above it. The Default is ALWAYSRUN. Other values maybe 'All Pass', 'Any Fail', 'DEPENDENCYPASS', 'DEPENDENCYFAIL'.. [optional]  # noqa: E501
+            condition_dependency_id (int): The Id of the dependency that will be looked at when  Condition Mode is set to 'DEPENDENCYPASS', 'DEPENDENCYFAIL'. The Dependency must have a SortOrder lower than the current one.. [optional]  # noqa: E501
+            condition_mode (str): Condition Mode governs if this dependency's run relies on the result of other dependencies above it. The Default is ALWAYSRUN. Other values maybe 'All Pass', 'Any Fail', 'DEPENDENCYPASS', 'DEPENDENCYFAIL'.. [optional]  # noqa: E501
             dependency_template (SecretDependencyTemplate): [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): A description for the Secret Dependency.. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Dependency Group that contains the Secret Dependency.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Dependency.. [optional]  # noqa: E501
-            log_message (bool, date, datetime, dict, float, int, list, str, none_type): The last Log message for the Secret Dependency.. [optional]  # noqa: E501
-            privileged_account_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Privileged Secret that the Secret Dependency will use to run.. [optional]  # noqa: E501
+            description (str): A description for the Secret Dependency.. [optional]  # noqa: E501
+            group_id (int): The Id of the Dependency Group that contains the Secret Dependency.. [optional]  # noqa: E501
+            id (int): The Id of the Secret Dependency.. [optional]  # noqa: E501
+            log_message (str): The last Log message for the Secret Dependency.. [optional]  # noqa: E501
+            privileged_account_secret_id (int): The Id of the Privileged Secret that the Secret Dependency will use to run.. [optional]  # noqa: E501
             run_script (SecretDependencyRunScript): [optional]  # noqa: E501
             secret_dependency_status (bool): The last run status of the Secret Dependency.. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret that the Secret Dependency is assigned to.. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Secret that the Secret Dependency is assigned to.. [optional]  # noqa: E501
+            secret_id (int): The Id of the Secret that the Secret Dependency is assigned to.. [optional]  # noqa: E501
+            secret_name (str): The Name of the Secret that the Secret Dependency is assigned to.. [optional]  # noqa: E501
             settings ([SecretDependencySettingMapForDisplay]): The Settings used by the Secret Dependency. (Ex: WaitBeforeSeconds, Database, Port, SSHKeyDigest). If a setting exists with the same name (or intent in the case of Port and SqlPort) as a field on the Dependency template's DependencyScanItemFields collection, the value assigned to the setting takes precedence and will overwrite the corresponding DependencyScanItemField.. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): The sort order of the Secret Dependency in the group.  Determines the order of execution of the dependencies within a group.. [optional]  # noqa: E501
-            ssh_key_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret containing the SSH key. (If dependency is tied to SSH key Secret. [optional]  # noqa: E501
-            ssh_key_secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Secret containing the SSH key. (If dependency is tied to SSH key Secret. [optional]  # noqa: E501
-            type_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the type of Secret Dependency.. [optional]  # noqa: E501
-            type_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the type of Secret Dependency.. [optional]  # noqa: E501
+            sort_order (int): The sort order of the Secret Dependency in the group.  Determines the order of execution of the dependencies within a group.. [optional]  # noqa: E501
+            ssh_key_secret_id (int): The Id of the Secret containing the SSH key. (If dependency is tied to SSH key Secret. [optional]  # noqa: E501
+            ssh_key_secret_name (str): The Name of the Secret containing the SSH key. (If dependency is tied to SSH key Secret. [optional]  # noqa: E501
+            type_id (int): The Id of the type of Secret Dependency.. [optional]  # noqa: E501
+            type_name (str): The name of the type of Secret Dependency.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -290,24 +285,24 @@ class SecretDependencyModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether or not the Secret Dependency is active.. [optional]  # noqa: E501
             child_dependency_status (bool): The last run status of the child Secret Dependency.. [optional]  # noqa: E501
-            condition_dependency_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the dependency that will be looked at when  Condition Mode is set to 'DEPENDENCYPASS', 'DEPENDENCYFAIL'. The Dependency must have a SortOrder lower than the current one.. [optional]  # noqa: E501
-            condition_mode (bool, date, datetime, dict, float, int, list, str, none_type): Condition Mode governs if this dependency's run relies on the result of other dependencies above it. The Default is ALWAYSRUN. Other values maybe 'All Pass', 'Any Fail', 'DEPENDENCYPASS', 'DEPENDENCYFAIL'.. [optional]  # noqa: E501
+            condition_dependency_id (int): The Id of the dependency that will be looked at when  Condition Mode is set to 'DEPENDENCYPASS', 'DEPENDENCYFAIL'. The Dependency must have a SortOrder lower than the current one.. [optional]  # noqa: E501
+            condition_mode (str): Condition Mode governs if this dependency's run relies on the result of other dependencies above it. The Default is ALWAYSRUN. Other values maybe 'All Pass', 'Any Fail', 'DEPENDENCYPASS', 'DEPENDENCYFAIL'.. [optional]  # noqa: E501
             dependency_template (SecretDependencyTemplate): [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): A description for the Secret Dependency.. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Dependency Group that contains the Secret Dependency.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Dependency.. [optional]  # noqa: E501
-            log_message (bool, date, datetime, dict, float, int, list, str, none_type): The last Log message for the Secret Dependency.. [optional]  # noqa: E501
-            privileged_account_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Privileged Secret that the Secret Dependency will use to run.. [optional]  # noqa: E501
+            description (str): A description for the Secret Dependency.. [optional]  # noqa: E501
+            group_id (int): The Id of the Dependency Group that contains the Secret Dependency.. [optional]  # noqa: E501
+            id (int): The Id of the Secret Dependency.. [optional]  # noqa: E501
+            log_message (str): The last Log message for the Secret Dependency.. [optional]  # noqa: E501
+            privileged_account_secret_id (int): The Id of the Privileged Secret that the Secret Dependency will use to run.. [optional]  # noqa: E501
             run_script (SecretDependencyRunScript): [optional]  # noqa: E501
             secret_dependency_status (bool): The last run status of the Secret Dependency.. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret that the Secret Dependency is assigned to.. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Secret that the Secret Dependency is assigned to.. [optional]  # noqa: E501
+            secret_id (int): The Id of the Secret that the Secret Dependency is assigned to.. [optional]  # noqa: E501
+            secret_name (str): The Name of the Secret that the Secret Dependency is assigned to.. [optional]  # noqa: E501
             settings ([SecretDependencySettingMapForDisplay]): The Settings used by the Secret Dependency. (Ex: WaitBeforeSeconds, Database, Port, SSHKeyDigest). If a setting exists with the same name (or intent in the case of Port and SqlPort) as a field on the Dependency template's DependencyScanItemFields collection, the value assigned to the setting takes precedence and will overwrite the corresponding DependencyScanItemField.. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): The sort order of the Secret Dependency in the group.  Determines the order of execution of the dependencies within a group.. [optional]  # noqa: E501
-            ssh_key_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret containing the SSH key. (If dependency is tied to SSH key Secret. [optional]  # noqa: E501
-            ssh_key_secret_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Secret containing the SSH key. (If dependency is tied to SSH key Secret. [optional]  # noqa: E501
-            type_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the type of Secret Dependency.. [optional]  # noqa: E501
-            type_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the type of Secret Dependency.. [optional]  # noqa: E501
+            sort_order (int): The sort order of the Secret Dependency in the group.  Determines the order of execution of the dependencies within a group.. [optional]  # noqa: E501
+            ssh_key_secret_id (int): The Id of the Secret containing the SSH key. (If dependency is tied to SSH key Secret. [optional]  # noqa: E501
+            ssh_key_secret_name (str): The Name of the Secret containing the SSH key. (If dependency is tied to SSH key Secret. [optional]  # noqa: E501
+            type_id (int): The Id of the type of Secret Dependency.. [optional]  # noqa: E501
+            type_name (str): The name of the type of Secret Dependency.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -61,10 +61,8 @@ class ViewFieldValueOfOptionalScheduleMonthlyType(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,43 +71,40 @@ class ViewFieldValueOfOptionalScheduleMonthlyType(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'additional_links': ([ViewFieldLink],),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'field_input_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_history': (bool,),  # noqa: E501
-            'help_link': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'help_link_text': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'hidden': (bool,),  # noqa: E501
-            'hide_on_view': (bool,),  # noqa: E501
-            'is_required': (bool,),  # noqa: E501
-            'label': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'max_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'placeholder': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'read_only': (bool,),  # noqa: E501
-            'read_only_reason': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'additional_links': ([ViewFieldLink], none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'field_input_type': (str, none_type,),  # noqa: E501
+            'has_history': (bool, none_type,),  # noqa: E501
+            'help_link': (str, none_type,),  # noqa: E501
+            'help_link_text': (str, none_type,),  # noqa: E501
+            'hidden': (bool, none_type,),  # noqa: E501
+            'hide_on_view': (bool, none_type,),  # noqa: E501
+            'is_required': (bool, none_type,),  # noqa: E501
+            'label': (str, none_type,),  # noqa: E501
+            'max_length': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'placeholder': (str, none_type,),  # noqa: E501
+            'read_only': (bool, none_type,),  # noqa: E501
+            'read_only_reason': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'value': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -174,22 +169,22 @@ class ViewFieldValueOfOptionalScheduleMonthlyType(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             additional_links ([ViewFieldLink]): AdditionalLinks. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            field_input_type (bool, date, datetime, dict, float, int, list, str, none_type): FieldInputType. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            field_input_type (str): FieldInputType. [optional]  # noqa: E501
             has_history (bool): HasHistory. [optional]  # noqa: E501
-            help_link (bool, date, datetime, dict, float, int, list, str, none_type): HelpLink. [optional]  # noqa: E501
-            help_link_text (bool, date, datetime, dict, float, int, list, str, none_type): HelpLinkText. [optional]  # noqa: E501
+            help_link (str): HelpLink. [optional]  # noqa: E501
+            help_link_text (str): HelpLinkText. [optional]  # noqa: E501
             hidden (bool): Hidden. [optional]  # noqa: E501
             hide_on_view (bool): HideOnView. [optional]  # noqa: E501
             is_required (bool): IsRequired. [optional]  # noqa: E501
-            label (bool, date, datetime, dict, float, int, list, str, none_type): Label. [optional]  # noqa: E501
-            max_length (bool, date, datetime, dict, float, int, list, str, none_type): MaxLength. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            placeholder (bool, date, datetime, dict, float, int, list, str, none_type): Placeholder. [optional]  # noqa: E501
+            label (str): Label. [optional]  # noqa: E501
+            max_length (int): MaxLength. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            placeholder (str): Placeholder. [optional]  # noqa: E501
             read_only (bool): ReadOnly. [optional]  # noqa: E501
-            read_only_reason (bool, date, datetime, dict, float, int, list, str, none_type): ReadOnlyReason. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): SortOrder. [optional]  # noqa: E501
-            value (bool, date, datetime, dict, float, int, list, str, none_type): Value. [optional]  # noqa: E501
+            read_only_reason (str): ReadOnlyReason. [optional]  # noqa: E501
+            sort_order (int): SortOrder. [optional]  # noqa: E501
+            value (str): Value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -276,22 +271,22 @@ class ViewFieldValueOfOptionalScheduleMonthlyType(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             additional_links ([ViewFieldLink]): AdditionalLinks. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            field_input_type (bool, date, datetime, dict, float, int, list, str, none_type): FieldInputType. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            field_input_type (str): FieldInputType. [optional]  # noqa: E501
             has_history (bool): HasHistory. [optional]  # noqa: E501
-            help_link (bool, date, datetime, dict, float, int, list, str, none_type): HelpLink. [optional]  # noqa: E501
-            help_link_text (bool, date, datetime, dict, float, int, list, str, none_type): HelpLinkText. [optional]  # noqa: E501
+            help_link (str): HelpLink. [optional]  # noqa: E501
+            help_link_text (str): HelpLinkText. [optional]  # noqa: E501
             hidden (bool): Hidden. [optional]  # noqa: E501
             hide_on_view (bool): HideOnView. [optional]  # noqa: E501
             is_required (bool): IsRequired. [optional]  # noqa: E501
-            label (bool, date, datetime, dict, float, int, list, str, none_type): Label. [optional]  # noqa: E501
-            max_length (bool, date, datetime, dict, float, int, list, str, none_type): MaxLength. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            placeholder (bool, date, datetime, dict, float, int, list, str, none_type): Placeholder. [optional]  # noqa: E501
+            label (str): Label. [optional]  # noqa: E501
+            max_length (int): MaxLength. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            placeholder (str): Placeholder. [optional]  # noqa: E501
             read_only (bool): ReadOnly. [optional]  # noqa: E501
-            read_only_reason (bool, date, datetime, dict, float, int, list, str, none_type): ReadOnlyReason. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): SortOrder. [optional]  # noqa: E501
-            value (bool, date, datetime, dict, float, int, list, str, none_type): Value. [optional]  # noqa: E501
+            read_only_reason (str): ReadOnlyReason. [optional]  # noqa: E501
+            sort_order (int): SortOrder. [optional]  # noqa: E501
+            value (str): Value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

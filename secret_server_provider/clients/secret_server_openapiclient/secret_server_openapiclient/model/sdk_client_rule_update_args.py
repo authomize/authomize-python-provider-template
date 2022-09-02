@@ -57,10 +57,8 @@ class SdkClientRuleUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class SdkClientRuleUpdateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'details': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'require_onboarding_key': (bool,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'name': (str,),  # noqa: E501
+            'details': (str, none_type,),  # noqa: E501
+            'require_onboarding_key': (bool, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -111,7 +106,7 @@ class SdkClientRuleUpdateArgs(ModelNormal):
         """SdkClientRuleUpdateArgs - a model defined in OpenAPI
 
         Args:
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name
+            name (str): Name
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -144,9 +139,9 @@ class SdkClientRuleUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            details (bool, date, datetime, dict, float, int, list, str, none_type): Details. [optional]  # noqa: E501
+            details (str): Details. [optional]  # noqa: E501
             require_onboarding_key (bool): RequireOnboardingKey. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]  # noqa: E501
+            user_id (int): UserId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -203,7 +198,7 @@ class SdkClientRuleUpdateArgs(ModelNormal):
         """SdkClientRuleUpdateArgs - a model defined in OpenAPI
 
         Args:
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name
+            name (str): Name
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -236,9 +231,9 @@ class SdkClientRuleUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            details (bool, date, datetime, dict, float, int, list, str, none_type): Details. [optional]  # noqa: E501
+            details (str): Details. [optional]  # noqa: E501
             require_onboarding_key (bool): RequireOnboardingKey. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]  # noqa: E501
+            user_id (int): UserId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

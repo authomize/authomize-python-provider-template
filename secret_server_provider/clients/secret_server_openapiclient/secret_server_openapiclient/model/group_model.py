@@ -63,10 +63,8 @@ class GroupModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,44 +73,41 @@ class GroupModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'ad_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'can_edit_members': (bool,),  # noqa: E501
-            'created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'has_group_owners': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ip_address_restrictions': ([GroupIpAddressRestrictionSummaryModel],),  # noqa: E501
-            'is_editable': (bool,),  # noqa: E501
-            'is_platform': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'owner_groups': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'owners': ([GroupOwner],),  # noqa: E501
-            'owner_users': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'synchronized': (bool,),  # noqa: E501
-            'synchronize_now': (bool,),  # noqa: E501
-            'system_group': (bool,),  # noqa: E501
+            'ad_guid': (str, none_type,),  # noqa: E501
+            'can_edit_members': (bool, none_type,),  # noqa: E501
+            'created': (datetime, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'has_group_owners': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'ip_address_restrictions': ([GroupIpAddressRestrictionSummaryModel], none_type,),  # noqa: E501
+            'is_editable': (bool, none_type,),  # noqa: E501
+            'is_platform': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'owner_groups': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
+            'owners': ([GroupOwner], none_type,),  # noqa: E501
+            'owner_users': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
+            'synchronized': (bool, none_type,),  # noqa: E501
+            'synchronize_now': (bool, none_type,),  # noqa: E501
+            'system_group': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -177,18 +172,18 @@ class GroupModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ad_guid (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory unique identifier. [optional]  # noqa: E501
+            ad_guid (str): Active Directory unique identifier. [optional]  # noqa: E501
             can_edit_members (bool): Whether you can edit the members of this group.  For example, Directory Services group members cannot be edited.  Populated on a single group get.. [optional]  # noqa: E501
-            created (bool, date, datetime, dict, float, int, list, str, none_type): Group created date. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain ID. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain name. [optional]  # noqa: E501
+            created (datetime): Group created date. [optional]  # noqa: E501
+            domain_id (int): Active Directory Domain ID. [optional]  # noqa: E501
+            domain_name (str): Active Directory domain name. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
             has_group_owners (bool): If true, the group is owned by specific other users/groups. If false, if it is owned by Group Administrators.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
+            id (int): Group ID. [optional]  # noqa: E501
             ip_address_restrictions ([GroupIpAddressRestrictionSummaryModel]): Array of IP Address Restrictions for the group.. [optional]  # noqa: E501
             is_editable (bool): Whether you have permission to edit this group. [optional]  # noqa: E501
             is_platform (bool): Whether the group is a Platform Group. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
+            name (str): Group name. [optional]  # noqa: E501
             owner_groups ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): Hash of GroupIds and GroupNames that own this group. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
             owners ([GroupOwner]): The owners for the group, both users and groups. [optional]  # noqa: E501
             owner_users ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): Hash of GroupIds and GroupNames that own this group. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
@@ -280,18 +275,18 @@ class GroupModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ad_guid (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory unique identifier. [optional]  # noqa: E501
+            ad_guid (str): Active Directory unique identifier. [optional]  # noqa: E501
             can_edit_members (bool): Whether you can edit the members of this group.  For example, Directory Services group members cannot be edited.  Populated on a single group get.. [optional]  # noqa: E501
-            created (bool, date, datetime, dict, float, int, list, str, none_type): Group created date. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain ID. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain name. [optional]  # noqa: E501
+            created (datetime): Group created date. [optional]  # noqa: E501
+            domain_id (int): Active Directory Domain ID. [optional]  # noqa: E501
+            domain_name (str): Active Directory domain name. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
             has_group_owners (bool): If true, the group is owned by specific other users/groups. If false, if it is owned by Group Administrators.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
+            id (int): Group ID. [optional]  # noqa: E501
             ip_address_restrictions ([GroupIpAddressRestrictionSummaryModel]): Array of IP Address Restrictions for the group.. [optional]  # noqa: E501
             is_editable (bool): Whether you have permission to edit this group. [optional]  # noqa: E501
             is_platform (bool): Whether the group is a Platform Group. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
+            name (str): Group name. [optional]  # noqa: E501
             owner_groups ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): Hash of GroupIds and GroupNames that own this group. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
             owners ([GroupOwner]): The owners for the group, both users and groups. [optional]  # noqa: E501
             owner_users ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): Hash of GroupIds and GroupNames that own this group. Only used if HasGroupOwners is true.. [optional]  # noqa: E501

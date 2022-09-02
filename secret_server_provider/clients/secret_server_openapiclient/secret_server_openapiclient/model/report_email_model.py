@@ -63,10 +63,8 @@ class ReportEmailModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,29 +73,26 @@ class ReportEmailModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'email_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'format': (ReportFormat,),  # noqa: E501
-            'parameters': ([ReportParameterValue],),  # noqa: E501
+            'email_address': (str, none_type,),  # noqa: E501
+            'format': (ReportFormat, none_type,),  # noqa: E501
+            'parameters': ([ReportParameterValue], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,7 +142,7 @@ class ReportEmailModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): Email Address to which the report will be sent. [optional]  # noqa: E501
+            email_address (str): Email Address to which the report will be sent. [optional]  # noqa: E501
             format (ReportFormat): [optional]  # noqa: E501
             parameters ([ReportParameterValue]): Report Parameters to be used for the report execution. [optional]  # noqa: E501
         """
@@ -235,7 +230,7 @@ class ReportEmailModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): Email Address to which the report will be sent. [optional]  # noqa: E501
+            email_address (str): Email Address to which the report will be sent. [optional]  # noqa: E501
             format (ReportFormat): [optional]  # noqa: E501
             parameters ([ReportParameterValue]): Report Parameters to be used for the report execution. [optional]  # noqa: E501
         """

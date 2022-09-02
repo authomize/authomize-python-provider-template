@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **duration** | [**UpdateFieldValueOfInt32**](UpdateFieldValueOfInt32.md) |  | [optional] 
 **duration_start_date** | [**UpdateFieldValueOfDateTime**](UpdateFieldValueOfDateTime.md) |  | [optional] 
 **notes** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
-**recurring_schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | Unique ID for this schedule | [optional] 
+**recurring_schedule_id** | **int** | Unique ID for this schedule | [optional] 
 **recurring_schedule_type** | [**UpdateFieldValueOfRecurringScheduleType**](UpdateFieldValueOfRecurringScheduleType.md) |  | [optional] 
 **schedule_constraints** | [**UpdateFieldValueOfRecurringScheduleValueModelArray**](UpdateFieldValueOfRecurringScheduleValueModelArray.md) |  | [optional] 
 **time_zone_id** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 

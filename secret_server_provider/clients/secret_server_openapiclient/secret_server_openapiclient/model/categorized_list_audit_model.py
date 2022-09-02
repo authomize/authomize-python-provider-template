@@ -57,10 +57,8 @@ class CategorizedListAuditModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,39 +66,36 @@ class CategorizedListAuditModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'action': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'categorized_list_audit_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'categorized_list_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'database_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'date_recorded': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'delegated_user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'delegated_user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'formatted_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ip_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'machine_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'action': (str, none_type,),  # noqa: E501
+            'categorized_list_audit_id': (int, none_type,),  # noqa: E501
+            'categorized_list_id': (str, none_type,),  # noqa: E501
+            'database_name': (str, none_type,),  # noqa: E501
+            'date_recorded': (datetime, none_type,),  # noqa: E501
+            'delegated_user_id': (int, none_type,),  # noqa: E501
+            'delegated_user_name': (str, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'formatted_date': (str, none_type,),  # noqa: E501
+            'ip_address': (str, none_type,),  # noqa: E501
+            'machine_name': (str, none_type,),  # noqa: E501
+            'notes': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -161,20 +156,20 @@ class CategorizedListAuditModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
-            categorized_list_audit_id (bool, date, datetime, dict, float, int, list, str, none_type): CategorizedListAuditId. [optional]  # noqa: E501
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): CategorizedListId. [optional]  # noqa: E501
-            database_name (bool, date, datetime, dict, float, int, list, str, none_type): DatabaseName. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): DateRecorded. [optional]  # noqa: E501
-            delegated_user_id (bool, date, datetime, dict, float, int, list, str, none_type): DelegatedUserId. [optional]  # noqa: E501
-            delegated_user_name (bool, date, datetime, dict, float, int, list, str, none_type): DelegatedUserName. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): DisplayName. [optional]  # noqa: E501
-            formatted_date (bool, date, datetime, dict, float, int, list, str, none_type): FormattedDate. [optional]  # noqa: E501
-            ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): MachineName. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): UserName. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
+            categorized_list_audit_id (int): CategorizedListAuditId. [optional]  # noqa: E501
+            categorized_list_id (str): CategorizedListId. [optional]  # noqa: E501
+            database_name (str): DatabaseName. [optional]  # noqa: E501
+            date_recorded (datetime): DateRecorded. [optional]  # noqa: E501
+            delegated_user_id (int): DelegatedUserId. [optional]  # noqa: E501
+            delegated_user_name (str): DelegatedUserName. [optional]  # noqa: E501
+            display_name (str): DisplayName. [optional]  # noqa: E501
+            formatted_date (str): FormattedDate. [optional]  # noqa: E501
+            ip_address (str): IpAddress. [optional]  # noqa: E501
+            machine_name (str): MachineName. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
+            user_id (int): UserId. [optional]  # noqa: E501
+            user_name (str): UserName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -260,20 +255,20 @@ class CategorizedListAuditModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
-            categorized_list_audit_id (bool, date, datetime, dict, float, int, list, str, none_type): CategorizedListAuditId. [optional]  # noqa: E501
-            categorized_list_id (bool, date, datetime, dict, float, int, list, str, none_type): CategorizedListId. [optional]  # noqa: E501
-            database_name (bool, date, datetime, dict, float, int, list, str, none_type): DatabaseName. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): DateRecorded. [optional]  # noqa: E501
-            delegated_user_id (bool, date, datetime, dict, float, int, list, str, none_type): DelegatedUserId. [optional]  # noqa: E501
-            delegated_user_name (bool, date, datetime, dict, float, int, list, str, none_type): DelegatedUserName. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): DisplayName. [optional]  # noqa: E501
-            formatted_date (bool, date, datetime, dict, float, int, list, str, none_type): FormattedDate. [optional]  # noqa: E501
-            ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): MachineName. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): UserName. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
+            categorized_list_audit_id (int): CategorizedListAuditId. [optional]  # noqa: E501
+            categorized_list_id (str): CategorizedListId. [optional]  # noqa: E501
+            database_name (str): DatabaseName. [optional]  # noqa: E501
+            date_recorded (datetime): DateRecorded. [optional]  # noqa: E501
+            delegated_user_id (int): DelegatedUserId. [optional]  # noqa: E501
+            delegated_user_name (str): DelegatedUserName. [optional]  # noqa: E501
+            display_name (str): DisplayName. [optional]  # noqa: E501
+            formatted_date (str): FormattedDate. [optional]  # noqa: E501
+            ip_address (str): IpAddress. [optional]  # noqa: E501
+            machine_name (str): MachineName. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
+            user_id (int): UserId. [optional]  # noqa: E501
+            user_name (str): UserName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

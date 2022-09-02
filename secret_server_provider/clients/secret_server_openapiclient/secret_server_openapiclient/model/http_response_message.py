@@ -67,10 +67,8 @@ class HttpResponseMessage(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,33 +77,30 @@ class HttpResponseMessage(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'content': (HttpContent,),  # noqa: E501
-            'headers': (HttpResponseHeaders,),  # noqa: E501
-            'is_success_status_code': (bool,),  # noqa: E501
-            'reason_phrase': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_message': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'status_code': (HttpStatusCode,),  # noqa: E501
-            'version': (Version,),  # noqa: E501
+            'content': (HttpContent, none_type,),  # noqa: E501
+            'headers': (HttpResponseHeaders, none_type,),  # noqa: E501
+            'is_success_status_code': (bool, none_type,),  # noqa: E501
+            'reason_phrase': (str, none_type,),  # noqa: E501
+            'request_message': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
+            'status_code': (HttpStatusCode, none_type,),  # noqa: E501
+            'version': (Version, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -162,7 +157,7 @@ class HttpResponseMessage(ModelNormal):
             content (HttpContent): [optional]  # noqa: E501
             headers (HttpResponseHeaders): [optional]  # noqa: E501
             is_success_status_code (bool): IsSuccessStatusCode. [optional]  # noqa: E501
-            reason_phrase (bool, date, datetime, dict, float, int, list, str, none_type): ReasonPhrase. [optional]  # noqa: E501
+            reason_phrase (str): ReasonPhrase. [optional]  # noqa: E501
             request_message ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): RequestMessage. [optional]  # noqa: E501
             status_code (HttpStatusCode): [optional]  # noqa: E501
             version (Version): [optional]  # noqa: E501
@@ -254,7 +249,7 @@ class HttpResponseMessage(ModelNormal):
             content (HttpContent): [optional]  # noqa: E501
             headers (HttpResponseHeaders): [optional]  # noqa: E501
             is_success_status_code (bool): IsSuccessStatusCode. [optional]  # noqa: E501
-            reason_phrase (bool, date, datetime, dict, float, int, list, str, none_type): ReasonPhrase. [optional]  # noqa: E501
+            reason_phrase (str): ReasonPhrase. [optional]  # noqa: E501
             request_message ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): RequestMessage. [optional]  # noqa: E501
             status_code (HttpStatusCode): [optional]  # noqa: E501
             version (Version): [optional]  # noqa: E501

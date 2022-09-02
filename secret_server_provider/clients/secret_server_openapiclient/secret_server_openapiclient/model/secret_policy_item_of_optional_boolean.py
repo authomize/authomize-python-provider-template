@@ -61,10 +61,8 @@ class SecretPolicyItemOfOptionalBoolean(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,30 +71,27 @@ class SecretPolicyItemOfOptionalBoolean(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'parent_policy_item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'policy_apply_type': (PolicyApplyType,),  # noqa: E501
-            'policy_item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value': (bool,),  # noqa: E501
+            'parent_policy_item_id': (int, none_type,),  # noqa: E501
+            'policy_apply_type': (PolicyApplyType, none_type,),  # noqa: E501
+            'policy_item_id': (int, none_type,),  # noqa: E501
+            'value': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,9 +142,9 @@ class SecretPolicyItemOfOptionalBoolean(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent_policy_item_id (bool, date, datetime, dict, float, int, list, str, none_type): ParentPolicyItemId. [optional]  # noqa: E501
+            parent_policy_item_id (int): ParentPolicyItemId. [optional]  # noqa: E501
             policy_apply_type (PolicyApplyType): [optional]  # noqa: E501
-            policy_item_id (bool, date, datetime, dict, float, int, list, str, none_type): PolicyItemId. [optional]  # noqa: E501
+            policy_item_id (int): PolicyItemId. [optional]  # noqa: E501
             value (bool): Value. [optional]  # noqa: E501
         """
 
@@ -236,9 +231,9 @@ class SecretPolicyItemOfOptionalBoolean(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent_policy_item_id (bool, date, datetime, dict, float, int, list, str, none_type): ParentPolicyItemId. [optional]  # noqa: E501
+            parent_policy_item_id (int): ParentPolicyItemId. [optional]  # noqa: E501
             policy_apply_type (PolicyApplyType): [optional]  # noqa: E501
-            policy_item_id (bool, date, datetime, dict, float, int, list, str, none_type): PolicyItemId. [optional]  # noqa: E501
+            policy_item_id (int): PolicyItemId. [optional]  # noqa: E501
             value (bool): Value. [optional]  # noqa: E501
         """
 

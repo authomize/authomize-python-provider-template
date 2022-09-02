@@ -61,10 +61,8 @@ class InboxResourceSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,29 +71,26 @@ class InboxResourceSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'inbox_resource_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_resource_slug': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_resource_type': (InboxResourceType,),  # noqa: E501
+            'inbox_resource_id': (int, none_type,),  # noqa: E501
+            'inbox_resource_slug': (str, none_type,),  # noqa: E501
+            'inbox_resource_type': (InboxResourceType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,8 +140,8 @@ class InboxResourceSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            inbox_resource_id (bool, date, datetime, dict, float, int, list, str, none_type): InboxResourceId. [optional]  # noqa: E501
-            inbox_resource_slug (bool, date, datetime, dict, float, int, list, str, none_type): InboxResourceSlug. [optional]  # noqa: E501
+            inbox_resource_id (int): InboxResourceId. [optional]  # noqa: E501
+            inbox_resource_slug (str): InboxResourceSlug. [optional]  # noqa: E501
             inbox_resource_type (InboxResourceType): [optional]  # noqa: E501
         """
 
@@ -233,8 +228,8 @@ class InboxResourceSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            inbox_resource_id (bool, date, datetime, dict, float, int, list, str, none_type): InboxResourceId. [optional]  # noqa: E501
-            inbox_resource_slug (bool, date, datetime, dict, float, int, list, str, none_type): InboxResourceSlug. [optional]  # noqa: E501
+            inbox_resource_id (int): InboxResourceId. [optional]  # noqa: E501
+            inbox_resource_slug (str): InboxResourceSlug. [optional]  # noqa: E501
             inbox_resource_type (InboxResourceType): [optional]  # noqa: E501
         """
 

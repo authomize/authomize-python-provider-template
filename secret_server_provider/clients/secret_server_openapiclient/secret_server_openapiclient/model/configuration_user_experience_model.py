@@ -57,10 +57,8 @@ class ConfigurationUserExperienceModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,40 +66,37 @@ class ConfigurationUserExperienceModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'application_language': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'checkout_notification_threshold': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'default_date_format': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'default_new_user_role_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'default_time_format': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_secret_check_out_extension': (bool,),  # noqa: E501
-            'force_inactivity_timeout': (bool,),  # noqa: E501
-            'force_inactivity_timeout_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'require_folder_for_secret': (bool,),  # noqa: E501
-            'search_delay_ms': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_password_history_restriction_all': (bool,),  # noqa: E501
-            'secret_password_history_restriction_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_view_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_time_zone_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ui_inactivity_sleep_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'application_language': (int, none_type,),  # noqa: E501
+            'checkout_notification_threshold': (int, none_type,),  # noqa: E501
+            'default_date_format': (int, none_type,),  # noqa: E501
+            'default_new_user_role_id': (int, none_type,),  # noqa: E501
+            'default_time_format': (int, none_type,),  # noqa: E501
+            'enable_secret_check_out_extension': (bool, none_type,),  # noqa: E501
+            'force_inactivity_timeout': (bool, none_type,),  # noqa: E501
+            'force_inactivity_timeout_minutes': (int, none_type,),  # noqa: E501
+            'require_folder_for_secret': (bool, none_type,),  # noqa: E501
+            'search_delay_ms': (int, none_type,),  # noqa: E501
+            'secret_password_history_restriction_all': (bool, none_type,),  # noqa: E501
+            'secret_password_history_restriction_count': (int, none_type,),  # noqa: E501
+            'secret_view_interval_minutes': (int, none_type,),  # noqa: E501
+            'server_time_zone_id': (str, none_type,),  # noqa: E501
+            'ui_inactivity_sleep_minutes': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -163,21 +158,21 @@ class ConfigurationUserExperienceModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            application_language (bool, date, datetime, dict, float, int, list, str, none_type): The default application language for users and the language for non-user specific tasks like logging when applicable. [optional]  # noqa: E501
-            checkout_notification_threshold (bool, date, datetime, dict, float, int, list, str, none_type): Percentage of secret checkout time elapsed when checkout notification will be sent. [optional]  # noqa: E501
-            default_date_format (bool, date, datetime, dict, float, int, list, str, none_type): The default date format that everyone sees unless they override with a user preference. [optional]  # noqa: E501
-            default_new_user_role_id (bool, date, datetime, dict, float, int, list, str, none_type): The role that should be assigned when a new user is created. [optional]  # noqa: E501
-            default_time_format (bool, date, datetime, dict, float, int, list, str, none_type): The default time format that everyone sees unless they override with a user preference. [optional]  # noqa: E501
+            application_language (int): The default application language for users and the language for non-user specific tasks like logging when applicable. [optional]  # noqa: E501
+            checkout_notification_threshold (int): Percentage of secret checkout time elapsed when checkout notification will be sent. [optional]  # noqa: E501
+            default_date_format (int): The default date format that everyone sees unless they override with a user preference. [optional]  # noqa: E501
+            default_new_user_role_id (int): The role that should be assigned when a new user is created. [optional]  # noqa: E501
+            default_time_format (int): The default time format that everyone sees unless they override with a user preference. [optional]  # noqa: E501
             enable_secret_check_out_extension (bool): Enables users to extend secret check out sessions.. [optional]  # noqa: E501
             force_inactivity_timeout (bool): Logout users that are inactive. [optional]  # noqa: E501
-            force_inactivity_timeout_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Logout users that are inactive for this many minutes. [optional]  # noqa: E501
+            force_inactivity_timeout_minutes (int): Logout users that are inactive for this many minutes. [optional]  # noqa: E501
             require_folder_for_secret (bool): Secrets must be created within a folder. [optional]  # noqa: E501
-            search_delay_ms (bool, date, datetime, dict, float, int, list, str, none_type): This controls the delay, in milliseconds, until the search is executed by the global search in the header.  If set to 0, it will require the user to press enter in the search bar.. [optional]  # noqa: E501
+            search_delay_ms (int): This controls the delay, in milliseconds, until the search is executed by the global search in the header.  If set to 0, it will require the user to press enter in the search bar.. [optional]  # noqa: E501
             secret_password_history_restriction_all (bool): No duplicate passwords on a Secret. [optional]  # noqa: E501
-            secret_password_history_restriction_count (bool, date, datetime, dict, float, int, list, str, none_type): How many passwords must be unique on a Secret. [optional]  # noqa: E501
-            secret_view_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How long entering comments to view a Secret last before being required again. [optional]  # noqa: E501
-            server_time_zone_id (bool, date, datetime, dict, float, int, list, str, none_type): The timezone that the server shows by default and when job scheduling runs. [optional]  # noqa: E501
-            ui_inactivity_sleep_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How long until the UI will go inactive and stop polling for updates. [optional]  # noqa: E501
+            secret_password_history_restriction_count (int): How many passwords must be unique on a Secret. [optional]  # noqa: E501
+            secret_view_interval_minutes (int): How long entering comments to view a Secret last before being required again. [optional]  # noqa: E501
+            server_time_zone_id (str): The timezone that the server shows by default and when job scheduling runs. [optional]  # noqa: E501
+            ui_inactivity_sleep_minutes (int): How long until the UI will go inactive and stop polling for updates. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -263,21 +258,21 @@ class ConfigurationUserExperienceModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            application_language (bool, date, datetime, dict, float, int, list, str, none_type): The default application language for users and the language for non-user specific tasks like logging when applicable. [optional]  # noqa: E501
-            checkout_notification_threshold (bool, date, datetime, dict, float, int, list, str, none_type): Percentage of secret checkout time elapsed when checkout notification will be sent. [optional]  # noqa: E501
-            default_date_format (bool, date, datetime, dict, float, int, list, str, none_type): The default date format that everyone sees unless they override with a user preference. [optional]  # noqa: E501
-            default_new_user_role_id (bool, date, datetime, dict, float, int, list, str, none_type): The role that should be assigned when a new user is created. [optional]  # noqa: E501
-            default_time_format (bool, date, datetime, dict, float, int, list, str, none_type): The default time format that everyone sees unless they override with a user preference. [optional]  # noqa: E501
+            application_language (int): The default application language for users and the language for non-user specific tasks like logging when applicable. [optional]  # noqa: E501
+            checkout_notification_threshold (int): Percentage of secret checkout time elapsed when checkout notification will be sent. [optional]  # noqa: E501
+            default_date_format (int): The default date format that everyone sees unless they override with a user preference. [optional]  # noqa: E501
+            default_new_user_role_id (int): The role that should be assigned when a new user is created. [optional]  # noqa: E501
+            default_time_format (int): The default time format that everyone sees unless they override with a user preference. [optional]  # noqa: E501
             enable_secret_check_out_extension (bool): Enables users to extend secret check out sessions.. [optional]  # noqa: E501
             force_inactivity_timeout (bool): Logout users that are inactive. [optional]  # noqa: E501
-            force_inactivity_timeout_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Logout users that are inactive for this many minutes. [optional]  # noqa: E501
+            force_inactivity_timeout_minutes (int): Logout users that are inactive for this many minutes. [optional]  # noqa: E501
             require_folder_for_secret (bool): Secrets must be created within a folder. [optional]  # noqa: E501
-            search_delay_ms (bool, date, datetime, dict, float, int, list, str, none_type): This controls the delay, in milliseconds, until the search is executed by the global search in the header.  If set to 0, it will require the user to press enter in the search bar.. [optional]  # noqa: E501
+            search_delay_ms (int): This controls the delay, in milliseconds, until the search is executed by the global search in the header.  If set to 0, it will require the user to press enter in the search bar.. [optional]  # noqa: E501
             secret_password_history_restriction_all (bool): No duplicate passwords on a Secret. [optional]  # noqa: E501
-            secret_password_history_restriction_count (bool, date, datetime, dict, float, int, list, str, none_type): How many passwords must be unique on a Secret. [optional]  # noqa: E501
-            secret_view_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How long entering comments to view a Secret last before being required again. [optional]  # noqa: E501
-            server_time_zone_id (bool, date, datetime, dict, float, int, list, str, none_type): The timezone that the server shows by default and when job scheduling runs. [optional]  # noqa: E501
-            ui_inactivity_sleep_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How long until the UI will go inactive and stop polling for updates. [optional]  # noqa: E501
+            secret_password_history_restriction_count (int): How many passwords must be unique on a Secret. [optional]  # noqa: E501
+            secret_view_interval_minutes (int): How long entering comments to view a Secret last before being required again. [optional]  # noqa: E501
+            server_time_zone_id (str): The timezone that the server shows by default and when job scheduling runs. [optional]  # noqa: E501
+            ui_inactivity_sleep_minutes (int): How long until the UI will go inactive and stop polling for updates. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

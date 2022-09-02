@@ -62,20 +62,15 @@ class SecretFieldType(ModelSimple):
             'LIST': "List",
         },
     }
-
     validations = {
     }
-
     additional_properties_type = None
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
@@ -83,10 +78,10 @@ class SecretFieldType(ModelSimple):
         return {
             'value': (str,),
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {}

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | [**UpdateFieldValueOfBoolean**](UpdateFieldValueOfBoolean.md) |  | [optional] 
 **description** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
-**jumpbox_route_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | JumpboxRouteId | [optional] 
+**jumpbox_route_id** | **str** | JumpboxRouteId | [optional] 
 **name** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

@@ -56,11 +56,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = folder_permissions_api.FolderPermissionsApi(api_client)
     folder_permission_create_args = FolderPermissionCreateArgs(
         break_inheritance=True,
-        folder_access_role_name=None,
-        folder_id=None,
-        group_id=None,
-        secret_access_role_name=None,
-        user_id=None,
+        folder_access_role_name="folder_access_role_name_example",
+        folder_id=1,
+        group_id=1,
+        secret_access_role_name="secret_access_role_name_example",
+        user_id=1,
     ) # FolderPermissionCreateArgs | Folder permission creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -146,7 +146,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folder_permissions_api.FolderPermissionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder permission ID
+    id = 1 # int | Folder permission ID
     break_inheritance = True # bool | Include to remove permission inheritance (optional)
 
     # example passing only required values which don't have defaults set
@@ -172,7 +172,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder permission ID |
+ **id** | **int**| Folder permission ID |
  **break_inheritance** | **bool**| Include to remove permission inheritance | [optional]
 
 ### Return type
@@ -241,7 +241,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folder_permissions_api.FolderPermissionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder permission ID
+    id = 1 # int | Folder permission ID
     include_inactive = True # bool | Whether to include inactive folder permissions in the results (optional)
 
     # example passing only required values which don't have defaults set
@@ -267,7 +267,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder permission ID |
+ **id** | **int**| Folder permission ID |
  **include_inactive** | **bool**| Whether to include inactive folder permissions in the results | [optional]
 
 ### Return type
@@ -339,14 +339,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     filter_exclude_editors = True # bool | If populated with true, will filter editors from results. Will default to false (optional)
     filter_exclude_owners = True # bool | If populated with true, will filter owners from results. Will default to false (optional)
     filter_exclude_viewers = True # bool | If populated with true, will filter viewers from results. Will default to false (optional)
-    filter_folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Limit results to a certain folder (optional)
-    filter_group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Limit results to a certain group (optional)
-    filter_user_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Limit results to a certain user (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_folder_id = 1 # int | Limit results to a certain folder (optional)
+    filter_group_id = 1 # int | Limit results to a certain group (optional)
+    filter_user_id = 1 # int | Limit results to a certain user (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -366,14 +366,14 @@ Name | Type | Description  | Notes
  **filter_exclude_editors** | **bool**| If populated with true, will filter editors from results. Will default to false | [optional]
  **filter_exclude_owners** | **bool**| If populated with true, will filter owners from results. Will default to false | [optional]
  **filter_exclude_viewers** | **bool**| If populated with true, will filter viewers from results. Will default to false | [optional]
- **filter_folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Limit results to a certain folder | [optional]
- **filter_group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Limit results to a certain group | [optional]
- **filter_user_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Limit results to a certain user | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_folder_id** | **int**| Limit results to a certain folder | [optional]
+ **filter_group_id** | **int**| Limit results to a certain group | [optional]
+ **filter_user_id** | **int**| Limit results to a certain user | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -441,7 +441,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folder_permissions_api.FolderPermissionsApi(api_client)
-    folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder for which to generate a permission stub
+    folder_id = 1 # int | Folder for which to generate a permission stub
 
     # example passing only required values which don't have defaults set
     try:
@@ -457,7 +457,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder for which to generate a permission stub |
+ **folder_id** | **int**| Folder for which to generate a permission stub |
 
 ### Return type
 
@@ -526,13 +526,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folder_permissions_api.FolderPermissionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder permission ID
+    id = 1 # int | Folder permission ID
     folder_permission_update_args = FolderPermissionUpdateArgs(
         break_inheritance=True,
-        folder_access_role_name=None,
-        folder_id=None,
-        id=None,
-        secret_access_role_name=None,
+        folder_access_role_name="folder_access_role_name_example",
+        folder_id=1,
+        id=1,
+        secret_access_role_name="secret_access_role_name_example",
     ) # FolderPermissionUpdateArgs | Folder permission update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -558,7 +558,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder permission ID |
+ **id** | **int**| Folder permission ID |
  **folder_permission_update_args** | [**FolderPermissionUpdateArgs**](FolderPermissionUpdateArgs.md)| Folder permission update options | [optional]
 
 ### Return type

@@ -6,13 +6,13 @@ WorkflowTemplateDetailModel
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **bool** | Active | [optional] 
-**configuration_json** | **bool, date, datetime, dict, float, int, list, str, none_type** | ConfigurationJson | [optional] 
-**description** | **bool, date, datetime, dict, float, int, list, str, none_type** | Description | [optional] 
-**expiration_minutes** | **bool, date, datetime, dict, float, int, list, str, none_type** | ExpirationMinutes | [optional] 
-**name** | **bool, date, datetime, dict, float, int, list, str, none_type** | Name | [optional] 
+**configuration_json** | **str** | ConfigurationJson | [optional] 
+**description** | **str** | Description | [optional] 
+**expiration_minutes** | **int** | ExpirationMinutes | [optional] 
+**name** | **str** | Name | [optional] 
 **reusable** | **bool** | Reusable | [optional] 
-**type_name** | **bool, date, datetime, dict, float, int, list, str, none_type** | TypeName | [optional] 
-**workflow_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | WorkflowTemplateId | [optional] 
+**type_name** | **str** | TypeName | [optional] 
+**workflow_template_id** | **int** | WorkflowTemplateId | [optional] 
 **workflow_type** | [**WorkflowType**](WorkflowType.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

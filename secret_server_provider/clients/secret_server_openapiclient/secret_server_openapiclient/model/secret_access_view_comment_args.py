@@ -57,10 +57,8 @@ class SecretAccessViewCommentArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class SecretAccessViewCommentArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_system_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'comment': (str, none_type,),  # noqa: E501
+            'ticket_number': (str, none_type,),  # noqa: E501
+            'ticket_system_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -139,9 +134,9 @@ class SecretAccessViewCommentArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): Comment. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number. [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Id. [optional]  # noqa: E501
+            comment (str): Comment. [optional]  # noqa: E501
+            ticket_number (str): Ticket Number. [optional]  # noqa: E501
+            ticket_system_id (int): Ticket System Id. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,9 +222,9 @@ class SecretAccessViewCommentArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): Comment. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number. [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System Id. [optional]  # noqa: E501
+            comment (str): Comment. [optional]  # noqa: E501
+            ticket_number (str): Ticket Number. [optional]  # noqa: E501
+            ticket_system_id (int): Ticket System Id. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

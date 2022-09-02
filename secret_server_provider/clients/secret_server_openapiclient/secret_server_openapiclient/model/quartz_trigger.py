@@ -57,10 +57,8 @@ class QuartzTrigger(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class QuartzTrigger(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'job_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'next_fire_ticks': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'next_fire_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'previous_fire_ticks': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'previous_fire_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'trigger_state': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'job_name': (str, none_type,),  # noqa: E501
+            'next_fire_ticks': (int, none_type,),  # noqa: E501
+            'next_fire_time': (datetime, none_type,),  # noqa: E501
+            'previous_fire_ticks': (int, none_type,),  # noqa: E501
+            'previous_fire_time': (datetime, none_type,),  # noqa: E501
+            'trigger_state': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,12 +140,12 @@ class QuartzTrigger(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            job_name (bool, date, datetime, dict, float, int, list, str, none_type): JobName. [optional]  # noqa: E501
-            next_fire_ticks (bool, date, datetime, dict, float, int, list, str, none_type): NextFireTicks. [optional]  # noqa: E501
-            next_fire_time (bool, date, datetime, dict, float, int, list, str, none_type): NextFireTime. [optional]  # noqa: E501
-            previous_fire_ticks (bool, date, datetime, dict, float, int, list, str, none_type): PreviousFireTicks. [optional]  # noqa: E501
-            previous_fire_time (bool, date, datetime, dict, float, int, list, str, none_type): PreviousFireTime. [optional]  # noqa: E501
-            trigger_state (bool, date, datetime, dict, float, int, list, str, none_type): TriggerState. [optional]  # noqa: E501
+            job_name (str): JobName. [optional]  # noqa: E501
+            next_fire_ticks (int): NextFireTicks. [optional]  # noqa: E501
+            next_fire_time (datetime): NextFireTime. [optional]  # noqa: E501
+            previous_fire_ticks (int): PreviousFireTicks. [optional]  # noqa: E501
+            previous_fire_time (datetime): PreviousFireTime. [optional]  # noqa: E501
+            trigger_state (str): TriggerState. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,12 +231,12 @@ class QuartzTrigger(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            job_name (bool, date, datetime, dict, float, int, list, str, none_type): JobName. [optional]  # noqa: E501
-            next_fire_ticks (bool, date, datetime, dict, float, int, list, str, none_type): NextFireTicks. [optional]  # noqa: E501
-            next_fire_time (bool, date, datetime, dict, float, int, list, str, none_type): NextFireTime. [optional]  # noqa: E501
-            previous_fire_ticks (bool, date, datetime, dict, float, int, list, str, none_type): PreviousFireTicks. [optional]  # noqa: E501
-            previous_fire_time (bool, date, datetime, dict, float, int, list, str, none_type): PreviousFireTime. [optional]  # noqa: E501
-            trigger_state (bool, date, datetime, dict, float, int, list, str, none_type): TriggerState. [optional]  # noqa: E501
+            job_name (str): JobName. [optional]  # noqa: E501
+            next_fire_ticks (int): NextFireTicks. [optional]  # noqa: E501
+            next_fire_time (datetime): NextFireTime. [optional]  # noqa: E501
+            previous_fire_ticks (int): PreviousFireTicks. [optional]  # noqa: E501
+            previous_fire_time (datetime): PreviousFireTime. [optional]  # noqa: E501
+            trigger_state (str): TriggerState. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

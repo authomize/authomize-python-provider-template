@@ -71,10 +71,8 @@ class SiteUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,38 +81,35 @@ class SiteUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_cred_ssp_for_win_rm': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'enable_rdp_proxy': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_ssh_proxy': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'heartbeat_interval': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'powershell_secret_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'processing_location': (UpdateFieldValueOfProcessingLocationType,),  # noqa: E501
-            'rdp_proxy_port': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'site_connector_id': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'site_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'ssh_proxy_port': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'win_rm_end_point_url': (UpdateFieldValueOfString,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_cred_ssp_for_win_rm': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'enable_rdp_proxy': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_ssh_proxy': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'heartbeat_interval': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'powershell_secret_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'processing_location': (UpdateFieldValueOfProcessingLocationType, none_type,),  # noqa: E501
+            'rdp_proxy_port': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'site_connector_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'site_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'ssh_proxy_port': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'win_rm_end_point_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

@@ -61,10 +61,8 @@ class SdkClientAuditFilter(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,29 +71,26 @@ class SdkClientAuditFilter(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'operator': (FilterOperator,),  # noqa: E501
-            'search_text': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'operator': (FilterOperator, none_type,),  # noqa: E501
+            'search_text': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -146,8 +141,8 @@ class SdkClientAuditFilter(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             operator (FilterOperator): [optional]  # noqa: E501
-            search_text (bool, date, datetime, dict, float, int, list, str, none_type): SearchText. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]  # noqa: E501
+            search_text (str): SearchText. [optional]  # noqa: E501
+            user_id (int): UserId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,8 +229,8 @@ class SdkClientAuditFilter(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             operator (FilterOperator): [optional]  # noqa: E501
-            search_text (bool, date, datetime, dict, float, int, list, str, none_type): SearchText. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]  # noqa: E501
+            search_text (str): SearchText. [optional]  # noqa: E501
+            user_id (int): UserId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

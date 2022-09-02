@@ -61,10 +61,8 @@ class SecretSearchByUrlSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,39 +71,36 @@ class SecretSearchByUrlSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'has_owner_or_edit_access': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_button_bound': (bool,),  # noqa: E501
-            'is_favorite_secret': (bool,),  # noqa: E501
-            'is_system_folder': (bool,),  # noqa: E501
-            'match_order_type': (MatchType,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'redirect_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'require_comment': (bool,),  # noqa: E501
-            'result_priority': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'should_redirect': (bool,),  # noqa: E501
+            'has_owner_or_edit_access': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_button_bound': (bool, none_type,),  # noqa: E501
+            'is_favorite_secret': (bool, none_type,),  # noqa: E501
+            'is_system_folder': (bool, none_type,),  # noqa: E501
+            'match_order_type': (MatchType, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'redirect_url': (str, none_type,),  # noqa: E501
+            'require_comment': (bool, none_type,),  # noqa: E501
+            'result_priority': (int, none_type,),  # noqa: E501
+            'secret_type_id': (int, none_type,),  # noqa: E501
+            'secret_url': (str, none_type,),  # noqa: E501
+            'should_redirect': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -166,17 +161,17 @@ class SecretSearchByUrlSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             has_owner_or_edit_access (bool): HasOwnerOrEditAccess. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
             is_button_bound (bool): IsButtonBound. [optional]  # noqa: E501
             is_favorite_secret (bool): IsFavoriteSecret. [optional]  # noqa: E501
             is_system_folder (bool): IsSystemFolder. [optional]  # noqa: E501
             match_order_type (MatchType): [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            redirect_url (bool, date, datetime, dict, float, int, list, str, none_type): RedirectUrl. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            redirect_url (str): RedirectUrl. [optional]  # noqa: E501
             require_comment (bool): RequireComment. [optional]  # noqa: E501
-            result_priority (bool, date, datetime, dict, float, int, list, str, none_type): ResultPriority. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretTypeId. [optional]  # noqa: E501
-            secret_url (bool, date, datetime, dict, float, int, list, str, none_type): SecretUrl. [optional]  # noqa: E501
+            result_priority (int): ResultPriority. [optional]  # noqa: E501
+            secret_type_id (int): SecretTypeId. [optional]  # noqa: E501
+            secret_url (str): SecretUrl. [optional]  # noqa: E501
             should_redirect (bool): ShouldRedirect. [optional]  # noqa: E501
         """
 
@@ -264,17 +259,17 @@ class SecretSearchByUrlSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             has_owner_or_edit_access (bool): HasOwnerOrEditAccess. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
             is_button_bound (bool): IsButtonBound. [optional]  # noqa: E501
             is_favorite_secret (bool): IsFavoriteSecret. [optional]  # noqa: E501
             is_system_folder (bool): IsSystemFolder. [optional]  # noqa: E501
             match_order_type (MatchType): [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            redirect_url (bool, date, datetime, dict, float, int, list, str, none_type): RedirectUrl. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            redirect_url (str): RedirectUrl. [optional]  # noqa: E501
             require_comment (bool): RequireComment. [optional]  # noqa: E501
-            result_priority (bool, date, datetime, dict, float, int, list, str, none_type): ResultPriority. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretTypeId. [optional]  # noqa: E501
-            secret_url (bool, date, datetime, dict, float, int, list, str, none_type): SecretUrl. [optional]  # noqa: E501
+            result_priority (int): ResultPriority. [optional]  # noqa: E501
+            secret_type_id (int): SecretTypeId. [optional]  # noqa: E501
+            secret_url (str): SecretUrl. [optional]  # noqa: E501
             should_redirect (bool): ShouldRedirect. [optional]  # noqa: E501
         """
 

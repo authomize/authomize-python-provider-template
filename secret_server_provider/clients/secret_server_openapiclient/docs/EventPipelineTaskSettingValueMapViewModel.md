@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **override_default** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 
 **setting** | [**ViewFieldValueOfSettingForDisplay**](ViewFieldValueOfSettingForDisplay.md) |  | [optional] 
 **setting_display** | [**ViewFieldValueReadOnlyOfString**](ViewFieldValueReadOnlyOfString.md) |  | [optional] 
-**setting_display_value** | **bool, date, datetime, dict, float, int, list, str, none_type** | SettingDisplayValue | [optional] 
+**setting_display_value** | **str** | SettingDisplayValue | [optional] 
 **setting_id** | [**ViewFieldValueOfInt32**](ViewFieldValueOfInt32.md) |  | [optional] 
 **setting_value** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
 **using_default** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 

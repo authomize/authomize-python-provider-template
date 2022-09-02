@@ -57,10 +57,8 @@ class SecretDependencyGroupModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,34 +66,31 @@ class SecretDependencyGroupModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_dependency_group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status_failed_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status_not_run_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status_success_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'total_dependencies': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'secret_dependency_group_id': (int, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'site_name': (str, none_type,),  # noqa: E501
+            'status_failed_count': (int, none_type,),  # noqa: E501
+            'status_not_run_count': (int, none_type,),  # noqa: E501
+            'status_success_count': (int, none_type,),  # noqa: E501
+            'total_dependencies': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,15 +146,15 @@ class SecretDependencyGroupModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the Secret Dependency Group. [optional]  # noqa: E501
-            secret_dependency_group_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Dependency Group. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret assigned to the Secret Dependency Group. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Site that all dependencies in this group use. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Site that all dependencies in this group use. [optional]  # noqa: E501
-            status_failed_count (bool, date, datetime, dict, float, int, list, str, none_type): Total Enabled Secret dependencies in this group with a Failed status. [optional]  # noqa: E501
-            status_not_run_count (bool, date, datetime, dict, float, int, list, str, none_type): Total Enabled Secret dependencies in this group that have not yet run. [optional]  # noqa: E501
-            status_success_count (bool, date, datetime, dict, float, int, list, str, none_type): Total Enabled Secret dependencies in this group with a Success status. [optional]  # noqa: E501
-            total_dependencies (bool, date, datetime, dict, float, int, list, str, none_type): Total Enabled Secret dependencies in this group. [optional]  # noqa: E501
+            name (str): The name of the Secret Dependency Group. [optional]  # noqa: E501
+            secret_dependency_group_id (int): The Id of the Secret Dependency Group. [optional]  # noqa: E501
+            secret_id (int): The Id of the Secret assigned to the Secret Dependency Group. [optional]  # noqa: E501
+            site_id (int): The Id of the Site that all dependencies in this group use. [optional]  # noqa: E501
+            site_name (str): The Name of the Site that all dependencies in this group use. [optional]  # noqa: E501
+            status_failed_count (int): Total Enabled Secret dependencies in this group with a Failed status. [optional]  # noqa: E501
+            status_not_run_count (int): Total Enabled Secret dependencies in this group that have not yet run. [optional]  # noqa: E501
+            status_success_count (int): Total Enabled Secret dependencies in this group with a Success status. [optional]  # noqa: E501
+            total_dependencies (int): Total Enabled Secret dependencies in this group. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,15 +240,15 @@ class SecretDependencyGroupModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the Secret Dependency Group. [optional]  # noqa: E501
-            secret_dependency_group_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret Dependency Group. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Secret assigned to the Secret Dependency Group. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Site that all dependencies in this group use. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the Site that all dependencies in this group use. [optional]  # noqa: E501
-            status_failed_count (bool, date, datetime, dict, float, int, list, str, none_type): Total Enabled Secret dependencies in this group with a Failed status. [optional]  # noqa: E501
-            status_not_run_count (bool, date, datetime, dict, float, int, list, str, none_type): Total Enabled Secret dependencies in this group that have not yet run. [optional]  # noqa: E501
-            status_success_count (bool, date, datetime, dict, float, int, list, str, none_type): Total Enabled Secret dependencies in this group with a Success status. [optional]  # noqa: E501
-            total_dependencies (bool, date, datetime, dict, float, int, list, str, none_type): Total Enabled Secret dependencies in this group. [optional]  # noqa: E501
+            name (str): The name of the Secret Dependency Group. [optional]  # noqa: E501
+            secret_dependency_group_id (int): The Id of the Secret Dependency Group. [optional]  # noqa: E501
+            secret_id (int): The Id of the Secret assigned to the Secret Dependency Group. [optional]  # noqa: E501
+            site_id (int): The Id of the Site that all dependencies in this group use. [optional]  # noqa: E501
+            site_name (str): The Name of the Site that all dependencies in this group use. [optional]  # noqa: E501
+            status_failed_count (int): Total Enabled Secret dependencies in this group with a Failed status. [optional]  # noqa: E501
+            status_not_run_count (int): Total Enabled Secret dependencies in this group that have not yet run. [optional]  # noqa: E501
+            status_success_count (int): Total Enabled Secret dependencies in this group with a Success status. [optional]  # noqa: E501
+            total_dependencies (int): Total Enabled Secret dependencies in this group. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
