@@ -1,5 +1,3 @@
-from contextlib import nullcontext
-
 from authomize.rest_api_client.generated.schemas import (
     NewPermissionRequestSchema,
     NewPrivilegeRequestSchema,
@@ -24,11 +22,11 @@ class UserOrGroupAccessRoleToFolderTransformer(BaseTransformer):
     def transform_model(self, raw_item: FolderPermissionSummary) -> RequestsBundleSchema:
         bundle = self.create_bundle()
         privilege_id = normalize_id(raw_item.folder_access_role_id)
-        id = raw_item.group_id if raw_item.user_id == None else raw_item.user_id
+        id = raw_item.group_id if raw_item.user_id is None else raw_item.user_id
 
         permission = NewPermissionRequestSchema(
             sourceUniqueId=normalize_id(id),
-            sourceType=PermissionSourceType.User if raw_item.user_id != None else PermissionSourceType.Grouping,
+            sourceType=self._get_permission_type(raw_item.user_id),
             privilegeId=privilege_id,
             assetId=normalize_id(raw_item.folder_id),
             isRole=False,
@@ -45,6 +43,12 @@ class UserOrGroupAccessRoleToFolderTransformer(BaseTransformer):
             self.shared_memory.existing_priveleges_set.add(privilege_id)
         bundle.new_permissions.append(permission)
         return bundle
+
+    def _get_permission_type(self, user_id):
+        if user_id is not None:
+            return PermissionSourceType.User
+        else:
+            return PermissionSourceType.Grouping
 
     def get_privilege_type(self, access_role_name: str) -> PrivilegeType:
         if access_role_name == "Owner":

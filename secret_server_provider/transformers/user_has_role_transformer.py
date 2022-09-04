@@ -14,12 +14,12 @@ class UserHasRoleTransformer(BaseTransformer):
     Transform a list of (User, Role) tuples.
     """
 
-    def validate_item_schema(self, raw_item: tuple[UserModel,RoleSummary]) -> bool:
+    def validate_item_schema(self, raw_item: tuple[UserModel, RoleSummary]) -> bool:
         return True
 
-    def transform_model(self, raw_item: tuple[UserModel,RoleSummary]) -> RequestsBundleSchema:
+    def transform_model(self, raw_item: tuple[UserModel, RoleSummary]) -> RequestsBundleSchema:
         bundle = self.create_bundle()
-        (user,role_info) = raw_item
+        (user, role_info) = raw_item
         user_id = normalize_id(user.id)
         role_id = normalize_id(role_info.role_id)
         association = NewAccountsAssociationRequestSchema(

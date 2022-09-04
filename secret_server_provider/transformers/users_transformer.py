@@ -1,5 +1,3 @@
-from cgitb import enable
-
 from authomize.rest_api_client.generated.schemas import (
     NewUserRequestSchema,
     RequestsBundleSchema,
@@ -25,14 +23,14 @@ class UsersTransformer(BaseTransformer):
         bundle = self.create_bundle()
         user = raw_item
         user_id = normalize_id(user.id)
-        
+
         new_user = NewUserRequestSchema(
             uniqueId=user_id,
             name=user.user_name,
             lastLoginAt=user.last_login,
             display_name=user.display_name,
-            status = UserStatus.Enabled if user.enabled == True else UserStatus.Disabled,
-            hasMFA=True if user.two_factor_method == True else False,
+            status=UserStatus.Enabled if user.enabled is True else UserStatus.Disabled,
+            hasMFA=True if user.two_factor_method is True else False,
             **(dict(email=user.email_address) if user.email_address else dict()),
         )
         bundle.new_users.append(new_user)
