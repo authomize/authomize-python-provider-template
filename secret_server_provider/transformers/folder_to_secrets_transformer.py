@@ -1,5 +1,3 @@
-from asyncio.log import logger
-
 from authomize.rest_api_client.generated.schemas import (
     NewAssetInheritanceRequestSchema,
     RequestsBundleSchema,
@@ -20,12 +18,12 @@ class FoldersToSecretsTransformer(BaseTransformer):
 
     def transform_model(self, raw_item: SecretModelV2) -> RequestsBundleSchema:
         bundle = self.create_bundle()
-        
+
         inheritance = NewAssetInheritanceRequestSchema(
             sourceId=normalize_id(raw_item.folder_id),
-            targetId=normalize_id(raw_item.id)
+            targetId=normalize_id(raw_item.id),
         )
-        
-        if raw_item.inherits_permissions == True:
+
+        if raw_item.inherits_permissions is True:
             bundle.new_assets_inheritance.append(inheritance)
         return bundle

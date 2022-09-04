@@ -6,7 +6,6 @@ from authomize.rest_api_client.generated.schemas import (
 )
 
 from base_provider.transformers.base_transformer import BaseTransformer
-from secret_server_provider.normalize_id import normalize_id
 
 
 class SecretsLastAccessKeyTransformer(BaseTransformer):
@@ -26,13 +25,13 @@ class SecretsLastAccessKeyTransformer(BaseTransformer):
         asset = NewAssetRequestSchema(
             uniqueId=access_key_records['secretItemHistoryId'],
             name=access_key_records['itemValueNew'],
-            #TODO need new type 'access_key"
-            type = AssetType.Other
+            # TODO need new type 'access_key"
+            type=AssetType.Other,
         )
         bundle.new_assets.append(asset)
         inheritance = NewAssetInheritanceRequestSchema(
             sourceId=normalized_secret_id,
-            targetId=access_key_records['secretItemHistoryId']
+            targetId=access_key_records['secretItemHistoryId'],
         )
         bundle.new_assets_inheritance.append(inheritance)
         return bundle

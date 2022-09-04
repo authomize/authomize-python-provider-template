@@ -1,10 +1,4 @@
-from types import NoneType
-
-from authomize.rest_api_client.generated.schemas import (
-    NewAssetRequestSchema,
-    NewUserRequestSchema,
-    UserStatus,
-)
+from authomize.rest_api_client.generated.schemas import NewUserRequestSchema, UserStatus
 from hamcrest import assert_that, equal_to, is_
 from secret_server_openapiclient.model.multifactor_authentication_provider_types import (
     MultifactorAuthenticationProviderTypes,
@@ -25,8 +19,9 @@ MOCK_RAW_ITEM = UserSummary(
     display_name="AuthomizeSE_App",
     enabled=True,
     two_factor_method=MultifactorAuthenticationProviderTypes('None'),
-    email_address = "AuthomizeSE_App1@something.com",
+    email_address="AuthomizeSE_App1@something.com",
 )
+
 
 def mock_shared_memory() -> SecretServerProviderSharedMemory:
     return SecretServerProviderSharedMemory()
@@ -60,10 +55,10 @@ def test_transform_model():
                 uniqueId="15",
                 name="AuthomizeSE_App",
                 display_name="AuthomizeSE App",
-                status = UserStatus.Enabled,
-                hasMFA = False,
-                email = "AuthomizeSE_App1@something.com",
-                lastLoginAt = "0001-01-01T00:00:00",
+                status=UserStatus.Enabled,
+                hasMFA=False,
+                email="AuthomizeSE_App1@something.com",
+                lastLoginAt="0001-01-01T00:00:00",
             ),
         ],
     )

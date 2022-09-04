@@ -24,4 +24,3 @@ class BaseInternalAndExternalExtractor(BaseExtractor):
     ) -> None:
         super().__init__(data_provider_client, shared_memory, shared_configuration)
         self.http_client = SimpleHttpClient(data_provider_client.client_configuration)
-

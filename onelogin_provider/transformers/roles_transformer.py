@@ -26,7 +26,6 @@ class RolesTransformer(BaseTransformer):
     See https://developers.onelogin.com/api-docs/1/roles/get-roles Get Roles documentation
         https://developers.onelogin.com/api-docs/2/roles/list-roles
     """
-
     def validate_item_schema(self, raw_item: Role) -> bool:
         return True
 

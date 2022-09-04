@@ -24,8 +24,6 @@ class RolesTransformer(BaseTransformer):
 
     See docs/RolesApi.md#roles_service_get_all
     """
-
-
     def validate_item_schema(self, raw_item: RoleModel) -> bool:
         return True
 

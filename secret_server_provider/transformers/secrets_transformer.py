@@ -22,9 +22,9 @@ class SecretsTransformer(BaseTransformer):
             uniqueId=normalize_id(raw_item.id),
             name=raw_item.name,
             createdAt=raw_item.create_date,
-            #storing the template name as description
+            # storing the template name as description
             description=raw_item.secret_template_name,
-            
+
         )
         bundle.new_assets.append(asset)
         return bundle
