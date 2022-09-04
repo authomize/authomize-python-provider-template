@@ -1,5 +1,4 @@
 """Base extractor with standard configuration"""
-from typing import Iterable
 
 import structlog
 
@@ -14,15 +13,15 @@ logger = structlog.get_logger()
 
 class BaseInternalAndExternalExtractor(BaseExtractor):
     """
-    Wrapper for a simple extractor with http_client 
+    Wrapper for a simple extractor with http_client
     """
 
     def __init__(
         self,
         data_provider_client: BaseClient,
         shared_memory: BaseSharedMemory,
-        shared_configuration: BaseSharedConfiguration
+        shared_configuration: BaseSharedConfiguration,
     ) -> None:
-       super().__init__(data_provider_client, shared_memory, shared_configuration)
-       self.http_client = SimpleHttpClient(data_provider_client.client_configuration)
+        super().__init__(data_provider_client, shared_memory, shared_configuration)
+        self.http_client = SimpleHttpClient(data_provider_client.client_configuration)
 
