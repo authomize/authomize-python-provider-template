@@ -27,6 +27,7 @@ from secret_server_openapiclient.model.bad_request_response import BadRequestRes
 from secret_server_openapiclient.model.current_user_model import CurrentUserModel
 from secret_server_openapiclient.model.deleted_model import DeletedModel
 from secret_server_openapiclient.model.double_lock_set_user_password_args import DoubleLockSetUserPasswordArgs
+from secret_server_openapiclient.model.expire_user_secret_activity_data_args import ExpireUserSecretActivityDataArgs
 from secret_server_openapiclient.model.group_assignments import GroupAssignments
 from secret_server_openapiclient.model.group_change_status_model import GroupChangeStatusModel
 from secret_server_openapiclient.model.internal_server_error_response import InternalServerErrorResponse
@@ -41,6 +42,7 @@ from secret_server_openapiclient.model.paging_of_user_lookup import PagingOfUser
 from secret_server_openapiclient.model.paging_of_user_owner_summary import PagingOfUserOwnerSummary
 from secret_server_openapiclient.model.paging_of_user_public_ssh_key_summary import PagingOfUserPublicSshKeySummary
 from secret_server_openapiclient.model.paging_of_user_role_summary import PagingOfUserRoleSummary
+from secret_server_openapiclient.model.paging_of_user_secret_activity_summary import PagingOfUserSecretActivitySummary
 from secret_server_openapiclient.model.paging_of_user_summary import PagingOfUserSummary
 from secret_server_openapiclient.model.paging_of_user_team_summary import PagingOfUserTeamSummary
 from secret_server_openapiclient.model.password_reset_args import PasswordResetArgs
@@ -64,6 +66,7 @@ from secret_server_openapiclient.model.user_owner_patch_result import UserOwnerP
 from secret_server_openapiclient.model.user_owner_patch_user_model import UserOwnerPatchUserModel
 from secret_server_openapiclient.model.user_password_verify_args import UserPasswordVerifyArgs
 from secret_server_openapiclient.model.user_public_ssh_key_create_args import UserPublicSshKeyCreateArgs
+from secret_server_openapiclient.model.user_secret_activity_expire_result import UserSecretActivityExpireResult
 from secret_server_openapiclient.model.user_update_args import UserUpdateArgs
 
 
@@ -601,6 +604,63 @@ class UsersApi(object):
                 'location_map': {
                     'id': 'path',
                     'role_removals': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client
+        )
+        self.users_service_expire_user_secret_activity_endpoint = _Endpoint(
+            settings={
+                'response_type': (UserSecretActivityExpireResult,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/users/{userId}/secret-activity/expire',
+                'operation_id': 'users_service_expire_user_secret_activity',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'user_id',
+                    'expire_user_secret_activity_data_args',
+                ],
+                'required': [
+                    'user_id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'user_id':
+                        (int,),
+                    'expire_user_secret_activity_data_args':
+                        (ExpireUserSecretActivityDataArgs,),
+                },
+                'attribute_map': {
+                    'user_id': 'userId',
+                },
+                'location_map': {
+                    'user_id': 'path',
+                    'expire_user_secret_activity_data_args': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1435,6 +1495,112 @@ class UsersApi(object):
                 },
                 'location_map': {
                     'user_id': 'path',
+                    'skip': 'query',
+                    'sort_by_0_direction': 'query',
+                    'sort_by_0_name': 'query',
+                    'sort_by_0_priority': 'query',
+                    'take': 'query',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.users_service_get_user_secret_activity_endpoint = _Endpoint(
+            settings={
+                'response_type': (PagingOfUserSecretActivitySummary,),
+                'auth': [
+                    'BearerToken'
+                ],
+                'endpoint_path': '/v1/users/{userId}/secret-activity',
+                'operation_id': 'users_service_get_user_secret_activity',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'user_id',
+                    'filter_end_date',
+                    'filter_exclude_inactive_secrets',
+                    'filter_exclude_rotated_secrets',
+                    'filter_folder_id',
+                    'filter_include_subfolders',
+                    'filter_start_date',
+                    'skip',
+                    'sort_by_0_direction',
+                    'sort_by_0_name',
+                    'sort_by_0_priority',
+                    'take',
+                ],
+                'required': [
+                    'user_id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'user_id':
+                        (int,),
+                    'filter_end_date':
+                        (datetime,),
+                    'filter_exclude_inactive_secrets':
+                        (bool,),
+                    'filter_exclude_rotated_secrets':
+                        (bool,),
+                    'filter_folder_id':
+                        (int,),
+                    'filter_include_subfolders':
+                        (bool,),
+                    'filter_start_date':
+                        (datetime,),
+                    'skip':
+                        (int,),
+                    'sort_by_0_direction':
+                        (str,),
+                    'sort_by_0_name':
+                        (str,),
+                    'sort_by_0_priority':
+                        (int,),
+                    'take':
+                        (int,),
+                },
+                'attribute_map': {
+                    'user_id': 'userId',
+                    'filter_end_date': 'filter.endDate',
+                    'filter_exclude_inactive_secrets': 'filter.excludeInactiveSecrets',
+                    'filter_exclude_rotated_secrets': 'filter.excludeRotatedSecrets',
+                    'filter_folder_id': 'filter.folderId',
+                    'filter_include_subfolders': 'filter.includeSubfolders',
+                    'filter_start_date': 'filter.startDate',
+                    'skip': 'skip',
+                    'sort_by_0_direction': 'sortBy[0].direction',
+                    'sort_by_0_name': 'sortBy[0].name',
+                    'sort_by_0_priority': 'sortBy[0].priority',
+                    'take': 'take',
+                },
+                'location_map': {
+                    'user_id': 'path',
+                    'filter_end_date': 'query',
+                    'filter_exclude_inactive_secrets': 'query',
+                    'filter_exclude_rotated_secrets': 'query',
+                    'filter_folder_id': 'query',
+                    'filter_include_subfolders': 'query',
+                    'filter_start_date': 'query',
                     'skip': 'query',
                     'sort_by_0_direction': 'query',
                     'sort_by_0_name': 'query',
@@ -3456,6 +3622,90 @@ class UsersApi(object):
             id
         return self.users_service_delete_user_roles_endpoint.call_with_http_info(**kwargs)
 
+    def users_service_expire_user_secret_activity(
+        self,
+        user_id,
+        **kwargs
+    ):
+        """User Secret Activity Expiration  # noqa: E501
+
+        Expire all secrets access by a specific user and filter  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.users_service_expire_user_secret_activity(user_id, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            user_id (int): userId
+
+        Keyword Args:
+            expire_user_secret_activity_data_args (ExpireUserSecretActivityDataArgs): args. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            UserSecretActivityExpireResult
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        kwargs['user_id'] = \
+            user_id
+        return self.users_service_expire_user_secret_activity_endpoint.call_with_http_info(**kwargs)
+
     def users_service_get(
         self,
         id,
@@ -3961,7 +4211,7 @@ class UsersApi(object):
     ):
         """User Audits  # noqa: E501
 
-        Get all of the audits for a user  # noqa: E501
+        Get all of the audits for events that have occured for a specific user such as create user, edit user, change password, login success, login failed  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -4477,6 +4727,100 @@ class UsersApi(object):
         kwargs['user_id'] = \
             user_id
         return self.users_service_get_user_roles_endpoint.call_with_http_info(**kwargs)
+
+    def users_service_get_user_secret_activity(
+        self,
+        user_id,
+        **kwargs
+    ):
+        """User Secret Activity  # noqa: E501
+
+        Get all Secret activity for a specific user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.users_service_get_user_secret_activity(user_id, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            user_id (int): userId
+
+        Keyword Args:
+            filter_end_date (datetime): Include secrets accessed before this date.  Can be null which will not filter by any end date and results in today basically.. [optional]
+            filter_exclude_inactive_secrets (bool): Exclude any inactive secrets. [optional]
+            filter_exclude_rotated_secrets (bool): Exclude any secrets that rotate. [optional]
+            filter_folder_id (int): Only include secrets in a specific folder.  Exclude or pass null to include all secrets. [optional]
+            filter_include_subfolders (bool): Only used if a FolderId is included and when true it will also search subfolders.  When false only secrets from the passed FolderId will be returned.. [optional]
+            filter_start_date (datetime): Include any Secrets access since this date. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            PagingOfUserSecretActivitySummary
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        kwargs['user_id'] = \
+            user_id
+        return self.users_service_get_user_secret_activity_endpoint.call_with_http_info(**kwargs)
 
     def users_service_get_user_teams(
         self,

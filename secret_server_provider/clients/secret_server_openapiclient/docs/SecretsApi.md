@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**secrets_service_change_password**](SecretsApi.md#secrets_service_change_password) | **POST** /v1/secrets/{id}/change-password | Change Secret Password
 [**secrets_service_check_in**](SecretsApi.md#secrets_service_check_in) | **POST** /v1/secrets/{id}/check-in | Check In Secret
 [**secrets_service_check_out**](SecretsApi.md#secrets_service_check_out) | **POST** /v1/secrets/{id}/check-out | Check Out Secret
-[**secrets_service_convert_template**](SecretsApi.md#secrets_service_convert_template) | **POST** /v1/secrets/convert-template | Convert template
+[**secrets_service_convert_template**](SecretsApi.md#secrets_service_convert_template) | **POST** /v1/secrets/convert-template | Convert Secret Template
 [**secrets_service_create_secret**](SecretsApi.md#secrets_service_create_secret) | **POST** /v1/secrets | Create Secret
 [**secrets_service_delete**](SecretsApi.md#secrets_service_delete) | **DELETE** /v1/secrets/{id} | Deactivate a Secret
 [**secrets_service_delete_list_field_list_definitions**](SecretsApi.md#secrets_service_delete_list_field_list_definitions) | **DELETE** /v1/secrets/{id}/fields/{slug}/listdetails | Delete Secret List Field List Data
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**secrets_service_extend_check_out**](SecretsApi.md#secrets_service_extend_check_out) | **POST** /v1/secrets/{id}/extend-check-out | Extend Check Out
 [**secrets_service_favorite**](SecretsApi.md#secrets_service_favorite) | **POST** /v1/secrets/{secretId}/favorite | Favorite a Secret
 [**secrets_service_get_active_secret_sessions**](SecretsApi.md#secrets_service_get_active_secret_sessions) | **GET** /v1/secrets/launcher-sessions | Get Secret Launcher Sessions By Id
-[**secrets_service_get_convert_info**](SecretsApi.md#secrets_service_get_convert_info) | **POST** /v1/secrets/get-convert-info | Convert template
+[**secrets_service_get_convert_info**](SecretsApi.md#secrets_service_get_convert_info) | **POST** /v1/secrets/get-convert-info | Get Convert Template Information
 [**secrets_service_get_favorites**](SecretsApi.md#secrets_service_get_favorites) | **GET** /v1/secrets/favorite | List a User&#39;s Favorite Secrets
 [**secrets_service_get_field**](SecretsApi.md#secrets_service_get_field) | **GET** /v1/secrets/{id}/fields/{slug} | Get Secret Field
 [**secrets_service_get_general**](SecretsApi.md#secrets_service_get_general) | **GET** /v1/secrets/secret-detail/{id}/general/{isEditMode?}/{loadReadOnlyFlags?} | Get Secret Detail General
@@ -389,9 +389,9 @@ Name | Type | Description  | Notes
 # **secrets_service_convert_template**
 > SecretDetailConvertTemplateModel secrets_service_convert_template()
 
-Convert template
+Convert Secret Template
 
-Convert template
+Convert the specificed Secrets to a different Secret Template
 
 ### Example
 
@@ -450,7 +450,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Convert template
+        # Convert Secret Template
         api_response = api_instance.secrets_service_convert_template(secret_detail_convert_template_args=secret_detail_convert_template_args)
         pprint(api_response)
     except secret_server_openapiclient.ApiException as e:
@@ -1333,9 +1333,9 @@ Name | Type | Description  | Notes
 # **secrets_service_get_convert_info**
 > ConvertTemplateDetailsModel secrets_service_get_convert_info()
 
-Convert template
+Get Convert Template Information
 
-Convert template
+Retrieve information about the requested conversion such as which fields exist on the target template.
 
 ### Example
 
@@ -1384,7 +1384,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Convert template
+        # Get Convert Template Information
         api_response = api_instance.secrets_service_get_convert_info(secret_detail_convert_template_info_args=secret_detail_convert_template_info_args)
         pprint(api_response)
     except secret_server_openapiclient.ApiException as e:
@@ -1416,7 +1416,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Convert template result |  -  |
+**200** | Convert template info result |  -  |
 **400** | Bad request |  -  |
 **403** | Authentication failed |  -  |
 **500** | Internal server error |  -  |

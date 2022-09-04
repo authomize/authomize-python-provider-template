@@ -4808,9 +4808,9 @@ class SecretsApi(object):
         self,
         **kwargs
     ):
-        """Convert template  # noqa: E501
+        """Convert Secret Template  # noqa: E501
 
-        Convert template  # noqa: E501
+        Convert the specificed Secrets to a different Secret Template  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -5567,9 +5567,9 @@ class SecretsApi(object):
         self,
         **kwargs
     ):
-        """Convert template  # noqa: E501
+        """Get Convert Template Information  # noqa: E501
 
-        Convert template  # noqa: E501
+        Retrieve information about the requested conversion such as which fields exist on the target template.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

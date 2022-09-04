@@ -38,8 +38,8 @@ class UserMemberOfGroupExtractor(BaseExtractor):
         cur_skip = 0
         has_next = True
         while (has_next):
-            api_response = api_instance.users_service_get_user_groups(id=normalize_id(user.id),
-                                                                      skip=normalize_id(cur_skip))
+            api_response = api_instance.users_service_get_user_groups(id=user.id,
+                                                                      skip=cur_skip)
             has_next = api_response.has_next
             cur_skip += int(api_response.next_skip)
             yield from api_response.records

@@ -815,7 +815,7 @@ Class | Method | HTTP request | Description
 *SecretsApi* | [**secrets_service_change_password**](docs/SecretsApi.md#secrets_service_change_password) | **POST** /v1/secrets/{id}/change-password | Change Secret Password
 *SecretsApi* | [**secrets_service_check_in**](docs/SecretsApi.md#secrets_service_check_in) | **POST** /v1/secrets/{id}/check-in | Check In Secret
 *SecretsApi* | [**secrets_service_check_out**](docs/SecretsApi.md#secrets_service_check_out) | **POST** /v1/secrets/{id}/check-out | Check Out Secret
-*SecretsApi* | [**secrets_service_convert_template**](docs/SecretsApi.md#secrets_service_convert_template) | **POST** /v1/secrets/convert-template | Convert template
+*SecretsApi* | [**secrets_service_convert_template**](docs/SecretsApi.md#secrets_service_convert_template) | **POST** /v1/secrets/convert-template | Convert Secret Template
 *SecretsApi* | [**secrets_service_create_secret**](docs/SecretsApi.md#secrets_service_create_secret) | **POST** /v1/secrets | Create Secret
 *SecretsApi* | [**secrets_service_delete**](docs/SecretsApi.md#secrets_service_delete) | **DELETE** /v1/secrets/{id} | Deactivate a Secret
 *SecretsApi* | [**secrets_service_delete_list_field_list_definitions**](docs/SecretsApi.md#secrets_service_delete_list_field_list_definitions) | **DELETE** /v1/secrets/{id}/fields/{slug}/listdetails | Delete Secret List Field List Data
@@ -824,7 +824,7 @@ Class | Method | HTTP request | Description
 *SecretsApi* | [**secrets_service_extend_check_out**](docs/SecretsApi.md#secrets_service_extend_check_out) | **POST** /v1/secrets/{id}/extend-check-out | Extend Check Out
 *SecretsApi* | [**secrets_service_favorite**](docs/SecretsApi.md#secrets_service_favorite) | **POST** /v1/secrets/{secretId}/favorite | Favorite a Secret
 *SecretsApi* | [**secrets_service_get_active_secret_sessions**](docs/SecretsApi.md#secrets_service_get_active_secret_sessions) | **GET** /v1/secrets/launcher-sessions | Get Secret Launcher Sessions By Id
-*SecretsApi* | [**secrets_service_get_convert_info**](docs/SecretsApi.md#secrets_service_get_convert_info) | **POST** /v1/secrets/get-convert-info | Convert template
+*SecretsApi* | [**secrets_service_get_convert_info**](docs/SecretsApi.md#secrets_service_get_convert_info) | **POST** /v1/secrets/get-convert-info | Get Convert Template Information
 *SecretsApi* | [**secrets_service_get_favorites**](docs/SecretsApi.md#secrets_service_get_favorites) | **GET** /v1/secrets/favorite | List a User&#39;s Favorite Secrets
 *SecretsApi* | [**secrets_service_get_field**](docs/SecretsApi.md#secrets_service_get_field) | **GET** /v1/secrets/{id}/fields/{slug} | Get Secret Field
 *SecretsApi* | [**secrets_service_get_general**](docs/SecretsApi.md#secrets_service_get_general) | **GET** /v1/secrets/secret-detail/{id}/general/{isEditMode?}/{loadReadOnlyFlags?} | Get Secret Detail General
@@ -925,6 +925,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**users_service_delete**](docs/UsersApi.md#users_service_delete) | **DELETE** /v1/users/{id} | Delete User
 *UsersApi* | [**users_service_delete_user_owner**](docs/UsersApi.md#users_service_delete_user_owner) | **DELETE** /v1/users/{id}/owners/{ownerId} | Remove User Owner
 *UsersApi* | [**users_service_delete_user_roles**](docs/UsersApi.md#users_service_delete_user_roles) | **DELETE** /v1/users/{id}/roles | Remove roles from existing user
+*UsersApi* | [**users_service_expire_user_secret_activity**](docs/UsersApi.md#users_service_expire_user_secret_activity) | **POST** /v1/users/{userId}/secret-activity/expire | User Secret Activity Expiration
 *UsersApi* | [**users_service_get**](docs/UsersApi.md#users_service_get) | **GET** /v1/users/{id} | Get User
 *UsersApi* | [**users_service_get_current_user**](docs/UsersApi.md#users_service_get_current_user) | **GET** /v1/users/current | Current User
 *UsersApi* | [**users_service_get_current_user_sessions**](docs/UsersApi.md#users_service_get_current_user_sessions) | **GET** /v1/users/sessions | User Sessions
@@ -937,6 +938,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**users_service_get_user_owner**](docs/UsersApi.md#users_service_get_user_owner) | **GET** /v1/users/{id}/owners/{ownerId} | Get User Owner
 *UsersApi* | [**users_service_get_user_public_ssh_keys**](docs/UsersApi.md#users_service_get_user_public_ssh_keys) | **GET** /v1/users/public-ssh-keys | Get User Public Ssh Keys
 *UsersApi* | [**users_service_get_user_roles**](docs/UsersApi.md#users_service_get_user_roles) | **GET** /v1/users/{userId}/roles-assigned | Get User Roles
+*UsersApi* | [**users_service_get_user_secret_activity**](docs/UsersApi.md#users_service_get_user_secret_activity) | **GET** /v1/users/{userId}/secret-activity | User Secret Activity
 *UsersApi* | [**users_service_get_user_teams**](docs/UsersApi.md#users_service_get_user_teams) | **GET** /v1/users/{userId}/teams | User Teams
 *UsersApi* | [**users_service_lock_out**](docs/UsersApi.md#users_service_lock_out) | **POST** /v1/users/{userId}/lock-out | Lock Out
 *UsersApi* | [**users_service_lookup**](docs/UsersApi.md#users_service_lookup) | **GET** /v1/users/lookup | Lookup Users
@@ -1439,6 +1441,8 @@ Class | Method | HTTP request | Description
  - [EventSubscriptionTypeActionModel](docs/EventSubscriptionTypeActionModel.md)
  - [EventSubscriptionUpdateArgs](docs/EventSubscriptionUpdateArgs.md)
  - [EventSubscriptionUpdateModel](docs/EventSubscriptionUpdateModel.md)
+ - [ExpireUserSecretActivityDataArgs](docs/ExpireUserSecretActivityDataArgs.md)
+ - [ExpireUserSecretActivityDataModel](docs/ExpireUserSecretActivityDataModel.md)
  - [ExportFileType](docs/ExportFileType.md)
  - [ExtensionAutoFillValueArgs](docs/ExtensionAutoFillValueArgs.md)
  - [ExternalGroupViewModel](docs/ExternalGroupViewModel.md)
@@ -1801,6 +1805,7 @@ Class | Method | HTTP request | Description
  - [PagingOfUserOwnerSummary](docs/PagingOfUserOwnerSummary.md)
  - [PagingOfUserPublicSshKeySummary](docs/PagingOfUserPublicSshKeySummary.md)
  - [PagingOfUserRoleSummary](docs/PagingOfUserRoleSummary.md)
+ - [PagingOfUserSecretActivitySummary](docs/PagingOfUserSecretActivitySummary.md)
  - [PagingOfUserSummary](docs/PagingOfUserSummary.md)
  - [PagingOfUserTeamSummary](docs/PagingOfUserTeamSummary.md)
  - [PagingOfWorkflowStepTemplateDetailModel](docs/PagingOfWorkflowStepTemplateDetailModel.md)
@@ -2472,6 +2477,9 @@ Class | Method | HTTP request | Description
  - [UserPublicSshKeySummary](docs/UserPublicSshKeySummary.md)
  - [UserRoleSummary](docs/UserRoleSummary.md)
  - [UserScriptType](docs/UserScriptType.md)
+ - [UserSecretActivityExpireResult](docs/UserSecretActivityExpireResult.md)
+ - [UserSecretActivityFilter](docs/UserSecretActivityFilter.md)
+ - [UserSecretActivitySummary](docs/UserSecretActivitySummary.md)
  - [UserSummary](docs/UserSummary.md)
  - [UserTeamSummary](docs/UserTeamSummary.md)
  - [UserUpdateArgs](docs/UserUpdateArgs.md)

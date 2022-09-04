@@ -38,12 +38,12 @@ class UserOrGroupAccessRoleToSecretExtractor(BaseExtractor):
         while (has_next):
             if type(user) == UserModel:
                 api_response = api_instance.secret_permissions_service_search_secret_permissions(
-                                            filter_user_id=normalize_id(user.id),
-                                            skip=normalize_id(cur_skip))
+                                            filter_user_id=user.id,
+                                            skip=cur_skip)
             else:
                 api_response = api_instance.secret_permissions_service_search_secret_permissions(
-                                            filter_group_id=normalize_id(user.id),
-                                            skip=normalize_id(cur_skip))
+                                            filter_group_id=user.id,
+                                            skip=cur_skip)
             has_next = api_response.has_next
             cur_skip += int(api_response.next_skip)
             yield from api_response.records

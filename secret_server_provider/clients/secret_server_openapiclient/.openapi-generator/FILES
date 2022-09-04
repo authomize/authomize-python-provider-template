@@ -495,6 +495,8 @@ docs/EventSubscriptionTypeActionModel.md
 docs/EventSubscriptionUpdateArgs.md
 docs/EventSubscriptionUpdateModel.md
 docs/EventSubscriptionsApi.md
+docs/ExpireUserSecretActivityDataArgs.md
+docs/ExpireUserSecretActivityDataModel.md
 docs/ExportFileType.md
 docs/ExtendedFieldsApi.md
 docs/ExtensionAutoFillValueArgs.md
@@ -875,6 +877,7 @@ docs/PagingOfUserLookup.md
 docs/PagingOfUserOwnerSummary.md
 docs/PagingOfUserPublicSshKeySummary.md
 docs/PagingOfUserRoleSummary.md
+docs/PagingOfUserSecretActivitySummary.md
 docs/PagingOfUserSummary.md
 docs/PagingOfUserTeamSummary.md
 docs/PagingOfWorkflowStepTemplateDetailModel.md
@@ -1582,6 +1585,9 @@ docs/UserPublicSshKeyCreateArgs.md
 docs/UserPublicSshKeySummary.md
 docs/UserRoleSummary.md
 docs/UserScriptType.md
+docs/UserSecretActivityExpireResult.md
+docs/UserSecretActivityFilter.md
+docs/UserSecretActivitySummary.md
 docs/UserSummary.md
 docs/UserTeamSummary.md
 docs/UserUpdateArgs.md
@@ -2226,6 +2232,8 @@ secret_server_openapiclient/model/event_subscription_summary.py
 secret_server_openapiclient/model/event_subscription_type_action_model.py
 secret_server_openapiclient/model/event_subscription_update_args.py
 secret_server_openapiclient/model/event_subscription_update_model.py
+secret_server_openapiclient/model/expire_user_secret_activity_data_args.py
+secret_server_openapiclient/model/expire_user_secret_activity_data_model.py
 secret_server_openapiclient/model/export_file_type.py
 secret_server_openapiclient/model/extension_auto_fill_value_args.py
 secret_server_openapiclient/model/external_group_view_model.py
@@ -2588,6 +2596,7 @@ secret_server_openapiclient/model/paging_of_user_lookup.py
 secret_server_openapiclient/model/paging_of_user_owner_summary.py
 secret_server_openapiclient/model/paging_of_user_public_ssh_key_summary.py
 secret_server_openapiclient/model/paging_of_user_role_summary.py
+secret_server_openapiclient/model/paging_of_user_secret_activity_summary.py
 secret_server_openapiclient/model/paging_of_user_summary.py
 secret_server_openapiclient/model/paging_of_user_team_summary.py
 secret_server_openapiclient/model/paging_of_workflow_step_template_detail_model.py
@@ -3259,6 +3268,9 @@ secret_server_openapiclient/model/user_public_ssh_key_create_args.py
 secret_server_openapiclient/model/user_public_ssh_key_summary.py
 secret_server_openapiclient/model/user_role_summary.py
 secret_server_openapiclient/model/user_script_type.py
+secret_server_openapiclient/model/user_secret_activity_expire_result.py
+secret_server_openapiclient/model/user_secret_activity_filter.py
+secret_server_openapiclient/model/user_secret_activity_summary.py
 secret_server_openapiclient/model/user_summary.py
 secret_server_openapiclient/model/user_team_summary.py
 secret_server_openapiclient/model/user_update_args.py
@@ -3344,4 +3356,10 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_expire_user_secret_activity_data_args.py
+test/test_expire_user_secret_activity_data_model.py
+test/test_paging_of_user_secret_activity_summary.py
+test/test_user_secret_activity_expire_result.py
+test/test_user_secret_activity_filter.py
+test/test_user_secret_activity_summary.py
 tox.ini

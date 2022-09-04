@@ -54906,8 +54906,8 @@
         "tags": [
           "Secrets"
         ],
-        "summary": "Convert template",
-        "description": "Convert template",
+        "summary": "Convert Secret Template",
+        "description": "Convert the specificed Secrets to a different Secret Template",
         "operationId": "SecretsService_ConvertTemplate",
         "requestBody": {
           "content": {
@@ -54969,8 +54969,8 @@
         "tags": [
           "Secrets"
         ],
-        "summary": "Convert template",
-        "description": "Convert template",
+        "summary": "Get Convert Template Information",
+        "description": "Retrieve information about the requested conversion such as which fields exist on the target template.",
         "operationId": "SecretsService_GetConvertInfo",
         "requestBody": {
           "content": {
@@ -54984,7 +54984,7 @@
         },
         "responses": {
           "200": {
-            "description": "Convert template result",
+            "description": "Convert template info result",
             "content": {
               "application/json": {
                 "schema": {
@@ -66447,7 +66447,7 @@
           "Users"
         ],
         "summary": "User Audits",
-        "description": "Get all of the audits for a user",
+        "description": "Get all of the audits for events that have occured for a specific user such as create user, edit user, change password, login success, login failed",
         "operationId": "UsersService_GetSiteAudits",
         "parameters": [
           {
@@ -66520,11 +66520,181 @@
         ],
         "responses": {
           "200": {
-            "description": "Paged List of Audits",
+            "description": "Paged list of user event audits",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PagingOfUserAuditSummary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationFailedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1/users/{userId}/secret-activity": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "User Secret Activity",
+        "description": "Get all Secret activity for a specific user",
+        "operationId": "UsersService_GetUserSecretActivity",
+        "parameters": [
+          {
+            "name": "filter.endDate",
+            "in": "query",
+            "description": "Include secrets accessed before this date.  Can be null which will not filter by any end date and results in today basically.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter.excludeInactiveSecrets",
+            "in": "query",
+            "description": "Exclude any inactive secrets",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "filter.excludeRotatedSecrets",
+            "in": "query",
+            "description": "Exclude any secrets that rotate",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "filter.folderId",
+            "in": "query",
+            "description": "Only include secrets in a specific folder.  Exclude or pass null to include all secrets",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "filter.includeSubfolders",
+            "in": "query",
+            "description": "Only used if a FolderId is included and when true it will also search subfolders.  When false only secrets from the passed FolderId will be returned.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "filter.startDate",
+            "in": "query",
+            "description": "Include any Secrets access since this date",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "description": "Number of records to skip before taking results",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sortBy[0].direction",
+            "in": "query",
+            "description": "Sort direction",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy[0].name",
+            "in": "query",
+            "description": "Sort field name",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy[0].priority",
+            "in": "query",
+            "description": "Priority index. Sorts with lower values are executed earlier",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "description": "Maximum number of records to include in results",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "userId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Paged list of user secret activity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagingOfUserSecretActivitySummary"
                 }
               }
             }
@@ -67455,6 +67625,81 @@
                 "schema": {
                   "description": "Boolean",
                   "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationFailedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1/users/{userId}/secret-activity/expire": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "User Secret Activity Expiration",
+        "description": "Expire all secrets access by a specific user and filter",
+        "operationId": "UsersService_ExpireUserSecretActivity",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "userId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExpireUserSecretActivityDataArgs"
+              }
+            }
+          },
+          "description": "args"
+        },
+        "responses": {
+          "200": {
+            "description": "User Secret Activity Expiration result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSecretActivityExpireResult"
                 }
               }
             }
@@ -118230,6 +118475,122 @@
         },
         "type": "object"
       },
+      "PagingOfUserSecretActivitySummary": {
+        "description": "Specify paging and sorting options for querying records and returning results",
+        "properties": {
+          "batchCount": {
+            "description": "Number of result batches available with current query options",
+            "type": "integer",
+            "format": "int32"
+          },
+          "currentPage": {
+            "description": "Index of current result page",
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasNext": {
+            "description": "Whether there are any results in additional pages",
+            "type": "boolean"
+          },
+          "hasPrev": {
+            "description": "Whether there are any results in previous pages",
+            "type": "boolean"
+          },
+          "nextSkip": {
+            "description": "Correct value of 'skip' for the next page of results",
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "description": "Number of result pages available with current query options",
+            "type": "integer",
+            "format": "int32"
+          },
+          "prevSkip": {
+            "description": "Correct value of 'skip' for the previous page of results",
+            "type": "integer",
+            "format": "int32"
+          },
+          "records": {
+            "description": "Query results",
+            "items": {
+              "$ref": "#/components/schemas/UserSecretActivitySummary"
+            },
+            "type": "array"
+          },
+          "severity": {
+            "$ref": "#/components/schemas/Severity"
+          },
+          "skip": {
+            "description": "Number of records to skip before taking results",
+            "type": "integer",
+            "format": "int32"
+          },
+          "sortBy": {
+            "description": "List of sort properties",
+            "items": {
+              "$ref": "#/components/schemas/Sort"
+            },
+            "type": "array"
+          },
+          "success": {
+            "description": "Whether the query executed successfully",
+            "type": "boolean"
+          },
+          "take": {
+            "description": "Maximum number of records to include in results",
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "description": "Total number of results available",
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "type": "object"
+      },
+      "UserSecretActivitySummary": {
+        "description": "A secret that was accessed by a specific user",
+        "properties": {
+          "active": {
+            "description": "Whether the Secret is active or not",
+            "type": "boolean"
+          },
+          "folderId": {
+            "description": "The folder id that contains the secret",
+            "type": "integer",
+            "format": "int32"
+          },
+          "folderPath": {
+            "description": "The folder path of the secret",
+            "type": "string"
+          },
+          "ipAddress": {
+            "description": "The IP address that was used to access the secret",
+            "type": "string"
+          },
+          "lastDate": {
+            "description": "The last date the secret was accessed",
+            "type": "string",
+            "format": "date-time"
+          },
+          "secretId": {
+            "description": "The ID of the secret that was access",
+            "type": "integer",
+            "format": "int32"
+          },
+          "secretName": {
+            "description": "The name of the secret",
+            "type": "string"
+          },
+          "secretType": {
+            "description": "The name of the secret template",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "PagingOfUserTeamSummary": {
         "description": "Specify paging and sorting options for querying records and returning results",
         "properties": {
@@ -118621,6 +118982,70 @@
       "PasswordResetResultModel": {
         "description": "PasswordResetResultModel",
         "properties": {
+          "success": {
+            "description": "Success",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "ExpireUserSecretActivityDataArgs": {
+        "description": "ExpireUserSecretActivityDataArgs",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ExpireUserSecretActivityDataModel"
+          }
+        },
+        "type": "object"
+      },
+      "ExpireUserSecretActivityDataModel": {
+        "description": "Expire Active Secrets for a User based on filter criteria",
+        "properties": {
+          "filter": {
+            "$ref": "#/components/schemas/UserSecretActivityFilter"
+          }
+        },
+        "type": "object"
+      },
+      "UserSecretActivityFilter": {
+        "description": "Filter which secrets that had activity to include",
+        "properties": {
+          "endDate": {
+            "description": "Include secrets accessed before this date.  Can be null which will not filter by any end date and results in today basically.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "excludeInactiveSecrets": {
+            "description": "Exclude any inactive secrets",
+            "type": "boolean"
+          },
+          "excludeRotatedSecrets": {
+            "description": "Exclude any secrets that rotate",
+            "type": "boolean"
+          },
+          "folderId": {
+            "description": "Only include secrets in a specific folder.  Exclude or pass null to include all secrets",
+            "type": "integer",
+            "format": "int32"
+          },
+          "includeSubfolders": {
+            "description": "Only used if a FolderId is included and when true it will also search subfolders.  When false only secrets from the passed FolderId will be returned.",
+            "type": "boolean"
+          },
+          "startDate": {
+            "description": "Include any Secrets access since this date",
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "type": "object"
+      },
+      "UserSecretActivityExpireResult": {
+        "description": "UserSecretActivityExpireResult",
+        "properties": {
+          "operationMessage": {
+            "$ref": "#/components/schemas/BulkOperationResponseMessage"
+          },
           "success": {
             "description": "Success",
             "type": "boolean"

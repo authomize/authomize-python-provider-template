@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**users_service_delete**](UsersApi.md#users_service_delete) | **DELETE** /v1/users/{id} | Delete User
 [**users_service_delete_user_owner**](UsersApi.md#users_service_delete_user_owner) | **DELETE** /v1/users/{id}/owners/{ownerId} | Remove User Owner
 [**users_service_delete_user_roles**](UsersApi.md#users_service_delete_user_roles) | **DELETE** /v1/users/{id}/roles | Remove roles from existing user
+[**users_service_expire_user_secret_activity**](UsersApi.md#users_service_expire_user_secret_activity) | **POST** /v1/users/{userId}/secret-activity/expire | User Secret Activity Expiration
 [**users_service_get**](UsersApi.md#users_service_get) | **GET** /v1/users/{id} | Get User
 [**users_service_get_current_user**](UsersApi.md#users_service_get_current_user) | **GET** /v1/users/current | Current User
 [**users_service_get_current_user_sessions**](UsersApi.md#users_service_get_current_user_sessions) | **GET** /v1/users/sessions | User Sessions
@@ -26,6 +27,7 @@ Method | HTTP request | Description
 [**users_service_get_user_owner**](UsersApi.md#users_service_get_user_owner) | **GET** /v1/users/{id}/owners/{ownerId} | Get User Owner
 [**users_service_get_user_public_ssh_keys**](UsersApi.md#users_service_get_user_public_ssh_keys) | **GET** /v1/users/public-ssh-keys | Get User Public Ssh Keys
 [**users_service_get_user_roles**](UsersApi.md#users_service_get_user_roles) | **GET** /v1/users/{userId}/roles-assigned | Get User Roles
+[**users_service_get_user_secret_activity**](UsersApi.md#users_service_get_user_secret_activity) | **GET** /v1/users/{userId}/secret-activity | User Secret Activity
 [**users_service_get_user_teams**](UsersApi.md#users_service_get_user_teams) | **GET** /v1/users/{userId}/teams | User Teams
 [**users_service_lock_out**](UsersApi.md#users_service_lock_out) | **POST** /v1/users/{userId}/lock-out | Lock Out
 [**users_service_lookup**](UsersApi.md#users_service_lookup) | **GET** /v1/users/lookup | Lookup Users
@@ -981,6 +983,113 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **users_service_expire_user_secret_activity**
+> UserSecretActivityExpireResult users_service_expire_user_secret_activity(user_id)
+
+User Secret Activity Expiration
+
+Expire all secrets access by a specific user and filter
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import secret_server_openapiclient
+from secret_server_openapiclient.api import users_api
+from secret_server_openapiclient.model.authentication_failed_response import AuthenticationFailedResponse
+from secret_server_openapiclient.model.internal_server_error_response import InternalServerErrorResponse
+from secret_server_openapiclient.model.user_secret_activity_expire_result import UserSecretActivityExpireResult
+from secret_server_openapiclient.model.expire_user_secret_activity_data_args import ExpireUserSecretActivityDataArgs
+from secret_server_openapiclient.model.bad_request_response import BadRequestResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = secret_server_openapiclient.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with secret_server_openapiclient.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = users_api.UsersApi(api_client)
+    user_id = 1 # int | userId
+    expire_user_secret_activity_data_args = ExpireUserSecretActivityDataArgs(
+        data=ExpireUserSecretActivityDataModel(
+            filter=UserSecretActivityFilter(
+                end_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                exclude_inactive_secrets=True,
+                exclude_rotated_secrets=True,
+                folder_id=1,
+                include_subfolders=True,
+                start_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            ),
+        ),
+    ) # ExpireUserSecretActivityDataArgs | args (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # User Secret Activity Expiration
+        api_response = api_instance.users_service_expire_user_secret_activity(user_id)
+        pprint(api_response)
+    except secret_server_openapiclient.ApiException as e:
+        print("Exception when calling UsersApi->users_service_expire_user_secret_activity: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # User Secret Activity Expiration
+        api_response = api_instance.users_service_expire_user_secret_activity(user_id, expire_user_secret_activity_data_args=expire_user_secret_activity_data_args)
+        pprint(api_response)
+    except secret_server_openapiclient.ApiException as e:
+        print("Exception when calling UsersApi->users_service_expire_user_secret_activity: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**| userId |
+ **expire_user_secret_activity_data_args** | [**ExpireUserSecretActivityDataArgs**](ExpireUserSecretActivityDataArgs.md)| args | [optional]
+
+### Return type
+
+[**UserSecretActivityExpireResult**](UserSecretActivityExpireResult.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | User Secret Activity Expiration result |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **users_service_get**
 > UserModel users_service_get(id)
 
@@ -1541,7 +1650,7 @@ Name | Type | Description  | Notes
 
 User Audits
 
-Get all of the audits for a user
+Get all of the audits for events that have occured for a specific user such as create user, edit user, change password, login success, login failed
 
 ### Example
 
@@ -1634,7 +1743,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Paged List of Audits |  -  |
+**200** | Paged list of user event audits |  -  |
 **400** | Bad request |  -  |
 **403** | Authentication failed |  -  |
 **500** | Internal server error |  -  |
@@ -2127,6 +2236,121 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | User role summary |  -  |
+**400** | Bad request |  -  |
+**403** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_service_get_user_secret_activity**
+> PagingOfUserSecretActivitySummary users_service_get_user_secret_activity(user_id)
+
+User Secret Activity
+
+Get all Secret activity for a specific user
+
+### Example
+
+* Api Key Authentication (BearerToken):
+
+```python
+import time
+import secret_server_openapiclient
+from secret_server_openapiclient.api import users_api
+from secret_server_openapiclient.model.authentication_failed_response import AuthenticationFailedResponse
+from secret_server_openapiclient.model.internal_server_error_response import InternalServerErrorResponse
+from secret_server_openapiclient.model.bad_request_response import BadRequestResponse
+from secret_server_openapiclient.model.paging_of_user_secret_activity_summary import PagingOfUserSecretActivitySummary
+from pprint import pprint
+# Defining the host is optional and defaults to https://integrations.secretservercloud.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = secret_server_openapiclient.Configuration(
+    host = "https://integrations.secretservercloud.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: BearerToken
+configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['BearerToken'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with secret_server_openapiclient.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = users_api.UsersApi(api_client)
+    user_id = 1 # int | userId
+    filter_end_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Include secrets accessed before this date.  Can be null which will not filter by any end date and results in today basically. (optional)
+    filter_exclude_inactive_secrets = True # bool | Exclude any inactive secrets (optional)
+    filter_exclude_rotated_secrets = True # bool | Exclude any secrets that rotate (optional)
+    filter_folder_id = 1 # int | Only include secrets in a specific folder.  Exclude or pass null to include all secrets (optional)
+    filter_include_subfolders = True # bool | Only used if a FolderId is included and when true it will also search subfolders.  When false only secrets from the passed FolderId will be returned. (optional)
+    filter_start_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Include any Secrets access since this date (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # User Secret Activity
+        api_response = api_instance.users_service_get_user_secret_activity(user_id)
+        pprint(api_response)
+    except secret_server_openapiclient.ApiException as e:
+        print("Exception when calling UsersApi->users_service_get_user_secret_activity: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # User Secret Activity
+        api_response = api_instance.users_service_get_user_secret_activity(user_id, filter_end_date=filter_end_date, filter_exclude_inactive_secrets=filter_exclude_inactive_secrets, filter_exclude_rotated_secrets=filter_exclude_rotated_secrets, filter_folder_id=filter_folder_id, filter_include_subfolders=filter_include_subfolders, filter_start_date=filter_start_date, skip=skip, sort_by_0_direction=sort_by_0_direction, sort_by_0_name=sort_by_0_name, sort_by_0_priority=sort_by_0_priority, take=take)
+        pprint(api_response)
+    except secret_server_openapiclient.ApiException as e:
+        print("Exception when calling UsersApi->users_service_get_user_secret_activity: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**| userId |
+ **filter_end_date** | **datetime**| Include secrets accessed before this date.  Can be null which will not filter by any end date and results in today basically. | [optional]
+ **filter_exclude_inactive_secrets** | **bool**| Exclude any inactive secrets | [optional]
+ **filter_exclude_rotated_secrets** | **bool**| Exclude any secrets that rotate | [optional]
+ **filter_folder_id** | **int**| Only include secrets in a specific folder.  Exclude or pass null to include all secrets | [optional]
+ **filter_include_subfolders** | **bool**| Only used if a FolderId is included and when true it will also search subfolders.  When false only secrets from the passed FolderId will be returned. | [optional]
+ **filter_start_date** | **datetime**| Include any Secrets access since this date | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
+
+### Return type
+
+[**PagingOfUserSecretActivitySummary**](PagingOfUserSecretActivitySummary.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Paged list of user secret activity |  -  |
 **400** | Bad request |  -  |
 **403** | Authentication failed |  -  |
 **500** | Internal server error |  -  |
