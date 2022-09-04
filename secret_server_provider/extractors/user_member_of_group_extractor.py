@@ -24,19 +24,22 @@ class UserMemberOfGroupExtractor(BaseExtractor):
         api_response = api_instance.users_service_search_users()
         all_users = api_response.records
         return self._get_all_user_groups(api_instance, all_users)
-    
-    def _get_all_user_groups (self, api_instance: UsersApi, all_users: Iterable[UserModel]) -> Iterable[GroupUserSummary]:
+
+    def _get_all_user_groups(self,
+                             api_instance: UsersApi,
+                             all_users: Iterable[UserModel]) -> Iterable[GroupUserSummary]:
         for user in all_users:
             yield from self._fetch_user_groups(api_instance, user)
+
     def _fetch_user_groups(self, api_instance: UsersApi, user: UserModel) -> Iterable[GroupUserSummary]:
         return self.__get_paginated_results(api_instance, user)
-        
-    def __get_paginated_results(self, api_instance:UsersApi, user: UserModel) -> Iterable[UserModel]:
+
+    def __get_paginated_results(self, api_instance: UsersApi, user: UserModel) -> Iterable[UserModel]:
         cur_skip = 0
         has_next = True
-        while (has_next) :
-            api_response = api_instance.users_service_get_user_groups(id=normalize_id(user.id),skip = normalize_id(cur_skip))
+        while (has_next):
+            api_response = api_instance.users_service_get_user_groups(id=normalize_id(user.id),
+                                                                      skip=normalize_id(cur_skip))
             has_next = api_response.has_next
             cur_skip += int(api_response.next_skip)
             yield from api_response.records
-

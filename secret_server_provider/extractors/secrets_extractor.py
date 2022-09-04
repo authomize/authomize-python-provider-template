@@ -19,11 +19,11 @@ class SecretsExtractor(BaseExtractor):
 
         return self.__get_paginated_results(api_instance)
 
-    def __get_paginated_results(self, api_instance:SecretsApi) -> Iterable[SecretModelV2]:
+    def __get_paginated_results(self, api_instance: SecretsApi) -> Iterable[SecretModelV2]:
         cur_skip = 0
         has_next = True
-        while (has_next) :
-            api_response = api_instance.secrets_service_search_v2(skip = normalize_id(cur_skip))
+        while (has_next):
+            api_response = api_instance.secrets_service_search_v2(skip=normalize_id(cur_skip))
             has_next = api_response.has_next
             cur_skip += int(api_response.next_skip)
             yield from api_response.records
