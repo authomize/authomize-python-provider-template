@@ -260,23 +260,23 @@ class KeyManagementApi(object):
                     'is_exporting':
                         (bool,),
                     'filter_action':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'filter_search_term':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'is_exporting': 'isExporting',
@@ -780,15 +780,15 @@ class KeyManagementApi(object):
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            filter_action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]
-            filter_date (bool, date, datetime, dict, float, int, list, str, none_type): Date. [optional]
-            filter_search_term (bool, date, datetime, dict, float, int, list, str, none_type): SearchTerm. [optional]
-            filter_user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_action (str): Action. [optional]
+            filter_date (datetime): Date. [optional]
+            filter_search_term (str): SearchTerm. [optional]
+            filter_user_id (int): UserId. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

@@ -70,18 +70,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=DiscoverySourceCreateModel(
             active=True,
             discover_specific_ous=True,
-            discovery_scanner_id=None,
+            discovery_scanner_id="discovery_scanner_id_example",
             discovery_source_settings=DiscoverySourceSettingsCreateModel(
                 domain_type=DomainType("{}"),
-                friendly_name=None,
-                fully_qualified_domain_name=None,
+                friendly_name="friendly_name_example",
+                fully_qualified_domain_name="fully_qualified_domain_name_example",
                 use_secure_ldap=True,
             ),
-            last_discovery_run_date=None,
+            last_discovery_run_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
             machine_name_resolution_type=MachineNameResolutionType("{}"),
-            name=None,
-            secret_id=None,
-            site_id=None,
+            name="name_example",
+            secret_id=1,
+            site_id=1,
         ),
     ) # DiscoverySourceCreateArgs | args (optional)
 
@@ -169,10 +169,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    discovery_source_id = None # bool, date, datetime, dict, float, int, list, str, none_type | discoverySourceId
+    discovery_source_id = 1 # int | discoverySourceId
     discovery_scanner_setting_create_args = DiscoveryScannerSettingCreateArgs(
         data=DiscoveryScannerSettingCreateData(
-            discovery_scan_type_id=None,
+            discovery_scan_type_id=1,
         ),
     ) # DiscoveryScannerSettingCreateArgs | args (optional)
 
@@ -199,7 +199,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **discovery_source_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| discoverySourceId |
+ **discovery_source_id** | **int**| discoverySourceId |
  **discovery_scanner_setting_create_args** | [**DiscoveryScannerSettingCreateArgs**](DiscoveryScannerSettingCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -268,7 +268,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    discovery_source_id = None # bool, date, datetime, dict, float, int, list, str, none_type | discoverySourceId
+    discovery_source_id = 1 # int | discoverySourceId
 
     # example passing only required values which don't have defaults set
     try:
@@ -284,7 +284,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **discovery_source_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| discoverySourceId |
+ **discovery_source_id** | **int**| discoverySourceId |
 
 ### Return type
 
@@ -432,7 +432,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Discovery Source ID
+    id = 1 # int | Discovery Source ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -448,7 +448,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Discovery Source ID |
+ **id** | **int**| Discovery Source ID |
 
 ### Return type
 
@@ -517,12 +517,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
     is_exporting = True # bool | isExporting (optional)
-    filter_discovery_source_id = None # bool, date, datetime, dict, float, int, list, str, none_type | DiscoverySourceId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_discovery_source_id = 1 # int | DiscoverySourceId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -540,12 +540,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is_exporting** | **bool**| isExporting | [optional]
- **filter_discovery_source_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| DiscoverySourceId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_discovery_source_id** | **int**| DiscoverySourceId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -613,7 +613,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -629,7 +629,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -697,7 +697,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Discovery Source Type ID
+    type_id = 1 # int | Discovery Source Type ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -713,7 +713,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Discovery Source Type ID |
+ **type_id** | **int**| Discovery Source Type ID |
 
 ### Return type
 
@@ -942,8 +942,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    discovery_source_id = None # bool, date, datetime, dict, float, int, list, str, none_type | discoverySourceId
-    member_id = None # bool, date, datetime, dict, float, int, list, str, none_type | memberId
+    discovery_source_id = 1 # int | discoverySourceId
+    member_id = 1 # int | memberId
     discovery_source_filter_patch_args = DiscoverySourceFilterPatchArgs(
         data=DomainDiscoveryScopeFilterPatchModel(
             scan_target_type=UpdateFieldValueOfScanTargetType(
@@ -952,11 +952,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             site_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # DiscoverySourceFilterPatchArgs | args (optional)
@@ -984,8 +984,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **discovery_source_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| discoverySourceId |
- **member_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| memberId |
+ **discovery_source_id** | **int**| discoverySourceId |
+ **member_id** | **int**| memberId |
  **discovery_source_filter_patch_args** | [**DiscoverySourceFilterPatchArgs**](DiscoverySourceFilterPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -1143,7 +1143,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    discovery_source_id = None # bool, date, datetime, dict, float, int, list, str, none_type | discoverySourceId
+    discovery_source_id = 1 # int | discoverySourceId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1159,7 +1159,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **discovery_source_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| discoverySourceId |
+ **discovery_source_id** | **int**| discoverySourceId |
 
 ### Return type
 
@@ -1227,15 +1227,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    filter_discovery_source_name = None # bool, date, datetime, dict, float, int, list, str, none_type | DiscoverySourceName (optional)
-    filter_discovery_source_type = None # bool, date, datetime, dict, float, int, list, str, none_type | DiscoverySourceType (optional)
+    filter_discovery_source_name = "filter.discoverySourceName_example" # str | DiscoverySourceName (optional)
+    filter_discovery_source_type = "filter.discoverySourceType_example" # str | DiscoverySourceType (optional)
     filter_include_active = True # bool | IncludeActive (optional)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1252,15 +1252,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_discovery_source_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| DiscoverySourceName | [optional]
- **filter_discovery_source_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| DiscoverySourceType | [optional]
+ **filter_discovery_source_name** | **str**| DiscoverySourceName | [optional]
+ **filter_discovery_source_type** | **str**| DiscoverySourceType | [optional]
  **filter_include_active** | **bool**| IncludeActive | [optional]
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1328,13 +1328,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    discovery_source_id = None # bool, date, datetime, dict, float, int, list, str, none_type | discoverySourceId
+    discovery_source_id = 1 # int | discoverySourceId
     include = True # bool | Only return items that can be included (optional)
-    search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search for OU items containing this text (optional)
+    search_text = "searchText_example" # str | Search for OU items containing this text (optional)
     selected_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | When include is false only include items within these exisitng IDs (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | The number of items to return (optional)
+        "selectedIds_example",
+    ] # [str] | When include is false only include items within these exisitng IDs (optional)
+    take = 1 # int | The number of items to return (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1359,11 +1359,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **discovery_source_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| discoverySourceId |
+ **discovery_source_id** | **int**| discoverySourceId |
  **include** | **bool**| Only return items that can be included | [optional]
- **search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search for OU items containing this text | [optional]
- **selected_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| When include is false only include items within these exisitng IDs | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| The number of items to return | [optional]
+ **search_text** | **str**| Search for OU items containing this text | [optional]
+ **selected_ids** | **[str]**| When include is false only include items within these exisitng IDs | [optional]
+ **take** | **int**| The number of items to return | [optional]
 
 ### Return type
 
@@ -1436,19 +1436,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=DiscoveryConfigurationUpdateModel(
             dependency_not_found_threshold=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             discovery_interval_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             discovery_interval_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             discovery_scan_offset_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_discovery=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1456,7 +1456,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             engine_ad_discovery_batch_size=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             ignore_cluster_node_objects=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1464,7 +1464,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             max_log_age_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # DiscoveryConfigurationUpdateArgs | args (optional)
@@ -1553,7 +1553,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Discovery Source ID
+    id = 1 # int | Discovery Source ID
     discovery_source_update_args = DiscoverySourceUpdateArgs(
         data=DiscoverySourceUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -1562,7 +1562,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             days_to_keep_machines=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             discover_specific_ous=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1573,11 +1573,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 value=DiscoverySourceSettingsUpdateModel(
                     friendly_name=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     fully_qualified_domain_name=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     use_secure_ldap=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -1591,15 +1591,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             site_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # DiscoverySourceUpdateArgs | args (optional)
@@ -1627,7 +1627,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Discovery Source ID |
+ **id** | **int**| Discovery Source ID |
  **discovery_source_update_args** | [**DiscoverySourceUpdateArgs**](DiscoverySourceUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -1697,17 +1697,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = discovery_api.DiscoveryApi(api_client)
-    discovery_source_id = None # bool, date, datetime, dict, float, int, list, str, none_type | discoverySourceId
+    discovery_source_id = 1 # int | discoverySourceId
     discovery_source_filters_update_args = DiscoverySourceFiltersUpdateArgs(
         data=DiscoverySourceFiltersUpdateModel(
             filters=[
                 DomainDiscoveryScopeFilterUpdateModel(
-                    discovery_filter_id=None,
+                    discovery_filter_id=1,
                     filter_type=DiscoveryFilterType("{}"),
-                    guid=None,
+                    guid="guid_example",
                     scan_target_type=ScanTargetType("{}"),
-                    secret_id=None,
-                    site_id=None,
+                    secret_id=1,
+                    site_id=1,
                 ),
             ],
         ),
@@ -1736,7 +1736,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **discovery_source_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| discoverySourceId |
+ **discovery_source_id** | **int**| discoverySourceId |
  **discovery_source_filters_update_args** | [**DiscoverySourceFiltersUpdateArgs**](DiscoverySourceFiltersUpdateArgs.md)| args | [optional]
 
 ### Return type

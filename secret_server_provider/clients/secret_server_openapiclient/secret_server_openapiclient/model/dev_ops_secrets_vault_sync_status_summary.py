@@ -57,10 +57,8 @@ class DevOpsSecretsVaultSyncStatusSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class DevOpsSecretsVaultSyncStatusSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'date_added': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dev_ops_secret_vault_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dev_ops_sync_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_sync_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'date_added': (datetime, none_type,),  # noqa: E501
+            'dev_ops_secret_vault_path': (str, none_type,),  # noqa: E501
+            'dev_ops_sync_map_id': (int, none_type,),  # noqa: E501
+            'last_sync_time': (datetime, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'status': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -148,12 +143,12 @@ class DevOpsSecretsVaultSyncStatusSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): If the mapping is active.. [optional]  # noqa: E501
-            date_added (bool, date, datetime, dict, float, int, list, str, none_type): When the Secret will be pushed next.. [optional]  # noqa: E501
-            dev_ops_secret_vault_path (bool, date, datetime, dict, float, int, list, str, none_type): Where to push the Secret to in the Tenant.. [optional]  # noqa: E501
-            dev_ops_sync_map_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of the mapping between the Tenant and Secret.. [optional]  # noqa: E501
-            last_sync_time (bool, date, datetime, dict, float, int, list, str, none_type): When the Secret was last pushed.. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the Secret.. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status of syncing progress.. [optional]  # noqa: E501
+            date_added (datetime): When the Secret will be pushed next.. [optional]  # noqa: E501
+            dev_ops_secret_vault_path (str): Where to push the Secret to in the Tenant.. [optional]  # noqa: E501
+            dev_ops_sync_map_id (int): ID of the mapping between the Tenant and Secret.. [optional]  # noqa: E501
+            last_sync_time (datetime): When the Secret was last pushed.. [optional]  # noqa: E501
+            secret_name (str): Name of the Secret.. [optional]  # noqa: E501
+            status (str): Status of syncing progress.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,12 +235,12 @@ class DevOpsSecretsVaultSyncStatusSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): If the mapping is active.. [optional]  # noqa: E501
-            date_added (bool, date, datetime, dict, float, int, list, str, none_type): When the Secret will be pushed next.. [optional]  # noqa: E501
-            dev_ops_secret_vault_path (bool, date, datetime, dict, float, int, list, str, none_type): Where to push the Secret to in the Tenant.. [optional]  # noqa: E501
-            dev_ops_sync_map_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of the mapping between the Tenant and Secret.. [optional]  # noqa: E501
-            last_sync_time (bool, date, datetime, dict, float, int, list, str, none_type): When the Secret was last pushed.. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the Secret.. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status of syncing progress.. [optional]  # noqa: E501
+            date_added (datetime): When the Secret will be pushed next.. [optional]  # noqa: E501
+            dev_ops_secret_vault_path (str): Where to push the Secret to in the Tenant.. [optional]  # noqa: E501
+            dev_ops_sync_map_id (int): ID of the mapping between the Tenant and Secret.. [optional]  # noqa: E501
+            last_sync_time (datetime): When the Secret was last pushed.. [optional]  # noqa: E501
+            secret_name (str): Name of the Secret.. [optional]  # noqa: E501
+            status (str): Status of syncing progress.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

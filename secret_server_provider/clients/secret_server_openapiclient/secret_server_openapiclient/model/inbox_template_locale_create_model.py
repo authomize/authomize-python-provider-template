@@ -57,10 +57,8 @@ class InboxTemplateLocaleCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class InboxTemplateLocaleCreateModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'inbox_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'locale_culture_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'subject': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'template_body': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'inbox_template_id': (int, none_type,),  # noqa: E501
+            'locale_culture_id': (int, none_type,),  # noqa: E501
+            'subject': (str, none_type,),  # noqa: E501
+            'template_body': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class InboxTemplateLocaleCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            inbox_template_id (bool, date, datetime, dict, float, int, list, str, none_type): InboxTemplateId. [optional]  # noqa: E501
-            locale_culture_id (bool, date, datetime, dict, float, int, list, str, none_type): LocaleCultureId. [optional]  # noqa: E501
-            subject (bool, date, datetime, dict, float, int, list, str, none_type): Subject. [optional]  # noqa: E501
-            template_body (bool, date, datetime, dict, float, int, list, str, none_type): TemplateBody. [optional]  # noqa: E501
+            inbox_template_id (int): InboxTemplateId. [optional]  # noqa: E501
+            locale_culture_id (int): LocaleCultureId. [optional]  # noqa: E501
+            subject (str): Subject. [optional]  # noqa: E501
+            template_body (str): TemplateBody. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class InboxTemplateLocaleCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            inbox_template_id (bool, date, datetime, dict, float, int, list, str, none_type): InboxTemplateId. [optional]  # noqa: E501
-            locale_culture_id (bool, date, datetime, dict, float, int, list, str, none_type): LocaleCultureId. [optional]  # noqa: E501
-            subject (bool, date, datetime, dict, float, int, list, str, none_type): Subject. [optional]  # noqa: E501
-            template_body (bool, date, datetime, dict, float, int, list, str, none_type): TemplateBody. [optional]  # noqa: E501
+            inbox_template_id (int): InboxTemplateId. [optional]  # noqa: E501
+            locale_culture_id (int): LocaleCultureId. [optional]  # noqa: E501
+            subject (str): Subject. [optional]  # noqa: E501
+            template_body (str): TemplateBody. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

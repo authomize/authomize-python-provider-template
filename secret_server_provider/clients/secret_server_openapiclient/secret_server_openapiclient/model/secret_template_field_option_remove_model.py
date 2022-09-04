@@ -57,10 +57,8 @@ class SecretTemplateFieldOptionRemoveModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,27 +66,24 @@ class SecretTemplateFieldOptionRemoveModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'value': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -137,8 +132,8 @@ class SecretTemplateFieldOptionRemoveModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Option Id to Remove. Will take precedence over value.. [optional]  # noqa: E501
-            value (bool, date, datetime, dict, float, int, list, str, none_type): Option Value to Remove. If Id is populated, this will be ignored. [optional]  # noqa: E501
+            id (int): Option Id to Remove. Will take precedence over value.. [optional]  # noqa: E501
+            value (str): Option Value to Remove. If Id is populated, this will be ignored. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -224,8 +219,8 @@ class SecretTemplateFieldOptionRemoveModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Option Id to Remove. Will take precedence over value.. [optional]  # noqa: E501
-            value (bool, date, datetime, dict, float, int, list, str, none_type): Option Value to Remove. If Id is populated, this will be ignored. [optional]  # noqa: E501
+            id (int): Option Id to Remove. Will take precedence over value.. [optional]  # noqa: E501
+            value (str): Option Value to Remove. If Id is populated, this will be ignored. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

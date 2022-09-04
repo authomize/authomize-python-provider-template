@@ -57,10 +57,8 @@ class SdkClientAccountCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class SdkClientAccountCreateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rule_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'client_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'onboarding_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'description': (str,),  # noqa: E501
+            'name': (str,),  # noqa: E501
+            'rule_name': (str,),  # noqa: E501
+            'client_id': (str, none_type,),  # noqa: E501
+            'onboarding_key': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -113,9 +108,9 @@ class SdkClientAccountCreateArgs(ModelNormal):
         """SdkClientAccountCreateArgs - a model defined in OpenAPI
 
         Args:
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name
-            rule_name (bool, date, datetime, dict, float, int, list, str, none_type): RuleName
+            description (str): Description
+            name (str): Name
+            rule_name (str): RuleName
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -148,8 +143,8 @@ class SdkClientAccountCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            client_id (bool, date, datetime, dict, float, int, list, str, none_type): ClientId. [optional]  # noqa: E501
-            onboarding_key (bool, date, datetime, dict, float, int, list, str, none_type): OnboardingKey. [optional]  # noqa: E501
+            client_id (str): ClientId. [optional]  # noqa: E501
+            onboarding_key (str): OnboardingKey. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -208,9 +203,9 @@ class SdkClientAccountCreateArgs(ModelNormal):
         """SdkClientAccountCreateArgs - a model defined in OpenAPI
 
         Args:
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name
-            rule_name (bool, date, datetime, dict, float, int, list, str, none_type): RuleName
+            description (str): Description
+            name (str): Name
+            rule_name (str): RuleName
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -243,8 +238,8 @@ class SdkClientAccountCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            client_id (bool, date, datetime, dict, float, int, list, str, none_type): ClientId. [optional]  # noqa: E501
-            onboarding_key (bool, date, datetime, dict, float, int, list, str, none_type): OnboardingKey. [optional]  # noqa: E501
+            client_id (str): ClientId. [optional]  # noqa: E501
+            onboarding_key (str): OnboardingKey. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

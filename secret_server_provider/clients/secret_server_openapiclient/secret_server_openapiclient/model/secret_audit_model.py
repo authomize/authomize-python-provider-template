@@ -57,10 +57,8 @@ class SecretAuditModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,39 +66,36 @@ class SecretAuditModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'action': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'action_for_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'by_user_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'database_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'date_recorded': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_proxy_session_data': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'recording_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'recording_session_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'recording_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'username': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'action': (str, none_type,),  # noqa: E501
+            'action_for_display': (str, none_type,),  # noqa: E501
+            'by_user_display_name': (str, none_type,),  # noqa: E501
+            'database_name': (str, none_type,),  # noqa: E501
+            'date_recorded': (datetime, none_type,),  # noqa: E501
+            'has_proxy_session_data': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'notes': (str, none_type,),  # noqa: E501
+            'recording_message': (str, none_type,),  # noqa: E501
+            'recording_session_id': (str, none_type,),  # noqa: E501
+            'recording_status': (int, none_type,),  # noqa: E501
+            'status': (str, none_type,),  # noqa: E501
+            'ticket_number': (str, none_type,),  # noqa: E501
+            'username': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -161,20 +156,20 @@ class SecretAuditModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action of Audit. [optional]  # noqa: E501
-            action_for_display (bool, date, datetime, dict, float, int, list, str, none_type): Action For Display. [optional]  # noqa: E501
-            by_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): User that performed action. [optional]  # noqa: E501
-            database_name (bool, date, datetime, dict, float, int, list, str, none_type): Database Name. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): Date Audit was Recorded. [optional]  # noqa: E501
+            action (str): Action of Audit. [optional]  # noqa: E501
+            action_for_display (str): Action For Display. [optional]  # noqa: E501
+            by_user_display_name (str): User that performed action. [optional]  # noqa: E501
+            database_name (str): Database Name. [optional]  # noqa: E501
+            date_recorded (datetime): Date Audit was Recorded. [optional]  # noqa: E501
             has_proxy_session_data (bool): Has Proxy Session Data. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Audit. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes of Audit. [optional]  # noqa: E501
-            recording_message (bool, date, datetime, dict, float, int, list, str, none_type): Recording Message. [optional]  # noqa: E501
-            recording_session_id (bool, date, datetime, dict, float, int, list, str, none_type): Recording Session Id. [optional]  # noqa: E501
-            recording_status (bool, date, datetime, dict, float, int, list, str, none_type): Status of Recording. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number of Audit. [optional]  # noqa: E501
-            username (bool, date, datetime, dict, float, int, list, str, none_type): Username. [optional]  # noqa: E501
+            id (int): Id of Audit. [optional]  # noqa: E501
+            notes (str): Notes of Audit. [optional]  # noqa: E501
+            recording_message (str): Recording Message. [optional]  # noqa: E501
+            recording_session_id (str): Recording Session Id. [optional]  # noqa: E501
+            recording_status (int): Status of Recording. [optional]  # noqa: E501
+            status (str): Status. [optional]  # noqa: E501
+            ticket_number (str): Ticket Number of Audit. [optional]  # noqa: E501
+            username (str): Username. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -260,20 +255,20 @@ class SecretAuditModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action of Audit. [optional]  # noqa: E501
-            action_for_display (bool, date, datetime, dict, float, int, list, str, none_type): Action For Display. [optional]  # noqa: E501
-            by_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): User that performed action. [optional]  # noqa: E501
-            database_name (bool, date, datetime, dict, float, int, list, str, none_type): Database Name. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): Date Audit was Recorded. [optional]  # noqa: E501
+            action (str): Action of Audit. [optional]  # noqa: E501
+            action_for_display (str): Action For Display. [optional]  # noqa: E501
+            by_user_display_name (str): User that performed action. [optional]  # noqa: E501
+            database_name (str): Database Name. [optional]  # noqa: E501
+            date_recorded (datetime): Date Audit was Recorded. [optional]  # noqa: E501
             has_proxy_session_data (bool): Has Proxy Session Data. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Audit. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes of Audit. [optional]  # noqa: E501
-            recording_message (bool, date, datetime, dict, float, int, list, str, none_type): Recording Message. [optional]  # noqa: E501
-            recording_session_id (bool, date, datetime, dict, float, int, list, str, none_type): Recording Session Id. [optional]  # noqa: E501
-            recording_status (bool, date, datetime, dict, float, int, list, str, none_type): Status of Recording. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number of Audit. [optional]  # noqa: E501
-            username (bool, date, datetime, dict, float, int, list, str, none_type): Username. [optional]  # noqa: E501
+            id (int): Id of Audit. [optional]  # noqa: E501
+            notes (str): Notes of Audit. [optional]  # noqa: E501
+            recording_message (str): Recording Message. [optional]  # noqa: E501
+            recording_session_id (str): Recording Session Id. [optional]  # noqa: E501
+            recording_status (int): Status of Recording. [optional]  # noqa: E501
+            status (str): Status. [optional]  # noqa: E501
+            ticket_number (str): Ticket Number of Audit. [optional]  # noqa: E501
+            username (str): Username. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

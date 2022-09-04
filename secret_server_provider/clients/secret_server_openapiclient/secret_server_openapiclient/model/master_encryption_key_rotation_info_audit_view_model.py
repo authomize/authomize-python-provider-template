@@ -61,10 +61,8 @@ class MasterEncryptionKeyRotationInfoAuditViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,36 +71,33 @@ class MasterEncryptionKeyRotationInfoAuditViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'action': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'current_status': (MasterEncryptionKeyRotationStatus,),  # noqa: E501
-            'date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'formatted_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'master_encryption_key_rotation_info_audit_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'master_encryption_key_rotation_info_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'action': (str, none_type,),  # noqa: E501
+            'current_status': (MasterEncryptionKeyRotationStatus, none_type,),  # noqa: E501
+            'date': (datetime, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'formatted_date': (str, none_type,),  # noqa: E501
+            'master_encryption_key_rotation_info_audit_id': (int, none_type,),  # noqa: E501
+            'master_encryption_key_rotation_info_id': (int, none_type,),  # noqa: E501
+            'notes': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -159,16 +154,16 @@ class MasterEncryptionKeyRotationInfoAuditViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
             current_status (MasterEncryptionKeyRotationStatus): [optional]  # noqa: E501
-            date (bool, date, datetime, dict, float, int, list, str, none_type): Date. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): DisplayName. [optional]  # noqa: E501
-            formatted_date (bool, date, datetime, dict, float, int, list, str, none_type): FormattedDate. [optional]  # noqa: E501
-            master_encryption_key_rotation_info_audit_id (bool, date, datetime, dict, float, int, list, str, none_type): MasterEncryptionKeyRotationInfoAuditId. [optional]  # noqa: E501
-            master_encryption_key_rotation_info_id (bool, date, datetime, dict, float, int, list, str, none_type): MasterEncryptionKeyRotationInfoId. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): UserName. [optional]  # noqa: E501
+            date (datetime): Date. [optional]  # noqa: E501
+            display_name (str): DisplayName. [optional]  # noqa: E501
+            formatted_date (str): FormattedDate. [optional]  # noqa: E501
+            master_encryption_key_rotation_info_audit_id (int): MasterEncryptionKeyRotationInfoAuditId. [optional]  # noqa: E501
+            master_encryption_key_rotation_info_id (int): MasterEncryptionKeyRotationInfoId. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
+            user_id (int): UserId. [optional]  # noqa: E501
+            user_name (str): UserName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -254,16 +249,16 @@ class MasterEncryptionKeyRotationInfoAuditViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
             current_status (MasterEncryptionKeyRotationStatus): [optional]  # noqa: E501
-            date (bool, date, datetime, dict, float, int, list, str, none_type): Date. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): DisplayName. [optional]  # noqa: E501
-            formatted_date (bool, date, datetime, dict, float, int, list, str, none_type): FormattedDate. [optional]  # noqa: E501
-            master_encryption_key_rotation_info_audit_id (bool, date, datetime, dict, float, int, list, str, none_type): MasterEncryptionKeyRotationInfoAuditId. [optional]  # noqa: E501
-            master_encryption_key_rotation_info_id (bool, date, datetime, dict, float, int, list, str, none_type): MasterEncryptionKeyRotationInfoId. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): UserName. [optional]  # noqa: E501
+            date (datetime): Date. [optional]  # noqa: E501
+            display_name (str): DisplayName. [optional]  # noqa: E501
+            formatted_date (str): FormattedDate. [optional]  # noqa: E501
+            master_encryption_key_rotation_info_audit_id (int): MasterEncryptionKeyRotationInfoAuditId. [optional]  # noqa: E501
+            master_encryption_key_rotation_info_id (int): MasterEncryptionKeyRotationInfoId. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
+            user_id (int): UserId. [optional]  # noqa: E501
+            user_name (str): UserName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

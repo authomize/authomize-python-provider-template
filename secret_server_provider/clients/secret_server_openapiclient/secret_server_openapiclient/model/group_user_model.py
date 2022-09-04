@@ -57,10 +57,8 @@ class GroupUserModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class GroupUserModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'group_domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'group_domain_id': (int, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'group_name': (str, none_type,),  # noqa: E501
+            'user_domain_id': (int, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,12 +140,12 @@ class GroupUserModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            group_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Group Active Directory domain ID. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
-            group_name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
-            user_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): User Active Directory domain ID. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name. [optional]  # noqa: E501
+            group_domain_id (int): Group Active Directory domain ID. [optional]  # noqa: E501
+            group_id (int): Group ID. [optional]  # noqa: E501
+            group_name (str): Group name. [optional]  # noqa: E501
+            user_domain_id (int): User Active Directory domain ID. [optional]  # noqa: E501
+            user_id (int): User ID. [optional]  # noqa: E501
+            user_name (str): User name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,12 +231,12 @@ class GroupUserModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            group_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Group Active Directory domain ID. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
-            group_name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
-            user_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): User Active Directory domain ID. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name. [optional]  # noqa: E501
+            group_domain_id (int): Group Active Directory domain ID. [optional]  # noqa: E501
+            group_id (int): Group ID. [optional]  # noqa: E501
+            group_name (str): Group name. [optional]  # noqa: E501
+            user_domain_id (int): User Active Directory domain ID. [optional]  # noqa: E501
+            user_id (int): User ID. [optional]  # noqa: E501
+            user_name (str): User name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

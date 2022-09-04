@@ -57,10 +57,8 @@ class ConfigurationLoginTwoFactorRadiusModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,44 +66,41 @@ class ConfigurationLoginTwoFactorRadiusModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'attempt_user_password': (bool,),  # noqa: E501
-            'client_port_range': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'default_username': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'disable_nas_ip_address_attribute': (bool,),  # noqa: E501
-            'enable': (bool,),  # noqa: E501
-            'enable_failover_server': (bool,),  # noqa: E501
-            'enable_radius_nas_id': (bool,),  # noqa: E501
-            'failover_server_ip': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'failover_server_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'failover_shared_secret': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'failover_timeout_seconds': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'login_explanation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'nas_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'protocol': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_ip': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'shared_secret': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'shared_secret_same_for_all_users': (bool,),  # noqa: E501
-            'timeout_seconds': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'attempt_user_password': (bool, none_type,),  # noqa: E501
+            'client_port_range': (str, none_type,),  # noqa: E501
+            'default_username': (str, none_type,),  # noqa: E501
+            'disable_nas_ip_address_attribute': (bool, none_type,),  # noqa: E501
+            'enable': (bool, none_type,),  # noqa: E501
+            'enable_failover_server': (bool, none_type,),  # noqa: E501
+            'enable_radius_nas_id': (bool, none_type,),  # noqa: E501
+            'failover_server_ip': (str, none_type,),  # noqa: E501
+            'failover_server_port': (int, none_type,),  # noqa: E501
+            'failover_shared_secret': (str, none_type,),  # noqa: E501
+            'failover_timeout_seconds': (int, none_type,),  # noqa: E501
+            'login_explanation': (str, none_type,),  # noqa: E501
+            'nas_id': (str, none_type,),  # noqa: E501
+            'protocol': (int, none_type,),  # noqa: E501
+            'server_ip': (str, none_type,),  # noqa: E501
+            'server_port': (int, none_type,),  # noqa: E501
+            'shared_secret': (str, none_type,),  # noqa: E501
+            'shared_secret_same_for_all_users': (bool, none_type,),  # noqa: E501
+            'timeout_seconds': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -172,24 +167,24 @@ class ConfigurationLoginTwoFactorRadiusModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             attempt_user_password (bool): If checked, Secret Server will automatically try to authenticate to RADIUS using the user's local password after it is entered during login.  If RADIUS authentication fails, the user will be prompted for the correct RADIUS password.Please note that this is not supported when Integrated Windows  Authentication is enabled. [optional]  # noqa: E501
-            client_port_range (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Client Port Range. [optional]  # noqa: E501
-            default_username (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Default Username. [optional]  # noqa: E501
+            client_port_range (str): RADIUS Client Port Range. [optional]  # noqa: E501
+            default_username (str): RADIUS Default Username. [optional]  # noqa: E501
             disable_nas_ip_address_attribute (bool): Disable Radius NAS-IP-Address Attribute. [optional]  # noqa: E501
             enable (bool): Enabling RADIUS integration will allow another form of two factor authentication for users. [optional]  # noqa: E501
             enable_failover_server (bool): Enabling a Failover RADIUS server will allow another server to fail over to. [optional]  # noqa: E501
             enable_radius_nas_id (bool): Configure the NAS-Identifier that will be sent with the RADIUS Access-Request. [optional]  # noqa: E501
-            failover_server_ip (bool, date, datetime, dict, float, int, list, str, none_type): The IP address of your Failover RADIUS server. [optional]  # noqa: E501
-            failover_server_port (bool, date, datetime, dict, float, int, list, str, none_type): Failover RADIUS Server Port. [optional]  # noqa: E501
-            failover_shared_secret (bool, date, datetime, dict, float, int, list, str, none_type): Failover RADIUS Shared Secret. [optional]  # noqa: E501
-            failover_timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): Failover Time Out (seconds). [optional]  # noqa: E501
-            login_explanation (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Login Explanation. [optional]  # noqa: E501
-            nas_id (bool, date, datetime, dict, float, int, list, str, none_type): The NAS-Identifier attribute value that will be sent with the RADIUS Access-Request. [optional]  # noqa: E501
-            protocol (bool, date, datetime, dict, float, int, list, str, none_type): Authentication Protocol. [optional]  # noqa: E501
-            server_ip (bool, date, datetime, dict, float, int, list, str, none_type): The IP address of your RADIUS server. [optional]  # noqa: E501
-            server_port (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Server Port. [optional]  # noqa: E501
-            shared_secret (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Shared Secret for All Users. [optional]  # noqa: E501
+            failover_server_ip (str): The IP address of your Failover RADIUS server. [optional]  # noqa: E501
+            failover_server_port (int): Failover RADIUS Server Port. [optional]  # noqa: E501
+            failover_shared_secret (str): Failover RADIUS Shared Secret. [optional]  # noqa: E501
+            failover_timeout_seconds (int): Failover Time Out (seconds). [optional]  # noqa: E501
+            login_explanation (str): RADIUS Login Explanation. [optional]  # noqa: E501
+            nas_id (str): The NAS-Identifier attribute value that will be sent with the RADIUS Access-Request. [optional]  # noqa: E501
+            protocol (int): Authentication Protocol. [optional]  # noqa: E501
+            server_ip (str): The IP address of your RADIUS server. [optional]  # noqa: E501
+            server_port (int): RADIUS Server Port. [optional]  # noqa: E501
+            shared_secret (str): RADIUS Shared Secret for All Users. [optional]  # noqa: E501
             shared_secret_same_for_all_users (bool): Use Same RADIUS Shared Secret for All Users. [optional]  # noqa: E501
-            timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): Time Out (seconds). [optional]  # noqa: E501
+            timeout_seconds (int): Time Out (seconds). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -276,24 +271,24 @@ class ConfigurationLoginTwoFactorRadiusModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             attempt_user_password (bool): If checked, Secret Server will automatically try to authenticate to RADIUS using the user's local password after it is entered during login.  If RADIUS authentication fails, the user will be prompted for the correct RADIUS password.Please note that this is not supported when Integrated Windows  Authentication is enabled. [optional]  # noqa: E501
-            client_port_range (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Client Port Range. [optional]  # noqa: E501
-            default_username (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Default Username. [optional]  # noqa: E501
+            client_port_range (str): RADIUS Client Port Range. [optional]  # noqa: E501
+            default_username (str): RADIUS Default Username. [optional]  # noqa: E501
             disable_nas_ip_address_attribute (bool): Disable Radius NAS-IP-Address Attribute. [optional]  # noqa: E501
             enable (bool): Enabling RADIUS integration will allow another form of two factor authentication for users. [optional]  # noqa: E501
             enable_failover_server (bool): Enabling a Failover RADIUS server will allow another server to fail over to. [optional]  # noqa: E501
             enable_radius_nas_id (bool): Configure the NAS-Identifier that will be sent with the RADIUS Access-Request. [optional]  # noqa: E501
-            failover_server_ip (bool, date, datetime, dict, float, int, list, str, none_type): The IP address of your Failover RADIUS server. [optional]  # noqa: E501
-            failover_server_port (bool, date, datetime, dict, float, int, list, str, none_type): Failover RADIUS Server Port. [optional]  # noqa: E501
-            failover_shared_secret (bool, date, datetime, dict, float, int, list, str, none_type): Failover RADIUS Shared Secret. [optional]  # noqa: E501
-            failover_timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): Failover Time Out (seconds). [optional]  # noqa: E501
-            login_explanation (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Login Explanation. [optional]  # noqa: E501
-            nas_id (bool, date, datetime, dict, float, int, list, str, none_type): The NAS-Identifier attribute value that will be sent with the RADIUS Access-Request. [optional]  # noqa: E501
-            protocol (bool, date, datetime, dict, float, int, list, str, none_type): Authentication Protocol. [optional]  # noqa: E501
-            server_ip (bool, date, datetime, dict, float, int, list, str, none_type): The IP address of your RADIUS server. [optional]  # noqa: E501
-            server_port (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Server Port. [optional]  # noqa: E501
-            shared_secret (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS Shared Secret for All Users. [optional]  # noqa: E501
+            failover_server_ip (str): The IP address of your Failover RADIUS server. [optional]  # noqa: E501
+            failover_server_port (int): Failover RADIUS Server Port. [optional]  # noqa: E501
+            failover_shared_secret (str): Failover RADIUS Shared Secret. [optional]  # noqa: E501
+            failover_timeout_seconds (int): Failover Time Out (seconds). [optional]  # noqa: E501
+            login_explanation (str): RADIUS Login Explanation. [optional]  # noqa: E501
+            nas_id (str): The NAS-Identifier attribute value that will be sent with the RADIUS Access-Request. [optional]  # noqa: E501
+            protocol (int): Authentication Protocol. [optional]  # noqa: E501
+            server_ip (str): The IP address of your RADIUS server. [optional]  # noqa: E501
+            server_port (int): RADIUS Server Port. [optional]  # noqa: E501
+            shared_secret (str): RADIUS Shared Secret for All Users. [optional]  # noqa: E501
             shared_secret_same_for_all_users (bool): Use Same RADIUS Shared Secret for All Users. [optional]  # noqa: E501
-            timeout_seconds (bool, date, datetime, dict, float, int, list, str, none_type): Time Out (seconds). [optional]  # noqa: E501
+            timeout_seconds (int): Time Out (seconds). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

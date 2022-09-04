@@ -61,10 +61,8 @@ class EnterpriseSearchRequestFilter(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,30 +71,27 @@ class EnterpriseSearchRequestFilter(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'end_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enterprise_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_fields': ([EnterpriseSearchRequestFieldModel],),  # noqa: E501
-            'start_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'end_date': (datetime, none_type,),  # noqa: E501
+            'enterprise_name': (str, none_type,),  # noqa: E501
+            'request_fields': ([EnterpriseSearchRequestFieldModel], none_type,),  # noqa: E501
+            'start_date': (datetime, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,10 +142,10 @@ class EnterpriseSearchRequestFilter(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            end_date (bool, date, datetime, dict, float, int, list, str, none_type): End Date of date range to filter. [optional]  # noqa: E501
-            enterprise_name (bool, date, datetime, dict, float, int, list, str, none_type): Specify this for filtering data by the Enterprise Name. [optional]  # noqa: E501
+            end_date (datetime): End Date of date range to filter. [optional]  # noqa: E501
+            enterprise_name (str): Specify this for filtering data by the Enterprise Name. [optional]  # noqa: E501
             request_fields ([EnterpriseSearchRequestFieldModel]): Fields used for filtering results. At least one is required. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): Start Date of date range to filter. [optional]  # noqa: E501
+            start_date (datetime): Start Date of date range to filter. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,10 +231,10 @@ class EnterpriseSearchRequestFilter(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            end_date (bool, date, datetime, dict, float, int, list, str, none_type): End Date of date range to filter. [optional]  # noqa: E501
-            enterprise_name (bool, date, datetime, dict, float, int, list, str, none_type): Specify this for filtering data by the Enterprise Name. [optional]  # noqa: E501
+            end_date (datetime): End Date of date range to filter. [optional]  # noqa: E501
+            enterprise_name (str): Specify this for filtering data by the Enterprise Name. [optional]  # noqa: E501
             request_fields ([EnterpriseSearchRequestFieldModel]): Fields used for filtering results. At least one is required. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): Start Date of date range to filter. [optional]  # noqa: E501
+            start_date (datetime): Start Date of date range to filter. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

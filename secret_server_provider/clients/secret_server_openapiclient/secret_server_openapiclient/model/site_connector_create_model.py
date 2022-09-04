@@ -61,10 +61,8 @@ class SiteConnectorCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,35 +71,32 @@ class SiteConnectorCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'host_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'queue_type': (MessageQueueType,),  # noqa: E501
-            'shared_access_key_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'shared_access_key_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_connector_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssl_certificate_thumbprint': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_ssl': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'host_name': (str, none_type,),  # noqa: E501
+            'port': (int, none_type,),  # noqa: E501
+            'queue_type': (MessageQueueType, none_type,),  # noqa: E501
+            'shared_access_key_name': (str, none_type,),  # noqa: E501
+            'shared_access_key_value': (str, none_type,),  # noqa: E501
+            'site_connector_name': (str, none_type,),  # noqa: E501
+            'ssl_certificate_thumbprint': (str, none_type,),  # noqa: E501
+            'use_ssl': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -158,13 +153,13 @@ class SiteConnectorCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether Site Connector is active or not. [optional]  # noqa: E501
-            host_name (bool, date, datetime, dict, float, int, list, str, none_type): Host Name of Site Connector. [optional]  # noqa: E501
-            port (bool, date, datetime, dict, float, int, list, str, none_type): Port of Site Connector. [optional]  # noqa: E501
+            host_name (str): Host Name of Site Connector. [optional]  # noqa: E501
+            port (int): Port of Site Connector. [optional]  # noqa: E501
             queue_type (MessageQueueType): [optional]  # noqa: E501
-            shared_access_key_name (bool, date, datetime, dict, float, int, list, str, none_type): Shared Access Key Name of Site Connector. [optional]  # noqa: E501
-            shared_access_key_value (bool, date, datetime, dict, float, int, list, str, none_type): Shared Access Key Value of Site Connector. [optional]  # noqa: E501
-            site_connector_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Site Connector. [optional]  # noqa: E501
-            ssl_certificate_thumbprint (bool, date, datetime, dict, float, int, list, str, none_type): SSL Certificate Thumbprint of Site Connector. [optional]  # noqa: E501
+            shared_access_key_name (str): Shared Access Key Name of Site Connector. [optional]  # noqa: E501
+            shared_access_key_value (str): Shared Access Key Value of Site Connector. [optional]  # noqa: E501
+            site_connector_name (str): Name of Site Connector. [optional]  # noqa: E501
+            ssl_certificate_thumbprint (str): SSL Certificate Thumbprint of Site Connector. [optional]  # noqa: E501
             use_ssl (bool): Whether Site Connector uses SSL or not. [optional]  # noqa: E501
         """
 
@@ -252,13 +247,13 @@ class SiteConnectorCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether Site Connector is active or not. [optional]  # noqa: E501
-            host_name (bool, date, datetime, dict, float, int, list, str, none_type): Host Name of Site Connector. [optional]  # noqa: E501
-            port (bool, date, datetime, dict, float, int, list, str, none_type): Port of Site Connector. [optional]  # noqa: E501
+            host_name (str): Host Name of Site Connector. [optional]  # noqa: E501
+            port (int): Port of Site Connector. [optional]  # noqa: E501
             queue_type (MessageQueueType): [optional]  # noqa: E501
-            shared_access_key_name (bool, date, datetime, dict, float, int, list, str, none_type): Shared Access Key Name of Site Connector. [optional]  # noqa: E501
-            shared_access_key_value (bool, date, datetime, dict, float, int, list, str, none_type): Shared Access Key Value of Site Connector. [optional]  # noqa: E501
-            site_connector_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Site Connector. [optional]  # noqa: E501
-            ssl_certificate_thumbprint (bool, date, datetime, dict, float, int, list, str, none_type): SSL Certificate Thumbprint of Site Connector. [optional]  # noqa: E501
+            shared_access_key_name (str): Shared Access Key Name of Site Connector. [optional]  # noqa: E501
+            shared_access_key_value (str): Shared Access Key Value of Site Connector. [optional]  # noqa: E501
+            site_connector_name (str): Name of Site Connector. [optional]  # noqa: E501
+            ssl_certificate_thumbprint (str): SSL Certificate Thumbprint of Site Connector. [optional]  # noqa: E501
             use_ssl (bool): Whether Site Connector uses SSL or not. [optional]  # noqa: E501
         """
 

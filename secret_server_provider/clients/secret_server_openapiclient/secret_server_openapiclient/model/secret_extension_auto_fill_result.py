@@ -57,10 +57,8 @@ class SecretExtensionAutoFillResult(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class SecretExtensionAutoFillResult(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'username': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_session_recording': (bool,),  # noqa: E501
-            'web_launcher_requires_incognito_mode': (bool,),  # noqa: E501
+            'password': (str, none_type,),  # noqa: E501
+            'username': (str, none_type,),  # noqa: E501
+            'use_session_recording': (bool, none_type,),  # noqa: E501
+            'web_launcher_requires_incognito_mode': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,8 +136,8 @@ class SecretExtensionAutoFillResult(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            password (bool, date, datetime, dict, float, int, list, str, none_type): Password. [optional]  # noqa: E501
-            username (bool, date, datetime, dict, float, int, list, str, none_type): Username. [optional]  # noqa: E501
+            password (str): Password. [optional]  # noqa: E501
+            username (str): Username. [optional]  # noqa: E501
             use_session_recording (bool): UseSessionRecording. [optional]  # noqa: E501
             web_launcher_requires_incognito_mode (bool): WebLauncherRequiresIncognitoMode. [optional]  # noqa: E501
         """
@@ -230,8 +225,8 @@ class SecretExtensionAutoFillResult(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            password (bool, date, datetime, dict, float, int, list, str, none_type): Password. [optional]  # noqa: E501
-            username (bool, date, datetime, dict, float, int, list, str, none_type): Username. [optional]  # noqa: E501
+            password (str): Password. [optional]  # noqa: E501
+            username (str): Username. [optional]  # noqa: E501
             use_session_recording (bool): UseSessionRecording. [optional]  # noqa: E501
             web_launcher_requires_incognito_mode (bool): WebLauncherRequiresIncognitoMode. [optional]  # noqa: E501
         """

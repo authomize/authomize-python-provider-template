@@ -67,10 +67,8 @@ class AutoExportConfigurationUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,34 +77,31 @@ class AutoExportConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'enable_auto_export': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'export_child_folders': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'export_folder_paths': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'export_password_secret_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'export_path': (UpdateFieldValueOfString,),  # noqa: E501
-            'export_totp_settings': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'folder_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'frequency_days': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'enable_auto_export': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'export_child_folders': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'export_folder_paths': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'export_password_secret_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'export_path': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'export_totp_settings': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'folder_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'frequency_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

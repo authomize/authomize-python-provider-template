@@ -54,7 +54,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = app_clients_api.AppClientsApi(api_client)
     app_client_create_args = AppClientCreateArgs(
-        redirect_uri=None,
+        redirect_uri="redirect_uri_example",
     ) # AppClientCreateArgs | App client creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -140,7 +140,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = app_clients_api.AppClientsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | App client ID
+    id = 1 # int | App client ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -156,7 +156,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| App client ID |
+ **id** | **int**| App client ID |
 
 ### Return type
 
@@ -224,7 +224,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = app_clients_api.AppClientsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | App client ID
+    id = 1 # int | App client ID
     include_inactive = True # bool | Whether to include inactive app clients (optional)
 
     # example passing only required values which don't have defaults set
@@ -250,7 +250,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| App client ID |
+ **id** | **int**| App client ID |
  **include_inactive** | **bool**| Whether to include inactive app clients | [optional]
 
 ### Return type
@@ -400,10 +400,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = app_clients_api.AppClientsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | App client ID
+    id = 1 # int | App client ID
     app_client_update_args = AppClientUpdateArgs(
-        id=None,
-        redirect_uri=None,
+        id=1,
+        redirect_uri="redirect_uri_example",
     ) # AppClientUpdateArgs | App client update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -429,7 +429,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| App client ID |
+ **id** | **int**| App client ID |
  **app_client_update_args** | [**AppClientUpdateArgs**](AppClientUpdateArgs.md)| App client update options | [optional]
 
 ### Return type

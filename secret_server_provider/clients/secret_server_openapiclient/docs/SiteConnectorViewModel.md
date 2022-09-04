@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **queue_type** | [**ViewFieldDropDownValueOfMessageQueueType**](ViewFieldDropDownValueOfMessageQueueType.md) |  | [optional] 
 **shared_access_key_name** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
 **shared_access_key_value** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
-**site_connector_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | Id of Site Connector | [optional] 
+**site_connector_id** | **int** | Id of Site Connector | [optional] 
 **site_connector_name** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
 **ssl_certificate_thumbprint** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
 **use_ssl** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 

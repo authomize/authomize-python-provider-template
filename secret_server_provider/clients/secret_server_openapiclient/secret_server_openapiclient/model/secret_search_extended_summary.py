@@ -57,10 +57,8 @@ class SecretSearchExtendedSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class SecretSearchExtendedSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'has_launchers': (bool,),  # noqa: E501
-            'is_favorite': (bool,),  # noqa: E501
-            'last_accessed': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'total_secret_views': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'has_launchers': (bool, none_type,),  # noqa: E501
+            'is_favorite': (bool, none_type,),  # noqa: E501
+            'last_accessed': (datetime, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'total_secret_views': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,10 +142,10 @@ class SecretSearchExtendedSummary(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             has_launchers (bool): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
             is_favorite (bool): Is this a favorite secret for the current user. [optional]  # noqa: E501
-            last_accessed (bool, date, datetime, dict, float, int, list, str, none_type): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Name. [optional]  # noqa: E501
-            total_secret_views (bool, date, datetime, dict, float, int, list, str, none_type): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
+            last_accessed (datetime): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
+            secret_id (int): Secret ID. [optional]  # noqa: E501
+            secret_name (str): Secret Name. [optional]  # noqa: E501
+            total_secret_views (int): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -238,10 +233,10 @@ class SecretSearchExtendedSummary(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             has_launchers (bool): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
             is_favorite (bool): Is this a favorite secret for the current user. [optional]  # noqa: E501
-            last_accessed (bool, date, datetime, dict, float, int, list, str, none_type): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Name. [optional]  # noqa: E501
-            total_secret_views (bool, date, datetime, dict, float, int, list, str, none_type): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
+            last_accessed (datetime): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
+            secret_id (int): Secret ID. [optional]  # noqa: E501
+            secret_name (str): Secret Name. [optional]  # noqa: E501
+            total_secret_views (int): Does this Secret have launchers the current user can use. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

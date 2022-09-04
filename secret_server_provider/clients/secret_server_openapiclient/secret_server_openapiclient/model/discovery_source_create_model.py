@@ -63,10 +63,8 @@ class DiscoverySourceCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,35 +73,32 @@ class DiscoverySourceCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'discover_specific_ous': (bool,),  # noqa: E501
-            'discovery_scanner_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_source_settings': (DiscoverySourceSettingsCreateModel,),  # noqa: E501
-            'last_discovery_run_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'machine_name_resolution_type': (MachineNameResolutionType,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'discover_specific_ous': (bool, none_type,),  # noqa: E501
+            'discovery_scanner_id': (str, none_type,),  # noqa: E501
+            'discovery_source_settings': (DiscoverySourceSettingsCreateModel, none_type,),  # noqa: E501
+            'last_discovery_run_date': (datetime, none_type,),  # noqa: E501
+            'machine_name_resolution_type': (MachineNameResolutionType, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -161,13 +156,13 @@ class DiscoverySourceCreateModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Is discovery source active. [optional]  # noqa: E501
             discover_specific_ous (bool): Discover specific OUs. [optional]  # noqa: E501
-            discovery_scanner_id (bool, date, datetime, dict, float, int, list, str, none_type): Discovery scanner ID. [optional]  # noqa: E501
+            discovery_scanner_id (str): Discovery scanner ID. [optional]  # noqa: E501
             discovery_source_settings (DiscoverySourceSettingsCreateModel): [optional]  # noqa: E501
-            last_discovery_run_date (bool, date, datetime, dict, float, int, list, str, none_type): Last discovery run date. [optional]  # noqa: E501
+            last_discovery_run_date (datetime): Last discovery run date. [optional]  # noqa: E501
             machine_name_resolution_type (MachineNameResolutionType): [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The discovery source naame. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Discovery Secret credential. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The site ID. [optional]  # noqa: E501
+            name (str): The discovery source naame. [optional]  # noqa: E501
+            secret_id (int): Discovery Secret credential. [optional]  # noqa: E501
+            site_id (int): The site ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -255,13 +250,13 @@ class DiscoverySourceCreateModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Is discovery source active. [optional]  # noqa: E501
             discover_specific_ous (bool): Discover specific OUs. [optional]  # noqa: E501
-            discovery_scanner_id (bool, date, datetime, dict, float, int, list, str, none_type): Discovery scanner ID. [optional]  # noqa: E501
+            discovery_scanner_id (str): Discovery scanner ID. [optional]  # noqa: E501
             discovery_source_settings (DiscoverySourceSettingsCreateModel): [optional]  # noqa: E501
-            last_discovery_run_date (bool, date, datetime, dict, float, int, list, str, none_type): Last discovery run date. [optional]  # noqa: E501
+            last_discovery_run_date (datetime): Last discovery run date. [optional]  # noqa: E501
             machine_name_resolution_type (MachineNameResolutionType): [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The discovery source naame. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Discovery Secret credential. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The site ID. [optional]  # noqa: E501
+            name (str): The discovery source naame. [optional]  # noqa: E501
+            secret_id (int): Discovery Secret credential. [optional]  # noqa: E501
+            site_id (int): The site ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

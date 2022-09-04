@@ -86,7 +86,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    dictionary_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Dictionary Name (optional)
+    dictionary_name = "dictionary_name_example" # str | Dictionary Name (optional)
     file =  # file | Uploaded file (optional)
 
     # example passing only required values which don't have defaults set
@@ -104,7 +104,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dictionary_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Dictionary Name | [optional]
+ **dictionary_name** | **str**| Dictionary Name | [optional]
  **file** | **file**| Uploaded file | [optional]
 
 ### Return type
@@ -174,10 +174,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret template ID
+    id = 1 # int | Secret template ID
     secret_template_copy_args = SecretTemplateCopyArgs(
         data=SecretTemplateCopyModel(
-            name=None,
+            name="name_example",
         ),
     ) # SecretTemplateCopyArgs | args (optional)
 
@@ -204,7 +204,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret template ID |
+ **id** | **int**| Secret template ID |
  **secret_template_copy_args** | [**SecretTemplateCopyArgs**](SecretTemplateCopyArgs.md)| args | [optional]
 
 ### Return type
@@ -274,17 +274,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | templateId
+    template_id = 1 # int | templateId
     secret_template_field_create_args = SecretTemplateFieldCreateArgs(
-        description=None,
-        display_name=None,
-        editable_permission=None,
+        description="description_example",
+        display_name="display_name_example",
+        editable_permission=1,
         edit_requires=EditRequiresOptions("{}"),
-        field_slug_name=None,
-        generate_password_character_set=None,
-        generate_password_length=None,
+        field_slug_name="field_slug_name_example",
+        generate_password_character_set="generate_password_character_set_example",
+        generate_password_length=1,
         hide_on_view=True,
-        history_length=None,
+        history_length=1,
         is_expiration_field=True,
         is_file=True,
         is_indexable=True,
@@ -294,10 +294,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         is_url=True,
         list_type=ListType("{}"),
         must_encrypt=True,
-        name=None,
-        password_requirement_id=None,
-        password_type_field_id=None,
-        sort_order=None,
+        name="name_example",
+        password_requirement_id=1,
+        password_type_field_id=1,
+        sort_order=1,
     ) # SecretTemplateFieldCreateArgs | Secret Template Field creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -323,7 +323,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| templateId |
+ **template_id** | **int**| templateId |
  **secret_template_field_create_args** | [**SecretTemplateFieldCreateArgs**](SecretTemplateFieldCreateArgs.md)| Secret Template Field creation options | [optional]
 
 ### Return type
@@ -393,14 +393,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    extended_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | extendedTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    extended_type_id = 1 # int | extendedTypeId
+    secret_template_id = 1 # int | secretTemplateId
     secret_template_extended_mapping_create_args = SecretTemplateExtendedMappingCreateArgs(
         data=SecretTemplateExtendedMappingCreateModel(
             fields=[
                 SecretTemplateExtendedMappingCreateFieldModel(
-                    extended_field_id=None,
-                    secret_field_id=None,
+                    extended_field_id=1,
+                    secret_field_id=1,
                 ),
             ],
         ),
@@ -429,8 +429,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extended_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| extendedTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **extended_type_id** | **int**| extendedTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
  **secret_template_extended_mapping_create_args** | [**SecretTemplateExtendedMappingCreateArgs**](SecretTemplateExtendedMappingCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -500,15 +500,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    launcher_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | launcherTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    launcher_type_id = 1 # int | launcherTypeId
+    secret_template_id = 1 # int | secretTemplateId
     secret_template_launcher_create_args = SecretTemplateLauncherCreateArgs(
         data=SecretTemplateLauncherCreateModel(
             fields=[
                 SecretTemplateLauncherCreateFieldModel(
-                    default_value=None,
-                    launcher_type_field_id=None,
-                    secret_field_id=None,
+                    default_value="default_value_example",
+                    launcher_type_field_id=1,
+                    secret_field_id=1,
                 ),
             ],
         ),
@@ -537,8 +537,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **launcher_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| launcherTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **launcher_type_id** | **int**| launcherTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
  **secret_template_launcher_create_args** | [**SecretTemplateLauncherCreateArgs**](SecretTemplateLauncherCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -611,15 +611,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     secret_template_create_args = SecretTemplateCreateArgs(
         fields=[
             SecretTemplateFieldCreateArgs(
-                description=None,
-                display_name=None,
-                editable_permission=None,
+                description="description_example",
+                display_name="display_name_example",
+                editable_permission=1,
                 edit_requires=EditRequiresOptions("{}"),
-                field_slug_name=None,
-                generate_password_character_set=None,
-                generate_password_length=None,
+                field_slug_name="field_slug_name_example",
+                generate_password_character_set="generate_password_character_set_example",
+                generate_password_length=1,
                 hide_on_view=True,
-                history_length=None,
+                history_length=1,
                 is_expiration_field=True,
                 is_file=True,
                 is_indexable=True,
@@ -629,13 +629,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 is_url=True,
                 list_type=ListType("{}"),
                 must_encrypt=True,
-                name=None,
-                password_requirement_id=None,
-                password_type_field_id=None,
-                sort_order=None,
+                name="name_example",
+                password_requirement_id=1,
+                password_type_field_id=1,
+                sort_order=1,
             ),
         ],
-        name=None,
+        name="name_example",
     ) # SecretTemplateCreateArgs | Secret Template creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -722,13 +722,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    secret_template_id = 1 # int | secretTemplateId
     secret_field_create_args = SecretFieldCreateArgs(
         data=SecretTemplateFieldCreateModel(
             data_type=FieldDataType("{}"),
-            description=None,
-            field_slug_name=None,
-            name=None,
+            description="description_example",
+            field_slug_name="field_slug_name_example",
+            name="name_example",
         ),
     ) # SecretFieldCreateArgs | args (optional)
 
@@ -755,7 +755,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **secret_template_id** | **int**| secretTemplateId |
  **secret_field_create_args** | [**SecretFieldCreateArgs**](SecretFieldCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -824,8 +824,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    extended_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | extendedTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    extended_type_id = 1 # int | extendedTypeId
+    secret_template_id = 1 # int | secretTemplateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -841,8 +841,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extended_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| extendedTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **extended_type_id** | **int**| extendedTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
 
 ### Return type
 
@@ -909,7 +909,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -925,7 +925,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -993,8 +993,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    launcher_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | launcherTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    launcher_type_id = 1 # int | launcherTypeId
+    secret_template_id = 1 # int | secretTemplateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1010,8 +1010,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **launcher_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| launcherTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **launcher_type_id** | **int**| launcherTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
 
 ### Return type
 
@@ -1079,7 +1079,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    template_field_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Template Field to disable
+    template_field_id = 1 # int | Secret Template Field to disable
 
     # example passing only required values which don't have defaults set
     try:
@@ -1095,7 +1095,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **template_field_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Template Field to disable |
+ **template_field_id** | **int**| Secret Template Field to disable |
 
 ### Return type
 
@@ -1163,7 +1163,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret template ID
+    id = 1 # int | Secret template ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -1179,7 +1179,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret template ID |
+ **id** | **int**| Secret template ID |
 
 ### Return type
 
@@ -1207,7 +1207,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **secret_templates_service_generate_password**
-> bool, date, datetime, dict, float, int, list, str, none_type secret_templates_service_generate_password(secretfield_id)
+> str secret_templates_service_generate_password(secretfield_id)
 
 Generate Password
 
@@ -1246,7 +1246,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secretfield_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret field Id
+    secretfield_id = 1 # int | Secret field Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -1262,11 +1262,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secretfield_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret field Id |
+ **secretfield_id** | **int**| Secret field Id |
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -1409,7 +1409,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -1424,7 +1424,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -1492,8 +1492,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    extended_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | extendedTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    extended_type_id = 1 # int | extendedTypeId
+    secret_template_id = 1 # int | secretTemplateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1509,8 +1509,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extended_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| extendedTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **extended_type_id** | **int**| extendedTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
 
 ### Return type
 
@@ -1578,8 +1578,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    launcher_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | launcherTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    launcher_type_id = 1 # int | launcherTypeId
+    secret_template_id = 1 # int | secretTemplateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1595,8 +1595,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **launcher_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| launcherTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **launcher_type_id** | **int**| launcherTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
 
 ### Return type
 
@@ -1663,7 +1663,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    secret_template_id = 1 # int | secretTemplateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1679,7 +1679,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **secret_template_id** | **int**| secretTemplateId |
 
 ### Return type
 
@@ -1747,7 +1747,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secret_field_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretFieldId
+    secret_field_id = 1 # int | secretFieldId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1763,7 +1763,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_field_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretFieldId |
+ **secret_field_id** | **int**| secretFieldId |
 
 ### Return type
 
@@ -1831,7 +1831,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | folderId (optional)
+    folder_id = 1 # int | folderId (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1848,7 +1848,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| folderId | [optional]
+ **folder_id** | **int**| folderId | [optional]
 
 ### Return type
 
@@ -1916,7 +1916,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    secret_template_id = 1 # int | secretTemplateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1932,7 +1932,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **secret_template_id** | **int**| secretTemplateId |
 
 ### Return type
 
@@ -2003,7 +2003,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
     secret_template_import_args = SecretTemplateImportArgs(
         data=SecretTemplateImportModel(
-            template_xml=None,
+            template_xml="template_xml_example",
         ),
     ) # SecretTemplateImportArgs | args (optional)
 
@@ -2090,12 +2090,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    secret_template_id = 1 # int | secretTemplateId
     secret_template_password_type_patch_args = SecretTemplatePasswordTypePatchArgs(
         data=SecretTemplatePasswordTypePatchModel(
             default_privileged_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_heartbeat=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -2109,42 +2109,42 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 dirty=True,
                 value=[
                     SecretTemplatePasswordTypeFieldMappingUpdateModel(
-                        password_type_field_id=None,
-                        secret_field_id=None,
+                        password_type_field_id=1,
+                        secret_field_id=1,
                     ),
                 ],
             ),
             heartbeat_interval_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             heartbeat_interval_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             heartbeat_interval_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             password_type_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             rpc_interval_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             rpc_interval_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             rpc_interval_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             rpc_max_attempts=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # SecretTemplatePasswordTypePatchArgs | args (optional)
@@ -2172,7 +2172,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **secret_template_id** | **int**| secretTemplateId |
  **secret_template_password_type_patch_args** | [**SecretTemplatePasswordTypePatchArgs**](SecretTemplatePasswordTypePatchArgs.md)| args | [optional]
 
 ### Return type
@@ -2242,7 +2242,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secret_template_field_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateFieldId
+    secret_template_field_id = 1 # int | secretTemplateFieldId
     secret_field_patch_args = SecretFieldPatchArgs(
         data=SecretTemplateFieldPatchModel(
             active=UpdateFieldValueOfBoolean(
@@ -2255,20 +2255,20 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             dropdown_options_to_add=UpdateFieldValueOfStringArray(
                 dirty=True,
                 value=[
-                    None,
+                    "value_example",
                 ],
             ),
             dropdown_options_to_remove=UpdateFieldValueOfSecretTemplateFieldOptionRemoveModelArray(
                 dirty=True,
                 value=[
                     SecretTemplateFieldOptionRemoveModel(
-                        id=None,
-                        value=None,
+                        id=1,
+                        value="value_example",
                     ),
                 ],
             ),
@@ -2276,8 +2276,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 dirty=True,
                 value=[
                     SecretTemplateFieldOptionUpdateModel(
-                        id=None,
-                        value=None,
+                        id=1,
+                        value="value_example",
                     ),
                 ],
             ),
@@ -2291,15 +2291,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             history_length=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             password_requirement=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             required=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -2315,11 +2315,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             slug_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             sort_order=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             viewing_requires_edit=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -2351,7 +2351,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_template_field_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateFieldId |
+ **secret_template_field_id** | **int**| secretTemplateFieldId |
  **secret_field_patch_args** | [**SecretFieldPatchArgs**](SecretFieldPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -2421,7 +2421,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    secret_template_id = 1 # int | secretTemplateId
     secret_template_detail_patch_args = SecretTemplateDetailPatchArgs(
         data=SecretTemplateDetailPatchModel(
             active=UpdateFieldValueOfBoolean(
@@ -2430,15 +2430,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             expiration_change_required_on_field_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             expiration_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             expiration_enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -2446,19 +2446,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             name_pattern=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             name_pattern_error_message=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             one_time_password_duration=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             one_time_password_enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -2470,7 +2470,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             one_time_password_length=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             save_all_name_history=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -2478,11 +2478,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             secret_name_history_length=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             ssh_key_format=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             ssh_key_size=UpdateFieldValueOfSshKeySizeType(
                 dirty=True,
@@ -2522,7 +2522,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **secret_template_id** | **int**| secretTemplateId |
  **secret_template_detail_patch_args** | [**SecretTemplateDetailPatchArgs**](SecretTemplateDetailPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -2592,17 +2592,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Template ID
+    template_id = 1 # int | Secret Template ID
     secret_template_field_update_args = SecretTemplateFieldUpdateArgs(
-        description=None,
-        display_name=None,
-        editable_permission=None,
+        description="description_example",
+        display_name="display_name_example",
+        editable_permission=1,
         edit_requires=EditRequiresOptions("{}"),
-        field_slug_name=None,
-        generate_password_character_set=None,
-        generate_password_length=None,
+        field_slug_name="field_slug_name_example",
+        generate_password_character_set="generate_password_character_set_example",
+        generate_password_length=1,
         hide_on_view=True,
-        history_length=None,
+        history_length=1,
         is_expiration_field=True,
         is_file=True,
         is_indexable=True,
@@ -2612,11 +2612,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         is_url=True,
         list_type=ListType("{}"),
         must_encrypt=True,
-        name=None,
-        password_requirement_id=None,
-        password_type_field_id=None,
-        secret_template_field_id=None,
-        sort_order=None,
+        name="name_example",
+        password_requirement_id=1,
+        password_type_field_id=1,
+        secret_template_field_id=1,
+        sort_order=1,
     ) # SecretTemplateFieldUpdateArgs | Secret Template Options (optional)
 
     # example passing only required values which don't have defaults set
@@ -2642,7 +2642,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Template ID |
+ **template_id** | **int**| Secret Template ID |
  **secret_template_field_update_args** | [**SecretTemplateFieldUpdateArgs**](SecretTemplateFieldUpdateArgs.md)| Secret Template Options | [optional]
 
 ### Return type
@@ -2714,14 +2714,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     filter_include_inactive = True # bool | Whether to include inactive secret templates in the results (optional)
     filter_include_secret_count = True # bool | Whether to populate Secret count in the results (optional)
     filter_password_type_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | List of Password Type Ids (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+        1,
+    ] # [int] | List of Password Type Ids (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2740,13 +2740,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| Whether to include inactive secret templates in the results | [optional]
  **filter_include_secret_count** | **bool**| Whether to populate Secret count in the results | [optional]
- **filter_password_type_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| List of Password Type Ids | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_password_type_ids** | **[int]**| List of Password Type Ids | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2814,14 +2814,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    filter_application_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Application name (optional)
+    filter_application_name = "filter.applicationName_example" # str | Application name (optional)
     filter_include_inactive = True # bool | Include inactive launcher types (optional)
     filter_include_system_launchers = True # bool | Include system launcher types (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2838,14 +2838,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_application_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Application name | [optional]
+ **filter_application_name** | **str**| Application name | [optional]
  **filter_include_inactive** | **bool**| Include inactive launcher types | [optional]
  **filter_include_system_launchers** | **bool**| Include system launcher types | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2913,12 +2913,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    filter_secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | SecretTemplateId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_secret_template_id = 1 # int | SecretTemplateId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2935,12 +2935,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SecretTemplateId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_secret_template_id** | **int**| SecretTemplateId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -3008,11 +3008,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -3029,11 +3029,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -3101,12 +3101,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    filter_secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | SecretTemplateId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_secret_template_id = 1 # int | SecretTemplateId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -3123,12 +3123,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SecretTemplateId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_secret_template_id** | **int**| SecretTemplateId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -3197,12 +3197,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
     filter_include_inactive = True # bool | Whether to include inactive secret template fields in the results (optional)
-    filter_secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Template Id to filter by (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_secret_template_id = 1 # int | Secret Template Id to filter by (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -3220,12 +3220,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| Whether to include inactive secret template fields in the results | [optional]
- **filter_secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Template Id to filter by | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_secret_template_id** | **int**| Secret Template Id to filter by | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -3294,11 +3294,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    secret_template_id = 1 # int | secretTemplateId
     secret_template_field_sort_args = SecretTemplateFieldSortArgs(
         data=SecretTemplateFieldSortModel(
             field_ids=[
-                None,
+                1,
             ],
         ),
     ) # SecretTemplateFieldSortArgs | args (optional)
@@ -3326,7 +3326,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **secret_template_id** | **int**| secretTemplateId |
  **secret_template_field_sort_args** | [**SecretTemplateFieldSortArgs**](SecretTemplateFieldSortArgs.md)| args | [optional]
 
 ### Return type
@@ -3395,8 +3395,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    extended_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | extendedTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    extended_type_id = 1 # int | extendedTypeId
+    secret_template_id = 1 # int | secretTemplateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -3412,8 +3412,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extended_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| extendedTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **extended_type_id** | **int**| extendedTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
 
 ### Return type
 
@@ -3481,8 +3481,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    launcher_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | launcherTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    launcher_type_id = 1 # int | launcherTypeId
+    secret_template_id = 1 # int | secretTemplateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -3498,8 +3498,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **launcher_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| launcherTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **launcher_type_id** | **int**| launcherTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
 
 ### Return type
 
@@ -3646,8 +3646,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    dictionary_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Dictionary ID to Update (optional)
-    dictionary_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Dictionary Name (optional)
+    dictionary_id = 1 # int | Dictionary ID to Update (optional)
+    dictionary_name = "dictionary_name_example" # str | Dictionary Name (optional)
     file =  # file | Uploaded file (optional)
 
     # example passing only required values which don't have defaults set
@@ -3665,8 +3665,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dictionary_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Dictionary ID to Update | [optional]
- **dictionary_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Dictionary Name | [optional]
+ **dictionary_id** | **int**| Dictionary ID to Update | [optional]
+ **dictionary_name** | **str**| Dictionary Name | [optional]
  **file** | **file**| Uploaded file | [optional]
 
 ### Return type
@@ -3736,16 +3736,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    extended_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | extendedTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    extended_type_id = 1 # int | extendedTypeId
+    secret_template_id = 1 # int | secretTemplateId
     secret_template_extended_mapping_update_args = SecretTemplateExtendedMappingUpdateArgs(
         data=SecretTemplateExtendedMappingUpdateModel(
             fields=UpdateFieldValueOfSecretTemplateExtendedMappingUpdateFieldModelArray(
                 dirty=True,
                 value=[
                     SecretTemplateExtendedMappingUpdateFieldModel(
-                        extended_field_id=None,
-                        secret_field_id=None,
+                        extended_field_id=1,
+                        secret_field_id=1,
                     ),
                 ],
             ),
@@ -3775,8 +3775,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extended_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| extendedTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **extended_type_id** | **int**| extendedTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
  **secret_template_extended_mapping_update_args** | [**SecretTemplateExtendedMappingUpdateArgs**](SecretTemplateExtendedMappingUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -3846,47 +3846,47 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    launcher_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | launcherTypeId
-    secret_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretTemplateId
+    launcher_type_id = 1 # int | launcherTypeId
+    secret_template_id = 1 # int | secretTemplateId
     secret_template_launcher_update_args = SecretTemplateLauncherUpdateArgs(
         data=SecretTemplateLauncherUpdateModel(
             allow_list=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             connect_as_command=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             connect_as_command_response=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             connect_as_timeout_in_seconds=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             deny_list=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             expected_prompt_ending=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             fields=UpdateFieldValueOfSecretTemplateLauncherFieldValueModelArray(
                 dirty=True,
                 value=[
                     SecretTemplateLauncherFieldValueModel(
-                        default_type=None,
-                        default_type_int_max=None,
-                        default_type_int_min=None,
-                        default_value=None,
-                        launcher_type_field_id=None,
-                        launcher_type_field_name=None,
+                        default_type="default_type_example",
+                        default_type_int_max=1,
+                        default_type_int_min=1,
+                        default_value="default_value_example",
+                        launcher_type_field_id=1,
+                        launcher_type_field_name="launcher_type_field_name_example",
                         promptable_field=True,
-                        secret_field_id=None,
-                        secret_field_name=None,
+                        secret_field_id=1,
+                        secret_field_name="secret_field_name_example",
                     ),
                 ],
             ),
@@ -3896,15 +3896,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             line_ending=UpdateFieldValueOfOptionalLauncherConnectAsLineEnding(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             restrict_as=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             restrict_by_secret_field=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             restrict_user_input=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3936,8 +3936,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **launcher_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| launcherTypeId |
- **secret_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretTemplateId |
+ **launcher_type_id** | **int**| launcherTypeId |
+ **secret_template_id** | **int**| secretTemplateId |
  **secret_template_launcher_update_args** | [**SecretTemplateLauncherUpdateArgs**](SecretTemplateLauncherUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -4007,9 +4007,9 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_templates_api.SecretTemplatesApi(api_client)
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret template ID
+    template_id = 1 # int | Secret template ID
     secret_template_password_type_update_args = SecretTemplatePasswordTypeUpdateArgs(
-        password_type_id=None,
+        password_type_id=1,
         secret_field_password_type_field_dictionary={},
     ) # SecretTemplatePasswordTypeUpdateArgs | args (optional)
 
@@ -4036,7 +4036,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret template ID |
+ **template_id** | **int**| Secret template ID |
  **secret_template_password_type_update_args** | [**SecretTemplatePasswordTypeUpdateArgs**](SecretTemplatePasswordTypeUpdateArgs.md)| args | [optional]
 
 ### Return type

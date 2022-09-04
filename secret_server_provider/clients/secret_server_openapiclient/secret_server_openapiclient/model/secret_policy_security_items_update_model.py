@@ -71,10 +71,8 @@ class SecretPolicySecurityItemsUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,47 +81,44 @@ class SecretPolicySecurityItemsUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_owners_unrestricted_ssh_commands': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'approval_groups': (UpdateFieldValueOfSecretPolicyDataItemOfUserGroupMapDataModelArray,),  # noqa: E501
-            'approval_workflow': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32,),  # noqa: E501
-            'check_out_change_password': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'check_out_enabled': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'check_out_interval_minutes': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32,),  # noqa: E501
-            'enable_ssh_command_restrictions': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'event_pipeline_policy': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32,),  # noqa: E501
-            'hide_launcher_password': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'is_proxy_enabled': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'is_session_recording_enabled': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'require_approval_for_access': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'require_approval_for_access_for_editors': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'require_approval_for_access_for_owners_and_approvers': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'require_view_comment': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'run_launcher_using_ssh_key_secret_id': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32,),  # noqa: E501
-            'ssh_command_blocklist_editors': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid,),  # noqa: E501
-            'ssh_command_blocklist_owners': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid,),  # noqa: E501
-            'ssh_command_blocklist_viewers': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid,),  # noqa: E501
-            'ssh_command_menu_groups': (UpdateFieldValueOfSecretPolicyDataItemOfSshCommandMenuGroupModelArray,),  # noqa: E501
-            'ssh_command_restriction_type': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalCommandRestrictionType,),  # noqa: E501
+            'allow_owners_unrestricted_ssh_commands': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'approval_groups': (UpdateFieldValueOfSecretPolicyDataItemOfUserGroupMapDataModelArray, none_type,),  # noqa: E501
+            'approval_workflow': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32, none_type,),  # noqa: E501
+            'check_out_change_password': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'check_out_enabled': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32, none_type,),  # noqa: E501
+            'enable_ssh_command_restrictions': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'event_pipeline_policy': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32, none_type,),  # noqa: E501
+            'hide_launcher_password': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'is_proxy_enabled': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'is_session_recording_enabled': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'require_approval_for_access': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'require_approval_for_access_for_editors': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'require_approval_for_access_for_owners_and_approvers': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'require_view_comment': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'run_launcher_using_ssh_key_secret_id': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32, none_type,),  # noqa: E501
+            'ssh_command_blocklist_editors': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid, none_type,),  # noqa: E501
+            'ssh_command_blocklist_owners': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid, none_type,),  # noqa: E501
+            'ssh_command_blocklist_viewers': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid, none_type,),  # noqa: E501
+            'ssh_command_menu_groups': (UpdateFieldValueOfSecretPolicyDataItemOfSshCommandMenuGroupModelArray, none_type,),  # noqa: E501
+            'ssh_command_restriction_type': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalCommandRestrictionType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

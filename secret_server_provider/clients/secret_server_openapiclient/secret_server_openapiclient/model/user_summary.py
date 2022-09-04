@@ -65,10 +65,8 @@ class UserSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,41 +75,38 @@ class UserSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'email_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'external_user_source': (ExternalUserSourceTypes,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_application_account': (bool,),  # noqa: E501
-            'is_locked_out': (bool,),  # noqa: E501
-            'last_login': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'login_failures': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'platform_integration_type': (PlatformIntegrationType,),  # noqa: E501
-            'two_factor_method': (MultifactorAuthenticationProviderTypes,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'created': (datetime, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'email_address': (str, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'external_user_source': (ExternalUserSourceTypes, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_application_account': (bool, none_type,),  # noqa: E501
+            'is_locked_out': (bool, none_type,),  # noqa: E501
+            'last_login': (datetime, none_type,),  # noqa: E501
+            'login_failures': (int, none_type,),  # noqa: E501
+            'platform_integration_type': (PlatformIntegrationType, none_type,),  # noqa: E501
+            'two_factor_method': (MultifactorAuthenticationProviderTypes, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -173,21 +168,21 @@ class UserSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created (bool, date, datetime, dict, float, int, list, str, none_type): User creation time. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display name. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain Name. [optional]  # noqa: E501
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): Email address. [optional]  # noqa: E501
+            created (datetime): User creation time. [optional]  # noqa: E501
+            display_name (str): Display name. [optional]  # noqa: E501
+            domain_id (int): Active Directory domain ID. [optional]  # noqa: E501
+            domain_name (str): Active Directory Domain Name. [optional]  # noqa: E501
+            email_address (str): Email address. [optional]  # noqa: E501
             enabled (bool): Whether the user account is enabled. [optional]  # noqa: E501
             external_user_source (ExternalUserSourceTypes): [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID. [optional]  # noqa: E501
+            id (int): User ID. [optional]  # noqa: E501
             is_application_account (bool): IsApplicationAccount. [optional]  # noqa: E501
             is_locked_out (bool): Whether the user is locked out. [optional]  # noqa: E501
-            last_login (bool, date, datetime, dict, float, int, list, str, none_type): Time of last login. [optional]  # noqa: E501
-            login_failures (bool, date, datetime, dict, float, int, list, str, none_type): Number of login failures. [optional]  # noqa: E501
+            last_login (datetime): Time of last login. [optional]  # noqa: E501
+            login_failures (int): Number of login failures. [optional]  # noqa: E501
             platform_integration_type (PlatformIntegrationType): [optional]  # noqa: E501
             two_factor_method (MultifactorAuthenticationProviderTypes): [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name. [optional]  # noqa: E501
+            user_name (str): User name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -273,21 +268,21 @@ class UserSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created (bool, date, datetime, dict, float, int, list, str, none_type): User creation time. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display name. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain Name. [optional]  # noqa: E501
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): Email address. [optional]  # noqa: E501
+            created (datetime): User creation time. [optional]  # noqa: E501
+            display_name (str): Display name. [optional]  # noqa: E501
+            domain_id (int): Active Directory domain ID. [optional]  # noqa: E501
+            domain_name (str): Active Directory Domain Name. [optional]  # noqa: E501
+            email_address (str): Email address. [optional]  # noqa: E501
             enabled (bool): Whether the user account is enabled. [optional]  # noqa: E501
             external_user_source (ExternalUserSourceTypes): [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID. [optional]  # noqa: E501
+            id (int): User ID. [optional]  # noqa: E501
             is_application_account (bool): IsApplicationAccount. [optional]  # noqa: E501
             is_locked_out (bool): Whether the user is locked out. [optional]  # noqa: E501
-            last_login (bool, date, datetime, dict, float, int, list, str, none_type): Time of last login. [optional]  # noqa: E501
-            login_failures (bool, date, datetime, dict, float, int, list, str, none_type): Number of login failures. [optional]  # noqa: E501
+            last_login (datetime): Time of last login. [optional]  # noqa: E501
+            login_failures (int): Number of login failures. [optional]  # noqa: E501
             platform_integration_type (PlatformIntegrationType): [optional]  # noqa: E501
             two_factor_method (MultifactorAuthenticationProviderTypes): [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name. [optional]  # noqa: E501
+            user_name (str): User name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

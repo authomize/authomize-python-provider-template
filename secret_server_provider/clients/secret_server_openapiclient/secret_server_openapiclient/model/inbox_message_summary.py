@@ -61,10 +61,8 @@ class InboxMessageSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,35 +71,32 @@ class InboxMessageSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'data': ([InboxMessageData],),  # noqa: E501
-            'details': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_message_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_message_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_read': (bool,),  # noqa: E501
-            'message_created_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'message_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'recipients': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
+            'data': ([InboxMessageData], none_type,),  # noqa: E501
+            'details': (str, none_type,),  # noqa: E501
+            'expiration_date': (datetime, none_type,),  # noqa: E501
+            'inbox_message_type_id': (int, none_type,),  # noqa: E501
+            'inbox_message_type_name': (str, none_type,),  # noqa: E501
+            'is_read': (bool, none_type,),  # noqa: E501
+            'message_created_date': (datetime, none_type,),  # noqa: E501
+            'message_id': (int, none_type,),  # noqa: E501
+            'recipients': ([str], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -158,14 +153,14 @@ class InboxMessageSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             data ([InboxMessageData]): All data fields for this messages. [optional]  # noqa: E501
-            details (bool, date, datetime, dict, float, int, list, str, none_type): A common data field on all notifications. [optional]  # noqa: E501
-            expiration_date (bool, date, datetime, dict, float, int, list, str, none_type): Within 24 hours of this date this message and all related history will be removed. [optional]  # noqa: E501
-            inbox_message_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The type of message id. [optional]  # noqa: E501
-            inbox_message_type_name (bool, date, datetime, dict, float, int, list, str, none_type): The message type name. [optional]  # noqa: E501
+            details (str): A common data field on all notifications. [optional]  # noqa: E501
+            expiration_date (datetime): Within 24 hours of this date this message and all related history will be removed. [optional]  # noqa: E501
+            inbox_message_type_id (int): The type of message id. [optional]  # noqa: E501
+            inbox_message_type_name (str): The message type name. [optional]  # noqa: E501
             is_read (bool): Has the current user read this message. [optional]  # noqa: E501
-            message_created_date (bool, date, datetime, dict, float, int, list, str, none_type): When was the message created. [optional]  # noqa: E501
-            message_id (bool, date, datetime, dict, float, int, list, str, none_type): Message ID. [optional]  # noqa: E501
-            recipients ([bool, date, datetime, dict, float, int, list, str, none_type]): Who has recieved this message. [optional]  # noqa: E501
+            message_created_date (datetime): When was the message created. [optional]  # noqa: E501
+            message_id (int): Message ID. [optional]  # noqa: E501
+            recipients ([str]): Who has recieved this message. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -252,14 +247,14 @@ class InboxMessageSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             data ([InboxMessageData]): All data fields for this messages. [optional]  # noqa: E501
-            details (bool, date, datetime, dict, float, int, list, str, none_type): A common data field on all notifications. [optional]  # noqa: E501
-            expiration_date (bool, date, datetime, dict, float, int, list, str, none_type): Within 24 hours of this date this message and all related history will be removed. [optional]  # noqa: E501
-            inbox_message_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The type of message id. [optional]  # noqa: E501
-            inbox_message_type_name (bool, date, datetime, dict, float, int, list, str, none_type): The message type name. [optional]  # noqa: E501
+            details (str): A common data field on all notifications. [optional]  # noqa: E501
+            expiration_date (datetime): Within 24 hours of this date this message and all related history will be removed. [optional]  # noqa: E501
+            inbox_message_type_id (int): The type of message id. [optional]  # noqa: E501
+            inbox_message_type_name (str): The message type name. [optional]  # noqa: E501
             is_read (bool): Has the current user read this message. [optional]  # noqa: E501
-            message_created_date (bool, date, datetime, dict, float, int, list, str, none_type): When was the message created. [optional]  # noqa: E501
-            message_id (bool, date, datetime, dict, float, int, list, str, none_type): Message ID. [optional]  # noqa: E501
-            recipients ([bool, date, datetime, dict, float, int, list, str, none_type]): Who has recieved this message. [optional]  # noqa: E501
+            message_created_date (datetime): When was the message created. [optional]  # noqa: E501
+            message_id (int): Message ID. [optional]  # noqa: E501
+            recipients ([str]): Who has recieved this message. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

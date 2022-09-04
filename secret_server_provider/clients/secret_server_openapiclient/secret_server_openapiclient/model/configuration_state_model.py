@@ -57,10 +57,8 @@ class ConfigurationStateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,76 +66,73 @@ class ConfigurationStateModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'application_edit': (bool,),  # noqa: E501
-            'application_view': (bool,),  # noqa: E501
-            'backup_edit': (bool,),  # noqa: E501
-            'backup_view': (bool,),  # noqa: E501
-            'database_edit': (bool,),  # noqa: E501
-            'database_view': (bool,),  # noqa: E501
-            'de_edit': (bool,),  # noqa: E501
-            'de_view': (bool,),  # noqa: E501
-            'discover_view': (bool,),  # noqa: E501
-            'discovery_edit': (bool,),  # noqa: E501
-            'ds_edit': (bool,),  # noqa: E501
-            'ds_view': (bool,),  # noqa: E501
-            'duo_edit': (bool,),  # noqa: E501
-            'duo_view': (bool,),  # noqa: E501
-            'email_edit': (bool,),  # noqa: E501
-            'email_view': (bool,),  # noqa: E501
-            'folder_edit': (bool,),  # noqa: E501
-            'folder_view': (bool,),  # noqa: E501
-            'internal_site_connector_edit': (bool,),  # noqa: E501
-            'internal_site_connector_view': (bool,),  # noqa: E501
-            'launcher_edit': (bool,),  # noqa: E501
-            'launcher_view': (bool,),  # noqa: E501
-            'local_user_passwords_edit': (bool,),  # noqa: E501
-            'local_user_passwords_view': (bool,),  # noqa: E501
-            'login_edit': (bool,),  # noqa: E501
-            'login_policy_edit': (bool,),  # noqa: E501
-            'login_policy_view': (bool,),  # noqa: E501
-            'login_view': (bool,),  # noqa: E501
-            'open_id_edit': (bool,),  # noqa: E501
-            'open_id_view': (bool,),  # noqa: E501
-            'permissions_edit': (bool,),  # noqa: E501
-            'permissions_view': (bool,),  # noqa: E501
-            'protocol_handler_edit': (bool,),  # noqa: E501
-            'protocol_handler_view': (bool,),  # noqa: E501
-            'radius_edit': (bool,),  # noqa: E501
-            'radius_view': (bool,),  # noqa: E501
-            'rpc_edit': (bool,),  # noqa: E501
-            'rpc_view': (bool,),  # noqa: E501
-            'secret_server_edit': (bool,),  # noqa: E501
-            'secret_server_view': (bool,),  # noqa: E501
-            'security_edit': (bool,),  # noqa: E501
-            'security_view': (bool,),  # noqa: E501
-            'session_recording_edit': (bool,),  # noqa: E501
-            'session_recording_view': (bool,),  # noqa: E501
-            'slack_edit': (bool,),  # noqa: E501
-            'slack_view': (bool,),  # noqa: E501
-            'unlimited_admin': (bool,),  # noqa: E501
-            'user_experience_edit': (bool,),  # noqa: E501
-            'user_experience_view': (bool,),  # noqa: E501
-            'user_interface_edit': (bool,),  # noqa: E501
-            'user_interface_view': (bool,),  # noqa: E501
+            'application_edit': (bool, none_type,),  # noqa: E501
+            'application_view': (bool, none_type,),  # noqa: E501
+            'backup_edit': (bool, none_type,),  # noqa: E501
+            'backup_view': (bool, none_type,),  # noqa: E501
+            'database_edit': (bool, none_type,),  # noqa: E501
+            'database_view': (bool, none_type,),  # noqa: E501
+            'de_edit': (bool, none_type,),  # noqa: E501
+            'de_view': (bool, none_type,),  # noqa: E501
+            'discover_view': (bool, none_type,),  # noqa: E501
+            'discovery_edit': (bool, none_type,),  # noqa: E501
+            'ds_edit': (bool, none_type,),  # noqa: E501
+            'ds_view': (bool, none_type,),  # noqa: E501
+            'duo_edit': (bool, none_type,),  # noqa: E501
+            'duo_view': (bool, none_type,),  # noqa: E501
+            'email_edit': (bool, none_type,),  # noqa: E501
+            'email_view': (bool, none_type,),  # noqa: E501
+            'folder_edit': (bool, none_type,),  # noqa: E501
+            'folder_view': (bool, none_type,),  # noqa: E501
+            'internal_site_connector_edit': (bool, none_type,),  # noqa: E501
+            'internal_site_connector_view': (bool, none_type,),  # noqa: E501
+            'launcher_edit': (bool, none_type,),  # noqa: E501
+            'launcher_view': (bool, none_type,),  # noqa: E501
+            'local_user_passwords_edit': (bool, none_type,),  # noqa: E501
+            'local_user_passwords_view': (bool, none_type,),  # noqa: E501
+            'login_edit': (bool, none_type,),  # noqa: E501
+            'login_policy_edit': (bool, none_type,),  # noqa: E501
+            'login_policy_view': (bool, none_type,),  # noqa: E501
+            'login_view': (bool, none_type,),  # noqa: E501
+            'open_id_edit': (bool, none_type,),  # noqa: E501
+            'open_id_view': (bool, none_type,),  # noqa: E501
+            'permissions_edit': (bool, none_type,),  # noqa: E501
+            'permissions_view': (bool, none_type,),  # noqa: E501
+            'protocol_handler_edit': (bool, none_type,),  # noqa: E501
+            'protocol_handler_view': (bool, none_type,),  # noqa: E501
+            'radius_edit': (bool, none_type,),  # noqa: E501
+            'radius_view': (bool, none_type,),  # noqa: E501
+            'rpc_edit': (bool, none_type,),  # noqa: E501
+            'rpc_view': (bool, none_type,),  # noqa: E501
+            'secret_server_edit': (bool, none_type,),  # noqa: E501
+            'secret_server_view': (bool, none_type,),  # noqa: E501
+            'security_edit': (bool, none_type,),  # noqa: E501
+            'security_view': (bool, none_type,),  # noqa: E501
+            'session_recording_edit': (bool, none_type,),  # noqa: E501
+            'session_recording_view': (bool, none_type,),  # noqa: E501
+            'slack_edit': (bool, none_type,),  # noqa: E501
+            'slack_view': (bool, none_type,),  # noqa: E501
+            'unlimited_admin': (bool, none_type,),  # noqa: E501
+            'user_experience_edit': (bool, none_type,),  # noqa: E501
+            'user_experience_view': (bool, none_type,),  # noqa: E501
+            'user_interface_edit': (bool, none_type,),  # noqa: E501
+            'user_interface_view': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

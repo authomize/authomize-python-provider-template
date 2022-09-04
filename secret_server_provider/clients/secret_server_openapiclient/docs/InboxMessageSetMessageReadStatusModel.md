@@ -5,7 +5,7 @@ Data
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message_ids** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | MessageIds | [optional] 
+**message_ids** | **[int]** | MessageIds | [optional] 
 **read** | **bool** | Read | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

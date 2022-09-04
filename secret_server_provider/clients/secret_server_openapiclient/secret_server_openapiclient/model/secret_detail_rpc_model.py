@@ -65,10 +65,8 @@ class SecretDetailRpcModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,41 +75,38 @@ class SecretDetailRpcModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'auto_change_enabled': (bool,),  # noqa: E501
-            'auto_change_schedule': (SecretDetailScheduleModel,),  # noqa: E501
-            'can_enter_next_password': (bool,),  # noqa: E501
-            'expire_text': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_next_passphrase': (bool,),  # noqa: E501
-            'has_next_password': (bool,),  # noqa: E501
-            'has_next_private_key': (bool,),  # noqa: E501
-            'is_valid_for_ssh_key_rpc': (bool,),  # noqa: E501
-            'password_status': (SecretDetailPasswordStatus,),  # noqa: E501
-            'password_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_web_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'privileged_account_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'privileged_account_secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'reset_secrets': ([SecretDetailRpcSecrets],),  # noqa: E501
+            'auto_change_enabled': (bool, none_type,),  # noqa: E501
+            'auto_change_schedule': (SecretDetailScheduleModel, none_type,),  # noqa: E501
+            'can_enter_next_password': (bool, none_type,),  # noqa: E501
+            'expire_text': (str, none_type,),  # noqa: E501
+            'has_next_passphrase': (bool, none_type,),  # noqa: E501
+            'has_next_password': (bool, none_type,),  # noqa: E501
+            'has_next_private_key': (bool, none_type,),  # noqa: E501
+            'is_valid_for_ssh_key_rpc': (bool, none_type,),  # noqa: E501
+            'password_status': (SecretDetailPasswordStatus, none_type,),  # noqa: E501
+            'password_type_id': (int, none_type,),  # noqa: E501
+            'password_type_name': (str, none_type,),  # noqa: E501
+            'password_type_web_script_id': (int, none_type,),  # noqa: E501
+            'privileged_account_secret_id': (int, none_type,),  # noqa: E501
+            'privileged_account_secret_name': (str, none_type,),  # noqa: E501
+            'reset_secrets': ([SecretDetailRpcSecrets], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -176,17 +171,17 @@ class SecretDetailRpcModel(ModelNormal):
             auto_change_enabled (bool): AutoChange Enabled. [optional]  # noqa: E501
             auto_change_schedule (SecretDetailScheduleModel): [optional]  # noqa: E501
             can_enter_next_password (bool): Can Enter Next Password. [optional]  # noqa: E501
-            expire_text (bool, date, datetime, dict, float, int, list, str, none_type): Expire Text. [optional]  # noqa: E501
+            expire_text (str): Expire Text. [optional]  # noqa: E501
             has_next_passphrase (bool): Has Next Passphrase. [optional]  # noqa: E501
             has_next_password (bool): Has Next Password. [optional]  # noqa: E501
             has_next_private_key (bool): Has Next Private Key. [optional]  # noqa: E501
             is_valid_for_ssh_key_rpc (bool): is Valid For SSH Key RPC. [optional]  # noqa: E501
             password_status (SecretDetailPasswordStatus): [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Id. [optional]  # noqa: E501
-            password_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Name. [optional]  # noqa: E501
-            password_type_web_script_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type WebScript Id. [optional]  # noqa: E501
-            privileged_account_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Priviliged Account Secret Id. [optional]  # noqa: E501
-            privileged_account_secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Priviliged Account Secret Name. [optional]  # noqa: E501
+            password_type_id (int): Password Type Id. [optional]  # noqa: E501
+            password_type_name (str): Password Type Name. [optional]  # noqa: E501
+            password_type_web_script_id (int): Password Type WebScript Id. [optional]  # noqa: E501
+            privileged_account_secret_id (int): Priviliged Account Secret Id. [optional]  # noqa: E501
+            privileged_account_secret_name (str): Priviliged Account Secret Name. [optional]  # noqa: E501
             reset_secrets ([SecretDetailRpcSecrets]): Reset Secrets. [optional]  # noqa: E501
         """
 
@@ -276,17 +271,17 @@ class SecretDetailRpcModel(ModelNormal):
             auto_change_enabled (bool): AutoChange Enabled. [optional]  # noqa: E501
             auto_change_schedule (SecretDetailScheduleModel): [optional]  # noqa: E501
             can_enter_next_password (bool): Can Enter Next Password. [optional]  # noqa: E501
-            expire_text (bool, date, datetime, dict, float, int, list, str, none_type): Expire Text. [optional]  # noqa: E501
+            expire_text (str): Expire Text. [optional]  # noqa: E501
             has_next_passphrase (bool): Has Next Passphrase. [optional]  # noqa: E501
             has_next_password (bool): Has Next Password. [optional]  # noqa: E501
             has_next_private_key (bool): Has Next Private Key. [optional]  # noqa: E501
             is_valid_for_ssh_key_rpc (bool): is Valid For SSH Key RPC. [optional]  # noqa: E501
             password_status (SecretDetailPasswordStatus): [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Id. [optional]  # noqa: E501
-            password_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Name. [optional]  # noqa: E501
-            password_type_web_script_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type WebScript Id. [optional]  # noqa: E501
-            privileged_account_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Priviliged Account Secret Id. [optional]  # noqa: E501
-            privileged_account_secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Priviliged Account Secret Name. [optional]  # noqa: E501
+            password_type_id (int): Password Type Id. [optional]  # noqa: E501
+            password_type_name (str): Password Type Name. [optional]  # noqa: E501
+            password_type_web_script_id (int): Password Type WebScript Id. [optional]  # noqa: E501
+            privileged_account_secret_id (int): Priviliged Account Secret Id. [optional]  # noqa: E501
+            privileged_account_secret_name (str): Priviliged Account Secret Name. [optional]  # noqa: E501
             reset_secrets ([SecretDetailRpcSecrets]): Reset Secrets. [optional]  # noqa: E501
         """
 

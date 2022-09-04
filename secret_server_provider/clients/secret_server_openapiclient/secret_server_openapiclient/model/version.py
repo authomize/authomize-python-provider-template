@@ -57,10 +57,8 @@ class Version(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class Version(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'build': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'major': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'major_revision': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'minor': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'minor_revision': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'revision': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'build': (int, none_type,),  # noqa: E501
+            'major': (int, none_type,),  # noqa: E501
+            'major_revision': (int, none_type,),  # noqa: E501
+            'minor': (int, none_type,),  # noqa: E501
+            'minor_revision': (int, none_type,),  # noqa: E501
+            'revision': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,12 +140,12 @@ class Version(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            build (bool, date, datetime, dict, float, int, list, str, none_type): Build. [optional]  # noqa: E501
-            major (bool, date, datetime, dict, float, int, list, str, none_type): Major. [optional]  # noqa: E501
-            major_revision (bool, date, datetime, dict, float, int, list, str, none_type): MajorRevision. [optional]  # noqa: E501
-            minor (bool, date, datetime, dict, float, int, list, str, none_type): Minor. [optional]  # noqa: E501
-            minor_revision (bool, date, datetime, dict, float, int, list, str, none_type): MinorRevision. [optional]  # noqa: E501
-            revision (bool, date, datetime, dict, float, int, list, str, none_type): Revision. [optional]  # noqa: E501
+            build (int): Build. [optional]  # noqa: E501
+            major (int): Major. [optional]  # noqa: E501
+            major_revision (int): MajorRevision. [optional]  # noqa: E501
+            minor (int): Minor. [optional]  # noqa: E501
+            minor_revision (int): MinorRevision. [optional]  # noqa: E501
+            revision (int): Revision. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,12 +231,12 @@ class Version(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            build (bool, date, datetime, dict, float, int, list, str, none_type): Build. [optional]  # noqa: E501
-            major (bool, date, datetime, dict, float, int, list, str, none_type): Major. [optional]  # noqa: E501
-            major_revision (bool, date, datetime, dict, float, int, list, str, none_type): MajorRevision. [optional]  # noqa: E501
-            minor (bool, date, datetime, dict, float, int, list, str, none_type): Minor. [optional]  # noqa: E501
-            minor_revision (bool, date, datetime, dict, float, int, list, str, none_type): MinorRevision. [optional]  # noqa: E501
-            revision (bool, date, datetime, dict, float, int, list, str, none_type): Revision. [optional]  # noqa: E501
+            build (int): Build. [optional]  # noqa: E501
+            major (int): Major. [optional]  # noqa: E501
+            major_revision (int): MajorRevision. [optional]  # noqa: E501
+            minor (int): Minor. [optional]  # noqa: E501
+            minor_revision (int): MinorRevision. [optional]  # noqa: E501
+            revision (int): Revision. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

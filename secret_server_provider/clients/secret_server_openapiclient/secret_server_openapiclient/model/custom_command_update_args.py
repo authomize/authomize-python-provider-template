@@ -57,10 +57,8 @@ class CustomCommandUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class CustomCommandUpdateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'command': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'command_type_code': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'concurrency_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pause': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'command': (str, none_type,),  # noqa: E501
+            'command_type_code': (int, none_type,),  # noqa: E501
+            'comment': (str, none_type,),  # noqa: E501
+            'concurrency_id': (str, none_type,),  # noqa: E501
+            'order': (int, none_type,),  # noqa: E501
+            'password_type_id': (int, none_type,),  # noqa: E501
+            'pause': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,13 +142,13 @@ class CustomCommandUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            command (bool, date, datetime, dict, float, int, list, str, none_type): Command. [optional]  # noqa: E501
-            command_type_code (bool, date, datetime, dict, float, int, list, str, none_type): CommandTypeCode. [optional]  # noqa: E501
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): Comment. [optional]  # noqa: E501
-            concurrency_id (bool, date, datetime, dict, float, int, list, str, none_type): ConcurrencyId. [optional]  # noqa: E501
-            order (bool, date, datetime, dict, float, int, list, str, none_type): Order. [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): PasswordTypeId. [optional]  # noqa: E501
-            pause (bool, date, datetime, dict, float, int, list, str, none_type): Pause. [optional]  # noqa: E501
+            command (str): Command. [optional]  # noqa: E501
+            command_type_code (int): CommandTypeCode. [optional]  # noqa: E501
+            comment (str): Comment. [optional]  # noqa: E501
+            concurrency_id (str): ConcurrencyId. [optional]  # noqa: E501
+            order (int): Order. [optional]  # noqa: E501
+            password_type_id (int): PasswordTypeId. [optional]  # noqa: E501
+            pause (int): Pause. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,13 +234,13 @@ class CustomCommandUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            command (bool, date, datetime, dict, float, int, list, str, none_type): Command. [optional]  # noqa: E501
-            command_type_code (bool, date, datetime, dict, float, int, list, str, none_type): CommandTypeCode. [optional]  # noqa: E501
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): Comment. [optional]  # noqa: E501
-            concurrency_id (bool, date, datetime, dict, float, int, list, str, none_type): ConcurrencyId. [optional]  # noqa: E501
-            order (bool, date, datetime, dict, float, int, list, str, none_type): Order. [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): PasswordTypeId. [optional]  # noqa: E501
-            pause (bool, date, datetime, dict, float, int, list, str, none_type): Pause. [optional]  # noqa: E501
+            command (str): Command. [optional]  # noqa: E501
+            command_type_code (int): CommandTypeCode. [optional]  # noqa: E501
+            comment (str): Comment. [optional]  # noqa: E501
+            concurrency_id (str): ConcurrencyId. [optional]  # noqa: E501
+            order (int): Order. [optional]  # noqa: E501
+            password_type_id (int): PasswordTypeId. [optional]  # noqa: E501
+            pause (int): Pause. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -61,10 +61,8 @@ class Uri(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,48 +71,45 @@ class Uri(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'absolute_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'absolute_uri': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'authority': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dns_safe_host': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fragment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'host': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'host_name_type': (UriHostNameType,),  # noqa: E501
-            'idn_host': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_absolute_uri': (bool,),  # noqa: E501
-            'is_default_port': (bool,),  # noqa: E501
-            'is_file': (bool,),  # noqa: E501
-            'is_loopback': (bool,),  # noqa: E501
-            'is_unc': (bool,),  # noqa: E501
-            'local_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'original_string': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'path_and_query': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'query': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'scheme': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'segments': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'user_escaped': (bool,),  # noqa: E501
-            'user_info': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'absolute_path': (str, none_type,),  # noqa: E501
+            'absolute_uri': (str, none_type,),  # noqa: E501
+            'authority': (str, none_type,),  # noqa: E501
+            'dns_safe_host': (str, none_type,),  # noqa: E501
+            'fragment': (str, none_type,),  # noqa: E501
+            'host': (str, none_type,),  # noqa: E501
+            'host_name_type': (UriHostNameType, none_type,),  # noqa: E501
+            'idn_host': (str, none_type,),  # noqa: E501
+            'is_absolute_uri': (bool, none_type,),  # noqa: E501
+            'is_default_port': (bool, none_type,),  # noqa: E501
+            'is_file': (bool, none_type,),  # noqa: E501
+            'is_loopback': (bool, none_type,),  # noqa: E501
+            'is_unc': (bool, none_type,),  # noqa: E501
+            'local_path': (str, none_type,),  # noqa: E501
+            'original_string': (str, none_type,),  # noqa: E501
+            'path_and_query': (str, none_type,),  # noqa: E501
+            'port': (int, none_type,),  # noqa: E501
+            'query': (str, none_type,),  # noqa: E501
+            'scheme': (str, none_type,),  # noqa: E501
+            'segments': ([str], none_type,),  # noqa: E501
+            'user_escaped': (bool, none_type,),  # noqa: E501
+            'user_info': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -183,28 +178,28 @@ class Uri(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            absolute_path (bool, date, datetime, dict, float, int, list, str, none_type): AbsolutePath. [optional]  # noqa: E501
-            absolute_uri (bool, date, datetime, dict, float, int, list, str, none_type): AbsoluteUri. [optional]  # noqa: E501
-            authority (bool, date, datetime, dict, float, int, list, str, none_type): Authority. [optional]  # noqa: E501
-            dns_safe_host (bool, date, datetime, dict, float, int, list, str, none_type): DnsSafeHost. [optional]  # noqa: E501
-            fragment (bool, date, datetime, dict, float, int, list, str, none_type): Fragment. [optional]  # noqa: E501
-            host (bool, date, datetime, dict, float, int, list, str, none_type): Host. [optional]  # noqa: E501
+            absolute_path (str): AbsolutePath. [optional]  # noqa: E501
+            absolute_uri (str): AbsoluteUri. [optional]  # noqa: E501
+            authority (str): Authority. [optional]  # noqa: E501
+            dns_safe_host (str): DnsSafeHost. [optional]  # noqa: E501
+            fragment (str): Fragment. [optional]  # noqa: E501
+            host (str): Host. [optional]  # noqa: E501
             host_name_type (UriHostNameType): [optional]  # noqa: E501
-            idn_host (bool, date, datetime, dict, float, int, list, str, none_type): IdnHost. [optional]  # noqa: E501
+            idn_host (str): IdnHost. [optional]  # noqa: E501
             is_absolute_uri (bool): IsAbsoluteUri. [optional]  # noqa: E501
             is_default_port (bool): IsDefaultPort. [optional]  # noqa: E501
             is_file (bool): IsFile. [optional]  # noqa: E501
             is_loopback (bool): IsLoopback. [optional]  # noqa: E501
             is_unc (bool): IsUnc. [optional]  # noqa: E501
-            local_path (bool, date, datetime, dict, float, int, list, str, none_type): LocalPath. [optional]  # noqa: E501
-            original_string (bool, date, datetime, dict, float, int, list, str, none_type): OriginalString. [optional]  # noqa: E501
-            path_and_query (bool, date, datetime, dict, float, int, list, str, none_type): PathAndQuery. [optional]  # noqa: E501
-            port (bool, date, datetime, dict, float, int, list, str, none_type): Port. [optional]  # noqa: E501
-            query (bool, date, datetime, dict, float, int, list, str, none_type): Query. [optional]  # noqa: E501
-            scheme (bool, date, datetime, dict, float, int, list, str, none_type): Scheme. [optional]  # noqa: E501
-            segments ([bool, date, datetime, dict, float, int, list, str, none_type]): Segments. [optional]  # noqa: E501
+            local_path (str): LocalPath. [optional]  # noqa: E501
+            original_string (str): OriginalString. [optional]  # noqa: E501
+            path_and_query (str): PathAndQuery. [optional]  # noqa: E501
+            port (int): Port. [optional]  # noqa: E501
+            query (str): Query. [optional]  # noqa: E501
+            scheme (str): Scheme. [optional]  # noqa: E501
+            segments ([str]): Segments. [optional]  # noqa: E501
             user_escaped (bool): UserEscaped. [optional]  # noqa: E501
-            user_info (bool, date, datetime, dict, float, int, list, str, none_type): UserInfo. [optional]  # noqa: E501
+            user_info (str): UserInfo. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -290,28 +285,28 @@ class Uri(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            absolute_path (bool, date, datetime, dict, float, int, list, str, none_type): AbsolutePath. [optional]  # noqa: E501
-            absolute_uri (bool, date, datetime, dict, float, int, list, str, none_type): AbsoluteUri. [optional]  # noqa: E501
-            authority (bool, date, datetime, dict, float, int, list, str, none_type): Authority. [optional]  # noqa: E501
-            dns_safe_host (bool, date, datetime, dict, float, int, list, str, none_type): DnsSafeHost. [optional]  # noqa: E501
-            fragment (bool, date, datetime, dict, float, int, list, str, none_type): Fragment. [optional]  # noqa: E501
-            host (bool, date, datetime, dict, float, int, list, str, none_type): Host. [optional]  # noqa: E501
+            absolute_path (str): AbsolutePath. [optional]  # noqa: E501
+            absolute_uri (str): AbsoluteUri. [optional]  # noqa: E501
+            authority (str): Authority. [optional]  # noqa: E501
+            dns_safe_host (str): DnsSafeHost. [optional]  # noqa: E501
+            fragment (str): Fragment. [optional]  # noqa: E501
+            host (str): Host. [optional]  # noqa: E501
             host_name_type (UriHostNameType): [optional]  # noqa: E501
-            idn_host (bool, date, datetime, dict, float, int, list, str, none_type): IdnHost. [optional]  # noqa: E501
+            idn_host (str): IdnHost. [optional]  # noqa: E501
             is_absolute_uri (bool): IsAbsoluteUri. [optional]  # noqa: E501
             is_default_port (bool): IsDefaultPort. [optional]  # noqa: E501
             is_file (bool): IsFile. [optional]  # noqa: E501
             is_loopback (bool): IsLoopback. [optional]  # noqa: E501
             is_unc (bool): IsUnc. [optional]  # noqa: E501
-            local_path (bool, date, datetime, dict, float, int, list, str, none_type): LocalPath. [optional]  # noqa: E501
-            original_string (bool, date, datetime, dict, float, int, list, str, none_type): OriginalString. [optional]  # noqa: E501
-            path_and_query (bool, date, datetime, dict, float, int, list, str, none_type): PathAndQuery. [optional]  # noqa: E501
-            port (bool, date, datetime, dict, float, int, list, str, none_type): Port. [optional]  # noqa: E501
-            query (bool, date, datetime, dict, float, int, list, str, none_type): Query. [optional]  # noqa: E501
-            scheme (bool, date, datetime, dict, float, int, list, str, none_type): Scheme. [optional]  # noqa: E501
-            segments ([bool, date, datetime, dict, float, int, list, str, none_type]): Segments. [optional]  # noqa: E501
+            local_path (str): LocalPath. [optional]  # noqa: E501
+            original_string (str): OriginalString. [optional]  # noqa: E501
+            path_and_query (str): PathAndQuery. [optional]  # noqa: E501
+            port (int): Port. [optional]  # noqa: E501
+            query (str): Query. [optional]  # noqa: E501
+            scheme (str): Scheme. [optional]  # noqa: E501
+            segments ([str]): Segments. [optional]  # noqa: E501
             user_escaped (bool): UserEscaped. [optional]  # noqa: E501
-            user_info (bool, date, datetime, dict, float, int, list, str, none_type): UserInfo. [optional]  # noqa: E501
+            user_info (str): UserInfo. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

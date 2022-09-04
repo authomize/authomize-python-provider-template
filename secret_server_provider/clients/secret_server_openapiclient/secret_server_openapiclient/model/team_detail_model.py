@@ -57,10 +57,8 @@ class TeamDetailModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class TeamDetailModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'should_restrict_lists': (bool,),  # noqa: E501
-            'should_restrict_sites': (bool,),  # noqa: E501
-            'team_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'team_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'team_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'should_restrict_lists': (bool, none_type,),  # noqa: E501
+            'should_restrict_sites': (bool, none_type,),  # noqa: E501
+            'team_description': (str, none_type,),  # noqa: E501
+            'team_id': (int, none_type,),  # noqa: E501
+            'team_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -148,12 +143,12 @@ class TeamDetailModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Domain Id. [optional]  # noqa: E501
+            domain_id (int): Domain Id. [optional]  # noqa: E501
             should_restrict_lists (bool): Should Restrict Lists. [optional]  # noqa: E501
             should_restrict_sites (bool): Should Restrict Sites. [optional]  # noqa: E501
-            team_description (bool, date, datetime, dict, float, int, list, str, none_type): Team Description. [optional]  # noqa: E501
-            team_id (bool, date, datetime, dict, float, int, list, str, none_type): Team Id. [optional]  # noqa: E501
-            team_name (bool, date, datetime, dict, float, int, list, str, none_type): Team Name. [optional]  # noqa: E501
+            team_description (str): Team Description. [optional]  # noqa: E501
+            team_id (int): Team Id. [optional]  # noqa: E501
+            team_name (str): Team Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,12 +235,12 @@ class TeamDetailModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Domain Id. [optional]  # noqa: E501
+            domain_id (int): Domain Id. [optional]  # noqa: E501
             should_restrict_lists (bool): Should Restrict Lists. [optional]  # noqa: E501
             should_restrict_sites (bool): Should Restrict Sites. [optional]  # noqa: E501
-            team_description (bool, date, datetime, dict, float, int, list, str, none_type): Team Description. [optional]  # noqa: E501
-            team_id (bool, date, datetime, dict, float, int, list, str, none_type): Team Id. [optional]  # noqa: E501
-            team_name (bool, date, datetime, dict, float, int, list, str, none_type): Team Name. [optional]  # noqa: E501
+            team_description (str): Team Description. [optional]  # noqa: E501
+            team_id (int): Team Id. [optional]  # noqa: E501
+            team_name (str): Team Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

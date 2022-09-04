@@ -85,10 +85,8 @@ class ConfigurationGeneralV2Model(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -97,39 +95,36 @@ class ConfigurationGeneralV2Model(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'application_settings': (ConfigurationApplicationSettingsModel,),  # noqa: E501
-            'email': (ConfigurationEmailModel,),  # noqa: E501
-            'folders': (ConfigurationFoldersModel,),  # noqa: E501
-            'launcher_settings': (ConfigurationLauncherSettingsModel,),  # noqa: E501
-            'local_user_passwords': (ConfigurationLocalUserPasswordsModel,),  # noqa: E501
-            'login': (ConfigurationLoginV2Model,),  # noqa: E501
-            'permission_options': (ConfigurationPermissionOptionsModel,),  # noqa: E501
-            'protocol_handler_settings': (ConfigurationProtocolHandlerSettingsModel,),  # noqa: E501
-            'security': (ConfigurationSecurityModel,),  # noqa: E501
-            'session_recording': (ConfigurationSessionRecordingModel,),  # noqa: E501
-            'unlimited_admin': (UnlimitedAdminModel,),  # noqa: E501
-            'user_experience': (ConfigurationUserExperienceModel,),  # noqa: E501
-            'user_interface': (ConfigurationUserInterfaceModel,),  # noqa: E501
+            'application_settings': (ConfigurationApplicationSettingsModel, none_type,),  # noqa: E501
+            'email': (ConfigurationEmailModel, none_type,),  # noqa: E501
+            'folders': (ConfigurationFoldersModel, none_type,),  # noqa: E501
+            'launcher_settings': (ConfigurationLauncherSettingsModel, none_type,),  # noqa: E501
+            'local_user_passwords': (ConfigurationLocalUserPasswordsModel, none_type,),  # noqa: E501
+            'login': (ConfigurationLoginV2Model, none_type,),  # noqa: E501
+            'permission_options': (ConfigurationPermissionOptionsModel, none_type,),  # noqa: E501
+            'protocol_handler_settings': (ConfigurationProtocolHandlerSettingsModel, none_type,),  # noqa: E501
+            'security': (ConfigurationSecurityModel, none_type,),  # noqa: E501
+            'session_recording': (ConfigurationSessionRecordingModel, none_type,),  # noqa: E501
+            'unlimited_admin': (UnlimitedAdminModel, none_type,),  # noqa: E501
+            'user_experience': (ConfigurationUserExperienceModel, none_type,),  # noqa: E501
+            'user_interface': (ConfigurationUserInterfaceModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

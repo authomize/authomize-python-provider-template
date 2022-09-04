@@ -65,10 +65,8 @@ class EntityTypeModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,31 +75,28 @@ class EntityTypeModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'actions': ([EventSubscriptionTypeActionModel],),  # noqa: E501
-            'condition_type_options': ([EventSubscriptionConditionTypeOptionModel],),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'entity': (EventSubscriptionEntity,),  # noqa: E501
-            'id': (EventSubscriptionEntity,),  # noqa: E501
+            'actions': ([EventSubscriptionTypeActionModel], none_type,),  # noqa: E501
+            'condition_type_options': ([EventSubscriptionConditionTypeOptionModel], none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'entity': (EventSubscriptionEntity, none_type,),  # noqa: E501
+            'id': (EventSubscriptionEntity, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,7 +150,7 @@ class EntityTypeModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             actions ([EventSubscriptionTypeActionModel]): The list of actions available for the entity. [optional]  # noqa: E501
             condition_type_options ([EventSubscriptionConditionTypeOptionModel]): The list of condition type options available for the entity. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The localized name of the entity type, such as Secret, IP Address Range, or Folder. [optional]  # noqa: E501
+            display_name (str): The localized name of the entity type, such as Secret, IP Address Range, or Folder. [optional]  # noqa: E501
             entity (EventSubscriptionEntity): [optional]  # noqa: E501
             id (EventSubscriptionEntity): [optional]  # noqa: E501
         """
@@ -245,7 +240,7 @@ class EntityTypeModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             actions ([EventSubscriptionTypeActionModel]): The list of actions available for the entity. [optional]  # noqa: E501
             condition_type_options ([EventSubscriptionConditionTypeOptionModel]): The list of condition type options available for the entity. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The localized name of the entity type, such as Secret, IP Address Range, or Folder. [optional]  # noqa: E501
+            display_name (str): The localized name of the entity type, such as Secret, IP Address Range, or Folder. [optional]  # noqa: E501
             entity (EventSubscriptionEntity): [optional]  # noqa: E501
             id (EventSubscriptionEntity): [optional]  # noqa: E501
         """

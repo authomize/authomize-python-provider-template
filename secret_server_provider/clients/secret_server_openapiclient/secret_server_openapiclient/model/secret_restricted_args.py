@@ -57,10 +57,8 @@ class SecretRestrictedArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class SecretRestrictedArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'double_lock_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'force_check_in': (bool,),  # noqa: E501
-            'include_inactive': (bool,),  # noqa: E501
-            'new_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'no_auto_checkout': (bool,),  # noqa: E501
-            'ticket_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_system_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'comment': (str, none_type,),  # noqa: E501
+            'double_lock_password': (str, none_type,),  # noqa: E501
+            'force_check_in': (bool, none_type,),  # noqa: E501
+            'include_inactive': (bool, none_type,),  # noqa: E501
+            'new_password': (str, none_type,),  # noqa: E501
+            'no_auto_checkout': (bool, none_type,),  # noqa: E501
+            'ticket_number': (str, none_type,),  # noqa: E501
+            'ticket_system_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,14 +144,14 @@ class SecretRestrictedArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): If the secret requires a comment to view or requires approval to view, a reason for accessing the secret must be provided.. [optional]  # noqa: E501
-            double_lock_password (bool, date, datetime, dict, float, int, list, str, none_type): If the secret is DoubleLocked, this is the DoubleLock password needed to access the secret.. [optional]  # noqa: E501
+            comment (str): If the secret requires a comment to view or requires approval to view, a reason for accessing the secret must be provided.. [optional]  # noqa: E501
+            double_lock_password (str): If the secret is DoubleLocked, this is the DoubleLock password needed to access the secret.. [optional]  # noqa: E501
             force_check_in (bool): Force the secret to be checked in, even if checked out by someone else. The user must have the \"Force Check In\" permission.. [optional]  # noqa: E501
             include_inactive (bool): If the secret is deactivated, this must be set to true in order to access the secret. The user must also have the \"View Deleted Secrets\" permission.. [optional]  # noqa: E501
-            new_password (bool, date, datetime, dict, float, int, list, str, none_type): New secret password.. [optional]  # noqa: E501
+            new_password (str): New secret password.. [optional]  # noqa: E501
             no_auto_checkout (bool): Don't check out the secret automatically.. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): If the secret requires a comment to view or requires approval and a user must provide a help desk a ticket number, this is the ticket number to the help desk request.. [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): If the secret requires a comment to view or requires approval and a user must provide a help desk a ticket number, this is the id of the help desk system configured in Secret Server that should be used to validate the ticket number.. [optional]  # noqa: E501
+            ticket_number (str): If the secret requires a comment to view or requires approval and a user must provide a help desk a ticket number, this is the ticket number to the help desk request.. [optional]  # noqa: E501
+            ticket_system_id (int): If the secret requires a comment to view or requires approval and a user must provide a help desk a ticket number, this is the id of the help desk system configured in Secret Server that should be used to validate the ticket number.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,14 +237,14 @@ class SecretRestrictedArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): If the secret requires a comment to view or requires approval to view, a reason for accessing the secret must be provided.. [optional]  # noqa: E501
-            double_lock_password (bool, date, datetime, dict, float, int, list, str, none_type): If the secret is DoubleLocked, this is the DoubleLock password needed to access the secret.. [optional]  # noqa: E501
+            comment (str): If the secret requires a comment to view or requires approval to view, a reason for accessing the secret must be provided.. [optional]  # noqa: E501
+            double_lock_password (str): If the secret is DoubleLocked, this is the DoubleLock password needed to access the secret.. [optional]  # noqa: E501
             force_check_in (bool): Force the secret to be checked in, even if checked out by someone else. The user must have the \"Force Check In\" permission.. [optional]  # noqa: E501
             include_inactive (bool): If the secret is deactivated, this must be set to true in order to access the secret. The user must also have the \"View Deleted Secrets\" permission.. [optional]  # noqa: E501
-            new_password (bool, date, datetime, dict, float, int, list, str, none_type): New secret password.. [optional]  # noqa: E501
+            new_password (str): New secret password.. [optional]  # noqa: E501
             no_auto_checkout (bool): Don't check out the secret automatically.. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): If the secret requires a comment to view or requires approval and a user must provide a help desk a ticket number, this is the ticket number to the help desk request.. [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): If the secret requires a comment to view or requires approval and a user must provide a help desk a ticket number, this is the id of the help desk system configured in Secret Server that should be used to validate the ticket number.. [optional]  # noqa: E501
+            ticket_number (str): If the secret requires a comment to view or requires approval and a user must provide a help desk a ticket number, this is the ticket number to the help desk request.. [optional]  # noqa: E501
+            ticket_system_id (int): If the secret requires a comment to view or requires approval and a user must provide a help desk a ticket number, this is the id of the help desk system configured in Secret Server that should be used to validate the ticket number.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

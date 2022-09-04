@@ -67,10 +67,8 @@ class ConfigurationSessionRecordingPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,48 +77,45 @@ class ConfigurationSessionRecordingPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'archive_location_by_site': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'archive_path': (UpdateFieldValueOfString,),  # noqa: E501
-            'archive_path_mappings': (UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray,),  # noqa: E501
-            'days_until_archive': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'days_until_delete': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable_archive': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_delete': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_hardware_acceleration': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_inactivity_timeout': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_on_demand_video_processing': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_session_recording': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'encrypt_archive': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'hide_recording_indicator': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'inactivity_timeout_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'max_session_length': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'rdp_proxy_record_key_strokes': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'rdp_proxy_record_video': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'ssh_proxy_record_key_strokes': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'ssh_proxy_record_video': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'store_in_database': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'use_temporary_archives': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'video_codec_id': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'archive_location_by_site': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'archive_path': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'archive_path_mappings': (UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray, none_type,),  # noqa: E501
+            'days_until_archive': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'days_until_delete': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable_archive': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_delete': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_hardware_acceleration': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_inactivity_timeout': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_on_demand_video_processing': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_session_recording': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'encrypt_archive': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'hide_recording_indicator': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'inactivity_timeout_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'max_session_length': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'rdp_proxy_record_key_strokes': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'rdp_proxy_record_video': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'ssh_proxy_record_key_strokes': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'ssh_proxy_record_video': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'store_in_database': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'use_temporary_archives': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'video_codec_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

@@ -125,7 +125,7 @@ class DomainNameIndexApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -226,7 +226,7 @@ class DomainNameIndexApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -282,21 +282,21 @@ class DomainNameIndexApi(object):
                 },
                 'openapi_types': {
                     'filter_discovery_source_id_scanned':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_domain_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_domain_resolve_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_discovery_source_id_scanned': 'filter.discoverySourceIdScanned',
@@ -406,7 +406,7 @@ class DomainNameIndexApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'domain_name_index_update_args':
                         (DomainNameIndexUpdateArgs,),
                 },
@@ -525,7 +525,7 @@ class DomainNameIndexApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Delete success
+            id (int): Delete success
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -687,7 +687,7 @@ class DomainNameIndexApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Domain Name Index ID
+            id (int): Domain Name Index ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -770,14 +770,14 @@ class DomainNameIndexApi(object):
 
 
         Keyword Args:
-            filter_discovery_source_id_scanned (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceIdScanned. [optional]
-            filter_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): DomainName. [optional]
-            filter_domain_resolve_type (bool, date, datetime, dict, float, int, list, str, none_type): DomainResolveType. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_discovery_source_id_scanned (int): DiscoverySourceIdScanned. [optional]
+            filter_domain_name (str): DomainName. [optional]
+            filter_domain_resolve_type (str): DomainResolveType. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -934,7 +934,7 @@ class DomainNameIndexApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Domain Name Index ID
+            id (int): Domain Name Index ID
 
         Keyword Args:
             domain_name_index_update_args (DomainNameIndexUpdateArgs): args. [optional]

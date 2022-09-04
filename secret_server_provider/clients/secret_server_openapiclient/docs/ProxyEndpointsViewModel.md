@@ -5,8 +5,8 @@ ProxyEndpointsViewModel
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**default_rdp_proxy_port** | **bool, date, datetime, dict, float, int, list, str, none_type** | DefaultRdpProxyPort | [optional] 
-**default_ssh_proxy_port** | **bool, date, datetime, dict, float, int, list, str, none_type** | DefaultSshProxyPort | [optional] 
+**default_rdp_proxy_port** | **int** | DefaultRdpProxyPort | [optional] 
+**default_ssh_proxy_port** | **int** | DefaultSshProxyPort | [optional] 
 **engines** | [**[ProxyEngineViewModel]**](ProxyEngineViewModel.md) | Engines | [optional] 
 **nodes** | [**[ProxyNodeViewModel]**](ProxyNodeViewModel.md) | Nodes | [optional] 
 **rdp_proxy_enabled** | **bool** | RdpProxyEnabled | [optional] 

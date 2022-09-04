@@ -63,7 +63,6 @@ class SecretCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
         ('secret_template_id',): {
             'inclusive_minimum': 1,
@@ -72,7 +71,6 @@ class SecretCreateArgs(ModelNormal):
             'inclusive_minimum': 1,
         },
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,15 +79,12 @@ class SecretCreateArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
@@ -97,30 +92,30 @@ class SecretCreateArgs(ModelNormal):
         lazy_import()
         return {
             'items': ([RestSecretItem],),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'auto_change_enabled': (bool,),  # noqa: E501
-            'check_out_change_password_enabled': (bool,),  # noqa: E501
-            'check_out_enabled': (bool,),  # noqa: E501
-            'check_out_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'delay_indexing': (bool,),  # noqa: E501
-            'enable_inherit_permissions': (bool,),  # noqa: E501
-            'enable_inherit_secret_policy': (bool,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_connect_as_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_web_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'proxy_enabled': (bool,),  # noqa: E501
-            'requires_comment': (bool,),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'session_recording_enabled': (bool,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_key_args': (SshKeyArgs,),  # noqa: E501
-            'web_launcher_requires_incognito_mode': (bool,),  # noqa: E501
+            'name': (str,),  # noqa: E501
+            'secret_template_id': (int,),  # noqa: E501
+            'auto_change_enabled': (bool, none_type,),  # noqa: E501
+            'check_out_change_password_enabled': (bool, none_type,),  # noqa: E501
+            'check_out_enabled': (bool, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (int, none_type,),  # noqa: E501
+            'delay_indexing': (bool, none_type,),  # noqa: E501
+            'enable_inherit_permissions': (bool, none_type,),  # noqa: E501
+            'enable_inherit_secret_policy': (bool, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'launcher_connect_as_secret_id': (int, none_type,),  # noqa: E501
+            'password_type_web_script_id': (int, none_type,),  # noqa: E501
+            'proxy_enabled': (bool, none_type,),  # noqa: E501
+            'requires_comment': (bool, none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
+            'session_recording_enabled': (bool, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'ssh_key_args': (SshKeyArgs, none_type,),  # noqa: E501
+            'web_launcher_requires_incognito_mode': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -158,8 +153,8 @@ class SecretCreateArgs(ModelNormal):
 
         Args:
             items ([RestSecretItem]): An array of values for the secret fields defined in the secret template.
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name to display for the secret.
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the secret template that defines the fields and properties of the secret.
+            name (str): The name to display for the secret.
+            secret_template_id (int): The id of the secret template that defines the fields and properties of the secret.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -195,18 +190,18 @@ class SecretCreateArgs(ModelNormal):
             auto_change_enabled (bool): Whether the secret’s password is automatically rotated on a schedule.. [optional]  # noqa: E501
             check_out_change_password_enabled (bool): Whether the secret’s password is automatically changed when a secret is checked in. This is a security feature that prevents a use of the password retrieved from check-out after the secret is checked in.. [optional]  # noqa: E501
             check_out_enabled (bool): Whether the user must check-out the secret to view it. Checking out gives the user exclusive access to the secret for a specified period or until the secret is checked in.. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): The number of minutes that a secret will remain checked out.. [optional]  # noqa: E501
+            check_out_interval_minutes (int): The number of minutes that a secret will remain checked out.. [optional]  # noqa: E501
             delay_indexing (bool): Whether the search indexing should be delayed to the background process. This can speed up bulk secret creation scripts by offloading the task of indexing the new secrets to the background task at the trade-off of not having search indexes immediately available.. [optional]  # noqa: E501
             enable_inherit_permissions (bool): Whether the secret inherits permissions from the containing folder.. [optional]  # noqa: E501
             enable_inherit_secret_policy (bool): Whether the secret policy is inherited from the containing folder.. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): If the secret is contained in a folder, the id of the containing folder. Set to null or -1 for secrets that are in the root folder.. [optional]  # noqa: E501
-            launcher_connect_as_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): When an SSH secret is proxied, you can choose to connect as another user and then do an su to the current secret’s user. This is a common practice for connecting with a lower privileged account and then switching to the root user.. [optional]  # noqa: E501
-            password_type_web_script_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the password change script to use on applicable web password secrets.. [optional]  # noqa: E501
+            folder_id (int): If the secret is contained in a folder, the id of the containing folder. Set to null or -1 for secrets that are in the root folder.. [optional]  # noqa: E501
+            launcher_connect_as_secret_id (int): When an SSH secret is proxied, you can choose to connect as another user and then do an su to the current secret’s user. This is a common practice for connecting with a lower privileged account and then switching to the root user.. [optional]  # noqa: E501
+            password_type_web_script_id (int): The id of the password change script to use on applicable web password secrets.. [optional]  # noqa: E501
             proxy_enabled (bool): Whether sessions launched on this secret use Secret Server’s proxying or connect directly.. [optional]  # noqa: E501
             requires_comment (bool): Whether the user must enter a comment to view the secret.. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the secret policy that controls the security and other settings of the secret. Set to null to not assign a secret policy.. [optional]  # noqa: E501
+            secret_policy_id (int): The id of the secret policy that controls the security and other settings of the secret. Set to null to not assign a secret policy.. [optional]  # noqa: E501
             session_recording_enabled (bool): Whether session recording is enabled.. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the distributed engine site that is used by this secret for operations such as password changing.. [optional]  # noqa: E501
+            site_id (int): The id of the distributed engine site that is used by this secret for operations such as password changing.. [optional]  # noqa: E501
             ssh_key_args (SshKeyArgs): [optional]  # noqa: E501
             web_launcher_requires_incognito_mode (bool): Whether the web launcher will require the browser to run in incognito mode.. [optional]  # noqa: E501
         """
@@ -268,8 +263,8 @@ class SecretCreateArgs(ModelNormal):
 
         Args:
             items ([RestSecretItem]): An array of values for the secret fields defined in the secret template.
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name to display for the secret.
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the secret template that defines the fields and properties of the secret.
+            name (str): The name to display for the secret.
+            secret_template_id (int): The id of the secret template that defines the fields and properties of the secret.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -305,18 +300,18 @@ class SecretCreateArgs(ModelNormal):
             auto_change_enabled (bool): Whether the secret’s password is automatically rotated on a schedule.. [optional]  # noqa: E501
             check_out_change_password_enabled (bool): Whether the secret’s password is automatically changed when a secret is checked in. This is a security feature that prevents a use of the password retrieved from check-out after the secret is checked in.. [optional]  # noqa: E501
             check_out_enabled (bool): Whether the user must check-out the secret to view it. Checking out gives the user exclusive access to the secret for a specified period or until the secret is checked in.. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): The number of minutes that a secret will remain checked out.. [optional]  # noqa: E501
+            check_out_interval_minutes (int): The number of minutes that a secret will remain checked out.. [optional]  # noqa: E501
             delay_indexing (bool): Whether the search indexing should be delayed to the background process. This can speed up bulk secret creation scripts by offloading the task of indexing the new secrets to the background task at the trade-off of not having search indexes immediately available.. [optional]  # noqa: E501
             enable_inherit_permissions (bool): Whether the secret inherits permissions from the containing folder.. [optional]  # noqa: E501
             enable_inherit_secret_policy (bool): Whether the secret policy is inherited from the containing folder.. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): If the secret is contained in a folder, the id of the containing folder. Set to null or -1 for secrets that are in the root folder.. [optional]  # noqa: E501
-            launcher_connect_as_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): When an SSH secret is proxied, you can choose to connect as another user and then do an su to the current secret’s user. This is a common practice for connecting with a lower privileged account and then switching to the root user.. [optional]  # noqa: E501
-            password_type_web_script_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the password change script to use on applicable web password secrets.. [optional]  # noqa: E501
+            folder_id (int): If the secret is contained in a folder, the id of the containing folder. Set to null or -1 for secrets that are in the root folder.. [optional]  # noqa: E501
+            launcher_connect_as_secret_id (int): When an SSH secret is proxied, you can choose to connect as another user and then do an su to the current secret’s user. This is a common practice for connecting with a lower privileged account and then switching to the root user.. [optional]  # noqa: E501
+            password_type_web_script_id (int): The id of the password change script to use on applicable web password secrets.. [optional]  # noqa: E501
             proxy_enabled (bool): Whether sessions launched on this secret use Secret Server’s proxying or connect directly.. [optional]  # noqa: E501
             requires_comment (bool): Whether the user must enter a comment to view the secret.. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the secret policy that controls the security and other settings of the secret. Set to null to not assign a secret policy.. [optional]  # noqa: E501
+            secret_policy_id (int): The id of the secret policy that controls the security and other settings of the secret. Set to null to not assign a secret policy.. [optional]  # noqa: E501
             session_recording_enabled (bool): Whether session recording is enabled.. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the distributed engine site that is used by this secret for operations such as password changing.. [optional]  # noqa: E501
+            site_id (int): The id of the distributed engine site that is used by this secret for operations such as password changing.. [optional]  # noqa: E501
             ssh_key_args (SshKeyArgs): [optional]  # noqa: E501
             web_launcher_requires_incognito_mode (bool): Whether the web launcher will require the browser to run in incognito mode.. [optional]  # noqa: E501
         """

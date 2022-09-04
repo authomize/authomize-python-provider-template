@@ -57,10 +57,8 @@ class OnlineActivationArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class OnlineActivationArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'email': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'phone_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'email': (str,),  # noqa: E501
+            'name': (str,),  # noqa: E501
+            'phone_number': (str,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -109,9 +104,9 @@ class OnlineActivationArgs(ModelNormal):
         """OnlineActivationArgs - a model defined in OpenAPI
 
         Args:
-            email (bool, date, datetime, dict, float, int, list, str, none_type): Email of person performing activation
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of person performing activation
-            phone_number (bool, date, datetime, dict, float, int, list, str, none_type): Phone Number of person performing activation
+            email (str): Email of person performing activation
+            name (str): Name of person performing activation
+            phone_number (str): Phone Number of person performing activation
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -202,9 +197,9 @@ class OnlineActivationArgs(ModelNormal):
         """OnlineActivationArgs - a model defined in OpenAPI
 
         Args:
-            email (bool, date, datetime, dict, float, int, list, str, none_type): Email of person performing activation
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of person performing activation
-            phone_number (bool, date, datetime, dict, float, int, list, str, none_type): Phone Number of person performing activation
+            email (str): Email of person performing activation
+            name (str): Name of person performing activation
+            phone_number (str): Phone Number of person performing activation
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

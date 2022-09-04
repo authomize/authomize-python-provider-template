@@ -172,7 +172,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_server_settings_api.SecretServerSettingsApi(api_client)
     secret_server_settings_import_capabilities_args = SecretServerSettingsImportCapabilitiesArgs(
-        file=None,
+        file="file_example",
         is_import=True,
     ) # SecretServerSettingsImportCapabilitiesArgs | args (optional)
 
@@ -344,8 +344,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=SecretServerSettingsPatchModel(
             advanced_settings=[
                 ConfigurationAdvancedUpdateArgs(
-                    advanced_setting_id=None,
-                    value=None,
+                    advanced_setting_id=1,
+                    value="value_example",
                 ),
             ],
             application_settings=ConfigurationApplicationSettingsPatchModel(
@@ -363,15 +363,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 api_session_timeout_days=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 api_session_timeout_hours=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 api_session_timeout_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 api_session_timeout_unlimited=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -383,7 +383,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 custom_url=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 display_downtime_message_to_admins_only=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -404,19 +404,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 external_instance_id=True,
                 maximum_token_refreshes_allowed=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 max_secret_log_length=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 mobile_max_offline_days=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 mobile_max_offline_hours=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 obfuscate_personally_identifiable_information=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -424,7 +424,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 pii_obfuscation_level=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 prevent_application_from_sleeping=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -436,11 +436,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 syslog_cef_log_site=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 syslog_cef_port=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 syslog_cef_protocol=UpdateFieldValueOfSyslogCefProtocolType(
                     dirty=True,
@@ -448,7 +448,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 syslog_cef_server=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 syslog_cef_time_zone=UpdateFieldValueOfSyslogCefTimeZoneType(
                     dirty=True,
@@ -456,26 +456,26 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 tms_installation_path=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 win_rm_endpoint_url=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 write_syslog_to_event_log=UpdateFieldValueOfBoolean(
                     dirty=True,
                     value=True,
                 ),
             ),
-            configuration_version=None,
+            configuration_version="configuration_version_example",
             email=ConfigurationEmailPatchModel(
                 from_email_address=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 from_email_name=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 send_legacy_emails=UpdateFieldValueOfOptionalBoolean(
                     dirty=True,
@@ -487,19 +487,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 smtp_domain=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 smtp_password=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 smtp_port=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 smtp_server=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 smtp_use_credentials=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -511,14 +511,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 smtp_user_name=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 smtp_use_ssl=UpdateFieldValueOfBoolean(
                     dirty=True,
                     value=True,
                 ),
             ),
-            external_instance_id=None,
+            external_instance_id="external_instance_id_example",
             folder_settings=ConfigurationFoldersPatchModel(
                 enable_personal_folders=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -526,7 +526,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 personal_folder_name=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 personal_folder_name_option=UpdateFieldValueOfPersonalFolderNameOptionType(
                     dirty=True,
@@ -534,7 +534,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 personal_folder_warning=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 require_view_folder_permission=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -585,9 +585,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             licenses=[
                 LicenseModel(
-                    description=None,
-                    license_key=None,
-                    license_name=None,
+                    description="description_example",
+                    license_key="license_key_example",
+                    license_name="license_name_example",
                 ),
             ],
             local_user_passwords=ConfigurationLocalPasswordPatchModel(
@@ -609,31 +609,31 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 local_user_password_expiration_days=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 local_user_password_expiration_hours=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 local_user_password_expiration_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 minimum_password_age_days=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 minimum_password_age_hours=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 minimum_password_age_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 password_history_items=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 password_history_items_all=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -641,7 +641,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 password_minimum_length=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 password_require_lowercase=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -675,11 +675,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 default_login_domain=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 enable_domain_selector=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 enable_login_failure_captcha=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -687,24 +687,24 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 max_concurrent_logins_per_user=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 maximum_login_failures=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 max_login_failures_before_captcha=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 remember_me_time_out_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 ssh_key_integration=ConfigurationLoginSshKeyIntegrationPatchModel(
                     authentication_method=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     enable=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -712,7 +712,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     expiration_in_hours=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     key_expires=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -731,7 +731,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     duo=ConfigurationLoginTwoFactorDuoPatchModel(
                         api_hostname=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         enable=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -739,11 +739,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         integration_key=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         secret_key=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         use_radius_username=UpdateFieldValueOfOptionalBoolean(
                             dirty=True,
@@ -757,11 +757,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         client_id=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         client_secret=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         enable=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -769,11 +769,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         logout_url=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         server_url=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         use_thycotic_one_auth_as_default=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -787,11 +787,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         client_port_range=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         default_username=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         disable_nas_ip_address_attribute=UpdateFieldValueOfOptionalBoolean(
                             dirty=True,
@@ -811,43 +811,43 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         failover_server_ip=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         failover_server_port=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         failover_shared_secret=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         failover_timeout_seconds=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         login_explanation=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         nas_id=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         protocol=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         server_ip=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         server_port=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         shared_secret=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         shared_secret_same_for_all_users=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -855,7 +855,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         timeout_seconds=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                     ),
                     require_two_factor_for_web_login=UpdateFieldValueOfBoolean(
@@ -868,12 +868,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     two_factor_remember_me_time_out_days=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                 ),
                 user_lockout_time_minutes=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 visual_encrypted_keyboard_enabled=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -903,13 +903,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 force_secret_approval=UpdateFieldValueOfOptionalForceSecretApprovalType(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
             ),
             protocol_handler_settings=ConfigurationProtocolHandlerSettingsPatchModel(
                 protocol_handler_install_time_allowed_domains=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 protocol_handler_install_time_disable_auto_update=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -937,15 +937,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         authn_context=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         clock_skew=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         description=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         disable_assertion_replay_check=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -985,11 +985,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         display_name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         domain_attribute=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         enable_detailed_log=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -1003,14 +1003,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                             dirty=True,
                             value=True,
                         ),
-                        identity_provider_id=None,
+                        identity_provider_id=1,
                         logout_request_life_time=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         override_pending_authn_request=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -1018,7 +1018,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         public_certificate=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         sign_authn_request=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -1034,23 +1034,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         single_logout_service_response_url=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         single_logout_service_url=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         sso_service_binding=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         sso_service_url=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         username_attribute=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         want_assertion_encrypted=UpdateFieldValueOfBoolean(
                             dirty=True,
@@ -1080,19 +1080,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ],
                 legacy_username_attribute=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 service_provider_certificate=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 service_provider_certificate_password=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 service_provider_name=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 use_legacy=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1114,15 +1114,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 certificate_chain_policy_options=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 client_certificate_ids=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 database_integrity_monitoring_symmetric_key=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 enable_database_integrity_monitoring=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1146,7 +1146,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 file_extension_restrictions=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 fips_enabled=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1162,7 +1162,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 hsts_max_age=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 ignore_certificate_revocation_failures=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1170,7 +1170,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 maximum_file_size_bytes=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 maximum_file_size_supported=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1178,7 +1178,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 secret_erase_workflow=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 web_password_filler_requires_full_domain_match=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1192,24 +1192,24 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 archive_path=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 archive_path_mappings=UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray(
                     dirty=True,
                     value=[
                         ConfigurationSessionRecordingSiteArchiveUpdateModel(
-                            path=None,
-                            site_id=None,
+                            path="path_example",
+                            site_id=1,
                         ),
                     ],
                 ),
                 days_until_archive=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 days_until_delete=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 enable_archive=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1245,11 +1245,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 inactivity_timeout_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 max_session_length=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 rdp_proxy_record_key_strokes=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1277,7 +1277,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 video_codec_id=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
             ),
             ssh_commands=ConfigurationSshCommandImportModel(
@@ -1289,53 +1289,53 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         description=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
-                        ssh_command_blocklist_id=None,
+                        ssh_command_blocklist_id="ssh_command_blocklist_id_example",
                         ssh_command_ids=UpdateFieldValueOfGuidArray(
                             dirty=True,
                             value=[
-                                None,
+                                "value_example",
                             ],
                         ),
                     ),
                 ],
                 ssh_command_menu_maps=[
                     ConfigurationSshCommandMenuMapModel(
-                        sort_order=None,
-                        ssh_command_guid=None,
-                        ssh_command_menu_guid=None,
+                        sort_order=1,
+                        ssh_command_guid="ssh_command_guid_example",
+                        ssh_command_menu_guid="ssh_command_menu_guid_example",
                     ),
                 ],
                 ssh_command_menus=[
                     ConfigurationSshCommandMenuModel(
                         active=True,
-                        description=None,
-                        name=None,
-                        ssh_command_menu_guid=None,
-                        ssh_command_menu_id=None,
+                        description="description_example",
+                        name="name_example",
+                        ssh_command_menu_guid="ssh_command_menu_guid_example",
+                        ssh_command_menu_id=1,
                     ),
                 ],
                 ssh_commands=[
                     SshCommandPatchModel(
                         command=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         sort_order=UpdateFieldValueOfInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
-                        ssh_command_guid=None,
-                        ssh_command_id=None,
+                        ssh_command_guid="ssh_command_guid_example",
+                        ssh_command_id=1,
                     ),
                 ],
             ),
@@ -1352,27 +1352,27 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         bmc_change_management_comment_work_type=UpdateFieldValueOfOptionalBmcChangeManagementCommentWorkType(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         bmc_incident_management_comment_work_type=UpdateFieldValueOfOptionalBmcIncidentManagementCommentWorkType(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         bmc_remedy_authentication=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         bmc_remedy_url_endpoint=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         description=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         display_message=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         force_require_ticket_number=UpdateFieldValueOfForceRequireTicketSystemOptions(
                             dirty=True,
@@ -1384,68 +1384,68 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         ),
                         name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         power_shell_add_comment_script_arguments=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         power_shell_add_comment_script_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         power_shell_add_ticket_comment_script_arguments=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         power_shell_add_ticket_comment_script_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         power_shell_run_as_account_secret_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         power_shell_ticket_status_script_arguments=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         power_shell_ticket_status_script_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         service_now_allowed_statuses=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         service_now_domain_name=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         site_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         system_credential_secret_id=UpdateFieldValueOfOptionalInt32(
                             dirty=True,
-                            value=None,
+                            value=1,
                         ),
                         ticket_number_error_message=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                         ticket_number_validation=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
-                        ticket_system_id=None,
+                        ticket_system_id=1,
                         ticket_system_type=UpdateFieldValueOfTicketSystemTypes(
                             dirty=True,
                             value=TicketSystemTypes("{}"),
                         ),
                         view_ticket_url=UpdateFieldValueOfString(
                             dirty=True,
-                            value=None,
+                            value="value_example",
                         ),
                     ),
                 ],
@@ -1453,23 +1453,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             user_experience=ConfigurationUserExperiencePatchModel(
                 application_language=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 checkout_notification_threshold=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 default_date_format=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 default_new_user_role_id=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 default_time_format=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 force_inactivity_timeout=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1477,7 +1477,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 force_inactivity_timeout_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 require_folder_for_secret=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1485,7 +1485,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 search_delay_ms=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 secret_password_history_restriction_all=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -1493,19 +1493,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 secret_password_history_restriction_count=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 secret_view_interval_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 server_time_zone_id=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 ui_inactivity_sleep_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
             ),
             user_interface=ConfigurationUserInterfacePatchModel(
@@ -1515,15 +1515,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 custom_logo_collapsed=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 custom_logo_full_size=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 default_classic_theme=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 disable_legacy_ui=UpdateFieldValueOfBoolean(
                     dirty=True,

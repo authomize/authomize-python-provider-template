@@ -67,10 +67,8 @@ class DisasterRecoveryConfigurationUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,32 +77,29 @@ class DisasterRecoveryConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'data_package_storage_path': (UpdateFieldValueOfString,),  # noqa: E501
-            'data_replication_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'data_replication_group_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'data_source_key': (UpdateFieldValueOfString,),  # noqa: E501
-            'data_source_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'replication_interval_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'data_package_storage_path': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'data_replication_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'data_replication_group_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'data_source_key': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'data_source_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'replication_interval_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

@@ -57,10 +57,8 @@ class EventPipelinePolicyMap(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class EventPipelinePolicyMap(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'event_pipeline_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_policy_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'event_pipeline_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_policy_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_policy_map_id': (int, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class EventPipelinePolicyMap(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]  # noqa: E501
-            event_pipeline_policy_map_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyMapId. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): SortOrder. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]  # noqa: E501
+            event_pipeline_policy_map_id (int): EventPipelinePolicyMapId. [optional]  # noqa: E501
+            sort_order (int): SortOrder. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class EventPipelinePolicyMap(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]  # noqa: E501
-            event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]  # noqa: E501
-            event_pipeline_policy_map_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyMapId. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): SortOrder. [optional]  # noqa: E501
+            event_pipeline_id (int): EventPipelineId. [optional]  # noqa: E501
+            event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]  # noqa: E501
+            event_pipeline_policy_map_id (int): EventPipelinePolicyMapId. [optional]  # noqa: E501
+            sort_order (int): SortOrder. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

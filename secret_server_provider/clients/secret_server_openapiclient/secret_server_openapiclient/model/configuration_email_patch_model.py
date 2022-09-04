@@ -67,10 +67,8 @@ class ConfigurationEmailPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,38 +77,35 @@ class ConfigurationEmailPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'from_email_address': (UpdateFieldValueOfString,),  # noqa: E501
-            'from_email_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'send_legacy_emails': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'smtp_check_certificate_revocation': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'smtp_domain': (UpdateFieldValueOfString,),  # noqa: E501
-            'smtp_password': (UpdateFieldValueOfString,),  # noqa: E501
-            'smtp_port': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'smtp_server': (UpdateFieldValueOfString,),  # noqa: E501
-            'smtp_use_credentials': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'smtp_use_implicit_ssl': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'smtp_user_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'smtp_use_ssl': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'from_email_address': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'from_email_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'send_legacy_emails': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'smtp_check_certificate_revocation': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'smtp_domain': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'smtp_password': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'smtp_port': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'smtp_server': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'smtp_use_credentials': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'smtp_use_implicit_ssl': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'smtp_user_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'smtp_use_ssl': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

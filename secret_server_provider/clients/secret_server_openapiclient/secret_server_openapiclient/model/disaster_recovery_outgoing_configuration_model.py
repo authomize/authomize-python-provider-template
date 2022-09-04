@@ -61,10 +61,8 @@ class DisasterRecoveryOutgoingConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class DisasterRecoveryOutgoingConfigurationModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'data_package_storage_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'data_replicas': ([DisasterRecoveryDataReplicaModel],),  # noqa: E501
-            'data_source_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'data_source_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_data_package_storage_path_valid': (bool,),  # noqa: E501
-            'is_replica': (bool,),  # noqa: E501
+            'data_package_storage_path': (str, none_type,),  # noqa: E501
+            'data_replicas': ([DisasterRecoveryDataReplicaModel], none_type,),  # noqa: E501
+            'data_source_key': (str, none_type,),  # noqa: E501
+            'data_source_url': (str, none_type,),  # noqa: E501
+            'is_data_package_storage_path_valid': (bool, none_type,),  # noqa: E501
+            'is_replica': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,10 +146,10 @@ class DisasterRecoveryOutgoingConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data_package_storage_path (bool, date, datetime, dict, float, int, list, str, none_type): The location of where data replication files are stored temporarily on the data source.. [optional]  # noqa: E501
+            data_package_storage_path (str): The location of where data replication files are stored temporarily on the data source.. [optional]  # noqa: E501
             data_replicas ([DisasterRecoveryDataReplicaModel]): The data replicas registered with this data source.. [optional]  # noqa: E501
-            data_source_key (bool, date, datetime, dict, float, int, list, str, none_type): The data source key a data replica should use when enabling data replication.. [optional]  # noqa: E501
-            data_source_url (bool, date, datetime, dict, float, int, list, str, none_type): The data source URL a data replica should use when enabling data replication.. [optional]  # noqa: E501
+            data_source_key (str): The data source key a data replica should use when enabling data replication.. [optional]  # noqa: E501
+            data_source_url (str): The data source URL a data replica should use when enabling data replication.. [optional]  # noqa: E501
             is_data_package_storage_path_valid (bool): Whether the data package storage location is valid and ready for use.. [optional]  # noqa: E501
             is_replica (bool): Whether this instance of Secret Server is a data replica, a data source, or neither.. [optional]  # noqa: E501
         """
@@ -242,10 +237,10 @@ class DisasterRecoveryOutgoingConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data_package_storage_path (bool, date, datetime, dict, float, int, list, str, none_type): The location of where data replication files are stored temporarily on the data source.. [optional]  # noqa: E501
+            data_package_storage_path (str): The location of where data replication files are stored temporarily on the data source.. [optional]  # noqa: E501
             data_replicas ([DisasterRecoveryDataReplicaModel]): The data replicas registered with this data source.. [optional]  # noqa: E501
-            data_source_key (bool, date, datetime, dict, float, int, list, str, none_type): The data source key a data replica should use when enabling data replication.. [optional]  # noqa: E501
-            data_source_url (bool, date, datetime, dict, float, int, list, str, none_type): The data source URL a data replica should use when enabling data replication.. [optional]  # noqa: E501
+            data_source_key (str): The data source key a data replica should use when enabling data replication.. [optional]  # noqa: E501
+            data_source_url (str): The data source URL a data replica should use when enabling data replication.. [optional]  # noqa: E501
             is_data_package_storage_path_valid (bool): Whether the data package storage location is valid and ready for use.. [optional]  # noqa: E501
             is_replica (bool): Whether this instance of Secret Server is a data replica, a data source, or neither.. [optional]  # noqa: E501
         """

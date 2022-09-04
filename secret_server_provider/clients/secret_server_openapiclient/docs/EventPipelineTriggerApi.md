@@ -130,7 +130,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_trigger_api.EventPipelineTriggerApi(api_client)
-    event_entity_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | eventEntityTypeId (optional)
+    event_entity_type_id = 1 # int | eventEntityTypeId (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -147,7 +147,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **event_entity_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| eventEntityTypeId | [optional]
+ **event_entity_type_id** | **int**| eventEntityTypeId | [optional]
 
 ### Return type
 
@@ -215,7 +215,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = event_pipeline_trigger_api.EventPipelineTriggerApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Event Pipeline ID
+    id = 1 # int | Event Pipeline ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -231,7 +231,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Event Pipeline ID |
+ **id** | **int**| Event Pipeline ID |
 
 ### Return type
 

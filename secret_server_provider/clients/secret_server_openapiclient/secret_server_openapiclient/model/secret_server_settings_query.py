@@ -57,10 +57,8 @@ class SecretServerSettingsQuery(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,43 +66,40 @@ class SecretServerSettingsQuery(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'load_advanced_settings': (bool,),  # noqa: E501
-            'load_all': (bool,),  # noqa: E501
-            'load_application_settings': (bool,),  # noqa: E501
-            'load_email': (bool,),  # noqa: E501
-            'load_folder_settings': (bool,),  # noqa: E501
-            'load_launcher_settings': (bool,),  # noqa: E501
-            'load_licenses': (bool,),  # noqa: E501
-            'load_local_user_passwords': (bool,),  # noqa: E501
-            'load_login': (bool,),  # noqa: E501
-            'load_permission_options': (bool,),  # noqa: E501
-            'load_protocol_handler_settings': (bool,),  # noqa: E501
-            'load_saml': (bool,),  # noqa: E501
-            'load_security': (bool,),  # noqa: E501
-            'load_session_recording': (bool,),  # noqa: E501
-            'load_ssh_commands': (bool,),  # noqa: E501
-            'load_ticket_system': (bool,),  # noqa: E501
-            'load_user_experience': (bool,),  # noqa: E501
-            'load_user_interface': (bool,),  # noqa: E501
+            'load_advanced_settings': (bool, none_type,),  # noqa: E501
+            'load_all': (bool, none_type,),  # noqa: E501
+            'load_application_settings': (bool, none_type,),  # noqa: E501
+            'load_email': (bool, none_type,),  # noqa: E501
+            'load_folder_settings': (bool, none_type,),  # noqa: E501
+            'load_launcher_settings': (bool, none_type,),  # noqa: E501
+            'load_licenses': (bool, none_type,),  # noqa: E501
+            'load_local_user_passwords': (bool, none_type,),  # noqa: E501
+            'load_login': (bool, none_type,),  # noqa: E501
+            'load_permission_options': (bool, none_type,),  # noqa: E501
+            'load_protocol_handler_settings': (bool, none_type,),  # noqa: E501
+            'load_saml': (bool, none_type,),  # noqa: E501
+            'load_security': (bool, none_type,),  # noqa: E501
+            'load_session_recording': (bool, none_type,),  # noqa: E501
+            'load_ssh_commands': (bool, none_type,),  # noqa: E501
+            'load_ticket_system': (bool, none_type,),  # noqa: E501
+            'load_user_experience': (bool, none_type,),  # noqa: E501
+            'load_user_interface': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

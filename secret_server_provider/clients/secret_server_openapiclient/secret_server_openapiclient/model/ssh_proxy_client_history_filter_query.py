@@ -57,10 +57,8 @@ class SshProxyClientHistoryFilterQuery(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class SshProxyClientHistoryFilterQuery(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'authenticate_result': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'end_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'engine_identity_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ip_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'authenticate_result': (str, none_type,),  # noqa: E501
+            'end_date': (str, none_type,),  # noqa: E501
+            'engine_identity_guid': (str, none_type,),  # noqa: E501
+            'ip_address': (str, none_type,),  # noqa: E501
+            'start_date': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class SshProxyClientHistoryFilterQuery(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            authenticate_result (bool, date, datetime, dict, float, int, list, str, none_type): AuthenticateResult. [optional]  # noqa: E501
-            end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]  # noqa: E501
-            engine_identity_guid (bool, date, datetime, dict, float, int, list, str, none_type): EngineIdentityGuid. [optional]  # noqa: E501
-            ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]  # noqa: E501
+            authenticate_result (str): AuthenticateResult. [optional]  # noqa: E501
+            end_date (str): EndDate. [optional]  # noqa: E501
+            engine_identity_guid (str): EngineIdentityGuid. [optional]  # noqa: E501
+            ip_address (str): IpAddress. [optional]  # noqa: E501
+            start_date (str): StartDate. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class SshProxyClientHistoryFilterQuery(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            authenticate_result (bool, date, datetime, dict, float, int, list, str, none_type): AuthenticateResult. [optional]  # noqa: E501
-            end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]  # noqa: E501
-            engine_identity_guid (bool, date, datetime, dict, float, int, list, str, none_type): EngineIdentityGuid. [optional]  # noqa: E501
-            ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]  # noqa: E501
+            authenticate_result (str): AuthenticateResult. [optional]  # noqa: E501
+            end_date (str): EndDate. [optional]  # noqa: E501
+            engine_identity_guid (str): EngineIdentityGuid. [optional]  # noqa: E501
+            ip_address (str): IpAddress. [optional]  # noqa: E501
+            start_date (str): StartDate. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

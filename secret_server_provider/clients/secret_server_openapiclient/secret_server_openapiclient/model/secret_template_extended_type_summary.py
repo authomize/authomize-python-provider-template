@@ -57,10 +57,8 @@ class SecretTemplateExtendedTypeSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class SecretTemplateExtendedTypeSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'extended_type_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'extended_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'extended_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'extended_type_description': (str, none_type,),  # noqa: E501
+            'extended_type_id': (int, none_type,),  # noqa: E501
+            'extended_type_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -139,9 +134,9 @@ class SecretTemplateExtendedTypeSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            extended_type_description (bool, date, datetime, dict, float, int, list, str, none_type): Description of extended type already localized for the current user. [optional]  # noqa: E501
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Unique ID for extended type. [optional]  # noqa: E501
-            extended_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of extended type already localized for the current user. [optional]  # noqa: E501
+            extended_type_description (str): Description of extended type already localized for the current user. [optional]  # noqa: E501
+            extended_type_id (int): Unique ID for extended type. [optional]  # noqa: E501
+            extended_type_name (str): Name of extended type already localized for the current user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,9 +222,9 @@ class SecretTemplateExtendedTypeSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            extended_type_description (bool, date, datetime, dict, float, int, list, str, none_type): Description of extended type already localized for the current user. [optional]  # noqa: E501
-            extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Unique ID for extended type. [optional]  # noqa: E501
-            extended_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of extended type already localized for the current user. [optional]  # noqa: E501
+            extended_type_description (str): Description of extended type already localized for the current user. [optional]  # noqa: E501
+            extended_type_id (int): Unique ID for extended type. [optional]  # noqa: E501
+            extended_type_name (str): Name of extended type already localized for the current user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

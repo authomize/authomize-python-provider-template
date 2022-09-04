@@ -65,10 +65,8 @@ class ConfigurationFoldersUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,32 +75,29 @@ class ConfigurationFoldersUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'enable_personal_folders': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'personal_folder_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'personal_folder_name_option': (UpdateFieldValueOfPersonalFolderNameOptionType,),  # noqa: E501
-            'personal_folder_warning': (UpdateFieldValueOfString,),  # noqa: E501
-            'require_view_folder_permission': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'show_personal_folder_warning': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'enable_personal_folders': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'personal_folder_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'personal_folder_name_option': (UpdateFieldValueOfPersonalFolderNameOptionType, none_type,),  # noqa: E501
+            'personal_folder_warning': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'require_view_folder_permission': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'show_personal_folder_warning': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

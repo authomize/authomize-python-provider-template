@@ -360,7 +360,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -376,7 +376,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -525,11 +525,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -547,11 +547,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -619,11 +619,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -640,11 +640,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -712,7 +712,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -728,7 +728,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -796,12 +796,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | id
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -826,12 +826,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| id |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -899,11 +899,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -920,11 +920,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -992,11 +992,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1013,11 +1013,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1086,12 +1086,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
     is_exporting = True # bool | isExporting (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchTerm (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_term = "filter.searchTerm_example" # str | SearchTerm (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1109,12 +1109,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is_exporting** | **bool**| isExporting | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchTerm | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_term** | **str**| SearchTerm | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2014,11 +2014,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2036,11 +2036,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2428,7 +2428,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configuration_api.ConfigurationApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Saml Identity Provider Id
+    id = 1 # int | Saml Identity Provider Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -2444,7 +2444,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Saml Identity Provider Id |
+ **id** | **int**| Saml Identity Provider Id |
 
 ### Return type
 
@@ -3160,7 +3160,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = configuration_api.ConfigurationApi(api_client)
     configuration_saml_identity_provider_import_args = ConfigurationSamlIdentityProviderImportArgs(
 null,
-        import_file_data=None,
+        import_file_data=open('/path/to/file', 'rb'),
     ) # ConfigurationSamlIdentityProviderImportArgs | Saml Identity Provider import args (optional)
 
     # example passing only required values which don't have defaults set
@@ -3263,15 +3263,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             api_session_timeout_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             api_session_timeout_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             api_session_timeout_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             api_session_timeout_unlimited=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3283,7 +3283,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             custom_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             display_downtime_message_to_admins_only=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3304,19 +3304,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             external_instance_id=True,
             maximum_token_refreshes_allowed=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             max_secret_log_length=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             mobile_max_offline_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             mobile_max_offline_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             obfuscate_personally_identifiable_information=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3324,7 +3324,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             pii_obfuscation_level=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             prevent_application_from_sleeping=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3336,11 +3336,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             syslog_cef_log_site=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             syslog_cef_port=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             syslog_cef_protocol=UpdateFieldValueOfSyslogCefProtocolType(
                 dirty=True,
@@ -3348,7 +3348,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             syslog_cef_server=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             syslog_cef_time_zone=UpdateFieldValueOfSyslogCefTimeZoneType(
                 dirty=True,
@@ -3356,11 +3356,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             tms_installation_path=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             win_rm_endpoint_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             write_syslog_to_event_log=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3469,11 +3469,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             export_password_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             export_path=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             export_totp_settings=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3481,11 +3481,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             folder_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             frequency_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # AutoExportConfigurationArgs | Automatic Export Update Settings (optional)
@@ -3671,7 +3671,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=BackupConfigurationUpdateModel(
             backup_database_path=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             backup_failure_notification=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3679,15 +3679,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             backup_path=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             backup_start_date_time=UpdateFieldValueOfDateTime(
                 dirty=True,
-                value=None,
+                value=dateutil_parser('1970-01-01T00:00:00.00Z'),
             ),
             configuration_sql_backup_timeout_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             copy_only_database_backup=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3711,23 +3711,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             number_of_backups_to_keep=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             repeat_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             repeat_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             repeat_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             tms_installation_path=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # BackupConfigurationArgs | Backup Configuration Update Settings (optional)
@@ -3824,11 +3824,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             connection_timeout=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             database_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             enable_multi_subnet_failover=UpdateFieldValueOfOptionalBoolean(
                 dirty=True,
@@ -3840,23 +3840,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             failover_partner=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             file_override_password=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             file_override_user_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             password=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             server_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             trust_server_certificate=UpdateFieldValueOfOptionalBoolean(
                 dirty=True,
@@ -3864,7 +3864,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             user_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # ConfigurationDatabasePatchArgs | Database configuration update args (optional)
@@ -3957,11 +3957,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=ConfigurationEmailPatchModel(
             from_email_address=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             from_email_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             send_legacy_emails=UpdateFieldValueOfOptionalBoolean(
                 dirty=True,
@@ -3973,19 +3973,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             smtp_domain=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             smtp_password=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             smtp_port=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             smtp_server=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             smtp_use_credentials=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -3997,7 +3997,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             smtp_user_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             smtp_use_ssl=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -4098,7 +4098,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             personal_folder_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             personal_folder_name_option=UpdateFieldValueOfPersonalFolderNameOptionType(
                 dirty=True,
@@ -4106,7 +4106,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             personal_folder_warning=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             require_view_folder_permission=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -4212,7 +4212,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 personal_folder_name=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 personal_folder_name_option=UpdateFieldValueOfPersonalFolderNameOptionType(
                     dirty=True,
@@ -4220,7 +4220,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 personal_folder_warning=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 require_view_folder_permission=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -4250,25 +4250,25 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 force_secret_approval=UpdateFieldValueOfOptionalForceSecretApprovalType(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
             ),
             user_experience=ConfigurationUserExperienceUpdateModel(
                 application_language=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 default_date_format=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 default_new_user_role_id=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 default_time_format=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 force_inactivity_timeout=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -4276,7 +4276,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 force_inactivity_timeout_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 require_folder_for_secret=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -4288,19 +4288,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 secret_password_history_restriction_count=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 secret_view_interval_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 server_time_zone_id=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 ui_inactivity_sleep_minutes=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
             ),
         ),
@@ -4394,7 +4394,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=ConfigurationInternalSiteConnectorPatchModel(
             site_connector_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # ConfigurationInternalSiteConnectorPatchArgs | Internal Site Connector Update Options (optional)
@@ -4628,31 +4628,31 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             local_user_password_expiration_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             local_user_password_expiration_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             local_user_password_expiration_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             minimum_password_age_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             minimum_password_age_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             minimum_password_age_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             password_history_items=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             password_history_items_all=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -4660,7 +4660,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             password_minimum_length=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             password_require_lowercase=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -4777,11 +4777,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             default_login_domain=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_domain_selector=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_login_failure_captcha=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -4789,24 +4789,24 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             max_concurrent_logins_per_user=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             maximum_login_failures=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             max_login_failures_before_captcha=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             remember_me_time_out_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             ssh_key_integration=ConfigurationLoginSshKeyIntegrationPatchModel(
                 authentication_method=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 enable=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -4814,7 +4814,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 expiration_in_hours=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 key_expires=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -4833,7 +4833,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 duo=ConfigurationLoginTwoFactorDuoPatchModel(
                     api_hostname=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     enable=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -4841,11 +4841,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     integration_key=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     secret_key=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     use_radius_username=UpdateFieldValueOfOptionalBoolean(
                         dirty=True,
@@ -4859,11 +4859,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     client_id=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     client_secret=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     enable=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -4871,11 +4871,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     logout_url=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     server_url=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     use_thycotic_one_auth_as_default=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -4889,11 +4889,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     client_port_range=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     default_username=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     disable_nas_ip_address_attribute=UpdateFieldValueOfOptionalBoolean(
                         dirty=True,
@@ -4913,43 +4913,43 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     failover_server_ip=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     failover_server_port=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     failover_shared_secret=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     failover_timeout_seconds=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     login_explanation=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     nas_id=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     protocol=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     server_ip=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     server_port=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     shared_secret=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     shared_secret_same_for_all_users=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -4957,7 +4957,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     timeout_seconds=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                 ),
                 require_two_factor_for_web_login=UpdateFieldValueOfBoolean(
@@ -4970,12 +4970,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 two_factor_remember_me_time_out_days=UpdateFieldValueOfInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
             ),
             user_lockout_time_minutes=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             visual_encrypted_keyboard_enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5084,7 +5084,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             login_policy=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # ConfigurationLoginPolicyPatchArgs | Login Policy update args (optional)
@@ -5193,7 +5193,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             force_secret_approval=UpdateFieldValueOfOptionalForceSecretApprovalType(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # ConfigurationPermissionOptionsPatchArgs | Permission options update args (optional)
@@ -5294,11 +5294,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             open_id_connect_client_id=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             open_id_connect_client_secret=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             open_id_connect_enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5306,23 +5306,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             open_id_connect_login_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             open_id_connect_logout_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             profile_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             synchronization_interval_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             synchronization_interval_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # PlatformConfigurationArgs | Platform Update Settings (optional)
@@ -5415,7 +5415,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=ConfigurationProtocolHandlerSettingsPatchModel(
             protocol_handler_install_time_allowed_domains=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             protocol_handler_install_time_disable_auto_update=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5516,19 +5516,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=ConfigurationRpcPatchModel(
             check_out_interval_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             check_out_interval_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             check_out_interval_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             days_to_keep_logs=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_heartbeat=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5647,15 +5647,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     authn_context=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     clock_skew=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     description=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     disable_assertion_replay_check=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -5695,11 +5695,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     display_name=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     domain_attribute=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     enable_detailed_log=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -5713,14 +5713,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         dirty=True,
                         value=True,
                     ),
-                    identity_provider_id=None,
+                    identity_provider_id=1,
                     logout_request_life_time=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     name=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     override_pending_authn_request=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -5728,7 +5728,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     public_certificate=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     sign_authn_request=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -5744,23 +5744,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     ),
                     single_logout_service_response_url=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     single_logout_service_url=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     sso_service_binding=UpdateFieldValueOfInt32(
                         dirty=True,
-                        value=None,
+                        value=1,
                     ),
                     sso_service_url=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     username_attribute=UpdateFieldValueOfString(
                         dirty=True,
-                        value=None,
+                        value="value_example",
                     ),
                     want_assertion_encrypted=UpdateFieldValueOfBoolean(
                         dirty=True,
@@ -5790,19 +5790,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ],
             legacy_username_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             service_provider_certificate=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             service_provider_certificate_password=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             service_provider_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             use_legacy=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5903,15 +5903,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             authn_context=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             clock_skew=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             disable_assertion_replay_check=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5951,11 +5951,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             display_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             domain_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             enable_detailed_log=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5969,14 +5969,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 dirty=True,
                 value=True,
             ),
-            identity_provider_id=None,
+            identity_provider_id=1,
             logout_request_life_time=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             override_pending_authn_request=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -5984,7 +5984,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             public_certificate=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             sign_authn_request=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6000,23 +6000,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             single_logout_service_response_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             single_logout_service_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             sso_service_binding=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             sso_service_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             username_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             want_assertion_encrypted=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6133,7 +6133,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=SearchIndexerUpdateModel(
             days_to_keep_logs=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6142,7 +6142,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             indexing_separators=UpdateFieldValueOfStringArray(
                 dirty=True,
                 value=[
-                    None,
+                    "value_example",
                 ],
             ),
             index_mode=UpdateFieldValueOfSearchIndexMode(
@@ -6252,15 +6252,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             certificate_chain_policy_options=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             client_certificate_ids=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             database_integrity_monitoring_symmetric_key=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             enable_database_integrity_monitoring=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6284,7 +6284,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             file_extension_restrictions=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             fips_enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6300,7 +6300,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             hsts_max_age=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             ignore_certificate_revocation_failures=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6308,7 +6308,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             maximum_file_size_bytes=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             maximum_file_size_supported=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6316,7 +6316,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             secret_erase_workflow=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             web_password_filler_requires_full_domain_match=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6413,7 +6413,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=ConfigurationSessionRecordingAdvancedPatchModel(
             agent_callback_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             enable_advanced_session_recording=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6514,24 +6514,24 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             archive_path=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             archive_path_mappings=UpdateFieldValueOfConfigurationSessionRecordingSiteArchiveUpdateModelArray(
                 dirty=True,
                 value=[
                     ConfigurationSessionRecordingSiteArchiveUpdateModel(
-                        path=None,
-                        site_id=None,
+                        path="path_example",
+                        site_id=1,
                     ),
                 ],
             ),
             days_until_archive=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             days_until_delete=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_archive=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6567,11 +6567,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             inactivity_timeout_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             max_session_length=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             rdp_proxy_record_key_strokes=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6599,7 +6599,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             video_codec_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # ConfigurationSessionRecordingPatchArgs | Local user password update args (optional)
@@ -6700,7 +6700,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             max_log_length=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             notify_when_shrunk=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -6806,27 +6806,27 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 bmc_change_management_comment_work_type=UpdateFieldValueOfOptionalBmcChangeManagementCommentWorkType(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 bmc_incident_management_comment_work_type=UpdateFieldValueOfOptionalBmcIncidentManagementCommentWorkType(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 bmc_remedy_authentication=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 bmc_remedy_url_endpoint=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 description=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 display_message=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 force_require_ticket_number=UpdateFieldValueOfForceRequireTicketSystemOptions(
                     dirty=True,
@@ -6838,68 +6838,68 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 name=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 power_shell_add_comment_script_arguments=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 power_shell_add_comment_script_id=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 power_shell_add_ticket_comment_script_arguments=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 power_shell_add_ticket_comment_script_id=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 power_shell_run_as_account_secret_id=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 power_shell_ticket_status_script_arguments=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 power_shell_ticket_status_script_id=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 service_now_allowed_statuses=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 service_now_domain_name=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 site_id=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 system_credential_secret_id=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 ticket_number_error_message=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 ticket_number_validation=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
-                ticket_system_id=None,
+                ticket_system_id=1,
                 ticket_system_type=UpdateFieldValueOfTicketSystemTypes(
                     dirty=True,
                     value=TicketSystemTypes("{}"),
                 ),
                 view_ticket_url=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
             ),
         ],
@@ -6993,23 +6993,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=ConfigurationUserExperiencePatchModel(
             application_language=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             checkout_notification_threshold=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             default_date_format=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             default_new_user_role_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             default_time_format=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             force_inactivity_timeout=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -7017,7 +7017,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             force_inactivity_timeout_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             require_folder_for_secret=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -7025,7 +7025,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             search_delay_ms=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             secret_password_history_restriction_all=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -7033,19 +7033,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             secret_password_history_restriction_count=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             secret_view_interval_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             server_time_zone_id=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             ui_inactivity_sleep_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # ConfigurationUserExperiencePatchArgs | User experience update args (optional)
@@ -7142,15 +7142,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             custom_logo_collapsed=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             custom_logo_full_size=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             default_classic_theme=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             disable_legacy_ui=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -7250,9 +7250,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     configuration_saml_identity_provider_create_args = ConfigurationSamlIdentityProviderCreateArgs(
         data=ConfigurationSamlIdentityProviderCreateModel(
             active=True,
-            authn_context=None,
-            clock_skew=None,
-            description=None,
+            authn_context="authn_context_example",
+            clock_skew=1,
+            description="description_example",
             disable_assertion_replay_check=True,
             disable_audience_restriction_check=True,
             disable_authn_context_check=True,
@@ -7262,23 +7262,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             disable_pending_logout_check=True,
             disable_recipient_check=True,
             disable_time_period_check=True,
-            display_name=None,
-            domain_attribute=None,
+            display_name="display_name_example",
+            domain_attribute="domain_attribute_example",
             enable_detailed_log=True,
             enable_slo=True,
             force_authentication=True,
-            logout_request_life_time=None,
-            name=None,
+            logout_request_life_time=1,
+            name="name_example",
             override_pending_authn_request=True,
-            public_certificate=None,
+            public_certificate="public_certificate_example",
             sign_authn_request=True,
             sign_logout_request=True,
             sign_logout_response=True,
-            single_logout_service_response_url=None,
-            single_logout_service_url=None,
-            sso_service_binding=None,
-            sso_service_url=None,
-            username_attribute=None,
+            single_logout_service_response_url="single_logout_service_response_url_example",
+            single_logout_service_url="single_logout_service_url_example",
+            sso_service_binding=1,
+            sso_service_url="sso_service_url_example",
+            username_attribute="username_attribute_example",
             want_assertion_encrypted=True,
             want_assertion_or_response_signed=True,
             want_assertion_signed=True,
@@ -7931,8 +7931,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = configuration_api.ConfigurationApi(api_client)
     test_radius_login_args = TestRadiusLoginArgs(
         data=TestRadiusLoginRequestModel(
-            radius_password=None,
-            radius_username=None,
+            radius_password="radius_password_example",
+            radius_username="radius_username_example",
         ),
     ) # TestRadiusLoginArgs | args (optional)
 
@@ -8027,7 +8027,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             notes=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # UnlimitedAdminUpdateArgs | Unlimited Admin Update Options (optional)

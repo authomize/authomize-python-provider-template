@@ -61,10 +61,8 @@ class SshCommandModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class SshCommandModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'command': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'command_permission_type': (CommandPermissionType,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_command_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_command_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'command': (str, none_type,),  # noqa: E501
+            'command_permission_type': (CommandPermissionType, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'ssh_command_guid': (str, none_type,),  # noqa: E501
+            'ssh_command_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,12 +146,12 @@ class SshCommandModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            command (bool, date, datetime, dict, float, int, list, str, none_type): SSH command. [optional]  # noqa: E501
+            command (str): SSH command. [optional]  # noqa: E501
             command_permission_type (CommandPermissionType): [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): SSH command name. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort order. [optional]  # noqa: E501
-            ssh_command_guid (bool, date, datetime, dict, float, int, list, str, none_type): SSH command Guid. [optional]  # noqa: E501
-            ssh_command_id (bool, date, datetime, dict, float, int, list, str, none_type): SSH command ID. [optional]  # noqa: E501
+            name (str): SSH command name. [optional]  # noqa: E501
+            sort_order (int): Sort order. [optional]  # noqa: E501
+            ssh_command_guid (str): SSH command Guid. [optional]  # noqa: E501
+            ssh_command_id (int): SSH command ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,12 +237,12 @@ class SshCommandModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            command (bool, date, datetime, dict, float, int, list, str, none_type): SSH command. [optional]  # noqa: E501
+            command (str): SSH command. [optional]  # noqa: E501
             command_permission_type (CommandPermissionType): [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): SSH command name. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort order. [optional]  # noqa: E501
-            ssh_command_guid (bool, date, datetime, dict, float, int, list, str, none_type): SSH command Guid. [optional]  # noqa: E501
-            ssh_command_id (bool, date, datetime, dict, float, int, list, str, none_type): SSH command ID. [optional]  # noqa: E501
+            name (str): SSH command name. [optional]  # noqa: E501
+            sort_order (int): Sort order. [optional]  # noqa: E501
+            ssh_command_guid (str): SSH command Guid. [optional]  # noqa: E501
+            ssh_command_id (int): SSH command ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

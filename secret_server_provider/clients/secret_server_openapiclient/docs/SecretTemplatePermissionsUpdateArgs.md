@@ -5,7 +5,7 @@ SecretTemplatePermissionsUpdateArgs
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**group_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | GroupId | [optional] 
+**group_id** | **int** | GroupId | [optional] 
 **permissions** | [**[PermissionModel]**](PermissionModel.md) | Permissions | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

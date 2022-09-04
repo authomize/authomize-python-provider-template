@@ -57,10 +57,8 @@ class InboxRuleSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class InboxRuleSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'current_user_subscribed': (bool,),  # noqa: E501
-            'digest': (bool,),  # noqa: E501
-            'inbox_rule_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_rule_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_system': (bool,),  # noqa: E501
-            'notification_types': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'usage_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'current_user_subscribed': (bool, none_type,),  # noqa: E501
+            'digest': (bool, none_type,),  # noqa: E501
+            'inbox_rule_id': (int, none_type,),  # noqa: E501
+            'inbox_rule_name': (str, none_type,),  # noqa: E501
+            'is_system': (bool, none_type,),  # noqa: E501
+            'notification_types': ([str], none_type,),  # noqa: E501
+            'usage_count': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -152,11 +147,11 @@ class InboxRuleSummary(ModelNormal):
             active (bool): Whether or not this rule is active. [optional]  # noqa: E501
             current_user_subscribed (bool): Only populated when IncludeCurrentUserSubscriptionStatus is passed as true on a rule search. [optional]  # noqa: E501
             digest (bool): Whether or not this rule is for a Digest that runs on a schedule.. [optional]  # noqa: E501
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Rule ID. [optional]  # noqa: E501
-            inbox_rule_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the rule. [optional]  # noqa: E501
+            inbox_rule_id (int): Inbox Rule ID. [optional]  # noqa: E501
+            inbox_rule_name (str): The name of the rule. [optional]  # noqa: E501
             is_system (bool): Whether or not this rule is a system rule. [optional]  # noqa: E501
-            notification_types ([bool, date, datetime, dict, float, int, list, str, none_type]): Notification Types where this rule is used. [optional]  # noqa: E501
-            usage_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of times this rule has been used in the last 7 days. [optional]  # noqa: E501
+            notification_types ([str]): Notification Types where this rule is used. [optional]  # noqa: E501
+            usage_count (int): Number of times this rule has been used in the last 7 days. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,11 +240,11 @@ class InboxRuleSummary(ModelNormal):
             active (bool): Whether or not this rule is active. [optional]  # noqa: E501
             current_user_subscribed (bool): Only populated when IncludeCurrentUserSubscriptionStatus is passed as true on a rule search. [optional]  # noqa: E501
             digest (bool): Whether or not this rule is for a Digest that runs on a schedule.. [optional]  # noqa: E501
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Rule ID. [optional]  # noqa: E501
-            inbox_rule_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the rule. [optional]  # noqa: E501
+            inbox_rule_id (int): Inbox Rule ID. [optional]  # noqa: E501
+            inbox_rule_name (str): The name of the rule. [optional]  # noqa: E501
             is_system (bool): Whether or not this rule is a system rule. [optional]  # noqa: E501
-            notification_types ([bool, date, datetime, dict, float, int, list, str, none_type]): Notification Types where this rule is used. [optional]  # noqa: E501
-            usage_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of times this rule has been used in the last 7 days. [optional]  # noqa: E501
+            notification_types ([str]): Notification Types where this rule is used. [optional]  # noqa: E501
+            usage_count (int): Number of times this rule has been used in the last 7 days. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

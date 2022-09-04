@@ -67,18 +67,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     domain_create_args = DomainCreateArgs(
         data=DomainCreateModel(
             active=True,
-            auth_type=None,
-            client_id=None,
-            client_secret=None,
-            distinguished_name=None,
-            domain_name=None,
+            auth_type="auth_type_example",
+            client_id="client_id_example",
+            client_secret="client_secret_example",
+            distinguished_name="distinguished_name_example",
+            domain_name="domain_name_example",
             domain_type=DomainType("{}"),
-            friendly_name=None,
+            friendly_name="friendly_name_example",
             multifactor_authentication_provider=MultifactorAuthenticationProviderTypes("{}"),
-            site_id=None,
-            synchronization_secret_id=None,
-            tenant_id=None,
-            user_auth_type=None,
+            site_id=1,
+            synchronization_secret_id=1,
+            tenant_id="tenant_id_example",
+            user_auth_type="user_auth_type_example",
             use_secure_ldap=True,
         ),
     ) # DomainCreateArgs | args (optional)
@@ -166,9 +166,9 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | domainId
-    domain_identifier = None # bool, date, datetime, dict, float, int, list, str, none_type | The unique directory identifier for the group to be linked.  For example, this is ADGuid in Active Directory (optional)
-    group_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Name of the Group (optional)
+    domain_id = 1 # int | domainId
+    domain_identifier = "domainIdentifier_example" # str | The unique directory identifier for the group to be linked.  For example, this is ADGuid in Active Directory (optional)
+    group_name = "groupName_example" # str | Name of the Group (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -193,9 +193,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| domainId |
- **domain_identifier** | **bool, date, datetime, dict, float, int, list, str, none_type**| The unique directory identifier for the group to be linked.  For example, this is ADGuid in Active Directory | [optional]
- **group_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Name of the Group | [optional]
+ **domain_id** | **int**| domainId |
+ **domain_identifier** | **str**| The unique directory identifier for the group to be linked.  For example, this is ADGuid in Active Directory | [optional]
+ **group_name** | **str**| Name of the Group | [optional]
 
 ### Return type
 
@@ -343,7 +343,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -359,7 +359,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -427,7 +427,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    domain_type = None # bool, date, datetime, dict, float, int, list, str, none_type | domainType (optional)
+    domain_type = "domainType_example" # str | domainType (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -444,7 +444,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| domainType | [optional]
+ **domain_type** | **str**| domainType | [optional]
 
 ### Return type
 
@@ -512,7 +512,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -528,7 +528,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -596,14 +596,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    filter_end_date = None # bool, date, datetime, dict, float, int, list, str, none_type | EndDate (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchText (optional)
-    filter_start_date = None # bool, date, datetime, dict, float, int, list, str, none_type | StartDate (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_end_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | EndDate (optional)
+    filter_search_text = "filter.searchText_example" # str | SearchText (optional)
+    filter_start_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | StartDate (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -620,14 +620,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_end_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| EndDate | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchText | [optional]
- **filter_start_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| StartDate | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_end_date** | **datetime**| EndDate | [optional]
+ **filter_search_text** | **str**| SearchText | [optional]
+ **filter_start_date** | **datetime**| StartDate | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -775,11 +775,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | domainId
+    domain_id = 1 # int | domainId
     link_external_group_args = LinkExternalGroupArgs(
         data=LinkExternalGroupSettings(
-            domain_identifier=None,
-            name=None,
+            domain_identifier="domain_identifier_example",
+            name="name_example",
         ),
     ) # LinkExternalGroupArgs | args (optional)
 
@@ -806,7 +806,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| domainId |
+ **domain_id** | **int**| domainId |
  **link_external_group_args** | [**LinkExternalGroupArgs**](LinkExternalGroupArgs.md)| args | [optional]
 
 ### Return type
@@ -880,11 +880,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=DirectoryServicesConfigurationUpdateModel(
             days_to_keep_operational_logs=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             disable_inactive_users_months=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_directory_integration=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -904,15 +904,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             synchronization_interval_days=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             synchronization_interval_hours=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             synchronization_interval_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             user_account_options=UpdateFieldValueOfDirectoryServicesSynchronizationUserOption(
                 dirty=True,
@@ -1005,7 +1005,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | domainId
+    domain_id = 1 # int | domainId
     domain_patch_args = DomainPatchArgs(
         data=DomainPatchModel(
             active=UpdateFieldValueOfBoolean(
@@ -1014,27 +1014,27 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             auth_type=UpdateFieldValueOfOptionalAuthType(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             client_id=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             client_secret=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             distinguished_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             domain_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             friendly_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             multifactor_authentication_provider=UpdateFieldValueOfMultifactorAuthenticationProviderTypes(
                 dirty=True,
@@ -1042,19 +1042,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             site_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             synchronization_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             tenant_id=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             user_auth_type=UpdateFieldValueOfOptionalAuthType(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             use_secure_ldap=UpdateFieldValueOfOptionalBoolean(
                 dirty=True,
@@ -1086,7 +1086,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| domainId |
+ **domain_id** | **int**| domainId |
  **domain_patch_args** | [**DomainPatchArgs**](DomainPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -1156,52 +1156,52 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | domainId
+    domain_id = 1 # int | domainId
     ldap_sync_settings_patch_args = LdapSyncSettingsPatchArgs(
         data=LdapSyncSettingsPatchModel(
             base_dn_code=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             display_name_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             email_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             group_member_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             group_name_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             group_object_classes=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             group_search_filter=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             guid_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             username_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             user_object_classes=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             user_principal_name_attribute=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # LdapSyncSettingsPatchArgs | args (optional)
@@ -1229,7 +1229,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| domainId |
+ **domain_id** | **int**| domainId |
  **ldap_sync_settings_patch_args** | [**LdapSyncSettingsPatchArgs**](LdapSyncSettingsPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -1298,8 +1298,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | domainId
-    search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text. Use * for wildcards, ex: Admin*. Leave empty to return all. (optional)
+    domain_id = 1 # int | domainId
+    search_text = "searchText_example" # str | Search text. Use * for wildcards, ex: Admin*. Leave empty to return all. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1324,8 +1324,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| domainId |
- **search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text. Use * for wildcards, ex: Admin*. Leave empty to return all. | [optional]
+ **domain_id** | **int**| domainId |
+ **search_text** | **str**| Search text. Use * for wildcards, ex: Admin*. Leave empty to return all. | [optional]
 
 ### Return type
 
@@ -1393,13 +1393,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    filter_domain_name = None # bool, date, datetime, dict, float, int, list, str, none_type | DomainName (optional)
+    filter_domain_name = "filter.domainName_example" # str | DomainName (optional)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1416,13 +1416,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_domain_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| DomainName | [optional]
+ **filter_domain_name** | **str**| DomainName | [optional]
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1568,8 +1568,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = directory_services_api.DirectoryServicesApi(api_client)
-    domain_id = None # bool, date, datetime, dict, float, int, list, str, none_type | domainId
-    group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | groupId
+    domain_id = 1 # int | domainId
+    group_id = 1 # int | groupId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1585,8 +1585,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| domainId |
- **group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| groupId |
+ **domain_id** | **int**| domainId |
+ **group_id** | **int**| groupId |
 
 ### Return type
 

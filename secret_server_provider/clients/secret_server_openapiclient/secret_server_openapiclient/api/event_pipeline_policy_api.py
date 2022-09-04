@@ -88,7 +88,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'event_pipeline_policy_activate_args':
                         (EventPipelinePolicyActivateArgs,),
                 },
@@ -145,7 +145,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'event_pipeline_policy_add_pipeline_args':
                         (EventPipelinePolicyAddPipelineArgs,),
                 },
@@ -271,7 +271,7 @@ class EventPipelinePolicyApi(object):
         )
         self.event_pipeline_policy_service_export_event_pipeline_policy_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -301,7 +301,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -354,9 +354,9 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'folder_id': 'folderId',
@@ -416,25 +416,25 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'filter_event_pipeline_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_event_pipeline_policy_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_active':
                         (bool,),
                     'filter_include_inactive':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_event_pipeline_id': 'filter.eventPipelineId',
@@ -503,7 +503,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -553,9 +553,9 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'event_pipeline_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'event_pipeline_policy_run_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'event_pipeline_id': 'eventPipelineId',
@@ -612,19 +612,19 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'filter_event_pipeline_policy_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_event_pipeline_policy_run_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_event_pipeline_policy_id': 'filter.eventPipelinePolicyId',
@@ -687,7 +687,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -708,7 +708,7 @@ class EventPipelinePolicyApi(object):
         )
         self.event_pipeline_policy_service_get_group_count_for_pipeline_policy_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (int,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -738,7 +738,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -789,7 +789,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -848,23 +848,23 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_event_pipeline_policy_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_event_pipeline_policy_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_include_active':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -983,9 +983,9 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'pipeline_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'policy_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'pipeline_id': 'pipelineId',
@@ -1039,7 +1039,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'event_pipeline_policy_update_args':
                         (EventPipelinePolicyUpdateArgs,),
                 },
@@ -1096,7 +1096,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'event_pipeline_policy_folder_map_update_args':
                         (EventPipelinePolicyFolderMapUpdateArgs,),
                 },
@@ -1153,7 +1153,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'event_pipeline_policy_group_map_update_args':
                         (EventPipelinePolicyGroupMapUpdateArgs,),
                 },
@@ -1210,7 +1210,7 @@ class EventPipelinePolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'event_pipeline_policy_sort_order_update_args':
                         (EventPipelinePolicySortOrderUpdateArgs,),
                 },
@@ -1250,7 +1250,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             event_pipeline_policy_activate_args (EventPipelinePolicyActivateArgs): args. [optional]
@@ -1334,7 +1334,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             event_pipeline_policy_add_pipeline_args (EventPipelinePolicyAddPipelineArgs): eventPipelinePolicyAddPipelineArgs. [optional]
@@ -1576,7 +1576,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1611,7 +1611,7 @@ class EventPipelinePolicyApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -1660,8 +1660,8 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            folder_id (int): Folder ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1746,16 +1746,16 @@ class EventPipelinePolicyApi(object):
 
 
         Keyword Args:
-            filter_event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelineId. [optional]
-            filter_event_pipeline_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyName. [optional]
-            filter_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): FolderId. [optional]
+            filter_event_pipeline_id (int): EventPipelineId. [optional]
+            filter_event_pipeline_policy_name (str): EventPipelinePolicyName. [optional]
+            filter_folder_id (int): FolderId. [optional]
             filter_include_active (bool): IncludeActive. [optional]
             filter_include_inactive (bool): IncludeInactive. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1834,7 +1834,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1917,8 +1917,8 @@ class EventPipelinePolicyApi(object):
 
 
         Keyword Args:
-            event_pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): eventPipelineId. [optional]
-            event_pipeline_policy_run_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy Run ID. [optional]
+            event_pipeline_id (int): eventPipelineId. [optional]
+            event_pipeline_policy_run_id (str): Event Pipeline Policy Run ID. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1997,13 +1997,13 @@ class EventPipelinePolicyApi(object):
 
 
         Keyword Args:
-            filter_event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]
-            filter_event_pipeline_policy_run_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyRunId. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]
+            filter_event_pipeline_policy_run_id (str): EventPipelinePolicyRunId. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2082,7 +2082,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2165,7 +2165,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2200,7 +2200,7 @@ class EventPipelinePolicyApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            int
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -2248,7 +2248,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2331,17 +2331,17 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
-            filter_event_pipeline_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyId. [optional]
-            filter_event_pipeline_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): EventPipelinePolicyName. [optional]
+            filter_event_pipeline_policy_id (int): EventPipelinePolicyId. [optional]
+            filter_event_pipeline_policy_name (str): EventPipelinePolicyName. [optional]
             filter_include_active (bool): IncludeActive. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2502,8 +2502,8 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            pipeline_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline ID
-            policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            pipeline_id (int): Event Pipeline ID
+            policy_id (int): Event Pipeline Policy ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2588,7 +2588,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             event_pipeline_policy_update_args (EventPipelinePolicyUpdateArgs): args. [optional]
@@ -2672,7 +2672,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             event_pipeline_policy_folder_map_update_args (EventPipelinePolicyFolderMapUpdateArgs): eventPipelinePolicyFolderMaps. [optional]
@@ -2756,7 +2756,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             event_pipeline_policy_group_map_update_args (EventPipelinePolicyGroupMapUpdateArgs): eventPipelinePolicyGroupMaps. [optional]
@@ -2840,7 +2840,7 @@ class EventPipelinePolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Policy ID
+            id (int): Event Pipeline Policy ID
 
         Keyword Args:
             event_pipeline_policy_sort_order_update_args (EventPipelinePolicySortOrderUpdateArgs): args. [optional]

@@ -63,10 +63,8 @@ class DiscoveryConfigurationUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,34 +73,31 @@ class DiscoveryConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'dependency_not_found_threshold': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'discovery_interval_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'discovery_interval_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'discovery_scan_offset_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable_discovery': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'engine_ad_discovery_batch_size': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'ignore_cluster_node_objects': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'max_log_age_days': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'dependency_not_found_threshold': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'discovery_interval_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'discovery_interval_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'discovery_scan_offset_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable_discovery': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'engine_ad_discovery_batch_size': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'ignore_cluster_node_objects': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'max_log_age_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

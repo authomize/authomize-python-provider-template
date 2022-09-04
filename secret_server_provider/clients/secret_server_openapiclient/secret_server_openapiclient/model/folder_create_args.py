@@ -57,7 +57,6 @@ class FolderCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
         ('folder_type_id',): {
             'inclusive_maximum': 3,
@@ -67,7 +66,6 @@ class FolderCreateArgs(ModelNormal):
             'inclusive_minimum': -1,
         },
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,31 +73,28 @@ class FolderCreateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'folder_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'parent_folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inherit_permissions': (bool,),  # noqa: E501
-            'inherit_secret_policy': (bool,),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'folder_name': (str,),  # noqa: E501
+            'folder_type_id': (int,),  # noqa: E501
+            'parent_folder_id': (int,),  # noqa: E501
+            'inherit_permissions': (bool, none_type,),  # noqa: E501
+            'inherit_secret_policy': (bool, none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -122,9 +117,9 @@ class FolderCreateArgs(ModelNormal):
         """FolderCreateArgs - a model defined in OpenAPI
 
         Args:
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the folder.
-            folder_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.
-            parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of this folder's parent folder.
+            folder_name (str): The name of the folder.
+            folder_type_id (int): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.
+            parent_folder_id (int): The id of this folder's parent folder.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -159,7 +154,7 @@ class FolderCreateArgs(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             inherit_permissions (bool): Whether the folder should inherit permissions from its parent (default: true). [optional]  # noqa: E501
             inherit_secret_policy (bool): Whether the folder should inherit the secret policy.  Defaults to true unless creating a root folder.. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the Secret Policy that sets security and other settings on secrets contained within the folder.. [optional]  # noqa: E501
+            secret_policy_id (int): The id of the Secret Policy that sets security and other settings on secrets contained within the folder.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -218,9 +213,9 @@ class FolderCreateArgs(ModelNormal):
         """FolderCreateArgs - a model defined in OpenAPI
 
         Args:
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the folder.
-            folder_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.
-            parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of this folder's parent folder.
+            folder_name (str): The name of the folder.
+            folder_type_id (int): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.
+            parent_folder_id (int): The id of this folder's parent folder.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -255,7 +250,7 @@ class FolderCreateArgs(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             inherit_permissions (bool): Whether the folder should inherit permissions from its parent (default: true). [optional]  # noqa: E501
             inherit_secret_policy (bool): Whether the folder should inherit the secret policy.  Defaults to true unless creating a root folder.. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the Secret Policy that sets security and other settings on secrets contained within the folder.. [optional]  # noqa: E501
+            secret_policy_id (int): The id of the Secret Policy that sets security and other settings on secrets contained within the folder.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

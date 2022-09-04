@@ -61,11 +61,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             general_items=SecretPolicyGeneralItemsCreateModel(
                 jumpbox_route_id=SecretPolicyDataItemOfOptionalGuid(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value="value_example",
                 ),
                 site_id=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
             ),
             launcher_items=SecretPolicyLauncherItemsCreateModel(
@@ -79,8 +79,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                             allow_printers=True,
                             allow_smart_cards=True,
                             connect_to_console=True,
-                            launcher_height=None,
-                            launcher_width=None,
+                            launcher_height=1,
+                            launcher_width=1,
                             use_custom_launcher_resolution=True,
                         ),
                     ),
@@ -93,11 +93,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             rpc_items=SecretPolicyRpcItemsCreateModel(
                 associated_secret_id1=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
                 associated_secret_id2=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
                 auto_change_on_expiration=SecretPolicyDataItemOfOptionalBoolean(
                     policy_apply_type=PolicyApplyType("{}"),
@@ -107,23 +107,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     policy_apply_type=PolicyApplyType("{}"),
                     value=AutoChangeScheduleDataModel(
                         change_only_when_expired=True,
-                        change_type=None,
-                        days=None,
+                        change_type="change_type_example",
+                        days=1,
                         friday=True,
                         monday=True,
-                        monthly_day=None,
-                        monthly_day_of_month=None,
-                        monthly_day_order=None,
-                        monthly_day_order_recurrence=None,
-                        monthly_day_recurrence=None,
-                        monthly_schedule_type=None,
+                        monthly_day="monthly_day_example",
+                        monthly_day_of_month=1,
+                        monthly_day_order="monthly_day_order_example",
+                        monthly_day_order_recurrence=1,
+                        monthly_day_recurrence=1,
+                        monthly_schedule_type="monthly_schedule_type_example",
                         saturday=True,
-                        starting_on=None,
+                        starting_on=dateutil_parser('1970-01-01T00:00:00.00Z'),
                         sunday=True,
                         thursday=True,
                         tuesday=True,
                         wednesday=True,
-                        weeks=None,
+                        weeks=1,
                     ),
                 ),
                 heart_beat_enabled=SecretPolicyDataItemOfOptionalBoolean(
@@ -132,15 +132,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 password_type_web_script_id=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
                 privileged_secret_id=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
             ),
-            secret_policy_description=None,
-            secret_policy_name=None,
+            secret_policy_description="secret_policy_description_example",
+            secret_policy_name="secret_policy_name_example",
             security_items=SecretPolicySecurityItemsCreateModel(
                 allow_owners_unrestricted_ssh_commands=SecretPolicyDataItemOfOptionalBoolean(
                     policy_apply_type=PolicyApplyType("{}"),
@@ -150,14 +150,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     policy_apply_type=PolicyApplyType("{}"),
                     value=[
                         UserGroupMapDataModel(
-                            group_id=None,
+                            group_id=1,
                             user_group_map_type=UserGroupMapType("{}"),
                         ),
                     ],
                 ),
                 approval_workflow=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
                 check_out_change_password=SecretPolicyDataItemOfOptionalBoolean(
                     policy_apply_type=PolicyApplyType("{}"),
@@ -169,7 +169,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 check_out_interval_minutes=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
                 enable_ssh_command_restrictions=SecretPolicyDataItemOfOptionalBoolean(
                     policy_apply_type=PolicyApplyType("{}"),
@@ -177,7 +177,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 event_pipeline_policy=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
                 hide_launcher_password=SecretPolicyDataItemOfOptionalBoolean(
                     policy_apply_type=PolicyApplyType("{}"),
@@ -209,32 +209,32 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 run_launcher_using_ssh_key_secret_id=SecretPolicyDataItemOfOptionalInt32(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value=1,
                 ),
                 ssh_command_blocklist_editors=SecretPolicyDataItemOfOptionalGuid(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value="value_example",
                 ),
                 ssh_command_blocklist_owners=SecretPolicyDataItemOfOptionalGuid(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value="value_example",
                 ),
                 ssh_command_blocklist_viewers=SecretPolicyDataItemOfOptionalGuid(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value="value_example",
                 ),
                 ssh_command_menu_groups=SecretPolicyDataItemOfSshCommandMenuGroupModelArray(
                     policy_apply_type=PolicyApplyType("{}"),
                     value=[
                         SshCommandMenuGroupModel(
-                            group_id=None,
-                            ssh_command_menu_id=None,
+                            group_id=1,
+                            ssh_command_menu_id=1,
                         ),
                     ],
                 ),
                 ssh_command_restriction_type=SecretPolicyDataItemOfOptionalCommandRestrictionType(
                     policy_apply_type=PolicyApplyType("{}"),
-                    value=None,
+                    value="value_example",
                 ),
             ),
         ),
@@ -323,13 +323,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_policy_api.SecretPolicyApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -354,13 +354,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -428,7 +428,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_policy_api.SecretPolicyApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -444,7 +444,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -592,7 +592,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_policy_api.SecretPolicyApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -608,7 +608,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -677,12 +677,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_policy_api.SecretPolicyApi(api_client)
     filter_include_inactive = True # bool | Whether or not to include inactive secret policies (optional)
-    filter_secret_policy_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Results will contain this text in the policy name (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_secret_policy_name = "filter.secretPolicyName_example" # str | Results will contain this text in the policy name (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -700,12 +700,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| Whether or not to include inactive secret policies | [optional]
- **filter_secret_policy_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Results will contain this text in the policy name | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_secret_policy_name** | **str**| Results will contain this text in the policy name | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -774,7 +774,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_policy_api.SecretPolicyApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     secret_policy_update_args_v2 = SecretPolicyUpdateArgsV2(
         data=SecretPolicyUpdateModelV2(
             active=UpdateFieldValueOfBoolean(
@@ -786,14 +786,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalGuid(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value="value_example",
                     ),
                 ),
                 site_id=UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32(
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
             ),
@@ -808,8 +808,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                             allow_printers=True,
                             allow_smart_cards=True,
                             connect_to_console=True,
-                            launcher_height=None,
-                            launcher_width=None,
+                            launcher_height=1,
+                            launcher_width=1,
                             use_custom_launcher_resolution=True,
                         ),
                     ),
@@ -827,14 +827,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
                 associated_secret_id2=UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32(
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
                 auto_change_on_expiration=UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean(
@@ -850,23 +850,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         policy_apply_type=PolicyApplyType("{}"),
                         value=AutoChangeScheduleDataModel(
                             change_only_when_expired=True,
-                            change_type=None,
-                            days=None,
+                            change_type="change_type_example",
+                            days=1,
                             friday=True,
                             monday=True,
-                            monthly_day=None,
-                            monthly_day_of_month=None,
-                            monthly_day_order=None,
-                            monthly_day_order_recurrence=None,
-                            monthly_day_recurrence=None,
-                            monthly_schedule_type=None,
+                            monthly_day="monthly_day_example",
+                            monthly_day_of_month=1,
+                            monthly_day_order="monthly_day_order_example",
+                            monthly_day_order_recurrence=1,
+                            monthly_day_recurrence=1,
+                            monthly_schedule_type="monthly_schedule_type_example",
                             saturday=True,
-                            starting_on=None,
+                            starting_on=dateutil_parser('1970-01-01T00:00:00.00Z'),
                             sunday=True,
                             thursday=True,
                             tuesday=True,
                             wednesday=True,
-                            weeks=None,
+                            weeks=1,
                         ),
                     ),
                 ),
@@ -881,24 +881,24 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
                 privileged_secret_id=UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32(
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
             ),
             secret_policy_description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             secret_policy_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             security_items=SecretPolicySecurityItemsUpdateModel(
                 allow_owners_unrestricted_ssh_commands=UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean(
@@ -914,7 +914,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         policy_apply_type=PolicyApplyType("{}"),
                         value=[
                             UserGroupMapDataModel(
-                                group_id=None,
+                                group_id=1,
                                 user_group_map_type=UserGroupMapType("{}"),
                             ),
                         ],
@@ -924,7 +924,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
                 check_out_change_password=UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean(
@@ -945,7 +945,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
                 enable_ssh_command_restrictions=UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean(
@@ -959,7 +959,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
                 hide_launcher_password=UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean(
@@ -1015,28 +1015,28 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalInt32(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value=1,
                     ),
                 ),
                 ssh_command_blocklist_editors=UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid(
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalGuid(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value="value_example",
                     ),
                 ),
                 ssh_command_blocklist_owners=UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid(
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalGuid(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value="value_example",
                     ),
                 ),
                 ssh_command_blocklist_viewers=UpdateFieldValueOfSecretPolicyDataItemOfOptionalGuid(
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalGuid(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value="value_example",
                     ),
                 ),
                 ssh_command_menu_groups=UpdateFieldValueOfSecretPolicyDataItemOfSshCommandMenuGroupModelArray(
@@ -1045,8 +1045,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                         policy_apply_type=PolicyApplyType("{}"),
                         value=[
                             SshCommandMenuGroupModel(
-                                group_id=None,
-                                ssh_command_menu_id=None,
+                                group_id=1,
+                                ssh_command_menu_id=1,
                             ),
                         ],
                     ),
@@ -1055,7 +1055,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     dirty=True,
                     value=SecretPolicyDataItemOfOptionalCommandRestrictionType(
                         policy_apply_type=PolicyApplyType("{}"),
-                        value=None,
+                        value="value_example",
                     ),
                 ),
             ),
@@ -1085,7 +1085,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **secret_policy_update_args_v2** | [**SecretPolicyUpdateArgsV2**](SecretPolicyUpdateArgsV2.md)| args | [optional]
 
 ### Return type

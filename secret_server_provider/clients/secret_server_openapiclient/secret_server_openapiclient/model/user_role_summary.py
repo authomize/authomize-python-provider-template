@@ -61,10 +61,8 @@ class UserRoleSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,30 +71,27 @@ class UserRoleSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'groups': ([GroupAssignedRoleModel],),  # noqa: E501
-            'is_direct_assignment': (bool,),  # noqa: E501
-            'role_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'role_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'groups': ([GroupAssignedRoleModel], none_type,),  # noqa: E501
+            'is_direct_assignment': (bool, none_type,),  # noqa: E501
+            'role_id': (int, none_type,),  # noqa: E501
+            'role_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,8 +144,8 @@ class UserRoleSummary(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             groups ([GroupAssignedRoleModel]): All of the groups to which the user belongs that have this role. [optional]  # noqa: E501
             is_direct_assignment (bool): Is the role directly assigned to the user. [optional]  # noqa: E501
-            role_id (bool, date, datetime, dict, float, int, list, str, none_type): Role ID. [optional]  # noqa: E501
-            role_name (bool, date, datetime, dict, float, int, list, str, none_type): Role Name. [optional]  # noqa: E501
+            role_id (int): Role ID. [optional]  # noqa: E501
+            role_name (str): Role Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -238,8 +233,8 @@ class UserRoleSummary(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             groups ([GroupAssignedRoleModel]): All of the groups to which the user belongs that have this role. [optional]  # noqa: E501
             is_direct_assignment (bool): Is the role directly assigned to the user. [optional]  # noqa: E501
-            role_id (bool, date, datetime, dict, float, int, list, str, none_type): Role ID. [optional]  # noqa: E501
-            role_name (bool, date, datetime, dict, float, int, list, str, none_type): Role Name. [optional]  # noqa: E501
+            role_id (int): Role ID. [optional]  # noqa: E501
+            role_name (str): Role Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

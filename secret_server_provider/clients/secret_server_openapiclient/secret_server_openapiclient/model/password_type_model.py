@@ -65,10 +65,8 @@ class PasswordTypeModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,53 +75,50 @@ class PasswordTypeModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'allows_privileged_account': (bool,),  # noqa: E501
-            'can_edit': (bool,),  # noqa: E501
-            'custom_port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'exit_command': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fields': ([IRestPasswordTypeField],),  # noqa: E501
-            'has_commands': (bool,),  # noqa: E501
-            'has_ldap_settings': (bool,),  # noqa: E501
-            'heartbeat_script_args': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'heartbeat_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ignore_ssl': (bool,),  # noqa: E501
-            'is_web': (bool,),  # noqa: E501
-            'ldap_connection_settings_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'line_ending': (LineEnding,),  # noqa: E501
-            'mainframe_connection_string': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'odbc_connection_string': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rpc_script_args': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rpc_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'runner_type': (RunnerType,),  # noqa: E501
-            'scan_item_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_ssl': (bool,),  # noqa: E501
-            'use_username_and_password': (bool,),  # noqa: E501
-            'valid_for_takeover': (bool,),  # noqa: E501
-            'windows_custom_ports': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'allows_privileged_account': (bool, none_type,),  # noqa: E501
+            'can_edit': (bool, none_type,),  # noqa: E501
+            'custom_port': (int, none_type,),  # noqa: E501
+            'exit_command': (str, none_type,),  # noqa: E501
+            'fields': ([IRestPasswordTypeField], none_type,),  # noqa: E501
+            'has_commands': (bool, none_type,),  # noqa: E501
+            'has_ldap_settings': (bool, none_type,),  # noqa: E501
+            'heartbeat_script_args': (str, none_type,),  # noqa: E501
+            'heartbeat_script_id': (int, none_type,),  # noqa: E501
+            'ignore_ssl': (bool, none_type,),  # noqa: E501
+            'is_web': (bool, none_type,),  # noqa: E501
+            'ldap_connection_settings_id': (int, none_type,),  # noqa: E501
+            'line_ending': (LineEnding, none_type,),  # noqa: E501
+            'mainframe_connection_string': (str, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'odbc_connection_string': (str, none_type,),  # noqa: E501
+            'password_type_id': (int, none_type,),  # noqa: E501
+            'rpc_script_args': (str, none_type,),  # noqa: E501
+            'rpc_script_id': (int, none_type,),  # noqa: E501
+            'runner_type': (RunnerType, none_type,),  # noqa: E501
+            'scan_item_template_id': (int, none_type,),  # noqa: E501
+            'type_name': (str, none_type,),  # noqa: E501
+            'use_ssl': (bool, none_type,),  # noqa: E501
+            'use_username_and_password': (bool, none_type,),  # noqa: E501
+            'valid_for_takeover': (bool, none_type,),  # noqa: E501
+            'windows_custom_ports': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -200,30 +195,30 @@ class PasswordTypeModel(ModelNormal):
             active (bool): Whether the Password Type is Active . [optional]  # noqa: E501
             allows_privileged_account (bool): Allows a Default Privileged Account. [optional]  # noqa: E501
             can_edit (bool): Whether the Password Type can be edited. [optional]  # noqa: E501
-            custom_port (bool, date, datetime, dict, float, int, list, str, none_type): Custom Port. [optional]  # noqa: E501
-            exit_command (bool, date, datetime, dict, float, int, list, str, none_type): Exit Command. [optional]  # noqa: E501
+            custom_port (int): Custom Port. [optional]  # noqa: E501
+            exit_command (str): Exit Command. [optional]  # noqa: E501
             fields ([IRestPasswordTypeField]): Password Type Fields. [optional]  # noqa: E501
             has_commands (bool): Whether Commands Exist. [optional]  # noqa: E501
             has_ldap_settings (bool): Whether LDAP Settings Exist. [optional]  # noqa: E501
-            heartbeat_script_args (bool, date, datetime, dict, float, int, list, str, none_type): Heartbeat Script Args. [optional]  # noqa: E501
-            heartbeat_script_id (bool, date, datetime, dict, float, int, list, str, none_type): Heartbeat Script Id. [optional]  # noqa: E501
+            heartbeat_script_args (str): Heartbeat Script Args. [optional]  # noqa: E501
+            heartbeat_script_id (int): Heartbeat Script Id. [optional]  # noqa: E501
             ignore_ssl (bool): Whether Password Type ignores SSL warnings. [optional]  # noqa: E501
             is_web (bool): Whether Is Web. [optional]  # noqa: E501
-            ldap_connection_settings_id (bool, date, datetime, dict, float, int, list, str, none_type): LDAP Connection Settings Id. [optional]  # noqa: E501
+            ldap_connection_settings_id (int): LDAP Connection Settings Id. [optional]  # noqa: E501
             line_ending (LineEnding): [optional]  # noqa: E501
-            mainframe_connection_string (bool, date, datetime, dict, float, int, list, str, none_type): Mainframe Connection String. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Name. [optional]  # noqa: E501
-            odbc_connection_string (bool, date, datetime, dict, float, int, list, str, none_type): ODBC Connection String. [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Id. [optional]  # noqa: E501
-            rpc_script_args (bool, date, datetime, dict, float, int, list, str, none_type): RPC Script Args. [optional]  # noqa: E501
-            rpc_script_id (bool, date, datetime, dict, float, int, list, str, none_type): RPC Script Id. [optional]  # noqa: E501
+            mainframe_connection_string (str): Mainframe Connection String. [optional]  # noqa: E501
+            name (str): Password Type Name. [optional]  # noqa: E501
+            odbc_connection_string (str): ODBC Connection String. [optional]  # noqa: E501
+            password_type_id (int): Password Type Id. [optional]  # noqa: E501
+            rpc_script_args (str): RPC Script Args. [optional]  # noqa: E501
+            rpc_script_id (int): RPC Script Id. [optional]  # noqa: E501
             runner_type (RunnerType): [optional]  # noqa: E501
-            scan_item_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Scan Template Id. [optional]  # noqa: E501
-            type_name (bool, date, datetime, dict, float, int, list, str, none_type): Federator Type. [optional]  # noqa: E501
+            scan_item_template_id (int): Scan Template Id. [optional]  # noqa: E501
+            type_name (str): Federator Type. [optional]  # noqa: E501
             use_ssl (bool): Whether Password Type uses SSL. [optional]  # noqa: E501
             use_username_and_password (bool): Whether Password Type uses both Username and Password. [optional]  # noqa: E501
             valid_for_takeover (bool): Whether is Valid For Takeover. [optional]  # noqa: E501
-            windows_custom_ports (bool, date, datetime, dict, float, int, list, str, none_type): Custom Ports for Windows. [optional]  # noqa: E501
+            windows_custom_ports (str): Custom Ports for Windows. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -312,30 +307,30 @@ class PasswordTypeModel(ModelNormal):
             active (bool): Whether the Password Type is Active . [optional]  # noqa: E501
             allows_privileged_account (bool): Allows a Default Privileged Account. [optional]  # noqa: E501
             can_edit (bool): Whether the Password Type can be edited. [optional]  # noqa: E501
-            custom_port (bool, date, datetime, dict, float, int, list, str, none_type): Custom Port. [optional]  # noqa: E501
-            exit_command (bool, date, datetime, dict, float, int, list, str, none_type): Exit Command. [optional]  # noqa: E501
+            custom_port (int): Custom Port. [optional]  # noqa: E501
+            exit_command (str): Exit Command. [optional]  # noqa: E501
             fields ([IRestPasswordTypeField]): Password Type Fields. [optional]  # noqa: E501
             has_commands (bool): Whether Commands Exist. [optional]  # noqa: E501
             has_ldap_settings (bool): Whether LDAP Settings Exist. [optional]  # noqa: E501
-            heartbeat_script_args (bool, date, datetime, dict, float, int, list, str, none_type): Heartbeat Script Args. [optional]  # noqa: E501
-            heartbeat_script_id (bool, date, datetime, dict, float, int, list, str, none_type): Heartbeat Script Id. [optional]  # noqa: E501
+            heartbeat_script_args (str): Heartbeat Script Args. [optional]  # noqa: E501
+            heartbeat_script_id (int): Heartbeat Script Id. [optional]  # noqa: E501
             ignore_ssl (bool): Whether Password Type ignores SSL warnings. [optional]  # noqa: E501
             is_web (bool): Whether Is Web. [optional]  # noqa: E501
-            ldap_connection_settings_id (bool, date, datetime, dict, float, int, list, str, none_type): LDAP Connection Settings Id. [optional]  # noqa: E501
+            ldap_connection_settings_id (int): LDAP Connection Settings Id. [optional]  # noqa: E501
             line_ending (LineEnding): [optional]  # noqa: E501
-            mainframe_connection_string (bool, date, datetime, dict, float, int, list, str, none_type): Mainframe Connection String. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Name. [optional]  # noqa: E501
-            odbc_connection_string (bool, date, datetime, dict, float, int, list, str, none_type): ODBC Connection String. [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Id. [optional]  # noqa: E501
-            rpc_script_args (bool, date, datetime, dict, float, int, list, str, none_type): RPC Script Args. [optional]  # noqa: E501
-            rpc_script_id (bool, date, datetime, dict, float, int, list, str, none_type): RPC Script Id. [optional]  # noqa: E501
+            mainframe_connection_string (str): Mainframe Connection String. [optional]  # noqa: E501
+            name (str): Password Type Name. [optional]  # noqa: E501
+            odbc_connection_string (str): ODBC Connection String. [optional]  # noqa: E501
+            password_type_id (int): Password Type Id. [optional]  # noqa: E501
+            rpc_script_args (str): RPC Script Args. [optional]  # noqa: E501
+            rpc_script_id (int): RPC Script Id. [optional]  # noqa: E501
             runner_type (RunnerType): [optional]  # noqa: E501
-            scan_item_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Scan Template Id. [optional]  # noqa: E501
-            type_name (bool, date, datetime, dict, float, int, list, str, none_type): Federator Type. [optional]  # noqa: E501
+            scan_item_template_id (int): Scan Template Id. [optional]  # noqa: E501
+            type_name (str): Federator Type. [optional]  # noqa: E501
             use_ssl (bool): Whether Password Type uses SSL. [optional]  # noqa: E501
             use_username_and_password (bool): Whether Password Type uses both Username and Password. [optional]  # noqa: E501
             valid_for_takeover (bool): Whether is Valid For Takeover. [optional]  # noqa: E501
-            windows_custom_ports (bool, date, datetime, dict, float, int, list, str, none_type): Custom Ports for Windows. [optional]  # noqa: E501
+            windows_custom_ports (str): Custom Ports for Windows. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

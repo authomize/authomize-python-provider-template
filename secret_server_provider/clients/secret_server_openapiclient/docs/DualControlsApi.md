@@ -57,14 +57,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dual_controls_api.DualControlsApi(api_client)
-    dual_control_type = None # bool, date, datetime, dict, float, int, list, str, none_type | dualControlType
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    dual_control_type = "dualControlType_example" # str | dualControlType
+    id = 1 # int | id
     dual_control_auth_args = DualControlAuthArgs(
         data=DualControlAuthDataModel(
-            domain=None,
-            password=None,
-            two_factor_token=None,
-            username=None,
+            domain=1,
+            password="password_example",
+            two_factor_token="two_factor_token_example",
+            username="username_example",
         ),
     ) # DualControlAuthArgs | args (optional)
 
@@ -91,8 +91,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dual_control_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| dualControlType |
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **dual_control_type** | **str**| dualControlType |
+ **id** | **int**| id |
  **dual_control_auth_args** | [**DualControlAuthArgs**](DualControlAuthArgs.md)| args | [optional]
 
 ### Return type
@@ -166,15 +166,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         active=True,
         dual_control_approval_groups=[
             IDualControlApprovalGroup(
-                dual_control_id=None,
+                dual_control_id=1,
                 enabled=True,
-                group_id=None,
-                group_name=None,
-                id=None,
+                group_id=1,
+                group_name="group_name_example",
+                id=1,
             ),
         ],
-        dual_control_type_id=None,
-        item_id=None,
+        dual_control_type_id=1,
+        item_id=1,
     ) # DualControlCreateArgs | Dual control creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -260,7 +260,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dual_controls_api.DualControlsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Dual control ID
+    id = 1 # int | Dual control ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -276,7 +276,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Dual control ID |
+ **id** | **int**| Dual control ID |
 
 ### Return type
 
@@ -344,7 +344,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dual_controls_api.DualControlsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Dual control ID
+    id = 1 # int | Dual control ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -360,7 +360,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Dual control ID |
+ **id** | **int**| Dual control ID |
 
 ### Return type
 
@@ -428,8 +428,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dual_controls_api.DualControlsApi(api_client)
-    dual_control_type = None # bool, date, datetime, dict, float, int, list, str, none_type | dualControlType
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    dual_control_type = "dualControlType_example" # str | dualControlType
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -445,8 +445,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dual_control_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| dualControlType |
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **dual_control_type** | **str**| dualControlType |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -595,11 +595,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dual_controls_api.DualControlsApi(api_client)
     filter_include_inactive = True # bool | Whether to include inactive items (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -617,11 +617,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| Whether to include inactive items | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -770,21 +770,21 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dual_controls_api.DualControlsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Dual control ID
+    id = 1 # int | Dual control ID
     dual_control_update_args = DualControlUpdateArgs(
         active=True,
         dual_control_approval_groups=[
             IDualControlApprovalGroup(
-                dual_control_id=None,
+                dual_control_id=1,
                 enabled=True,
-                group_id=None,
-                group_name=None,
-                id=None,
+                group_id=1,
+                group_name="group_name_example",
+                id=1,
             ),
         ],
-        dual_control_type_id=None,
-        id=None,
-        item_id=None,
+        dual_control_type_id=1,
+        id=1,
+        item_id=1,
     ) # DualControlUpdateArgs | Dual control update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -810,7 +810,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Dual control ID |
+ **id** | **int**| Dual control ID |
  **dual_control_update_args** | [**DualControlUpdateArgs**](DualControlUpdateArgs.md)| Dual control update options | [optional]
 
 ### Return type

@@ -132,19 +132,19 @@ class SecretPolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -207,7 +207,7 @@ class SecretPolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -302,7 +302,7 @@ class SecretPolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -359,17 +359,17 @@ class SecretPolicyApi(object):
                     'filter_include_inactive':
                         (bool,),
                     'filter_secret_policy_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_inactive': 'filter.includeInactive',
@@ -433,7 +433,7 @@ class SecretPolicyApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_policy_update_args_v2':
                         (SecretPolicyUpdateArgsV2,),
                 },
@@ -552,15 +552,15 @@ class SecretPolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -641,7 +641,7 @@ class SecretPolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -802,7 +802,7 @@ class SecretPolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -886,12 +886,12 @@ class SecretPolicyApi(object):
 
         Keyword Args:
             filter_include_inactive (bool): Whether or not to include inactive secret policies. [optional]
-            filter_secret_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Results will contain this text in the policy name. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_secret_policy_name (str): Results will contain this text in the policy name. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -970,7 +970,7 @@ class SecretPolicyApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             secret_policy_update_args_v2 (SecretPolicyUpdateArgsV2): args. [optional]

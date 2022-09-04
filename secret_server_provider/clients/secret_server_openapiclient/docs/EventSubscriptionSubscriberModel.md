@@ -5,8 +5,8 @@ A list of the groups subscribed to the event
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**display_name** | **bool, date, datetime, dict, float, int, list, str, none_type** | DisplayName | [optional] 
-**group_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | GroupId | [optional] 
+**display_name** | **str** | DisplayName | [optional] 
+**group_id** | **int** | GroupId | [optional] 
 **is_group** | **bool** | IsGroup | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

@@ -61,10 +61,8 @@ class BulkOperationProgressModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class BulkOperationProgressModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'errors': ([BulkOperationErrorModel],),  # noqa: E501
-            'identifier': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_complete': (bool,),  # noqa: E501
-            'percentage_complete': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'errors': ([BulkOperationErrorModel], none_type,),  # noqa: E501
+            'identifier': (str, none_type,),  # noqa: E501
+            'is_complete': (bool, none_type,),  # noqa: E501
+            'percentage_complete': (int, none_type,),  # noqa: E501
+            'status_message': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -150,10 +145,10 @@ class BulkOperationProgressModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             errors ([BulkOperationErrorModel]): A list of errors related to this Bulk Operation.. [optional]  # noqa: E501
-            identifier (bool, date, datetime, dict, float, int, list, str, none_type): The identifier of the Bulk Operation.. [optional]  # noqa: E501
+            identifier (str): The identifier of the Bulk Operation.. [optional]  # noqa: E501
             is_complete (bool): Indicates if the Bulk Operation has completed.. [optional]  # noqa: E501
-            percentage_complete (bool, date, datetime, dict, float, int, list, str, none_type): The percentage of items the Bulk Operation has completed processing.. [optional]  # noqa: E501
-            status_message (bool, date, datetime, dict, float, int, list, str, none_type): A message describing the Bulk Operation's current status.. [optional]  # noqa: E501
+            percentage_complete (int): The percentage of items the Bulk Operation has completed processing.. [optional]  # noqa: E501
+            status_message (str): A message describing the Bulk Operation's current status.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,10 +235,10 @@ class BulkOperationProgressModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             errors ([BulkOperationErrorModel]): A list of errors related to this Bulk Operation.. [optional]  # noqa: E501
-            identifier (bool, date, datetime, dict, float, int, list, str, none_type): The identifier of the Bulk Operation.. [optional]  # noqa: E501
+            identifier (str): The identifier of the Bulk Operation.. [optional]  # noqa: E501
             is_complete (bool): Indicates if the Bulk Operation has completed.. [optional]  # noqa: E501
-            percentage_complete (bool, date, datetime, dict, float, int, list, str, none_type): The percentage of items the Bulk Operation has completed processing.. [optional]  # noqa: E501
-            status_message (bool, date, datetime, dict, float, int, list, str, none_type): A message describing the Bulk Operation's current status.. [optional]  # noqa: E501
+            percentage_complete (int): The percentage of items the Bulk Operation has completed processing.. [optional]  # noqa: E501
+            status_message (str): A message describing the Bulk Operation's current status.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

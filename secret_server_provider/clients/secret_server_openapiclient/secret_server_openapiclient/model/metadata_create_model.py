@@ -57,10 +57,8 @@ class MetadataCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,39 +66,36 @@ class MetadataCreateModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'contains_personal_information': (bool,),  # noqa: E501
-            'field_data_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_requires_administer_metadata': (bool,),  # noqa: E501
-            'metadata_field_section_requires_entity_edit': (bool,),  # noqa: E501
-            'value_bit': (bool,),  # noqa: E501
-            'value_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_int': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_number': (float,),  # noqa: E501
-            'value_string': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'contains_personal_information': (bool, none_type,),  # noqa: E501
+            'field_data_type': (str, none_type,),  # noqa: E501
+            'metadata_field_id': (int, none_type,),  # noqa: E501
+            'metadata_field_name': (str, none_type,),  # noqa: E501
+            'metadata_field_section_description': (str, none_type,),  # noqa: E501
+            'metadata_field_section_id': (int, none_type,),  # noqa: E501
+            'metadata_field_section_name': (str, none_type,),  # noqa: E501
+            'metadata_field_section_requires_administer_metadata': (bool, none_type,),  # noqa: E501
+            'metadata_field_section_requires_entity_edit': (bool, none_type,),  # noqa: E501
+            'value_bit': (bool, none_type,),  # noqa: E501
+            'value_date_time': (datetime, none_type,),  # noqa: E501
+            'value_int': (int, none_type,),  # noqa: E501
+            'value_number': (float, none_type,),  # noqa: E501
+            'value_string': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -162,19 +157,19 @@ class MetadataCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             contains_personal_information (bool): When this is set to true, the metadata will be obfuscated during export. [optional]  # noqa: E501
-            field_data_type (bool, date, datetime, dict, float, int, list, str, none_type): Specify the specific data type desired.  Only required when also creating a new field.  If field MetadataFieldId is passed or a field already exists with the passed MetadataFieldName this is ignored.  Certain data types can also be inferred from which value field is set, but some require this to be explicitly set like User.. [optional]  # noqa: E501
-            metadata_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The specific field ID can be passed and in this case MetadataFieldName and MetadataFieldTypeId are ignored. [optional]  # noqa: E501
-            metadata_field_name (bool, date, datetime, dict, float, int, list, str, none_type): When the field ID is not know this will create a field with this name.  If the field name does not already exist a new one will be created.. [optional]  # noqa: E501
-            metadata_field_section_description (bool, date, datetime, dict, float, int, list, str, none_type): When the field section ID is not know this will create a field section with this description.  If MetadataFieldSectionId is passed or a section with the name MetadataFieldSectionName this field is ignored.. [optional]  # noqa: E501
-            metadata_field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The specific field section ID can be passed and in this case MetadataFieldSectionName is ignored. [optional]  # noqa: E501
-            metadata_field_section_name (bool, date, datetime, dict, float, int, list, str, none_type): When the field section ID is not know this will create a field section with this name.  If the field section name does not already exist a new one will be created.  If MetadataFieldSectionId is passed this field is ignored.. [optional]  # noqa: E501
+            field_data_type (str): Specify the specific data type desired.  Only required when also creating a new field.  If field MetadataFieldId is passed or a field already exists with the passed MetadataFieldName this is ignored.  Certain data types can also be inferred from which value field is set, but some require this to be explicitly set like User.. [optional]  # noqa: E501
+            metadata_field_id (int): The specific field ID can be passed and in this case MetadataFieldName and MetadataFieldTypeId are ignored. [optional]  # noqa: E501
+            metadata_field_name (str): When the field ID is not know this will create a field with this name.  If the field name does not already exist a new one will be created.. [optional]  # noqa: E501
+            metadata_field_section_description (str): When the field section ID is not know this will create a field section with this description.  If MetadataFieldSectionId is passed or a section with the name MetadataFieldSectionName this field is ignored.. [optional]  # noqa: E501
+            metadata_field_section_id (int): The specific field section ID can be passed and in this case MetadataFieldSectionName is ignored. [optional]  # noqa: E501
+            metadata_field_section_name (str): When the field section ID is not know this will create a field section with this name.  If the field section name does not already exist a new one will be created.  If MetadataFieldSectionId is passed this field is ignored.. [optional]  # noqa: E501
             metadata_field_section_requires_administer_metadata (bool): When the field section ID is not know this will create a field section with this setting as to whether the Administer Metadata permission is required for edit.  If MetadataFieldSectionId is passed or a section with the name MetadataFieldSectionName, this field is ignored.. [optional]  # noqa: E501
             metadata_field_section_requires_entity_edit (bool): When the field section ID is not know this will create a field section with this setting as to whether edit permission is required for edit. Otherwise view will be required.  If MetadataFieldSectionId is passed or a section with the name MetadataFieldSectionName, this field is ignored.. [optional]  # noqa: E501
             value_bit (bool): When the field is a boolean it should assign this field on create for the value. [optional]  # noqa: E501
-            value_date_time (bool, date, datetime, dict, float, int, list, str, none_type): When the field is a date it should assign this field on create for the value. [optional]  # noqa: E501
-            value_int (bool, date, datetime, dict, float, int, list, str, none_type): When the field is a user it should assign this field on create for the value. [optional]  # noqa: E501
+            value_date_time (datetime): When the field is a date it should assign this field on create for the value. [optional]  # noqa: E501
+            value_int (int): When the field is a user it should assign this field on create for the value. [optional]  # noqa: E501
             value_number (float): When the field is a number it should assign this field on create for the value. [optional]  # noqa: E501
-            value_string (bool, date, datetime, dict, float, int, list, str, none_type): When the field is a string it should assign this field on create for the value. [optional]  # noqa: E501
+            value_string (str): When the field is a string it should assign this field on create for the value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -261,19 +256,19 @@ class MetadataCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             contains_personal_information (bool): When this is set to true, the metadata will be obfuscated during export. [optional]  # noqa: E501
-            field_data_type (bool, date, datetime, dict, float, int, list, str, none_type): Specify the specific data type desired.  Only required when also creating a new field.  If field MetadataFieldId is passed or a field already exists with the passed MetadataFieldName this is ignored.  Certain data types can also be inferred from which value field is set, but some require this to be explicitly set like User.. [optional]  # noqa: E501
-            metadata_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The specific field ID can be passed and in this case MetadataFieldName and MetadataFieldTypeId are ignored. [optional]  # noqa: E501
-            metadata_field_name (bool, date, datetime, dict, float, int, list, str, none_type): When the field ID is not know this will create a field with this name.  If the field name does not already exist a new one will be created.. [optional]  # noqa: E501
-            metadata_field_section_description (bool, date, datetime, dict, float, int, list, str, none_type): When the field section ID is not know this will create a field section with this description.  If MetadataFieldSectionId is passed or a section with the name MetadataFieldSectionName this field is ignored.. [optional]  # noqa: E501
-            metadata_field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The specific field section ID can be passed and in this case MetadataFieldSectionName is ignored. [optional]  # noqa: E501
-            metadata_field_section_name (bool, date, datetime, dict, float, int, list, str, none_type): When the field section ID is not know this will create a field section with this name.  If the field section name does not already exist a new one will be created.  If MetadataFieldSectionId is passed this field is ignored.. [optional]  # noqa: E501
+            field_data_type (str): Specify the specific data type desired.  Only required when also creating a new field.  If field MetadataFieldId is passed or a field already exists with the passed MetadataFieldName this is ignored.  Certain data types can also be inferred from which value field is set, but some require this to be explicitly set like User.. [optional]  # noqa: E501
+            metadata_field_id (int): The specific field ID can be passed and in this case MetadataFieldName and MetadataFieldTypeId are ignored. [optional]  # noqa: E501
+            metadata_field_name (str): When the field ID is not know this will create a field with this name.  If the field name does not already exist a new one will be created.. [optional]  # noqa: E501
+            metadata_field_section_description (str): When the field section ID is not know this will create a field section with this description.  If MetadataFieldSectionId is passed or a section with the name MetadataFieldSectionName this field is ignored.. [optional]  # noqa: E501
+            metadata_field_section_id (int): The specific field section ID can be passed and in this case MetadataFieldSectionName is ignored. [optional]  # noqa: E501
+            metadata_field_section_name (str): When the field section ID is not know this will create a field section with this name.  If the field section name does not already exist a new one will be created.  If MetadataFieldSectionId is passed this field is ignored.. [optional]  # noqa: E501
             metadata_field_section_requires_administer_metadata (bool): When the field section ID is not know this will create a field section with this setting as to whether the Administer Metadata permission is required for edit.  If MetadataFieldSectionId is passed or a section with the name MetadataFieldSectionName, this field is ignored.. [optional]  # noqa: E501
             metadata_field_section_requires_entity_edit (bool): When the field section ID is not know this will create a field section with this setting as to whether edit permission is required for edit. Otherwise view will be required.  If MetadataFieldSectionId is passed or a section with the name MetadataFieldSectionName, this field is ignored.. [optional]  # noqa: E501
             value_bit (bool): When the field is a boolean it should assign this field on create for the value. [optional]  # noqa: E501
-            value_date_time (bool, date, datetime, dict, float, int, list, str, none_type): When the field is a date it should assign this field on create for the value. [optional]  # noqa: E501
-            value_int (bool, date, datetime, dict, float, int, list, str, none_type): When the field is a user it should assign this field on create for the value. [optional]  # noqa: E501
+            value_date_time (datetime): When the field is a date it should assign this field on create for the value. [optional]  # noqa: E501
+            value_int (int): When the field is a user it should assign this field on create for the value. [optional]  # noqa: E501
             value_number (float): When the field is a number it should assign this field on create for the value. [optional]  # noqa: E501
-            value_string (bool, date, datetime, dict, float, int, list, str, none_type): When the field is a string it should assign this field on create for the value. [optional]  # noqa: E501
+            value_string (str): When the field is a string it should assign this field on create for the value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

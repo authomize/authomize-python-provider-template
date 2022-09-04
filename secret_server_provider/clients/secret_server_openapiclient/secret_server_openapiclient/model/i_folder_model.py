@@ -61,10 +61,8 @@ class IFolderModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,36 +71,33 @@ class IFolderModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'child_folders': ([IFolderModel],),  # noqa: E501
-            'folder_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inherit_permissions': (bool,),  # noqa: E501
-            'inherit_secret_policy': (bool,),  # noqa: E501
-            'parent_folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_templates': ([SecretTemplateSummary],),  # noqa: E501
+            'child_folders': ([IFolderModel], none_type,),  # noqa: E501
+            'folder_name': (str, none_type,),  # noqa: E501
+            'folder_path': (str, none_type,),  # noqa: E501
+            'folder_type_id': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'inherit_permissions': (bool, none_type,),  # noqa: E501
+            'inherit_secret_policy': (bool, none_type,),  # noqa: E501
+            'parent_folder_id': (int, none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
+            'secret_templates': ([SecretTemplateSummary], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -160,14 +155,14 @@ class IFolderModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             child_folders ([IFolderModel]): List of folders within this folder. [optional]  # noqa: E501
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): Folder name. [optional]  # noqa: E501
-            folder_path (bool, date, datetime, dict, float, int, list, str, none_type): Path of this folder. [optional]  # noqa: E501
-            folder_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder type ID. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID. [optional]  # noqa: E501
+            folder_name (str): Folder name. [optional]  # noqa: E501
+            folder_path (str): Path of this folder. [optional]  # noqa: E501
+            folder_type_id (int): Folder type ID. [optional]  # noqa: E501
+            id (int): Folder ID. [optional]  # noqa: E501
             inherit_permissions (bool): Whether the folder inherits permissions from its parent. [optional]  # noqa: E501
             inherit_secret_policy (bool): Whether the folder inherits the secret policy. [optional]  # noqa: E501
-            parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Parent folder ID. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret policy ID. [optional]  # noqa: E501
+            parent_folder_id (int): Parent folder ID. [optional]  # noqa: E501
+            secret_policy_id (int): Secret policy ID. [optional]  # noqa: E501
             secret_templates ([SecretTemplateSummary]): Secret templates associated with this folder. [optional]  # noqa: E501
         """
 
@@ -255,14 +250,14 @@ class IFolderModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             child_folders ([IFolderModel]): List of folders within this folder. [optional]  # noqa: E501
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): Folder name. [optional]  # noqa: E501
-            folder_path (bool, date, datetime, dict, float, int, list, str, none_type): Path of this folder. [optional]  # noqa: E501
-            folder_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder type ID. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID. [optional]  # noqa: E501
+            folder_name (str): Folder name. [optional]  # noqa: E501
+            folder_path (str): Path of this folder. [optional]  # noqa: E501
+            folder_type_id (int): Folder type ID. [optional]  # noqa: E501
+            id (int): Folder ID. [optional]  # noqa: E501
             inherit_permissions (bool): Whether the folder inherits permissions from its parent. [optional]  # noqa: E501
             inherit_secret_policy (bool): Whether the folder inherits the secret policy. [optional]  # noqa: E501
-            parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Parent folder ID. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret policy ID. [optional]  # noqa: E501
+            parent_folder_id (int): Parent folder ID. [optional]  # noqa: E501
+            secret_policy_id (int): Secret policy ID. [optional]  # noqa: E501
             secret_templates ([SecretTemplateSummary]): Secret templates associated with this folder. [optional]  # noqa: E501
         """
 

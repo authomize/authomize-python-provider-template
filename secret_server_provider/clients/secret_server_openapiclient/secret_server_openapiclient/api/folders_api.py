@@ -89,7 +89,7 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'folder_template_args':
                         (FolderTemplateArgs,),
                 },
@@ -195,7 +195,7 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -248,9 +248,9 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -306,13 +306,13 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'get_all_children':
                         (bool,),
                     'include_associated_templates':
                         (bool,),
                     'folder_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -375,19 +375,19 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -451,7 +451,7 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'return_empty_instead_of_no_access_exception':
                         (bool,),
                 },
@@ -508,15 +508,15 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'skip': 'skip',
@@ -582,25 +582,25 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'filter_folder_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_only_include_root_folders':
                         (bool,),
                     'filter_parent_folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_permission_required':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_folder_type_id': 'filter.folderTypeId',
@@ -670,7 +670,7 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'folder_patch_args':
                         (FolderPatchArgs,),
                 },
@@ -727,7 +727,7 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'folder_permissions_patch_args':
                         (FolderPermissionsPatchArgs,),
                 },
@@ -784,7 +784,7 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'pin_folder_args':
                         (PinFolderArgs,),
                 },
@@ -847,25 +847,25 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'filter_folder_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_only_include_root_folders':
                         (bool,),
                     'filter_parent_folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_permission_required':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_folder_type_id': 'filter.folderTypeId',
@@ -978,7 +978,7 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1030,7 +1030,7 @@ class FoldersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'folder_update_args':
                         (FolderUpdateArgs,),
                 },
@@ -1070,7 +1070,7 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            id (int): Folder ID
 
         Keyword Args:
             folder_template_args (FolderTemplateArgs): Folder template association options. [optional]
@@ -1233,7 +1233,7 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            id (int): Folder ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1317,8 +1317,8 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): Template ID
+            id (int): Folder ID
+            template_id (int): Template ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1403,12 +1403,12 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            id (int): Folder ID
 
         Keyword Args:
             get_all_children (bool): Whether to retrieve all child folders of the requested folder. [optional]
             include_associated_templates (bool): Whether to list associated secret templates. [optional]
-            folder_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path to a folder including the folder name can be passed as a query string parameter when the folder ID is set to 0.  This will lookup the folder ID by path.. [optional]
+            folder_path (str): A full path to a folder including the folder name can be passed as a query string parameter when the folder ID is set to 0.  This will lookup the folder ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1489,15 +1489,15 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            id (int): Folder ID
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1578,7 +1578,7 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             return_empty_instead_of_no_access_exception (bool): returnEmptyInsteadOfNoAccessException. [optional]
@@ -1662,11 +1662,11 @@ class FoldersApi(object):
 
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1745,16 +1745,16 @@ class FoldersApi(object):
 
 
         Keyword Args:
-            filter_folder_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.. [optional]
+            filter_folder_type_id (int): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.. [optional]
             filter_only_include_root_folders (bool): When true only root folders will be returned and ParentFolderId will be ignored. [optional]
-            filter_parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Only returns folders that are children of the specified folder.. [optional]
-            filter_permission_required (bool, date, datetime, dict, float, int, list, str, none_type): Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View.. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search term to match against folder names. Search returns any folder where the search term is contained in the folder name.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_parent_folder_id (int): Only returns folders that are children of the specified folder.. [optional]
+            filter_permission_required (str): Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View.. [optional]
+            filter_search_text (str): Search term to match against folder names. Search returns any folder where the search term is contained in the folder name.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1833,7 +1833,7 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            id (int): Folder ID
 
         Keyword Args:
             folder_patch_args (FolderPatchArgs): Folder update options. [optional]
@@ -1917,7 +1917,7 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            folder_id (int): Folder ID
 
         Keyword Args:
             folder_permissions_patch_args (FolderPermissionsPatchArgs): Folder permission update options. [optional]
@@ -2001,7 +2001,7 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            id (int): Folder ID
 
         Keyword Args:
             pin_folder_args (PinFolderArgs): Pin Folder Args. [optional]
@@ -2085,16 +2085,16 @@ class FoldersApi(object):
 
 
         Keyword Args:
-            filter_folder_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.. [optional]
+            filter_folder_type_id (int): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.. [optional]
             filter_only_include_root_folders (bool): When true only root folders will be returned and ParentFolderId will be ignored. [optional]
-            filter_parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Only returns folders that are children of the specified folder.. [optional]
-            filter_permission_required (bool, date, datetime, dict, float, int, list, str, none_type): Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View.. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search term to match against folder names. Search returns any folder where the search term is contained in the folder name.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_parent_folder_id (int): Only returns folders that are children of the specified folder.. [optional]
+            filter_permission_required (str): Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View.. [optional]
+            filter_search_text (str): Search term to match against folder names. Search returns any folder where the search term is contained in the folder name.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2251,7 +2251,7 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            id (int): Folder ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2334,7 +2334,7 @@ class FoldersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID
+            id (int): Folder ID
 
         Keyword Args:
             folder_update_args (FolderUpdateArgs): Folder update options. [optional]

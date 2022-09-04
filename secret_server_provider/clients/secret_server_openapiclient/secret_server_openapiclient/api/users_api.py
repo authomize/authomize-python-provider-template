@@ -111,7 +111,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'user_owner_create_args':
                         (UserOwnerCreateArgs,),
                 },
@@ -168,7 +168,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_assignments':
                         (GroupAssignments,),
                 },
@@ -294,7 +294,7 @@ class UsersApi(object):
         )
         self.users_service_create_user_public_ssh_key_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -375,7 +375,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'role_assignments':
                         (RoleAssignments,),
                 },
@@ -401,7 +401,7 @@ class UsersApi(object):
         )
         self.users_service_deactivate_user_public_ssh_key_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (int,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -431,7 +431,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -482,7 +482,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -535,9 +535,9 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'owner_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -591,7 +591,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'role_removals':
                         (RoleRemovals,),
                 },
@@ -648,7 +648,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'include_inactive':
                         (bool,),
                 },
@@ -752,15 +752,15 @@ class UsersApi(object):
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'is_exporting': 'isExporting',
@@ -823,15 +823,15 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'skip': 'skip',
@@ -892,9 +892,9 @@ class UsersApi(object):
                     'is_legacy':
                         (bool,),
                     'setting_code':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'setting_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'is_legacy': 'isLegacy',
@@ -954,17 +954,17 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1031,19 +1031,19 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'user_id': 'userId',
@@ -1110,19 +1110,19 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'actions':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([str],),
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'actions': 'actions',
@@ -1191,17 +1191,17 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1264,9 +1264,9 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'owner_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1329,19 +1329,19 @@ class UsersApi(object):
                     'filter_include_inactive':
                         (bool,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_expired': 'filter.includeExpired',
@@ -1413,17 +1413,17 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'user_id': 'userId',
@@ -1492,23 +1492,23 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_group_memberships':
                         (bool,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_search_term':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'user_id': 'userId',
@@ -1576,7 +1576,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'lock_out_args':
                         (LockOutArgs,),
                 },
@@ -1640,27 +1640,27 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'filter_domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_exclude_inbox_rule_id_subscribers':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_search_fields':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([str],),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_user_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_domain_id': 'filter.domainId',
@@ -1734,7 +1734,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'patch_user_model':
                         (PatchUserModel,),
                 },
@@ -1791,7 +1791,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'user_owner_patch_user_model':
                         (UserOwnerPatchUserModel,),
                 },
@@ -1848,9 +1848,9 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1905,7 +1905,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'reset_two_factor_args':
                         (ResetTwoFactorArgs,),
                 },
@@ -1962,7 +1962,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'password_reset_args':
                         (PasswordResetArgs,),
                 },
@@ -2023,17 +2023,17 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -2102,27 +2102,27 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'filter_domain_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_exclude_inbox_rule_id_subscribers':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_search_fields':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([str],),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_user_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_domain_id': 'filter.domainId',
@@ -2390,7 +2390,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'user_update_args':
                         (UserUpdateArgs,),
                 },
@@ -2447,7 +2447,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'group_assignments':
                         (GroupAssignments,),
                 },
@@ -2504,7 +2504,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'role_assignments':
                         (RoleAssignments,),
                 },
@@ -2560,7 +2560,7 @@ class UsersApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -2645,7 +2645,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            id (int): User ID
 
         Keyword Args:
             user_owner_create_args (UserOwnerCreateArgs): User owner add options. [optional]
@@ -2729,7 +2729,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             group_assignments (GroupAssignments): args. [optional]
@@ -3004,7 +3004,7 @@ class UsersApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -3050,7 +3050,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             role_assignments (RoleAssignments): args. [optional]
@@ -3134,7 +3134,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Public SSH Key ID
+            id (int): Public SSH Key ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3169,7 +3169,7 @@ class UsersApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            int
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -3217,7 +3217,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            id (int): User ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3301,8 +3301,8 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
-            owner_id (bool, date, datetime, dict, float, int, list, str, none_type): Owner ID is the unique sequence for this specific owner.  This is returned as ID on UserOwnerModel
+            id (int): User ID
+            owner_id (int): Owner ID is the unique sequence for this specific owner.  This is returned as ID on UserOwnerModel
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3387,7 +3387,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             role_removals (RoleRemovals): args. [optional]
@@ -3471,7 +3471,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            id (int): User ID
 
         Keyword Args:
             include_inactive (bool): Whether to include inactive users in the results. [optional]
@@ -3634,11 +3634,11 @@ class UsersApi(object):
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3717,11 +3717,11 @@ class UsersApi(object):
 
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3801,8 +3801,8 @@ class UsersApi(object):
 
         Keyword Args:
             is_legacy (bool): Is Legacy. [optional]
-            setting_code (bool, date, datetime, dict, float, int, list, str, none_type): Setting Code. [optional]
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): Setting Name. [optional]
+            setting_code (str): Setting Code. [optional]
+            setting_name (str): Setting Name. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3881,14 +3881,14 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3969,15 +3969,15 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): userId
+            user_id (int): userId
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4058,13 +4058,13 @@ class UsersApi(object):
 
 
         Keyword Args:
-            actions ([bool, date, datetime, dict, float, int, list, str, none_type]): actions. [optional]
+            actions ([str]): actions. [optional]
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4143,14 +4143,14 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            id (int): User ID
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4232,8 +4232,8 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
-            owner_id (bool, date, datetime, dict, float, int, list, str, none_type): Owner ID
+            id (int): User ID
+            owner_id (int): Owner ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4320,13 +4320,13 @@ class UsersApi(object):
         Keyword Args:
             filter_include_expired (bool): Whether to include expired user public ssh keys in the results. [optional]
             filter_include_inactive (bool): Whether to include inactive user public ssh keys in the results. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            filter_user_id (bool, date, datetime, dict, float, int, list, str, none_type): An optional ID for a specific user's public ssh keys. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_text (str): Search text. [optional]
+            filter_user_id (int): An optional ID for a specific user's public ssh keys. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4405,14 +4405,14 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            user_id (int): User ID
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4493,17 +4493,17 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): userId
+            user_id (int): userId
 
         Keyword Args:
             filter_include_group_memberships (bool): Include Group Memberships. [optional]
             filter_include_inactive (bool): Include Inactive. [optional]
-            filter_search_term (bool, date, datetime, dict, float, int, list, str, none_type): Search Term. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_term (str): Search Term. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4584,7 +4584,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): userId
+            user_id (int): userId
 
         Keyword Args:
             lock_out_args (LockOutArgs): args. [optional]
@@ -4668,17 +4668,17 @@ class UsersApi(object):
 
 
         Keyword Args:
-            filter_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, filters users by Active Directory domain.. [optional]
-            filter_exclude_inbox_rule_id_subscribers (bool, date, datetime, dict, float, int, list, str, none_type): When set all subscribers not subscribed directly to this inbox notification rule will be excluded.. [optional]
+            filter_domain_id (int): If not null, filters users by Active Directory domain.. [optional]
+            filter_exclude_inbox_rule_id_subscribers (int): When set all subscribers not subscribed directly to this inbox notification rule will be excluded.. [optional]
             filter_include_inactive (bool): Whether to include inactive users in the results.. [optional]
-            filter_search_fields ([bool, date, datetime, dict, float, int, list, str, none_type]): User fields to search.. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): The text to match in the username, display name, or email address.. [optional]
-            filter_user_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): User Ids to search.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_fields ([str]): User fields to search.. [optional]
+            filter_search_text (str): The text to match in the username, display name, or email address.. [optional]
+            filter_user_ids ([int]): User Ids to search.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4757,7 +4757,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             patch_user_model (PatchUserModel): patchModel. [optional]
@@ -4841,7 +4841,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             user_owner_patch_user_model (UserOwnerPatchUserModel): patchModel. [optional]
@@ -4925,10 +4925,10 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
-            group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): groupIds. [optional]
+            group_ids ([int]): groupIds. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5009,7 +5009,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): userId
+            user_id (int): userId
 
         Keyword Args:
             reset_two_factor_args (ResetTwoFactorArgs): args. [optional]
@@ -5093,7 +5093,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): userId
+            user_id (int): userId
 
         Keyword Args:
             password_reset_args (PasswordResetArgs): args. [optional]
@@ -5177,14 +5177,14 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            id (int): User ID
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5265,17 +5265,17 @@ class UsersApi(object):
 
 
         Keyword Args:
-            filter_domain_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, filters users by Active Directory domain.. [optional]
-            filter_exclude_inbox_rule_id_subscribers (bool, date, datetime, dict, float, int, list, str, none_type): When set all subscribers not subscribed directly to this inbox notification rule will be excluded.. [optional]
+            filter_domain_id (int): If not null, filters users by Active Directory domain.. [optional]
+            filter_exclude_inbox_rule_id_subscribers (int): When set all subscribers not subscribed directly to this inbox notification rule will be excluded.. [optional]
             filter_include_inactive (bool): Whether to include inactive users in the results.. [optional]
-            filter_search_fields ([bool, date, datetime, dict, float, int, list, str, none_type]): User fields to search.. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): The text to match in the username, display name, or email address.. [optional]
-            filter_user_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): User Ids to search.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_fields ([str]): User fields to search.. [optional]
+            filter_search_text (str): The text to match in the username, display name, or email address.. [optional]
+            filter_user_ids ([int]): User Ids to search.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5669,7 +5669,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): User ID
+            id (int): User ID
 
         Keyword Args:
             user_update_args (UserUpdateArgs): User update options. [optional]
@@ -5753,7 +5753,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             group_assignments (GroupAssignments): args. [optional]
@@ -5837,7 +5837,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             role_assignments (RoleAssignments): args. [optional]
@@ -5921,7 +5921,7 @@ class UsersApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

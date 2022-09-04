@@ -58,11 +58,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
     custom_command_create_args = CustomCommandCreateArgs(
-        command=None,
-        command_type_code=None,
-        comment=None,
-        password_type_id=None,
-        pause=None,
+        command="command_example",
+        command_type_code=1,
+        comment="comment_example",
+        password_type_id=1,
+        pause=1,
     ) # CustomCommandCreateArgs | Custom Command creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -150,8 +150,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
     password_type_create_args = PasswordTypeCreateArgs(
-        base_password_type_id=None,
-        name=None,
+        base_password_type_id=1,
+        name="name_example",
     ) # PasswordTypeCreateArgs | Password Type creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -237,7 +237,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Custom Command Id
+    id = 1 # int | Custom Command Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -253,7 +253,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Custom Command Id |
+ **id** | **int**| Custom Command Id |
 
 ### Return type
 
@@ -321,7 +321,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Password Type Id
+    id = 1 # int | Password Type Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -337,7 +337,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Password Type Id |
+ **id** | **int**| Password Type Id |
 
 ### Return type
 
@@ -405,13 +405,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Password Type Id
-    filter_command_type_code = None # bool, date, datetime, dict, float, int, list, str, none_type | CommandTypeCode (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | Password Type Id
+    filter_command_type_code = 1 # int | CommandTypeCode (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -436,13 +436,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Password Type Id |
- **filter_command_type_code** | **bool, date, datetime, dict, float, int, list, str, none_type**| CommandTypeCode | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| Password Type Id |
+ **filter_command_type_code** | **int**| CommandTypeCode | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -510,7 +510,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Password Type Id
+    id = 1 # int | Password Type Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -526,7 +526,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Password Type Id |
+ **id** | **int**| Password Type Id |
 
 ### Return type
 
@@ -595,12 +595,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
     filter_include_inactive = True # bool | Whether to include inactive Password Types in the results (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchTerm (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_term = "filter.searchTerm_example" # str | SearchTerm (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -618,12 +618,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| Whether to include inactive Password Types in the results | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchTerm | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_term** | **str**| SearchTerm | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -692,15 +692,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Custom Command Id
+    id = 1 # int | Custom Command Id
     custom_command_update_args = CustomCommandUpdateArgs(
-        command=None,
-        command_type_code=None,
-        comment=None,
-        concurrency_id=None,
-        order=None,
-        password_type_id=None,
-        pause=None,
+        command="command_example",
+        command_type_code=1,
+        comment="comment_example",
+        concurrency_id="concurrency_id_example",
+        order=1,
+        password_type_id=1,
+        pause=1,
     ) # CustomCommandUpdateArgs | Custom Command update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -726,7 +726,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Custom Command Id |
+ **id** | **int**| Custom Command Id |
  **custom_command_update_args** | [**CustomCommandUpdateArgs**](CustomCommandUpdateArgs.md)| Custom Command update options | [optional]
 
 ### Return type
@@ -796,30 +796,30 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = remote_password_changing_api.RemotePasswordChangingApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Password Type Id
+    id = 1 # int | Password Type Id
     password_type_update_args = PasswordTypeUpdateArgs(
         active=True,
         can_edit=True,
-        custom_port=None,
-        exit_command=None,
+        custom_port=1,
+        exit_command="exit_command_example",
         has_commands=True,
-        heartbeat_script_args=None,
-        heartbeat_script_id=None,
+        heartbeat_script_args="heartbeat_script_args_example",
+        heartbeat_script_id=1,
         ignore_ssl=True,
         is_web=True,
-        ldap_connection_settings_id=None,
+        ldap_connection_settings_id=1,
         line_ending=LineEnding("{}"),
-        mainframe_connection_string=None,
-        name=None,
-        odbc_connection_string=None,
-        rpc_script_args=None,
-        rpc_script_id=None,
+        mainframe_connection_string="mainframe_connection_string_example",
+        name="name_example",
+        odbc_connection_string="odbc_connection_string_example",
+        rpc_script_args="rpc_script_args_example",
+        rpc_script_id=1,
         runner_type=RunnerType("{}"),
-        scan_item_template_id=None,
+        scan_item_template_id=1,
         use_ssl=True,
         use_username_and_password=True,
         valid_for_takeover=True,
-        windows_custom_ports=None,
+        windows_custom_ports="windows_custom_ports_example",
     ) # PasswordTypeUpdateArgs | Password Type update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -845,7 +845,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Password Type Id |
+ **id** | **int**| Password Type Id |
  **password_type_update_args** | [**PasswordTypeUpdateArgs**](PasswordTypeUpdateArgs.md)| Password Type update options | [optional]
 
 ### Return type

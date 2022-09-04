@@ -114,7 +114,7 @@ class EventPipelineTriggerApi(object):
                 },
                 'openapi_types': {
                     'event_entity_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'event_entity_type_id': 'eventEntityTypeId',
@@ -165,7 +165,7 @@ class EventPipelineTriggerApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -278,7 +278,7 @@ class EventPipelineTriggerApi(object):
 
 
         Keyword Args:
-            event_entity_type_id (bool, date, datetime, dict, float, int, list, str, none_type): eventEntityTypeId. [optional]
+            event_entity_type_id (int): eventEntityTypeId. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -357,7 +357,7 @@ class EventPipelineTriggerApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline ID
+            id (int): Event Pipeline ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

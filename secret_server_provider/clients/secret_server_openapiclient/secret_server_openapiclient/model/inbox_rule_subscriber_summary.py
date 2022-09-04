@@ -57,10 +57,8 @@ class InboxRuleSubscriberSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,34 +66,31 @@ class InboxRuleSubscriberSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'email_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_rule_additional_email_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_rule_subscribers_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_group': (bool,),  # noqa: E501
-            'subscribed': (bool,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'email_address': (str, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'inbox_rule_additional_email_id': (int, none_type,),  # noqa: E501
+            'inbox_rule_subscribers_id': (int, none_type,),  # noqa: E501
+            'is_group': (bool, none_type,),  # noqa: E501
+            'subscribed': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,13 +146,13 @@ class InboxRuleSubscriberSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): A display name for this subscriber. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain Name. [optional]  # noqa: E501
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): EmailAddress. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): The subscribers group id.  Either an actual group or a personal group ID for a single user.. [optional]  # noqa: E501
-            inbox_rule_additional_email_id (bool, date, datetime, dict, float, int, list, str, none_type): InboxRuleAdditionalEmailId. [optional]  # noqa: E501
-            inbox_rule_subscribers_id (bool, date, datetime, dict, float, int, list, str, none_type): The identifier for this subscriber.  Email only subscribers will not have this ID.. [optional]  # noqa: E501
+            display_name (str): A display name for this subscriber. [optional]  # noqa: E501
+            domain_id (int): Active Directory domain ID. [optional]  # noqa: E501
+            domain_name (str): Active Directory Domain Name. [optional]  # noqa: E501
+            email_address (str): EmailAddress. [optional]  # noqa: E501
+            group_id (int): The subscribers group id.  Either an actual group or a personal group ID for a single user.. [optional]  # noqa: E501
+            inbox_rule_additional_email_id (int): InboxRuleAdditionalEmailId. [optional]  # noqa: E501
+            inbox_rule_subscribers_id (int): The identifier for this subscriber.  Email only subscribers will not have this ID.. [optional]  # noqa: E501
             is_group (bool): Is this a group or a single user. [optional]  # noqa: E501
             subscribed (bool): True if the user, group, or external email is subscribed.  False if the user is unsubscribed.  Groups and external emails cannot be unsubscribed as they are just removed.. [optional]  # noqa: E501
         """
@@ -245,13 +240,13 @@ class InboxRuleSubscriberSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): A display name for this subscriber. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain Name. [optional]  # noqa: E501
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): EmailAddress. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): The subscribers group id.  Either an actual group or a personal group ID for a single user.. [optional]  # noqa: E501
-            inbox_rule_additional_email_id (bool, date, datetime, dict, float, int, list, str, none_type): InboxRuleAdditionalEmailId. [optional]  # noqa: E501
-            inbox_rule_subscribers_id (bool, date, datetime, dict, float, int, list, str, none_type): The identifier for this subscriber.  Email only subscribers will not have this ID.. [optional]  # noqa: E501
+            display_name (str): A display name for this subscriber. [optional]  # noqa: E501
+            domain_id (int): Active Directory domain ID. [optional]  # noqa: E501
+            domain_name (str): Active Directory Domain Name. [optional]  # noqa: E501
+            email_address (str): EmailAddress. [optional]  # noqa: E501
+            group_id (int): The subscribers group id.  Either an actual group or a personal group ID for a single user.. [optional]  # noqa: E501
+            inbox_rule_additional_email_id (int): InboxRuleAdditionalEmailId. [optional]  # noqa: E501
+            inbox_rule_subscribers_id (int): The identifier for this subscriber.  Email only subscribers will not have this ID.. [optional]  # noqa: E501
             is_group (bool): Is this a group or a single user. [optional]  # noqa: E501
             subscribed (bool): True if the user, group, or external email is subscribed.  False if the user is unsubscribed.  Groups and external emails cannot be unsubscribed as they are just removed.. [optional]  # noqa: E501
         """

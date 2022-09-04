@@ -81,7 +81,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     activate_secrets_args = ActivateSecretsArgs(
         data=ActivateSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # ActivateSecretsArgs | args (optional)
@@ -174,13 +174,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=AddSharePermissionModel(
             permissions=[
                 BulkOperationPermissionModel(
-                    group_id=None,
+                    group_id=1,
                     is_personal=True,
-                    secret_access_role_id=None,
+                    secret_access_role_id=1,
                 ),
             ],
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # AddSharePermissionArgs | args (optional)
@@ -271,9 +271,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = bulk_secret_operations_api.BulkSecretOperationsApi(api_client)
     assign_secrets_to_jumpbox_route_args = AssignSecretsToJumpboxRouteArgs(
         data=AssignSecretsToJumpboxRouteModel(
-            jumpbox_route_id=None,
+            jumpbox_route_id="jumpbox_route_id_example",
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # AssignSecretsToJumpboxRouteArgs | args (optional)
@@ -366,9 +366,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=AssignSecretsToSecretPolicyModel(
             inherit_secret_policy=True,
             secret_ids=[
-                None,
+                1,
             ],
-            secret_policy_id=None,
+            secret_policy_id=1,
         ),
     ) # AssignSecretsToSecretPolicyArgs | args (optional)
 
@@ -459,9 +459,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     assign_secrets_to_site_args = AssignSecretsToSiteArgs(
         data=AssignSecretsToSiteModel(
             secret_ids=[
-                None,
+                1,
             ],
-            site_id=None,
+            site_id=1,
         ),
     ) # AssignSecretsToSiteArgs | args (optional)
 
@@ -553,11 +553,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=ChangeSecretsPasswordsRemotelyModel(
             force_next_key_reset=True,
             generate_ssh_key=True,
-            next_passphrase=None,
-            next_password=None,
-            next_private_key=None,
+            next_passphrase="next_passphrase_example",
+            next_password="next_password_example",
+            next_private_key="next_private_key_example",
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # ChangeSecretsPasswordsRemotelyArgs | args (optional)
@@ -652,7 +652,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             hide_password=True,
             require_view_comment=True,
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # ChangeSecurityOptionsSecretsArgs | args (optional)
@@ -744,16 +744,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     convert_secrets_secret_type_args = ConvertSecretsSecretTypeArgs(
         data=ConvertSecretsSecretTypeModel(
             destination_secret_fields_ids=[
-                None,
+                1,
             ],
-            destination_secret_type_id=None,
+            destination_secret_type_id=1,
             secret_ids=[
-                None,
+                1,
             ],
             source_secret_fields_ids=[
-                None,
+                1,
             ],
-            source_secret_type_id=None,
+            source_secret_type_id=1,
         ),
     ) # ConvertSecretsSecretTypeArgs | args (optional)
 
@@ -844,7 +844,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     deactivate_secrets_args = DeactivateSecretsArgs(
         data=DeactivateSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # DeactivateSecretsArgs | args (optional)
@@ -936,10 +936,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     delete_dependencies_args = DeleteDependenciesArgs(
         data=DeleteDependenciesModel(
             dependency_ids=[
-                None,
+                1,
             ],
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # DeleteDependenciesArgs | args (optional)
@@ -1031,7 +1031,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_auto_change_secrets_args = DisableAutoChangeSecretsArgs(
         data=DisableAutoChangeSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableAutoChangeSecretsArgs | args (optional)
@@ -1123,7 +1123,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_checkout_secrets_args = DisableCheckoutSecretsArgs(
         data=DisableCheckoutSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableCheckoutSecretsArgs | args (optional)
@@ -1215,10 +1215,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_dependencies_args = DisableDependenciesArgs(
         data=DisableDependenciesModel(
             dependency_ids=[
-                None,
+                1,
             ],
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableDependenciesArgs | args (optional)
@@ -1310,7 +1310,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_heartbeat_secrets_args = DisableHeartbeatSecretsArgs(
         data=DisableHeartbeatSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableHeartbeatSecretsArgs | args (optional)
@@ -1402,7 +1402,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_hide_launcher_password_for_secrets_args = DisableHideLauncherPasswordForSecretsArgs(
         data=DisableHideLauncherPasswordForSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableHideLauncherPasswordForSecretsArgs | args (optional)
@@ -1494,7 +1494,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_require_view_comment_secrets_args = DisableRequireViewCommentSecretsArgs(
         data=DisableRequireViewCommentSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableRequireViewCommentSecretsArgs | args (optional)
@@ -1587,13 +1587,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=EditSharePermissionsSecretsModel(
             permissions=[
                 BulkOperationPermissionModel(
-                    group_id=None,
+                    group_id=1,
                     is_personal=True,
-                    secret_access_role_id=None,
+                    secret_access_role_id=1,
                 ),
             ],
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # EditSharePermissionsSecretsArgs | args (optional)
@@ -1685,7 +1685,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_auto_change_secrets_args = EnableAutoChangeSecretsArgs(
         data=EnableAutoChangeSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableAutoChangeSecretsArgs | args (optional)
@@ -1777,7 +1777,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_checkout_secrets_args = EnableCheckoutSecretsArgs(
         data=EnableCheckoutSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableCheckoutSecretsArgs | args (optional)
@@ -1869,10 +1869,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_dependencies_args = EnableDependenciesArgs(
         data=EnableDependenciesModel(
             dependency_ids=[
-                None,
+                1,
             ],
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableDependenciesArgs | args (optional)
@@ -1964,7 +1964,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_heartbeat_secrets_args = EnableHeartbeatSecretsArgs(
         data=EnableHeartbeatSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableHeartbeatSecretsArgs | args (optional)
@@ -2056,7 +2056,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_hide_launcher_password_secrets_args = EnableHideLauncherPasswordSecretsArgs(
         data=EnableHideLauncherPasswordSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableHideLauncherPasswordSecretsArgs | args (optional)
@@ -2148,7 +2148,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_inherit_permissions_secrets_args = EnableInheritPermissionsSecretsArgs(
         data=EnableInheritPermissionsSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableInheritPermissionsSecretsArgs | args (optional)
@@ -2240,7 +2240,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_require_view_comment_secrets_args = EnableRequireViewCommentSecretsArgs(
         data=EnableRequireViewCommentSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableRequireViewCommentSecretsArgs | args (optional)
@@ -2331,9 +2331,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = bulk_secret_operations_api.BulkSecretOperationsApi(api_client)
     move_secrets_to_folder_args = MoveSecretsToFolderArgs(
         data=MoveSecretsToFolderModel(
-            folder_id=None,
+            folder_id=1,
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # MoveSecretsToFolderArgs | args (optional)
@@ -2424,10 +2424,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = bulk_secret_operations_api.BulkSecretOperationsApi(api_client)
     request_erase_secrets_args = RequestEraseSecretsArgs(
         data=RequestEraseSecretsModel(
-            erase_after=None,
-            request_comment=None,
+            erase_after=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            request_comment="request_comment_example",
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # RequestEraseSecretsArgs | args (optional)
@@ -2519,7 +2519,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     run_heartbeat_for_secrets_args = RunHeartbeatForSecretsArgs(
         data=RunHeartbeatForSecretsModel(
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # RunHeartbeatForSecretsArgs | args (optional)
@@ -2611,10 +2611,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     set_dependency_password_args = SetDependencyPasswordArgs(
         data=SetDependencyPasswordModel(
             dependency_ids=[
-                None,
+                1,
             ],
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # SetDependencyPasswordArgs | args (optional)
@@ -2705,9 +2705,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = bulk_secret_operations_api.BulkSecretOperationsApi(api_client)
     set_privileged_account_for_secrets_args = SetPrivilegedAccountForSecretsArgs(
         data=SetPrivilegedAccountForSecretsModel(
-            privileged_account_secret_id=None,
+            privileged_account_secret_id=1,
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # SetPrivilegedAccountForSecretsArgs | args (optional)
@@ -2799,10 +2799,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     update_associated_secrets_args = UpdateAssociatedSecretsArgs(
         data=UpdateAssociatedSecretsModel(
             associated_secret_ids=[
-                None,
+                1,
             ],
             secret_ids=[
-                None,
+                1,
             ],
         ),
     ) # UpdateAssociatedSecretsArgs | args (optional)

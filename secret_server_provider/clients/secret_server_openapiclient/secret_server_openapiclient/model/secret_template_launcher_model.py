@@ -61,10 +61,8 @@ class SecretTemplateLauncherModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,38 +71,35 @@ class SecretTemplateLauncherModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_list': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'connect_as_command': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'connect_as_command_response': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'deny_list': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fields': ([SecretTemplateLauncherFieldValueModel],),  # noqa: E501
-            'include_machines_from_dependencies': (bool,),  # noqa: E501
-            'launcher_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'line_ending': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restrict_as': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restrict_by_secret_field': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restrict_user_input': (bool,),  # noqa: E501
+            'allow_list': (int, none_type,),  # noqa: E501
+            'connect_as_command': (str, none_type,),  # noqa: E501
+            'connect_as_command_response': (str, none_type,),  # noqa: E501
+            'deny_list': (int, none_type,),  # noqa: E501
+            'fields': ([SecretTemplateLauncherFieldValueModel], none_type,),  # noqa: E501
+            'include_machines_from_dependencies': (bool, none_type,),  # noqa: E501
+            'launcher_type_id': (int, none_type,),  # noqa: E501
+            'launcher_type_name': (str, none_type,),  # noqa: E501
+            'line_ending': (str, none_type,),  # noqa: E501
+            'restrict_as': (int, none_type,),  # noqa: E501
+            'restrict_by_secret_field': (int, none_type,),  # noqa: E501
+            'restrict_user_input': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -163,17 +158,17 @@ class SecretTemplateLauncherModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allow_list (bool, date, datetime, dict, float, int, list, str, none_type): User can select from values in this list. [optional]  # noqa: E501
-            connect_as_command (bool, date, datetime, dict, float, int, list, str, none_type): This command is used after a PuTTy session is launched on a Secret that has SSH Proxy enabled and has a Secret set under 'Connect As' in the Launcher tab. The default su command is 'su - $USERNAME'. $USERNAME is the token used to retrieve the username field from the Secret. Sudo can also be used by specifying 'sudo -u $USERNAME /bin/bash'.. [optional]  # noqa: E501
-            connect_as_command_response (bool, date, datetime, dict, float, int, list, str, none_type): The Connect As Command Response is the response from the server prompting for a password. This is used so $productName knows when to send the password to the system. If the response from the server after typing 'su - root' is 'Password:' then the Connect As Command Response needs to contain 'Password:$PASSWORD'. The $CONNECTASPASSWORD token will use the credentials from the Secret set under 'Connect As' when prompted.. [optional]  # noqa: E501
-            deny_list (bool, date, datetime, dict, float, int, list, str, none_type): User cannot enter these values. If used with an Allow List, the Deny List will take precedence.. [optional]  # noqa: E501
+            allow_list (int): User can select from values in this list. [optional]  # noqa: E501
+            connect_as_command (str): This command is used after a PuTTy session is launched on a Secret that has SSH Proxy enabled and has a Secret set under 'Connect As' in the Launcher tab. The default su command is 'su - $USERNAME'. $USERNAME is the token used to retrieve the username field from the Secret. Sudo can also be used by specifying 'sudo -u $USERNAME /bin/bash'.. [optional]  # noqa: E501
+            connect_as_command_response (str): The Connect As Command Response is the response from the server prompting for a password. This is used so $productName knows when to send the password to the system. If the response from the server after typing 'su - root' is 'Password:' then the Connect As Command Response needs to contain 'Password:$PASSWORD'. The $CONNECTASPASSWORD token will use the credentials from the Secret set under 'Connect As' when prompted.. [optional]  # noqa: E501
+            deny_list (int): User cannot enter these values. If used with an Allow List, the Deny List will take precedence.. [optional]  # noqa: E501
             fields ([SecretTemplateLauncherFieldValueModel]): Fields that can be mapped to this launcher. [optional]  # noqa: E501
             include_machines_from_dependencies (bool): This will add the list of machine names from the secret dependencies to either the allow list or block list.. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Unique ID for Launcher Type. [optional]  # noqa: E501
-            launcher_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Name for Launcher Type. [optional]  # noqa: E501
-            line_ending (bool, date, datetime, dict, float, int, list, str, none_type): The line ending that will be append to the end of the Connect As Command. This needs to match the type of line ending required by the system being proxied to.. [optional]  # noqa: E501
-            restrict_as (bool, date, datetime, dict, float, int, list, str, none_type): Restrict what can be selected to come from a list, only allow certain fields, or only deny certain fields.. [optional]  # noqa: E501
-            restrict_by_secret_field (bool, date, datetime, dict, float, int, list, str, none_type): Select a field that will contain the list of items that will restrict the input.. [optional]  # noqa: E501
+            launcher_type_id (int): Unique ID for Launcher Type. [optional]  # noqa: E501
+            launcher_type_name (str): Name for Launcher Type. [optional]  # noqa: E501
+            line_ending (str): The line ending that will be append to the end of the Connect As Command. This needs to match the type of line ending required by the system being proxied to.. [optional]  # noqa: E501
+            restrict_as (int): Restrict what can be selected to come from a list, only allow certain fields, or only deny certain fields.. [optional]  # noqa: E501
+            restrict_by_secret_field (int): Select a field that will contain the list of items that will restrict the input.. [optional]  # noqa: E501
             restrict_user_input (bool): You may specify a field of comma separated hosts or IP addresses that the user will be restricted to. The allow list will allow only these values, while the block list will allow all values except the hosts on the Secret Field.  Example: 192.168.1.2, MACHINE.EXAMPLE.COM, 192.168.1.60. [optional]  # noqa: E501
         """
 
@@ -260,17 +255,17 @@ class SecretTemplateLauncherModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allow_list (bool, date, datetime, dict, float, int, list, str, none_type): User can select from values in this list. [optional]  # noqa: E501
-            connect_as_command (bool, date, datetime, dict, float, int, list, str, none_type): This command is used after a PuTTy session is launched on a Secret that has SSH Proxy enabled and has a Secret set under 'Connect As' in the Launcher tab. The default su command is 'su - $USERNAME'. $USERNAME is the token used to retrieve the username field from the Secret. Sudo can also be used by specifying 'sudo -u $USERNAME /bin/bash'.. [optional]  # noqa: E501
-            connect_as_command_response (bool, date, datetime, dict, float, int, list, str, none_type): The Connect As Command Response is the response from the server prompting for a password. This is used so $productName knows when to send the password to the system. If the response from the server after typing 'su - root' is 'Password:' then the Connect As Command Response needs to contain 'Password:$PASSWORD'. The $CONNECTASPASSWORD token will use the credentials from the Secret set under 'Connect As' when prompted.. [optional]  # noqa: E501
-            deny_list (bool, date, datetime, dict, float, int, list, str, none_type): User cannot enter these values. If used with an Allow List, the Deny List will take precedence.. [optional]  # noqa: E501
+            allow_list (int): User can select from values in this list. [optional]  # noqa: E501
+            connect_as_command (str): This command is used after a PuTTy session is launched on a Secret that has SSH Proxy enabled and has a Secret set under 'Connect As' in the Launcher tab. The default su command is 'su - $USERNAME'. $USERNAME is the token used to retrieve the username field from the Secret. Sudo can also be used by specifying 'sudo -u $USERNAME /bin/bash'.. [optional]  # noqa: E501
+            connect_as_command_response (str): The Connect As Command Response is the response from the server prompting for a password. This is used so $productName knows when to send the password to the system. If the response from the server after typing 'su - root' is 'Password:' then the Connect As Command Response needs to contain 'Password:$PASSWORD'. The $CONNECTASPASSWORD token will use the credentials from the Secret set under 'Connect As' when prompted.. [optional]  # noqa: E501
+            deny_list (int): User cannot enter these values. If used with an Allow List, the Deny List will take precedence.. [optional]  # noqa: E501
             fields ([SecretTemplateLauncherFieldValueModel]): Fields that can be mapped to this launcher. [optional]  # noqa: E501
             include_machines_from_dependencies (bool): This will add the list of machine names from the secret dependencies to either the allow list or block list.. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Unique ID for Launcher Type. [optional]  # noqa: E501
-            launcher_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Name for Launcher Type. [optional]  # noqa: E501
-            line_ending (bool, date, datetime, dict, float, int, list, str, none_type): The line ending that will be append to the end of the Connect As Command. This needs to match the type of line ending required by the system being proxied to.. [optional]  # noqa: E501
-            restrict_as (bool, date, datetime, dict, float, int, list, str, none_type): Restrict what can be selected to come from a list, only allow certain fields, or only deny certain fields.. [optional]  # noqa: E501
-            restrict_by_secret_field (bool, date, datetime, dict, float, int, list, str, none_type): Select a field that will contain the list of items that will restrict the input.. [optional]  # noqa: E501
+            launcher_type_id (int): Unique ID for Launcher Type. [optional]  # noqa: E501
+            launcher_type_name (str): Name for Launcher Type. [optional]  # noqa: E501
+            line_ending (str): The line ending that will be append to the end of the Connect As Command. This needs to match the type of line ending required by the system being proxied to.. [optional]  # noqa: E501
+            restrict_as (int): Restrict what can be selected to come from a list, only allow certain fields, or only deny certain fields.. [optional]  # noqa: E501
+            restrict_by_secret_field (int): Select a field that will contain the list of items that will restrict the input.. [optional]  # noqa: E501
             restrict_user_input (bool): You may specify a field of comma separated hosts or IP addresses that the user will be restricted to. The allow list will allow only these values, while the block list will allow all values except the hosts on the Secret Field.  Example: 192.168.1.2, MACHINE.EXAMPLE.COM, 192.168.1.60. [optional]  # noqa: E501
         """
 

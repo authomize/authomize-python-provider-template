@@ -63,10 +63,8 @@ class SecretDependencyRunScript(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,32 +73,29 @@ class SecretDependencyRunScript(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'machine_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'odbc_connection_arguments': ([SecretDependencyOdbcConnectionArg],),  # noqa: E501
-            'script_arguments': ([SecretDependencyUniversalScriptArgument],),  # noqa: E501
-            'script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'script_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'service_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'machine_name': (str, none_type,),  # noqa: E501
+            'odbc_connection_arguments': ([SecretDependencyOdbcConnectionArg], none_type,),  # noqa: E501
+            'script_arguments': ([SecretDependencyUniversalScriptArgument], none_type,),  # noqa: E501
+            'script_id': (int, none_type,),  # noqa: E501
+            'script_name': (str, none_type,),  # noqa: E501
+            'service_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -153,12 +148,12 @@ class SecretDependencyRunScript(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): The machine name that the Secret Dependency runs on. [optional]  # noqa: E501
+            machine_name (str): The machine name that the Secret Dependency runs on. [optional]  # noqa: E501
             odbc_connection_arguments ([SecretDependencyOdbcConnectionArg]): Connection arguments used for ODBC connections. [optional]  # noqa: E501
             script_arguments ([SecretDependencyUniversalScriptArgument]): Parameter script arguments used by the script. [optional]  # noqa: E501
-            script_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the script that the Secret Dependency runs. (If directly running a script). [optional]  # noqa: E501
-            script_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the script that the Secret Dependency runs.. [optional]  # noqa: E501
-            service_name (bool, date, datetime, dict, float, int, list, str, none_type): The service name of the Secret Dependency. [optional]  # noqa: E501
+            script_id (int): The Id of the script that the Secret Dependency runs. (If directly running a script). [optional]  # noqa: E501
+            script_name (str): The Name of the script that the Secret Dependency runs.. [optional]  # noqa: E501
+            service_name (str): The service name of the Secret Dependency. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -244,12 +239,12 @@ class SecretDependencyRunScript(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): The machine name that the Secret Dependency runs on. [optional]  # noqa: E501
+            machine_name (str): The machine name that the Secret Dependency runs on. [optional]  # noqa: E501
             odbc_connection_arguments ([SecretDependencyOdbcConnectionArg]): Connection arguments used for ODBC connections. [optional]  # noqa: E501
             script_arguments ([SecretDependencyUniversalScriptArgument]): Parameter script arguments used by the script. [optional]  # noqa: E501
-            script_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the script that the Secret Dependency runs. (If directly running a script). [optional]  # noqa: E501
-            script_name (bool, date, datetime, dict, float, int, list, str, none_type): The Name of the script that the Secret Dependency runs.. [optional]  # noqa: E501
-            service_name (bool, date, datetime, dict, float, int, list, str, none_type): The service name of the Secret Dependency. [optional]  # noqa: E501
+            script_id (int): The Id of the script that the Secret Dependency runs. (If directly running a script). [optional]  # noqa: E501
+            script_name (str): The Name of the script that the Secret Dependency runs.. [optional]  # noqa: E501
+            service_name (str): The service name of the Secret Dependency. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

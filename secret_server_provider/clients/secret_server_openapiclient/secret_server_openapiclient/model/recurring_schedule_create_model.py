@@ -65,10 +65,8 @@ class RecurringScheduleCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,34 +75,31 @@ class RecurringScheduleCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'duration': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'duration_start_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'entity': (RecurringScheduleEntityModel,),  # noqa: E501
-            'notes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'recurring_schedule_type': (RecurringScheduleType,),  # noqa: E501
-            'schedule_constraints': ([RecurringScheduleValueModel],),  # noqa: E501
-            'time_zone_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'duration': (int, none_type,),  # noqa: E501
+            'duration_start_date': (datetime, none_type,),  # noqa: E501
+            'entity': (RecurringScheduleEntityModel, none_type,),  # noqa: E501
+            'notes': (str, none_type,),  # noqa: E501
+            'recurring_schedule_type': (RecurringScheduleType, none_type,),  # noqa: E501
+            'schedule_constraints': ([RecurringScheduleValueModel], none_type,),  # noqa: E501
+            'time_zone_id': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -160,13 +155,13 @@ class RecurringScheduleCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether or not the schedule is active. [optional]  # noqa: E501
-            duration (bool, date, datetime, dict, float, int, list, str, none_type): How long is the iteration of this schedule.  A weekly schedule with an iteration of 2 would restart every other week.. [optional]  # noqa: E501
-            duration_start_date (bool, date, datetime, dict, float, int, list, str, none_type): When does the schedule iteration begin. [optional]  # noqa: E501
+            duration (int): How long is the iteration of this schedule.  A weekly schedule with an iteration of 2 would restart every other week.. [optional]  # noqa: E501
+            duration_start_date (datetime): When does the schedule iteration begin. [optional]  # noqa: E501
             entity (RecurringScheduleEntityModel): [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): TBD. [optional]  # noqa: E501
+            notes (str): TBD. [optional]  # noqa: E501
             recurring_schedule_type (RecurringScheduleType): [optional]  # noqa: E501
             schedule_constraints ([RecurringScheduleValueModel]): Passing any constraints will update all of them and remove any not specified.. [optional]  # noqa: E501
-            time_zone_id (bool, date, datetime, dict, float, int, list, str, none_type): Time Zone of the times the schedule is run. [optional]  # noqa: E501
+            time_zone_id (str): Time Zone of the times the schedule is run. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -253,13 +248,13 @@ class RecurringScheduleCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether or not the schedule is active. [optional]  # noqa: E501
-            duration (bool, date, datetime, dict, float, int, list, str, none_type): How long is the iteration of this schedule.  A weekly schedule with an iteration of 2 would restart every other week.. [optional]  # noqa: E501
-            duration_start_date (bool, date, datetime, dict, float, int, list, str, none_type): When does the schedule iteration begin. [optional]  # noqa: E501
+            duration (int): How long is the iteration of this schedule.  A weekly schedule with an iteration of 2 would restart every other week.. [optional]  # noqa: E501
+            duration_start_date (datetime): When does the schedule iteration begin. [optional]  # noqa: E501
             entity (RecurringScheduleEntityModel): [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): TBD. [optional]  # noqa: E501
+            notes (str): TBD. [optional]  # noqa: E501
             recurring_schedule_type (RecurringScheduleType): [optional]  # noqa: E501
             schedule_constraints ([RecurringScheduleValueModel]): Passing any constraints will update all of them and remove any not specified.. [optional]  # noqa: E501
-            time_zone_id (bool, date, datetime, dict, float, int, list, str, none_type): Time Zone of the times the schedule is run. [optional]  # noqa: E501
+            time_zone_id (str): Time Zone of the times the schedule is run. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

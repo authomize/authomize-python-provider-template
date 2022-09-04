@@ -63,10 +63,8 @@ class ConfigurationLoginModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,41 +73,38 @@ class ConfigurationLoginModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_auto_complete': (bool,),  # noqa: E501
-            'allow_remember_me': (bool,),  # noqa: E501
-            'cache_ad_credentials': (bool,),  # noqa: E501
-            'default_login_domain': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_domain_selector': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_login_failure_captcha': (bool,),  # noqa: E501
-            'max_concurrent_logins_per_user': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'maximum_login_failures': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'max_login_failures_before_captcha': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'remember_me_time_out_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_key_integration': (ConfigurationLoginSshKeyIntegrationModel,),  # noqa: E501
-            'two_factor': (ConfigurationLoginTwoFactorModel,),  # noqa: E501
-            'user_lockout_time_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'visual_encrypted_keyboard_enabled': (bool,),  # noqa: E501
-            'visual_encrypted_keyboard_required': (bool,),  # noqa: E501
+            'allow_auto_complete': (bool, none_type,),  # noqa: E501
+            'allow_remember_me': (bool, none_type,),  # noqa: E501
+            'cache_ad_credentials': (bool, none_type,),  # noqa: E501
+            'default_login_domain': (str, none_type,),  # noqa: E501
+            'enable_domain_selector': (int, none_type,),  # noqa: E501
+            'enable_login_failure_captcha': (bool, none_type,),  # noqa: E501
+            'max_concurrent_logins_per_user': (int, none_type,),  # noqa: E501
+            'maximum_login_failures': (int, none_type,),  # noqa: E501
+            'max_login_failures_before_captcha': (int, none_type,),  # noqa: E501
+            'remember_me_time_out_minutes': (int, none_type,),  # noqa: E501
+            'ssh_key_integration': (ConfigurationLoginSshKeyIntegrationModel, none_type,),  # noqa: E501
+            'two_factor': (ConfigurationLoginTwoFactorModel, none_type,),  # noqa: E501
+            'user_lockout_time_minutes': (int, none_type,),  # noqa: E501
+            'visual_encrypted_keyboard_enabled': (bool, none_type,),  # noqa: E501
+            'visual_encrypted_keyboard_required': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -174,16 +169,16 @@ class ConfigurationLoginModel(ModelNormal):
             allow_auto_complete (bool): Deprecated: AutoComplete is a feature provided by most web browsers to automatically remember and prefill forms for you.  This can be a great security concern since they typically do not save the data in a secure manner.  You can enable or disable web browser prefill on the Login screen by using this option. Will always return true.. [optional]  # noqa: E501
             allow_remember_me (bool): This option enables the \"Remember Me\" checkbox on the login screen.  When a user chooses to use \"Remember Me\", an encrypted cookie will be set in their browser.  This will enable the user to revisit Secret Server without the need to log in.  This cookie will no longer be valid when the \"Remember Me\" period has expired and they will have to log in again. [optional]  # noqa: E501
             cache_ad_credentials (bool): Allows cached credentials to be used when Distributed Engine is unable to connect to Active Directory. [optional]  # noqa: E501
-            default_login_domain (bool, date, datetime, dict, float, int, list, str, none_type): Default Login Domain. [optional]  # noqa: E501
-            enable_domain_selector (bool, date, datetime, dict, float, int, list, str, none_type): Display the domain selector at login. [optional]  # noqa: E501
+            default_login_domain (str): Default Login Domain. [optional]  # noqa: E501
+            enable_domain_selector (int): Display the domain selector at login. [optional]  # noqa: E501
             enable_login_failure_captcha (bool): When this option is checked, the user will only have to complete a CAPTCHA if their login credentials are entered incorrectly a certain number of times. [optional]  # noqa: E501
-            max_concurrent_logins_per_user (bool, date, datetime, dict, float, int, list, str, none_type): Maximum concurrent logins per user. [optional]  # noqa: E501
-            maximum_login_failures (bool, date, datetime, dict, float, int, list, str, none_type): Set the number of login attempts allowed before a user is locked out of their account.  Once locked out, they will need a Secret Server administrator to reset their password and enable their account. [optional]  # noqa: E501
-            max_login_failures_before_captcha (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Login Failures Before CAPTCHA. [optional]  # noqa: E501
-            remember_me_time_out_minutes (bool, date, datetime, dict, float, int, list, str, none_type): The number of minutes that you will be remembered. [optional]  # noqa: E501
+            max_concurrent_logins_per_user (int): Maximum concurrent logins per user. [optional]  # noqa: E501
+            maximum_login_failures (int): Set the number of login attempts allowed before a user is locked out of their account.  Once locked out, they will need a Secret Server administrator to reset their password and enable their account. [optional]  # noqa: E501
+            max_login_failures_before_captcha (int): Maximum Login Failures Before CAPTCHA. [optional]  # noqa: E501
+            remember_me_time_out_minutes (int): The number of minutes that you will be remembered. [optional]  # noqa: E501
             ssh_key_integration (ConfigurationLoginSshKeyIntegrationModel): [optional]  # noqa: E501
             two_factor (ConfigurationLoginTwoFactorModel): [optional]  # noqa: E501
-            user_lockout_time_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Number of minutes a User will be locked out for. [optional]  # noqa: E501
+            user_lockout_time_minutes (int): Number of minutes a User will be locked out for. [optional]  # noqa: E501
             visual_encrypted_keyboard_enabled (bool): Enable the Visual Keyboard for logins. [optional]  # noqa: E501
             visual_encrypted_keyboard_required (bool): Require the Visual Keyboard for logins. [optional]  # noqa: E501
         """
@@ -274,16 +269,16 @@ class ConfigurationLoginModel(ModelNormal):
             allow_auto_complete (bool): Deprecated: AutoComplete is a feature provided by most web browsers to automatically remember and prefill forms for you.  This can be a great security concern since they typically do not save the data in a secure manner.  You can enable or disable web browser prefill on the Login screen by using this option. Will always return true.. [optional]  # noqa: E501
             allow_remember_me (bool): This option enables the \"Remember Me\" checkbox on the login screen.  When a user chooses to use \"Remember Me\", an encrypted cookie will be set in their browser.  This will enable the user to revisit Secret Server without the need to log in.  This cookie will no longer be valid when the \"Remember Me\" period has expired and they will have to log in again. [optional]  # noqa: E501
             cache_ad_credentials (bool): Allows cached credentials to be used when Distributed Engine is unable to connect to Active Directory. [optional]  # noqa: E501
-            default_login_domain (bool, date, datetime, dict, float, int, list, str, none_type): Default Login Domain. [optional]  # noqa: E501
-            enable_domain_selector (bool, date, datetime, dict, float, int, list, str, none_type): Display the domain selector at login. [optional]  # noqa: E501
+            default_login_domain (str): Default Login Domain. [optional]  # noqa: E501
+            enable_domain_selector (int): Display the domain selector at login. [optional]  # noqa: E501
             enable_login_failure_captcha (bool): When this option is checked, the user will only have to complete a CAPTCHA if their login credentials are entered incorrectly a certain number of times. [optional]  # noqa: E501
-            max_concurrent_logins_per_user (bool, date, datetime, dict, float, int, list, str, none_type): Maximum concurrent logins per user. [optional]  # noqa: E501
-            maximum_login_failures (bool, date, datetime, dict, float, int, list, str, none_type): Set the number of login attempts allowed before a user is locked out of their account.  Once locked out, they will need a Secret Server administrator to reset their password and enable their account. [optional]  # noqa: E501
-            max_login_failures_before_captcha (bool, date, datetime, dict, float, int, list, str, none_type): Maximum Login Failures Before CAPTCHA. [optional]  # noqa: E501
-            remember_me_time_out_minutes (bool, date, datetime, dict, float, int, list, str, none_type): The number of minutes that you will be remembered. [optional]  # noqa: E501
+            max_concurrent_logins_per_user (int): Maximum concurrent logins per user. [optional]  # noqa: E501
+            maximum_login_failures (int): Set the number of login attempts allowed before a user is locked out of their account.  Once locked out, they will need a Secret Server administrator to reset their password and enable their account. [optional]  # noqa: E501
+            max_login_failures_before_captcha (int): Maximum Login Failures Before CAPTCHA. [optional]  # noqa: E501
+            remember_me_time_out_minutes (int): The number of minutes that you will be remembered. [optional]  # noqa: E501
             ssh_key_integration (ConfigurationLoginSshKeyIntegrationModel): [optional]  # noqa: E501
             two_factor (ConfigurationLoginTwoFactorModel): [optional]  # noqa: E501
-            user_lockout_time_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Number of minutes a User will be locked out for. [optional]  # noqa: E501
+            user_lockout_time_minutes (int): Number of minutes a User will be locked out for. [optional]  # noqa: E501
             visual_encrypted_keyboard_enabled (bool): Enable the Visual Keyboard for logins. [optional]  # noqa: E501
             visual_encrypted_keyboard_required (bool): Require the Visual Keyboard for logins. [optional]  # noqa: E501
         """

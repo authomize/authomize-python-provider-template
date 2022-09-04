@@ -73,10 +73,8 @@ class TicketSystemPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -85,53 +83,50 @@ class TicketSystemPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'add_comments_to_ticket': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'bmc_change_management_comment_work_type': (UpdateFieldValueOfOptionalBmcChangeManagementCommentWorkType,),  # noqa: E501
-            'bmc_incident_management_comment_work_type': (UpdateFieldValueOfOptionalBmcIncidentManagementCommentWorkType,),  # noqa: E501
-            'bmc_remedy_authentication': (UpdateFieldValueOfString,),  # noqa: E501
-            'bmc_remedy_url_endpoint': (UpdateFieldValueOfString,),  # noqa: E501
-            'description': (UpdateFieldValueOfString,),  # noqa: E501
-            'display_message': (UpdateFieldValueOfString,),  # noqa: E501
-            'force_require_ticket_number': (UpdateFieldValueOfForceRequireTicketSystemOptions,),  # noqa: E501
-            'is_default': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'name': (UpdateFieldValueOfString,),  # noqa: E501
-            'power_shell_add_comment_script_arguments': (UpdateFieldValueOfString,),  # noqa: E501
-            'power_shell_add_comment_script_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'power_shell_add_ticket_comment_script_arguments': (UpdateFieldValueOfString,),  # noqa: E501
-            'power_shell_add_ticket_comment_script_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'power_shell_run_as_account_secret_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'power_shell_ticket_status_script_arguments': (UpdateFieldValueOfString,),  # noqa: E501
-            'power_shell_ticket_status_script_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'service_now_allowed_statuses': (UpdateFieldValueOfString,),  # noqa: E501
-            'service_now_domain_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'site_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'system_credential_secret_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'ticket_number_error_message': (UpdateFieldValueOfString,),  # noqa: E501
-            'ticket_number_validation': (UpdateFieldValueOfString,),  # noqa: E501
-            'ticket_system_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_system_type': (UpdateFieldValueOfTicketSystemTypes,),  # noqa: E501
-            'view_ticket_url': (UpdateFieldValueOfString,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'add_comments_to_ticket': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'bmc_change_management_comment_work_type': (UpdateFieldValueOfOptionalBmcChangeManagementCommentWorkType, none_type,),  # noqa: E501
+            'bmc_incident_management_comment_work_type': (UpdateFieldValueOfOptionalBmcIncidentManagementCommentWorkType, none_type,),  # noqa: E501
+            'bmc_remedy_authentication': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'bmc_remedy_url_endpoint': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'display_message': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'force_require_ticket_number': (UpdateFieldValueOfForceRequireTicketSystemOptions, none_type,),  # noqa: E501
+            'is_default': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'power_shell_add_comment_script_arguments': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'power_shell_add_comment_script_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'power_shell_add_ticket_comment_script_arguments': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'power_shell_add_ticket_comment_script_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'power_shell_run_as_account_secret_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'power_shell_ticket_status_script_arguments': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'power_shell_ticket_status_script_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'service_now_allowed_statuses': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'service_now_domain_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'site_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'system_credential_secret_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'ticket_number_error_message': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'ticket_number_validation': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'ticket_system_id': (int, none_type,),  # noqa: E501
+            'ticket_system_type': (UpdateFieldValueOfTicketSystemTypes, none_type,),  # noqa: E501
+            'view_ticket_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -229,7 +224,7 @@ class TicketSystemPatchModel(ModelNormal):
             system_credential_secret_id (UpdateFieldValueOfOptionalInt32): [optional]  # noqa: E501
             ticket_number_error_message (UpdateFieldValueOfString): [optional]  # noqa: E501
             ticket_number_validation (UpdateFieldValueOfString): [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): TicketSystemId. [optional]  # noqa: E501
+            ticket_system_id (int): TicketSystemId. [optional]  # noqa: E501
             ticket_system_type (UpdateFieldValueOfTicketSystemTypes): [optional]  # noqa: E501
             view_ticket_url (UpdateFieldValueOfString): [optional]  # noqa: E501
         """
@@ -341,7 +336,7 @@ class TicketSystemPatchModel(ModelNormal):
             system_credential_secret_id (UpdateFieldValueOfOptionalInt32): [optional]  # noqa: E501
             ticket_number_error_message (UpdateFieldValueOfString): [optional]  # noqa: E501
             ticket_number_validation (UpdateFieldValueOfString): [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): TicketSystemId. [optional]  # noqa: E501
+            ticket_system_id (int): TicketSystemId. [optional]  # noqa: E501
             ticket_system_type (UpdateFieldValueOfTicketSystemTypes): [optional]  # noqa: E501
             view_ticket_url (UpdateFieldValueOfString): [optional]  # noqa: E501
         """

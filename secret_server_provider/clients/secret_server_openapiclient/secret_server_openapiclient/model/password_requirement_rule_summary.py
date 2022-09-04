@@ -63,10 +63,8 @@ class PasswordRequirementRuleSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,31 +73,28 @@ class PasswordRequirementRuleSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'character_set': (CharacterSetSummary,),  # noqa: E501
-            'min_characters_required': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_requirement_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_requirement_rule_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_requirement_type': (PasswordRequirementType,),  # noqa: E501
+            'character_set': (CharacterSetSummary, none_type,),  # noqa: E501
+            'min_characters_required': (int, none_type,),  # noqa: E501
+            'password_requirement_id': (int, none_type,),  # noqa: E501
+            'password_requirement_rule_id': (int, none_type,),  # noqa: E501
+            'password_requirement_type': (PasswordRequirementType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -152,9 +147,9 @@ class PasswordRequirementRuleSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             character_set (CharacterSetSummary): [optional]  # noqa: E501
-            min_characters_required (bool, date, datetime, dict, float, int, list, str, none_type): Minimum Characters Required. [optional]  # noqa: E501
-            password_requirement_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Requirement Id. [optional]  # noqa: E501
-            password_requirement_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Requirement Rule Id. [optional]  # noqa: E501
+            min_characters_required (int): Minimum Characters Required. [optional]  # noqa: E501
+            password_requirement_id (int): Password Requirement Id. [optional]  # noqa: E501
+            password_requirement_rule_id (int): Password Requirement Rule Id. [optional]  # noqa: E501
             password_requirement_type (PasswordRequirementType): [optional]  # noqa: E501
         """
 
@@ -242,9 +237,9 @@ class PasswordRequirementRuleSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             character_set (CharacterSetSummary): [optional]  # noqa: E501
-            min_characters_required (bool, date, datetime, dict, float, int, list, str, none_type): Minimum Characters Required. [optional]  # noqa: E501
-            password_requirement_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Requirement Id. [optional]  # noqa: E501
-            password_requirement_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Requirement Rule Id. [optional]  # noqa: E501
+            min_characters_required (int): Minimum Characters Required. [optional]  # noqa: E501
+            password_requirement_id (int): Password Requirement Id. [optional]  # noqa: E501
+            password_requirement_rule_id (int): Password Requirement Rule Id. [optional]  # noqa: E501
             password_requirement_type (PasswordRequirementType): [optional]  # noqa: E501
         """
 

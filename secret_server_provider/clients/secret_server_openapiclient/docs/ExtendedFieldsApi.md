@@ -48,7 +48,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = extended_fields_api.ExtendedFieldsApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | secretId
+    secret_id = 1 # int | secretId
 
     # example passing only required values which don't have defaults set
     try:
@@ -64,7 +64,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| secretId |
+ **secret_id** | **int**| secretId |
 
 ### Return type
 

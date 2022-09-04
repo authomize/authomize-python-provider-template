@@ -72,8 +72,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = inbox_api.InboxApi(api_client)
     inbox_template_copy_args = InboxTemplateCopyArgs(
         data=InboxTemplateCopyModel(
-            inbox_template_id_to_copy=None,
-            name=None,
+            inbox_template_id_to_copy=1,
+            name="name_example",
         ),
     ) # InboxTemplateCopyArgs | args (optional)
 
@@ -163,7 +163,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = inbox_api.InboxApi(api_client)
     inbox_template_create_args = InboxTemplateCreateArgs(
         data=InboxTemplateCreateModel(
-            template_name=None,
+            template_name="template_name_example",
             template_type=InboxTemplateType("{}"),
         ),
     ) # InboxTemplateCreateArgs | args (optional)
@@ -254,10 +254,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = inbox_api.InboxApi(api_client)
     inbox_template_locale_create_args = InboxTemplateLocaleCreateArgs(
         data=InboxTemplateLocaleCreateModel(
-            inbox_template_id=None,
-            locale_culture_id=None,
-            subject=None,
-            template_body=None,
+            inbox_template_id=1,
+            locale_culture_id=1,
+            subject="subject_example",
+            template_body="template_body_example",
         ),
     ) # InboxTemplateLocaleCreateArgs | args (optional)
 
@@ -344,7 +344,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -360,7 +360,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -428,7 +428,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    message_id = None # bool, date, datetime, dict, float, int, list, str, none_type | messageId
+    message_id = 1 # int | messageId
 
     # example passing only required values which don't have defaults set
     try:
@@ -444,7 +444,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| messageId |
+ **message_id** | **int**| messageId |
 
 ### Return type
 
@@ -513,8 +513,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
     message_type_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | messageTypeIds (optional)
+        1,
+    ] # [int] | messageTypeIds (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -531,7 +531,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_type_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| messageTypeIds | [optional]
+ **message_type_ids** | **[int]**| messageTypeIds | [optional]
 
 ### Return type
 
@@ -684,7 +684,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | templateId
+    template_id = 1 # int | templateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -700,7 +700,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| templateId |
+ **template_id** | **int**| templateId |
 
 ### Return type
 
@@ -768,8 +768,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    locale_id = None # bool, date, datetime, dict, float, int, list, str, none_type | localeId
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | templateId
+    locale_id = 1 # int | localeId
+    template_id = 1 # int | templateId
 
     # example passing only required values which don't have defaults set
     try:
@@ -785,8 +785,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locale_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| localeId |
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| templateId |
+ **locale_id** | **int**| localeId |
+ **template_id** | **int**| templateId |
 
 ### Return type
 
@@ -854,12 +854,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    filter_template_type = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return templates of this type.  When null returns all types (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_template_type = "filter.templateType_example" # str | Only return templates of this type.  When null returns all types (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -876,12 +876,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_template_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return templates of this type.  When null returns all types | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_template_type** | **str**| Only return templates of this type.  When null returns all types | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1116,7 +1116,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -1132,7 +1132,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -1201,7 +1201,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
     alert_notification_read_event_args = AlertNotificationReadEventArgs(
-        notification_id=None,
+        notification_id="notification_id_example",
     ) # AlertNotificationReadEventArgs | model (optional)
 
     # example passing only required values which don't have defaults set
@@ -1288,7 +1288,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
     alert_notification_unread_event_args = AlertNotificationUnreadEventArgs(
-        notification_id=None,
+        notification_id="notification_id_example",
     ) # AlertNotificationUnreadEventArgs | model (optional)
 
     # example passing only required values which don't have defaults set
@@ -1375,12 +1375,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | templateId
+    template_id = 1 # int | templateId
     inbox_template_update_args = InboxTemplateUpdateArgs(
         data=InboxTemplateUpdateModel(
             template_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             template_type=UpdateFieldValueOfInboxTemplateType(
                 dirty=True,
@@ -1412,7 +1412,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| templateId |
+ **template_id** | **int**| templateId |
  **inbox_template_update_args** | [**InboxTemplateUpdateArgs**](InboxTemplateUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -1482,17 +1482,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    locale_id = None # bool, date, datetime, dict, float, int, list, str, none_type | localeId
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | templateId
+    locale_id = 1 # int | localeId
+    template_id = 1 # int | templateId
     inbox_template_locale_update_args = InboxTemplateLocaleUpdateArgs(
         data=InboxTemplateLocaleUpdateModel(
             subject=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             template_body=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # InboxTemplateLocaleUpdateArgs | args (optional)
@@ -1520,8 +1520,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locale_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| localeId |
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| templateId |
+ **locale_id** | **int**| localeId |
+ **template_id** | **int**| templateId |
  **inbox_template_locale_update_args** | [**InboxTemplateLocaleUpdateArgs**](InboxTemplateLocaleUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -1590,25 +1590,25 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    message_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | messageTypeId (optional)
-    filter_end_date = None # bool, date, datetime, dict, float, int, list, str, none_type | EndDate (optional)
-    message_data_filters_0_display_value = None # bool, date, datetime, dict, float, int, list, str, none_type | Search specifically display values (optional)
-    message_data_filters_0_inbox_data_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Which field is being searched (optional)
+    message_type_id = 1 # int | messageTypeId (optional)
+    filter_end_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | EndDate (optional)
+    message_data_filters_0_display_value = "messageDataFilters[0].displayValue_example" # str | Search specifically display values (optional)
+    message_data_filters_0_inbox_data_name = "messageDataFilters[0].inboxDataName_example" # str | Which field is being searched (optional)
     message_data_filters_0_value_bool = True # bool | Search specifically for boolean values (optional)
-    message_data_filters_0_value_date_time_end = None # bool, date, datetime, dict, float, int, list, str, none_type | Search specifically for date values less than this date (optional)
-    message_data_filters_0_value_date_time_start = None # bool, date, datetime, dict, float, int, list, str, none_type | Search specifically for date values greater than this date (optional)
-    message_data_filters_0_value_int = None # bool, date, datetime, dict, float, int, list, str, none_type | Search specifically for int values (optional)
-    message_data_filters_0_value_string = None # bool, date, datetime, dict, float, int, list, str, none_type | Search specifically for string values (optional)
+    message_data_filters_0_value_date_time_end = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Search specifically for date values less than this date (optional)
+    message_data_filters_0_value_date_time_start = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Search specifically for date values greater than this date (optional)
+    message_data_filters_0_value_int = 1 # int | Search specifically for int values (optional)
+    message_data_filters_0_value_string = "messageDataFilters[0].valueString_example" # str | Search specifically for string values (optional)
     filter_message_type_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | MessageTypeIds (optional)
-    filter_read_status_filter = None # bool, date, datetime, dict, float, int, list, str, none_type | ReadStatusFilter (optional)
-    filter_start_date = None # bool, date, datetime, dict, float, int, list, str, none_type | StartDate (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+        1,
+    ] # [int] | MessageTypeIds (optional)
+    filter_read_status_filter = "filter.readStatusFilter_example" # str | ReadStatusFilter (optional)
+    filter_start_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | StartDate (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1625,23 +1625,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| messageTypeId | [optional]
- **filter_end_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| EndDate | [optional]
- **message_data_filters_0_display_value** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search specifically display values | [optional]
- **message_data_filters_0_inbox_data_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Which field is being searched | [optional]
+ **message_type_id** | **int**| messageTypeId | [optional]
+ **filter_end_date** | **datetime**| EndDate | [optional]
+ **message_data_filters_0_display_value** | **str**| Search specifically display values | [optional]
+ **message_data_filters_0_inbox_data_name** | **str**| Which field is being searched | [optional]
  **message_data_filters_0_value_bool** | **bool**| Search specifically for boolean values | [optional]
- **message_data_filters_0_value_date_time_end** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search specifically for date values less than this date | [optional]
- **message_data_filters_0_value_date_time_start** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search specifically for date values greater than this date | [optional]
- **message_data_filters_0_value_int** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search specifically for int values | [optional]
- **message_data_filters_0_value_string** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search specifically for string values | [optional]
- **filter_message_type_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| MessageTypeIds | [optional]
- **filter_read_status_filter** | **bool, date, datetime, dict, float, int, list, str, none_type**| ReadStatusFilter | [optional]
- **filter_start_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| StartDate | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **message_data_filters_0_value_date_time_end** | **datetime**| Search specifically for date values less than this date | [optional]
+ **message_data_filters_0_value_date_time_start** | **datetime**| Search specifically for date values greater than this date | [optional]
+ **message_data_filters_0_value_int** | **int**| Search specifically for int values | [optional]
+ **message_data_filters_0_value_string** | **str**| Search specifically for string values | [optional]
+ **filter_message_type_ids** | **[int]**| MessageTypeIds | [optional]
+ **filter_read_status_filter** | **str**| ReadStatusFilter | [optional]
+ **filter_start_date** | **datetime**| StartDate | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1709,11 +1709,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_api.InboxApi(api_client)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1730,11 +1730,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1805,9 +1805,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = inbox_api.InboxApi(api_client)
     inbox_test_message_args = InboxTestMessageArgs(
         data=InboxTestMessageModel(
-            group_id=None,
-            message=None,
-            subject=None,
+            group_id=1,
+            message="message_example",
+            subject="subject_example",
         ),
     ) # InboxTestMessageArgs | args (optional)
 
@@ -1897,7 +1897,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     inbox_message_set_message_read_status_args = InboxMessageSetMessageReadStatusArgs(
         data=InboxMessageSetMessageReadStatusModel(
             message_ids=[
-                None,
+                1,
             ],
             read=True,
         ),
@@ -1988,9 +1988,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = inbox_api.InboxApi(api_client)
     inbox_resource_upload_args = InboxResourceUploadArgs(
 null,
-        file_attachment=None,
-        file_name=None,
-        slug=None,
+        file_attachment=open('/path/to/file', 'rb'),
+        file_name="file_name_example",
+        slug="slug_example",
     ) # InboxResourceUploadArgs | args (optional)
 
     # example passing only required values which don't have defaults set

@@ -57,10 +57,8 @@ class DiscoveryConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class DiscoveryConfigurationModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'discovery_interval_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_interval_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_scan_offset_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_discovery': (bool,),  # noqa: E501
-            'engine_ad_discovery_batch_size': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ignore_cluster_node_objects': (bool,),  # noqa: E501
-            'max_log_age_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'discovery_interval_days': (int, none_type,),  # noqa: E501
+            'discovery_interval_hours': (int, none_type,),  # noqa: E501
+            'discovery_scan_offset_hours': (int, none_type,),  # noqa: E501
+            'enable_discovery': (bool, none_type,),  # noqa: E501
+            'engine_ad_discovery_batch_size': (int, none_type,),  # noqa: E501
+            'ignore_cluster_node_objects': (bool, none_type,),  # noqa: E501
+            'max_log_age_days': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,13 +142,13 @@ class DiscoveryConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize days interval for Discovery. [optional]  # noqa: E501
-            discovery_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize hours interval for Discovery. [optional]  # noqa: E501
-            discovery_scan_offset_hours (bool, date, datetime, dict, float, int, list, str, none_type): Sets time offset in hours for discovery scan operations. Default value: 0. [optional]  # noqa: E501
+            discovery_interval_days (int): Synchronize days interval for Discovery. [optional]  # noqa: E501
+            discovery_interval_hours (int): Synchronize hours interval for Discovery. [optional]  # noqa: E501
+            discovery_scan_offset_hours (int): Sets time offset in hours for discovery scan operations. Default value: 0. [optional]  # noqa: E501
             enable_discovery (bool): Whether or not discovery is enabled. [optional]  # noqa: E501
-            engine_ad_discovery_batch_size (bool, date, datetime, dict, float, int, list, str, none_type): The size of the batch for Active Directory Account engine scanning - set higher if engine takes too much time to process. Default value: 1. [optional]  # noqa: E501
+            engine_ad_discovery_batch_size (int): The size of the batch for Active Directory Account engine scanning - set higher if engine takes too much time to process. Default value: 1. [optional]  # noqa: E501
             ignore_cluster_node_objects (bool): If set to true, Discovery scans will bypass machines identified as 'msclustervirtualserver.' Default value: False. [optional]  # noqa: E501
-            max_log_age_days (bool, date, datetime, dict, float, int, list, str, none_type): How long to keep logs. [optional]  # noqa: E501
+            max_log_age_days (int): How long to keep logs. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,13 +234,13 @@ class DiscoveryConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize days interval for Discovery. [optional]  # noqa: E501
-            discovery_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize hours interval for Discovery. [optional]  # noqa: E501
-            discovery_scan_offset_hours (bool, date, datetime, dict, float, int, list, str, none_type): Sets time offset in hours for discovery scan operations. Default value: 0. [optional]  # noqa: E501
+            discovery_interval_days (int): Synchronize days interval for Discovery. [optional]  # noqa: E501
+            discovery_interval_hours (int): Synchronize hours interval for Discovery. [optional]  # noqa: E501
+            discovery_scan_offset_hours (int): Sets time offset in hours for discovery scan operations. Default value: 0. [optional]  # noqa: E501
             enable_discovery (bool): Whether or not discovery is enabled. [optional]  # noqa: E501
-            engine_ad_discovery_batch_size (bool, date, datetime, dict, float, int, list, str, none_type): The size of the batch for Active Directory Account engine scanning - set higher if engine takes too much time to process. Default value: 1. [optional]  # noqa: E501
+            engine_ad_discovery_batch_size (int): The size of the batch for Active Directory Account engine scanning - set higher if engine takes too much time to process. Default value: 1. [optional]  # noqa: E501
             ignore_cluster_node_objects (bool): If set to true, Discovery scans will bypass machines identified as 'msclustervirtualserver.' Default value: False. [optional]  # noqa: E501
-            max_log_age_days (bool, date, datetime, dict, float, int, list, str, none_type): How long to keep logs. [optional]  # noqa: E501
+            max_log_age_days (int): How long to keep logs. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **enable_launcher** | **bool** | Enable Launcher | [optional] 
 **enable_launcher_auto_update** | **bool** | Enable Launcher Auto Update | [optional] 
 **enable_web_parsing** | **bool** | Allow Secret Server to retrieve and parse the mapped website when using the web launcher. | [optional] 
-**launcher_deployment_type** | **bool, date, datetime, dict, float, int, list, str, none_type** | Launcher Deployment Type | [optional] 
+**launcher_deployment_type** | **str** | Launcher Deployment Type | [optional] 
 **send_secret_url_to_launcher** | **bool** | Send the URL that is on the Secret to the web password launcher in addition to the bookmarklet | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

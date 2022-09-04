@@ -83,9 +83,9 @@ class MetadataApi(object):
                 },
                 'openapi_types': {
                     'item_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'item_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'metadata_create_args':
                         (MetadataCreateArgs,),
                 },
@@ -147,11 +147,11 @@ class MetadataApi(object):
                 },
                 'openapi_types': {
                     'item_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'item_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'metadata_item_data_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'item_id': 'itemId',
@@ -211,21 +211,21 @@ class MetadataApi(object):
                 },
                 'openapi_types': {
                     'filter_item_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_metadata_section_filter_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_metadata_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_item_id': 'filter.itemId',
@@ -339,21 +339,21 @@ class MetadataApi(object):
                 },
                 'openapi_types': {
                     'filter_item_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_meta_data_field_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_metadata_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_item_id': 'filter.itemId',
@@ -428,25 +428,25 @@ class MetadataApi(object):
                     'is_exporting':
                         (bool,),
                     'filter_end_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'filter_item_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_meta_data_field_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_metadata_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_start_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'is_exporting': 'isExporting',
@@ -520,9 +520,9 @@ class MetadataApi(object):
                 },
                 'openapi_types': {
                     'item_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'item_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'metadata_update_args':
                         (MetadataUpdateArgs,),
                 },
@@ -583,11 +583,11 @@ class MetadataApi(object):
                 },
                 'openapi_types': {
                     'field_section_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'item_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'item_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'metadata_field_section_update_args':
                         (MetadataFieldSectionUpdateArgs,),
                 },
@@ -632,8 +632,8 @@ class MetadataApi(object):
         >>> result = thread.get()
 
         Args:
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): The item ID of the entity to which this metadata is associated
-            item_type (bool, date, datetime, dict, float, int, list, str, none_type): The type of entity to which this metadata is associated
+            item_id (int): The item ID of the entity to which this metadata is associated
+            item_type (str): The type of entity to which this metadata is associated
 
         Keyword Args:
             metadata_create_args (MetadataCreateArgs): args. [optional]
@@ -721,9 +721,9 @@ class MetadataApi(object):
         >>> result = thread.get()
 
         Args:
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): The item ID of the entity to which this metadata is associated
-            item_type (bool, date, datetime, dict, float, int, list, str, none_type): The type of entity to which this metadata is associated
-            metadata_item_data_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence ID of the metadata record to delete
+            item_id (int): The item ID of the entity to which this metadata is associated
+            item_type (str): The type of entity to which this metadata is associated
+            metadata_item_data_id (int): The sequence ID of the metadata record to delete
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -810,14 +810,14 @@ class MetadataApi(object):
 
 
         Keyword Args:
-            filter_item_id (bool, date, datetime, dict, float, int, list, str, none_type): Return sections that have metadata for this specific item id.  MetadataType will be required.. [optional]
-            filter_metadata_section_filter_id (bool, date, datetime, dict, float, int, list, str, none_type): Return a specific Metadata Section Field ID.. [optional]
-            filter_metadata_type (bool, date, datetime, dict, float, int, list, str, none_type): Only return metadata for a specific type of item.  Will also required an ItemId. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_item_id (int): Return sections that have metadata for this specific item id.  MetadataType will be required.. [optional]
+            filter_metadata_section_filter_id (int): Return a specific Metadata Section Field ID.. [optional]
+            filter_metadata_type (str): Only return metadata for a specific type of item.  Will also required an ItemId. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -974,14 +974,14 @@ class MetadataApi(object):
 
 
         Keyword Args:
-            filter_item_id (bool, date, datetime, dict, float, int, list, str, none_type): Will only return metadata for this entity ID.  MetadataType will also be required.. [optional]
-            filter_meta_data_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Return a specific metadata field. [optional]
-            filter_metadata_type (bool, date, datetime, dict, float, int, list, str, none_type): Will only return metadata for this type.  ItemId will also be required.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_item_id (int): Will only return metadata for this entity ID.  MetadataType will also be required.. [optional]
+            filter_meta_data_field_id (int): Return a specific metadata field. [optional]
+            filter_metadata_type (str): Will only return metadata for this type.  ItemId will also be required.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1061,16 +1061,16 @@ class MetadataApi(object):
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            filter_end_date (bool, date, datetime, dict, float, int, list, str, none_type): Only return history metadata values that were entered before this time. [optional]
-            filter_item_id (bool, date, datetime, dict, float, int, list, str, none_type): Will only return metadata for this entity ID.  MetadataType will also be required.. [optional]
-            filter_meta_data_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Return a specific metadata field. [optional]
-            filter_metadata_type (bool, date, datetime, dict, float, int, list, str, none_type): Will only return metadata for this type.  ItemId will also be required.. [optional]
-            filter_start_date (bool, date, datetime, dict, float, int, list, str, none_type): Only return history metadata values that were entered after this time. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_end_date (datetime): Only return history metadata values that were entered before this time. [optional]
+            filter_item_id (int): Will only return metadata for this entity ID.  MetadataType will also be required.. [optional]
+            filter_meta_data_field_id (int): Return a specific metadata field. [optional]
+            filter_metadata_type (str): Will only return metadata for this type.  ItemId will also be required.. [optional]
+            filter_start_date (datetime): Only return history metadata values that were entered after this time. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1150,8 +1150,8 @@ class MetadataApi(object):
         >>> result = thread.get()
 
         Args:
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): The item ID of the entity to which this metadata is associated
-            item_type (bool, date, datetime, dict, float, int, list, str, none_type): The type of entity to which this metadata is associated
+            item_id (int): The item ID of the entity to which this metadata is associated
+            item_type (str): The type of entity to which this metadata is associated
 
         Keyword Args:
             metadata_update_args (MetadataUpdateArgs): args. [optional]
@@ -1237,11 +1237,11 @@ class MetadataApi(object):
         >>> result = thread.get()
 
         Args:
-            field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The section ID of the field to which this metadata is associated
+            field_section_id (int): The section ID of the field to which this metadata is associated
 
         Keyword Args:
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): The item ID of the entity to which this metadata is associated. [optional]
-            item_type (bool, date, datetime, dict, float, int, list, str, none_type): The type of entity to which this metadata is associated. [optional]
+            item_id (int): The item ID of the entity to which this metadata is associated. [optional]
+            item_type (str): The type of entity to which this metadata is associated. [optional]
             metadata_field_section_update_args (MetadataFieldSectionUpdateArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.

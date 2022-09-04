@@ -57,10 +57,8 @@ class EnterpriseSearchResultDataModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class EnterpriseSearchResultDataModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'action': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'date_recorded': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_template_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'action': (str, none_type,),  # noqa: E501
+            'date_recorded': (datetime, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'secret_template_name': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,12 +140,12 @@ class EnterpriseSearchResultDataModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action taken on the accessed enterprise. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): Date enterprise was accessed. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of secret associated to the accessed enterprise. [optional]  # noqa: E501
-            secret_template_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template of secret associated to the accessed enterprise. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of user that accessed the enterprise. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of user that accessed the enterprise. [optional]  # noqa: E501
+            action (str): Action taken on the accessed enterprise. [optional]  # noqa: E501
+            date_recorded (datetime): Date enterprise was accessed. [optional]  # noqa: E501
+            secret_name (str): Name of secret associated to the accessed enterprise. [optional]  # noqa: E501
+            secret_template_name (str): Secret Template of secret associated to the accessed enterprise. [optional]  # noqa: E501
+            user_id (int): Id of user that accessed the enterprise. [optional]  # noqa: E501
+            user_name (str): Name of user that accessed the enterprise. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,12 +231,12 @@ class EnterpriseSearchResultDataModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action taken on the accessed enterprise. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): Date enterprise was accessed. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of secret associated to the accessed enterprise. [optional]  # noqa: E501
-            secret_template_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template of secret associated to the accessed enterprise. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of user that accessed the enterprise. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of user that accessed the enterprise. [optional]  # noqa: E501
+            action (str): Action taken on the accessed enterprise. [optional]  # noqa: E501
+            date_recorded (datetime): Date enterprise was accessed. [optional]  # noqa: E501
+            secret_name (str): Name of secret associated to the accessed enterprise. [optional]  # noqa: E501
+            secret_template_name (str): Secret Template of secret associated to the accessed enterprise. [optional]  # noqa: E501
+            user_id (int): Id of user that accessed the enterprise. [optional]  # noqa: E501
+            user_name (str): Name of user that accessed the enterprise. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

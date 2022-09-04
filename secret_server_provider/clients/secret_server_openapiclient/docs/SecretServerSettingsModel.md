@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **advanced_settings** | [**[ConfigurationAdvancedModel]**](ConfigurationAdvancedModel.md) | Advanced Configuration Settings | [optional] 
 **application_settings** | [**ConfigurationApplicationSettingsModel**](ConfigurationApplicationSettingsModel.md) |  | [optional] 
-**configuration_version** | **bool, date, datetime, dict, float, int, list, str, none_type** | Export Configuration Version | [optional] 
+**configuration_version** | **str** | Export Configuration Version | [optional] 
 **email** | [**ConfigurationEmailModel**](ConfigurationEmailModel.md) |  | [optional] 
-**external_instance_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | ID for specific instance | [optional] 
+**external_instance_id** | **str** | ID for specific instance | [optional] 
 **folder_settings** | [**ConfigurationFoldersModel**](ConfigurationFoldersModel.md) |  | [optional] 
 **launcher_settings** | [**ConfigurationLauncherSettingsModel**](ConfigurationLauncherSettingsModel.md) |  | [optional] 
 **licenses** | [**[LicenseModel]**](LicenseModel.md) | License Keys | [optional] 

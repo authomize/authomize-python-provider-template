@@ -69,10 +69,8 @@ class ConfigurationApplicationSettingsPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,56 +79,53 @@ class ConfigurationApplicationSettingsPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_send_telemetry': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'allow_software_update_checks': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'api_refresh_tokens_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'api_session_timeout_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'api_session_timeout_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'api_session_timeout_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'api_session_timeout_unlimited': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'configuration_early_adopter_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'custom_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'display_downtime_message_to_admins_only': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_cred_ssp': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_syslog_cef_logging': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_web_services': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'external_instance_id': (bool,),  # noqa: E501
-            'maximum_token_refreshes_allowed': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'max_secret_log_length': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'mobile_max_offline_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'mobile_max_offline_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'obfuscate_personally_identifiable_information': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'pii_obfuscation_level': (UpdateFieldValueOfString,),  # noqa: E501
-            'prevent_application_from_sleeping': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'prevent_direct_api_authentication': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'syslog_cef_log_site': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'syslog_cef_port': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'syslog_cef_protocol': (UpdateFieldValueOfSyslogCefProtocolType,),  # noqa: E501
-            'syslog_cef_server': (UpdateFieldValueOfString,),  # noqa: E501
-            'syslog_cef_time_zone': (UpdateFieldValueOfSyslogCefTimeZoneType,),  # noqa: E501
-            'tms_installation_path': (UpdateFieldValueOfString,),  # noqa: E501
-            'win_rm_endpoint_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'write_syslog_to_event_log': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'allow_send_telemetry': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'allow_software_update_checks': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'api_refresh_tokens_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'api_session_timeout_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'api_session_timeout_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'api_session_timeout_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'api_session_timeout_unlimited': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'configuration_early_adopter_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'custom_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'display_downtime_message_to_admins_only': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_cred_ssp': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_syslog_cef_logging': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_web_services': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'external_instance_id': (bool, none_type,),  # noqa: E501
+            'maximum_token_refreshes_allowed': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'max_secret_log_length': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'mobile_max_offline_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'mobile_max_offline_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'obfuscate_personally_identifiable_information': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'pii_obfuscation_level': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'prevent_application_from_sleeping': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'prevent_direct_api_authentication': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'syslog_cef_log_site': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'syslog_cef_port': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'syslog_cef_protocol': (UpdateFieldValueOfSyslogCefProtocolType, none_type,),  # noqa: E501
+            'syslog_cef_server': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'syslog_cef_time_zone': (UpdateFieldValueOfSyslogCefTimeZoneType, none_type,),  # noqa: E501
+            'tms_installation_path': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'win_rm_endpoint_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'write_syslog_to_event_log': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

@@ -65,10 +65,8 @@ class PlatformConfigurationUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,36 +75,33 @@ class PlatformConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'create_groups_during_synchronization': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_synchronization': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'open_id_connect_client_id': (UpdateFieldValueOfString,),  # noqa: E501
-            'open_id_connect_client_secret': (UpdateFieldValueOfString,),  # noqa: E501
-            'open_id_connect_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'open_id_connect_login_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'open_id_connect_logout_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'profile_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'synchronization_interval_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'synchronization_interval_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'create_groups_during_synchronization': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_synchronization': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'open_id_connect_client_id': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'open_id_connect_client_secret': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'open_id_connect_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'open_id_connect_login_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'open_id_connect_logout_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'profile_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'synchronization_interval_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'synchronization_interval_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

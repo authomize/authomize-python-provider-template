@@ -57,10 +57,8 @@ class ViewFieldLink(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class ViewFieldLink(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'is_external': (bool,),  # noqa: E501
-            'link_text': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'is_external': (bool, none_type,),  # noqa: E501
+            'link_text': (str, none_type,),  # noqa: E501
+            'url': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -140,8 +135,8 @@ class ViewFieldLink(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             is_external (bool): IsExternal. [optional]  # noqa: E501
-            link_text (bool, date, datetime, dict, float, int, list, str, none_type): LinkText. [optional]  # noqa: E501
-            url (bool, date, datetime, dict, float, int, list, str, none_type): Url. [optional]  # noqa: E501
+            link_text (str): LinkText. [optional]  # noqa: E501
+            url (str): Url. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -228,8 +223,8 @@ class ViewFieldLink(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             is_external (bool): IsExternal. [optional]  # noqa: E501
-            link_text (bool, date, datetime, dict, float, int, list, str, none_type): LinkText. [optional]  # noqa: E501
-            url (bool, date, datetime, dict, float, int, list, str, none_type): Url. [optional]  # noqa: E501
+            link_text (str): LinkText. [optional]  # noqa: E501
+            url (str): Url. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

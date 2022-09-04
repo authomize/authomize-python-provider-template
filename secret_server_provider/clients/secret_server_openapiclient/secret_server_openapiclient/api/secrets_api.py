@@ -134,17 +134,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_change_password_args':
                         (SecretChangePasswordArgs,),
                 },
@@ -212,9 +212,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_restricted_args':
                         (SecretRestrictedArgs,),
                 },
@@ -273,9 +273,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -433,17 +433,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -511,19 +511,19 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'list_guid':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -592,17 +592,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_restricted_args':
                         (SecretRestrictedArgs,),
                 },
@@ -719,7 +719,7 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_check_out_extension_args':
                         (SecretCheckOutExtensionArgs,),
                 },
@@ -777,9 +777,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'favorite_secret_args':
                         (FavoriteSecretArgs,),
                 },
@@ -840,17 +840,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'filter_secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_secret_id': 'filter.secretId',
@@ -975,7 +975,7 @@ class SecretsApi(object):
         )
         self.secrets_service_get_field_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -1014,9 +1014,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'include_inactive':
                         (bool,),
                     'no_auto_checkout':
@@ -1026,11 +1026,11 @@ class SecretsApi(object):
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1101,13 +1101,13 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'is_edit_mode':
                         (bool,),
                     'load_read_only_flags':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1170,15 +1170,15 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                 },
@@ -1252,27 +1252,27 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1344,9 +1344,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1405,17 +1405,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_restricted_args':
                         (SecretRestrictedArgs,),
                 },
@@ -1489,23 +1489,23 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'is_exporting':
                         (bool,),
                     'filter_include_password_change_log':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1627,17 +1627,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1704,7 +1704,7 @@ class SecretsApi(object):
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_proxy_args':
@@ -1773,17 +1773,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1850,7 +1850,7 @@ class SecretsApi(object):
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_proxy_args':
@@ -1920,7 +1920,7 @@ class SecretsApi(object):
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_ssh_terminal_args':
@@ -1989,17 +1989,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -2067,7 +2067,7 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'include_inactive':
                         (bool,),
                     'no_auto_checkout':
@@ -2077,11 +2077,11 @@ class SecretsApi(object):
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -2150,13 +2150,13 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                 },
@@ -2222,17 +2222,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -2263,7 +2263,7 @@ class SecretsApi(object):
         )
         self.secrets_service_put_field_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -2301,19 +2301,19 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_item_update_args':
                         (SecretItemUpdateArgs,),
                 },
@@ -2352,7 +2352,7 @@ class SecretsApi(object):
         )
         self.secrets_service_restricted_field_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -2390,19 +2390,19 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_restricted_args':
                         (SecretRestrictedArgs,),
                 },
@@ -2476,17 +2476,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -2575,15 +2575,15 @@ class SecretsApi(object):
                     'filter_do_not_calculate_total':
                         (bool,),
                     'filter_double_lock_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_extended_fields':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([str],),
                     'filter_extended_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_heartbeat_status':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_include_active':
                         (bool,),
                     'filter_include_inactive':
@@ -2599,31 +2599,31 @@ class SecretsApi(object):
                     'filter_only_shared_with_me':
                         (bool,),
                     'filter_password_type_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_permission_required':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_scope':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_field':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_field_slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_allow_double_locks': 'filter.allowDoubleLocks',
@@ -2698,7 +2698,7 @@ class SecretsApi(object):
         )
         self.secrets_service_search_total_v2_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (int,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -2757,17 +2757,17 @@ class SecretsApi(object):
                     'filter_do_not_calculate_total':
                         (bool,),
                     'filter_double_lock_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_extended_fields':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([str],),
                     'filter_extended_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_has_launcher':
                         (bool,),
                     'filter_heartbeat_status':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_include_active':
                         (bool,),
                     'filter_include_inactive':
@@ -2783,31 +2783,31 @@ class SecretsApi(object):
                     'filter_only_shared_with_me':
                         (bool,),
                     'filter_password_type_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_permission_required':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_scope':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_field':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_field_slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_secret_template_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_allow_double_locks': 'filter.allowDoubleLocks',
@@ -2944,17 +2944,17 @@ class SecretsApi(object):
                     'filter_do_not_calculate_total':
                         (bool,),
                     'filter_double_lock_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_extended_fields':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([str],),
                     'filter_extended_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_has_launcher':
                         (bool,),
                     'filter_heartbeat_status':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_include_active':
                         (bool,),
                     'filter_include_inactive':
@@ -2970,31 +2970,31 @@ class SecretsApi(object):
                     'filter_only_shared_with_me':
                         (bool,),
                     'filter_password_type_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_permission_required':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_scope':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_field':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_field_slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_secret_template_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_allow_double_locks': 'filter.allowDoubleLocks',
@@ -3103,9 +3103,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -3159,9 +3159,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'secret_template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_template_id': 'secretTemplateId',
@@ -3215,9 +3215,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -3271,9 +3271,9 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -3332,17 +3332,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_email_args':
                         (SecretDetailUpdateEmailArgs,),
                 },
@@ -3414,17 +3414,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_email_args':
                         (SecretDetailUpdateEmailArgs,),
                 },
@@ -3496,17 +3496,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_expiration_args':
                         (SecretDetailUpdateExpirationArgs,),
                 },
@@ -3578,17 +3578,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_general_args':
                         (SecretDetailUpdateGeneralArgs,),
                 },
@@ -3660,17 +3660,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_general_args':
                         (SecretDetailUpdateGeneralArgs,),
                 },
@@ -3737,7 +3737,7 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'secret_detail_jumpbox_update_args':
                         (SecretDetailJumpboxUpdateArgs,),
                 },
@@ -3800,15 +3800,15 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'slug':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_list_field_list_args':
@@ -3882,17 +3882,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_rpc_script_secrets_args':
                         (SecretDetailUpdateRpcScriptSecretsArgs,),
                 },
@@ -3964,17 +3964,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_rpc_script_secrets_args':
                         (SecretDetailUpdateRpcScriptSecretsArgs,),
                 },
@@ -4046,17 +4046,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_update_args':
                         (SecretUpdateArgs,),
                 },
@@ -4178,17 +4178,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_security_general_args':
                         (SecretDetailUpdateSecurityGeneralArgs,),
                 },
@@ -4260,17 +4260,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_security_approval_args':
                         (SecretDetailUpdateSecurityApprovalArgs,),
                 },
@@ -4342,17 +4342,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_security_checkout_args':
                         (SecretDetailUpdateSecurityCheckoutArgs,),
                 },
@@ -4424,17 +4424,17 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_path':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'secret_detail_update_security_general_args':
                         (SecretDetailUpdateSecurityGeneralArgs,),
                 },
@@ -4505,13 +4505,13 @@ class SecretsApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'auto_check_in':
                         (bool,),
                     'auto_checkout':
                         (bool,),
                     'auto_comment':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'force_check_in':
                         (bool,),
                     'secret_detail_ssh_restricted_command_update_args':
@@ -4561,14 +4561,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_change_password_args (SecretChangePasswordArgs): Secret options. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -4650,10 +4650,10 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_restricted_args (SecretRestrictedArgs): Secret options. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -4735,10 +4735,10 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4977,14 +4977,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5066,15 +5066,15 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): Secret field name
+            id (int): Secret ID
+            slug (str): Secret field name
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            list_guid (bool, date, datetime, dict, float, int, list, str, none_type): Secret options. [optional]
+            list_guid (str): Secret options. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5157,14 +5157,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_restricted_args (SecretRestrictedArgs): Secret options. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -5325,7 +5325,7 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             secret_check_out_extension_args (SecretCheckOutExtensionArgs): args. [optional]
@@ -5409,10 +5409,10 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The secret to favorite or unfavorite.
+            secret_id (int): The secret to favorite or unfavorite.
 
         Keyword Args:
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             favorite_secret_args (FavoriteSecretArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -5494,12 +5494,12 @@ class SecretsApi(object):
 
 
         Keyword Args:
-            filter_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the associated Secret.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_secret_id (int): The Id of the associated Secret.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5736,17 +5736,17 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): Secret field name
+            id (int): Secret ID
+            slug (str): Secret field name
 
         Keyword Args:
             include_inactive (bool): Whether to include inactive secrets in the results. [optional]
             no_auto_checkout (bool): Don't check out the secret if needed. [optional]
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5779,7 +5779,7 @@ class SecretsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -5829,12 +5829,12 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             is_edit_mode (bool): isEditMode. [optional]
             load_read_only_flags (bool): loadReadOnlyFlags. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5916,13 +5916,13 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): Secret field name
+            id (int): Secret ID
+            slug (str): Secret field name
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -6007,19 +6007,19 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): The field slug name of the list field. This is the fieldSlugName property of the SecretField object. By default, it is the lower-case field name with all spaces replaced with dashes (-).
+            id (int): Secret ID
+            slug (str): The field slug name of the list field. This is the fieldSlugName property of the SecretField object. By default, it is the lower-case field name with all spaces replaced with dashes (-).
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6102,10 +6102,10 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6186,14 +6186,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_restricted_args (SecretRestrictedArgs): Secret options. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -6275,17 +6275,17 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
             filter_include_password_change_log (bool): Whether or not to include password changes in data. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6445,14 +6445,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6535,7 +6535,7 @@ class SecretsApi(object):
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
             secret_proxy_args (SecretProxyArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
@@ -6616,14 +6616,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6706,7 +6706,7 @@ class SecretsApi(object):
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
             secret_proxy_args (SecretProxyArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
@@ -6789,7 +6789,7 @@ class SecretsApi(object):
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
             secret_ssh_terminal_args (SecretSshTerminalArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
@@ -6870,14 +6870,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6958,16 +6958,16 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             include_inactive (bool): Whether to include inactive secrets in the results. [optional]
             no_auto_checkout (bool): Don't check out the secret if needed. [optional]
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7048,12 +7048,12 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -7135,14 +7135,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7224,15 +7224,15 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): Secret field name
+            id (int): Secret ID
+            slug (str): Secret field name
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_item_update_args (SecretItemUpdateArgs): Secret options. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -7266,7 +7266,7 @@ class SecretsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -7317,15 +7317,15 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): Secret field name
+            id (int): Secret ID
+            slug (str): Secret field name
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_restricted_args (SecretRestrictedArgs): Secret options. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -7359,7 +7359,7 @@ class SecretsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -7409,14 +7409,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7499,11 +7499,11 @@ class SecretsApi(object):
         Keyword Args:
             filter_allow_double_locks (bool): Whether to allow DoubleLocks as part of the search. True by default.. [optional]
             filter_do_not_calculate_total (bool): Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search.. [optional]
-            filter_double_lock_id (bool, date, datetime, dict, float, int, list, str, none_type): Only include Secrets with this DoubleLock ID assigned in the search results.. [optional]
-            filter_extended_fields ([bool, date, datetime, dict, float, int, list, str, none_type]): An array of names of Secret Template fields to return.  Only exposed fields can be returned.. [optional]
-            filter_extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template.. [optional]
-            filter_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets within the specified folder.. [optional]
-            filter_heartbeat_status (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets with a certain heartbeat status.. [optional]
+            filter_double_lock_id (int): Only include Secrets with this DoubleLock ID assigned in the search results.. [optional]
+            filter_extended_fields ([str]): An array of names of Secret Template fields to return.  Only exposed fields can be returned.. [optional]
+            filter_extended_type_id (int): If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template.. [optional]
+            filter_folder_id (int): If not null, returns only secrets within the specified folder.. [optional]
+            filter_heartbeat_status (str): If not null, returns only secrets with a certain heartbeat status.. [optional]
             filter_include_active (bool): Whether to include active secrets in results (when excluded equals true).. [optional]
             filter_include_inactive (bool): Whether to include inactive secrets in results.. [optional]
             filter_include_restricted (bool): Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view.. [optional]
@@ -7511,19 +7511,19 @@ class SecretsApi(object):
             filter_is_exact_match (bool): Whether to do an exact match of the search text or a partial match. If an exact match, the entire secret name, field value, or list option in a list field must match the search text.. [optional]
             filter_only_rpc_enabled (bool): Whether to only include secrets whose template has Remote Password Changing enabled.. [optional]
             filter_only_shared_with_me (bool): When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned.. [optional]
-            filter_password_type_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): If not null, returns only secrets matching the specified password types.. [optional]
-            filter_permission_required (bool, date, datetime, dict, float, int, list, str, none_type): Specify whether to filter by List, View, Edit, or Owner permission. Default is List.. [optional]
-            filter_scope (bool, date, datetime, dict, float, int, list, str, none_type): Specify whether to search All, Recent, or Favorites. [optional]
-            filter_search_field (bool, date, datetime, dict, float, int, list, str, none_type): If set, restricts the search to only match secrets where the value of the field specified by name contains the search text.. [optional]
-            filter_search_field_slug (bool, date, datetime, dict, float, int, list, str, none_type): If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField.. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): The text to match in the secret name, field value, or list field contents.. [optional]
-            filter_secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets matching the specified template.. [optional]
-            filter_site_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets within a the specified site.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_password_type_ids ([int]): If not null, returns only secrets matching the specified password types.. [optional]
+            filter_permission_required (str): Specify whether to filter by List, View, Edit, or Owner permission. Default is List.. [optional]
+            filter_scope (str): Specify whether to search All, Recent, or Favorites. [optional]
+            filter_search_field (str): If set, restricts the search to only match secrets where the value of the field specified by name contains the search text.. [optional]
+            filter_search_field_slug (str): If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField.. [optional]
+            filter_search_text (str): The text to match in the secret name, field value, or list field contents.. [optional]
+            filter_secret_template_id (int): If not null, returns only secrets matching the specified template.. [optional]
+            filter_site_id (int): If not null, returns only secrets within a the specified site.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7604,12 +7604,12 @@ class SecretsApi(object):
         Keyword Args:
             filter_allow_double_locks (bool): Whether to allow DoubleLocks as part of the search. True by default.. [optional]
             filter_do_not_calculate_total (bool): Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search.. [optional]
-            filter_double_lock_id (bool, date, datetime, dict, float, int, list, str, none_type): Only include Secrets with this DoubleLock ID assigned in the search results.. [optional]
-            filter_extended_fields ([bool, date, datetime, dict, float, int, list, str, none_type]): An array of names of Secret Template fields to return.  Only exposed fields can be returned.. [optional]
-            filter_extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template.. [optional]
-            filter_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets within the specified folder.. [optional]
+            filter_double_lock_id (int): Only include Secrets with this DoubleLock ID assigned in the search results.. [optional]
+            filter_extended_fields ([str]): An array of names of Secret Template fields to return.  Only exposed fields can be returned.. [optional]
+            filter_extended_type_id (int): If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template.. [optional]
+            filter_folder_id (int): If not null, returns only secrets within the specified folder.. [optional]
             filter_has_launcher (bool): Whether to only return secrets with or without launchers. If null, returns secrets regardless of whether they have launchers.. [optional]
-            filter_heartbeat_status (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets with a certain heartbeat status.. [optional]
+            filter_heartbeat_status (str): If not null, returns only secrets with a certain heartbeat status.. [optional]
             filter_include_active (bool): Whether to include active secrets in results (when excluded equals true).. [optional]
             filter_include_inactive (bool): Whether to include inactive secrets in results.. [optional]
             filter_include_restricted (bool): Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view.. [optional]
@@ -7617,19 +7617,19 @@ class SecretsApi(object):
             filter_is_exact_match (bool): Whether to do an exact match of the search text or a partial match. If an exact match, the entire secret name, field value, or list option in a list field must match the search text.. [optional]
             filter_only_rpc_enabled (bool): Whether to only include secrets whose template has Remote Password Changing enabled.. [optional]
             filter_only_shared_with_me (bool): When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned.. [optional]
-            filter_password_type_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): If not null, returns only secrets matching the specified password types.. [optional]
-            filter_permission_required (bool, date, datetime, dict, float, int, list, str, none_type): Specify whether to filter by List, View, Edit, or Owner permission. Default is List.. [optional]
-            filter_scope (bool, date, datetime, dict, float, int, list, str, none_type): Specify whether to search All, Recent, or Favorites. [optional]
-            filter_search_field (bool, date, datetime, dict, float, int, list, str, none_type): If set, restricts the search to only match secrets where the value of the field specified by name contains the search text.. [optional]
-            filter_search_field_slug (bool, date, datetime, dict, float, int, list, str, none_type): If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField.. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): The text to match in the secret name, field value, or list field contents.. [optional]
-            filter_secret_template_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): If not null or empty, returns only secrets matching the specified templates.. [optional]
-            filter_site_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets within a the specified site.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_password_type_ids ([int]): If not null, returns only secrets matching the specified password types.. [optional]
+            filter_permission_required (str): Specify whether to filter by List, View, Edit, or Owner permission. Default is List.. [optional]
+            filter_scope (str): Specify whether to search All, Recent, or Favorites. [optional]
+            filter_search_field (str): If set, restricts the search to only match secrets where the value of the field specified by name contains the search text.. [optional]
+            filter_search_field_slug (str): If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField.. [optional]
+            filter_search_text (str): The text to match in the secret name, field value, or list field contents.. [optional]
+            filter_secret_template_ids ([int]): If not null or empty, returns only secrets matching the specified templates.. [optional]
+            filter_site_id (int): If not null, returns only secrets within a the specified site.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7662,7 +7662,7 @@ class SecretsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            int
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -7710,12 +7710,12 @@ class SecretsApi(object):
         Keyword Args:
             filter_allow_double_locks (bool): Whether to allow DoubleLocks as part of the search. True by default.. [optional]
             filter_do_not_calculate_total (bool): Whether to return the total number of secrets matching the filters. False by default. If false, the total can be retrieved separately by calling /v1/secrets/search-total with the same arguments used in the search.. [optional]
-            filter_double_lock_id (bool, date, datetime, dict, float, int, list, str, none_type): Only include Secrets with this DoubleLock ID assigned in the search results.. [optional]
-            filter_extended_fields ([bool, date, datetime, dict, float, int, list, str, none_type]): An array of names of Secret Template fields to return.  Only exposed fields can be returned.. [optional]
-            filter_extended_type_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template.. [optional]
-            filter_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets within the specified folder.. [optional]
+            filter_double_lock_id (int): Only include Secrets with this DoubleLock ID assigned in the search results.. [optional]
+            filter_extended_fields ([str]): An array of names of Secret Template fields to return.  Only exposed fields can be returned.. [optional]
+            filter_extended_type_id (int): If not null, return only secrets matching the specified extended mapping type as defined on the secret’s template.. [optional]
+            filter_folder_id (int): If not null, returns only secrets within the specified folder.. [optional]
             filter_has_launcher (bool): Whether to only return secrets with or without launchers. If null, returns secrets regardless of whether they have launchers.. [optional]
-            filter_heartbeat_status (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets with a certain heartbeat status.. [optional]
+            filter_heartbeat_status (str): If not null, returns only secrets with a certain heartbeat status.. [optional]
             filter_include_active (bool): Whether to include active secrets in results (when excluded equals true).. [optional]
             filter_include_inactive (bool): Whether to include inactive secrets in results.. [optional]
             filter_include_restricted (bool): Whether to include restricted secrets in results. Restricted secrets are secrets that are DoubleLocked, require approval, or require a comment to view.. [optional]
@@ -7723,19 +7723,19 @@ class SecretsApi(object):
             filter_is_exact_match (bool): Whether to do an exact match of the search text or a partial match. If an exact match, the entire secret name, field value, or list option in a list field must match the search text.. [optional]
             filter_only_rpc_enabled (bool): Whether to only include secrets whose template has Remote Password Changing enabled.. [optional]
             filter_only_shared_with_me (bool): When true only Secrets where you are not the owner and the Secret was shared explicitly with your user id will be returned.. [optional]
-            filter_password_type_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): If not null, returns only secrets matching the specified password types.. [optional]
-            filter_permission_required (bool, date, datetime, dict, float, int, list, str, none_type): Specify whether to filter by List, View, Edit, or Owner permission. Default is List.. [optional]
-            filter_scope (bool, date, datetime, dict, float, int, list, str, none_type): Specify whether to search All, Recent, or Favorites. [optional]
-            filter_search_field (bool, date, datetime, dict, float, int, list, str, none_type): If set, restricts the search to only match secrets where the value of the field specified by name contains the search text.. [optional]
-            filter_search_field_slug (bool, date, datetime, dict, float, int, list, str, none_type): If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField.. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): The text to match in the secret name, field value, or list field contents.. [optional]
-            filter_secret_template_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): If not null or empty, returns only secrets matching the specified templates.. [optional]
-            filter_site_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, returns only secrets within a the specified site.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_password_type_ids ([int]): If not null, returns only secrets matching the specified password types.. [optional]
+            filter_permission_required (str): Specify whether to filter by List, View, Edit, or Owner permission. Default is List.. [optional]
+            filter_scope (str): Specify whether to search All, Recent, or Favorites. [optional]
+            filter_search_field (str): If set, restricts the search to only match secrets where the value of the field specified by name contains the search text.. [optional]
+            filter_search_field_slug (str): If set, restricts the search to only match secrets where the value of the field specified by the slug name contains the search text. This will override SearchField.. [optional]
+            filter_search_text (str): The text to match in the secret name, field value, or list field contents.. [optional]
+            filter_secret_template_ids ([int]): If not null or empty, returns only secrets matching the specified templates.. [optional]
+            filter_site_id (int): If not null, returns only secrets within a the specified site.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7814,10 +7814,10 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7898,10 +7898,10 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_template_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID
+            secret_template_id (int): Secret template ID
 
         Keyword Args:
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Containing folder ID. May be null unless secrets are required to be in folders.. [optional]
+            folder_id (int): Containing folder ID. May be null unless secrets are required to be in folders.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7982,10 +7982,10 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8066,10 +8066,10 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8150,14 +8150,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_email_args (SecretDetailUpdateEmailArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -8239,14 +8239,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_email_args (SecretDetailUpdateEmailArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -8328,14 +8328,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_expiration_args (SecretDetailUpdateExpirationArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -8417,14 +8417,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_general_args (SecretDetailUpdateGeneralArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -8506,14 +8506,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_general_args (SecretDetailUpdateGeneralArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -8595,7 +8595,7 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_id (int): secretId
 
         Keyword Args:
             secret_detail_jumpbox_update_args (SecretDetailJumpboxUpdateArgs): args. [optional]
@@ -8680,13 +8680,13 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
-            slug (bool, date, datetime, dict, float, int, list, str, none_type): Secret field name
+            id (int): Secret ID
+            slug (str): Secret field name
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
             secret_list_field_list_args (SecretListFieldListArgs): Secret options. [optional]
             _return_http_data_only (bool): response data without head status
@@ -8771,14 +8771,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_rpc_script_secrets_args (SecretDetailUpdateRpcScriptSecretsArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -8860,14 +8860,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_rpc_script_secrets_args (SecretDetailUpdateRpcScriptSecretsArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -8949,14 +8949,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret ID
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_update_args (SecretUpdateArgs): Secret update options. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -9117,14 +9117,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_security_general_args (SecretDetailUpdateSecurityGeneralArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -9206,14 +9206,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_security_approval_args (SecretDetailUpdateSecurityApprovalArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -9295,14 +9295,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_security_checkout_args (SecretDetailUpdateSecurityCheckoutArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -9384,14 +9384,14 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
-            secret_path (bool, date, datetime, dict, float, int, list, str, none_type): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
+            secret_path (str): A full path including folder and secret name can be passed as a query string parameter when the secret ID is set to 0.  This will lookup the secret ID by path.. [optional]
             secret_detail_update_security_general_args (SecretDetailUpdateSecurityGeneralArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -9473,12 +9473,12 @@ class SecretsApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_id (int): secretId
 
         Keyword Args:
             auto_check_in (bool): Automatically check in a secret after finding or updating.. [optional]
             auto_checkout (bool): Automatically check out secret before finding or updating.. [optional]
-            auto_comment (bool, date, datetime, dict, float, int, list, str, none_type): Leave a comment when checking in or out.. [optional]
+            auto_comment (str): Leave a comment when checking in or out.. [optional]
             force_check_in (bool): If secret is checked out, then force a check in.. [optional]
             secret_detail_ssh_restricted_command_update_args (SecretDetailSshRestrictedCommandUpdateArgs): args. [optional]
             _return_http_data_only (bool): response data without head status

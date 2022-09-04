@@ -63,10 +63,8 @@ class ConvertTemplateDetailsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,28 +73,25 @@ class ConvertTemplateDetailsModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'destination': (ConvertTemplateDestinationModel,),  # noqa: E501
-            'source': (ConvertTemplateSourceModel,),  # noqa: E501
+            'destination': (ConvertTemplateDestinationModel, none_type,),  # noqa: E501
+            'source': (ConvertTemplateSourceModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

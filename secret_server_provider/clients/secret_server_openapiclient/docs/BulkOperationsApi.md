@@ -48,7 +48,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bulk_operations_api.BulkOperationsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Id of Bulk operation to retrieve.
+    id = "id_example" # str | Id of Bulk operation to retrieve.
 
     # example passing only required values which don't have defaults set
     try:
@@ -64,7 +64,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Id of Bulk operation to retrieve. |
+ **id** | **str**| Id of Bulk operation to retrieve. |
 
 ### Return type
 

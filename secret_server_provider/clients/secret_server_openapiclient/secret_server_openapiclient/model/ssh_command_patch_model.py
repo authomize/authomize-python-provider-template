@@ -63,10 +63,8 @@ class SshCommandPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,31 +73,28 @@ class SshCommandPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'command': (UpdateFieldValueOfString,),  # noqa: E501
-            'name': (UpdateFieldValueOfString,),  # noqa: E501
-            'sort_order': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'ssh_command_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_command_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'command': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'sort_order': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'ssh_command_guid': (str, none_type,),  # noqa: E501
+            'ssh_command_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -154,8 +149,8 @@ class SshCommandPatchModel(ModelNormal):
             command (UpdateFieldValueOfString): [optional]  # noqa: E501
             name (UpdateFieldValueOfString): [optional]  # noqa: E501
             sort_order (UpdateFieldValueOfInt32): [optional]  # noqa: E501
-            ssh_command_guid (bool, date, datetime, dict, float, int, list, str, none_type): SshCommandGuid. [optional]  # noqa: E501
-            ssh_command_id (bool, date, datetime, dict, float, int, list, str, none_type): SshCommandId. [optional]  # noqa: E501
+            ssh_command_guid (str): SshCommandGuid. [optional]  # noqa: E501
+            ssh_command_id (int): SshCommandId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -244,8 +239,8 @@ class SshCommandPatchModel(ModelNormal):
             command (UpdateFieldValueOfString): [optional]  # noqa: E501
             name (UpdateFieldValueOfString): [optional]  # noqa: E501
             sort_order (UpdateFieldValueOfInt32): [optional]  # noqa: E501
-            ssh_command_guid (bool, date, datetime, dict, float, int, list, str, none_type): SshCommandGuid. [optional]  # noqa: E501
-            ssh_command_id (bool, date, datetime, dict, float, int, list, str, none_type): SshCommandId. [optional]  # noqa: E501
+            ssh_command_guid (str): SshCommandGuid. [optional]  # noqa: E501
+            ssh_command_id (int): SshCommandId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

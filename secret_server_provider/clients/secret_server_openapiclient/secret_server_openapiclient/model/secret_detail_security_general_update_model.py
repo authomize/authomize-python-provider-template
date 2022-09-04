@@ -63,10 +63,8 @@ class SecretDetailSecurityGeneralUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,33 +73,30 @@ class SecretDetailSecurityGeneralUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'double_lock_id': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable_double_lock': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'hide_launcher_password': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'proxy_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'requires_comment': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'session_recording_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'web_launcher_requires_incognito_mode': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'double_lock_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable_double_lock': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'hide_launcher_password': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'proxy_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'requires_comment': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'session_recording_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'web_launcher_requires_incognito_mode': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

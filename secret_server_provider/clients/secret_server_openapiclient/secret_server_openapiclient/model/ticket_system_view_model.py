@@ -75,10 +75,8 @@ class TicketSystemViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -87,54 +85,51 @@ class TicketSystemViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'add_comments_to_ticket': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'bmc_change_management_comment_work_type': (ViewFieldValueOfOptionalBmcChangeManagementCommentWorkType,),  # noqa: E501
-            'bmc_incident_management_comment_work_type': (ViewFieldValueOfOptionalBmcIncidentManagementCommentWorkType,),  # noqa: E501
-            'bmc_remedy_authentication': (ViewFieldValueOfString,),  # noqa: E501
-            'bmc_remedy_url_endpoint': (ViewFieldValueOfString,),  # noqa: E501
-            'description': (ViewFieldValueOfString,),  # noqa: E501
-            'display_message': (ViewFieldValueOfString,),  # noqa: E501
-            'force_require_ticket_number': (ViewFieldValueOfForceRequireTicketSystemOptions,),  # noqa: E501
-            'is_default': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'name': (ViewFieldValueOfString,),  # noqa: E501
-            'organization_id': (ViewFieldValueOfInt32,),  # noqa: E501
-            'power_shell_add_comment_script_arguments': (ViewFieldValueOfString,),  # noqa: E501
-            'power_shell_add_comment_script_id': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'power_shell_add_ticket_comment_script_arguments': (ViewFieldValueOfString,),  # noqa: E501
-            'power_shell_add_ticket_comment_script_id': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'power_shell_run_as_account_secret_id': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'power_shell_ticket_status_script_arguments': (ViewFieldValueOfString,),  # noqa: E501
-            'power_shell_ticket_status_script_id': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'service_now_allowed_statuses': (ViewFieldValueOfString,),  # noqa: E501
-            'service_now_domain_name': (ViewFieldValueOfString,),  # noqa: E501
-            'site_id': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'system_credential_secret_id': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'ticket_number_error_message': (ViewFieldValueOfString,),  # noqa: E501
-            'ticket_number_validation': (ViewFieldValueOfString,),  # noqa: E501
-            'ticket_system_id': (ViewFieldValueOfInt32,),  # noqa: E501
-            'ticket_system_type': (ViewFieldValueOfTicketSystemTypes,),  # noqa: E501
-            'view_ticket_url': (ViewFieldValueOfString,),  # noqa: E501
+            'active': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'add_comments_to_ticket': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'bmc_change_management_comment_work_type': (ViewFieldValueOfOptionalBmcChangeManagementCommentWorkType, none_type,),  # noqa: E501
+            'bmc_incident_management_comment_work_type': (ViewFieldValueOfOptionalBmcIncidentManagementCommentWorkType, none_type,),  # noqa: E501
+            'bmc_remedy_authentication': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'bmc_remedy_url_endpoint': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'description': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'display_message': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'force_require_ticket_number': (ViewFieldValueOfForceRequireTicketSystemOptions, none_type,),  # noqa: E501
+            'is_default': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'name': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'organization_id': (ViewFieldValueOfInt32, none_type,),  # noqa: E501
+            'power_shell_add_comment_script_arguments': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'power_shell_add_comment_script_id': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'power_shell_add_ticket_comment_script_arguments': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'power_shell_add_ticket_comment_script_id': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'power_shell_run_as_account_secret_id': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'power_shell_ticket_status_script_arguments': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'power_shell_ticket_status_script_id': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'service_now_allowed_statuses': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'service_now_domain_name': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'site_id': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'system_credential_secret_id': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'ticket_number_error_message': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'ticket_number_validation': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'ticket_system_id': (ViewFieldValueOfInt32, none_type,),  # noqa: E501
+            'ticket_system_type': (ViewFieldValueOfTicketSystemTypes, none_type,),  # noqa: E501
+            'view_ticket_url': (ViewFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

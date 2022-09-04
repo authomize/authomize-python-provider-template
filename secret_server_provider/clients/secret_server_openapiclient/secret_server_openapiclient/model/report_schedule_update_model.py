@@ -71,10 +71,8 @@ class ReportScheduleUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,36 +81,33 @@ class ReportScheduleUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'custom_parameter_value': (UpdateFieldValueOfString,),  # noqa: E501
-            'end_date_parameter_specific_date_value': (UpdateFieldValueOfOptionalDateTime,),  # noqa: E501
-            'end_date_parameter_value': (UpdateFieldValueOfOptionalReportScheduleDateParameterType,),  # noqa: E501
-            'folder_parameter_value': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'format': (UpdateFieldValueOfReportFormat,),  # noqa: E501
-            'group_parameter_value': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'schedule': (ScheduleUpdateModel,),  # noqa: E501
-            'start_date_parameter_specific_date_value': (UpdateFieldValueOfOptionalDateTime,),  # noqa: E501
-            'start_date_parameter_value': (UpdateFieldValueOfOptionalReportScheduleDateParameterType,),  # noqa: E501
-            'user_parameter_value': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
+            'custom_parameter_value': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'end_date_parameter_specific_date_value': (UpdateFieldValueOfOptionalDateTime, none_type,),  # noqa: E501
+            'end_date_parameter_value': (UpdateFieldValueOfOptionalReportScheduleDateParameterType, none_type,),  # noqa: E501
+            'folder_parameter_value': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'format': (UpdateFieldValueOfReportFormat, none_type,),  # noqa: E501
+            'group_parameter_value': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'schedule': (ScheduleUpdateModel, none_type,),  # noqa: E501
+            'start_date_parameter_specific_date_value': (UpdateFieldValueOfOptionalDateTime, none_type,),  # noqa: E501
+            'start_date_parameter_value': (UpdateFieldValueOfOptionalReportScheduleDateParameterType, none_type,),  # noqa: E501
+            'user_parameter_value': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

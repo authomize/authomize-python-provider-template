@@ -57,10 +57,8 @@ class ConvertSecretsSecretTypeModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class ConvertSecretsSecretTypeModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'destination_secret_fields_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'destination_secret_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'source_secret_fields_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'source_secret_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'destination_secret_fields_ids': ([int], none_type,),  # noqa: E501
+            'destination_secret_type_id': (int, none_type,),  # noqa: E501
+            'secret_ids': ([int], none_type,),  # noqa: E501
+            'source_secret_fields_ids': ([int], none_type,),  # noqa: E501
+            'source_secret_type_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class ConvertSecretsSecretTypeModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            destination_secret_fields_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Destination Type Secret Field Ids to map to Source Field Ids. Nulls indicate the corresponding Source Fields should be removed.. [optional]  # noqa: E501
-            destination_secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Id to convert to.. [optional]  # noqa: E501
-            secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Ids of Secrets to convert to supplied Secret Type.. [optional]  # noqa: E501
-            source_secret_fields_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Secret Field Ids from the source type to map to the destination fields.. [optional]  # noqa: E501
-            source_secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Id to convert from.. [optional]  # noqa: E501
+            destination_secret_fields_ids ([int]): Destination Type Secret Field Ids to map to Source Field Ids. Nulls indicate the corresponding Source Fields should be removed.. [optional]  # noqa: E501
+            destination_secret_type_id (int): Secret Type Id to convert to.. [optional]  # noqa: E501
+            secret_ids ([int]): Ids of Secrets to convert to supplied Secret Type.. [optional]  # noqa: E501
+            source_secret_fields_ids ([int]): Secret Field Ids from the source type to map to the destination fields.. [optional]  # noqa: E501
+            source_secret_type_id (int): Secret Type Id to convert from.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class ConvertSecretsSecretTypeModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            destination_secret_fields_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Destination Type Secret Field Ids to map to Source Field Ids. Nulls indicate the corresponding Source Fields should be removed.. [optional]  # noqa: E501
-            destination_secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Id to convert to.. [optional]  # noqa: E501
-            secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Ids of Secrets to convert to supplied Secret Type.. [optional]  # noqa: E501
-            source_secret_fields_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Secret Field Ids from the source type to map to the destination fields.. [optional]  # noqa: E501
-            source_secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Type Id to convert from.. [optional]  # noqa: E501
+            destination_secret_fields_ids ([int]): Destination Type Secret Field Ids to map to Source Field Ids. Nulls indicate the corresponding Source Fields should be removed.. [optional]  # noqa: E501
+            destination_secret_type_id (int): Secret Type Id to convert to.. [optional]  # noqa: E501
+            secret_ids ([int]): Ids of Secrets to convert to supplied Secret Type.. [optional]  # noqa: E501
+            source_secret_fields_ids ([int]): Secret Field Ids from the source type to map to the destination fields.. [optional]  # noqa: E501
+            source_secret_type_id (int): Secret Type Id to convert from.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

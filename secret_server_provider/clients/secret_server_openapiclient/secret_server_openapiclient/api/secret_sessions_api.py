@@ -75,7 +75,7 @@ class SecretSessionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -126,7 +126,7 @@ class SecretSessionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -177,7 +177,7 @@ class SecretSessionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -228,7 +228,7 @@ class SecretSessionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -285,19 +285,19 @@ class SecretSessionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -366,19 +366,19 @@ class SecretSessionsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -463,15 +463,15 @@ class SecretSessionsApi(object):
                     'filter_active':
                         (bool,),
                     'filter_date_range':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_end_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'filter_end_time':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_folder_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_group_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_include_non_secret_server_sessions':
                         (bool,),
                     'filter_include_only_launched_successfully':
@@ -481,31 +481,31 @@ class SecretSessionsApi(object):
                     'filter_include_sub_folders':
                         (bool,),
                     'filter_launcher_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_types':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([str],),
                     'filter_secret_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_site_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_start_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'filter_start_time':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_user_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_active': 'filter.active',
@@ -588,7 +588,7 @@ class SecretSessionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID
+            id (str): Recorded session ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -671,7 +671,7 @@ class SecretSessionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID
+            id (str): Recorded session ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -754,7 +754,7 @@ class SecretSessionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID
+            id (str): Recorded session ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -837,7 +837,7 @@ class SecretSessionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID
+            id (str): Recorded session ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -920,15 +920,15 @@ class SecretSessionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID
+            id (str): Recorded session ID
 
         Keyword Args:
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_text (str): Search text. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1009,15 +1009,15 @@ class SecretSessionsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID
+            id (str): Recorded session ID
 
         Keyword Args:
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_text (str): Search text. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1099,28 +1099,28 @@ class SecretSessionsApi(object):
 
         Keyword Args:
             filter_active (bool): Filter by active or inactive status. [optional]
-            filter_date_range (bool, date, datetime, dict, float, int, list, str, none_type): Return sessions within a certain number of days. [optional]
-            filter_end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]
-            filter_end_time (bool, date, datetime, dict, float, int, list, str, none_type): EndTime. [optional]
-            filter_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter by folder. [optional]
-            filter_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Return sessions for specific groups. [optional]
+            filter_date_range (str): Return sessions within a certain number of days. [optional]
+            filter_end_date (datetime): EndDate. [optional]
+            filter_end_time (str): EndTime. [optional]
+            filter_folder_id (int): Filter by folder. [optional]
+            filter_group_ids ([int]): Return sessions for specific groups. [optional]
             filter_include_non_secret_server_sessions (bool): IncludeNonSecretServerSessions. [optional]
             filter_include_only_launched_successfully (bool): Return only sessions that launched successfully. [optional]
             filter_include_restricted (bool): Whether to include restricted secret sessions. [optional]
             filter_include_sub_folders (bool): Whether to include subfolders in a folder search. [optional]
-            filter_launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Filter by launcher type. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            filter_search_types ([bool, date, datetime, dict, float, int, list, str, none_type]): Specifies the sources of information you want to search across, can be many of (SecretItems, Username, Hostname, Domain, RdpKeystroke, RdpApplication, ProxyClient). [optional]
-            filter_secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Return sessions for specific secrets. [optional]
-            filter_site_id (bool, date, datetime, dict, float, int, list, str, none_type): SiteId. [optional]
-            filter_start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]
-            filter_start_time (bool, date, datetime, dict, float, int, list, str, none_type): StartTime. [optional]
-            filter_user_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Return sessions for specific users. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_launcher_type_id (int): Filter by launcher type. [optional]
+            filter_search_text (str): Search text. [optional]
+            filter_search_types ([str]): Specifies the sources of information you want to search across, can be many of (SecretItems, Username, Hostname, Domain, RdpKeystroke, RdpApplication, ProxyClient). [optional]
+            filter_secret_ids ([int]): Return sessions for specific secrets. [optional]
+            filter_site_id (int): SiteId. [optional]
+            filter_start_date (datetime): StartDate. [optional]
+            filter_start_time (str): StartTime. [optional]
+            filter_user_ids ([int]): Return sessions for specific users. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

@@ -57,10 +57,8 @@ class ServerNodeConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class ServerNodeConfigurationModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'enable_background_worker': (bool,),  # noqa: E501
-            'enable_engine_worker': (bool,),  # noqa: E501
-            'enable_session_recording_worker': (bool,),  # noqa: E501
-            'in_cluster': (bool,),  # noqa: E501
-            'log_level': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'readonly_mode_enabled': (bool,),  # noqa: E501
+            'enable_background_worker': (bool, none_type,),  # noqa: E501
+            'enable_engine_worker': (bool, none_type,),  # noqa: E501
+            'enable_session_recording_worker': (bool, none_type,),  # noqa: E501
+            'in_cluster': (bool, none_type,),  # noqa: E501
+            'log_level': (str, none_type,),  # noqa: E501
+            'readonly_mode_enabled': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,7 +144,7 @@ class ServerNodeConfigurationModel(ModelNormal):
             enable_engine_worker (bool): Engine Worker Role Enabled. [optional]  # noqa: E501
             enable_session_recording_worker (bool): Session Recording Worker Role Enabled. [optional]  # noqa: E501
             in_cluster (bool): Whether or not the node is in the cluster. [optional]  # noqa: E501
-            log_level (bool, date, datetime, dict, float, int, list, str, none_type): Log Level. [optional]  # noqa: E501
+            log_level (str): Log Level. [optional]  # noqa: E501
             readonly_mode_enabled (bool): Readonly Mode Enabled. [optional]  # noqa: E501
         """
 
@@ -240,7 +235,7 @@ class ServerNodeConfigurationModel(ModelNormal):
             enable_engine_worker (bool): Engine Worker Role Enabled. [optional]  # noqa: E501
             enable_session_recording_worker (bool): Session Recording Worker Role Enabled. [optional]  # noqa: E501
             in_cluster (bool): Whether or not the node is in the cluster. [optional]  # noqa: E501
-            log_level (bool, date, datetime, dict, float, int, list, str, none_type): Log Level. [optional]  # noqa: E501
+            log_level (str): Log Level. [optional]  # noqa: E501
             readonly_mode_enabled (bool): Readonly Mode Enabled. [optional]  # noqa: E501
         """
 

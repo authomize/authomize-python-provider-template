@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **fields** | [**[ViewTemplateFieldOfString]**](ViewTemplateFieldOfString.md) | Fields | [optional] 
 **folder** | [**ViewFieldValueOfOptionalInt32**](ViewFieldValueOfOptionalInt32.md) |  | [optional] 
 **heartbeat_enabled** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 
-**id** | **bool, date, datetime, dict, float, int, list, str, none_type** | Id | [optional] 
+**id** | **int** | Id | [optional] 
 **is_favorite** | **bool** | IsFavorite | [optional] 
 **is_out_of_sync** | [**ViewFieldValueOfBoolean**](ViewFieldValueOfBoolean.md) |  | [optional] 
 **is_totp_enabled** | **bool** | IsTotpEnabled | [optional] 
@@ -24,10 +24,10 @@ Name | Type | Description | Notes
 **out_of_sync_reason** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
 **secret_policy** | [**ViewFieldValueOfOptionalInt32**](ViewFieldValueOfOptionalInt32.md) |  | [optional] 
 **site** | [**ViewFieldValueOfOptionalInt32**](ViewFieldValueOfOptionalInt32.md) |  | [optional] 
-**slug_private_key** | **bool, date, datetime, dict, float, int, list, str, none_type** | SlugPrivateKey | [optional] 
-**slug_public_key** | **bool, date, datetime, dict, float, int, list, str, none_type** | SlugPublicKey | [optional] 
+**slug_private_key** | **str** | SlugPrivateKey | [optional] 
+**slug_public_key** | **str** | SlugPublicKey | [optional] 
 **template** | [**ViewFieldValueOfOptionalInt32**](ViewFieldValueOfOptionalInt32.md) |  | [optional] 
-**totp_password_slug** | **bool, date, datetime, dict, float, int, list, str, none_type** | TotpPasswordSlug | [optional] 
+**totp_password_slug** | **str** | TotpPasswordSlug | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

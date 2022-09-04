@@ -57,10 +57,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_erase_requests_api.SecretEraseRequestsApi(api_client)
     secret_erase_request_create_args = SecretEraseRequestCreateArgs(
-        erase_after=None,
-        request_comment=None,
+        erase_after=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        request_comment="request_comment_example",
         secret_ids=[
-            None,
+            1,
         ],
     ) # SecretEraseRequestCreateArgs | args (optional)
 
@@ -147,12 +147,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_erase_requests_api.SecretEraseRequestsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Erase Request ID
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | Secret Erase Request ID
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -177,12 +177,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Erase Request ID |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| Secret Erase Request ID |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -250,7 +250,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_erase_requests_api.SecretEraseRequestsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Erase Request ID
+    id = 1 # int | Secret Erase Request ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -266,7 +266,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Erase Request ID |
+ **id** | **int**| Secret Erase Request ID |
 
 ### Return type
 
@@ -335,12 +335,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_erase_requests_api.SecretEraseRequestsApi(api_client)
     filter_erased = True # bool | Erased (optional)
-    filter_secret_erase_request_id = None # bool, date, datetime, dict, float, int, list, str, none_type | SecretEraseRequestId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_secret_erase_request_id = 1 # int | SecretEraseRequestId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -358,12 +358,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_erased** | **bool**| Erased | [optional]
- **filter_secret_erase_request_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SecretEraseRequestId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_secret_erase_request_id** | **int**| SecretEraseRequestId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -432,12 +432,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_erase_requests_api.SecretEraseRequestsApi(api_client)
     filter_is_my_request = True # bool | IsMyRequest (optional)
-    filter_status = None # bool, date, datetime, dict, float, int, list, str, none_type | Status (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_status = "filter.status_example" # str | Status (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -455,12 +455,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_is_my_request** | **bool**| IsMyRequest | [optional]
- **filter_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| Status | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_status** | **str**| Status | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -608,13 +608,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_erase_requests_api.SecretEraseRequestsApi(api_client)
     filter_is_my_request = True # bool | IsMyRequest (optional)
-    filter_secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | SecretId (optional)
-    filter_status = None # bool, date, datetime, dict, float, int, list, str, none_type | Status (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_secret_id = 1 # int | SecretId (optional)
+    filter_status = "filter.status_example" # str | Status (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -632,13 +632,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_is_my_request** | **bool**| IsMyRequest | [optional]
- **filter_secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SecretId | [optional]
- **filter_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| Status | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_secret_id** | **int**| SecretId | [optional]
+ **filter_status** | **str**| Status | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -709,26 +709,26 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secret_erase_requests_api.SecretEraseRequestsApi(api_client)
     secret_erase_request_update_args = SecretEraseRequestUpdateArgs(
         erase_after=OptionalDateTimeOffset(
-            date=None,
-            date_time=None,
-            day=None,
+            date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            day=1,
             day_of_week=DayOfWeek("{}"),
-            day_of_year=None,
-            hour=None,
-            local_date_time=None,
-            millisecond=None,
-            minute=None,
-            month=None,
-            offset=None,
-            second=None,
-            ticks=None,
-            time_of_day=None,
-            utc_date_time=None,
-            utc_ticks=None,
-            year=None,
+            day_of_year=1,
+            hour=1,
+            local_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            millisecond=1,
+            minute=1,
+            month=1,
+            offset="offset_example",
+            second=1,
+            ticks=1,
+            time_of_day="time_of_day_example",
+            utc_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            utc_ticks=1,
+            year=1,
         ),
-        response_comment=None,
-        secret_erase_request_id=None,
+        response_comment="response_comment_example",
+        secret_erase_request_id=1,
         status=SecretEraseRequestModelStatus("Pending"),
     ) # SecretEraseRequestUpdateArgs | args (optional)
 

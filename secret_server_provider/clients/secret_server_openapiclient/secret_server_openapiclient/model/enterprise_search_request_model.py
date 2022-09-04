@@ -57,10 +57,8 @@ class EnterpriseSearchRequestModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,26 +66,23 @@ class EnterpriseSearchRequestModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'request_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'request_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -135,7 +130,7 @@ class EnterpriseSearchRequestModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            request_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Request. [optional]  # noqa: E501
+            request_id (int): Id of Request. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -221,7 +216,7 @@ class EnterpriseSearchRequestModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            request_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Request. [optional]  # noqa: E501
+            request_id (int): Id of Request. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

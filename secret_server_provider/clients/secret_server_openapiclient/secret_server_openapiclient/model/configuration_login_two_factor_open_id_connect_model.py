@@ -57,10 +57,8 @@ class ConfigurationLoginTwoFactorOpenIdConnectModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class ConfigurationLoginTwoFactorOpenIdConnectModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'add_new_users_to_thycotic_one': (bool,),  # noqa: E501
-            'client_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'client_secret': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'client_secret_exists': (bool,),  # noqa: E501
-            'enable': (bool,),  # noqa: E501
-            'logout_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_thycotic_one_auth_as_default': (bool,),  # noqa: E501
+            'add_new_users_to_thycotic_one': (bool, none_type,),  # noqa: E501
+            'client_id': (str, none_type,),  # noqa: E501
+            'client_secret': (str, none_type,),  # noqa: E501
+            'client_secret_exists': (bool, none_type,),  # noqa: E501
+            'enable': (bool, none_type,),  # noqa: E501
+            'logout_url': (str, none_type,),  # noqa: E501
+            'server_url': (str, none_type,),  # noqa: E501
+            'use_thycotic_one_auth_as_default': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -150,12 +145,12 @@ class ConfigurationLoginTwoFactorOpenIdConnectModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             add_new_users_to_thycotic_one (bool): When activated, new Secret Server users will be added automatically to Thycotic One. [optional]  # noqa: E501
-            client_id (bool, date, datetime, dict, float, int, list, str, none_type): Client Id. [optional]  # noqa: E501
-            client_secret (bool, date, datetime, dict, float, int, list, str, none_type): Client Secret, will only be populated for export, otherwise null. [optional]  # noqa: E501
+            client_id (str): Client Id. [optional]  # noqa: E501
+            client_secret (str): Client Secret, will only be populated for export, otherwise null. [optional]  # noqa: E501
             client_secret_exists (bool): Indicates if a Client Secret exists, since the Client Secret will only be populated for export. [optional]  # noqa: E501
             enable (bool): Enable OpenID Connect Integration. [optional]  # noqa: E501
-            logout_url (bool, date, datetime, dict, float, int, list, str, none_type): The URL users must visit to log out of their OpenID Connect account. (Optional). [optional]  # noqa: E501
-            server_url (bool, date, datetime, dict, float, int, list, str, none_type): OpenID Connect Server URL. [optional]  # noqa: E501
+            logout_url (str): The URL users must visit to log out of their OpenID Connect account. (Optional). [optional]  # noqa: E501
+            server_url (str): OpenID Connect Server URL. [optional]  # noqa: E501
             use_thycotic_one_auth_as_default (bool): When activated, passwords will be checked against Thycotic One instead of Secret Server. This affects the REST API, DoubleLock, and export functionality. [optional]  # noqa: E501
         """
 
@@ -243,12 +238,12 @@ class ConfigurationLoginTwoFactorOpenIdConnectModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             add_new_users_to_thycotic_one (bool): When activated, new Secret Server users will be added automatically to Thycotic One. [optional]  # noqa: E501
-            client_id (bool, date, datetime, dict, float, int, list, str, none_type): Client Id. [optional]  # noqa: E501
-            client_secret (bool, date, datetime, dict, float, int, list, str, none_type): Client Secret, will only be populated for export, otherwise null. [optional]  # noqa: E501
+            client_id (str): Client Id. [optional]  # noqa: E501
+            client_secret (str): Client Secret, will only be populated for export, otherwise null. [optional]  # noqa: E501
             client_secret_exists (bool): Indicates if a Client Secret exists, since the Client Secret will only be populated for export. [optional]  # noqa: E501
             enable (bool): Enable OpenID Connect Integration. [optional]  # noqa: E501
-            logout_url (bool, date, datetime, dict, float, int, list, str, none_type): The URL users must visit to log out of their OpenID Connect account. (Optional). [optional]  # noqa: E501
-            server_url (bool, date, datetime, dict, float, int, list, str, none_type): OpenID Connect Server URL. [optional]  # noqa: E501
+            logout_url (str): The URL users must visit to log out of their OpenID Connect account. (Optional). [optional]  # noqa: E501
+            server_url (str): OpenID Connect Server URL. [optional]  # noqa: E501
             use_thycotic_one_auth_as_default (bool): When activated, passwords will be checked against Thycotic One instead of Secret Server. This affects the REST API, DoubleLock, and export functionality. [optional]  # noqa: E501
         """
 

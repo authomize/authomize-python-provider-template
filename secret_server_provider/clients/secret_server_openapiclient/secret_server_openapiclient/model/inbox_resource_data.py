@@ -61,10 +61,8 @@ class InboxResourceData(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,30 +71,27 @@ class InboxResourceData(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'image_data': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'image_type': (InboxResourceType,),  # noqa: E501
-            'inbox_resource_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'image_data': (file_type, none_type,),  # noqa: E501
+            'image_type': (InboxResourceType, none_type,),  # noqa: E501
+            'inbox_resource_id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,10 +142,10 @@ class InboxResourceData(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            image_data (bool, date, datetime, dict, float, int, list, str, none_type): Resource Image Data as Base64 string. [optional]  # noqa: E501
+            image_data (file_type): Resource Image Data as Base64 string. [optional]  # noqa: E501
             image_type (InboxResourceType): [optional]  # noqa: E501
-            inbox_resource_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Resource Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Resource Name. [optional]  # noqa: E501
+            inbox_resource_id (int): Inbox Resource Id. [optional]  # noqa: E501
+            name (str): Inbox Resource Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,10 +231,10 @@ class InboxResourceData(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            image_data (bool, date, datetime, dict, float, int, list, str, none_type): Resource Image Data as Base64 string. [optional]  # noqa: E501
+            image_data (file_type): Resource Image Data as Base64 string. [optional]  # noqa: E501
             image_type (InboxResourceType): [optional]  # noqa: E501
-            inbox_resource_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Resource Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Resource Name. [optional]  # noqa: E501
+            inbox_resource_id (int): Inbox Resource Id. [optional]  # noqa: E501
+            name (str): Inbox Resource Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

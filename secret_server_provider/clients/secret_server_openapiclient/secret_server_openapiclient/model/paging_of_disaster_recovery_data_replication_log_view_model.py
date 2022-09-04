@@ -65,10 +65,8 @@ class PagingOfDisasterRecoveryDataReplicationLogViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,40 +75,37 @@ class PagingOfDisasterRecoveryDataReplicationLogViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'batch_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'current_page': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_next': (bool,),  # noqa: E501
-            'has_prev': (bool,),  # noqa: E501
-            'next_skip': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'page_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'prev_skip': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'records': ([DisasterRecoveryDataReplicationLogViewModel],),  # noqa: E501
-            'severity': (Severity,),  # noqa: E501
-            'skip': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_by': ([Sort],),  # noqa: E501
-            'success': (bool,),  # noqa: E501
-            'take': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'total': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'batch_count': (int, none_type,),  # noqa: E501
+            'current_page': (int, none_type,),  # noqa: E501
+            'has_next': (bool, none_type,),  # noqa: E501
+            'has_prev': (bool, none_type,),  # noqa: E501
+            'next_skip': (int, none_type,),  # noqa: E501
+            'page_count': (int, none_type,),  # noqa: E501
+            'prev_skip': (int, none_type,),  # noqa: E501
+            'records': ([DisasterRecoveryDataReplicationLogViewModel], none_type,),  # noqa: E501
+            'severity': (Severity, none_type,),  # noqa: E501
+            'skip': (int, none_type,),  # noqa: E501
+            'sort_by': ([Sort], none_type,),  # noqa: E501
+            'success': (bool, none_type,),  # noqa: E501
+            'take': (int, none_type,),  # noqa: E501
+            'total': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -171,20 +166,20 @@ class PagingOfDisasterRecoveryDataReplicationLogViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            batch_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of result batches available with current query options. [optional]  # noqa: E501
-            current_page (bool, date, datetime, dict, float, int, list, str, none_type): Index of current result page. [optional]  # noqa: E501
+            batch_count (int): Number of result batches available with current query options. [optional]  # noqa: E501
+            current_page (int): Index of current result page. [optional]  # noqa: E501
             has_next (bool): Whether there are any results in additional pages. [optional]  # noqa: E501
             has_prev (bool): Whether there are any results in previous pages. [optional]  # noqa: E501
-            next_skip (bool, date, datetime, dict, float, int, list, str, none_type): Correct value of 'skip' for the next page of results. [optional]  # noqa: E501
-            page_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of result pages available with current query options. [optional]  # noqa: E501
-            prev_skip (bool, date, datetime, dict, float, int, list, str, none_type): Correct value of 'skip' for the previous page of results. [optional]  # noqa: E501
+            next_skip (int): Correct value of 'skip' for the next page of results. [optional]  # noqa: E501
+            page_count (int): Number of result pages available with current query options. [optional]  # noqa: E501
+            prev_skip (int): Correct value of 'skip' for the previous page of results. [optional]  # noqa: E501
             records ([DisasterRecoveryDataReplicationLogViewModel]): Query results. [optional]  # noqa: E501
             severity (Severity): [optional]  # noqa: E501
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]  # noqa: E501
+            skip (int): Number of records to skip before taking results. [optional]  # noqa: E501
             sort_by ([Sort]): List of sort properties. [optional]  # noqa: E501
             success (bool): Whether the query executed successfully. [optional]  # noqa: E501
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]  # noqa: E501
-            total (bool, date, datetime, dict, float, int, list, str, none_type): Total number of results available. [optional]  # noqa: E501
+            take (int): Maximum number of records to include in results. [optional]  # noqa: E501
+            total (int): Total number of results available. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -270,20 +265,20 @@ class PagingOfDisasterRecoveryDataReplicationLogViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            batch_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of result batches available with current query options. [optional]  # noqa: E501
-            current_page (bool, date, datetime, dict, float, int, list, str, none_type): Index of current result page. [optional]  # noqa: E501
+            batch_count (int): Number of result batches available with current query options. [optional]  # noqa: E501
+            current_page (int): Index of current result page. [optional]  # noqa: E501
             has_next (bool): Whether there are any results in additional pages. [optional]  # noqa: E501
             has_prev (bool): Whether there are any results in previous pages. [optional]  # noqa: E501
-            next_skip (bool, date, datetime, dict, float, int, list, str, none_type): Correct value of 'skip' for the next page of results. [optional]  # noqa: E501
-            page_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of result pages available with current query options. [optional]  # noqa: E501
-            prev_skip (bool, date, datetime, dict, float, int, list, str, none_type): Correct value of 'skip' for the previous page of results. [optional]  # noqa: E501
+            next_skip (int): Correct value of 'skip' for the next page of results. [optional]  # noqa: E501
+            page_count (int): Number of result pages available with current query options. [optional]  # noqa: E501
+            prev_skip (int): Correct value of 'skip' for the previous page of results. [optional]  # noqa: E501
             records ([DisasterRecoveryDataReplicationLogViewModel]): Query results. [optional]  # noqa: E501
             severity (Severity): [optional]  # noqa: E501
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]  # noqa: E501
+            skip (int): Number of records to skip before taking results. [optional]  # noqa: E501
             sort_by ([Sort]): List of sort properties. [optional]  # noqa: E501
             success (bool): Whether the query executed successfully. [optional]  # noqa: E501
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]  # noqa: E501
-            total (bool, date, datetime, dict, float, int, list, str, none_type): Total number of results available. [optional]  # noqa: E501
+            take (int): Maximum number of records to include in results. [optional]  # noqa: E501
+            total (int): Total number of results available. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -63,10 +63,8 @@ class ContentDispositionHeaderValue(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,35 +73,32 @@ class ContentDispositionHeaderValue(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'creation_date': (OptionalDateTimeOffset,),  # noqa: E501
-            'disposition_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_name_star': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'modification_date': (OptionalDateTimeOffset,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'parameters': ([NameValueHeaderValue],),  # noqa: E501
-            'read_date': (OptionalDateTimeOffset,),  # noqa: E501
-            'size': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'creation_date': (OptionalDateTimeOffset, none_type,),  # noqa: E501
+            'disposition_type': (str, none_type,),  # noqa: E501
+            'file_name': (str, none_type,),  # noqa: E501
+            'file_name_star': (str, none_type,),  # noqa: E501
+            'modification_date': (OptionalDateTimeOffset, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'parameters': ([NameValueHeaderValue], none_type,),  # noqa: E501
+            'read_date': (OptionalDateTimeOffset, none_type,),  # noqa: E501
+            'size': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -160,14 +155,14 @@ class ContentDispositionHeaderValue(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             creation_date (OptionalDateTimeOffset): [optional]  # noqa: E501
-            disposition_type (bool, date, datetime, dict, float, int, list, str, none_type): DispositionType. [optional]  # noqa: E501
-            file_name (bool, date, datetime, dict, float, int, list, str, none_type): FileName. [optional]  # noqa: E501
-            file_name_star (bool, date, datetime, dict, float, int, list, str, none_type): FileNameStar. [optional]  # noqa: E501
+            disposition_type (str): DispositionType. [optional]  # noqa: E501
+            file_name (str): FileName. [optional]  # noqa: E501
+            file_name_star (str): FileNameStar. [optional]  # noqa: E501
             modification_date (OptionalDateTimeOffset): [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
             parameters ([NameValueHeaderValue]): Parameters. [optional]  # noqa: E501
             read_date (OptionalDateTimeOffset): [optional]  # noqa: E501
-            size (bool, date, datetime, dict, float, int, list, str, none_type): Size. [optional]  # noqa: E501
+            size (int): Size. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -254,14 +249,14 @@ class ContentDispositionHeaderValue(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             creation_date (OptionalDateTimeOffset): [optional]  # noqa: E501
-            disposition_type (bool, date, datetime, dict, float, int, list, str, none_type): DispositionType. [optional]  # noqa: E501
-            file_name (bool, date, datetime, dict, float, int, list, str, none_type): FileName. [optional]  # noqa: E501
-            file_name_star (bool, date, datetime, dict, float, int, list, str, none_type): FileNameStar. [optional]  # noqa: E501
+            disposition_type (str): DispositionType. [optional]  # noqa: E501
+            file_name (str): FileName. [optional]  # noqa: E501
+            file_name_star (str): FileNameStar. [optional]  # noqa: E501
             modification_date (OptionalDateTimeOffset): [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
             parameters ([NameValueHeaderValue]): Parameters. [optional]  # noqa: E501
             read_date (OptionalDateTimeOffset): [optional]  # noqa: E501
-            size (bool, date, datetime, dict, float, int, list, str, none_type): Size. [optional]  # noqa: E501
+            size (int): Size. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

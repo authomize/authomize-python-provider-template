@@ -63,10 +63,8 @@ class DiscoverySourceSettingsUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,29 +73,26 @@ class DiscoverySourceSettingsUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'friendly_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'fully_qualified_domain_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'use_secure_ldap': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'friendly_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'fully_qualified_domain_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'use_secure_ldap': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

@@ -46,7 +46,7 @@ class WorkflowStepTemplatesApi(object):
         self.api_client = api_client
         self.workflow_step_templates_service_create_step_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (int,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -77,7 +77,7 @@ class WorkflowStepTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'workflow_step_template_create_args':
                         (WorkflowStepTemplateCreateArgs,),
                 },
@@ -135,9 +135,9 @@ class WorkflowStepTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'step_num':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -195,17 +195,17 @@ class WorkflowStepTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -311,7 +311,7 @@ class WorkflowStepTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'workflow_step_template_update_args':
                         (WorkflowStepTemplateUpdateArgs,),
                 },
@@ -370,9 +370,9 @@ class WorkflowStepTemplatesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'step_num':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'workflow_step_template_update_model':
                         (WorkflowStepTemplateUpdateModel,),
                 },
@@ -414,7 +414,7 @@ class WorkflowStepTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Workflow Template Id
+            id (int): Workflow Template Id
 
         Keyword Args:
             workflow_step_template_create_args (WorkflowStepTemplateCreateArgs): Workflow Template Step creation options. [optional]
@@ -450,7 +450,7 @@ class WorkflowStepTemplatesApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            int
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -499,8 +499,8 @@ class WorkflowStepTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Workflow Template Id
-            step_num (bool, date, datetime, dict, float, int, list, str, none_type): Workflow Step Number
+            id (int): Workflow Template Id
+            step_num (int): Workflow Step Number
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -585,14 +585,14 @@ class WorkflowStepTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Workflow Template ID
+            id (int): Workflow Template ID
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -751,7 +751,7 @@ class WorkflowStepTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Workflow Template ID
+            id (int): Workflow Template ID
 
         Keyword Args:
             workflow_step_template_update_args (WorkflowStepTemplateUpdateArgs): Workflow Template Steps creation options. [optional]
@@ -836,8 +836,8 @@ class WorkflowStepTemplatesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Workflow Template ID
-            step_num (bool, date, datetime, dict, float, int, list, str, none_type): Workflow Step Number
+            id (int): Workflow Template ID
+            step_num (int): Workflow Step Number
 
         Keyword Args:
             workflow_step_template_update_model (WorkflowStepTemplateUpdateModel): Workflow Template update options. [optional]

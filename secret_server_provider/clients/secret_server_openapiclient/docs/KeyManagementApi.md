@@ -376,15 +376,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = key_management_api.KeyManagementApi(api_client)
     is_exporting = True # bool | isExporting (optional)
-    filter_action = None # bool, date, datetime, dict, float, int, list, str, none_type | Action (optional)
-    filter_date = None # bool, date, datetime, dict, float, int, list, str, none_type | Date (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchTerm (optional)
-    filter_user_id = None # bool, date, datetime, dict, float, int, list, str, none_type | UserId (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_action = "filter.action_example" # str | Action (optional)
+    filter_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Date (optional)
+    filter_search_term = "filter.searchTerm_example" # str | SearchTerm (optional)
+    filter_user_id = 1 # int | UserId (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -402,15 +402,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is_exporting** | **bool**| isExporting | [optional]
- **filter_action** | **bool, date, datetime, dict, float, int, list, str, none_type**| Action | [optional]
- **filter_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| Date | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchTerm | [optional]
- **filter_user_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| UserId | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_action** | **str**| Action | [optional]
+ **filter_date** | **datetime**| Date | [optional]
+ **filter_search_term** | **str**| SearchTerm | [optional]
+ **filter_user_id** | **int**| UserId | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -640,16 +640,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = key_management_api.KeyManagementApi(api_client)
     key_management_config_update_args = KeyManagementConfigUpdateArgs(
-        aws_kms_access_key_id=None,
-        aws_kms_key_arn=None,
-        aws_kms_key_id=None,
-        aws_kms_secret_access_key=None,
-        azure_key_vault_base_url=None,
-        azure_key_vault_key_name=None,
-        azure_key_vault_key_version=None,
-        azure_key_vault_principal_id=None,
-        azure_key_vault_principal_secret=None,
-        key_management_type_id=None,
+        aws_kms_access_key_id="aws_kms_access_key_id_example",
+        aws_kms_key_arn="aws_kms_key_arn_example",
+        aws_kms_key_id="aws_kms_key_id_example",
+        aws_kms_secret_access_key="aws_kms_secret_access_key_example",
+        azure_key_vault_base_url="azure_key_vault_base_url_example",
+        azure_key_vault_key_name="azure_key_vault_key_name_example",
+        azure_key_vault_key_version="azure_key_vault_key_version_example",
+        azure_key_vault_principal_id="azure_key_vault_principal_id_example",
+        azure_key_vault_principal_secret="azure_key_vault_principal_secret_example",
+        key_management_type_id=1,
     ) # KeyManagementConfigUpdateArgs | Key Management Config update options (optional)
 
     # example passing only required values which don't have defaults set

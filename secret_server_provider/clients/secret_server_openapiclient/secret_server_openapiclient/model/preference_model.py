@@ -57,10 +57,8 @@ class PreferenceModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class PreferenceModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'setting_code': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_setting_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'setting_code': (str, none_type,),  # noqa: E501
+            'setting_id': (int, none_type,),  # noqa: E501
+            'setting_key': (str, none_type,),  # noqa: E501
+            'setting_name': (str, none_type,),  # noqa: E501
+            'setting_value': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
+            'user_setting_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,13 +142,13 @@ class PreferenceModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            setting_code (bool, date, datetime, dict, float, int, list, str, none_type): Setting Code. [optional]  # noqa: E501
-            setting_id (bool, date, datetime, dict, float, int, list, str, none_type): Setting Id. [optional]  # noqa: E501
-            setting_key (bool, date, datetime, dict, float, int, list, str, none_type): Setting Key. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): Setting Name. [optional]  # noqa: E501
-            setting_value (bool, date, datetime, dict, float, int, list, str, none_type): Setting Value. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User Id. [optional]  # noqa: E501
-            user_setting_id (bool, date, datetime, dict, float, int, list, str, none_type): User Setting Id. [optional]  # noqa: E501
+            setting_code (str): Setting Code. [optional]  # noqa: E501
+            setting_id (int): Setting Id. [optional]  # noqa: E501
+            setting_key (str): Setting Key. [optional]  # noqa: E501
+            setting_name (str): Setting Name. [optional]  # noqa: E501
+            setting_value (str): Setting Value. [optional]  # noqa: E501
+            user_id (int): User Id. [optional]  # noqa: E501
+            user_setting_id (int): User Setting Id. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,13 +234,13 @@ class PreferenceModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            setting_code (bool, date, datetime, dict, float, int, list, str, none_type): Setting Code. [optional]  # noqa: E501
-            setting_id (bool, date, datetime, dict, float, int, list, str, none_type): Setting Id. [optional]  # noqa: E501
-            setting_key (bool, date, datetime, dict, float, int, list, str, none_type): Setting Key. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): Setting Name. [optional]  # noqa: E501
-            setting_value (bool, date, datetime, dict, float, int, list, str, none_type): Setting Value. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User Id. [optional]  # noqa: E501
-            user_setting_id (bool, date, datetime, dict, float, int, list, str, none_type): User Setting Id. [optional]  # noqa: E501
+            setting_code (str): Setting Code. [optional]  # noqa: E501
+            setting_id (int): Setting Id. [optional]  # noqa: E501
+            setting_key (str): Setting Key. [optional]  # noqa: E501
+            setting_name (str): Setting Name. [optional]  # noqa: E501
+            setting_value (str): Setting Value. [optional]  # noqa: E501
+            user_id (int): User Id. [optional]  # noqa: E501
+            user_setting_id (int): User Setting Id. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

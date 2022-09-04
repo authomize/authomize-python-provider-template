@@ -65,10 +65,8 @@ class SecretTemplateFieldModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,42 +75,39 @@ class SecretTemplateFieldModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'data_type': (FieldDataType,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dropdown_options': ([SecretTemplateFieldOptionModel],),  # noqa: E501
-            'edit_requires_permission': (FieldPermissionType,),  # noqa: E501
-            'expose_for_display': (bool,),  # noqa: E501
-            'history_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_requirement': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'required': (bool,),  # noqa: E501
-            'save_all_history': (bool,),  # noqa: E501
-            'searchable': (bool,),  # noqa: E501
-            'slug_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'viewing_requires_edit': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'data_type': (FieldDataType, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'dropdown_options': ([SecretTemplateFieldOptionModel], none_type,),  # noqa: E501
+            'edit_requires_permission': (FieldPermissionType, none_type,),  # noqa: E501
+            'expose_for_display': (bool, none_type,),  # noqa: E501
+            'history_length': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'password_requirement': (int, none_type,),  # noqa: E501
+            'required': (bool, none_type,),  # noqa: E501
+            'save_all_history': (bool, none_type,),  # noqa: E501
+            'searchable': (bool, none_type,),  # noqa: E501
+            'slug_name': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'viewing_requires_edit': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -177,19 +172,19 @@ class SecretTemplateFieldModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Is this field active. [optional]  # noqa: E501
             data_type (FieldDataType): [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description of Field. [optional]  # noqa: E501
+            description (str): Description of Field. [optional]  # noqa: E501
             dropdown_options ([SecretTemplateFieldOptionModel]): These values will appear as a drop down for text fields.. [optional]  # noqa: E501
             edit_requires_permission (FieldPermissionType): [optional]  # noqa: E501
             expose_for_display (bool): Is this field is exposed for display. [optional]  # noqa: E501
-            history_length (bool, date, datetime, dict, float, int, list, str, none_type): Number of changes stored in history. If SaveAllHistory is true, this will return null.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Field Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Field. [optional]  # noqa: E501
-            password_requirement (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Password Requirement if the data type is Password defaulting to the default Password Requirement if not set.. [optional]  # noqa: E501
+            history_length (int): Number of changes stored in history. If SaveAllHistory is true, this will return null.. [optional]  # noqa: E501
+            id (int): Field Id. [optional]  # noqa: E501
+            name (str): Name of Field. [optional]  # noqa: E501
+            password_requirement (int): The Id of the Password Requirement if the data type is Password defaulting to the default Password Requirement if not set.. [optional]  # noqa: E501
             required (bool): Is this field required. [optional]  # noqa: E501
             save_all_history (bool): Indicates that all history will be saved. This will be reset if the HistoryLength is updated.. [optional]  # noqa: E501
             searchable (bool): Is this field searchable. [optional]  # noqa: E501
-            slug_name (bool, date, datetime, dict, float, int, list, str, none_type): A unique identifier used in api calls and other interactions. The slug allows the display name to change without breaking interfaces to fields.. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order of the field used for display. [optional]  # noqa: E501
+            slug_name (str): A unique identifier used in api calls and other interactions. The slug allows the display name to change without breaking interfaces to fields.. [optional]  # noqa: E501
+            sort_order (int): Sort Order of the field used for display. [optional]  # noqa: E501
             viewing_requires_edit (bool): Is edit permission required for viewing this field. [optional]  # noqa: E501
         """
 
@@ -278,19 +273,19 @@ class SecretTemplateFieldModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Is this field active. [optional]  # noqa: E501
             data_type (FieldDataType): [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description of Field. [optional]  # noqa: E501
+            description (str): Description of Field. [optional]  # noqa: E501
             dropdown_options ([SecretTemplateFieldOptionModel]): These values will appear as a drop down for text fields.. [optional]  # noqa: E501
             edit_requires_permission (FieldPermissionType): [optional]  # noqa: E501
             expose_for_display (bool): Is this field is exposed for display. [optional]  # noqa: E501
-            history_length (bool, date, datetime, dict, float, int, list, str, none_type): Number of changes stored in history. If SaveAllHistory is true, this will return null.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Field Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Field. [optional]  # noqa: E501
-            password_requirement (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the Password Requirement if the data type is Password defaulting to the default Password Requirement if not set.. [optional]  # noqa: E501
+            history_length (int): Number of changes stored in history. If SaveAllHistory is true, this will return null.. [optional]  # noqa: E501
+            id (int): Field Id. [optional]  # noqa: E501
+            name (str): Name of Field. [optional]  # noqa: E501
+            password_requirement (int): The Id of the Password Requirement if the data type is Password defaulting to the default Password Requirement if not set.. [optional]  # noqa: E501
             required (bool): Is this field required. [optional]  # noqa: E501
             save_all_history (bool): Indicates that all history will be saved. This will be reset if the HistoryLength is updated.. [optional]  # noqa: E501
             searchable (bool): Is this field searchable. [optional]  # noqa: E501
-            slug_name (bool, date, datetime, dict, float, int, list, str, none_type): A unique identifier used in api calls and other interactions. The slug allows the display name to change without breaking interfaces to fields.. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order of the field used for display. [optional]  # noqa: E501
+            slug_name (str): A unique identifier used in api calls and other interactions. The slug allows the display name to change without breaking interfaces to fields.. [optional]  # noqa: E501
+            sort_order (int): Sort Order of the field used for display. [optional]  # noqa: E501
             viewing_requires_edit (bool): Is edit permission required for viewing this field. [optional]  # noqa: E501
         """
 

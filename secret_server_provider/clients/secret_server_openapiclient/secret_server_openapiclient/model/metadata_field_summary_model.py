@@ -61,10 +61,8 @@ class MetadataFieldSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,33 +71,30 @@ class MetadataFieldSummaryModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'contains_personal_information': (bool,),  # noqa: E501
-            'default_sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'field_data_type': (EntityMetadataFieldDataType,),  # noqa: E501
-            'metadata_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'metadata_field_section_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'contains_personal_information': (bool, none_type,),  # noqa: E501
+            'default_sort_order': (int, none_type,),  # noqa: E501
+            'field_data_type': (EntityMetadataFieldDataType, none_type,),  # noqa: E501
+            'metadata_field_id': (int, none_type,),  # noqa: E501
+            'metadata_field_name': (str, none_type,),  # noqa: E501
+            'metadata_field_section_id': (int, none_type,),  # noqa: E501
+            'metadata_field_section_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -154,12 +149,12 @@ class MetadataFieldSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             contains_personal_information (bool): When this is set to true, the metadata will be obfuscated during export. [optional]  # noqa: E501
-            default_sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Not currently utilized but the sort order for the metadata. [optional]  # noqa: E501
+            default_sort_order (int): Not currently utilized but the sort order for the metadata. [optional]  # noqa: E501
             field_data_type (EntityMetadataFieldDataType): [optional]  # noqa: E501
-            metadata_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence ID for this metadata field. [optional]  # noqa: E501
-            metadata_field_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of this metadata field. [optional]  # noqa: E501
-            metadata_field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The field section id that contains this field. [optional]  # noqa: E501
-            metadata_field_section_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the field section. [optional]  # noqa: E501
+            metadata_field_id (int): The sequence ID for this metadata field. [optional]  # noqa: E501
+            metadata_field_name (str): The name of this metadata field. [optional]  # noqa: E501
+            metadata_field_section_id (int): The field section id that contains this field. [optional]  # noqa: E501
+            metadata_field_section_name (str): The name of the field section. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -246,12 +241,12 @@ class MetadataFieldSummaryModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             contains_personal_information (bool): When this is set to true, the metadata will be obfuscated during export. [optional]  # noqa: E501
-            default_sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Not currently utilized but the sort order for the metadata. [optional]  # noqa: E501
+            default_sort_order (int): Not currently utilized but the sort order for the metadata. [optional]  # noqa: E501
             field_data_type (EntityMetadataFieldDataType): [optional]  # noqa: E501
-            metadata_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence ID for this metadata field. [optional]  # noqa: E501
-            metadata_field_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of this metadata field. [optional]  # noqa: E501
-            metadata_field_section_id (bool, date, datetime, dict, float, int, list, str, none_type): The field section id that contains this field. [optional]  # noqa: E501
-            metadata_field_section_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the field section. [optional]  # noqa: E501
+            metadata_field_id (int): The sequence ID for this metadata field. [optional]  # noqa: E501
+            metadata_field_name (str): The name of this metadata field. [optional]  # noqa: E501
+            metadata_field_section_id (int): The field section id that contains this field. [optional]  # noqa: E501
+            metadata_field_section_name (str): The name of the field section. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

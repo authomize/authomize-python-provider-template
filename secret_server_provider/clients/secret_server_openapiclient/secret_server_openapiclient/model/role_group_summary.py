@@ -57,10 +57,8 @@ class RoleGroupSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class RoleGroupSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'personal': (bool,),  # noqa: E501
+            'created': (datetime, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'personal': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,12 +142,12 @@ class RoleGroupSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created (bool, date, datetime, dict, float, int, list, str, none_type): Created Date. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Group display name. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain name. [optional]  # noqa: E501
+            created (datetime): Created Date. [optional]  # noqa: E501
+            display_name (str): Group display name. [optional]  # noqa: E501
+            domain_name (str): Active Directory domain name. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
+            group_id (int): Group ID. [optional]  # noqa: E501
+            name (str): Group name. [optional]  # noqa: E501
             personal (bool): Whether the group is for a single user. [optional]  # noqa: E501
         """
 
@@ -239,12 +234,12 @@ class RoleGroupSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created (bool, date, datetime, dict, float, int, list, str, none_type): Created Date. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Group display name. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain name. [optional]  # noqa: E501
+            created (datetime): Created Date. [optional]  # noqa: E501
+            display_name (str): Group display name. [optional]  # noqa: E501
+            domain_name (str): Active Directory domain name. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
+            group_id (int): Group ID. [optional]  # noqa: E501
+            name (str): Group name. [optional]  # noqa: E501
             personal (bool): Whether the group is for a single user. [optional]  # noqa: E501
         """
 

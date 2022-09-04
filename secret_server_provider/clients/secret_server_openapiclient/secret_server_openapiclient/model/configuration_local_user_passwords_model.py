@@ -57,10 +57,8 @@ class ConfigurationLocalUserPasswordsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,42 +66,39 @@ class ConfigurationLocalUserPasswordsModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'allow_users_to_reset_forgotten_passwords': (bool,),  # noqa: E501
-            'enable_local_user_password_expiration': (bool,),  # noqa: E501
-            'enable_minimum_password_age': (bool,),  # noqa: E501
-            'enable_password_history': (bool,),  # noqa: E501
-            'local_user_password_expiration_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'local_user_password_expiration_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'local_user_password_expiration_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'minimum_password_age_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'minimum_password_age_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'minimum_password_age_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_history_items': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_history_items_all': (bool,),  # noqa: E501
-            'password_minimum_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_require_lowercase': (bool,),  # noqa: E501
-            'password_require_numbers': (bool,),  # noqa: E501
-            'password_require_symbols': (bool,),  # noqa: E501
-            'password_require_uppercase': (bool,),  # noqa: E501
+            'allow_users_to_reset_forgotten_passwords': (bool, none_type,),  # noqa: E501
+            'enable_local_user_password_expiration': (bool, none_type,),  # noqa: E501
+            'enable_minimum_password_age': (bool, none_type,),  # noqa: E501
+            'enable_password_history': (bool, none_type,),  # noqa: E501
+            'local_user_password_expiration_days': (int, none_type,),  # noqa: E501
+            'local_user_password_expiration_hours': (int, none_type,),  # noqa: E501
+            'local_user_password_expiration_minutes': (int, none_type,),  # noqa: E501
+            'minimum_password_age_days': (int, none_type,),  # noqa: E501
+            'minimum_password_age_hours': (int, none_type,),  # noqa: E501
+            'minimum_password_age_minutes': (int, none_type,),  # noqa: E501
+            'password_history_items': (int, none_type,),  # noqa: E501
+            'password_history_items_all': (bool, none_type,),  # noqa: E501
+            'password_minimum_length': (int, none_type,),  # noqa: E501
+            'password_require_lowercase': (bool, none_type,),  # noqa: E501
+            'password_require_numbers': (bool, none_type,),  # noqa: E501
+            'password_require_symbols': (bool, none_type,),  # noqa: E501
+            'password_require_uppercase': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -171,15 +166,15 @@ class ConfigurationLocalUserPasswordsModel(ModelNormal):
             enable_local_user_password_expiration (bool): Indicates whether or not local users must change their password when it is reset or expires.. [optional]  # noqa: E501
             enable_minimum_password_age (bool): Local users cannot change their password until it meets this age. [optional]  # noqa: E501
             enable_password_history (bool): Passwords cannot be reused when enabled and still in stored history. [optional]  # noqa: E501
-            local_user_password_expiration_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days until the password expires. [optional]  # noqa: E501
-            local_user_password_expiration_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours until the password expires. [optional]  # noqa: E501
-            local_user_password_expiration_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes until the password expires. [optional]  # noqa: E501
-            minimum_password_age_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days until password can be changed. [optional]  # noqa: E501
-            minimum_password_age_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours until password can be changed. [optional]  # noqa: E501
-            minimum_password_age_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes until password can be changed. [optional]  # noqa: E501
-            password_history_items (bool, date, datetime, dict, float, int, list, str, none_type): How many passwords should be stored in history.. [optional]  # noqa: E501
+            local_user_password_expiration_days (int): How many days until the password expires. [optional]  # noqa: E501
+            local_user_password_expiration_hours (int): How many hours until the password expires. [optional]  # noqa: E501
+            local_user_password_expiration_minutes (int): How many minutes until the password expires. [optional]  # noqa: E501
+            minimum_password_age_days (int): How many days until password can be changed. [optional]  # noqa: E501
+            minimum_password_age_hours (int): How many hours until password can be changed. [optional]  # noqa: E501
+            minimum_password_age_minutes (int): How many minutes until password can be changed. [optional]  # noqa: E501
+            password_history_items (int): How many passwords should be stored in history.. [optional]  # noqa: E501
             password_history_items_all (bool): Keep all password history items.. [optional]  # noqa: E501
-            password_minimum_length (bool, date, datetime, dict, float, int, list, str, none_type): The minimum length required for local user passwords. [optional]  # noqa: E501
+            password_minimum_length (int): The minimum length required for local user passwords. [optional]  # noqa: E501
             password_require_lowercase (bool): Whether or not the local password must include a lowercase letter. [optional]  # noqa: E501
             password_require_numbers (bool): Whether or not the local password must include a number. [optional]  # noqa: E501
             password_require_symbols (bool): Whether or not the local password must include a symbol. [optional]  # noqa: E501
@@ -273,15 +268,15 @@ class ConfigurationLocalUserPasswordsModel(ModelNormal):
             enable_local_user_password_expiration (bool): Indicates whether or not local users must change their password when it is reset or expires.. [optional]  # noqa: E501
             enable_minimum_password_age (bool): Local users cannot change their password until it meets this age. [optional]  # noqa: E501
             enable_password_history (bool): Passwords cannot be reused when enabled and still in stored history. [optional]  # noqa: E501
-            local_user_password_expiration_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days until the password expires. [optional]  # noqa: E501
-            local_user_password_expiration_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours until the password expires. [optional]  # noqa: E501
-            local_user_password_expiration_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes until the password expires. [optional]  # noqa: E501
-            minimum_password_age_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days until password can be changed. [optional]  # noqa: E501
-            minimum_password_age_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours until password can be changed. [optional]  # noqa: E501
-            minimum_password_age_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes until password can be changed. [optional]  # noqa: E501
-            password_history_items (bool, date, datetime, dict, float, int, list, str, none_type): How many passwords should be stored in history.. [optional]  # noqa: E501
+            local_user_password_expiration_days (int): How many days until the password expires. [optional]  # noqa: E501
+            local_user_password_expiration_hours (int): How many hours until the password expires. [optional]  # noqa: E501
+            local_user_password_expiration_minutes (int): How many minutes until the password expires. [optional]  # noqa: E501
+            minimum_password_age_days (int): How many days until password can be changed. [optional]  # noqa: E501
+            minimum_password_age_hours (int): How many hours until password can be changed. [optional]  # noqa: E501
+            minimum_password_age_minutes (int): How many minutes until password can be changed. [optional]  # noqa: E501
+            password_history_items (int): How many passwords should be stored in history.. [optional]  # noqa: E501
             password_history_items_all (bool): Keep all password history items.. [optional]  # noqa: E501
-            password_minimum_length (bool, date, datetime, dict, float, int, list, str, none_type): The minimum length required for local user passwords. [optional]  # noqa: E501
+            password_minimum_length (int): The minimum length required for local user passwords. [optional]  # noqa: E501
             password_require_lowercase (bool): Whether or not the local password must include a lowercase letter. [optional]  # noqa: E501
             password_require_numbers (bool): Whether or not the local password must include a number. [optional]  # noqa: E501
             password_require_symbols (bool): Whether or not the local password must include a symbol. [optional]  # noqa: E501

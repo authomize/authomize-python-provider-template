@@ -57,10 +57,8 @@ class SecretDetailRpcSecrets(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class SecretDetailRpcSecrets(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'folder_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_template_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'folder_name': (str, none_type,),  # noqa: E501
+            'order': (int, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'secret_template_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class SecretDetailRpcSecrets(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): FolderName. [optional]  # noqa: E501
-            order (bool, date, datetime, dict, float, int, list, str, none_type): Order. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretId. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): SecretName. [optional]  # noqa: E501
-            secret_template_name (bool, date, datetime, dict, float, int, list, str, none_type): SecretTemplateName. [optional]  # noqa: E501
+            folder_name (str): FolderName. [optional]  # noqa: E501
+            order (int): Order. [optional]  # noqa: E501
+            secret_id (int): SecretId. [optional]  # noqa: E501
+            secret_name (str): SecretName. [optional]  # noqa: E501
+            secret_template_name (str): SecretTemplateName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class SecretDetailRpcSecrets(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): FolderName. [optional]  # noqa: E501
-            order (bool, date, datetime, dict, float, int, list, str, none_type): Order. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretId. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): SecretName. [optional]  # noqa: E501
-            secret_template_name (bool, date, datetime, dict, float, int, list, str, none_type): SecretTemplateName. [optional]  # noqa: E501
+            folder_name (str): FolderName. [optional]  # noqa: E501
+            order (int): Order. [optional]  # noqa: E501
+            secret_id (int): SecretId. [optional]  # noqa: E501
+            secret_name (str): SecretName. [optional]  # noqa: E501
+            secret_template_name (str): SecretTemplateName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

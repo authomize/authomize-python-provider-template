@@ -88,19 +88,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
     report_create_args = ReportCreateArgs(
-        category_id=None,
-        chart_type=None,
-        description=None,
+        category_id=1,
+        chart_type="chart_type_example",
+        description="description_example",
         dual_control_approval=DualControlApproval(
-            domain_id=None,
-            password=None,
-            two_factor=None,
-            username=None,
+            domain_id=1,
+            password="password_example",
+            two_factor="two_factor_example",
+            username="username_example",
         ),
         is3_d_report=True,
-        name=None,
-        page_size=None,
-        report_sql=None,
+        name="name_example",
+        page_size=1,
+        report_sql="report_sql_example",
         use_database_paging=True,
     ) # ReportCreateArgs | Report create options (optional)
 
@@ -190,9 +190,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = reports_api.ReportsApi(api_client)
     report_category_create_args = ReportCategoryCreateArgs(
         data=ReportCategoryCreateModel(
-            report_category_description=None,
-            report_category_name=None,
-            sort_order=None,
+            report_category_description="report_category_description_example",
+            report_category_name="report_category_name_example",
+            sort_order=1,
         ),
     ) # ReportCategoryCreateArgs | args (optional)
 
@@ -282,43 +282,43 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = reports_api.ReportsApi(api_client)
     report_schedule_create_args = ReportScheduleCreateArgs(
         data=ReportScheduleCreateModel(
-            custom_parameter_value=None,
-            end_date_parameter_specific_date_value=None,
-            end_date_parameter_value=None,
-            folder_parameter_value=None,
-            group_parameter_value=None,
-            report_id=None,
+            custom_parameter_value="custom_parameter_value_example",
+            end_date_parameter_specific_date_value=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            end_date_parameter_value="end_date_parameter_value_example",
+            folder_parameter_value=1,
+            group_parameter_value=1,
+            report_id=1,
             schedule=ScheduleCreateModel(
-                additional_email_addresses=None,
+                additional_email_addresses="additional_email_addresses_example",
                 change_type=ScheduleChangeType("{}"),
-                days=None,
+                days=1,
                 email_groups=[
-                    None,
+                    1,
                 ],
                 friday=True,
                 health_check=True,
-                history_size=None,
+                history_size=1,
                 monday=True,
-                monthly_day=None,
-                monthly_day_of_month=None,
-                monthly_day_order=None,
-                monthly_day_order_recurrence=None,
-                monthly_day_recurrence=None,
-                monthly_schedule_type=None,
+                monthly_day="monthly_day_example",
+                monthly_day_of_month=1,
+                monthly_day_order="monthly_day_order_example",
+                monthly_day_order_recurrence=1,
+                monthly_day_recurrence=1,
+                monthly_schedule_type="monthly_schedule_type_example",
                 saturday=True,
-                schedule_name=None,
+                schedule_name="schedule_name_example",
                 send_email=True,
                 send_email_with_high_priority=True,
-                starting_on=None,
+                starting_on=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 sunday=True,
                 thursday=True,
                 tuesday=True,
                 wednesday=True,
-                weeks=None,
+                weeks=1,
             ),
-            start_date_parameter_specific_date_value=None,
-            start_date_parameter_value=None,
-            user_parameter_value=None,
+            start_date_parameter_specific_date_value=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            start_date_parameter_value="start_date_parameter_value_example",
+            user_parameter_value=1,
         ),
     ) # ReportScheduleCreateArgs | args (optional)
 
@@ -404,7 +404,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Report ID
+    id = 1 # int | Report ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -420,7 +420,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report ID |
+ **id** | **int**| Report ID |
 
 ### Return type
 
@@ -487,7 +487,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportCategoryId
+    report_category_id = 1 # int | reportCategoryId
 
     # example passing only required values which don't have defaults set
     try:
@@ -503,7 +503,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportCategoryId |
+ **report_category_id** | **int**| reportCategoryId |
 
 ### Return type
 
@@ -571,7 +571,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportCategoryId
+    report_category_id = 1 # int | reportCategoryId
 
     # example passing only required values which don't have defaults set
     try:
@@ -587,7 +587,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportCategoryId |
+ **report_category_id** | **int**| reportCategoryId |
 
 ### Return type
 
@@ -654,7 +654,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_schedule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportScheduleId
+    report_schedule_id = 1 # int | reportScheduleId
 
     # example passing only required values which don't have defaults set
     try:
@@ -670,7 +670,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportScheduleId |
+ **report_schedule_id** | **int**| reportScheduleId |
 
 ### Return type
 
@@ -738,7 +738,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_schedule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportScheduleId
+    report_schedule_id = 1 # int | reportScheduleId
 
     # example passing only required values which don't have defaults set
     try:
@@ -754,7 +754,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportScheduleId |
+ **report_schedule_id** | **int**| reportScheduleId |
 
 ### Return type
 
@@ -822,7 +822,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Report ID
+    id = 1 # int | Report ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -838,7 +838,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report ID |
+ **id** | **int**| Report ID |
 
 ### Return type
 
@@ -906,7 +906,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_schedule_history_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportScheduleHistoryId
+    report_schedule_history_id = 1 # int | reportScheduleHistoryId
 
     # example passing only required values which don't have defaults set
     try:
@@ -922,7 +922,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_schedule_history_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportScheduleHistoryId |
+ **report_schedule_history_id** | **int**| reportScheduleHistoryId |
 
 ### Return type
 
@@ -991,16 +991,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Report Id
+    id = 1 # int | Report Id
     report_email_args = ReportEmailArgs(
         data=ReportEmailModel(
-            email_address=None,
+            email_address="email_address_example",
             format=ReportFormat("{}"),
             parameters=[
                 ReportParameterValue(
-                    name=None,
+                    name="name_example",
                     value={},
-                    value_display_name=None,
+                    value_display_name="value_display_name_example",
                 ),
             ],
         ),
@@ -1029,7 +1029,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report Id |
+ **id** | **int**| Report Id |
  **report_email_args** | [**ReportEmailArgs**](ReportEmailArgs.md)| Report email options | [optional]
 
 ### Return type
@@ -1101,27 +1101,27 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = reports_api.ReportsApi(api_client)
     report_execute_args = ReportExecuteArgs(
         dual_control_approval=DualControlApproval(
-            domain_id=None,
-            password=None,
-            two_factor=None,
-            username=None,
+            domain_id=1,
+            password="password_example",
+            two_factor="two_factor_example",
+            username="username_example",
         ),
         encode_html=True,
-        end_record_number=None,
-        id=None,
+        end_record_number=1,
+        id=1,
         is_ascending=True,
-        name=None,
-        order_by_field_ordinal=None,
-        page_number=None,
+        name="name_example",
+        order_by_field_ordinal=1,
+        page_number=1,
         parameters=[
             ReportParameter(
-                name=None,
-                value=None,
+                name="name_example",
+                value="value_example",
             ),
         ],
-        preview_sql=None,
-        records_per_page=None,
-        start_record_number=None,
+        preview_sql="preview_sql_example",
+        records_per_page=1,
+        start_record_number=1,
         use_default_parameters=True,
     ) # ReportExecuteArgs | Report execute options (optional)
 
@@ -1168,7 +1168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reports_service_export**
-> bool, date, datetime, dict, float, int, list, str, none_type reports_service_export()
+> str reports_service_export()
 
 Export Report
 
@@ -1209,31 +1209,31 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
     report_export_args = ReportExportArgs(
-        delimiter=None,
+        delimiter="delimiter_example",
         dual_control_approval=DualControlApproval(
-            domain_id=None,
-            password=None,
-            two_factor=None,
-            username=None,
+            domain_id=1,
+            password="password_example",
+            two_factor="two_factor_example",
+            username="username_example",
         ),
         encode_html=True,
-        end_record_number=None,
-        format=None,
-        id=None,
+        end_record_number=1,
+        format="format_example",
+        id=1,
         is_ascending=True,
-        name=None,
-        order_by_field_ordinal=None,
-        page_number=None,
+        name="name_example",
+        order_by_field_ordinal=1,
+        page_number=1,
         parameters=[
             ReportParameter(
-                name=None,
-                value=None,
+                name="name_example",
+                value="value_example",
             ),
         ],
-        preview_sql=None,
-        records_per_page=None,
-        start_record_number=None,
-        time_zone=None,
+        preview_sql="preview_sql_example",
+        records_per_page=1,
+        start_record_number=1,
+        time_zone="time_zone_example",
         use_default_parameters=True,
     ) # ReportExportArgs | Report execute options (optional)
 
@@ -1256,7 +1256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -1480,7 +1480,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Report ID
+    id = 1 # int | Report ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -1496,7 +1496,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report ID |
+ **id** | **int**| Report ID |
 
 ### Return type
 
@@ -1565,11 +1565,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1587,11 +1587,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1659,13 +1659,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1690,13 +1690,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1764,7 +1764,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportCategoryId
+    report_category_id = 1 # int | reportCategoryId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1780,7 +1780,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportCategoryId |
+ **report_category_id** | **int**| reportCategoryId |
 
 ### Return type
 
@@ -1928,12 +1928,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportCategoryId
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    report_category_id = 1 # int | reportCategoryId
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1958,12 +1958,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportCategoryId |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **report_category_id** | **int**| reportCategoryId |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2031,7 +2031,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Report ID
+    id = 1 # int | Report ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -2047,7 +2047,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report ID |
+ **id** | **int**| Report ID |
 
 ### Return type
 
@@ -2195,12 +2195,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportId
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    report_id = 1 # int | reportId
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2225,12 +2225,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportId |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **report_id** | **int**| reportId |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2298,12 +2298,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportCategoryId
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    report_category_id = 1 # int | reportCategoryId
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2328,12 +2328,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportCategoryId |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **report_category_id** | **int**| reportCategoryId |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2401,7 +2401,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_schedule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportScheduleId
+    report_schedule_id = 1 # int | reportScheduleId
 
     # example passing only required values which don't have defaults set
     try:
@@ -2417,7 +2417,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportScheduleId |
+ **report_schedule_id** | **int**| reportScheduleId |
 
 ### Return type
 
@@ -2485,7 +2485,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_schedule_history_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportScheduleHistoryId
+    report_schedule_history_id = 1 # int | reportScheduleHistoryId
 
     # example passing only required values which don't have defaults set
     try:
@@ -2501,7 +2501,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_schedule_history_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportScheduleHistoryId |
+ **report_schedule_history_id** | **int**| reportScheduleHistoryId |
 
 ### Return type
 
@@ -2569,15 +2569,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    filter_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Category ID (optional)
+    filter_category_id = 1 # int | Category ID (optional)
     filter_include_inactive = True # bool | Whether to include inactive Reports in the results (optional)
-    filter_report_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Report Name - Searching by report name ignores other filters (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_report_name = "filter.reportName_example" # str | Report Name - Searching by report name ignores other filters (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2594,15 +2594,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Category ID | [optional]
+ **filter_category_id** | **int**| Category ID | [optional]
  **filter_include_inactive** | **bool**| Whether to include inactive Reports in the results | [optional]
- **filter_report_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report Name - Searching by report name ignores other filters | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_report_name** | **str**| Report Name - Searching by report name ignores other filters | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2670,12 +2670,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_schedule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportScheduleId
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    report_schedule_id = 1 # int | reportScheduleId
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2700,12 +2700,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportScheduleId |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **report_schedule_id** | **int**| reportScheduleId |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2774,12 +2774,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
     filter_include_deleted = True # bool | When set, deleted reports will be included (optional)
-    filter_report_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Report Id (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_report_id = 1 # int | Report Id (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2797,12 +2797,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_deleted** | **bool**| When set, deleted reports will be included | [optional]
- **filter_report_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report Id | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_report_id** | **int**| Report Id | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2870,15 +2870,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    filter_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Category ID (optional)
+    filter_category_id = 1 # int | Category ID (optional)
     filter_include_inactive = True # bool | Whether to include inactive Reports in the results (optional)
-    filter_report_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Report Name - Searching by report name ignores other filters (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_report_name = "filter.reportName_example" # str | Report Name - Searching by report name ignores other filters (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2895,15 +2895,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Category ID | [optional]
+ **filter_category_id** | **int**| Category ID | [optional]
  **filter_include_inactive** | **bool**| Whether to include inactive Reports in the results | [optional]
- **filter_report_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report Name - Searching by report name ignores other filters | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_report_name** | **str**| Report Name - Searching by report name ignores other filters | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2971,7 +2971,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportId
+    report_id = 1 # int | reportId
 
     # example passing only required values which don't have defaults set
     try:
@@ -2987,7 +2987,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportId |
+ **report_id** | **int**| reportId |
 
 ### Return type
 
@@ -3054,7 +3054,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_schedule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportScheduleId
+    report_schedule_id = 1 # int | reportScheduleId
 
     # example passing only required values which don't have defaults set
     try:
@@ -3070,7 +3070,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportScheduleId |
+ **report_schedule_id** | **int**| reportScheduleId |
 
 ### Return type
 
@@ -3138,7 +3138,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportId
+    report_id = 1 # int | reportId
 
     # example passing only required values which don't have defaults set
     try:
@@ -3154,7 +3154,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportId |
+ **report_id** | **int**| reportId |
 
 ### Return type
 
@@ -3223,22 +3223,22 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Report ID
+    id = 1 # int | Report ID
     report_update_args = ReportUpdateArgs(
-        category_id=None,
-        chart_type=None,
-        description=None,
+        category_id=1,
+        chart_type="chart_type_example",
+        description="description_example",
         dual_control_approval=DualControlApproval(
-            domain_id=None,
-            password=None,
-            two_factor=None,
-            username=None,
+            domain_id=1,
+            password="password_example",
+            two_factor="two_factor_example",
+            username="username_example",
         ),
-        id=None,
+        id=1,
         is3_d_report=True,
-        name=None,
-        page_size=None,
-        report_sql=None,
+        name="name_example",
+        page_size=1,
+        report_sql="report_sql_example",
         use_database_paging=True,
     ) # ReportUpdateArgs | Report update options (optional)
 
@@ -3265,7 +3265,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Report ID |
+ **id** | **int**| Report ID |
  **report_update_args** | [**ReportUpdateArgs**](ReportUpdateArgs.md)| Report update options | [optional]
 
 ### Return type
@@ -3335,16 +3335,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportCategoryId
+    report_category_id = 1 # int | reportCategoryId
     report_category_update_args = ReportCategoryUpdateArgs(
         data=ReportCategoryUpdateModel(
             report_category_description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             report_category_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # ReportCategoryUpdateArgs | args (optional)
@@ -3372,7 +3372,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportCategoryId |
+ **report_category_id** | **int**| reportCategoryId |
  **report_category_update_args** | [**ReportCategoryUpdateArgs**](ReportCategoryUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -3442,12 +3442,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_category_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportCategoryId
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    report_category_id = 1 # int | reportCategoryId
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
     report_category_permissions_update_args = ReportCategoryPermissionsUpdateArgs(
         data=ReportCategoryPermissionsUpdateModel(
             allow_remove_edit=True,
@@ -3455,8 +3455,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 dirty=True,
                 value=[
                     ReportCategoryPermissionUpdateModel(
-                        group_id=None,
-                        role_permission_id=None,
+                        group_id=1,
+                        role_permission_id=1,
                     ),
                 ],
             ),
@@ -3486,12 +3486,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_category_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportCategoryId |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **report_category_id** | **int**| reportCategoryId |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
  **report_category_permissions_update_args** | [**ReportCategoryPermissionsUpdateArgs**](ReportCategoryPermissionsUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -3561,12 +3561,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportId
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    report_id = 1 # int | reportId
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
     report_permissions_update_args = ReportPermissionsUpdateArgs(
         data=ReportPermissionsUpdateModel(
             allow_remove_edit=True,
@@ -3578,8 +3578,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 dirty=True,
                 value=[
                     ReportPermissionUpdateModel(
-                        group_id=None,
-                        role_permission_id=None,
+                        group_id=1,
+                        role_permission_id=1,
                     ),
                 ],
             ),
@@ -3609,12 +3609,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportId |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **report_id** | **int**| reportId |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
  **report_permissions_update_args** | [**ReportPermissionsUpdateArgs**](ReportPermissionsUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -3684,24 +3684,24 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = reports_api.ReportsApi(api_client)
-    report_schedule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | reportScheduleId
+    report_schedule_id = 1 # int | reportScheduleId
     report_schedule_update_args = ReportScheduleUpdateArgs(
         data=ReportScheduleUpdateModel(
             custom_parameter_value=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             end_date_parameter_specific_date_value=UpdateFieldValueOfOptionalDateTime(
                 dirty=True,
-                value=None,
+                value=dateutil_parser('1970-01-01T00:00:00.00Z'),
             ),
             end_date_parameter_value=UpdateFieldValueOfOptionalReportScheduleDateParameterType(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             folder_parameter_value=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             format=UpdateFieldValueOfReportFormat(
                 dirty=True,
@@ -3709,12 +3709,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             group_parameter_value=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             schedule=ScheduleUpdateModel(
                 additional_email_addresses=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 change_type=UpdateFieldValueOfScheduleChangeType(
                     dirty=True,
@@ -3722,12 +3722,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 days=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 email_groups=UpdateFieldValueOfInt32Array(
                     dirty=True,
                     value=[
-                        None,
+                        1,
                     ],
                 ),
                 friday=UpdateFieldValueOfOptionalBoolean(
@@ -3740,7 +3740,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 history_size=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 monday=UpdateFieldValueOfOptionalBoolean(
                     dirty=True,
@@ -3748,27 +3748,27 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 monthly_day=UpdateFieldValueOfOptionalScheduleMonthlyDayType(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 monthly_day_of_month=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 monthly_day_order=UpdateFieldValueOfOptionalScheduleMonthlyDayOrderType(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 monthly_day_order_recurrence=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 monthly_day_recurrence=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
                 monthly_schedule_type=UpdateFieldValueOfOptionalScheduleMonthlyType(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 saturday=UpdateFieldValueOfOptionalBoolean(
                     dirty=True,
@@ -3776,7 +3776,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 schedule_name=UpdateFieldValueOfString(
                     dirty=True,
-                    value=None,
+                    value="value_example",
                 ),
                 send_email=UpdateFieldValueOfBoolean(
                     dirty=True,
@@ -3788,7 +3788,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 starting_on=UpdateFieldValueOfDateTime(
                     dirty=True,
-                    value=None,
+                    value=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 ),
                 sunday=UpdateFieldValueOfOptionalBoolean(
                     dirty=True,
@@ -3808,20 +3808,20 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 ),
                 weeks=UpdateFieldValueOfOptionalInt32(
                     dirty=True,
-                    value=None,
+                    value=1,
                 ),
             ),
             start_date_parameter_specific_date_value=UpdateFieldValueOfOptionalDateTime(
                 dirty=True,
-                value=None,
+                value=dateutil_parser('1970-01-01T00:00:00.00Z'),
             ),
             start_date_parameter_value=UpdateFieldValueOfOptionalReportScheduleDateParameterType(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             user_parameter_value=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # ReportScheduleUpdateArgs | args (optional)
@@ -3849,7 +3849,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| reportScheduleId |
+ **report_schedule_id** | **int**| reportScheduleId |
  **report_schedule_update_args** | [**ReportScheduleUpdateArgs**](ReportScheduleUpdateArgs.md)| args | [optional]
 
 ### Return type

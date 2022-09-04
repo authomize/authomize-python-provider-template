@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **event_entity_type_id** | [**UpdateFieldValueOfInt32**](UpdateFieldValueOfInt32.md) |  | [optional] 
 **event_pipeline_policy_description** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
 **event_pipeline_policy_name** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
-**external_instance_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | ExternalInstanceId | [optional] 
+**external_instance_id** | **str** | ExternalInstanceId | [optional] 
 **is_system** | **bool** | IsSystem | [optional] 
 **pipelines** | [**UpdateFieldValueOfEventPipelineUpdateModelArray**](UpdateFieldValueOfEventPipelineUpdateModelArray.md) |  | [optional] 
 **reuse_existing_pipelines** | **bool** | ReuseExistingPipelines | [optional] 

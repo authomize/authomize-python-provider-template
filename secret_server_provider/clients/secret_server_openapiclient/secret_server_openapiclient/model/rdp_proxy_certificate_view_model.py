@@ -57,10 +57,8 @@ class RdpProxyCertificateViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class RdpProxyCertificateViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'rdp_server_certificate': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rdp_server_certificate_file_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'rdp_server_certificate_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'rdp_server_certificate': (file_type, none_type,),  # noqa: E501
+            'rdp_server_certificate_file_name': (str, none_type,),  # noqa: E501
+            'rdp_server_certificate_password': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -139,9 +134,9 @@ class RdpProxyCertificateViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            rdp_server_certificate (bool, date, datetime, dict, float, int, list, str, none_type): The certificate (x509/pfx) that is served to users connecting to the RDP proxy.. [optional]  # noqa: E501
-            rdp_server_certificate_file_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the RDP server certificate file. [optional]  # noqa: E501
-            rdp_server_certificate_password (bool, date, datetime, dict, float, int, list, str, none_type): The password used to protect the certificate (only used for updating). [optional]  # noqa: E501
+            rdp_server_certificate (file_type): The certificate (x509/pfx) that is served to users connecting to the RDP proxy.. [optional]  # noqa: E501
+            rdp_server_certificate_file_name (str): The name of the RDP server certificate file. [optional]  # noqa: E501
+            rdp_server_certificate_password (str): The password used to protect the certificate (only used for updating). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,9 +222,9 @@ class RdpProxyCertificateViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            rdp_server_certificate (bool, date, datetime, dict, float, int, list, str, none_type): The certificate (x509/pfx) that is served to users connecting to the RDP proxy.. [optional]  # noqa: E501
-            rdp_server_certificate_file_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the RDP server certificate file. [optional]  # noqa: E501
-            rdp_server_certificate_password (bool, date, datetime, dict, float, int, list, str, none_type): The password used to protect the certificate (only used for updating). [optional]  # noqa: E501
+            rdp_server_certificate (file_type): The certificate (x509/pfx) that is served to users connecting to the RDP proxy.. [optional]  # noqa: E501
+            rdp_server_certificate_file_name (str): The name of the RDP server certificate file. [optional]  # noqa: E501
+            rdp_server_certificate_password (str): The password used to protect the certificate (only used for updating). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

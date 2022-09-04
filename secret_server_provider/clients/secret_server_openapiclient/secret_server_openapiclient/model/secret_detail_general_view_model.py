@@ -73,10 +73,8 @@ class SecretDetailGeneralViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -85,49 +83,46 @@ class SecretDetailGeneralViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'auto_change_password': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'can_generate_ssh_key': (bool,),  # noqa: E501
-            'enable_inherit_secret_policy': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'expiration': (ViewFieldValueOfString,),  # noqa: E501
-            'fields': ([ViewTemplateFieldOfString],),  # noqa: E501
-            'folder': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'heartbeat_enabled': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_favorite': (bool,),  # noqa: E501
-            'is_out_of_sync': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'is_totp_enabled': (bool,),  # noqa: E501
-            'last_heart_beat_check': (ViewFieldValueOfOptionalDateTime,),  # noqa: E501
-            'last_heart_beat_status': (ViewFieldValueOfSecretDetailHeartbeatStatus,),  # noqa: E501
-            'launchers': ([SecretDetailLauncher],),  # noqa: E501
-            'name': (ViewFieldValueOfString,),  # noqa: E501
-            'out_of_sync_reason': (ViewFieldValueOfString,),  # noqa: E501
-            'secret_policy': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'site': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'slug_private_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'slug_public_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'template': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'totp_password_slug': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'auto_change_password': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'can_generate_ssh_key': (bool, none_type,),  # noqa: E501
+            'enable_inherit_secret_policy': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'expiration': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'fields': ([ViewTemplateFieldOfString], none_type,),  # noqa: E501
+            'folder': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'heartbeat_enabled': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_favorite': (bool, none_type,),  # noqa: E501
+            'is_out_of_sync': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'is_totp_enabled': (bool, none_type,),  # noqa: E501
+            'last_heart_beat_check': (ViewFieldValueOfOptionalDateTime, none_type,),  # noqa: E501
+            'last_heart_beat_status': (ViewFieldValueOfSecretDetailHeartbeatStatus, none_type,),  # noqa: E501
+            'launchers': ([SecretDetailLauncher], none_type,),  # noqa: E501
+            'name': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'out_of_sync_reason': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'secret_policy': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'site': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'slug_private_key': (str, none_type,),  # noqa: E501
+            'slug_public_key': (str, none_type,),  # noqa: E501
+            'template': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'totp_password_slug': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -205,7 +200,7 @@ class SecretDetailGeneralViewModel(ModelNormal):
             fields ([ViewTemplateFieldOfString]): Fields. [optional]  # noqa: E501
             folder (ViewFieldValueOfOptionalInt32): [optional]  # noqa: E501
             heartbeat_enabled (ViewFieldValueOfBoolean): [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
             is_favorite (bool): IsFavorite. [optional]  # noqa: E501
             is_out_of_sync (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             is_totp_enabled (bool): IsTotpEnabled. [optional]  # noqa: E501
@@ -216,10 +211,10 @@ class SecretDetailGeneralViewModel(ModelNormal):
             out_of_sync_reason (ViewFieldValueOfString): [optional]  # noqa: E501
             secret_policy (ViewFieldValueOfOptionalInt32): [optional]  # noqa: E501
             site (ViewFieldValueOfOptionalInt32): [optional]  # noqa: E501
-            slug_private_key (bool, date, datetime, dict, float, int, list, str, none_type): SlugPrivateKey. [optional]  # noqa: E501
-            slug_public_key (bool, date, datetime, dict, float, int, list, str, none_type): SlugPublicKey. [optional]  # noqa: E501
+            slug_private_key (str): SlugPrivateKey. [optional]  # noqa: E501
+            slug_public_key (str): SlugPublicKey. [optional]  # noqa: E501
             template (ViewFieldValueOfOptionalInt32): [optional]  # noqa: E501
-            totp_password_slug (bool, date, datetime, dict, float, int, list, str, none_type): TotpPasswordSlug. [optional]  # noqa: E501
+            totp_password_slug (str): TotpPasswordSlug. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -313,7 +308,7 @@ class SecretDetailGeneralViewModel(ModelNormal):
             fields ([ViewTemplateFieldOfString]): Fields. [optional]  # noqa: E501
             folder (ViewFieldValueOfOptionalInt32): [optional]  # noqa: E501
             heartbeat_enabled (ViewFieldValueOfBoolean): [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
             is_favorite (bool): IsFavorite. [optional]  # noqa: E501
             is_out_of_sync (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             is_totp_enabled (bool): IsTotpEnabled. [optional]  # noqa: E501
@@ -324,10 +319,10 @@ class SecretDetailGeneralViewModel(ModelNormal):
             out_of_sync_reason (ViewFieldValueOfString): [optional]  # noqa: E501
             secret_policy (ViewFieldValueOfOptionalInt32): [optional]  # noqa: E501
             site (ViewFieldValueOfOptionalInt32): [optional]  # noqa: E501
-            slug_private_key (bool, date, datetime, dict, float, int, list, str, none_type): SlugPrivateKey. [optional]  # noqa: E501
-            slug_public_key (bool, date, datetime, dict, float, int, list, str, none_type): SlugPublicKey. [optional]  # noqa: E501
+            slug_private_key (str): SlugPrivateKey. [optional]  # noqa: E501
+            slug_public_key (str): SlugPublicKey. [optional]  # noqa: E501
             template (ViewFieldValueOfOptionalInt32): [optional]  # noqa: E501
-            totp_password_slug (bool, date, datetime, dict, float, int, list, str, none_type): TotpPasswordSlug. [optional]  # noqa: E501
+            totp_password_slug (str): TotpPasswordSlug. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

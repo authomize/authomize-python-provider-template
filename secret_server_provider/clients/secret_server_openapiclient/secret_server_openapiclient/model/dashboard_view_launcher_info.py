@@ -61,10 +61,8 @@ class DashboardViewLauncherInfo(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,40 +71,37 @@ class DashboardViewLauncherInfo(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'default_site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_proxy_credentials': (bool,),  # noqa: E501
-            'launcher_client_click': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_image': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_prompt_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_tooltip': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restricted_hosts': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'restrict_host': (bool,),  # noqa: E501
-            'restrict_host_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_prompt': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_selection': ([SiteModel],),  # noqa: E501
-            'use_protocol_handler': (bool,),  # noqa: E501
+            'default_site_id': (int, none_type,),  # noqa: E501
+            'has_proxy_credentials': (bool, none_type,),  # noqa: E501
+            'launcher_client_click': (str, none_type,),  # noqa: E501
+            'launcher_display_name': (str, none_type,),  # noqa: E501
+            'launcher_image': (str, none_type,),  # noqa: E501
+            'launcher_prompt_name': (str, none_type,),  # noqa: E501
+            'launcher_tooltip': (str, none_type,),  # noqa: E501
+            'launcher_type_id': (int, none_type,),  # noqa: E501
+            'restricted_hosts': ([str], none_type,),  # noqa: E501
+            'restrict_host': (bool, none_type,),  # noqa: E501
+            'restrict_host_type': (int, none_type,),  # noqa: E501
+            'site_prompt': (str, none_type,),  # noqa: E501
+            'site_selection': ([SiteModel], none_type,),  # noqa: E501
+            'use_protocol_handler': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -167,18 +162,18 @@ class DashboardViewLauncherInfo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            default_site_id (bool, date, datetime, dict, float, int, list, str, none_type): defaultSiteId. [optional]  # noqa: E501
+            default_site_id (int): defaultSiteId. [optional]  # noqa: E501
             has_proxy_credentials (bool): hasProxyCredentials. [optional]  # noqa: E501
-            launcher_client_click (bool, date, datetime, dict, float, int, list, str, none_type): launcherClientClick. [optional]  # noqa: E501
-            launcher_display_name (bool, date, datetime, dict, float, int, list, str, none_type): launcherDisplayName. [optional]  # noqa: E501
-            launcher_image (bool, date, datetime, dict, float, int, list, str, none_type): launcherImage. [optional]  # noqa: E501
-            launcher_prompt_name (bool, date, datetime, dict, float, int, list, str, none_type): launcherPromptName. [optional]  # noqa: E501
-            launcher_tooltip (bool, date, datetime, dict, float, int, list, str, none_type): launcherTooltip. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): launcherTypeId. [optional]  # noqa: E501
-            restricted_hosts ([bool, date, datetime, dict, float, int, list, str, none_type]): restrictedHosts. [optional]  # noqa: E501
+            launcher_client_click (str): launcherClientClick. [optional]  # noqa: E501
+            launcher_display_name (str): launcherDisplayName. [optional]  # noqa: E501
+            launcher_image (str): launcherImage. [optional]  # noqa: E501
+            launcher_prompt_name (str): launcherPromptName. [optional]  # noqa: E501
+            launcher_tooltip (str): launcherTooltip. [optional]  # noqa: E501
+            launcher_type_id (int): launcherTypeId. [optional]  # noqa: E501
+            restricted_hosts ([str]): restrictedHosts. [optional]  # noqa: E501
             restrict_host (bool): restrictHost. [optional]  # noqa: E501
-            restrict_host_type (bool, date, datetime, dict, float, int, list, str, none_type): restrictHostType. [optional]  # noqa: E501
-            site_prompt (bool, date, datetime, dict, float, int, list, str, none_type): sitePrompt. [optional]  # noqa: E501
+            restrict_host_type (int): restrictHostType. [optional]  # noqa: E501
+            site_prompt (str): sitePrompt. [optional]  # noqa: E501
             site_selection ([SiteModel]): siteSelection. [optional]  # noqa: E501
             use_protocol_handler (bool): useProtocolHandler. [optional]  # noqa: E501
         """
@@ -266,18 +261,18 @@ class DashboardViewLauncherInfo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            default_site_id (bool, date, datetime, dict, float, int, list, str, none_type): defaultSiteId. [optional]  # noqa: E501
+            default_site_id (int): defaultSiteId. [optional]  # noqa: E501
             has_proxy_credentials (bool): hasProxyCredentials. [optional]  # noqa: E501
-            launcher_client_click (bool, date, datetime, dict, float, int, list, str, none_type): launcherClientClick. [optional]  # noqa: E501
-            launcher_display_name (bool, date, datetime, dict, float, int, list, str, none_type): launcherDisplayName. [optional]  # noqa: E501
-            launcher_image (bool, date, datetime, dict, float, int, list, str, none_type): launcherImage. [optional]  # noqa: E501
-            launcher_prompt_name (bool, date, datetime, dict, float, int, list, str, none_type): launcherPromptName. [optional]  # noqa: E501
-            launcher_tooltip (bool, date, datetime, dict, float, int, list, str, none_type): launcherTooltip. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): launcherTypeId. [optional]  # noqa: E501
-            restricted_hosts ([bool, date, datetime, dict, float, int, list, str, none_type]): restrictedHosts. [optional]  # noqa: E501
+            launcher_client_click (str): launcherClientClick. [optional]  # noqa: E501
+            launcher_display_name (str): launcherDisplayName. [optional]  # noqa: E501
+            launcher_image (str): launcherImage. [optional]  # noqa: E501
+            launcher_prompt_name (str): launcherPromptName. [optional]  # noqa: E501
+            launcher_tooltip (str): launcherTooltip. [optional]  # noqa: E501
+            launcher_type_id (int): launcherTypeId. [optional]  # noqa: E501
+            restricted_hosts ([str]): restrictedHosts. [optional]  # noqa: E501
             restrict_host (bool): restrictHost. [optional]  # noqa: E501
-            restrict_host_type (bool, date, datetime, dict, float, int, list, str, none_type): restrictHostType. [optional]  # noqa: E501
-            site_prompt (bool, date, datetime, dict, float, int, list, str, none_type): sitePrompt. [optional]  # noqa: E501
+            restrict_host_type (int): restrictHostType. [optional]  # noqa: E501
+            site_prompt (str): sitePrompt. [optional]  # noqa: E501
             site_selection ([SiteModel]): siteSelection. [optional]  # noqa: E501
             use_protocol_handler (bool): useProtocolHandler. [optional]  # noqa: E501
         """

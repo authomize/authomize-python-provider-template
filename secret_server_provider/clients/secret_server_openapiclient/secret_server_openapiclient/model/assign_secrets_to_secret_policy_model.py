@@ -57,10 +57,8 @@ class AssignSecretsToSecretPolicyModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class AssignSecretsToSecretPolicyModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'inherit_secret_policy': (bool,),  # noqa: E501
-            'secret_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'inherit_secret_policy': (bool, none_type,),  # noqa: E501
+            'secret_ids': ([int], none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -140,8 +135,8 @@ class AssignSecretsToSecretPolicyModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             inherit_secret_policy (bool): Set if Secrets should inherit from the Secret Policy.. [optional]  # noqa: E501
-            secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Ids of Secrets to assign to the supplied Secret Policy.. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Id to assign secrets to.. [optional]  # noqa: E501
+            secret_ids ([int]): Ids of Secrets to assign to the supplied Secret Policy.. [optional]  # noqa: E501
+            secret_policy_id (int): Secret Policy Id to assign secrets to.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -228,8 +223,8 @@ class AssignSecretsToSecretPolicyModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             inherit_secret_policy (bool): Set if Secrets should inherit from the Secret Policy.. [optional]  # noqa: E501
-            secret_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): Ids of Secrets to assign to the supplied Secret Policy.. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Id to assign secrets to.. [optional]  # noqa: E501
+            secret_ids ([int]): Ids of Secrets to assign to the supplied Secret Policy.. [optional]  # noqa: E501
+            secret_policy_id (int): Secret Policy Id to assign secrets to.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

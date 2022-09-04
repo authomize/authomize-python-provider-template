@@ -61,10 +61,8 @@ class ReportScheduleCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,36 +71,33 @@ class ReportScheduleCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'custom_parameter_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'end_date_parameter_specific_date_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'end_date_parameter_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_parameter_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_parameter_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'report_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'schedule': (ScheduleCreateModel,),  # noqa: E501
-            'start_date_parameter_specific_date_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date_parameter_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_parameter_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'custom_parameter_value': (str, none_type,),  # noqa: E501
+            'end_date_parameter_specific_date_value': (datetime, none_type,),  # noqa: E501
+            'end_date_parameter_value': (str, none_type,),  # noqa: E501
+            'folder_parameter_value': (int, none_type,),  # noqa: E501
+            'group_parameter_value': (int, none_type,),  # noqa: E501
+            'report_id': (int, none_type,),  # noqa: E501
+            'schedule': (ScheduleCreateModel, none_type,),  # noqa: E501
+            'start_date_parameter_specific_date_value': (datetime, none_type,),  # noqa: E501
+            'start_date_parameter_value': (str, none_type,),  # noqa: E501
+            'user_parameter_value': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -159,16 +154,16 @@ class ReportScheduleCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            custom_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): Custom Parameter Value. [optional]  # noqa: E501
-            end_date_parameter_specific_date_value (bool, date, datetime, dict, float, int, list, str, none_type): Specific Date Value for when Specfic date is specified for EndDateParameterValue. [optional]  # noqa: E501
-            end_date_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): End Date Parameter Value. [optional]  # noqa: E501
-            folder_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): Folder Parameter Value. [optional]  # noqa: E501
-            group_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): Group Parameter Value. [optional]  # noqa: E501
-            report_id (bool, date, datetime, dict, float, int, list, str, none_type): Report Id. [optional]  # noqa: E501
+            custom_parameter_value (str): Custom Parameter Value. [optional]  # noqa: E501
+            end_date_parameter_specific_date_value (datetime): Specific Date Value for when Specfic date is specified for EndDateParameterValue. [optional]  # noqa: E501
+            end_date_parameter_value (str): End Date Parameter Value. [optional]  # noqa: E501
+            folder_parameter_value (int): Folder Parameter Value. [optional]  # noqa: E501
+            group_parameter_value (int): Group Parameter Value. [optional]  # noqa: E501
+            report_id (int): Report Id. [optional]  # noqa: E501
             schedule (ScheduleCreateModel): [optional]  # noqa: E501
-            start_date_parameter_specific_date_value (bool, date, datetime, dict, float, int, list, str, none_type): Specific Date Value for when Specfic date is specified for StartDateParameterValue. [optional]  # noqa: E501
-            start_date_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): Start Date Parameter Value. [optional]  # noqa: E501
-            user_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): User Parameter Value. [optional]  # noqa: E501
+            start_date_parameter_specific_date_value (datetime): Specific Date Value for when Specfic date is specified for StartDateParameterValue. [optional]  # noqa: E501
+            start_date_parameter_value (str): Start Date Parameter Value. [optional]  # noqa: E501
+            user_parameter_value (int): User Parameter Value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -254,16 +249,16 @@ class ReportScheduleCreateModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            custom_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): Custom Parameter Value. [optional]  # noqa: E501
-            end_date_parameter_specific_date_value (bool, date, datetime, dict, float, int, list, str, none_type): Specific Date Value for when Specfic date is specified for EndDateParameterValue. [optional]  # noqa: E501
-            end_date_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): End Date Parameter Value. [optional]  # noqa: E501
-            folder_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): Folder Parameter Value. [optional]  # noqa: E501
-            group_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): Group Parameter Value. [optional]  # noqa: E501
-            report_id (bool, date, datetime, dict, float, int, list, str, none_type): Report Id. [optional]  # noqa: E501
+            custom_parameter_value (str): Custom Parameter Value. [optional]  # noqa: E501
+            end_date_parameter_specific_date_value (datetime): Specific Date Value for when Specfic date is specified for EndDateParameterValue. [optional]  # noqa: E501
+            end_date_parameter_value (str): End Date Parameter Value. [optional]  # noqa: E501
+            folder_parameter_value (int): Folder Parameter Value. [optional]  # noqa: E501
+            group_parameter_value (int): Group Parameter Value. [optional]  # noqa: E501
+            report_id (int): Report Id. [optional]  # noqa: E501
             schedule (ScheduleCreateModel): [optional]  # noqa: E501
-            start_date_parameter_specific_date_value (bool, date, datetime, dict, float, int, list, str, none_type): Specific Date Value for when Specfic date is specified for StartDateParameterValue. [optional]  # noqa: E501
-            start_date_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): Start Date Parameter Value. [optional]  # noqa: E501
-            user_parameter_value (bool, date, datetime, dict, float, int, list, str, none_type): User Parameter Value. [optional]  # noqa: E501
+            start_date_parameter_specific_date_value (datetime): Specific Date Value for when Specfic date is specified for StartDateParameterValue. [optional]  # noqa: E501
+            start_date_parameter_value (str): Start Date Parameter Value. [optional]  # noqa: E501
+            user_parameter_value (int): User Parameter Value. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

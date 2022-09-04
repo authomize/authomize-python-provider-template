@@ -63,10 +63,8 @@ class SecretDetailGeneralModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,49 +73,46 @@ class SecretDetailGeneralModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'auto_change_password': (bool,),  # noqa: E501
-            'can_generate_ssh_key': (bool,),  # noqa: E501
-            'enable_inherit_secret_policy': (bool,),  # noqa: E501
-            'expiration': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fields': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'folder': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'heartbeat_enabled': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_favorite': (bool,),  # noqa: E501
-            'is_out_of_sync': (bool,),  # noqa: E501
-            'is_totp_enabled': (bool,),  # noqa: E501
-            'last_heart_beat_check': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_heart_beat_status': (SecretDetailHeartbeatStatus,),  # noqa: E501
-            'launchers': ([SecretDetailLauncher],),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'out_of_sync_reason': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policy': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'slug_private_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'slug_public_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'template': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'totp_password_slug': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'auto_change_password': (bool, none_type,),  # noqa: E501
+            'can_generate_ssh_key': (bool, none_type,),  # noqa: E501
+            'enable_inherit_secret_policy': (bool, none_type,),  # noqa: E501
+            'expiration': (str, none_type,),  # noqa: E501
+            'fields': ([str], none_type,),  # noqa: E501
+            'folder': (int, none_type,),  # noqa: E501
+            'heartbeat_enabled': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_favorite': (bool, none_type,),  # noqa: E501
+            'is_out_of_sync': (bool, none_type,),  # noqa: E501
+            'is_totp_enabled': (bool, none_type,),  # noqa: E501
+            'last_heart_beat_check': (datetime, none_type,),  # noqa: E501
+            'last_heart_beat_status': (SecretDetailHeartbeatStatus, none_type,),  # noqa: E501
+            'launchers': ([SecretDetailLauncher], none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'out_of_sync_reason': (str, none_type,),  # noqa: E501
+            'secret_policy': (int, none_type,),  # noqa: E501
+            'site': (int, none_type,),  # noqa: E501
+            'slug_private_key': (str, none_type,),  # noqa: E501
+            'slug_public_key': (str, none_type,),  # noqa: E501
+            'template': (int, none_type,),  # noqa: E501
+            'totp_password_slug': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -191,25 +186,25 @@ class SecretDetailGeneralModel(ModelNormal):
             auto_change_password (bool): Whether the password should automatically change upon expiration.. [optional]  # noqa: E501
             can_generate_ssh_key (bool): Can Generate SSH Key. [optional]  # noqa: E501
             enable_inherit_secret_policy (bool): Whether the secret policy is inherited from the containing folder. [optional]  # noqa: E501
-            expiration (bool, date, datetime, dict, float, int, list, str, none_type): Expiration. [optional]  # noqa: E501
-            fields ([bool, date, datetime, dict, float, int, list, str, none_type]): Secret Fields. [optional]  # noqa: E501
-            folder (bool, date, datetime, dict, float, int, list, str, none_type): Containing folder ID. [optional]  # noqa: E501
+            expiration (str): Expiration. [optional]  # noqa: E501
+            fields ([str]): Secret Fields. [optional]  # noqa: E501
+            folder (int): Containing folder ID. [optional]  # noqa: E501
             heartbeat_enabled (bool): Heartbeat Enabled. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Detail General Id. [optional]  # noqa: E501
+            id (int): Secret Detail General Id. [optional]  # noqa: E501
             is_favorite (bool): Is Favorite. [optional]  # noqa: E501
             is_out_of_sync (bool): Whether the secret is out of sync. [optional]  # noqa: E501
             is_totp_enabled (bool): Is One Time Password Enabled. [optional]  # noqa: E501
-            last_heart_beat_check (bool, date, datetime, dict, float, int, list, str, none_type): Time of last heartbeat check. [optional]  # noqa: E501
+            last_heart_beat_check (datetime): Time of last heartbeat check. [optional]  # noqa: E501
             last_heart_beat_status (SecretDetailHeartbeatStatus): [optional]  # noqa: E501
             launchers ([SecretDetailLauncher]): Launchers. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Detail General Name. [optional]  # noqa: E501
-            out_of_sync_reason (bool, date, datetime, dict, float, int, list, str, none_type): Reason message if the secret is out of sync. [optional]  # noqa: E501
-            secret_policy (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy. [optional]  # noqa: E501
-            site (bool, date, datetime, dict, float, int, list, str, none_type): Site. [optional]  # noqa: E501
-            slug_private_key (bool, date, datetime, dict, float, int, list, str, none_type): Private Key Field Slug. [optional]  # noqa: E501
-            slug_public_key (bool, date, datetime, dict, float, int, list, str, none_type): Public Key Field Slug. [optional]  # noqa: E501
-            template (bool, date, datetime, dict, float, int, list, str, none_type): Secret template. [optional]  # noqa: E501
-            totp_password_slug (bool, date, datetime, dict, float, int, list, str, none_type): One Time Password Field Slug. [optional]  # noqa: E501
+            name (str): Secret Detail General Name. [optional]  # noqa: E501
+            out_of_sync_reason (str): Reason message if the secret is out of sync. [optional]  # noqa: E501
+            secret_policy (int): Secret Policy. [optional]  # noqa: E501
+            site (int): Site. [optional]  # noqa: E501
+            slug_private_key (str): Private Key Field Slug. [optional]  # noqa: E501
+            slug_public_key (str): Public Key Field Slug. [optional]  # noqa: E501
+            template (int): Secret template. [optional]  # noqa: E501
+            totp_password_slug (str): One Time Password Field Slug. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -299,25 +294,25 @@ class SecretDetailGeneralModel(ModelNormal):
             auto_change_password (bool): Whether the password should automatically change upon expiration.. [optional]  # noqa: E501
             can_generate_ssh_key (bool): Can Generate SSH Key. [optional]  # noqa: E501
             enable_inherit_secret_policy (bool): Whether the secret policy is inherited from the containing folder. [optional]  # noqa: E501
-            expiration (bool, date, datetime, dict, float, int, list, str, none_type): Expiration. [optional]  # noqa: E501
-            fields ([bool, date, datetime, dict, float, int, list, str, none_type]): Secret Fields. [optional]  # noqa: E501
-            folder (bool, date, datetime, dict, float, int, list, str, none_type): Containing folder ID. [optional]  # noqa: E501
+            expiration (str): Expiration. [optional]  # noqa: E501
+            fields ([str]): Secret Fields. [optional]  # noqa: E501
+            folder (int): Containing folder ID. [optional]  # noqa: E501
             heartbeat_enabled (bool): Heartbeat Enabled. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Detail General Id. [optional]  # noqa: E501
+            id (int): Secret Detail General Id. [optional]  # noqa: E501
             is_favorite (bool): Is Favorite. [optional]  # noqa: E501
             is_out_of_sync (bool): Whether the secret is out of sync. [optional]  # noqa: E501
             is_totp_enabled (bool): Is One Time Password Enabled. [optional]  # noqa: E501
-            last_heart_beat_check (bool, date, datetime, dict, float, int, list, str, none_type): Time of last heartbeat check. [optional]  # noqa: E501
+            last_heart_beat_check (datetime): Time of last heartbeat check. [optional]  # noqa: E501
             last_heart_beat_status (SecretDetailHeartbeatStatus): [optional]  # noqa: E501
             launchers ([SecretDetailLauncher]): Launchers. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Detail General Name. [optional]  # noqa: E501
-            out_of_sync_reason (bool, date, datetime, dict, float, int, list, str, none_type): Reason message if the secret is out of sync. [optional]  # noqa: E501
-            secret_policy (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy. [optional]  # noqa: E501
-            site (bool, date, datetime, dict, float, int, list, str, none_type): Site. [optional]  # noqa: E501
-            slug_private_key (bool, date, datetime, dict, float, int, list, str, none_type): Private Key Field Slug. [optional]  # noqa: E501
-            slug_public_key (bool, date, datetime, dict, float, int, list, str, none_type): Public Key Field Slug. [optional]  # noqa: E501
-            template (bool, date, datetime, dict, float, int, list, str, none_type): Secret template. [optional]  # noqa: E501
-            totp_password_slug (bool, date, datetime, dict, float, int, list, str, none_type): One Time Password Field Slug. [optional]  # noqa: E501
+            name (str): Secret Detail General Name. [optional]  # noqa: E501
+            out_of_sync_reason (str): Reason message if the secret is out of sync. [optional]  # noqa: E501
+            secret_policy (int): Secret Policy. [optional]  # noqa: E501
+            site (int): Site. [optional]  # noqa: E501
+            slug_private_key (str): Private Key Field Slug. [optional]  # noqa: E501
+            slug_public_key (str): Public Key Field Slug. [optional]  # noqa: E501
+            template (int): Secret template. [optional]  # noqa: E501
+            totp_password_slug (str): One Time Password Field Slug. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

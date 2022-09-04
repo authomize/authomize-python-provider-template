@@ -57,10 +57,8 @@ class ConfigurationLauncherSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,34 +66,31 @@ class ConfigurationLauncherSettingsModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'check_in_secret_on_last_launcher_close': (bool,),  # noqa: E501
-            'close_launcher_on_check_in_secret': (bool,),  # noqa: E501
-            'enable_domain_download': (bool,),  # noqa: E501
-            'enable_domain_upload': (bool,),  # noqa: E501
-            'enable_launcher': (bool,),  # noqa: E501
-            'enable_launcher_auto_update': (bool,),  # noqa: E501
-            'enable_web_parsing': (bool,),  # noqa: E501
-            'launcher_deployment_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'send_secret_url_to_launcher': (bool,),  # noqa: E501
+            'check_in_secret_on_last_launcher_close': (bool, none_type,),  # noqa: E501
+            'close_launcher_on_check_in_secret': (bool, none_type,),  # noqa: E501
+            'enable_domain_download': (bool, none_type,),  # noqa: E501
+            'enable_domain_upload': (bool, none_type,),  # noqa: E501
+            'enable_launcher': (bool, none_type,),  # noqa: E501
+            'enable_launcher_auto_update': (bool, none_type,),  # noqa: E501
+            'enable_web_parsing': (bool, none_type,),  # noqa: E501
+            'launcher_deployment_type': (str, none_type,),  # noqa: E501
+            'send_secret_url_to_launcher': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -158,7 +153,7 @@ class ConfigurationLauncherSettingsModel(ModelNormal):
             enable_launcher (bool): Enable Launcher. [optional]  # noqa: E501
             enable_launcher_auto_update (bool): Enable Launcher Auto Update. [optional]  # noqa: E501
             enable_web_parsing (bool): Allow Secret Server to retrieve and parse the mapped website when using the web launcher.. [optional]  # noqa: E501
-            launcher_deployment_type (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Deployment Type. [optional]  # noqa: E501
+            launcher_deployment_type (str): Launcher Deployment Type. [optional]  # noqa: E501
             send_secret_url_to_launcher (bool): Send the URL that is on the Secret to the web password launcher in addition to the bookmarklet. [optional]  # noqa: E501
         """
 
@@ -252,7 +247,7 @@ class ConfigurationLauncherSettingsModel(ModelNormal):
             enable_launcher (bool): Enable Launcher. [optional]  # noqa: E501
             enable_launcher_auto_update (bool): Enable Launcher Auto Update. [optional]  # noqa: E501
             enable_web_parsing (bool): Allow Secret Server to retrieve and parse the mapped website when using the web launcher.. [optional]  # noqa: E501
-            launcher_deployment_type (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Deployment Type. [optional]  # noqa: E501
+            launcher_deployment_type (str): Launcher Deployment Type. [optional]  # noqa: E501
             send_secret_url_to_launcher (bool): Send the URL that is on the Secret to the web password launcher in addition to the bookmarklet. [optional]  # noqa: E501
         """
 

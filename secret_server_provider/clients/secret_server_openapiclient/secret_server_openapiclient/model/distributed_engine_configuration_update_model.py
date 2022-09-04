@@ -71,10 +71,8 @@ class DistributedEngineConfigurationUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,37 +81,34 @@ class DistributedEngineConfigurationUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'azure_service_bus_transport_type': (UpdateFieldValueOfAzureServiceBusTransportType,),  # noqa: E501
-            'callback_port': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'callback_url': (UpdateFieldValueOfString,),  # noqa: E501
-            'default_callback_interval_seconds': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable_distributed_engines': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'protocol': (UpdateFieldValueOfDistributedEngineProtocol,),  # noqa: E501
-            'response_bus_site_connector_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'secret_heartbeat_message_minutes_to_live': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'secret_heartbeat_message_retry_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'secret_password_change_message_minutes_to_live': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'secret_password_change_message_retry_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'azure_service_bus_transport_type': (UpdateFieldValueOfAzureServiceBusTransportType, none_type,),  # noqa: E501
+            'callback_port': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'callback_url': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'default_callback_interval_seconds': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable_distributed_engines': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'protocol': (UpdateFieldValueOfDistributedEngineProtocol, none_type,),  # noqa: E501
+            'response_bus_site_connector_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'secret_heartbeat_message_minutes_to_live': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'secret_heartbeat_message_retry_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'secret_password_change_message_minutes_to_live': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'secret_password_change_message_retry_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

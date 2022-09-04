@@ -61,10 +61,8 @@ class RecurringScheduleEntityModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,29 +71,26 @@ class RecurringScheduleEntityModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'entity_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'entity_type': (RecurringScheduleEntityType,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'entity_id': (int, none_type,),  # noqa: E501
+            'entity_type': (RecurringScheduleEntityType, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,9 +140,9 @@ class RecurringScheduleEntityModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            entity_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the entity that is subscribing to this schedule. [optional]  # noqa: E501
+            entity_id (int): The ID of the entity that is subscribing to this schedule. [optional]  # noqa: E501
             entity_type (RecurringScheduleEntityType): [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The id of schedule entity map. [optional]  # noqa: E501
+            id (int): The id of schedule entity map. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,9 +228,9 @@ class RecurringScheduleEntityModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            entity_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the entity that is subscribing to this schedule. [optional]  # noqa: E501
+            entity_id (int): The ID of the entity that is subscribing to this schedule. [optional]  # noqa: E501
             entity_type (RecurringScheduleEntityType): [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The id of schedule entity map. [optional]  # noqa: E501
+            id (int): The id of schedule entity map. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

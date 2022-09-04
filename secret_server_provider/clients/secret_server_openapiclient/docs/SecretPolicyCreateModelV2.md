@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **general_items** | [**SecretPolicyGeneralItemsCreateModel**](SecretPolicyGeneralItemsCreateModel.md) |  | [optional] 
 **launcher_items** | [**SecretPolicyLauncherItemsCreateModel**](SecretPolicyLauncherItemsCreateModel.md) |  | [optional] 
 **rpc_items** | [**SecretPolicyRpcItemsCreateModel**](SecretPolicyRpcItemsCreateModel.md) |  | [optional] 
-**secret_policy_description** | **bool, date, datetime, dict, float, int, list, str, none_type** | Secret Policy Description | [optional] 
-**secret_policy_name** | **bool, date, datetime, dict, float, int, list, str, none_type** | Secret Policy Name | [optional] 
+**secret_policy_description** | **str** | Secret Policy Description | [optional] 
+**secret_policy_name** | **str** | Secret Policy Name | [optional] 
 **security_items** | [**SecretPolicySecurityItemsCreateModel**](SecretPolicySecurityItemsCreateModel.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

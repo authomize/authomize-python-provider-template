@@ -57,13 +57,11 @@ class LauncherAgentUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
         ('id',): {
             'inclusive_minimum': 1,
         },
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -71,29 +69,26 @@ class LauncherAgentUpdateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'record_keystrokes': (bool,),  # noqa: E501
-            'record_standalone_sessions': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'record_keystrokes': (bool, none_type,),  # noqa: E501
+            'record_standalone_sessions': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,7 +140,7 @@ class LauncherAgentUpdateArgs(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether the Launcher Agent is active. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Agent ID. Must match ID in path. [optional]  # noqa: E501
+            id (int): Launcher Agent ID. Must match ID in path. [optional]  # noqa: E501
             record_keystrokes (bool): Whether or not this agent is allowed to record keystroke data. [optional]  # noqa: E501
             record_standalone_sessions (bool): Whether or not this agent is allowed to record headless sessions. [optional]  # noqa: E501
         """
@@ -234,7 +229,7 @@ class LauncherAgentUpdateArgs(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether the Launcher Agent is active. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Agent ID. Must match ID in path. [optional]  # noqa: E501
+            id (int): Launcher Agent ID. Must match ID in path. [optional]  # noqa: E501
             record_keystrokes (bool): Whether or not this agent is allowed to record keystroke data. [optional]  # noqa: E501
             record_standalone_sessions (bool): Whether or not this agent is allowed to record headless sessions. [optional]  # noqa: E501
         """

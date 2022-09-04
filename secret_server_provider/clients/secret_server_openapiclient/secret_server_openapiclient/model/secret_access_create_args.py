@@ -57,10 +57,8 @@ class SecretAccessCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class SecretAccessCreateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_number': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ticket_system_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'secret_id': (int,),  # noqa: E501
+            'expiration_date': (datetime, none_type,),  # noqa: E501
+            'request_comment': (str, none_type,),  # noqa: E501
+            'start_date': (datetime, none_type,),  # noqa: E501
+            'ticket_number': (str, none_type,),  # noqa: E501
+            'ticket_system_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -115,7 +110,7 @@ class SecretAccessCreateArgs(ModelNormal):
         """SecretAccessCreateArgs - a model defined in OpenAPI
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Id
+            secret_id (int): Secret Id
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -148,11 +143,11 @@ class SecretAccessCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            expiration_date (bool, date, datetime, dict, float, int, list, str, none_type): Expiration Date. [optional]  # noqa: E501
-            request_comment (bool, date, datetime, dict, float, int, list, str, none_type): Request Comment. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): Start Date. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number. [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System ID. [optional]  # noqa: E501
+            expiration_date (datetime): Expiration Date. [optional]  # noqa: E501
+            request_comment (str): Request Comment. [optional]  # noqa: E501
+            start_date (datetime): Start Date. [optional]  # noqa: E501
+            ticket_number (str): Ticket Number. [optional]  # noqa: E501
+            ticket_system_id (int): Ticket System ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -209,7 +204,7 @@ class SecretAccessCreateArgs(ModelNormal):
         """SecretAccessCreateArgs - a model defined in OpenAPI
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Id
+            secret_id (int): Secret Id
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -242,11 +237,11 @@ class SecretAccessCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            expiration_date (bool, date, datetime, dict, float, int, list, str, none_type): Expiration Date. [optional]  # noqa: E501
-            request_comment (bool, date, datetime, dict, float, int, list, str, none_type): Request Comment. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): Start Date. [optional]  # noqa: E501
-            ticket_number (bool, date, datetime, dict, float, int, list, str, none_type): Ticket Number. [optional]  # noqa: E501
-            ticket_system_id (bool, date, datetime, dict, float, int, list, str, none_type): Ticket System ID. [optional]  # noqa: E501
+            expiration_date (datetime): Expiration Date. [optional]  # noqa: E501
+            request_comment (str): Request Comment. [optional]  # noqa: E501
+            start_date (datetime): Start Date. [optional]  # noqa: E501
+            ticket_number (str): Ticket Number. [optional]  # noqa: E501
+            ticket_system_id (int): Ticket System ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

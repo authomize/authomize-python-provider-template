@@ -63,10 +63,8 @@ class DisasterRecoveryDataReplicaModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,34 +73,31 @@ class DisasterRecoveryDataReplicaModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'error': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folders': ([FolderSimpleModel],),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_replicating': (bool,),  # noqa: E501
-            'last_replicated': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'location': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (DisasterRecoveryDataReplicaStatus,),  # noqa: E501
+            'error': (str, none_type,),  # noqa: E501
+            'folders': ([FolderSimpleModel], none_type,),  # noqa: E501
+            'id': (str, none_type,),  # noqa: E501
+            'is_replicating': (bool, none_type,),  # noqa: E501
+            'last_replicated': (datetime, none_type,),  # noqa: E501
+            'location': (str, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'status': (DisasterRecoveryDataReplicaStatus, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -157,13 +152,13 @@ class DisasterRecoveryDataReplicaModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            error (bool, date, datetime, dict, float, int, list, str, none_type): Any error that occurred on the last data replication with this data replica.. [optional]  # noqa: E501
+            error (str): Any error that occurred on the last data replication with this data replica.. [optional]  # noqa: E501
             folders ([FolderSimpleModel]): The folders to be replicated, default is all folders.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The data replica ID.. [optional]  # noqa: E501
+            id (str): The data replica ID.. [optional]  # noqa: E501
             is_replicating (bool): Whether data replication is currently active for this data replica.. [optional]  # noqa: E501
-            last_replicated (bool, date, datetime, dict, float, int, list, str, none_type): The last time data replication was requested by this data replica.. [optional]  # noqa: E501
-            location (bool, date, datetime, dict, float, int, list, str, none_type): The location of the data replica.. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the data replica.. [optional]  # noqa: E501
+            last_replicated (datetime): The last time data replication was requested by this data replica.. [optional]  # noqa: E501
+            location (str): The location of the data replica.. [optional]  # noqa: E501
+            name (str): The name of the data replica.. [optional]  # noqa: E501
             status (DisasterRecoveryDataReplicaStatus): [optional]  # noqa: E501
         """
 
@@ -250,13 +245,13 @@ class DisasterRecoveryDataReplicaModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            error (bool, date, datetime, dict, float, int, list, str, none_type): Any error that occurred on the last data replication with this data replica.. [optional]  # noqa: E501
+            error (str): Any error that occurred on the last data replication with this data replica.. [optional]  # noqa: E501
             folders ([FolderSimpleModel]): The folders to be replicated, default is all folders.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The data replica ID.. [optional]  # noqa: E501
+            id (str): The data replica ID.. [optional]  # noqa: E501
             is_replicating (bool): Whether data replication is currently active for this data replica.. [optional]  # noqa: E501
-            last_replicated (bool, date, datetime, dict, float, int, list, str, none_type): The last time data replication was requested by this data replica.. [optional]  # noqa: E501
-            location (bool, date, datetime, dict, float, int, list, str, none_type): The location of the data replica.. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the data replica.. [optional]  # noqa: E501
+            last_replicated (datetime): The last time data replication was requested by this data replica.. [optional]  # noqa: E501
+            location (str): The location of the data replica.. [optional]  # noqa: E501
+            name (str): The name of the data replica.. [optional]  # noqa: E501
             status (DisasterRecoveryDataReplicaStatus): [optional]  # noqa: E501
         """
 

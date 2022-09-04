@@ -57,10 +57,8 @@ class HealthCheckModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class HealthCheckModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'database_healthy': (bool,),  # noqa: E501
-            'database_mismatch': (bool,),  # noqa: E501
-            'healthy': (bool,),  # noqa: E501
-            'now': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'provision_deletion_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'read_only_mode': (bool,),  # noqa: E501
-            'scheduled_for_deletion': (bool,),  # noqa: E501
-            'service_bus_healthy': (bool,),  # noqa: E501
-            'storage_account_healthy': (bool,),  # noqa: E501
-            'utc_now': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'database_healthy': (bool, none_type,),  # noqa: E501
+            'database_mismatch': (bool, none_type,),  # noqa: E501
+            'healthy': (bool, none_type,),  # noqa: E501
+            'now': (datetime, none_type,),  # noqa: E501
+            'provision_deletion_date_time': (datetime, none_type,),  # noqa: E501
+            'read_only_mode': (bool, none_type,),  # noqa: E501
+            'scheduled_for_deletion': (bool, none_type,),  # noqa: E501
+            'service_bus_healthy': (bool, none_type,),  # noqa: E501
+            'storage_account_healthy': (bool, none_type,),  # noqa: E501
+            'utc_now': (datetime, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -156,13 +151,13 @@ class HealthCheckModel(ModelNormal):
             database_healthy (bool): DatabaseHealthy. [optional]  # noqa: E501
             database_mismatch (bool): DatabaseMismatch. [optional]  # noqa: E501
             healthy (bool): Healthy. [optional]  # noqa: E501
-            now (bool, date, datetime, dict, float, int, list, str, none_type): Now. [optional]  # noqa: E501
-            provision_deletion_date_time (bool, date, datetime, dict, float, int, list, str, none_type): ProvisionDeletionDateTime. [optional]  # noqa: E501
+            now (datetime): Now. [optional]  # noqa: E501
+            provision_deletion_date_time (datetime): ProvisionDeletionDateTime. [optional]  # noqa: E501
             read_only_mode (bool): ReadOnlyMode. [optional]  # noqa: E501
             scheduled_for_deletion (bool): ScheduledForDeletion. [optional]  # noqa: E501
             service_bus_healthy (bool): ServiceBusHealthy. [optional]  # noqa: E501
             storage_account_healthy (bool): StorageAccountHealthy. [optional]  # noqa: E501
-            utc_now (bool, date, datetime, dict, float, int, list, str, none_type): UtcNow. [optional]  # noqa: E501
+            utc_now (datetime): UtcNow. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -251,13 +246,13 @@ class HealthCheckModel(ModelNormal):
             database_healthy (bool): DatabaseHealthy. [optional]  # noqa: E501
             database_mismatch (bool): DatabaseMismatch. [optional]  # noqa: E501
             healthy (bool): Healthy. [optional]  # noqa: E501
-            now (bool, date, datetime, dict, float, int, list, str, none_type): Now. [optional]  # noqa: E501
-            provision_deletion_date_time (bool, date, datetime, dict, float, int, list, str, none_type): ProvisionDeletionDateTime. [optional]  # noqa: E501
+            now (datetime): Now. [optional]  # noqa: E501
+            provision_deletion_date_time (datetime): ProvisionDeletionDateTime. [optional]  # noqa: E501
             read_only_mode (bool): ReadOnlyMode. [optional]  # noqa: E501
             scheduled_for_deletion (bool): ScheduledForDeletion. [optional]  # noqa: E501
             service_bus_healthy (bool): ServiceBusHealthy. [optional]  # noqa: E501
             storage_account_healthy (bool): StorageAccountHealthy. [optional]  # noqa: E501
-            utc_now (bool, date, datetime, dict, float, int, list, str, none_type): UtcNow. [optional]  # noqa: E501
+            utc_now (datetime): UtcNow. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

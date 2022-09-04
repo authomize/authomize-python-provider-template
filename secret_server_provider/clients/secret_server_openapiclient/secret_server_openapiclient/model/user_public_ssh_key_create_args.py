@@ -57,10 +57,8 @@ class UserPublicSshKeyCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class UserPublicSshKeyCreateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'format': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'passphrase': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'description': (str,),  # noqa: E501
+            'format': (str,),  # noqa: E501
+            'passphrase': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -109,8 +104,8 @@ class UserPublicSshKeyCreateArgs(ModelNormal):
         """UserPublicSshKeyCreateArgs - a model defined in OpenAPI
 
         Args:
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description
-            format (bool, date, datetime, dict, float, int, list, str, none_type): Format of private key file
+            description (str): Description
+            format (str): Format of private key file
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -143,7 +138,7 @@ class UserPublicSshKeyCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            passphrase (bool, date, datetime, dict, float, int, list, str, none_type): Passphrase. [optional]  # noqa: E501
+            passphrase (str): Passphrase. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -201,8 +196,8 @@ class UserPublicSshKeyCreateArgs(ModelNormal):
         """UserPublicSshKeyCreateArgs - a model defined in OpenAPI
 
         Args:
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description
-            format (bool, date, datetime, dict, float, int, list, str, none_type): Format of private key file
+            description (str): Description
+            format (str): Format of private key file
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -235,7 +230,7 @@ class UserPublicSshKeyCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            passphrase (bool, date, datetime, dict, float, int, list, str, none_type): Passphrase. [optional]  # noqa: E501
+            passphrase (str): Passphrase. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

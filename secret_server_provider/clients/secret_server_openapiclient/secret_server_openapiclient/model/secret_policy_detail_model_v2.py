@@ -67,10 +67,8 @@ class SecretPolicyDetailModelV2(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,38 +77,35 @@ class SecretPolicyDetailModelV2(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'affected_folder_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'affected_inheriting_folders_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'affected_inheriting_secrets_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'affected_secret_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'general_items': (SecretPolicyGeneralItemsModel,),  # noqa: E501
-            'launcher_items': (SecretPolicyLauncherItemsModel,),  # noqa: E501
-            'rpc_items': (SecretPolicyRpcItemsModel,),  # noqa: E501
-            'secret_policy_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policy_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'security_items': (SecretPolicySecurityItemsModel,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'affected_folder_count': (int, none_type,),  # noqa: E501
+            'affected_inheriting_folders_count': (int, none_type,),  # noqa: E501
+            'affected_inheriting_secrets_count': (int, none_type,),  # noqa: E501
+            'affected_secret_count': (int, none_type,),  # noqa: E501
+            'general_items': (SecretPolicyGeneralItemsModel, none_type,),  # noqa: E501
+            'launcher_items': (SecretPolicyLauncherItemsModel, none_type,),  # noqa: E501
+            'rpc_items': (SecretPolicyRpcItemsModel, none_type,),  # noqa: E501
+            'secret_policy_description': (str, none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
+            'secret_policy_name': (str, none_type,),  # noqa: E501
+            'security_items': (SecretPolicySecurityItemsModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -170,16 +165,16 @@ class SecretPolicyDetailModelV2(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Indicates the policy is active. [optional]  # noqa: E501
-            affected_folder_count (bool, date, datetime, dict, float, int, list, str, none_type): The count of total folders that would be affected by changing this policy. [optional]  # noqa: E501
-            affected_inheriting_folders_count (bool, date, datetime, dict, float, int, list, str, none_type): The count of inherited secrets that would be affected by changing this policy. [optional]  # noqa: E501
-            affected_inheriting_secrets_count (bool, date, datetime, dict, float, int, list, str, none_type): The count of inherited secrets that would be affected by changing this policy. [optional]  # noqa: E501
-            affected_secret_count (bool, date, datetime, dict, float, int, list, str, none_type): The count of total secrets that would be affected by changing this policy. [optional]  # noqa: E501
+            affected_folder_count (int): The count of total folders that would be affected by changing this policy. [optional]  # noqa: E501
+            affected_inheriting_folders_count (int): The count of inherited secrets that would be affected by changing this policy. [optional]  # noqa: E501
+            affected_inheriting_secrets_count (int): The count of inherited secrets that would be affected by changing this policy. [optional]  # noqa: E501
+            affected_secret_count (int): The count of total secrets that would be affected by changing this policy. [optional]  # noqa: E501
             general_items (SecretPolicyGeneralItemsModel): [optional]  # noqa: E501
             launcher_items (SecretPolicyLauncherItemsModel): [optional]  # noqa: E501
             rpc_items (SecretPolicyRpcItemsModel): [optional]  # noqa: E501
-            secret_policy_description (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Description. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Id. [optional]  # noqa: E501
-            secret_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Name. [optional]  # noqa: E501
+            secret_policy_description (str): Secret Policy Description. [optional]  # noqa: E501
+            secret_policy_id (int): Secret Policy Id. [optional]  # noqa: E501
+            secret_policy_name (str): Secret Policy Name. [optional]  # noqa: E501
             security_items (SecretPolicySecurityItemsModel): [optional]  # noqa: E501
         """
 
@@ -267,16 +262,16 @@ class SecretPolicyDetailModelV2(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Indicates the policy is active. [optional]  # noqa: E501
-            affected_folder_count (bool, date, datetime, dict, float, int, list, str, none_type): The count of total folders that would be affected by changing this policy. [optional]  # noqa: E501
-            affected_inheriting_folders_count (bool, date, datetime, dict, float, int, list, str, none_type): The count of inherited secrets that would be affected by changing this policy. [optional]  # noqa: E501
-            affected_inheriting_secrets_count (bool, date, datetime, dict, float, int, list, str, none_type): The count of inherited secrets that would be affected by changing this policy. [optional]  # noqa: E501
-            affected_secret_count (bool, date, datetime, dict, float, int, list, str, none_type): The count of total secrets that would be affected by changing this policy. [optional]  # noqa: E501
+            affected_folder_count (int): The count of total folders that would be affected by changing this policy. [optional]  # noqa: E501
+            affected_inheriting_folders_count (int): The count of inherited secrets that would be affected by changing this policy. [optional]  # noqa: E501
+            affected_inheriting_secrets_count (int): The count of inherited secrets that would be affected by changing this policy. [optional]  # noqa: E501
+            affected_secret_count (int): The count of total secrets that would be affected by changing this policy. [optional]  # noqa: E501
             general_items (SecretPolicyGeneralItemsModel): [optional]  # noqa: E501
             launcher_items (SecretPolicyLauncherItemsModel): [optional]  # noqa: E501
             rpc_items (SecretPolicyRpcItemsModel): [optional]  # noqa: E501
-            secret_policy_description (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Description. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Id. [optional]  # noqa: E501
-            secret_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Name. [optional]  # noqa: E501
+            secret_policy_description (str): Secret Policy Description. [optional]  # noqa: E501
+            secret_policy_id (int): Secret Policy Id. [optional]  # noqa: E501
+            secret_policy_name (str): Secret Policy Name. [optional]  # noqa: E501
             security_items (SecretPolicySecurityItemsModel): [optional]  # noqa: E501
         """
 

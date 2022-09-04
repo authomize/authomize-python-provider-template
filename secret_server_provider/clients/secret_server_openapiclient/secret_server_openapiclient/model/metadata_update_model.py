@@ -71,10 +71,8 @@ class MetadataUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,33 +81,30 @@ class MetadataUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'contains_personal_information': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'metadata_item_data_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'value_bit': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'value_date_time': (UpdateFieldValueOfOptionalDateTime,),  # noqa: E501
-            'value_int': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'value_number': (UpdateFieldValueOfOptionalDouble,),  # noqa: E501
-            'value_string': (UpdateFieldValueOfString,),  # noqa: E501
+            'contains_personal_information': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'metadata_item_data_id': (int, none_type,),  # noqa: E501
+            'value_bit': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'value_date_time': (UpdateFieldValueOfOptionalDateTime, none_type,),  # noqa: E501
+            'value_int': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'value_number': (UpdateFieldValueOfOptionalDouble, none_type,),  # noqa: E501
+            'value_string': (UpdateFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -164,7 +159,7 @@ class MetadataUpdateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             contains_personal_information (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
-            metadata_item_data_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence ID for the metadata field. [optional]  # noqa: E501
+            metadata_item_data_id (int): The sequence ID for the metadata field. [optional]  # noqa: E501
             value_bit (UpdateFieldValueOfOptionalBoolean): [optional]  # noqa: E501
             value_date_time (UpdateFieldValueOfOptionalDateTime): [optional]  # noqa: E501
             value_int (UpdateFieldValueOfOptionalInt32): [optional]  # noqa: E501
@@ -256,7 +251,7 @@ class MetadataUpdateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             contains_personal_information (UpdateFieldValueOfBoolean): [optional]  # noqa: E501
-            metadata_item_data_id (bool, date, datetime, dict, float, int, list, str, none_type): The sequence ID for the metadata field. [optional]  # noqa: E501
+            metadata_item_data_id (int): The sequence ID for the metadata field. [optional]  # noqa: E501
             value_bit (UpdateFieldValueOfOptionalBoolean): [optional]  # noqa: E501
             value_date_time (UpdateFieldValueOfOptionalDateTime): [optional]  # noqa: E501
             value_int (UpdateFieldValueOfOptionalInt32): [optional]  # noqa: E501

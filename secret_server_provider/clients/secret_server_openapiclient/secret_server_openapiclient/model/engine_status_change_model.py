@@ -61,10 +61,8 @@ class EngineStatusChangeModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class EngineStatusChangeModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'callback_interval': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'change_type': (EngineStatusChangeType,),  # noqa: E501
-            'engine_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_connector_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'callback_interval': (int, none_type,),  # noqa: E501
+            'change_type': (EngineStatusChangeType, none_type,),  # noqa: E501
+            'engine_id': (int, none_type,),  # noqa: E501
+            'site_connector_id': (int, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'site_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,12 +146,12 @@ class EngineStatusChangeModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            callback_interval (bool, date, datetime, dict, float, int, list, str, none_type): When activating an engine if SiteId is null this will be the default callback interval. [optional]  # noqa: E501
+            callback_interval (int): When activating an engine if SiteId is null this will be the default callback interval. [optional]  # noqa: E501
             change_type (EngineStatusChangeType): [optional]  # noqa: E501
-            engine_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the engine to change status. [optional]  # noqa: E501
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): When activating an engine if SiteId is null this is the site connector that will be used.. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): When activating an engine SiteId is required. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): When activating an engine if SiteId is null you can pass a SiteName and it will create the site and then activate the engine. [optional]  # noqa: E501
+            engine_id (int): The ID of the engine to change status. [optional]  # noqa: E501
+            site_connector_id (int): When activating an engine if SiteId is null this is the site connector that will be used.. [optional]  # noqa: E501
+            site_id (int): When activating an engine SiteId is required. [optional]  # noqa: E501
+            site_name (str): When activating an engine if SiteId is null you can pass a SiteName and it will create the site and then activate the engine. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,12 +237,12 @@ class EngineStatusChangeModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            callback_interval (bool, date, datetime, dict, float, int, list, str, none_type): When activating an engine if SiteId is null this will be the default callback interval. [optional]  # noqa: E501
+            callback_interval (int): When activating an engine if SiteId is null this will be the default callback interval. [optional]  # noqa: E501
             change_type (EngineStatusChangeType): [optional]  # noqa: E501
-            engine_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the engine to change status. [optional]  # noqa: E501
-            site_connector_id (bool, date, datetime, dict, float, int, list, str, none_type): When activating an engine if SiteId is null this is the site connector that will be used.. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): When activating an engine SiteId is required. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): When activating an engine if SiteId is null you can pass a SiteName and it will create the site and then activate the engine. [optional]  # noqa: E501
+            engine_id (int): The ID of the engine to change status. [optional]  # noqa: E501
+            site_connector_id (int): When activating an engine if SiteId is null this is the site connector that will be used.. [optional]  # noqa: E501
+            site_id (int): When activating an engine SiteId is required. [optional]  # noqa: E501
+            site_name (str): When activating an engine if SiteId is null you can pass a SiteName and it will create the site and then activate the engine. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

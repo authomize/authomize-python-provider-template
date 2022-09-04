@@ -57,10 +57,8 @@ class PlatformConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class PlatformConfigurationModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'create_groups_during_synchronization': (bool,),  # noqa: E501
-            'enable_synchronization': (bool,),  # noqa: E501
-            'open_id_connect_client_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'open_id_connect_client_secret': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'open_id_connect_enabled': (bool,),  # noqa: E501
-            'open_id_connect_login_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'open_id_connect_logout_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'open_id_connect_reply_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'synchronization_interval_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'synchronization_interval_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'create_groups_during_synchronization': (bool, none_type,),  # noqa: E501
+            'enable_synchronization': (bool, none_type,),  # noqa: E501
+            'open_id_connect_client_id': (str, none_type,),  # noqa: E501
+            'open_id_connect_client_secret': (str, none_type,),  # noqa: E501
+            'open_id_connect_enabled': (bool, none_type,),  # noqa: E501
+            'open_id_connect_login_url': (str, none_type,),  # noqa: E501
+            'open_id_connect_logout_url': (str, none_type,),  # noqa: E501
+            'open_id_connect_reply_url': (str, none_type,),  # noqa: E501
+            'synchronization_interval_days': (int, none_type,),  # noqa: E501
+            'synchronization_interval_hours': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,14 +150,14 @@ class PlatformConfigurationModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             create_groups_during_synchronization (bool): Whether groups will be created during the Platform synchronization process.. [optional]  # noqa: E501
             enable_synchronization (bool): Whether synchronization with Platform is enabled.. [optional]  # noqa: E501
-            open_id_connect_client_id (bool, date, datetime, dict, float, int, list, str, none_type): The client ID for the OpenID Connect registered application.. [optional]  # noqa: E501
-            open_id_connect_client_secret (bool, date, datetime, dict, float, int, list, str, none_type): The client secret for the OpenID Connect registered application.. [optional]  # noqa: E501
+            open_id_connect_client_id (str): The client ID for the OpenID Connect registered application.. [optional]  # noqa: E501
+            open_id_connect_client_secret (str): The client secret for the OpenID Connect registered application.. [optional]  # noqa: E501
             open_id_connect_enabled (bool): Whether Platform integration is enabled.. [optional]  # noqa: E501
-            open_id_connect_login_url (bool, date, datetime, dict, float, int, list, str, none_type): The login URL for the OpenID Connect provider.. [optional]  # noqa: E501
-            open_id_connect_logout_url (bool, date, datetime, dict, float, int, list, str, none_type): The logout URL for the OpenID Connect provider.. [optional]  # noqa: E501
-            open_id_connect_reply_url (bool, date, datetime, dict, float, int, list, str, none_type): The reply URL that needs to be registered with the OpenID Connect provider.. [optional]  # noqa: E501
-            synchronization_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize days interval for users and group membership. [optional]  # noqa: E501
-            synchronization_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize hours interval for users and group membership. [optional]  # noqa: E501
+            open_id_connect_login_url (str): The login URL for the OpenID Connect provider.. [optional]  # noqa: E501
+            open_id_connect_logout_url (str): The logout URL for the OpenID Connect provider.. [optional]  # noqa: E501
+            open_id_connect_reply_url (str): The reply URL that needs to be registered with the OpenID Connect provider.. [optional]  # noqa: E501
+            synchronization_interval_days (int): Synchronize days interval for users and group membership. [optional]  # noqa: E501
+            synchronization_interval_hours (int): Synchronize hours interval for users and group membership. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -250,14 +245,14 @@ class PlatformConfigurationModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             create_groups_during_synchronization (bool): Whether groups will be created during the Platform synchronization process.. [optional]  # noqa: E501
             enable_synchronization (bool): Whether synchronization with Platform is enabled.. [optional]  # noqa: E501
-            open_id_connect_client_id (bool, date, datetime, dict, float, int, list, str, none_type): The client ID for the OpenID Connect registered application.. [optional]  # noqa: E501
-            open_id_connect_client_secret (bool, date, datetime, dict, float, int, list, str, none_type): The client secret for the OpenID Connect registered application.. [optional]  # noqa: E501
+            open_id_connect_client_id (str): The client ID for the OpenID Connect registered application.. [optional]  # noqa: E501
+            open_id_connect_client_secret (str): The client secret for the OpenID Connect registered application.. [optional]  # noqa: E501
             open_id_connect_enabled (bool): Whether Platform integration is enabled.. [optional]  # noqa: E501
-            open_id_connect_login_url (bool, date, datetime, dict, float, int, list, str, none_type): The login URL for the OpenID Connect provider.. [optional]  # noqa: E501
-            open_id_connect_logout_url (bool, date, datetime, dict, float, int, list, str, none_type): The logout URL for the OpenID Connect provider.. [optional]  # noqa: E501
-            open_id_connect_reply_url (bool, date, datetime, dict, float, int, list, str, none_type): The reply URL that needs to be registered with the OpenID Connect provider.. [optional]  # noqa: E501
-            synchronization_interval_days (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize days interval for users and group membership. [optional]  # noqa: E501
-            synchronization_interval_hours (bool, date, datetime, dict, float, int, list, str, none_type): Synchronize hours interval for users and group membership. [optional]  # noqa: E501
+            open_id_connect_login_url (str): The login URL for the OpenID Connect provider.. [optional]  # noqa: E501
+            open_id_connect_logout_url (str): The logout URL for the OpenID Connect provider.. [optional]  # noqa: E501
+            open_id_connect_reply_url (str): The reply URL that needs to be registered with the OpenID Connect provider.. [optional]  # noqa: E501
+            synchronization_interval_days (int): Synchronize days interval for users and group membership. [optional]  # noqa: E501
+            synchronization_interval_hours (int): Synchronize hours interval for users and group membership. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

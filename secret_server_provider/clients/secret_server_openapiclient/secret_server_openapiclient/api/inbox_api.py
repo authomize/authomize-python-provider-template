@@ -243,7 +243,7 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -294,7 +294,7 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'message_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'message_id': 'messageId',
@@ -343,7 +343,7 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'message_type_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                 },
                 'attribute_map': {
                     'message_type_ids': 'messageTypeIds',
@@ -444,7 +444,7 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'template_id': 'templateId',
@@ -497,9 +497,9 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'locale_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'locale_id': 'localeId',
@@ -555,17 +555,17 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'filter_template_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_template_type': 'filter.templateType',
@@ -724,7 +724,7 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -876,7 +876,7 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'inbox_template_update_args':
                         (InboxTemplateUpdateArgs,),
                 },
@@ -935,9 +935,9 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'locale_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'template_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'inbox_template_locale_update_args':
                         (InboxTemplateLocaleUpdateArgs,),
                 },
@@ -1009,39 +1009,39 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'message_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_end_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'message_data_filters_0_display_value':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'message_data_filters_0_inbox_data_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'message_data_filters_0_value_bool':
                         (bool,),
                     'message_data_filters_0_value_date_time_end':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'message_data_filters_0_value_date_time_start':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'message_data_filters_0_value_int':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'message_data_filters_0_value_string':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_message_type_ids':
-                        ([bool, date, datetime, dict, float, int, list, str, none_type],),
+                        ([int],),
                     'filter_read_status_filter':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_start_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'message_type_id': 'messageTypeId',
@@ -1127,15 +1127,15 @@ class InboxApi(object):
                 },
                 'openapi_types': {
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'skip': 'skip',
@@ -1565,7 +1565,7 @@ class InboxApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1648,7 +1648,7 @@ class InboxApi(object):
         >>> result = thread.get()
 
         Args:
-            message_id (bool, date, datetime, dict, float, int, list, str, none_type): messageId
+            message_id (int): messageId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1731,7 +1731,7 @@ class InboxApi(object):
 
 
         Keyword Args:
-            message_type_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): messageTypeIds. [optional]
+            message_type_ids ([int]): messageTypeIds. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1889,7 +1889,7 @@ class InboxApi(object):
         >>> result = thread.get()
 
         Args:
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): templateId
+            template_id (int): templateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1973,8 +1973,8 @@ class InboxApi(object):
         >>> result = thread.get()
 
         Args:
-            locale_id (bool, date, datetime, dict, float, int, list, str, none_type): localeId
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): templateId
+            locale_id (int): localeId
+            template_id (int): templateId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2059,12 +2059,12 @@ class InboxApi(object):
 
 
         Keyword Args:
-            filter_template_type (bool, date, datetime, dict, float, int, list, str, none_type): Only return templates of this type.  When null returns all types. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_template_type (str): Only return templates of this type.  When null returns all types. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2301,7 +2301,7 @@ class InboxApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2542,7 +2542,7 @@ class InboxApi(object):
         >>> result = thread.get()
 
         Args:
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): templateId
+            template_id (int): templateId
 
         Keyword Args:
             inbox_template_update_args (InboxTemplateUpdateArgs): args. [optional]
@@ -2627,8 +2627,8 @@ class InboxApi(object):
         >>> result = thread.get()
 
         Args:
-            locale_id (bool, date, datetime, dict, float, int, list, str, none_type): localeId
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): templateId
+            locale_id (int): localeId
+            template_id (int): templateId
 
         Keyword Args:
             inbox_template_locale_update_args (InboxTemplateLocaleUpdateArgs): args. [optional]
@@ -2714,23 +2714,23 @@ class InboxApi(object):
 
 
         Keyword Args:
-            message_type_id (bool, date, datetime, dict, float, int, list, str, none_type): messageTypeId. [optional]
-            filter_end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]
-            message_data_filters_0_display_value (bool, date, datetime, dict, float, int, list, str, none_type): Search specifically display values. [optional]
-            message_data_filters_0_inbox_data_name (bool, date, datetime, dict, float, int, list, str, none_type): Which field is being searched. [optional]
+            message_type_id (int): messageTypeId. [optional]
+            filter_end_date (datetime): EndDate. [optional]
+            message_data_filters_0_display_value (str): Search specifically display values. [optional]
+            message_data_filters_0_inbox_data_name (str): Which field is being searched. [optional]
             message_data_filters_0_value_bool (bool): Search specifically for boolean values. [optional]
-            message_data_filters_0_value_date_time_end (bool, date, datetime, dict, float, int, list, str, none_type): Search specifically for date values less than this date. [optional]
-            message_data_filters_0_value_date_time_start (bool, date, datetime, dict, float, int, list, str, none_type): Search specifically for date values greater than this date. [optional]
-            message_data_filters_0_value_int (bool, date, datetime, dict, float, int, list, str, none_type): Search specifically for int values. [optional]
-            message_data_filters_0_value_string (bool, date, datetime, dict, float, int, list, str, none_type): Search specifically for string values. [optional]
-            filter_message_type_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): MessageTypeIds. [optional]
-            filter_read_status_filter (bool, date, datetime, dict, float, int, list, str, none_type): ReadStatusFilter. [optional]
-            filter_start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            message_data_filters_0_value_date_time_end (datetime): Search specifically for date values less than this date. [optional]
+            message_data_filters_0_value_date_time_start (datetime): Search specifically for date values greater than this date. [optional]
+            message_data_filters_0_value_int (int): Search specifically for int values. [optional]
+            message_data_filters_0_value_string (str): Search specifically for string values. [optional]
+            filter_message_type_ids ([int]): MessageTypeIds. [optional]
+            filter_read_status_filter (str): ReadStatusFilter. [optional]
+            filter_start_date (datetime): StartDate. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2809,11 +2809,11 @@ class InboxApi(object):
 
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

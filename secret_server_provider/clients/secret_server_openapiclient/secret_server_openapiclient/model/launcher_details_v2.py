@@ -63,10 +63,8 @@ class LauncherDetailsV2(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,37 +73,34 @@ class LauncherDetailsV2(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'application': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'approved_list': (bool,),  # noqa: E501
-            'custom_launcher_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'custom_launcher_process_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'custom_parameters': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_custom': (bool,),  # noqa: E501
-            'launcher_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'prompted_field': (ILauncherTypeField,),  # noqa: E501
-            'restricted_host': (bool,),  # noqa: E501
-            'restricted_hosts': ([ICategorizedListItemValue],),  # noqa: E501
+            'application': (str, none_type,),  # noqa: E501
+            'approved_list': (bool, none_type,),  # noqa: E501
+            'custom_launcher_id': (int, none_type,),  # noqa: E501
+            'custom_launcher_process_name': (str, none_type,),  # noqa: E501
+            'custom_parameters': (str, none_type,),  # noqa: E501
+            'is_custom': (bool, none_type,),  # noqa: E501
+            'launcher_id': (int, none_type,),  # noqa: E501
+            'launcher_name': (str, none_type,),  # noqa: E501
+            'prompted_field': (ILauncherTypeField, none_type,),  # noqa: E501
+            'restricted_host': (bool, none_type,),  # noqa: E501
+            'restricted_hosts': ([ICategorizedListItemValue], none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -163,14 +158,14 @@ class LauncherDetailsV2(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            application (bool, date, datetime, dict, float, int, list, str, none_type): Associated application. [optional]  # noqa: E501
+            application (str): Associated application. [optional]  # noqa: E501
             approved_list (bool): If the restricted host is on the allowed list. [optional]  # noqa: E501
-            custom_launcher_id (bool, date, datetime, dict, float, int, list, str, none_type): Associated custom launcher ID. [optional]  # noqa: E501
-            custom_launcher_process_name (bool, date, datetime, dict, float, int, list, str, none_type): Associated custom launcher process name. [optional]  # noqa: E501
-            custom_parameters (bool, date, datetime, dict, float, int, list, str, none_type): Associated custom launcher parameters. [optional]  # noqa: E501
+            custom_launcher_id (int): Associated custom launcher ID. [optional]  # noqa: E501
+            custom_launcher_process_name (str): Associated custom launcher process name. [optional]  # noqa: E501
+            custom_parameters (str): Associated custom launcher parameters. [optional]  # noqa: E501
             is_custom (bool): Whether this is a custom launcher. [optional]  # noqa: E501
-            launcher_id (bool, date, datetime, dict, float, int, list, str, none_type): Launcher ID. [optional]  # noqa: E501
-            launcher_name (bool, date, datetime, dict, float, int, list, str, none_type): Launcher name. [optional]  # noqa: E501
+            launcher_id (int): Launcher ID. [optional]  # noqa: E501
+            launcher_name (str): Launcher name. [optional]  # noqa: E501
             prompted_field (ILauncherTypeField): [optional]  # noqa: E501
             restricted_host (bool): Whether there is a host restriction. [optional]  # noqa: E501
             restricted_hosts ([ICategorizedListItemValue]): The restricted hosts.. [optional]  # noqa: E501
@@ -259,14 +254,14 @@ class LauncherDetailsV2(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            application (bool, date, datetime, dict, float, int, list, str, none_type): Associated application. [optional]  # noqa: E501
+            application (str): Associated application. [optional]  # noqa: E501
             approved_list (bool): If the restricted host is on the allowed list. [optional]  # noqa: E501
-            custom_launcher_id (bool, date, datetime, dict, float, int, list, str, none_type): Associated custom launcher ID. [optional]  # noqa: E501
-            custom_launcher_process_name (bool, date, datetime, dict, float, int, list, str, none_type): Associated custom launcher process name. [optional]  # noqa: E501
-            custom_parameters (bool, date, datetime, dict, float, int, list, str, none_type): Associated custom launcher parameters. [optional]  # noqa: E501
+            custom_launcher_id (int): Associated custom launcher ID. [optional]  # noqa: E501
+            custom_launcher_process_name (str): Associated custom launcher process name. [optional]  # noqa: E501
+            custom_parameters (str): Associated custom launcher parameters. [optional]  # noqa: E501
             is_custom (bool): Whether this is a custom launcher. [optional]  # noqa: E501
-            launcher_id (bool, date, datetime, dict, float, int, list, str, none_type): Launcher ID. [optional]  # noqa: E501
-            launcher_name (bool, date, datetime, dict, float, int, list, str, none_type): Launcher name. [optional]  # noqa: E501
+            launcher_id (int): Launcher ID. [optional]  # noqa: E501
+            launcher_name (str): Launcher name. [optional]  # noqa: E501
             prompted_field (ILauncherTypeField): [optional]  # noqa: E501
             restricted_host (bool): Whether there is a host restriction. [optional]  # noqa: E501
             restricted_hosts ([ICategorizedListItemValue]): The restricted hosts.. [optional]  # noqa: E501

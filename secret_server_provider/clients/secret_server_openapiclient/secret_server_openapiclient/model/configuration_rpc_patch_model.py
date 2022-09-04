@@ -63,10 +63,8 @@ class ConfigurationRpcPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,33 +73,30 @@ class ConfigurationRpcPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'check_out_interval_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'check_out_interval_hours': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'check_out_interval_minutes': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'days_to_keep_logs': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'enable_heartbeat': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_password_change_on_check_in': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_rpc': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'check_out_interval_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'check_out_interval_hours': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'days_to_keep_logs': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'enable_heartbeat': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_password_change_on_check_in': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_rpc': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

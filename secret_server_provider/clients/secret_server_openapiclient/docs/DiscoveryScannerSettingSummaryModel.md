@@ -5,8 +5,8 @@ DiscoveryScannerSettingSummaryModel[]
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**discovery_scanner_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | Discovery Scanner Id | [optional] 
-**discovery_source_scanner_map_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | The ID for the map | [optional] 
+**discovery_scanner_id** | **int** | Discovery Scanner Id | [optional] 
+**discovery_source_scanner_map_id** | **int** | The ID for the map | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

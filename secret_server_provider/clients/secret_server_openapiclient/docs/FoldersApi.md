@@ -64,10 +64,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    id = 1 # int | Folder ID
     folder_template_args = FolderTemplateArgs(
-        folder_id=None,
-        template_id=None,
+        folder_id=1,
+        template_id=1,
     ) # FolderTemplateArgs | Folder template association options (optional)
 
     # example passing only required values which don't have defaults set
@@ -93,7 +93,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **id** | **int**| Folder ID |
  **folder_template_args** | [**FolderTemplateArgs**](FolderTemplateArgs.md)| Folder template association options | [optional]
 
 ### Return type
@@ -164,12 +164,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
     folder_create_args = FolderCreateArgs(
-        folder_name=None,
-        folder_type_id=None,
+        folder_name="folder_name_example",
+        folder_type_id=1,
         inherit_permissions=True,
         inherit_secret_policy=True,
-        parent_folder_id=None,
-        secret_policy_id=None,
+        parent_folder_id=-1,
+        secret_policy_id=1,
     ) # FolderCreateArgs | Folder creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -255,7 +255,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    id = 1 # int | Folder ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -271,7 +271,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **id** | **int**| Folder ID |
 
 ### Return type
 
@@ -339,8 +339,8 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Template ID
+    id = 1 # int | Folder ID
+    template_id = 1 # int | Template ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -356,8 +356,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Template ID |
+ **id** | **int**| Folder ID |
+ **template_id** | **int**| Template ID |
 
 ### Return type
 
@@ -425,10 +425,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    id = 1 # int | Folder ID
     get_all_children = True # bool | Whether to retrieve all child folders of the requested folder (optional)
     include_associated_templates = True # bool | Whether to list associated secret templates (optional)
-    folder_path = None # bool, date, datetime, dict, float, int, list, str, none_type | A full path to a folder including the folder name can be passed as a query string parameter when the folder ID is set to 0.  This will lookup the folder ID by path. (optional)
+    folder_path = "folderPath_example" # str | A full path to a folder including the folder name can be passed as a query string parameter when the folder ID is set to 0.  This will lookup the folder ID by path. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -453,10 +453,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **id** | **int**| Folder ID |
  **get_all_children** | **bool**| Whether to retrieve all child folders of the requested folder | [optional]
  **include_associated_templates** | **bool**| Whether to list associated secret templates | [optional]
- **folder_path** | **bool, date, datetime, dict, float, int, list, str, none_type**| A full path to a folder including the folder name can be passed as a query string parameter when the folder ID is set to 0.  This will lookup the folder ID by path. | [optional]
+ **folder_path** | **str**| A full path to a folder including the folder name can be passed as a query string parameter when the folder ID is set to 0.  This will lookup the folder ID by path. | [optional]
 
 ### Return type
 
@@ -524,13 +524,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    id = 1 # int | Folder ID
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -555,13 +555,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **id** | **int**| Folder ID |
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -629,7 +629,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     return_empty_instead_of_no_access_exception = True # bool | returnEmptyInsteadOfNoAccessException (optional)
 
     # example passing only required values which don't have defaults set
@@ -655,7 +655,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **return_empty_instead_of_no_access_exception** | **bool**| returnEmptyInsteadOfNoAccessException | [optional]
 
 ### Return type
@@ -724,11 +724,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -745,11 +745,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -817,16 +817,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    filter_folder_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value. (optional)
+    filter_folder_type_id = 1 # int | The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value. (optional)
     filter_only_include_root_folders = True # bool | When true only root folders will be returned and ParentFolderId will be ignored (optional)
-    filter_parent_folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Only returns folders that are children of the specified folder. (optional)
-    filter_permission_required = None # bool, date, datetime, dict, float, int, list, str, none_type | Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View. (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search term to match against folder names. Search returns any folder where the search term is contained in the folder name. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_parent_folder_id = 1 # int | Only returns folders that are children of the specified folder. (optional)
+    filter_permission_required = "filter.permissionRequired_example" # str | Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View. (optional)
+    filter_search_text = "filter.searchText_example" # str | Search term to match against folder names. Search returns any folder where the search term is contained in the folder name. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -843,16 +843,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_folder_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value. | [optional]
+ **filter_folder_type_id** | **int**| The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value. | [optional]
  **filter_only_include_root_folders** | **bool**| When true only root folders will be returned and ParentFolderId will be ignored | [optional]
- **filter_parent_folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only returns folders that are children of the specified folder. | [optional]
- **filter_permission_required** | **bool, date, datetime, dict, float, int, list, str, none_type**| Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View. | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search term to match against folder names. Search returns any folder where the search term is contained in the folder name. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_parent_folder_id** | **int**| Only returns folders that are children of the specified folder. | [optional]
+ **filter_permission_required** | **str**| Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View. | [optional]
+ **filter_search_text** | **str**| Search term to match against folder names. Search returns any folder where the search term is contained in the folder name. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -921,11 +921,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    id = 1 # int | Folder ID
     folder_patch_args = FolderPatchArgs(
         data=FolderPatchModel(
             allowed_templates=[
-                None,
+                1,
             ],
             allow_remove_owner=True,
             enable_inherit_permissions=UpdateFieldValueOfBoolean(
@@ -938,26 +938,26 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             folder_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             permissons=[
                 FolderPermissionModel(
-                    folder_access_role_id=None,
-                    folder_access_role_name=None,
-                    folder_id=None,
-                    group_id=None,
-                    group_name=None,
-                    id=None,
-                    known_as=None,
-                    secret_access_role_id=None,
-                    secret_access_role_name=None,
-                    user_id=None,
-                    user_name=None,
+                    folder_access_role_id=1,
+                    folder_access_role_name="folder_access_role_name_example",
+                    folder_id=1,
+                    group_id=1,
+                    group_name="group_name_example",
+                    id=1,
+                    known_as="known_as_example",
+                    secret_access_role_id=1,
+                    secret_access_role_name="secret_access_role_name_example",
+                    user_id=1,
+                    user_name="user_name_example",
                 ),
             ],
             secret_policy=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # FolderPatchArgs | Folder update options (optional)
@@ -985,7 +985,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **id** | **int**| Folder ID |
  **folder_patch_args** | [**FolderPatchArgs**](FolderPatchArgs.md)| Folder update options | [optional]
 
 ### Return type
@@ -1055,15 +1055,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    folder_id = 1 # int | Folder ID
     folder_permissions_patch_args = FolderPermissionsPatchArgs(
         data=FolderPermissionsPatchData(
             add_or_update_items=[
                 FolderPermissionsGroupUpdateModel(
-                    folder_access_role_id=None,
-                    group_id=None,
-                    secret_access_role_id=None,
-                    user_id=None,
+                    folder_access_role_id=1,
+                    group_id=1,
+                    secret_access_role_id=1,
+                    user_id=1,
                 ),
             ],
             allow_remove_owner=True,
@@ -1073,8 +1073,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             remove_items=[
                 FolderPermissionsGroupModel(
-                    group_id=None,
-                    user_id=None,
+                    group_id=1,
+                    user_id=1,
                 ),
             ],
         ),
@@ -1103,7 +1103,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **folder_id** | **int**| Folder ID |
  **folder_permissions_patch_args** | [**FolderPermissionsPatchArgs**](FolderPermissionsPatchArgs.md)| Folder permission update options | [optional]
 
 ### Return type
@@ -1173,7 +1173,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    id = 1 # int | Folder ID
     pin_folder_args = PinFolderArgs(
         data=PinFolderData(
             active_filter=UpdateFieldValueOfOptionalBoolean(
@@ -1182,7 +1182,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             display_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             include_subfolders=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1190,15 +1190,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             last_viewed=UpdateFieldValueOfOptionalDateTime(
                 dirty=True,
-                value=None,
+                value=dateutil_parser('1970-01-01T00:00:00.00Z'),
             ),
             search_text=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             selected_folder_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             show_cards=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1206,7 +1206,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             template_filter=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # PinFolderArgs | Pin Folder Args (optional)
@@ -1234,7 +1234,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **id** | **int**| Folder ID |
  **pin_folder_args** | [**PinFolderArgs**](PinFolderArgs.md)| Pin Folder Args | [optional]
 
 ### Return type
@@ -1303,16 +1303,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    filter_folder_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value. (optional)
+    filter_folder_type_id = 1 # int | The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value. (optional)
     filter_only_include_root_folders = True # bool | When true only root folders will be returned and ParentFolderId will be ignored (optional)
-    filter_parent_folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Only returns folders that are children of the specified folder. (optional)
-    filter_permission_required = None # bool, date, datetime, dict, float, int, list, str, none_type | Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View. (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search term to match against folder names. Search returns any folder where the search term is contained in the folder name. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_parent_folder_id = 1 # int | Only returns folders that are children of the specified folder. (optional)
+    filter_permission_required = "filter.permissionRequired_example" # str | Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View. (optional)
+    filter_search_text = "filter.searchText_example" # str | Search term to match against folder names. Search returns any folder where the search term is contained in the folder name. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1329,16 +1329,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_folder_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value. | [optional]
+ **filter_folder_type_id** | **int**| The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value. | [optional]
  **filter_only_include_root_folders** | **bool**| When true only root folders will be returned and ParentFolderId will be ignored | [optional]
- **filter_parent_folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only returns folders that are children of the specified folder. | [optional]
- **filter_permission_required** | **bool, date, datetime, dict, float, int, list, str, none_type**| Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View. | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search term to match against folder names. Search returns any folder where the search term is contained in the folder name. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_parent_folder_id** | **int**| Only returns folders that are children of the specified folder. | [optional]
+ **filter_permission_required** | **str**| Specify whether to filter by Owner, Edit, AddSecret, View folder permission. Default is View. | [optional]
+ **filter_search_text** | **str**| Search term to match against folder names. Search returns any folder where the search term is contained in the folder name. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1486,7 +1486,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    id = 1 # int | Folder ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -1502,7 +1502,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **id** | **int**| Folder ID |
 
 ### Return type
 
@@ -1571,15 +1571,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = folders_api.FoldersApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Folder ID
+    id = 1 # int | Folder ID
     folder_update_args = FolderUpdateArgs(
-        folder_name=None,
-        folder_type_id=None,
-        id=None,
+        folder_name="folder_name_example",
+        folder_type_id=1,
+        id=1,
         inherit_permissions=True,
         inherit_secret_policy=True,
-        parent_folder_id=None,
-        secret_policy_id=None,
+        parent_folder_id=-1,
+        secret_policy_id=1,
     ) # FolderUpdateArgs | Folder update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -1605,7 +1605,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Folder ID |
+ **id** | **int**| Folder ID |
  **folder_update_args** | [**FolderUpdateArgs**](FolderUpdateArgs.md)| Folder update options | [optional]
 
 ### Return type

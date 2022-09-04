@@ -377,11 +377,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=SlackConfigurationUpdateModelV2(
             app_id=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             bot_token=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             inbox_notifications_enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -393,7 +393,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             signature_key=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # SlackConfigurationUpdateArgsV2 | Slack Configuration Update Options (optional)

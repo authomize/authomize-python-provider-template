@@ -66,8 +66,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
     inbox_rule_copy_args = InboxRuleCopyArgs(
         data=InboxRuleCopyModel(
-            inbox_rule_id_to_copy=None,
-            name=None,
+            inbox_rule_id_to_copy=1,
+            name="name_example",
         ),
     ) # InboxRuleCopyArgs | args (optional)
 
@@ -161,24 +161,24 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             can_edit_own_subscription=True,
             conditions=[
                 InboxRuleConditionCreateModel(
-                    display_value=None,
-                    inbox_data_id=None,
-                    inbox_rule_id=None,
+                    display_value="display_value_example",
+                    inbox_data_id=1,
+                    inbox_rule_id=1,
                     inbox_rule_operand=InboxRuleConditionOperand("{}"),
                     value_bool=True,
-                    value_date_time=None,
-                    value_int=None,
-                    value_string=None,
+                    value_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                    value_int=1,
+                    value_string="value_string_example",
                 ),
             ],
             high_priority=True,
-            inbox_email_template_id=None,
+            inbox_email_template_id=1,
             inbox_message_type_ids=[
-                None,
+                1,
             ],
-            inbox_slack_template_id=None,
+            inbox_slack_template_id=1,
             is_immediate=True,
-            name=None,
+            name="name_example",
             send_email=True,
             send_slack=True,
         ),
@@ -268,17 +268,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    inbox_rule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | inboxRuleId
+    inbox_rule_id = 1 # int | inboxRuleId
     inbox_rule_condition_create_args = InboxRuleConditionCreateArgs(
         data=InboxRuleConditionCreateModel(
-            display_value=None,
-            inbox_data_id=None,
-            inbox_rule_id=None,
+            display_value="display_value_example",
+            inbox_data_id=1,
+            inbox_rule_id=1,
             inbox_rule_operand=InboxRuleConditionOperand("{}"),
             value_bool=True,
-            value_date_time=None,
-            value_int=None,
-            value_string=None,
+            value_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            value_int=1,
+            value_string="value_string_example",
         ),
     ) # InboxRuleConditionCreateArgs | args (optional)
 
@@ -305,7 +305,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inbox_rule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| inboxRuleId |
+ **inbox_rule_id** | **int**| inboxRuleId |
  **inbox_rule_condition_create_args** | [**InboxRuleConditionCreateArgs**](InboxRuleConditionCreateArgs.md)| args | [optional]
 
 ### Return type
@@ -374,7 +374,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -390,7 +390,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -458,7 +458,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -474,7 +474,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -623,7 +623,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     inbox_rule_patch_args = InboxRulePatchArgs(
         data=InboxRulePatchModel(
             active=UpdateFieldValueOfBoolean(
@@ -641,7 +641,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             inbox_message_types=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
             is_immediate=UpdateFieldValueOfBoolean(
@@ -650,7 +650,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # InboxRulePatchArgs | args (optional)
@@ -678,7 +678,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **inbox_rule_patch_args** | [**InboxRulePatchArgs**](InboxRulePatchArgs.md)| args | [optional]
 
 ### Return type
@@ -748,16 +748,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     inbox_rule_action_patch_args = InboxRuleActionPatchArgs(
         data=InboxRuleActionPatchModel(
             inbox_email_template_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             inbox_slack_template_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             send_email=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -793,7 +793,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **inbox_rule_action_patch_args** | [**InboxRuleActionPatchArgs**](InboxRuleActionPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -863,20 +863,20 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    rule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | ruleId
+    rule_id = 1 # int | ruleId
     inbox_rule_subscribers_patch_args = InboxRuleSubscribersPatchArgs(
         data=InboxRuleSubscriberPatchModel(
             email_updates=[
                 InboxRuleSubscriberEmailUpdate(
-                    email_address=None,
+                    email_address="email_address_example",
                     subscribe=True,
                 ),
             ],
             group_user_updates=[
                 InboxRuleSubscriberGroupUserUpdate(
-                    group_id=None,
+                    group_id=1,
                     subscribe=True,
-                    user_id=None,
+                    user_id=1,
                 ),
             ],
         ),
@@ -905,7 +905,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| ruleId |
+ **rule_id** | **int**| ruleId |
  **inbox_rule_subscribers_patch_args** | [**InboxRuleSubscribersPatchArgs**](InboxRuleSubscribersPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -974,7 +974,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -990,7 +990,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -1061,19 +1061,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     filter_include_current_user_subscription_status = True # bool | Return the subscription status of the current user whether subscribed directly or via a group. (optional)
     filter_include_inactive = True # bool | Include inactive rules. (optional)
     filter_is_immediate = True # bool | Only return rules that run immediately or on a schedule, depending on value. (optional)
-    filter_message_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Return all rules that will apply to this message id, does not account for time or schedule. (optional)
-    filter_message_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return rules that apply to this message type.  If a MessageId is passed then this value will be replaced with that message's MessageTypeId. (optional)
-    rule_condition_filters_0_display_value = None # bool, date, datetime, dict, float, int, list, str, none_type | Search specifically display values (optional)
-    rule_condition_filters_0_inbox_data_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Which field is being searched.  This value can be null if InboxDataName is passed instead. (optional)
-    rule_condition_filters_0_inbox_data_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Which field is being searched.  If InboxDataId is passed this value is ignored. (optional)
+    filter_message_id = 1 # int | Return all rules that will apply to this message id, does not account for time or schedule. (optional)
+    filter_message_type_id = 1 # int | Only return rules that apply to this message type.  If a MessageId is passed then this value will be replaced with that message's MessageTypeId. (optional)
+    rule_condition_filters_0_display_value = "ruleConditionFilters[0].displayValue_example" # str | Search specifically display values (optional)
+    rule_condition_filters_0_inbox_data_id = 1 # int | Which field is being searched.  This value can be null if InboxDataName is passed instead. (optional)
+    rule_condition_filters_0_inbox_data_name = "ruleConditionFilters[0].inboxDataName_example" # str | Which field is being searched.  If InboxDataId is passed this value is ignored. (optional)
     rule_condition_filters_0_value_bool = True # bool | Search specifically for boolean values (optional)
-    rule_condition_filters_0_value_int = None # bool, date, datetime, dict, float, int, list, str, none_type | Search specifically for int values (optional)
-    rule_condition_filters_0_value_string = None # bool, date, datetime, dict, float, int, list, str, none_type | Search specifically for string values with a partial match (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    rule_condition_filters_0_value_int = 1 # int | Search specifically for int values (optional)
+    rule_condition_filters_0_value_string = "ruleConditionFilters[0].valueString_example" # str | Search specifically for string values with a partial match (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1093,19 +1093,19 @@ Name | Type | Description  | Notes
  **filter_include_current_user_subscription_status** | **bool**| Return the subscription status of the current user whether subscribed directly or via a group. | [optional]
  **filter_include_inactive** | **bool**| Include inactive rules. | [optional]
  **filter_is_immediate** | **bool**| Only return rules that run immediately or on a schedule, depending on value. | [optional]
- **filter_message_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Return all rules that will apply to this message id, does not account for time or schedule. | [optional]
- **filter_message_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return rules that apply to this message type.  If a MessageId is passed then this value will be replaced with that message&#39;s MessageTypeId. | [optional]
- **rule_condition_filters_0_display_value** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search specifically display values | [optional]
- **rule_condition_filters_0_inbox_data_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Which field is being searched.  This value can be null if InboxDataName is passed instead. | [optional]
- **rule_condition_filters_0_inbox_data_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Which field is being searched.  If InboxDataId is passed this value is ignored. | [optional]
+ **filter_message_id** | **int**| Return all rules that will apply to this message id, does not account for time or schedule. | [optional]
+ **filter_message_type_id** | **int**| Only return rules that apply to this message type.  If a MessageId is passed then this value will be replaced with that message&#39;s MessageTypeId. | [optional]
+ **rule_condition_filters_0_display_value** | **str**| Search specifically display values | [optional]
+ **rule_condition_filters_0_inbox_data_id** | **int**| Which field is being searched.  This value can be null if InboxDataName is passed instead. | [optional]
+ **rule_condition_filters_0_inbox_data_name** | **str**| Which field is being searched.  If InboxDataId is passed this value is ignored. | [optional]
  **rule_condition_filters_0_value_bool** | **bool**| Search specifically for boolean values | [optional]
- **rule_condition_filters_0_value_int** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search specifically for int values | [optional]
- **rule_condition_filters_0_value_string** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search specifically for string values with a partial match | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **rule_condition_filters_0_value_int** | **int**| Search specifically for int values | [optional]
+ **rule_condition_filters_0_value_string** | **str**| Search specifically for string values with a partial match | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1173,15 +1173,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    inbox_rule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | inboxRuleId
-    filter_end_date = None # bool, date, datetime, dict, float, int, list, str, none_type | EndDate (optional)
-    filter_rule_action_status = None # bool, date, datetime, dict, float, int, list, str, none_type | RuleActionStatus (optional)
-    filter_start_date = None # bool, date, datetime, dict, float, int, list, str, none_type | StartDate (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    inbox_rule_id = 1 # int | inboxRuleId
+    filter_end_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | EndDate (optional)
+    filter_rule_action_status = "filter.ruleActionStatus_example" # str | RuleActionStatus (optional)
+    filter_start_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | StartDate (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1206,15 +1206,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inbox_rule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| inboxRuleId |
- **filter_end_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| EndDate | [optional]
- **filter_rule_action_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| RuleActionStatus | [optional]
- **filter_start_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| StartDate | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **inbox_rule_id** | **int**| inboxRuleId |
+ **filter_end_date** | **datetime**| EndDate | [optional]
+ **filter_rule_action_status** | **str**| RuleActionStatus | [optional]
+ **filter_start_date** | **datetime**| StartDate | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1282,16 +1282,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    inbox_rule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | inboxRuleId
-    filter_account_types = None # bool, date, datetime, dict, float, int, list, str, none_type | AccountTypes (optional)
+    inbox_rule_id = 1 # int | inboxRuleId
+    filter_account_types = "filter.accountTypes_example" # str | AccountTypes (optional)
     filter_only_include_unsubscribable_users = True # bool | This will ignore most other filters and return only User accounts that belong to groups that are subscribed.  The results will not include users that are directly subscribed as they must be removed from the subscription, not unsubscribed. (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text to filter users from the unsubscribable users (optional)
-    filter_status = None # bool, date, datetime, dict, float, int, list, str, none_type | Status (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text to filter users from the unsubscribable users (optional)
+    filter_status = "filter.status_example" # str | Status (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1316,16 +1316,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inbox_rule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| inboxRuleId |
- **filter_account_types** | **bool, date, datetime, dict, float, int, list, str, none_type**| AccountTypes | [optional]
+ **inbox_rule_id** | **int**| inboxRuleId |
+ **filter_account_types** | **str**| AccountTypes | [optional]
  **filter_only_include_unsubscribable_users** | **bool**| This will ignore most other filters and return only User accounts that belong to groups that are subscribed.  The results will not include users that are directly subscribed as they must be removed from the subscription, not unsubscribed. | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text to filter users from the unsubscribable users | [optional]
- **filter_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| Status | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_text** | **str**| Search text to filter users from the unsubscribable users | [optional]
+ **filter_status** | **str**| Status | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1393,7 +1393,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    rule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | ruleId
+    rule_id = 1 # int | ruleId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1409,7 +1409,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| ruleId |
+ **rule_id** | **int**| ruleId |
 
 ### Return type
 
@@ -1477,7 +1477,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    rule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | ruleId
+    rule_id = 1 # int | ruleId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1493,7 +1493,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| ruleId |
+ **rule_id** | **int**| ruleId |
 
 ### Return type
 
@@ -1562,18 +1562,18 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inbox_rules_api.InboxRulesApi(api_client)
-    inbox_rule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | inboxRuleId
+    inbox_rule_id = 1 # int | inboxRuleId
     inbox_rule_condition_update_args = InboxRuleConditionUpdateArgs(
         data=[
             InboxRuleConditionUpdateModel(
-                display_value=None,
-                inbox_data_id=None,
-                inbox_rule_condition_id=None,
+                display_value="display_value_example",
+                inbox_data_id=1,
+                inbox_rule_condition_id=1,
                 inbox_rule_operand=InboxRuleConditionOperand("{}"),
                 value_bool=True,
-                value_date_time=None,
-                value_int=None,
-                value_string=None,
+                value_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                value_int=1,
+                value_string="value_string_example",
             ),
         ],
     ) # InboxRuleConditionUpdateArgs | args (optional)
@@ -1601,7 +1601,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inbox_rule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| inboxRuleId |
+ **inbox_rule_id** | **int**| inboxRuleId |
  **inbox_rule_condition_update_args** | [**InboxRuleConditionUpdateArgs**](InboxRuleConditionUpdateArgs.md)| args | [optional]
 
 ### Return type

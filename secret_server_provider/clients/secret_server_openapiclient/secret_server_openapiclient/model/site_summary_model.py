@@ -61,10 +61,8 @@ class SiteSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,36 +71,33 @@ class SiteSummaryModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'is_local': (bool,),  # noqa: E501
-            'last_activity': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'num_engines_missing_net_framework': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'num_engines_without_ability_to_restart_service': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'offline_engine_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'online_engine_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_metrics': ([SiteMetric],),  # noqa: E501
-            'site_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'is_local': (bool, none_type,),  # noqa: E501
+            'last_activity': (datetime, none_type,),  # noqa: E501
+            'num_engines_missing_net_framework': (int, none_type,),  # noqa: E501
+            'num_engines_without_ability_to_restart_service': (int, none_type,),  # noqa: E501
+            'offline_engine_count': (int, none_type,),  # noqa: E501
+            'online_engine_count': (int, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'site_metrics': ([SiteMetric], none_type,),  # noqa: E501
+            'site_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -161,14 +156,14 @@ class SiteSummaryModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Is Site Active. [optional]  # noqa: E501
             is_local (bool): Indicates if this site is the local site that cannot have engines assigned. [optional]  # noqa: E501
-            last_activity (bool, date, datetime, dict, float, int, list, str, none_type): Last Date of Activity of Site. [optional]  # noqa: E501
-            num_engines_missing_net_framework (bool, date, datetime, dict, float, int, list, str, none_type): The number of engines on the site missing the minimum DotNet Framework. [optional]  # noqa: E501
-            num_engines_without_ability_to_restart_service (bool, date, datetime, dict, float, int, list, str, none_type): The number of engines on the site without the ability to restart the service, required for upgrades. [optional]  # noqa: E501
-            offline_engine_count (bool, date, datetime, dict, float, int, list, str, none_type): Offline Engine Count of Site. [optional]  # noqa: E501
-            online_engine_count (bool, date, datetime, dict, float, int, list, str, none_type): Online Engine Count of Site. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site. [optional]  # noqa: E501
+            last_activity (datetime): Last Date of Activity of Site. [optional]  # noqa: E501
+            num_engines_missing_net_framework (int): The number of engines on the site missing the minimum DotNet Framework. [optional]  # noqa: E501
+            num_engines_without_ability_to_restart_service (int): The number of engines on the site without the ability to restart the service, required for upgrades. [optional]  # noqa: E501
+            offline_engine_count (int): Offline Engine Count of Site. [optional]  # noqa: E501
+            online_engine_count (int): Online Engine Count of Site. [optional]  # noqa: E501
+            site_id (int): Id of Site. [optional]  # noqa: E501
             site_metrics ([SiteMetric]): List of Metrics for this site such as ConnectionStatusOffline, ConnectionStatusOnline, ActivationStatusPending, LostConnection, and more.  Only returned on a search when IncludeSiteMetrics is true.. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Site. [optional]  # noqa: E501
+            site_name (str): Name of Site. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -256,14 +251,14 @@ class SiteSummaryModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Is Site Active. [optional]  # noqa: E501
             is_local (bool): Indicates if this site is the local site that cannot have engines assigned. [optional]  # noqa: E501
-            last_activity (bool, date, datetime, dict, float, int, list, str, none_type): Last Date of Activity of Site. [optional]  # noqa: E501
-            num_engines_missing_net_framework (bool, date, datetime, dict, float, int, list, str, none_type): The number of engines on the site missing the minimum DotNet Framework. [optional]  # noqa: E501
-            num_engines_without_ability_to_restart_service (bool, date, datetime, dict, float, int, list, str, none_type): The number of engines on the site without the ability to restart the service, required for upgrades. [optional]  # noqa: E501
-            offline_engine_count (bool, date, datetime, dict, float, int, list, str, none_type): Offline Engine Count of Site. [optional]  # noqa: E501
-            online_engine_count (bool, date, datetime, dict, float, int, list, str, none_type): Online Engine Count of Site. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Site. [optional]  # noqa: E501
+            last_activity (datetime): Last Date of Activity of Site. [optional]  # noqa: E501
+            num_engines_missing_net_framework (int): The number of engines on the site missing the minimum DotNet Framework. [optional]  # noqa: E501
+            num_engines_without_ability_to_restart_service (int): The number of engines on the site without the ability to restart the service, required for upgrades. [optional]  # noqa: E501
+            offline_engine_count (int): Offline Engine Count of Site. [optional]  # noqa: E501
+            online_engine_count (int): Online Engine Count of Site. [optional]  # noqa: E501
+            site_id (int): Id of Site. [optional]  # noqa: E501
             site_metrics ([SiteMetric]): List of Metrics for this site such as ConnectionStatusOffline, ConnectionStatusOnline, ActivationStatusPending, LostConnection, and more.  Only returned on a search when IncludeSiteMetrics is true.. [optional]  # noqa: E501
-            site_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Site. [optional]  # noqa: E501
+            site_name (str): Name of Site. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

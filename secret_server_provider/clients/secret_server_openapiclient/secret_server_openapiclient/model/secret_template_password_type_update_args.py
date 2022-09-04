@@ -57,10 +57,8 @@ class SecretTemplatePasswordTypeUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,27 +66,24 @@ class SecretTemplatePasswordTypeUpdateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'password_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_field_password_type_field_dictionary': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'password_type_id': (int, none_type,),  # noqa: E501
+            'secret_field_password_type_field_dictionary': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -137,7 +132,7 @@ class SecretTemplatePasswordTypeUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Id. [optional]  # noqa: E501
+            password_type_id (int): Password Type Id. [optional]  # noqa: E501
             secret_field_password_type_field_dictionary ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): Secret Field Password Type Field Dictionary. [optional]  # noqa: E501
         """
 
@@ -224,7 +219,7 @@ class SecretTemplatePasswordTypeUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type Id. [optional]  # noqa: E501
+            password_type_id (int): Password Type Id. [optional]  # noqa: E501
             secret_field_password_type_field_dictionary ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): Secret Field Password Type Field Dictionary. [optional]  # noqa: E501
         """
 

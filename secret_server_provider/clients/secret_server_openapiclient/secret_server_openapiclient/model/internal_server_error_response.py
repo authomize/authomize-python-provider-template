@@ -57,10 +57,8 @@ class InternalServerErrorResponse(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class InternalServerErrorResponse(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'exception_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'exception_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'stack_trace': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'message': (str,),  # noqa: E501
+            'exception_message': (str,),  # noqa: E501
+            'exception_type': (str,),  # noqa: E501
+            'stack_trace': (str,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -111,10 +106,10 @@ class InternalServerErrorResponse(ModelNormal):
         """InternalServerErrorResponse - a model defined in OpenAPI
 
         Args:
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Error message
-            exception_message (bool, date, datetime, dict, float, int, list, str, none_type): Error message from exception
-            exception_type (bool, date, datetime, dict, float, int, list, str, none_type): Exception type
-            stack_trace (bool, date, datetime, dict, float, int, list, str, none_type): Exception stack trace
+            message (str): Error message
+            exception_message (str): Error message from exception
+            exception_type (str): Exception type
+            stack_trace (str): Exception stack trace
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -206,10 +201,10 @@ class InternalServerErrorResponse(ModelNormal):
         """InternalServerErrorResponse - a model defined in OpenAPI
 
         Args:
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Error message
-            exception_message (bool, date, datetime, dict, float, int, list, str, none_type): Error message from exception
-            exception_type (bool, date, datetime, dict, float, int, list, str, none_type): Exception type
-            stack_trace (bool, date, datetime, dict, float, int, list, str, none_type): Exception stack trace
+            message (str): Error message
+            exception_message (str): Error message from exception
+            exception_type (str): Exception type
+            stack_trace (str): Exception stack trace
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

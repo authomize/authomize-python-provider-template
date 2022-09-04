@@ -65,10 +65,8 @@ class SecretDetailStateViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,45 +75,42 @@ class SecretDetailStateViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'actions': ([SecretDetailActionType],),  # noqa: E501
-            'approval_end': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'available_actions': (SecretDetailStateActionsModel,),  # noqa: E501
-            'checked_out_user_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'checked_out_user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_interval_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'check_out_minutes_remaining': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_active': (bool,),  # noqa: E501
-            'is_checked_out': (bool,),  # noqa: E501
-            'is_checked_out_by_current_user': (bool,),  # noqa: E501
-            'password_change_pending': (bool,),  # noqa: E501
-            'remaining_time_warning_minute_marker': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'role': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_state': (SecretAccessRequired,),  # noqa: E501
-            'warning_minutes_remaining': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'actions': ([SecretDetailActionType], none_type,),  # noqa: E501
+            'approval_end': (datetime, none_type,),  # noqa: E501
+            'available_actions': (SecretDetailStateActionsModel, none_type,),  # noqa: E501
+            'checked_out_user_display_name': (str, none_type,),  # noqa: E501
+            'checked_out_user_id': (int, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (int, none_type,),  # noqa: E501
+            'check_out_minutes_remaining': (int, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'folder_name': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_active': (bool, none_type,),  # noqa: E501
+            'is_checked_out': (bool, none_type,),  # noqa: E501
+            'is_checked_out_by_current_user': (bool, none_type,),  # noqa: E501
+            'password_change_pending': (bool, none_type,),  # noqa: E501
+            'remaining_time_warning_minute_marker': (int, none_type,),  # noqa: E501
+            'role': (str, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'secret_state': (SecretAccessRequired, none_type,),  # noqa: E501
+            'warning_minutes_remaining': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -182,24 +177,24 @@ class SecretDetailStateViewModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             actions ([SecretDetailActionType]): Allowed action for current user. [optional]  # noqa: E501
-            approval_end (bool, date, datetime, dict, float, int, list, str, none_type): Date when the current approval expires, or null if there is no open approval. [optional]  # noqa: E501
+            approval_end (datetime): Date when the current approval expires, or null if there is no open approval. [optional]  # noqa: E501
             available_actions (SecretDetailStateActionsModel): [optional]  # noqa: E501
-            checked_out_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display Name of User that has the secret checked out. [optional]  # noqa: E501
-            checked_out_user_id (bool, date, datetime, dict, float, int, list, str, none_type): User Secret is checked out to. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Number of minutes before checkout . [optional]  # noqa: E501
-            check_out_minutes_remaining (bool, date, datetime, dict, float, int, list, str, none_type): Minutes remaining in check out. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder Id. [optional]  # noqa: E501
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): Folder Name. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Id. [optional]  # noqa: E501
+            checked_out_user_display_name (str): Display Name of User that has the secret checked out. [optional]  # noqa: E501
+            checked_out_user_id (int): User Secret is checked out to. [optional]  # noqa: E501
+            check_out_interval_minutes (int): Number of minutes before checkout . [optional]  # noqa: E501
+            check_out_minutes_remaining (int): Minutes remaining in check out. [optional]  # noqa: E501
+            folder_id (int): Folder Id. [optional]  # noqa: E501
+            folder_name (str): Folder Name. [optional]  # noqa: E501
+            id (int): Secret Id. [optional]  # noqa: E501
             is_active (bool): Active indicator. [optional]  # noqa: E501
             is_checked_out (bool): Is the Secret checked out. [optional]  # noqa: E501
             is_checked_out_by_current_user (bool): Indicates whether the Secret is checked out by the current user. [optional]  # noqa: E501
             password_change_pending (bool): Pending Password change on secret indicator. [optional]  # noqa: E501
-            remaining_time_warning_minute_marker (bool, date, datetime, dict, float, int, list, str, none_type): Minute mark to show check out warning. [optional]  # noqa: E501
-            role (bool, date, datetime, dict, float, int, list, str, none_type): Role that current user has on Secret. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Name. [optional]  # noqa: E501
+            remaining_time_warning_minute_marker (int): Minute mark to show check out warning. [optional]  # noqa: E501
+            role (str): Role that current user has on Secret. [optional]  # noqa: E501
+            secret_name (str): Secret Name. [optional]  # noqa: E501
             secret_state (SecretAccessRequired): [optional]  # noqa: E501
-            warning_minutes_remaining (bool, date, datetime, dict, float, int, list, str, none_type): Minutes remaining before showing check in warning. [optional]  # noqa: E501
+            warning_minutes_remaining (int): Minutes remaining before showing check in warning. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -286,24 +281,24 @@ class SecretDetailStateViewModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             actions ([SecretDetailActionType]): Allowed action for current user. [optional]  # noqa: E501
-            approval_end (bool, date, datetime, dict, float, int, list, str, none_type): Date when the current approval expires, or null if there is no open approval. [optional]  # noqa: E501
+            approval_end (datetime): Date when the current approval expires, or null if there is no open approval. [optional]  # noqa: E501
             available_actions (SecretDetailStateActionsModel): [optional]  # noqa: E501
-            checked_out_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display Name of User that has the secret checked out. [optional]  # noqa: E501
-            checked_out_user_id (bool, date, datetime, dict, float, int, list, str, none_type): User Secret is checked out to. [optional]  # noqa: E501
-            check_out_interval_minutes (bool, date, datetime, dict, float, int, list, str, none_type): Number of minutes before checkout . [optional]  # noqa: E501
-            check_out_minutes_remaining (bool, date, datetime, dict, float, int, list, str, none_type): Minutes remaining in check out. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder Id. [optional]  # noqa: E501
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): Folder Name. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Id. [optional]  # noqa: E501
+            checked_out_user_display_name (str): Display Name of User that has the secret checked out. [optional]  # noqa: E501
+            checked_out_user_id (int): User Secret is checked out to. [optional]  # noqa: E501
+            check_out_interval_minutes (int): Number of minutes before checkout . [optional]  # noqa: E501
+            check_out_minutes_remaining (int): Minutes remaining in check out. [optional]  # noqa: E501
+            folder_id (int): Folder Id. [optional]  # noqa: E501
+            folder_name (str): Folder Name. [optional]  # noqa: E501
+            id (int): Secret Id. [optional]  # noqa: E501
             is_active (bool): Active indicator. [optional]  # noqa: E501
             is_checked_out (bool): Is the Secret checked out. [optional]  # noqa: E501
             is_checked_out_by_current_user (bool): Indicates whether the Secret is checked out by the current user. [optional]  # noqa: E501
             password_change_pending (bool): Pending Password change on secret indicator. [optional]  # noqa: E501
-            remaining_time_warning_minute_marker (bool, date, datetime, dict, float, int, list, str, none_type): Minute mark to show check out warning. [optional]  # noqa: E501
-            role (bool, date, datetime, dict, float, int, list, str, none_type): Role that current user has on Secret. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Name. [optional]  # noqa: E501
+            remaining_time_warning_minute_marker (int): Minute mark to show check out warning. [optional]  # noqa: E501
+            role (str): Role that current user has on Secret. [optional]  # noqa: E501
+            secret_name (str): Secret Name. [optional]  # noqa: E501
             secret_state (SecretAccessRequired): [optional]  # noqa: E501
-            warning_minutes_remaining (bool, date, datetime, dict, float, int, list, str, none_type): Minutes remaining before showing check in warning. [optional]  # noqa: E501
+            warning_minutes_remaining (int): Minutes remaining before showing check in warning. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -57,10 +57,8 @@ class DiscoverySourceSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,32 +66,29 @@ class DiscoverySourceSettingsModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'days_to_keep_machines': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'distinguished_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'friendly_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fully_qualified_domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'net_bios_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_secure_ldap': (bool,),  # noqa: E501
+            'days_to_keep_machines': (str, none_type,),  # noqa: E501
+            'distinguished_name': (str, none_type,),  # noqa: E501
+            'domain_type': (str, none_type,),  # noqa: E501
+            'friendly_name': (str, none_type,),  # noqa: E501
+            'fully_qualified_domain_name': (str, none_type,),  # noqa: E501
+            'net_bios_name': (str, none_type,),  # noqa: E501
+            'use_secure_ldap': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,12 +142,12 @@ class DiscoverySourceSettingsModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            days_to_keep_machines (bool, date, datetime, dict, float, int, list, str, none_type): Days To Keep Machines. [optional]  # noqa: E501
-            distinguished_name (bool, date, datetime, dict, float, int, list, str, none_type): The domain distinguished name. [optional]  # noqa: E501
-            domain_type (bool, date, datetime, dict, float, int, list, str, none_type): Domain type: ActiveDirectory, OpenLdap, or AzureActiveDirectory. [optional]  # noqa: E501
-            friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): The domain friendly name. [optional]  # noqa: E501
-            fully_qualified_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): The fully qualified domain name. [optional]  # noqa: E501
-            net_bios_name (bool, date, datetime, dict, float, int, list, str, none_type): The NetBIOS name. [optional]  # noqa: E501
+            days_to_keep_machines (str): Days To Keep Machines. [optional]  # noqa: E501
+            distinguished_name (str): The domain distinguished name. [optional]  # noqa: E501
+            domain_type (str): Domain type: ActiveDirectory, OpenLdap, or AzureActiveDirectory. [optional]  # noqa: E501
+            friendly_name (str): The domain friendly name. [optional]  # noqa: E501
+            fully_qualified_domain_name (str): The fully qualified domain name. [optional]  # noqa: E501
+            net_bios_name (str): The NetBIOS name. [optional]  # noqa: E501
             use_secure_ldap (bool): Use secure LDAP. [optional]  # noqa: E501
         """
 
@@ -239,12 +234,12 @@ class DiscoverySourceSettingsModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            days_to_keep_machines (bool, date, datetime, dict, float, int, list, str, none_type): Days To Keep Machines. [optional]  # noqa: E501
-            distinguished_name (bool, date, datetime, dict, float, int, list, str, none_type): The domain distinguished name. [optional]  # noqa: E501
-            domain_type (bool, date, datetime, dict, float, int, list, str, none_type): Domain type: ActiveDirectory, OpenLdap, or AzureActiveDirectory. [optional]  # noqa: E501
-            friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): The domain friendly name. [optional]  # noqa: E501
-            fully_qualified_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): The fully qualified domain name. [optional]  # noqa: E501
-            net_bios_name (bool, date, datetime, dict, float, int, list, str, none_type): The NetBIOS name. [optional]  # noqa: E501
+            days_to_keep_machines (str): Days To Keep Machines. [optional]  # noqa: E501
+            distinguished_name (str): The domain distinguished name. [optional]  # noqa: E501
+            domain_type (str): Domain type: ActiveDirectory, OpenLdap, or AzureActiveDirectory. [optional]  # noqa: E501
+            friendly_name (str): The domain friendly name. [optional]  # noqa: E501
+            fully_qualified_domain_name (str): The fully qualified domain name. [optional]  # noqa: E501
+            net_bios_name (str): The NetBIOS name. [optional]  # noqa: E501
             use_secure_ldap (bool): Use secure LDAP. [optional]  # noqa: E501
         """
 

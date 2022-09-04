@@ -57,10 +57,8 @@ class SecretDependencySetting(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,39 +66,36 @@ class SecretDependencySetting(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'can_edit': (bool,),  # noqa: E501
-            'can_edit_value': (bool,),  # noqa: E501
-            'child_settings': ([SecretDependencySetting],),  # noqa: E501
-            'default_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_visibile': (bool,),  # noqa: E501
-            'parent_setting_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'regex_validation': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_section_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sub_setting_section_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'can_edit': (bool, none_type,),  # noqa: E501
+            'can_edit_value': (bool, none_type,),  # noqa: E501
+            'child_settings': ([SecretDependencySetting], none_type,),  # noqa: E501
+            'default_value': (str, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_visibile': (bool, none_type,),  # noqa: E501
+            'parent_setting_id': (int, none_type,),  # noqa: E501
+            'regex_validation': (str, none_type,),  # noqa: E501
+            'setting_name': (str, none_type,),  # noqa: E501
+            'setting_section_id': (int, none_type,),  # noqa: E501
+            'setting_type': (int, none_type,),  # noqa: E501
+            'sub_setting_section_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,16 +160,16 @@ class SecretDependencySetting(ModelNormal):
             can_edit (bool): Indicates the setting details may be editted.. [optional]  # noqa: E501
             can_edit_value (bool): Indicates the setting value may be editted.. [optional]  # noqa: E501
             child_settings ([SecretDependencySetting]): The Child Settings that would be used  for list of options.. [optional]  # noqa: E501
-            default_value (bool, date, datetime, dict, float, int, list, str, none_type): Default value if the setting is not given a value. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Setting Display Name. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of the setting. [optional]  # noqa: E501
+            default_value (str): Default value if the setting is not given a value. [optional]  # noqa: E501
+            display_name (str): Setting Display Name. [optional]  # noqa: E501
+            id (int): Id of the setting. [optional]  # noqa: E501
             is_visibile (bool): Indicates the setting is visible on the UI.. [optional]  # noqa: E501
-            parent_setting_id (bool, date, datetime, dict, float, int, list, str, none_type): Parent Setting Id used when a setting has child options.. [optional]  # noqa: E501
-            regex_validation (bool, date, datetime, dict, float, int, list, str, none_type): Regex used to validate the input. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the setting. [optional]  # noqa: E501
-            setting_section_id (bool, date, datetime, dict, float, int, list, str, none_type): Section Id of the setting. [optional]  # noqa: E501
-            setting_type (bool, date, datetime, dict, float, int, list, str, none_type): Type of Setting (Default (string) = 0, Integer = 1, String = 2, Boolean = 3, StringArray = 4, DropDown = 5,DropDownItem = 6. [optional]  # noqa: E501
-            sub_setting_section_id (bool, date, datetime, dict, float, int, list, str, none_type): Subsetting Section Id. [optional]  # noqa: E501
+            parent_setting_id (int): Parent Setting Id used when a setting has child options.. [optional]  # noqa: E501
+            regex_validation (str): Regex used to validate the input. [optional]  # noqa: E501
+            setting_name (str): Name of the setting. [optional]  # noqa: E501
+            setting_section_id (int): Section Id of the setting. [optional]  # noqa: E501
+            setting_type (int): Type of Setting (Default (string) = 0, Integer = 1, String = 2, Boolean = 3, StringArray = 4, DropDown = 5,DropDownItem = 6. [optional]  # noqa: E501
+            sub_setting_section_id (int): Subsetting Section Id. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -264,16 +259,16 @@ class SecretDependencySetting(ModelNormal):
             can_edit (bool): Indicates the setting details may be editted.. [optional]  # noqa: E501
             can_edit_value (bool): Indicates the setting value may be editted.. [optional]  # noqa: E501
             child_settings ([SecretDependencySetting]): The Child Settings that would be used  for list of options.. [optional]  # noqa: E501
-            default_value (bool, date, datetime, dict, float, int, list, str, none_type): Default value if the setting is not given a value. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Setting Display Name. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of the setting. [optional]  # noqa: E501
+            default_value (str): Default value if the setting is not given a value. [optional]  # noqa: E501
+            display_name (str): Setting Display Name. [optional]  # noqa: E501
+            id (int): Id of the setting. [optional]  # noqa: E501
             is_visibile (bool): Indicates the setting is visible on the UI.. [optional]  # noqa: E501
-            parent_setting_id (bool, date, datetime, dict, float, int, list, str, none_type): Parent Setting Id used when a setting has child options.. [optional]  # noqa: E501
-            regex_validation (bool, date, datetime, dict, float, int, list, str, none_type): Regex used to validate the input. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of the setting. [optional]  # noqa: E501
-            setting_section_id (bool, date, datetime, dict, float, int, list, str, none_type): Section Id of the setting. [optional]  # noqa: E501
-            setting_type (bool, date, datetime, dict, float, int, list, str, none_type): Type of Setting (Default (string) = 0, Integer = 1, String = 2, Boolean = 3, StringArray = 4, DropDown = 5,DropDownItem = 6. [optional]  # noqa: E501
-            sub_setting_section_id (bool, date, datetime, dict, float, int, list, str, none_type): Subsetting Section Id. [optional]  # noqa: E501
+            parent_setting_id (int): Parent Setting Id used when a setting has child options.. [optional]  # noqa: E501
+            regex_validation (str): Regex used to validate the input. [optional]  # noqa: E501
+            setting_name (str): Name of the setting. [optional]  # noqa: E501
+            setting_section_id (int): Section Id of the setting. [optional]  # noqa: E501
+            setting_type (int): Type of Setting (Default (string) = 0, Integer = 1, String = 2, Boolean = 3, StringArray = 4, DropDown = 5,DropDownItem = 6. [optional]  # noqa: E501
+            sub_setting_section_id (int): Subsetting Section Id. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -71,7 +71,7 @@ class ExtendedFieldsApi(object):
                 },
                 'openapi_types': {
                     'secret_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'secret_id': 'secretId',
@@ -106,7 +106,7 @@ class ExtendedFieldsApi(object):
         >>> result = thread.get()
 
         Args:
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): secretId
+            secret_id (int): secretId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

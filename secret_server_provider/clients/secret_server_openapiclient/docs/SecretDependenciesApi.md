@@ -63,51 +63,51 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
     secret_dependency_create_args = SecretDependencyCreateArgs(
         active=True,
-        condition_dependency_id=None,
-        condition_mode=None,
+        condition_dependency_id=1,
+        condition_mode="condition_mode_example",
         dependency_template=SecretDependencyTemplate(
-            changer_script_id=None,
+            changer_script_id=1,
             dependency_scan_item_fields=[
                 SecretDependencyScanItemField(
-                    id=None,
-                    name=None,
-                    parent_name=None,
-                    value=None,
+                    id=1,
+                    name="name_example",
+                    parent_name="parent_name_example",
+                    value="value_example",
                 ),
             ],
-            script_name=None,
-            secret_dependency_changer_id=None,
-            secret_dependency_template_id=None,
+            script_name="script_name_example",
+            secret_dependency_changer_id=1,
+            secret_dependency_template_id=1,
         ),
-        description=None,
-        group_id=None,
-        machine_name=None,
-        privileged_account_secret_id=None,
+        description="description_example",
+        group_id=1,
+        machine_name="machine_name_example",
+        privileged_account_secret_id=1,
         run_script=SecretDependencyRunScript(
-            machine_name=None,
+            machine_name="machine_name_example",
             odbc_connection_arguments=[
                 SecretDependencyOdbcConnectionArg(
-                    name=None,
-                    value=None,
+                    name="name_example",
+                    value="value_example",
                 ),
             ],
             script_arguments=[
                 SecretDependencyUniversalScriptArgument(
-                    name=None,
-                    type=None,
-                    value=None,
+                    name="name_example",
+                    type="type_example",
+                    value="value_example",
                 ),
             ],
-            script_id=None,
-            script_name=None,
-            service_name=None,
+            script_id=1,
+            script_name="script_name_example",
+            service_name="service_name_example",
         ),
-        secret_id=None,
-        secret_name=None,
-        service_name=None,
+        secret_id=1,
+        secret_name="secret_name_example",
+        service_name="service_name_example",
         settings=[
             SecretDependencySettingMapForDisplay(
-                changer_setting_value=None,
+                changer_setting_value="changer_setting_value_example",
                 setting=SecretDependencySetting(
                     active=True,
                     can_edit=True,
@@ -115,26 +115,26 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     child_settings=[
                         SecretDependencySetting(),
                     ],
-                    default_value=None,
-                    display_name=None,
-                    id=None,
+                    default_value="default_value_example",
+                    display_name="display_name_example",
+                    id=1,
                     is_visibile=True,
-                    parent_setting_id=None,
-                    regex_validation=None,
-                    setting_name=None,
-                    setting_section_id=None,
-                    setting_type=None,
-                    sub_setting_section_id=None,
+                    parent_setting_id=1,
+                    regex_validation="regex_validation_example",
+                    setting_name="setting_name_example",
+                    setting_section_id=1,
+                    setting_type=1,
+                    sub_setting_section_id=1,
                 ),
-                setting_id=None,
-                setting_name=None,
-                setting_value=None,
+                setting_id=1,
+                setting_name="setting_name_example",
+                setting_value="setting_value_example",
             ),
         ],
-        sort_order=None,
-        ssh_key_secret_id=None,
-        type_id=None,
-        type_name=None,
+        sort_order=1,
+        ssh_key_secret_id=1,
+        type_id=1,
+        type_name="type_name_example",
     ) # SecretDependencyCreateArgs | Secret Dependency create options (optional)
 
     # example passing only required values which don't have defaults set
@@ -221,10 +221,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    secret_id = 1 # int | Secret ID
     secret_dependency_group_create_args = SecretDependencyGroupCreateArgs(
-        secret_dependency_group_name=None,
-        site_id=None,
+        secret_dependency_group_name="secret_dependency_group_name_example",
+        site_id=1,
     ) # SecretDependencyGroupCreateArgs | Secret Dependency create options (optional)
 
     # example passing only required values which don't have defaults set
@@ -250,7 +250,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **secret_id** | **int**| Secret ID |
  **secret_dependency_group_create_args** | [**SecretDependencyGroupCreateArgs**](SecretDependencyGroupCreateArgs.md)| Secret Dependency create options | [optional]
 
 ### Return type
@@ -319,7 +319,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Dependency ID
+    id = 1 # int | Secret Dependency ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -335,7 +335,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Dependency ID |
+ **id** | **int**| Secret Dependency ID |
 
 ### Return type
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **secret_dependencies_service_execute**
-> bool, date, datetime, dict, float, int, list, str, none_type secret_dependencies_service_execute()
+> str secret_dependencies_service_execute()
 
 Run Dependencies
 
@@ -403,8 +403,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
     request_body = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | Dependency Id array (optional)
+        1,
+    ] # [int] | Dependency Id array (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -421,11 +421,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_body** | **[bool, date, datetime, dict, float, int, list, str, none_type]**| Dependency Id array | [optional]
+ **request_body** | **[int]**| Dependency Id array | [optional]
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -489,7 +489,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Dependency ID
+    id = 1 # int | Secret Dependency ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -505,7 +505,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Dependency ID |
+ **id** | **int**| Secret Dependency ID |
 
 ### Return type
 
@@ -573,7 +573,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    identifier = None # bool, date, datetime, dict, float, int, list, str, none_type | Task identifier
+    identifier = "identifier_example" # str | Task identifier
 
     # example passing only required values which don't have defaults set
     try:
@@ -589,7 +589,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **bool, date, datetime, dict, float, int, list, str, none_type**| Task identifier |
+ **identifier** | **str**| Task identifier |
 
 ### Return type
 
@@ -657,7 +657,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    secret_id = 1 # int | Secret ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -673,7 +673,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **secret_id** | **int**| Secret ID |
 
 ### Return type
 
@@ -901,17 +901,17 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    filter_secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The Secret Id to filter on
-    filter_group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by group id (optional)
+    filter_secret_id = 1 # int | The Secret Id to filter on
+    filter_group_id = 1 # int | Filter by group id (optional)
     filter_include_inactive = True # bool | Whether or not to include inactive Secret Depenencies (optional)
-    filter_last_run_status = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by last dependency result status (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search in the title / name and machine fields (optional)
-    filter_template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by dependency template id (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_last_run_status = "filter.lastRunStatus_example" # str | Filter by last dependency result status (optional)
+    filter_search_text = "filter.searchText_example" # str | Search in the title / name and machine fields (optional)
+    filter_template_id = 1 # int | Filter by dependency template id (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -936,17 +936,17 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The Secret Id to filter on |
- **filter_group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by group id | [optional]
+ **filter_secret_id** | **int**| The Secret Id to filter on |
+ **filter_group_id** | **int**| Filter by group id | [optional]
  **filter_include_inactive** | **bool**| Whether or not to include inactive Secret Depenencies | [optional]
- **filter_last_run_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by last dependency result status | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search in the title / name and machine fields | [optional]
- **filter_template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by dependency template id | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_last_run_status** | **str**| Filter by last dependency result status | [optional]
+ **filter_search_text** | **str**| Search in the title / name and machine fields | [optional]
+ **filter_template_id** | **int**| Filter by dependency template id | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1014,10 +1014,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    script_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The Id of the Script that this Dependency will Run.  Only provide this value if the Dependency is running a script directly, and ensure that the type of the script matches the TypeId value passed in. (optional)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The Id of the Secret that this Dependency will appear on (optional)
-    template_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The Id of the Dependency Template that this Dependecy will be modeled on. Only provide this value if the Dependency is based on a Template. (optional)
-    type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | The Id of the Dependency Type that this Dependecy will be modeled on. Only provide this value if the Dependency is a running a script directly and is NOT based on a Dependency Template.  Valid Values: PowershellScript = 7, SshScript = 8, SqlScript = 9 (optional)
+    script_id = 1 # int | The Id of the Script that this Dependency will Run.  Only provide this value if the Dependency is running a script directly, and ensure that the type of the script matches the TypeId value passed in. (optional)
+    secret_id = 1 # int | The Id of the Secret that this Dependency will appear on (optional)
+    template_id = 1 # int | The Id of the Dependency Template that this Dependecy will be modeled on. Only provide this value if the Dependency is based on a Template. (optional)
+    type_id = 1 # int | The Id of the Dependency Type that this Dependecy will be modeled on. Only provide this value if the Dependency is a running a script directly and is NOT based on a Dependency Template.  Valid Values: PowershellScript = 7, SshScript = 8, SqlScript = 9 (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1034,10 +1034,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The Id of the Script that this Dependency will Run.  Only provide this value if the Dependency is running a script directly, and ensure that the type of the script matches the TypeId value passed in. | [optional]
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The Id of the Secret that this Dependency will appear on | [optional]
- **template_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The Id of the Dependency Template that this Dependecy will be modeled on. Only provide this value if the Dependency is based on a Template. | [optional]
- **type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| The Id of the Dependency Type that this Dependecy will be modeled on. Only provide this value if the Dependency is a running a script directly and is NOT based on a Dependency Template.  Valid Values: PowershellScript &#x3D; 7, SshScript &#x3D; 8, SqlScript &#x3D; 9 | [optional]
+ **script_id** | **int**| The Id of the Script that this Dependency will Run.  Only provide this value if the Dependency is running a script directly, and ensure that the type of the script matches the TypeId value passed in. | [optional]
+ **secret_id** | **int**| The Id of the Secret that this Dependency will appear on | [optional]
+ **template_id** | **int**| The Id of the Dependency Template that this Dependecy will be modeled on. Only provide this value if the Dependency is based on a Template. | [optional]
+ **type_id** | **int**| The Id of the Dependency Type that this Dependecy will be modeled on. Only provide this value if the Dependency is a running a script directly and is NOT based on a Dependency Template.  Valid Values: PowershellScript &#x3D; 7, SshScript &#x3D; 8, SqlScript &#x3D; 9 | [optional]
 
 ### Return type
 
@@ -1105,55 +1105,55 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Dependency ID
+    id = 1 # int | Secret Dependency ID
     secret_dependency_update_args = SecretDependencyUpdateArgs(
         active=True,
-        condition_dependency_id=None,
-        condition_mode=None,
+        condition_dependency_id=1,
+        condition_mode="condition_mode_example",
         dependency_template=SecretDependencyTemplate(
-            changer_script_id=None,
+            changer_script_id=1,
             dependency_scan_item_fields=[
                 SecretDependencyScanItemField(
-                    id=None,
-                    name=None,
-                    parent_name=None,
-                    value=None,
+                    id=1,
+                    name="name_example",
+                    parent_name="parent_name_example",
+                    value="value_example",
                 ),
             ],
-            script_name=None,
-            secret_dependency_changer_id=None,
-            secret_dependency_template_id=None,
+            script_name="script_name_example",
+            secret_dependency_changer_id=1,
+            secret_dependency_template_id=1,
         ),
-        description=None,
-        group_id=None,
-        id=None,
-        machine_name=None,
-        privileged_account_secret_id=None,
+        description="description_example",
+        group_id=1,
+        id=1,
+        machine_name="machine_name_example",
+        privileged_account_secret_id=1,
         run_script=SecretDependencyRunScript(
-            machine_name=None,
+            machine_name="machine_name_example",
             odbc_connection_arguments=[
                 SecretDependencyOdbcConnectionArg(
-                    name=None,
-                    value=None,
+                    name="name_example",
+                    value="value_example",
                 ),
             ],
             script_arguments=[
                 SecretDependencyUniversalScriptArgument(
-                    name=None,
-                    type=None,
-                    value=None,
+                    name="name_example",
+                    type="type_example",
+                    value="value_example",
                 ),
             ],
-            script_id=None,
-            script_name=None,
-            service_name=None,
+            script_id=1,
+            script_name="script_name_example",
+            service_name="service_name_example",
         ),
-        secret_id=None,
-        secret_name=None,
-        service_name=None,
+        secret_id=1,
+        secret_name="secret_name_example",
+        service_name="service_name_example",
         settings=[
             SecretDependencySettingMapForDisplay(
-                changer_setting_value=None,
+                changer_setting_value="changer_setting_value_example",
                 setting=SecretDependencySetting(
                     active=True,
                     can_edit=True,
@@ -1161,26 +1161,26 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                     child_settings=[
                         SecretDependencySetting(),
                     ],
-                    default_value=None,
-                    display_name=None,
-                    id=None,
+                    default_value="default_value_example",
+                    display_name="display_name_example",
+                    id=1,
                     is_visibile=True,
-                    parent_setting_id=None,
-                    regex_validation=None,
-                    setting_name=None,
-                    setting_section_id=None,
-                    setting_type=None,
-                    sub_setting_section_id=None,
+                    parent_setting_id=1,
+                    regex_validation="regex_validation_example",
+                    setting_name="setting_name_example",
+                    setting_section_id=1,
+                    setting_type=1,
+                    sub_setting_section_id=1,
                 ),
-                setting_id=None,
-                setting_name=None,
-                setting_value=None,
+                setting_id=1,
+                setting_name="setting_name_example",
+                setting_value="setting_value_example",
             ),
         ],
-        sort_order=None,
-        ssh_key_secret_id=None,
-        type_id=None,
-        type_name=None,
+        sort_order=1,
+        ssh_key_secret_id=1,
+        type_id=1,
+        type_name="type_name_example",
     ) # SecretDependencyUpdateArgs | Secret Dependency update options (optional)
 
     # example passing only required values which don't have defaults set
@@ -1206,7 +1206,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Dependency ID |
+ **id** | **int**| Secret Dependency ID |
  **secret_dependency_update_args** | [**SecretDependencyUpdateArgs**](SecretDependencyUpdateArgs.md)| Secret Dependency update options | [optional]
 
 ### Return type
@@ -1276,12 +1276,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_dependencies_api.SecretDependenciesApi(api_client)
-    secret_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Id of Secret to assign to Dependency Group.
+    secret_id = 1 # int | Id of Secret to assign to Dependency Group.
     update_secret_dependency_group_args = UpdateSecretDependencyGroupArgs(
         data=UpdateSecretDependencyGroupModel(
-            secret_dependency_group_id=None,
-            secret_dependency_group_name=None,
-            site_id=None,
+            secret_dependency_group_id=1,
+            secret_dependency_group_name="secret_dependency_group_name_example",
+            site_id=1,
         ),
     ) # UpdateSecretDependencyGroupArgs | args (optional)
 
@@ -1308,7 +1308,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secret_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Id of Secret to assign to Dependency Group. |
+ **secret_id** | **int**| Id of Secret to assign to Dependency Group. |
  **update_secret_dependency_group_args** | [**UpdateSecretDependencyGroupArgs**](UpdateSecretDependencyGroupArgs.md)| args | [optional]
 
 ### Return type

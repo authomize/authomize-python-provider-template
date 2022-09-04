@@ -67,10 +67,8 @@ class SecretPolicyCreateModelV2(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,33 +77,30 @@ class SecretPolicyCreateModelV2(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'general_items': (SecretPolicyGeneralItemsCreateModel,),  # noqa: E501
-            'launcher_items': (SecretPolicyLauncherItemsCreateModel,),  # noqa: E501
-            'rpc_items': (SecretPolicyRpcItemsCreateModel,),  # noqa: E501
-            'secret_policy_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policy_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'security_items': (SecretPolicySecurityItemsCreateModel,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'general_items': (SecretPolicyGeneralItemsCreateModel, none_type,),  # noqa: E501
+            'launcher_items': (SecretPolicyLauncherItemsCreateModel, none_type,),  # noqa: E501
+            'rpc_items': (SecretPolicyRpcItemsCreateModel, none_type,),  # noqa: E501
+            'secret_policy_description': (str, none_type,),  # noqa: E501
+            'secret_policy_name': (str, none_type,),  # noqa: E501
+            'security_items': (SecretPolicySecurityItemsCreateModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -163,8 +158,8 @@ class SecretPolicyCreateModelV2(ModelNormal):
             general_items (SecretPolicyGeneralItemsCreateModel): [optional]  # noqa: E501
             launcher_items (SecretPolicyLauncherItemsCreateModel): [optional]  # noqa: E501
             rpc_items (SecretPolicyRpcItemsCreateModel): [optional]  # noqa: E501
-            secret_policy_description (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Description. [optional]  # noqa: E501
-            secret_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Name. [optional]  # noqa: E501
+            secret_policy_description (str): Secret Policy Description. [optional]  # noqa: E501
+            secret_policy_name (str): Secret Policy Name. [optional]  # noqa: E501
             security_items (SecretPolicySecurityItemsCreateModel): [optional]  # noqa: E501
         """
 
@@ -255,8 +250,8 @@ class SecretPolicyCreateModelV2(ModelNormal):
             general_items (SecretPolicyGeneralItemsCreateModel): [optional]  # noqa: E501
             launcher_items (SecretPolicyLauncherItemsCreateModel): [optional]  # noqa: E501
             rpc_items (SecretPolicyRpcItemsCreateModel): [optional]  # noqa: E501
-            secret_policy_description (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Description. [optional]  # noqa: E501
-            secret_policy_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Policy Name. [optional]  # noqa: E501
+            secret_policy_description (str): Secret Policy Description. [optional]  # noqa: E501
+            secret_policy_name (str): Secret Policy Name. [optional]  # noqa: E501
             security_items (SecretPolicySecurityItemsCreateModel): [optional]  # noqa: E501
         """
 

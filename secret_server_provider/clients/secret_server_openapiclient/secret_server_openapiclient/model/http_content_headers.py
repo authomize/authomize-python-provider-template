@@ -69,10 +69,8 @@ class HttpContentHeaders(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,37 +79,34 @@ class HttpContentHeaders(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'content_disposition': (ContentDispositionHeaderValue,),  # noqa: E501
-            'content_encoding': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'content_language': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'content_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'content_location': (Uri,),  # noqa: E501
-            'content_md5': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'content_range': (ContentRangeHeaderValue,),  # noqa: E501
-            'content_type': (MediaTypeHeaderValue,),  # noqa: E501
-            'expires': (OptionalDateTimeOffset,),  # noqa: E501
-            'last_modified': (OptionalDateTimeOffset,),  # noqa: E501
+            'allow': ([str], none_type,),  # noqa: E501
+            'content_disposition': (ContentDispositionHeaderValue, none_type,),  # noqa: E501
+            'content_encoding': ([str], none_type,),  # noqa: E501
+            'content_language': ([str], none_type,),  # noqa: E501
+            'content_length': (int, none_type,),  # noqa: E501
+            'content_location': (Uri, none_type,),  # noqa: E501
+            'content_md5': (file_type, none_type,),  # noqa: E501
+            'content_range': (ContentRangeHeaderValue, none_type,),  # noqa: E501
+            'content_type': (MediaTypeHeaderValue, none_type,),  # noqa: E501
+            'expires': (OptionalDateTimeOffset, none_type,),  # noqa: E501
+            'last_modified': (OptionalDateTimeOffset, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -169,13 +164,13 @@ class HttpContentHeaders(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allow ([bool, date, datetime, dict, float, int, list, str, none_type]): Allow. [optional]  # noqa: E501
+            allow ([str]): Allow. [optional]  # noqa: E501
             content_disposition (ContentDispositionHeaderValue): [optional]  # noqa: E501
-            content_encoding ([bool, date, datetime, dict, float, int, list, str, none_type]): ContentEncoding. [optional]  # noqa: E501
-            content_language ([bool, date, datetime, dict, float, int, list, str, none_type]): ContentLanguage. [optional]  # noqa: E501
-            content_length (bool, date, datetime, dict, float, int, list, str, none_type): ContentLength. [optional]  # noqa: E501
+            content_encoding ([str]): ContentEncoding. [optional]  # noqa: E501
+            content_language ([str]): ContentLanguage. [optional]  # noqa: E501
+            content_length (int): ContentLength. [optional]  # noqa: E501
             content_location (Uri): [optional]  # noqa: E501
-            content_md5 (bool, date, datetime, dict, float, int, list, str, none_type): ContentMD5. [optional]  # noqa: E501
+            content_md5 (file_type): ContentMD5. [optional]  # noqa: E501
             content_range (ContentRangeHeaderValue): [optional]  # noqa: E501
             content_type (MediaTypeHeaderValue): [optional]  # noqa: E501
             expires (OptionalDateTimeOffset): [optional]  # noqa: E501
@@ -265,13 +260,13 @@ class HttpContentHeaders(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allow ([bool, date, datetime, dict, float, int, list, str, none_type]): Allow. [optional]  # noqa: E501
+            allow ([str]): Allow. [optional]  # noqa: E501
             content_disposition (ContentDispositionHeaderValue): [optional]  # noqa: E501
-            content_encoding ([bool, date, datetime, dict, float, int, list, str, none_type]): ContentEncoding. [optional]  # noqa: E501
-            content_language ([bool, date, datetime, dict, float, int, list, str, none_type]): ContentLanguage. [optional]  # noqa: E501
-            content_length (bool, date, datetime, dict, float, int, list, str, none_type): ContentLength. [optional]  # noqa: E501
+            content_encoding ([str]): ContentEncoding. [optional]  # noqa: E501
+            content_language ([str]): ContentLanguage. [optional]  # noqa: E501
+            content_length (int): ContentLength. [optional]  # noqa: E501
             content_location (Uri): [optional]  # noqa: E501
-            content_md5 (bool, date, datetime, dict, float, int, list, str, none_type): ContentMD5. [optional]  # noqa: E501
+            content_md5 (file_type): ContentMD5. [optional]  # noqa: E501
             content_range (ContentRangeHeaderValue): [optional]  # noqa: E501
             content_type (MediaTypeHeaderValue): [optional]  # noqa: E501
             expires (OptionalDateTimeOffset): [optional]  # noqa: E501

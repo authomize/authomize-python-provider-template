@@ -57,10 +57,8 @@ class LauncherFileDownload(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class LauncherFileDownload(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'content_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_contents': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'content_type': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'file_contents': (str, none_type,),  # noqa: E501
+            'file_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class LauncherFileDownload(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            content_type (bool, date, datetime, dict, float, int, list, str, none_type): ContentType. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            file_contents (bool, date, datetime, dict, float, int, list, str, none_type): FileContents. [optional]  # noqa: E501
-            file_name (bool, date, datetime, dict, float, int, list, str, none_type): FileName. [optional]  # noqa: E501
+            content_type (str): ContentType. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            file_contents (str): FileContents. [optional]  # noqa: E501
+            file_name (str): FileName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class LauncherFileDownload(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            content_type (bool, date, datetime, dict, float, int, list, str, none_type): ContentType. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            file_contents (bool, date, datetime, dict, float, int, list, str, none_type): FileContents. [optional]  # noqa: E501
-            file_name (bool, date, datetime, dict, float, int, list, str, none_type): FileName. [optional]  # noqa: E501
+            content_type (str): ContentType. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            file_contents (str): FileContents. [optional]  # noqa: E501
+            file_name (str): FileName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

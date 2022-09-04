@@ -57,10 +57,8 @@ class ConfigurationLoginSshKeyIntegrationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class ConfigurationLoginSshKeyIntegrationModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'authentication_method': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable': (bool,),  # noqa: E501
-            'expiration_in_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'key_expires': (bool,),  # noqa: E501
-            'two_factor_bypass': (bool,),  # noqa: E501
+            'authentication_method': (int, none_type,),  # noqa: E501
+            'enable': (bool, none_type,),  # noqa: E501
+            'expiration_in_hours': (int, none_type,),  # noqa: E501
+            'key_expires': (bool, none_type,),  # noqa: E501
+            'two_factor_bypass': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,9 +138,9 @@ class ConfigurationLoginSshKeyIntegrationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            authentication_method (bool, date, datetime, dict, float, int, list, str, none_type): Require password only, public key only, password or public key, password and public key. [optional]  # noqa: E501
+            authentication_method (int): Require password only, public key only, password or public key, password and public key. [optional]  # noqa: E501
             enable (bool): When activated, SSH key pairs can be used for authentication in SSH Terminal. [optional]  # noqa: E501
-            expiration_in_hours (bool, date, datetime, dict, float, int, list, str, none_type): The number of days and hours the key will stay active. [optional]  # noqa: E501
+            expiration_in_hours (int): The number of days and hours the key will stay active. [optional]  # noqa: E501
             key_expires (bool): When activated, SSH keys will expire after a specified amount of time. [optional]  # noqa: E501
             two_factor_bypass (bool): When activated, providing a valid SSH key (and password, if required by Unix Authentication Method) will bypass any required 2FA validation. [optional]  # noqa: E501
         """
@@ -233,9 +228,9 @@ class ConfigurationLoginSshKeyIntegrationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            authentication_method (bool, date, datetime, dict, float, int, list, str, none_type): Require password only, public key only, password or public key, password and public key. [optional]  # noqa: E501
+            authentication_method (int): Require password only, public key only, password or public key, password and public key. [optional]  # noqa: E501
             enable (bool): When activated, SSH key pairs can be used for authentication in SSH Terminal. [optional]  # noqa: E501
-            expiration_in_hours (bool, date, datetime, dict, float, int, list, str, none_type): The number of days and hours the key will stay active. [optional]  # noqa: E501
+            expiration_in_hours (int): The number of days and hours the key will stay active. [optional]  # noqa: E501
             key_expires (bool): When activated, SSH keys will expire after a specified amount of time. [optional]  # noqa: E501
             two_factor_bypass (bool): When activated, providing a valid SSH key (and password, if required by Unix Authentication Method) will bypass any required 2FA validation. [optional]  # noqa: E501
         """

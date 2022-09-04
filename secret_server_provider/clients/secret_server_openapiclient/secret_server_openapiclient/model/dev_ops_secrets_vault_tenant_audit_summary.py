@@ -57,10 +57,8 @@ class DevOpsSecretsVaultTenantAuditSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class DevOpsSecretsVaultTenantAuditSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'action': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'tenant_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'action': (str, none_type,),  # noqa: E501
+            'date': (datetime, none_type,),  # noqa: E501
+            'notes': (str, none_type,),  # noqa: E501
+            'tenant_name': (str, none_type,),  # noqa: E501
+            'user_display_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class DevOpsSecretsVaultTenantAuditSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): What the user did.. [optional]  # noqa: E501
-            date (bool, date, datetime, dict, float, int, list, str, none_type): When the action occurred.. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): A description of the action.. [optional]  # noqa: E501
-            tenant_name (bool, date, datetime, dict, float, int, list, str, none_type): Tenant being audited.. [optional]  # noqa: E501
-            user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): User that performed the action.. [optional]  # noqa: E501
+            action (str): What the user did.. [optional]  # noqa: E501
+            date (datetime): When the action occurred.. [optional]  # noqa: E501
+            notes (str): A description of the action.. [optional]  # noqa: E501
+            tenant_name (str): Tenant being audited.. [optional]  # noqa: E501
+            user_display_name (str): User that performed the action.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class DevOpsSecretsVaultTenantAuditSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): What the user did.. [optional]  # noqa: E501
-            date (bool, date, datetime, dict, float, int, list, str, none_type): When the action occurred.. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): A description of the action.. [optional]  # noqa: E501
-            tenant_name (bool, date, datetime, dict, float, int, list, str, none_type): Tenant being audited.. [optional]  # noqa: E501
-            user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): User that performed the action.. [optional]  # noqa: E501
+            action (str): What the user did.. [optional]  # noqa: E501
+            date (datetime): When the action occurred.. [optional]  # noqa: E501
+            notes (str): A description of the action.. [optional]  # noqa: E501
+            tenant_name (str): Tenant being audited.. [optional]  # noqa: E501
+            user_display_name (str): User that performed the action.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

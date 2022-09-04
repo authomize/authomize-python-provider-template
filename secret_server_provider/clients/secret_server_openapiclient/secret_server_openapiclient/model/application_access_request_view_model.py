@@ -61,10 +61,8 @@ class ApplicationAccessRequestViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,30 +71,27 @@ class ApplicationAccessRequestViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'created_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'device_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'requesting_application_username': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (ApplicationAccessStatusRequestType,),  # noqa: E501
+            'created_date': (datetime, none_type,),  # noqa: E501
+            'device_id': (int, none_type,),  # noqa: E501
+            'requesting_application_username': (str, none_type,),  # noqa: E501
+            'status': (ApplicationAccessStatusRequestType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -147,9 +142,9 @@ class ApplicationAccessRequestViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): CreatedDate. [optional]  # noqa: E501
-            device_id (bool, date, datetime, dict, float, int, list, str, none_type): DeviceId. [optional]  # noqa: E501
-            requesting_application_username (bool, date, datetime, dict, float, int, list, str, none_type): RequestingApplicationUsername. [optional]  # noqa: E501
+            created_date (datetime): CreatedDate. [optional]  # noqa: E501
+            device_id (int): DeviceId. [optional]  # noqa: E501
+            requesting_application_username (str): RequestingApplicationUsername. [optional]  # noqa: E501
             status (ApplicationAccessStatusRequestType): [optional]  # noqa: E501
         """
 
@@ -236,9 +231,9 @@ class ApplicationAccessRequestViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): CreatedDate. [optional]  # noqa: E501
-            device_id (bool, date, datetime, dict, float, int, list, str, none_type): DeviceId. [optional]  # noqa: E501
-            requesting_application_username (bool, date, datetime, dict, float, int, list, str, none_type): RequestingApplicationUsername. [optional]  # noqa: E501
+            created_date (datetime): CreatedDate. [optional]  # noqa: E501
+            device_id (int): DeviceId. [optional]  # noqa: E501
+            requesting_application_username (str): RequestingApplicationUsername. [optional]  # noqa: E501
             status (ApplicationAccessStatusRequestType): [optional]  # noqa: E501
         """
 

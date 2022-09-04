@@ -57,10 +57,8 @@ class MEKRotationInfoModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class MEKRotationInfoModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'last_end_date_utc': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'started_date_utc': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status_updated_date_utc': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'last_end_date_utc': (datetime, none_type,),  # noqa: E501
+            'started_date_utc': (datetime, none_type,),  # noqa: E501
+            'status': (str, none_type,),  # noqa: E501
+            'status_updated_date_utc': (datetime, none_type,),  # noqa: E501
+            'status_value': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class MEKRotationInfoModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            last_end_date_utc (bool, date, datetime, dict, float, int, list, str, none_type): LastEndDateUtc. [optional]  # noqa: E501
-            started_date_utc (bool, date, datetime, dict, float, int, list, str, none_type): StartedDateUtc. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]  # noqa: E501
-            status_updated_date_utc (bool, date, datetime, dict, float, int, list, str, none_type): StatusUpdatedDateUtc. [optional]  # noqa: E501
-            status_value (bool, date, datetime, dict, float, int, list, str, none_type): StatusValue. [optional]  # noqa: E501
+            last_end_date_utc (datetime): LastEndDateUtc. [optional]  # noqa: E501
+            started_date_utc (datetime): StartedDateUtc. [optional]  # noqa: E501
+            status (str): Status. [optional]  # noqa: E501
+            status_updated_date_utc (datetime): StatusUpdatedDateUtc. [optional]  # noqa: E501
+            status_value (int): StatusValue. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class MEKRotationInfoModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            last_end_date_utc (bool, date, datetime, dict, float, int, list, str, none_type): LastEndDateUtc. [optional]  # noqa: E501
-            started_date_utc (bool, date, datetime, dict, float, int, list, str, none_type): StartedDateUtc. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]  # noqa: E501
-            status_updated_date_utc (bool, date, datetime, dict, float, int, list, str, none_type): StatusUpdatedDateUtc. [optional]  # noqa: E501
-            status_value (bool, date, datetime, dict, float, int, list, str, none_type): StatusValue. [optional]  # noqa: E501
+            last_end_date_utc (datetime): LastEndDateUtc. [optional]  # noqa: E501
+            started_date_utc (datetime): StartedDateUtc. [optional]  # noqa: E501
+            status (str): Status. [optional]  # noqa: E501
+            status_updated_date_utc (datetime): StatusUpdatedDateUtc. [optional]  # noqa: E501
+            status_value (int): StatusValue. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

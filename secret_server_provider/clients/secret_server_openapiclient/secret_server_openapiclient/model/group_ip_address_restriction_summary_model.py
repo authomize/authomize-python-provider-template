@@ -57,10 +57,8 @@ class GroupIpAddressRestrictionSummaryModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class GroupIpAddressRestrictionSummaryModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'range': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'range': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -139,9 +134,9 @@ class GroupIpAddressRestrictionSummaryModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Address Restriction. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of IP Address Restriction. [optional]  # noqa: E501
-            range (bool, date, datetime, dict, float, int, list, str, none_type): Range of IP Address Restriction. [optional]  # noqa: E501
+            id (int): Id of Address Restriction. [optional]  # noqa: E501
+            name (str): Name of IP Address Restriction. [optional]  # noqa: E501
+            range (str): Range of IP Address Restriction. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,9 +222,9 @@ class GroupIpAddressRestrictionSummaryModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Address Restriction. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of IP Address Restriction. [optional]  # noqa: E501
-            range (bool, date, datetime, dict, float, int, list, str, none_type): Range of IP Address Restriction. [optional]  # noqa: E501
+            id (int): Id of Address Restriction. [optional]  # noqa: E501
+            name (str): Name of IP Address Restriction. [optional]  # noqa: E501
+            range (str): Range of IP Address Restriction. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

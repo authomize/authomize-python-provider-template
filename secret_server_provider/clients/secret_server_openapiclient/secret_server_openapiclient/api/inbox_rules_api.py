@@ -186,7 +186,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'inbox_rule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'inbox_rule_condition_create_args':
                         (InboxRuleConditionCreateArgs,),
                 },
@@ -242,7 +242,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -293,7 +293,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -389,7 +389,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'inbox_rule_patch_args':
                         (InboxRulePatchArgs,),
                 },
@@ -446,7 +446,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'inbox_rule_action_patch_args':
                         (InboxRuleActionPatchArgs,),
                 },
@@ -503,7 +503,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'rule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'inbox_rule_subscribers_patch_args':
                         (InboxRuleSubscribersPatchArgs,),
                 },
@@ -559,7 +559,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -629,31 +629,31 @@ class InboxRulesApi(object):
                     'filter_is_immediate':
                         (bool,),
                     'filter_message_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_message_type_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'rule_condition_filters_0_display_value':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'rule_condition_filters_0_inbox_data_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'rule_condition_filters_0_inbox_data_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'rule_condition_filters_0_value_bool':
                         (bool,),
                     'rule_condition_filters_0_value_int':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'rule_condition_filters_0_value_string':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_current_user_subscription_status': 'filter.includeCurrentUserSubscriptionStatus',
@@ -742,23 +742,23 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'inbox_rule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_end_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'filter_rule_action_status':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_start_date':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (datetime,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'inbox_rule_id': 'inboxRuleId',
@@ -834,25 +834,25 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'inbox_rule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_account_types':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_only_include_unsubscribable_users':
                         (bool,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_status':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'inbox_rule_id': 'inboxRuleId',
@@ -921,7 +921,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'rule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'rule_id': 'ruleId',
@@ -972,7 +972,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'rule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'rule_id': 'ruleId',
@@ -1024,7 +1024,7 @@ class InboxRulesApi(object):
                 },
                 'openapi_types': {
                     'inbox_rule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'inbox_rule_condition_update_args':
                         (InboxRuleConditionUpdateArgs,),
                 },
@@ -1222,7 +1222,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): inboxRuleId
+            inbox_rule_id (int): inboxRuleId
 
         Keyword Args:
             inbox_rule_condition_create_args (InboxRuleConditionCreateArgs): args. [optional]
@@ -1306,7 +1306,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1389,7 +1389,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1550,7 +1550,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             inbox_rule_patch_args (InboxRulePatchArgs): args. [optional]
@@ -1634,7 +1634,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             inbox_rule_action_patch_args (InboxRuleActionPatchArgs): args. [optional]
@@ -1718,7 +1718,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            rule_id (bool, date, datetime, dict, float, int, list, str, none_type): ruleId
+            rule_id (int): ruleId
 
         Keyword Args:
             inbox_rule_subscribers_patch_args (InboxRuleSubscribersPatchArgs): args. [optional]
@@ -1802,7 +1802,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1888,19 +1888,19 @@ class InboxRulesApi(object):
             filter_include_current_user_subscription_status (bool): Return the subscription status of the current user whether subscribed directly or via a group.. [optional]
             filter_include_inactive (bool): Include inactive rules.. [optional]
             filter_is_immediate (bool): Only return rules that run immediately or on a schedule, depending on value.. [optional]
-            filter_message_id (bool, date, datetime, dict, float, int, list, str, none_type): Return all rules that will apply to this message id, does not account for time or schedule.. [optional]
-            filter_message_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Only return rules that apply to this message type.  If a MessageId is passed then this value will be replaced with that message's MessageTypeId.. [optional]
-            rule_condition_filters_0_display_value (bool, date, datetime, dict, float, int, list, str, none_type): Search specifically display values. [optional]
-            rule_condition_filters_0_inbox_data_id (bool, date, datetime, dict, float, int, list, str, none_type): Which field is being searched.  This value can be null if InboxDataName is passed instead.. [optional]
-            rule_condition_filters_0_inbox_data_name (bool, date, datetime, dict, float, int, list, str, none_type): Which field is being searched.  If InboxDataId is passed this value is ignored.. [optional]
+            filter_message_id (int): Return all rules that will apply to this message id, does not account for time or schedule.. [optional]
+            filter_message_type_id (int): Only return rules that apply to this message type.  If a MessageId is passed then this value will be replaced with that message's MessageTypeId.. [optional]
+            rule_condition_filters_0_display_value (str): Search specifically display values. [optional]
+            rule_condition_filters_0_inbox_data_id (int): Which field is being searched.  This value can be null if InboxDataName is passed instead.. [optional]
+            rule_condition_filters_0_inbox_data_name (str): Which field is being searched.  If InboxDataId is passed this value is ignored.. [optional]
             rule_condition_filters_0_value_bool (bool): Search specifically for boolean values. [optional]
-            rule_condition_filters_0_value_int (bool, date, datetime, dict, float, int, list, str, none_type): Search specifically for int values. [optional]
-            rule_condition_filters_0_value_string (bool, date, datetime, dict, float, int, list, str, none_type): Search specifically for string values with a partial match. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            rule_condition_filters_0_value_int (int): Search specifically for int values. [optional]
+            rule_condition_filters_0_value_string (str): Search specifically for string values with a partial match. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1979,17 +1979,17 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): inboxRuleId
+            inbox_rule_id (int): inboxRuleId
 
         Keyword Args:
-            filter_end_date (bool, date, datetime, dict, float, int, list, str, none_type): EndDate. [optional]
-            filter_rule_action_status (bool, date, datetime, dict, float, int, list, str, none_type): RuleActionStatus. [optional]
-            filter_start_date (bool, date, datetime, dict, float, int, list, str, none_type): StartDate. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_end_date (datetime): EndDate. [optional]
+            filter_rule_action_status (str): RuleActionStatus. [optional]
+            filter_start_date (datetime): StartDate. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2070,18 +2070,18 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): inboxRuleId
+            inbox_rule_id (int): inboxRuleId
 
         Keyword Args:
-            filter_account_types (bool, date, datetime, dict, float, int, list, str, none_type): AccountTypes. [optional]
+            filter_account_types (str): AccountTypes. [optional]
             filter_only_include_unsubscribable_users (bool): This will ignore most other filters and return only User accounts that belong to groups that are subscribed.  The results will not include users that are directly subscribed as they must be removed from the subscription, not unsubscribed.. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text to filter users from the unsubscribable users. [optional]
-            filter_status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_search_text (str): Search text to filter users from the unsubscribable users. [optional]
+            filter_status (str): Status. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2162,7 +2162,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            rule_id (bool, date, datetime, dict, float, int, list, str, none_type): ruleId
+            rule_id (int): ruleId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2245,7 +2245,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            rule_id (bool, date, datetime, dict, float, int, list, str, none_type): ruleId
+            rule_id (int): ruleId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2328,7 +2328,7 @@ class InboxRulesApi(object):
         >>> result = thread.get()
 
         Args:
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): inboxRuleId
+            inbox_rule_id (int): inboxRuleId
 
         Keyword Args:
             inbox_rule_condition_update_args (InboxRuleConditionUpdateArgs): args. [optional]

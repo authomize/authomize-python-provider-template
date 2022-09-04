@@ -61,10 +61,8 @@ class SecretsExportModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,34 +71,31 @@ class SecretsExportModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'double_lock_password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'export_child_folders': (bool,),  # noqa: E501
-            'export_file_type': (ExportFileType,),  # noqa: E501
-            'export_folder_path': (bool,),  # noqa: E501
-            'export_totp': (bool,),  # noqa: E501
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'double_lock_password': (str, none_type,),  # noqa: E501
+            'export_child_folders': (bool, none_type,),  # noqa: E501
+            'export_file_type': (ExportFileType, none_type,),  # noqa: E501
+            'export_folder_path': (bool, none_type,),  # noqa: E501
+            'export_totp': (bool, none_type,),  # noqa: E501
+            'folder_id': (int, none_type,),  # noqa: E501
+            'notes': (str, none_type,),  # noqa: E501
+            'password': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,14 +150,14 @@ class SecretsExportModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            double_lock_password (bool, date, datetime, dict, float, int, list, str, none_type): The DoubleLock password of the current user.. [optional]  # noqa: E501
+            double_lock_password (str): The DoubleLock password of the current user.. [optional]  # noqa: E501
             export_child_folders (bool): Export Child Folders. [optional]  # noqa: E501
             export_file_type (ExportFileType): [optional]  # noqa: E501
             export_folder_path (bool): Export Folder Path. [optional]  # noqa: E501
             export_totp (bool): Export Totp Settings. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The folder Id of the specific folder being exported.. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
-            password (bool, date, datetime, dict, float, int, list, str, none_type): The password of the current user.. [optional]  # noqa: E501
+            folder_id (int): The folder Id of the specific folder being exported.. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
+            password (str): The password of the current user.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -248,14 +243,14 @@ class SecretsExportModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            double_lock_password (bool, date, datetime, dict, float, int, list, str, none_type): The DoubleLock password of the current user.. [optional]  # noqa: E501
+            double_lock_password (str): The DoubleLock password of the current user.. [optional]  # noqa: E501
             export_child_folders (bool): Export Child Folders. [optional]  # noqa: E501
             export_file_type (ExportFileType): [optional]  # noqa: E501
             export_folder_path (bool): Export Folder Path. [optional]  # noqa: E501
             export_totp (bool): Export Totp Settings. [optional]  # noqa: E501
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The folder Id of the specific folder being exported.. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
-            password (bool, date, datetime, dict, float, int, list, str, none_type): The password of the current user.. [optional]  # noqa: E501
+            folder_id (int): The folder Id of the specific folder being exported.. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
+            password (str): The password of the current user.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

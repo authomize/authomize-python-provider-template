@@ -61,10 +61,8 @@ class SecretTemplateLauncherSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,42 +71,39 @@ class SecretTemplateLauncherSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_list_secret_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'connect_as_command': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'connect_as_command_response': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'connect_as_timeout_in_seconds': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'deny_list_secret_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expected_prompt_ending': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'fields': ([SecretTemplateLauncherFieldSummary],),  # noqa: E501
-            'launcher_type_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'line_ending': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restrict_host_dependency_machines': (bool,),  # noqa: E501
-            'restrict_host_secret_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restrict_host_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restrict_user_input': (bool,),  # noqa: E501
-            'secret_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'allow_list_secret_field_id': (int, none_type,),  # noqa: E501
+            'connect_as_command': (str, none_type,),  # noqa: E501
+            'connect_as_command_response': (str, none_type,),  # noqa: E501
+            'connect_as_timeout_in_seconds': (int, none_type,),  # noqa: E501
+            'deny_list_secret_field_id': (int, none_type,),  # noqa: E501
+            'expected_prompt_ending': (str, none_type,),  # noqa: E501
+            'fields': ([SecretTemplateLauncherFieldSummary], none_type,),  # noqa: E501
+            'launcher_type_description': (str, none_type,),  # noqa: E501
+            'launcher_type_id': (int, none_type,),  # noqa: E501
+            'launcher_type_name': (str, none_type,),  # noqa: E501
+            'line_ending': (str, none_type,),  # noqa: E501
+            'restrict_host_dependency_machines': (bool, none_type,),  # noqa: E501
+            'restrict_host_secret_field_id': (int, none_type,),  # noqa: E501
+            'restrict_host_type': (int, none_type,),  # noqa: E501
+            'restrict_user_input': (bool, none_type,),  # noqa: E501
+            'secret_type_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -171,22 +166,22 @@ class SecretTemplateLauncherSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allow_list_secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the list to allow. [optional]  # noqa: E501
-            connect_as_command (bool, date, datetime, dict, float, int, list, str, none_type): Connect as command. [optional]  # noqa: E501
-            connect_as_command_response (bool, date, datetime, dict, float, int, list, str, none_type): The expected response to get from the host on connect as. [optional]  # noqa: E501
-            connect_as_timeout_in_seconds (bool, date, datetime, dict, float, int, list, str, none_type): The amount of time, in seconds, that must elapse before a timeout occurs.. [optional]  # noqa: E501
-            deny_list_secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the list to deny. [optional]  # noqa: E501
-            expected_prompt_ending (bool, date, datetime, dict, float, int, list, str, none_type): The character used to mark the end of a prompt on a server, such as '$', '#', '%', and etc. [optional]  # noqa: E501
+            allow_list_secret_field_id (int): The ID of the list to allow. [optional]  # noqa: E501
+            connect_as_command (str): Connect as command. [optional]  # noqa: E501
+            connect_as_command_response (str): The expected response to get from the host on connect as. [optional]  # noqa: E501
+            connect_as_timeout_in_seconds (int): The amount of time, in seconds, that must elapse before a timeout occurs.. [optional]  # noqa: E501
+            deny_list_secret_field_id (int): The ID of the list to deny. [optional]  # noqa: E501
+            expected_prompt_ending (str): The character used to mark the end of a prompt on a server, such as '$', '#', '%', and etc. [optional]  # noqa: E501
             fields ([SecretTemplateLauncherFieldSummary]): Mapping of secret template fields to launch fields. [optional]  # noqa: E501
-            launcher_type_description (bool, date, datetime, dict, float, int, list, str, none_type): Detailed description of this launcher. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of this launcher. [optional]  # noqa: E501
-            launcher_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of this launcher type. [optional]  # noqa: E501
-            line_ending (bool, date, datetime, dict, float, int, list, str, none_type): Connect as command line ending to be sent. [optional]  # noqa: E501
+            launcher_type_description (str): Detailed description of this launcher. [optional]  # noqa: E501
+            launcher_type_id (int): ID of this launcher. [optional]  # noqa: E501
+            launcher_type_name (str): Name of this launcher type. [optional]  # noqa: E501
+            line_ending (str): Connect as command line ending to be sent. [optional]  # noqa: E501
             restrict_host_dependency_machines (bool): Use dependency hosts for restrictions. [optional]  # noqa: E501
-            restrict_host_secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Restrict user input on a launcher mapping to values in this secret field. [optional]  # noqa: E501
-            restrict_host_type (bool, date, datetime, dict, float, int, list, str, none_type): Restrict host type. [optional]  # noqa: E501
+            restrict_host_secret_field_id (int): Restrict user input on a launcher mapping to values in this secret field. [optional]  # noqa: E501
+            restrict_host_type (int): Restrict host type. [optional]  # noqa: E501
             restrict_user_input (bool): User input has restrictions to allow or deny specific entries. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template ID. [optional]  # noqa: E501
+            secret_type_id (int): Secret Template ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -272,22 +267,22 @@ class SecretTemplateLauncherSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            allow_list_secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the list to allow. [optional]  # noqa: E501
-            connect_as_command (bool, date, datetime, dict, float, int, list, str, none_type): Connect as command. [optional]  # noqa: E501
-            connect_as_command_response (bool, date, datetime, dict, float, int, list, str, none_type): The expected response to get from the host on connect as. [optional]  # noqa: E501
-            connect_as_timeout_in_seconds (bool, date, datetime, dict, float, int, list, str, none_type): The amount of time, in seconds, that must elapse before a timeout occurs.. [optional]  # noqa: E501
-            deny_list_secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of the list to deny. [optional]  # noqa: E501
-            expected_prompt_ending (bool, date, datetime, dict, float, int, list, str, none_type): The character used to mark the end of a prompt on a server, such as '$', '#', '%', and etc. [optional]  # noqa: E501
+            allow_list_secret_field_id (int): The ID of the list to allow. [optional]  # noqa: E501
+            connect_as_command (str): Connect as command. [optional]  # noqa: E501
+            connect_as_command_response (str): The expected response to get from the host on connect as. [optional]  # noqa: E501
+            connect_as_timeout_in_seconds (int): The amount of time, in seconds, that must elapse before a timeout occurs.. [optional]  # noqa: E501
+            deny_list_secret_field_id (int): The ID of the list to deny. [optional]  # noqa: E501
+            expected_prompt_ending (str): The character used to mark the end of a prompt on a server, such as '$', '#', '%', and etc. [optional]  # noqa: E501
             fields ([SecretTemplateLauncherFieldSummary]): Mapping of secret template fields to launch fields. [optional]  # noqa: E501
-            launcher_type_description (bool, date, datetime, dict, float, int, list, str, none_type): Detailed description of this launcher. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): ID of this launcher. [optional]  # noqa: E501
-            launcher_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Name of this launcher type. [optional]  # noqa: E501
-            line_ending (bool, date, datetime, dict, float, int, list, str, none_type): Connect as command line ending to be sent. [optional]  # noqa: E501
+            launcher_type_description (str): Detailed description of this launcher. [optional]  # noqa: E501
+            launcher_type_id (int): ID of this launcher. [optional]  # noqa: E501
+            launcher_type_name (str): Name of this launcher type. [optional]  # noqa: E501
+            line_ending (str): Connect as command line ending to be sent. [optional]  # noqa: E501
             restrict_host_dependency_machines (bool): Use dependency hosts for restrictions. [optional]  # noqa: E501
-            restrict_host_secret_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Restrict user input on a launcher mapping to values in this secret field. [optional]  # noqa: E501
-            restrict_host_type (bool, date, datetime, dict, float, int, list, str, none_type): Restrict host type. [optional]  # noqa: E501
+            restrict_host_secret_field_id (int): Restrict user input on a launcher mapping to values in this secret field. [optional]  # noqa: E501
+            restrict_host_type (int): Restrict host type. [optional]  # noqa: E501
             restrict_user_input (bool): User input has restrictions to allow or deny specific entries. [optional]  # noqa: E501
-            secret_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template ID. [optional]  # noqa: E501
+            secret_type_id (int): Secret Template ID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

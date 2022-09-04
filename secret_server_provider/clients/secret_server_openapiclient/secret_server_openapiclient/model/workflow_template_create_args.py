@@ -61,10 +61,8 @@ class WorkflowTemplateCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class WorkflowTemplateCreateArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'name': (str,),  # noqa: E501
             'workflow_type': (WorkflowType,),  # noqa: E501
-            'configuration_json': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'configuration_json': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'expiration_minutes': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -119,7 +114,7 @@ class WorkflowTemplateCreateArgs(ModelNormal):
         """WorkflowTemplateCreateArgs - a model defined in OpenAPI
 
         Args:
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name
+            name (str): Name
             workflow_type (WorkflowType):
 
         Keyword Args:
@@ -153,9 +148,9 @@ class WorkflowTemplateCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            configuration_json (bool, date, datetime, dict, float, int, list, str, none_type): ConfigurationJson. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            expiration_minutes (bool, date, datetime, dict, float, int, list, str, none_type): ExpirationMinutes. [optional]  # noqa: E501
+            configuration_json (str): ConfigurationJson. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            expiration_minutes (int): ExpirationMinutes. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -213,7 +208,7 @@ class WorkflowTemplateCreateArgs(ModelNormal):
         """WorkflowTemplateCreateArgs - a model defined in OpenAPI
 
         Args:
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name
+            name (str): Name
             workflow_type (WorkflowType):
 
         Keyword Args:
@@ -247,9 +242,9 @@ class WorkflowTemplateCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            configuration_json (bool, date, datetime, dict, float, int, list, str, none_type): ConfigurationJson. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description. [optional]  # noqa: E501
-            expiration_minutes (bool, date, datetime, dict, float, int, list, str, none_type): ExpirationMinutes. [optional]  # noqa: E501
+            configuration_json (str): ConfigurationJson. [optional]  # noqa: E501
+            description (str): Description. [optional]  # noqa: E501
+            expiration_minutes (int): ExpirationMinutes. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

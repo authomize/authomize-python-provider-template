@@ -61,10 +61,8 @@ class DomainModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,34 +71,31 @@ class DomainModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'friendly_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'multifactor_authentication_provider': (MultifactorAuthenticationProviderTypes,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'synchronization_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_secure_ldap': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'friendly_name': (str, none_type,),  # noqa: E501
+            'multifactor_authentication_provider': (MultifactorAuthenticationProviderTypes, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'synchronization_secret_id': (int, none_type,),  # noqa: E501
+            'use_secure_ldap': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -156,12 +151,12 @@ class DomainModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Domain Id. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Domain Name. [optional]  # noqa: E501
-            friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): Friendly Name. [optional]  # noqa: E501
+            domain_id (int): Domain Id. [optional]  # noqa: E501
+            domain_name (str): Domain Name. [optional]  # noqa: E501
+            friendly_name (str): Friendly Name. [optional]  # noqa: E501
             multifactor_authentication_provider (MultifactorAuthenticationProviderTypes): [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Site Id. [optional]  # noqa: E501
-            synchronization_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Synchronization Secret. [optional]  # noqa: E501
+            site_id (int): Site Id. [optional]  # noqa: E501
+            synchronization_secret_id (int): Synchronization Secret. [optional]  # noqa: E501
             use_secure_ldap (bool): Use Secure LDAP. [optional]  # noqa: E501
         """
 
@@ -249,12 +244,12 @@ class DomainModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Domain Id. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Domain Name. [optional]  # noqa: E501
-            friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): Friendly Name. [optional]  # noqa: E501
+            domain_id (int): Domain Id. [optional]  # noqa: E501
+            domain_name (str): Domain Name. [optional]  # noqa: E501
+            friendly_name (str): Friendly Name. [optional]  # noqa: E501
             multifactor_authentication_provider (MultifactorAuthenticationProviderTypes): [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Site Id. [optional]  # noqa: E501
-            synchronization_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Synchronization Secret. [optional]  # noqa: E501
+            site_id (int): Site Id. [optional]  # noqa: E501
+            synchronization_secret_id (int): Synchronization Secret. [optional]  # noqa: E501
             use_secure_ldap (bool): Use Secure LDAP. [optional]  # noqa: E501
         """
 

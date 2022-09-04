@@ -55,18 +55,18 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = password_requirements_api.PasswordRequirementsApi(api_client)
     password_requirement_create_args = PasswordRequirementCreateArgs(
         data=PasswordRequirementCreateModel(
-            allowed_character_set_id=None,
+            allowed_character_set_id=1,
             allow_minimum_character_sets=True,
-            description=None,
+            description="description_example",
             is_default=True,
-            max_password_length=None,
-            minimum_required_character_sets=None,
-            min_password_length=None,
-            name=None,
+            max_password_length=1,
+            minimum_required_character_sets=1,
+            min_password_length=1,
+            name="name_example",
             password_requirement_rules=[
                 PasswordRequirementRuleCreateModel(
-                    character_set_id=None,
-                    min_characters_required=None,
+                    character_set_id=1,
+                    min_characters_required=1,
                     password_requirement_type=PasswordRequirementType("{}"),
                 ),
             ],
@@ -160,7 +160,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = password_requirements_api.PasswordRequirementsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -176,7 +176,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -245,16 +245,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = password_requirements_api.PasswordRequirementsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     password_requirement_patch_args = PasswordRequirementPatchArgs(
         data=PasswordRequirementPatchModel(
             allowed_character_set=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             is_default=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -262,24 +262,24 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             max_password_length=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             minimum_required_character_sets=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             min_password_length=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             password_dictionaries=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
             prevent_dictionary_words=UpdateFieldValueOfBoolean(
@@ -324,7 +324,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **password_requirement_patch_args** | [**PasswordRequirementPatchArgs**](PasswordRequirementPatchArgs.md)| args | [optional]
 
 ### Return type
@@ -393,11 +393,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = password_requirements_api.PasswordRequirementsApi(api_client)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -414,11 +414,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -487,13 +487,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = password_requirements_api.PasswordRequirementsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     password_requirement_rule_update_args = PasswordRequirementRuleUpdateArgs(
         data=[
             PasswordRequirementRuleUpdateModel(
-                character_set_id=None,
-                min_characters_required=None,
-                password_requirement_rule_id=None,
+                character_set_id=1,
+                min_characters_required=1,
+                password_requirement_rule_id=1,
                 password_requirement_type=PasswordRequirementType("{}"),
             ),
         ],
@@ -522,7 +522,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **password_requirement_rule_update_args** | [**PasswordRequirementRuleUpdateArgs**](PasswordRequirementRuleUpdateArgs.md)| args | [optional]
 
 ### Return type

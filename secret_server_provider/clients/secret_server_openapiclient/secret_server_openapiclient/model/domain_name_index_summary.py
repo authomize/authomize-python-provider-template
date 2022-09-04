@@ -61,10 +61,8 @@ class DomainNameIndexSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,35 +71,32 @@ class DomainNameIndexSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'discovery_source_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_source_id_scanned': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'discovery_source_id_suggested': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_marked_as_ignored': (bool,),  # noqa: E501
-            'domain_name_discovered': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name_index_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_resolve_type': (DomainResolveType,),  # noqa: E501
-            'expired_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_indexed_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'discovery_source_id': (int, none_type,),  # noqa: E501
+            'discovery_source_id_scanned': (int, none_type,),  # noqa: E501
+            'discovery_source_id_suggested': (int, none_type,),  # noqa: E501
+            'domain_marked_as_ignored': (bool, none_type,),  # noqa: E501
+            'domain_name_discovered': (str, none_type,),  # noqa: E501
+            'domain_name_index_id': (int, none_type,),  # noqa: E501
+            'domain_resolve_type': (DomainResolveType, none_type,),  # noqa: E501
+            'expired_date': (datetime, none_type,),  # noqa: E501
+            'last_indexed_date': (datetime, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -157,15 +152,15 @@ class DomainNameIndexSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceId. [optional]  # noqa: E501
-            discovery_source_id_scanned (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceIdScanned. [optional]  # noqa: E501
-            discovery_source_id_suggested (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceIdSuggested. [optional]  # noqa: E501
+            discovery_source_id (int): DiscoverySourceId. [optional]  # noqa: E501
+            discovery_source_id_scanned (int): DiscoverySourceIdScanned. [optional]  # noqa: E501
+            discovery_source_id_suggested (int): DiscoverySourceIdSuggested. [optional]  # noqa: E501
             domain_marked_as_ignored (bool): DomainMarkedAsIgnored. [optional]  # noqa: E501
-            domain_name_discovered (bool, date, datetime, dict, float, int, list, str, none_type): DomainNameDiscovered. [optional]  # noqa: E501
-            domain_name_index_id (bool, date, datetime, dict, float, int, list, str, none_type): DomainNameIndexId. [optional]  # noqa: E501
+            domain_name_discovered (str): DomainNameDiscovered. [optional]  # noqa: E501
+            domain_name_index_id (int): DomainNameIndexId. [optional]  # noqa: E501
             domain_resolve_type (DomainResolveType): [optional]  # noqa: E501
-            expired_date (bool, date, datetime, dict, float, int, list, str, none_type): ExpiredDate. [optional]  # noqa: E501
-            last_indexed_date (bool, date, datetime, dict, float, int, list, str, none_type): LastIndexedDate. [optional]  # noqa: E501
+            expired_date (datetime): ExpiredDate. [optional]  # noqa: E501
+            last_indexed_date (datetime): LastIndexedDate. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -251,15 +246,15 @@ class DomainNameIndexSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            discovery_source_id (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceId. [optional]  # noqa: E501
-            discovery_source_id_scanned (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceIdScanned. [optional]  # noqa: E501
-            discovery_source_id_suggested (bool, date, datetime, dict, float, int, list, str, none_type): DiscoverySourceIdSuggested. [optional]  # noqa: E501
+            discovery_source_id (int): DiscoverySourceId. [optional]  # noqa: E501
+            discovery_source_id_scanned (int): DiscoverySourceIdScanned. [optional]  # noqa: E501
+            discovery_source_id_suggested (int): DiscoverySourceIdSuggested. [optional]  # noqa: E501
             domain_marked_as_ignored (bool): DomainMarkedAsIgnored. [optional]  # noqa: E501
-            domain_name_discovered (bool, date, datetime, dict, float, int, list, str, none_type): DomainNameDiscovered. [optional]  # noqa: E501
-            domain_name_index_id (bool, date, datetime, dict, float, int, list, str, none_type): DomainNameIndexId. [optional]  # noqa: E501
+            domain_name_discovered (str): DomainNameDiscovered. [optional]  # noqa: E501
+            domain_name_index_id (int): DomainNameIndexId. [optional]  # noqa: E501
             domain_resolve_type (DomainResolveType): [optional]  # noqa: E501
-            expired_date (bool, date, datetime, dict, float, int, list, str, none_type): ExpiredDate. [optional]  # noqa: E501
-            last_indexed_date (bool, date, datetime, dict, float, int, list, str, none_type): LastIndexedDate. [optional]  # noqa: E501
+            expired_date (datetime): ExpiredDate. [optional]  # noqa: E501
+            last_indexed_date (datetime): LastIndexedDate. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

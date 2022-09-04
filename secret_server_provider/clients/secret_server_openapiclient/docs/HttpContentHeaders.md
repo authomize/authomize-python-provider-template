@@ -5,13 +5,13 @@ Headers
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**allow** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | Allow | [optional] 
+**allow** | **[str]** | Allow | [optional] 
 **content_disposition** | [**ContentDispositionHeaderValue**](ContentDispositionHeaderValue.md) |  | [optional] 
-**content_encoding** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | ContentEncoding | [optional] 
-**content_language** | **[bool, date, datetime, dict, float, int, list, str, none_type]** | ContentLanguage | [optional] 
-**content_length** | **bool, date, datetime, dict, float, int, list, str, none_type** | ContentLength | [optional] 
+**content_encoding** | **[str]** | ContentEncoding | [optional] 
+**content_language** | **[str]** | ContentLanguage | [optional] 
+**content_length** | **int** | ContentLength | [optional] 
 **content_location** | [**Uri**](Uri.md) |  | [optional] 
-**content_md5** | **bool, date, datetime, dict, float, int, list, str, none_type** | ContentMD5 | [optional] 
+**content_md5** | **file_type** | ContentMD5 | [optional] 
 **content_range** | [**ContentRangeHeaderValue**](ContentRangeHeaderValue.md) |  | [optional] 
 **content_type** | [**MediaTypeHeaderValue**](MediaTypeHeaderValue.md) |  | [optional] 
 **expires** | [**OptionalDateTimeOffset**](OptionalDateTimeOffset.md) |  | [optional] 

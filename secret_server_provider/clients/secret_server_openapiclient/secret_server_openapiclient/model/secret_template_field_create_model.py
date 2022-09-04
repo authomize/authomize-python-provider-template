@@ -61,10 +61,8 @@ class SecretTemplateFieldCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,30 +71,27 @@ class SecretTemplateFieldCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'data_type': (FieldDataType,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'field_slug_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'data_type': (FieldDataType, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'field_slug_name': (str, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -148,9 +143,9 @@ class SecretTemplateFieldCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             data_type (FieldDataType): [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description of Field. [optional]  # noqa: E501
-            field_slug_name (bool, date, datetime, dict, float, int, list, str, none_type): A unique identifier used in api calls and other interactions. The slug allows the display name to change without breaking interfaces to fields.. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Field. [optional]  # noqa: E501
+            description (str): Description of Field. [optional]  # noqa: E501
+            field_slug_name (str): A unique identifier used in api calls and other interactions. The slug allows the display name to change without breaking interfaces to fields.. [optional]  # noqa: E501
+            name (str): Name of Field. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,9 +232,9 @@ class SecretTemplateFieldCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             data_type (FieldDataType): [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Description of Field. [optional]  # noqa: E501
-            field_slug_name (bool, date, datetime, dict, float, int, list, str, none_type): A unique identifier used in api calls and other interactions. The slug allows the display name to change without breaking interfaces to fields.. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name of Field. [optional]  # noqa: E501
+            description (str): Description of Field. [optional]  # noqa: E501
+            field_slug_name (str): A unique identifier used in api calls and other interactions. The slug allows the display name to change without breaking interfaces to fields.. [optional]  # noqa: E501
+            name (str): Name of Field. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

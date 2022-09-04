@@ -61,10 +61,8 @@ class SecretDependencySettingMapForDisplay(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class SecretDependencySettingMapForDisplay(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'changer_setting_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting': (SecretDependencySetting,),  # noqa: E501
-            'setting_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'changer_setting_value': (str, none_type,),  # noqa: E501
+            'setting': (SecretDependencySetting, none_type,),  # noqa: E501
+            'setting_id': (int, none_type,),  # noqa: E501
+            'setting_name': (str, none_type,),  # noqa: E501
+            'setting_value': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,11 +144,11 @@ class SecretDependencySettingMapForDisplay(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            changer_setting_value (bool, date, datetime, dict, float, int, list, str, none_type): The default read-only setting value on the changer that will be used if no setting value has been given.. [optional]  # noqa: E501
+            changer_setting_value (str): The default read-only setting value on the changer that will be used if no setting value has been given.. [optional]  # noqa: E501
             setting (SecretDependencySetting): [optional]  # noqa: E501
-            setting_id (bool, date, datetime, dict, float, int, list, str, none_type): The Setting Id. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): The Setting Name. [optional]  # noqa: E501
-            setting_value (bool, date, datetime, dict, float, int, list, str, none_type): The value for the setting that will be stored in the database.  This value should be set when editing or creating a Dependency. If not set the default value will be calculated by looking at the Changer or Script.. [optional]  # noqa: E501
+            setting_id (int): The Setting Id. [optional]  # noqa: E501
+            setting_name (str): The Setting Name. [optional]  # noqa: E501
+            setting_value (str): The value for the setting that will be stored in the database.  This value should be set when editing or creating a Dependency. If not set the default value will be calculated by looking at the Changer or Script.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,11 +234,11 @@ class SecretDependencySettingMapForDisplay(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            changer_setting_value (bool, date, datetime, dict, float, int, list, str, none_type): The default read-only setting value on the changer that will be used if no setting value has been given.. [optional]  # noqa: E501
+            changer_setting_value (str): The default read-only setting value on the changer that will be used if no setting value has been given.. [optional]  # noqa: E501
             setting (SecretDependencySetting): [optional]  # noqa: E501
-            setting_id (bool, date, datetime, dict, float, int, list, str, none_type): The Setting Id. [optional]  # noqa: E501
-            setting_name (bool, date, datetime, dict, float, int, list, str, none_type): The Setting Name. [optional]  # noqa: E501
-            setting_value (bool, date, datetime, dict, float, int, list, str, none_type): The value for the setting that will be stored in the database.  This value should be set when editing or creating a Dependency. If not set the default value will be calculated by looking at the Changer or Script.. [optional]  # noqa: E501
+            setting_id (int): The Setting Id. [optional]  # noqa: E501
+            setting_name (str): The Setting Name. [optional]  # noqa: E501
+            setting_value (str): The value for the setting that will be stored in the database.  This value should be set when editing or creating a Dependency. If not set the default value will be calculated by looking at the Changer or Script.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

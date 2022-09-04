@@ -69,10 +69,8 @@ class PasswordRequirementPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,38 +79,35 @@ class PasswordRequirementPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allowed_character_set': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'description': (UpdateFieldValueOfString,),  # noqa: E501
-            'is_default': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'max_password_length': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'minimum_required_character_sets': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'min_password_length': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'name': (UpdateFieldValueOfString,),  # noqa: E501
-            'password_dictionaries': (UpdateFieldValueOfInt32Array,),  # noqa: E501
-            'prevent_dictionary_words': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'prevent_sequential_pattern': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'prevent_spatial_pattern': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'prevent_username': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'allowed_character_set': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'is_default': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'max_password_length': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'minimum_required_character_sets': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'min_password_length': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'password_dictionaries': (UpdateFieldValueOfInt32Array, none_type,),  # noqa: E501
+            'prevent_dictionary_words': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'prevent_sequential_pattern': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'prevent_spatial_pattern': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'prevent_username': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

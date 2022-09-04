@@ -60,12 +60,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team Id
+    id = 1 # int | Team Id
     team_categorized_list_update_args = TeamCategorizedListUpdateArgs(
         list_ids=UpdateFieldValueOfGuidArray(
             dirty=True,
             value=[
-                None,
+                "value_example",
             ],
         ),
         should_restrict_lists=UpdateFieldValueOfOptionalBoolean(
@@ -97,7 +97,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team Id |
+ **id** | **int**| Team Id |
  **team_categorized_list_update_args** | [**TeamCategorizedListUpdateArgs**](TeamCategorizedListUpdateArgs.md)| Team list | [optional]
 
 ### Return type
@@ -167,16 +167,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team ID
+    id = 1 # int | Team ID
     team_member_update_args = TeamMemberUpdateArgs(
         domain_id=UpdateFieldValueOfOptionalInt32(
             dirty=True,
-            value=None,
+            value=1,
         ),
         group_ids=UpdateFieldValueOfInt32Array(
             dirty=True,
             value=[
-                None,
+                1,
             ],
         ),
     ) # TeamMemberUpdateArgs | Team user add options (optional)
@@ -204,7 +204,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team ID |
+ **id** | **int**| Team ID |
  **team_member_update_args** | [**TeamMemberUpdateArgs**](TeamMemberUpdateArgs.md)| Team user add options | [optional]
 
 ### Return type
@@ -274,7 +274,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team ID
+    id = 1 # int | Team ID
     team_site_update_args = TeamSiteUpdateArgs(
         should_restrict_sites=UpdateFieldValueOfOptionalBoolean(
             dirty=True,
@@ -283,7 +283,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         site_ids=UpdateFieldValueOfInt32Array(
             dirty=True,
             value=[
-                None,
+                1,
             ],
         ),
     ) # TeamSiteUpdateArgs | Team site add options (optional)
@@ -311,7 +311,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team ID |
+ **id** | **int**| Team ID |
  **team_site_update_args** | [**TeamSiteUpdateArgs**](TeamSiteUpdateArgs.md)| Team site add options | [optional]
 
 ### Return type
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **teams_service_create_team**
-> bool, date, datetime, dict, float, int, list, str, none_type teams_service_create_team()
+> int teams_service_create_team()
 
 Create Team
 
@@ -381,9 +381,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
     team_create_args = TeamCreateArgs(
-        domain_id=None,
-        team_description=None,
-        team_name=None,
+        domain_id=1,
+        team_description="team_description_example",
+        team_name="team_name_example",
     ) # TeamCreateArgs | Team creation options (optional)
 
     # example passing only required values which don't have defaults set
@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**int**
 
 ### Authorization
 
@@ -469,7 +469,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team ID
+    id = 1 # int | Team ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -485,7 +485,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team ID |
+ **id** | **int**| Team ID |
 
 ### Return type
 
@@ -553,13 +553,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team ID
+    id = 1 # int | Team ID
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -584,13 +584,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team ID |
+ **id** | **int**| Team ID |
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -658,7 +658,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team Id
+    id = 1 # int | Team Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -674,7 +674,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team Id |
+ **id** | **int**| Team Id |
 
 ### Return type
 
@@ -742,12 +742,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team ID
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | Team ID
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -772,12 +772,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team ID |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| Team ID |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -845,7 +845,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team ID
+    id = 1 # int | Team ID
     include_inactive = True # bool | includeInactive
 
     # example passing only required values which don't have defaults set
@@ -862,7 +862,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team ID |
+ **id** | **int**| Team ID |
  **include_inactive** | **bool**| includeInactive |
 
 ### Return type
@@ -932,12 +932,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
     filter_include_inactive = True # bool | Include Inactive (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | Search Term (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_search_term = "filter.searchTerm_example" # str | Search Term (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -955,12 +955,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| Include Inactive | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search Term | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_search_term** | **str**| Search Term | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1109,7 +1109,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = teams_api.TeamsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Team ID
+    id = 1 # int | Team ID
     team_detail_update_model = TeamDetailUpdateModel(
         active=UpdateFieldValueOfOptionalBoolean(
             dirty=True,
@@ -1117,15 +1117,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         ),
         domain_id=UpdateFieldValueOfOptionalInt32(
             dirty=True,
-            value=None,
+            value=1,
         ),
         team_description=UpdateFieldValueOfString(
             dirty=True,
-            value=None,
+            value="value_example",
         ),
         team_name=UpdateFieldValueOfString(
             dirty=True,
-            value=None,
+            value="value_example",
         ),
     ) # TeamDetailUpdateModel | Team update options (optional)
 
@@ -1152,7 +1152,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Team ID |
+ **id** | **int**| Team ID |
  **team_detail_update_model** | [**TeamDetailUpdateModel**](TeamDetailUpdateModel.md)| Team update options | [optional]
 
 ### Return type

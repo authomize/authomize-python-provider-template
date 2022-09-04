@@ -124,7 +124,7 @@ class SdkClientAccountsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -219,7 +219,7 @@ class SdkClientAccountsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -275,21 +275,21 @@ class SdkClientAccountsApi(object):
                 },
                 'openapi_types': {
                     'filter_operator':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_user_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_operator': 'filter.operator',
@@ -399,7 +399,7 @@ class SdkClientAccountsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sdk_client_account_update_args':
                         (SdkClientAccountUpdateArgs,),
                 },
@@ -518,7 +518,7 @@ class SdkClientAccountsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): SDK Client Account Id
+            id (int): SDK Client Account Id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -679,7 +679,7 @@ class SdkClientAccountsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): SDK Client Account Id
+            id (int): SDK Client Account Id
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -762,14 +762,14 @@ class SdkClientAccountsApi(object):
 
 
         Keyword Args:
-            filter_operator (bool, date, datetime, dict, float, int, list, str, none_type): Operator. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): SearchText. [optional]
-            filter_user_id (bool, date, datetime, dict, float, int, list, str, none_type): UserId. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_operator (str): Operator. [optional]
+            filter_search_text (str): SearchText. [optional]
+            filter_user_id (int): UserId. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -926,7 +926,7 @@ class SdkClientAccountsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): SDK Client Account Id
+            id (int): SDK Client Account Id
 
         Keyword Args:
             sdk_client_account_update_args (SdkClientAccountUpdateArgs): SDK Client Account update options. [optional]

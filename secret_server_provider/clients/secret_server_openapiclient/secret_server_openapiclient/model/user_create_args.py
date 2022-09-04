@@ -61,7 +61,6 @@ class UserCreateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
         ('ad_guid',): {
             'max_length': 50,
@@ -70,7 +69,6 @@ class UserCreateArgs(ModelNormal):
             'inclusive_minimum': -1,
         },
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,41 +77,38 @@ class UserCreateArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ad_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'duo_two_factor': (bool,),  # noqa: E501
-            'email_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'fido2_two_factor': (bool,),  # noqa: E501
-            'is_application_account': (bool,),  # noqa: E501
-            'oath_two_factor': (bool,),  # noqa: E501
-            'radius_two_factor': (bool,),  # noqa: E501
-            'radius_user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'two_factor': (bool,),  # noqa: E501
-            'unix_authentication_method': (UnixAuthenticationMethodType,),  # noqa: E501
+            'display_name': (str,),  # noqa: E501
+            'password': (str,),  # noqa: E501
+            'user_name': (str,),  # noqa: E501
+            'ad_guid': (str, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'duo_two_factor': (bool, none_type,),  # noqa: E501
+            'email_address': (str, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'fido2_two_factor': (bool, none_type,),  # noqa: E501
+            'is_application_account': (bool, none_type,),  # noqa: E501
+            'oath_two_factor': (bool, none_type,),  # noqa: E501
+            'radius_two_factor': (bool, none_type,),  # noqa: E501
+            'radius_user_name': (str, none_type,),  # noqa: E501
+            'two_factor': (bool, none_type,),  # noqa: E501
+            'unix_authentication_method': (UnixAuthenticationMethodType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,9 +140,9 @@ class UserCreateArgs(ModelNormal):
         """UserCreateArgs - a model defined in OpenAPI
 
         Args:
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The user’s name as displayed in the user interface.
-            password (bool, date, datetime, dict, float, int, list, str, none_type): The password used by local accounts to log in.
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): The unique string identifying this user.
+            display_name (str): The user’s name as displayed in the user interface.
+            password (str): The password used by local accounts to log in.
+            user_name (str): The unique string identifying this user.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -180,16 +175,16 @@ class UserCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ad_guid (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory unique identifier.. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, the Active Directory domain ID.. [optional]  # noqa: E501
+            ad_guid (str): Active Directory unique identifier.. [optional]  # noqa: E501
+            domain_id (int): If not null, the Active Directory domain ID.. [optional]  # noqa: E501
             duo_two_factor (bool): Whether Duo two-factor authentication is enabled.. [optional]  # noqa: E501
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): The user's email address. Used by the system to send reports, access requests, and other notifications.. [optional]  # noqa: E501
+            email_address (str): The user's email address. Used by the system to send reports, access requests, and other notifications.. [optional]  # noqa: E501
             enabled (bool): Whether the user account is enabled. Disabled users are unable to log in and do not consume a user license.. [optional]  # noqa: E501
             fido2_two_factor (bool): Whether Duo two-factor authentication is enabled.. [optional]  # noqa: E501
             is_application_account (bool): Whether this is an application account. Application accounts are used for automation, cannot log in using the UI, and do not consume a user license.. [optional]  # noqa: E501
             oath_two_factor (bool): Whether OATH two-factor authentication is enabled.. [optional]  # noqa: E501
             radius_two_factor (bool): Whether RADIUS two-factor authentication is enabled.. [optional]  # noqa: E501
-            radius_user_name (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS username. [optional]  # noqa: E501
+            radius_user_name (str): RADIUS username. [optional]  # noqa: E501
             two_factor (bool): Whether two-factor authentication is enabled.. [optional]  # noqa: E501
             unix_authentication_method (UnixAuthenticationMethodType): [optional]  # noqa: E501
         """
@@ -250,9 +245,9 @@ class UserCreateArgs(ModelNormal):
         """UserCreateArgs - a model defined in OpenAPI
 
         Args:
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The user’s name as displayed in the user interface.
-            password (bool, date, datetime, dict, float, int, list, str, none_type): The password used by local accounts to log in.
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): The unique string identifying this user.
+            display_name (str): The user’s name as displayed in the user interface.
+            password (str): The password used by local accounts to log in.
+            user_name (str): The unique string identifying this user.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -285,16 +280,16 @@ class UserCreateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ad_guid (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory unique identifier.. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): If not null, the Active Directory domain ID.. [optional]  # noqa: E501
+            ad_guid (str): Active Directory unique identifier.. [optional]  # noqa: E501
+            domain_id (int): If not null, the Active Directory domain ID.. [optional]  # noqa: E501
             duo_two_factor (bool): Whether Duo two-factor authentication is enabled.. [optional]  # noqa: E501
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): The user's email address. Used by the system to send reports, access requests, and other notifications.. [optional]  # noqa: E501
+            email_address (str): The user's email address. Used by the system to send reports, access requests, and other notifications.. [optional]  # noqa: E501
             enabled (bool): Whether the user account is enabled. Disabled users are unable to log in and do not consume a user license.. [optional]  # noqa: E501
             fido2_two_factor (bool): Whether Duo two-factor authentication is enabled.. [optional]  # noqa: E501
             is_application_account (bool): Whether this is an application account. Application accounts are used for automation, cannot log in using the UI, and do not consume a user license.. [optional]  # noqa: E501
             oath_two_factor (bool): Whether OATH two-factor authentication is enabled.. [optional]  # noqa: E501
             radius_two_factor (bool): Whether RADIUS two-factor authentication is enabled.. [optional]  # noqa: E501
-            radius_user_name (bool, date, datetime, dict, float, int, list, str, none_type): RADIUS username. [optional]  # noqa: E501
+            radius_user_name (str): RADIUS username. [optional]  # noqa: E501
             two_factor (bool): Whether two-factor authentication is enabled.. [optional]  # noqa: E501
             unix_authentication_method (UnixAuthenticationMethodType): [optional]  # noqa: E501
         """

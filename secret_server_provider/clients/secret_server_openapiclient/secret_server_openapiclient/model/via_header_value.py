@@ -57,10 +57,8 @@ class ViaHeaderValue(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class ViaHeaderValue(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'protocol_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'protocol_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'received_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'comment': (str, none_type,),  # noqa: E501
+            'protocol_name': (str, none_type,),  # noqa: E501
+            'protocol_version': (str, none_type,),  # noqa: E501
+            'received_by': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class ViaHeaderValue(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): Comment. [optional]  # noqa: E501
-            protocol_name (bool, date, datetime, dict, float, int, list, str, none_type): ProtocolName. [optional]  # noqa: E501
-            protocol_version (bool, date, datetime, dict, float, int, list, str, none_type): ProtocolVersion. [optional]  # noqa: E501
-            received_by (bool, date, datetime, dict, float, int, list, str, none_type): ReceivedBy. [optional]  # noqa: E501
+            comment (str): Comment. [optional]  # noqa: E501
+            protocol_name (str): ProtocolName. [optional]  # noqa: E501
+            protocol_version (str): ProtocolVersion. [optional]  # noqa: E501
+            received_by (str): ReceivedBy. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class ViaHeaderValue(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): Comment. [optional]  # noqa: E501
-            protocol_name (bool, date, datetime, dict, float, int, list, str, none_type): ProtocolName. [optional]  # noqa: E501
-            protocol_version (bool, date, datetime, dict, float, int, list, str, none_type): ProtocolVersion. [optional]  # noqa: E501
-            received_by (bool, date, datetime, dict, float, int, list, str, none_type): ReceivedBy. [optional]  # noqa: E501
+            comment (str): Comment. [optional]  # noqa: E501
+            protocol_name (str): ProtocolName. [optional]  # noqa: E501
+            protocol_version (str): ProtocolVersion. [optional]  # noqa: E501
+            received_by (str): ReceivedBy. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

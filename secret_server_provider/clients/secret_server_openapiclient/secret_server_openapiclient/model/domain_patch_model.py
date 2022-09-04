@@ -73,10 +73,8 @@ class DomainPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -85,39 +83,36 @@ class DomainPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'auth_type': (UpdateFieldValueOfOptionalAuthType,),  # noqa: E501
-            'client_id': (UpdateFieldValueOfString,),  # noqa: E501
-            'client_secret': (UpdateFieldValueOfString,),  # noqa: E501
-            'distinguished_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'domain_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'friendly_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'multifactor_authentication_provider': (UpdateFieldValueOfMultifactorAuthenticationProviderTypes,),  # noqa: E501
-            'site_id': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'synchronization_secret_id': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'tenant_id': (UpdateFieldValueOfString,),  # noqa: E501
-            'user_auth_type': (UpdateFieldValueOfOptionalAuthType,),  # noqa: E501
-            'use_secure_ldap': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'auth_type': (UpdateFieldValueOfOptionalAuthType, none_type,),  # noqa: E501
+            'client_id': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'client_secret': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'distinguished_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'domain_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'friendly_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'multifactor_authentication_provider': (UpdateFieldValueOfMultifactorAuthenticationProviderTypes, none_type,),  # noqa: E501
+            'site_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'synchronization_secret_id': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'tenant_id': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'user_auth_type': (UpdateFieldValueOfOptionalAuthType, none_type,),  # noqa: E501
+            'use_secure_ldap': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

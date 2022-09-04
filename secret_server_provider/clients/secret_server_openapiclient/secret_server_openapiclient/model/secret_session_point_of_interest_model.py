@@ -61,10 +61,8 @@ class SecretSessionPointOfInterestModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,37 +71,34 @@ class SecretSessionPointOfInterestModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'activity_details': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'activity_title': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'activity_type': (SecretSessionActivityType,),  # noqa: E501
-            'activity_type_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'icon': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_session_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_session_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'timestamp': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'timestamp_offset': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'timestamp_offset_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'activity_details': (str, none_type,),  # noqa: E501
+            'activity_title': (str, none_type,),  # noqa: E501
+            'activity_type': (SecretSessionActivityType, none_type,),  # noqa: E501
+            'activity_type_display_name': (str, none_type,),  # noqa: E501
+            'icon': (str, none_type,),  # noqa: E501
+            'launcher_session_guid': (str, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_session_id': (int, none_type,),  # noqa: E501
+            'timestamp': (datetime, none_type,),  # noqa: E501
+            'timestamp_offset': (str, none_type,),  # noqa: E501
+            'timestamp_offset_display': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -161,17 +156,17 @@ class SecretSessionPointOfInterestModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            activity_details (bool, date, datetime, dict, float, int, list, str, none_type): ActivityDetails. [optional]  # noqa: E501
-            activity_title (bool, date, datetime, dict, float, int, list, str, none_type): ActivityTitle. [optional]  # noqa: E501
+            activity_details (str): ActivityDetails. [optional]  # noqa: E501
+            activity_title (str): ActivityTitle. [optional]  # noqa: E501
             activity_type (SecretSessionActivityType): [optional]  # noqa: E501
-            activity_type_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Logged activity type (display format). [optional]  # noqa: E501
-            icon (bool, date, datetime, dict, float, int, list, str, none_type): Icon. [optional]  # noqa: E501
-            launcher_session_guid (bool, date, datetime, dict, float, int, list, str, none_type): Launcher session unique identifier. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
-            secret_session_id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID. [optional]  # noqa: E501
-            timestamp (bool, date, datetime, dict, float, int, list, str, none_type): Point of interest timestamp. [optional]  # noqa: E501
-            timestamp_offset (bool, date, datetime, dict, float, int, list, str, none_type): Time since session start. [optional]  # noqa: E501
-            timestamp_offset_display (bool, date, datetime, dict, float, int, list, str, none_type): Time since session start (display format). [optional]  # noqa: E501
+            activity_type_display_name (str): Logged activity type (display format). [optional]  # noqa: E501
+            icon (str): Icon. [optional]  # noqa: E501
+            launcher_session_guid (str): Launcher session unique identifier. [optional]  # noqa: E501
+            secret_id (int): Secret ID. [optional]  # noqa: E501
+            secret_session_id (int): Recorded session ID. [optional]  # noqa: E501
+            timestamp (datetime): Point of interest timestamp. [optional]  # noqa: E501
+            timestamp_offset (str): Time since session start. [optional]  # noqa: E501
+            timestamp_offset_display (str): Time since session start (display format). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -257,17 +252,17 @@ class SecretSessionPointOfInterestModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            activity_details (bool, date, datetime, dict, float, int, list, str, none_type): ActivityDetails. [optional]  # noqa: E501
-            activity_title (bool, date, datetime, dict, float, int, list, str, none_type): ActivityTitle. [optional]  # noqa: E501
+            activity_details (str): ActivityDetails. [optional]  # noqa: E501
+            activity_title (str): ActivityTitle. [optional]  # noqa: E501
             activity_type (SecretSessionActivityType): [optional]  # noqa: E501
-            activity_type_display_name (bool, date, datetime, dict, float, int, list, str, none_type): Logged activity type (display format). [optional]  # noqa: E501
-            icon (bool, date, datetime, dict, float, int, list, str, none_type): Icon. [optional]  # noqa: E501
-            launcher_session_guid (bool, date, datetime, dict, float, int, list, str, none_type): Launcher session unique identifier. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
-            secret_session_id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID. [optional]  # noqa: E501
-            timestamp (bool, date, datetime, dict, float, int, list, str, none_type): Point of interest timestamp. [optional]  # noqa: E501
-            timestamp_offset (bool, date, datetime, dict, float, int, list, str, none_type): Time since session start. [optional]  # noqa: E501
-            timestamp_offset_display (bool, date, datetime, dict, float, int, list, str, none_type): Time since session start (display format). [optional]  # noqa: E501
+            activity_type_display_name (str): Logged activity type (display format). [optional]  # noqa: E501
+            icon (str): Icon. [optional]  # noqa: E501
+            launcher_session_guid (str): Launcher session unique identifier. [optional]  # noqa: E501
+            secret_id (int): Secret ID. [optional]  # noqa: E501
+            secret_session_id (int): Recorded session ID. [optional]  # noqa: E501
+            timestamp (datetime): Point of interest timestamp. [optional]  # noqa: E501
+            timestamp_offset (str): Time since session start. [optional]  # noqa: E501
+            timestamp_offset_display (str): Time since session start (display format). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

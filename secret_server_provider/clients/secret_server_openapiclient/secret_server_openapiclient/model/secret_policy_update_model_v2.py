@@ -71,10 +71,8 @@ class SecretPolicyUpdateModelV2(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -83,33 +81,30 @@ class SecretPolicyUpdateModelV2(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'general_items': (SecretPolicyGeneralItemsUpdateModel,),  # noqa: E501
-            'launcher_items': (SecretPolicyLauncherItemsUpdateModel,),  # noqa: E501
-            'rpc_items': (SecretPolicyRpcItemsUpdateModel,),  # noqa: E501
-            'secret_policy_description': (UpdateFieldValueOfString,),  # noqa: E501
-            'secret_policy_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'security_items': (SecretPolicySecurityItemsUpdateModel,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'general_items': (SecretPolicyGeneralItemsUpdateModel, none_type,),  # noqa: E501
+            'launcher_items': (SecretPolicyLauncherItemsUpdateModel, none_type,),  # noqa: E501
+            'rpc_items': (SecretPolicyRpcItemsUpdateModel, none_type,),  # noqa: E501
+            'secret_policy_description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'secret_policy_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'security_items': (SecretPolicySecurityItemsUpdateModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

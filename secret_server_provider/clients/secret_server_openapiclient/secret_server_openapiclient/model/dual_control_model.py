@@ -61,10 +61,8 @@ class DualControlModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,33 +71,30 @@ class DualControlModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'dual_control_approval_groups': ([IDualControlApprovalGroup],),  # noqa: E501
-            'dual_control_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dual_control_type_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'item_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'item_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'dual_control_approval_groups': ([IDualControlApprovalGroup], none_type,),  # noqa: E501
+            'dual_control_type_id': (int, none_type,),  # noqa: E501
+            'dual_control_type_name': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'item_id': (int, none_type,),  # noqa: E501
+            'item_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,11 +150,11 @@ class DualControlModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether this dual control is active. [optional]  # noqa: E501
             dual_control_approval_groups ([IDualControlApprovalGroup]): Dual control approval groups. [optional]  # noqa: E501
-            dual_control_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Dual control type ID. [optional]  # noqa: E501
-            dual_control_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Dual control type name. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Dual control ID. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): Dual control item ID. [optional]  # noqa: E501
-            item_name (bool, date, datetime, dict, float, int, list, str, none_type): Dual control item name. [optional]  # noqa: E501
+            dual_control_type_id (int): Dual control type ID. [optional]  # noqa: E501
+            dual_control_type_name (str): Dual control type name. [optional]  # noqa: E501
+            id (int): Dual control ID. [optional]  # noqa: E501
+            item_id (int): Dual control item ID. [optional]  # noqa: E501
+            item_name (str): Dual control item name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -247,11 +242,11 @@ class DualControlModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             active (bool): Whether this dual control is active. [optional]  # noqa: E501
             dual_control_approval_groups ([IDualControlApprovalGroup]): Dual control approval groups. [optional]  # noqa: E501
-            dual_control_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Dual control type ID. [optional]  # noqa: E501
-            dual_control_type_name (bool, date, datetime, dict, float, int, list, str, none_type): Dual control type name. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Dual control ID. [optional]  # noqa: E501
-            item_id (bool, date, datetime, dict, float, int, list, str, none_type): Dual control item ID. [optional]  # noqa: E501
-            item_name (bool, date, datetime, dict, float, int, list, str, none_type): Dual control item name. [optional]  # noqa: E501
+            dual_control_type_id (int): Dual control type ID. [optional]  # noqa: E501
+            dual_control_type_name (str): Dual control type name. [optional]  # noqa: E501
+            id (int): Dual control ID. [optional]  # noqa: E501
+            item_id (int): Dual control item ID. [optional]  # noqa: E501
+            item_name (str): Dual control item name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

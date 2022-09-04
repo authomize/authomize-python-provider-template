@@ -57,10 +57,8 @@ class FolderSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class FolderSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'folder_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inherit_permissions': (bool,),  # noqa: E501
-            'inherit_secret_policy': (bool,),  # noqa: E501
-            'parent_folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_policy_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'folder_name': (str, none_type,),  # noqa: E501
+            'folder_path': (str, none_type,),  # noqa: E501
+            'folder_type_id': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'inherit_permissions': (bool, none_type,),  # noqa: E501
+            'inherit_secret_policy': (bool, none_type,),  # noqa: E501
+            'parent_folder_id': (int, none_type,),  # noqa: E501
+            'secret_policy_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,14 +144,14 @@ class FolderSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the folder. [optional]  # noqa: E501
-            folder_path (bool, date, datetime, dict, float, int, list, str, none_type): The path of all folders and subfolders beginning at the root anterminating at this folder.. [optional]  # noqa: E501
-            folder_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID. [optional]  # noqa: E501
+            folder_name (str): The name of the folder. [optional]  # noqa: E501
+            folder_path (str): The path of all folders and subfolders beginning at the root anterminating at this folder.. [optional]  # noqa: E501
+            folder_type_id (int): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.. [optional]  # noqa: E501
+            id (int): Folder ID. [optional]  # noqa: E501
             inherit_permissions (bool): Whether the folder should inherit permissions from its parent (default: true). [optional]  # noqa: E501
             inherit_secret_policy (bool): Whether the folder should inherit the secret policy.  Defaults to true unless creating a root folder.. [optional]  # noqa: E501
-            parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of this folder's parent folder.. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the Secret Policy that sets security and other settings on secrets contained within the folder.. [optional]  # noqa: E501
+            parent_folder_id (int): The ID of this folder's parent folder.. [optional]  # noqa: E501
+            secret_policy_id (int): The id of the Secret Policy that sets security and other settings on secrets contained within the folder.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,14 +237,14 @@ class FolderSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the folder. [optional]  # noqa: E501
-            folder_path (bool, date, datetime, dict, float, int, list, str, none_type): The path of all folders and subfolders beginning at the root anterminating at this folder.. [optional]  # noqa: E501
-            folder_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID. [optional]  # noqa: E501
+            folder_name (str): The name of the folder. [optional]  # noqa: E501
+            folder_path (str): The path of all folders and subfolders beginning at the root anterminating at this folder.. [optional]  # noqa: E501
+            folder_type_id (int): The icon to display for the folder. Depricated in latest UI. Use 1 when setting this value.. [optional]  # noqa: E501
+            id (int): Folder ID. [optional]  # noqa: E501
             inherit_permissions (bool): Whether the folder should inherit permissions from its parent (default: true). [optional]  # noqa: E501
             inherit_secret_policy (bool): Whether the folder should inherit the secret policy.  Defaults to true unless creating a root folder.. [optional]  # noqa: E501
-            parent_folder_id (bool, date, datetime, dict, float, int, list, str, none_type): The ID of this folder's parent folder.. [optional]  # noqa: E501
-            secret_policy_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the Secret Policy that sets security and other settings on secrets contained within the folder.. [optional]  # noqa: E501
+            parent_folder_id (int): The ID of this folder's parent folder.. [optional]  # noqa: E501
+            secret_policy_id (int): The id of the Secret Policy that sets security and other settings on secrets contained within the folder.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

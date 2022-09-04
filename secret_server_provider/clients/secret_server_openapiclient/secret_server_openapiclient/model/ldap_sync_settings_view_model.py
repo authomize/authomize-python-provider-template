@@ -65,10 +65,8 @@ class LdapSyncSettingsViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,39 +75,36 @@ class LdapSyncSettingsViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'actions': ([DomainActionType],),  # noqa: E501
-            'base_dn_code': (ViewFieldDropDownValueOfString,),  # noqa: E501
-            'display_name_attribute': (ViewFieldValueOfString,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'email_attribute': (ViewFieldValueOfString,),  # noqa: E501
-            'group_member_attribute': (ViewFieldValueOfString,),  # noqa: E501
-            'group_name_attribute': (ViewFieldValueOfString,),  # noqa: E501
-            'group_object_classes': (ViewFieldValueOfString,),  # noqa: E501
-            'group_search_filter': (ViewFieldValueOfString,),  # noqa: E501
-            'guid_attribute': (ViewFieldValueOfString,),  # noqa: E501
-            'username_attribute': (ViewFieldValueOfString,),  # noqa: E501
-            'user_object_classes': (ViewFieldValueOfString,),  # noqa: E501
-            'user_principal_name_attribute': (ViewFieldValueOfString,),  # noqa: E501
+            'actions': ([DomainActionType], none_type,),  # noqa: E501
+            'base_dn_code': (ViewFieldDropDownValueOfString, none_type,),  # noqa: E501
+            'display_name_attribute': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'email_attribute': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'group_member_attribute': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'group_name_attribute': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'group_object_classes': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'group_search_filter': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'guid_attribute': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'username_attribute': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'user_object_classes': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'user_principal_name_attribute': (ViewFieldValueOfString, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -172,7 +167,7 @@ class LdapSyncSettingsViewModel(ModelNormal):
             actions ([DomainActionType]): Valid Actions. [optional]  # noqa: E501
             base_dn_code (ViewFieldDropDownValueOfString): [optional]  # noqa: E501
             display_name_attribute (ViewFieldValueOfString): [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Domain Id. [optional]  # noqa: E501
+            domain_id (int): Domain Id. [optional]  # noqa: E501
             email_attribute (ViewFieldValueOfString): [optional]  # noqa: E501
             group_member_attribute (ViewFieldValueOfString): [optional]  # noqa: E501
             group_name_attribute (ViewFieldValueOfString): [optional]  # noqa: E501
@@ -270,7 +265,7 @@ class LdapSyncSettingsViewModel(ModelNormal):
             actions ([DomainActionType]): Valid Actions. [optional]  # noqa: E501
             base_dn_code (ViewFieldDropDownValueOfString): [optional]  # noqa: E501
             display_name_attribute (ViewFieldValueOfString): [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Domain Id. [optional]  # noqa: E501
+            domain_id (int): Domain Id. [optional]  # noqa: E501
             email_attribute (ViewFieldValueOfString): [optional]  # noqa: E501
             group_member_attribute (ViewFieldValueOfString): [optional]  # noqa: E501
             group_name_attribute (ViewFieldValueOfString): [optional]  # noqa: E501

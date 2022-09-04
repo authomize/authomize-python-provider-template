@@ -61,10 +61,8 @@ class SecretDetailHookModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,46 +71,43 @@ class SecretDetailHookModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'arguments': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'database': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_action_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'failure_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'hook_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'parameters': ([SecretDetailHookParameterViewModel],),  # noqa: E501
-            'port': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pre_post_option': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'privileged_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'script_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_hook_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_key_digest': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'server_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_key_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (bool,),  # noqa: E501
-            'stop_on_failure': (bool,),  # noqa: E501
+            'arguments': (str, none_type,),  # noqa: E501
+            'database': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'event_action_id': (int, none_type,),  # noqa: E501
+            'failure_message': (str, none_type,),  # noqa: E501
+            'hook_id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'parameters': ([SecretDetailHookParameterViewModel], none_type,),  # noqa: E501
+            'port': (str, none_type,),  # noqa: E501
+            'pre_post_option': (str, none_type,),  # noqa: E501
+            'privileged_secret_id': (int, none_type,),  # noqa: E501
+            'script_id': (int, none_type,),  # noqa: E501
+            'script_type_id': (int, none_type,),  # noqa: E501
+            'secret_hook_id': (int, none_type,),  # noqa: E501
+            'server_key_digest': (str, none_type,),  # noqa: E501
+            'server_name': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'ssh_key_secret_id': (int, none_type,),  # noqa: E501
+            'status': (bool, none_type,),  # noqa: E501
+            'stop_on_failure': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -179,24 +174,24 @@ class SecretDetailHookModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            arguments (bool, date, datetime, dict, float, int, list, str, none_type): Arguments. [optional]  # noqa: E501
-            database (bool, date, datetime, dict, float, int, list, str, none_type): Database. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Hook Description. [optional]  # noqa: E501
-            event_action_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Action Id. [optional]  # noqa: E501
-            failure_message (bool, date, datetime, dict, float, int, list, str, none_type): Failure Message. [optional]  # noqa: E501
-            hook_id (bool, date, datetime, dict, float, int, list, str, none_type): Hook Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Hook Name. [optional]  # noqa: E501
+            arguments (str): Arguments. [optional]  # noqa: E501
+            database (str): Database. [optional]  # noqa: E501
+            description (str): Hook Description. [optional]  # noqa: E501
+            event_action_id (int): Event Action Id. [optional]  # noqa: E501
+            failure_message (str): Failure Message. [optional]  # noqa: E501
+            hook_id (int): Hook Id. [optional]  # noqa: E501
+            name (str): Hook Name. [optional]  # noqa: E501
             parameters ([SecretDetailHookParameterViewModel]): Parameters. [optional]  # noqa: E501
-            port (bool, date, datetime, dict, float, int, list, str, none_type): Port. [optional]  # noqa: E501
-            pre_post_option (bool, date, datetime, dict, float, int, list, str, none_type): Hook PRE or POST Option. [optional]  # noqa: E501
-            privileged_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Privilige Secret Id. [optional]  # noqa: E501
-            script_id (bool, date, datetime, dict, float, int, list, str, none_type): Script Id. [optional]  # noqa: E501
-            script_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Script Type Id. [optional]  # noqa: E501
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Hook Id. [optional]  # noqa: E501
-            server_key_digest (bool, date, datetime, dict, float, int, list, str, none_type): Server Key Digest. [optional]  # noqa: E501
-            server_name (bool, date, datetime, dict, float, int, list, str, none_type): Server Name. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Hook Sort Order. [optional]  # noqa: E501
-            ssh_key_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): SSH Key Secret Id. [optional]  # noqa: E501
+            port (str): Port. [optional]  # noqa: E501
+            pre_post_option (str): Hook PRE or POST Option. [optional]  # noqa: E501
+            privileged_secret_id (int): Privilige Secret Id. [optional]  # noqa: E501
+            script_id (int): Script Id. [optional]  # noqa: E501
+            script_type_id (int): Script Type Id. [optional]  # noqa: E501
+            secret_hook_id (int): Secret Hook Id. [optional]  # noqa: E501
+            server_key_digest (str): Server Key Digest. [optional]  # noqa: E501
+            server_name (str): Server Name. [optional]  # noqa: E501
+            sort_order (int): Hook Sort Order. [optional]  # noqa: E501
+            ssh_key_secret_id (int): SSH Key Secret Id. [optional]  # noqa: E501
             status (bool): Hook Status. [optional]  # noqa: E501
             stop_on_failure (bool): Stop on Failure. [optional]  # noqa: E501
         """
@@ -284,24 +279,24 @@ class SecretDetailHookModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            arguments (bool, date, datetime, dict, float, int, list, str, none_type): Arguments. [optional]  # noqa: E501
-            database (bool, date, datetime, dict, float, int, list, str, none_type): Database. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Hook Description. [optional]  # noqa: E501
-            event_action_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Action Id. [optional]  # noqa: E501
-            failure_message (bool, date, datetime, dict, float, int, list, str, none_type): Failure Message. [optional]  # noqa: E501
-            hook_id (bool, date, datetime, dict, float, int, list, str, none_type): Hook Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Hook Name. [optional]  # noqa: E501
+            arguments (str): Arguments. [optional]  # noqa: E501
+            database (str): Database. [optional]  # noqa: E501
+            description (str): Hook Description. [optional]  # noqa: E501
+            event_action_id (int): Event Action Id. [optional]  # noqa: E501
+            failure_message (str): Failure Message. [optional]  # noqa: E501
+            hook_id (int): Hook Id. [optional]  # noqa: E501
+            name (str): Hook Name. [optional]  # noqa: E501
             parameters ([SecretDetailHookParameterViewModel]): Parameters. [optional]  # noqa: E501
-            port (bool, date, datetime, dict, float, int, list, str, none_type): Port. [optional]  # noqa: E501
-            pre_post_option (bool, date, datetime, dict, float, int, list, str, none_type): Hook PRE or POST Option. [optional]  # noqa: E501
-            privileged_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Privilige Secret Id. [optional]  # noqa: E501
-            script_id (bool, date, datetime, dict, float, int, list, str, none_type): Script Id. [optional]  # noqa: E501
-            script_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Script Type Id. [optional]  # noqa: E501
-            secret_hook_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Hook Id. [optional]  # noqa: E501
-            server_key_digest (bool, date, datetime, dict, float, int, list, str, none_type): Server Key Digest. [optional]  # noqa: E501
-            server_name (bool, date, datetime, dict, float, int, list, str, none_type): Server Name. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Hook Sort Order. [optional]  # noqa: E501
-            ssh_key_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): SSH Key Secret Id. [optional]  # noqa: E501
+            port (str): Port. [optional]  # noqa: E501
+            pre_post_option (str): Hook PRE or POST Option. [optional]  # noqa: E501
+            privileged_secret_id (int): Privilige Secret Id. [optional]  # noqa: E501
+            script_id (int): Script Id. [optional]  # noqa: E501
+            script_type_id (int): Script Type Id. [optional]  # noqa: E501
+            secret_hook_id (int): Secret Hook Id. [optional]  # noqa: E501
+            server_key_digest (str): Server Key Digest. [optional]  # noqa: E501
+            server_name (str): Server Name. [optional]  # noqa: E501
+            sort_order (int): Hook Sort Order. [optional]  # noqa: E501
+            ssh_key_secret_id (int): SSH Key Secret Id. [optional]  # noqa: E501
             status (bool): Hook Status. [optional]  # noqa: E501
             stop_on_failure (bool): Stop on Failure. [optional]  # noqa: E501
         """

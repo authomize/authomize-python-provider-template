@@ -57,10 +57,8 @@ class RotateSshKeyArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class RotateSshKeyArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'generate_passphrase': (bool,),  # noqa: E501
-            'generate_ssh_keys': (bool,),  # noqa: E501
-            'passphrase': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'private_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'generate_passphrase': (bool, none_type,),  # noqa: E501
+            'generate_ssh_keys': (bool, none_type,),  # noqa: E501
+            'passphrase': (str, none_type,),  # noqa: E501
+            'private_key': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,8 +138,8 @@ class RotateSshKeyArgs(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             generate_passphrase (bool): Whether to generate the next SSH private key passphrase. Must be true if the passphrase is empty.. [optional]  # noqa: E501
             generate_ssh_keys (bool): Whether to generate the next SSH private key. Must be true if the private key is empty.. [optional]  # noqa: E501
-            passphrase (bool, date, datetime, dict, float, int, list, str, none_type): Private key passphrase. [optional]  # noqa: E501
-            private_key (bool, date, datetime, dict, float, int, list, str, none_type): Private key. [optional]  # noqa: E501
+            passphrase (str): Private key passphrase. [optional]  # noqa: E501
+            private_key (str): Private key. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -232,8 +227,8 @@ class RotateSshKeyArgs(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             generate_passphrase (bool): Whether to generate the next SSH private key passphrase. Must be true if the passphrase is empty.. [optional]  # noqa: E501
             generate_ssh_keys (bool): Whether to generate the next SSH private key. Must be true if the private key is empty.. [optional]  # noqa: E501
-            passphrase (bool, date, datetime, dict, float, int, list, str, none_type): Private key passphrase. [optional]  # noqa: E501
-            private_key (bool, date, datetime, dict, float, int, list, str, none_type): Private key. [optional]  # noqa: E501
+            passphrase (str): Private key passphrase. [optional]  # noqa: E501
+            private_key (str): Private key. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

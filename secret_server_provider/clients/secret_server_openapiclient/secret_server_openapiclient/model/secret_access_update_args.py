@@ -63,10 +63,8 @@ class SecretAccessUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,31 +73,28 @@ class SecretAccessUpdateArgs(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'expiration_date': (DateTimeOffset,),  # noqa: E501
-            'response_comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_access_request_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date': (DateTimeOffset,),  # noqa: E501
-            'status': (SecretAccessModelStatus,),  # noqa: E501
+            'expiration_date': (DateTimeOffset, none_type,),  # noqa: E501
+            'response_comment': (str, none_type,),  # noqa: E501
+            'secret_access_request_id': (int, none_type,),  # noqa: E501
+            'start_date': (DateTimeOffset, none_type,),  # noqa: E501
+            'status': (SecretAccessModelStatus, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -152,8 +147,8 @@ class SecretAccessUpdateArgs(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             expiration_date (DateTimeOffset): [optional]  # noqa: E501
-            response_comment (bool, date, datetime, dict, float, int, list, str, none_type): Response Comment. [optional]  # noqa: E501
-            secret_access_request_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Access Request Id. [optional]  # noqa: E501
+            response_comment (str): Response Comment. [optional]  # noqa: E501
+            secret_access_request_id (int): Secret Access Request Id. [optional]  # noqa: E501
             start_date (DateTimeOffset): [optional]  # noqa: E501
             status (SecretAccessModelStatus): [optional]  # noqa: E501
         """
@@ -242,8 +237,8 @@ class SecretAccessUpdateArgs(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             expiration_date (DateTimeOffset): [optional]  # noqa: E501
-            response_comment (bool, date, datetime, dict, float, int, list, str, none_type): Response Comment. [optional]  # noqa: E501
-            secret_access_request_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Access Request Id. [optional]  # noqa: E501
+            response_comment (str): Response Comment. [optional]  # noqa: E501
+            secret_access_request_id (int): Secret Access Request Id. [optional]  # noqa: E501
             start_date (DateTimeOffset): [optional]  # noqa: E501
             status (SecretAccessModelStatus): [optional]  # noqa: E501
         """

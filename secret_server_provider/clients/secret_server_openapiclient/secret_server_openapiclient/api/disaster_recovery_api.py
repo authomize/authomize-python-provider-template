@@ -82,7 +82,7 @@ class DisasterRecoveryApi(object):
                 },
                 'openapi_types': {
                     'replica_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'replica_id': 'replicaId',
@@ -137,19 +137,19 @@ class DisasterRecoveryApi(object):
                 },
                 'openapi_types': {
                     'audit_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'audit_type': 'auditType',
@@ -212,7 +212,7 @@ class DisasterRecoveryApi(object):
                 },
                 'openapi_types': {
                     'replica_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'replica_id': 'replicaId',
@@ -266,17 +266,17 @@ class DisasterRecoveryApi(object):
                 },
                 'openapi_types': {
                     'log_type':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'log_type': 'logType',
@@ -385,19 +385,19 @@ class DisasterRecoveryApi(object):
                 },
                 'openapi_types': {
                     'filter_location':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_location': 'filter.location',
@@ -461,7 +461,7 @@ class DisasterRecoveryApi(object):
                 },
                 'openapi_types': {
                     'replica_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'disaster_recovery_data_replica_args':
                         (DisasterRecoveryDataReplicaArgs,),
                 },
@@ -809,7 +809,7 @@ class DisasterRecoveryApi(object):
                 },
                 'openapi_types': {
                     'minutes':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'minutes': 'minutes',
@@ -844,7 +844,7 @@ class DisasterRecoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            replica_id (bool, date, datetime, dict, float, int, list, str, none_type): replicaId
+            replica_id (str): replicaId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -927,13 +927,13 @@ class DisasterRecoveryApi(object):
 
 
         Keyword Args:
-            audit_type (bool, date, datetime, dict, float, int, list, str, none_type): auditType. [optional]
+            audit_type (str): auditType. [optional]
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1012,7 +1012,7 @@ class DisasterRecoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            replica_id (bool, date, datetime, dict, float, int, list, str, none_type): replicaId
+            replica_id (str): replicaId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -1095,12 +1095,12 @@ class DisasterRecoveryApi(object):
 
 
         Keyword Args:
-            log_type (bool, date, datetime, dict, float, int, list, str, none_type): logType. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            log_type (str): logType. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1257,13 +1257,13 @@ class DisasterRecoveryApi(object):
 
 
         Keyword Args:
-            filter_location (bool, date, datetime, dict, float, int, list, str, none_type): Only return data replicas with locations containing this text.. [optional]
-            filter_name (bool, date, datetime, dict, float, int, list, str, none_type): Only return data replicas with names containing this text.. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_location (str): Only return data replicas with locations containing this text.. [optional]
+            filter_name (str): Only return data replicas with names containing this text.. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1342,7 +1342,7 @@ class DisasterRecoveryApi(object):
         >>> result = thread.get()
 
         Args:
-            replica_id (bool, date, datetime, dict, float, int, list, str, none_type): replicaId
+            replica_id (str): replicaId
 
         Keyword Args:
             disaster_recovery_data_replica_args (DisasterRecoveryDataReplicaArgs): Disaster Recovery Data Replica Update Settings. [optional]
@@ -1899,7 +1899,7 @@ class DisasterRecoveryApi(object):
 
 
         Keyword Args:
-            minutes (bool, date, datetime, dict, float, int, list, str, none_type): minutes. [optional]
+            minutes (int): minutes. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

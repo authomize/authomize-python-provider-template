@@ -61,10 +61,8 @@ class TaskProgress(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class TaskProgress(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'errors': ([TaskError],),  # noqa: E501
-            'is_complete': (bool,),  # noqa: E501
-            'percentage_complete': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'task_identifier': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'errors': ([TaskError], none_type,),  # noqa: E501
+            'is_complete': (bool, none_type,),  # noqa: E501
+            'percentage_complete': (int, none_type,),  # noqa: E501
+            'status': (str, none_type,),  # noqa: E501
+            'task_identifier': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -151,9 +146,9 @@ class TaskProgress(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             errors ([TaskError]): A list of errors for the task. [optional]  # noqa: E501
             is_complete (bool): True if the task is complete. [optional]  # noqa: E501
-            percentage_complete (bool, date, datetime, dict, float, int, list, str, none_type): The estimated percentage complete of the task. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): The current status of the task. [optional]  # noqa: E501
-            task_identifier (bool, date, datetime, dict, float, int, list, str, none_type): The task identifier. [optional]  # noqa: E501
+            percentage_complete (int): The estimated percentage complete of the task. [optional]  # noqa: E501
+            status (str): The current status of the task. [optional]  # noqa: E501
+            task_identifier (str): The task identifier. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -241,9 +236,9 @@ class TaskProgress(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             errors ([TaskError]): A list of errors for the task. [optional]  # noqa: E501
             is_complete (bool): True if the task is complete. [optional]  # noqa: E501
-            percentage_complete (bool, date, datetime, dict, float, int, list, str, none_type): The estimated percentage complete of the task. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): The current status of the task. [optional]  # noqa: E501
-            task_identifier (bool, date, datetime, dict, float, int, list, str, none_type): The task identifier. [optional]  # noqa: E501
+            percentage_complete (int): The estimated percentage complete of the task. [optional]  # noqa: E501
+            status (str): The current status of the task. [optional]  # noqa: E501
+            task_identifier (str): The task identifier. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

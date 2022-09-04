@@ -57,13 +57,11 @@ class GroupUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
         ('id',): {
             'inclusive_minimum': 1,
         },
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -71,38 +69,35 @@ class GroupUpdateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ad_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'has_group_owners': (bool,),  # noqa: E501
-            'is_platform': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'owner_group_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'owner_group_names': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'owner_user_ids': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'owner_user_names': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'synchronized': (bool,),  # noqa: E501
-            'synchronize_now': (bool,),  # noqa: E501
+            'id': (int,),  # noqa: E501
+            'ad_guid': (str, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'has_group_owners': (bool, none_type,),  # noqa: E501
+            'is_platform': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'owner_group_ids': ([int], none_type,),  # noqa: E501
+            'owner_group_names': ([str], none_type,),  # noqa: E501
+            'owner_user_ids': ([int], none_type,),  # noqa: E501
+            'owner_user_names': ([str], none_type,),  # noqa: E501
+            'synchronized': (bool, none_type,),  # noqa: E501
+            'synchronize_now': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -132,7 +127,7 @@ class GroupUpdateArgs(ModelNormal):
         """GroupUpdateArgs - a model defined in OpenAPI
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. Must match ID in path
+            id (int): Group ID. Must match ID in path
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -165,16 +160,16 @@ class GroupUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ad_guid (bool, date, datetime, dict, float, int, list, str, none_type): The Object GUID of the Active Directory Group (Hexadecimal). [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain ID. [optional]  # noqa: E501
+            ad_guid (str): The Object GUID of the Active Directory Group (Hexadecimal). [optional]  # noqa: E501
+            domain_id (int): Active Directory Domain ID. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
             has_group_owners (bool): If true, the group is owned by specific other users/groups. If false, if it is owned by Group Administrators.. [optional]  # noqa: E501
             is_platform (bool): Whether the group is a Platform Group. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
-            owner_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner GroupIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
-            owner_group_names ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner Group Names. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
-            owner_user_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner UserIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
-            owner_user_names ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner Usernames. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
+            name (str): Group name. [optional]  # noqa: E501
+            owner_group_ids ([int]): List of owner GroupIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
+            owner_group_names ([str]): List of owner Group Names. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
+            owner_user_ids ([int]): List of owner UserIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
+            owner_user_names ([str]): List of owner Usernames. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
             synchronized (bool): Whether the group is synchronized with Active Directory. [optional]  # noqa: E501
             synchronize_now (bool): Active Directory Sync will only pull in members for domain groups that have this set to true.. [optional]  # noqa: E501
         """
@@ -233,7 +228,7 @@ class GroupUpdateArgs(ModelNormal):
         """GroupUpdateArgs - a model defined in OpenAPI
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. Must match ID in path
+            id (int): Group ID. Must match ID in path
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -266,16 +261,16 @@ class GroupUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ad_guid (bool, date, datetime, dict, float, int, list, str, none_type): The Object GUID of the Active Directory Group (Hexadecimal). [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory Domain ID. [optional]  # noqa: E501
+            ad_guid (str): The Object GUID of the Active Directory Group (Hexadecimal). [optional]  # noqa: E501
+            domain_id (int): Active Directory Domain ID. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
             has_group_owners (bool): If true, the group is owned by specific other users/groups. If false, if it is owned by Group Administrators.. [optional]  # noqa: E501
             is_platform (bool): Whether the group is a Platform Group. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
-            owner_group_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner GroupIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
-            owner_group_names ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner Group Names. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
-            owner_user_ids ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner UserIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
-            owner_user_names ([bool, date, datetime, dict, float, int, list, str, none_type]): List of owner Usernames. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
+            name (str): Group name. [optional]  # noqa: E501
+            owner_group_ids ([int]): List of owner GroupIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
+            owner_group_names ([str]): List of owner Group Names. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
+            owner_user_ids ([int]): List of owner UserIds. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
+            owner_user_names ([str]): List of owner Usernames. Only used if HasGroupOwners is true.. [optional]  # noqa: E501
             synchronized (bool): Whether the group is synchronized with Active Directory. [optional]  # noqa: E501
             synchronize_now (bool): Active Directory Sync will only pull in members for domain groups that have this set to true.. [optional]  # noqa: E501
         """

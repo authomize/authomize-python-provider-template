@@ -58,30 +58,30 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=TicketSystemCreateModel(
             active=True,
             add_comments_to_ticket=True,
-            bmc_change_management_comment_work_type=None,
-            bmc_incident_management_comment_work_type=None,
-            bmc_remedy_authentication=None,
-            bmc_remedy_url_endpoint=None,
-            description=None,
-            display_message=None,
+            bmc_change_management_comment_work_type="bmc_change_management_comment_work_type_example",
+            bmc_incident_management_comment_work_type="bmc_incident_management_comment_work_type_example",
+            bmc_remedy_authentication="bmc_remedy_authentication_example",
+            bmc_remedy_url_endpoint="bmc_remedy_url_endpoint_example",
+            description="description_example",
+            display_message="display_message_example",
             force_require_ticket_number=ForceRequireTicketSystemOptions("{}"),
             is_default=True,
-            name=None,
-            power_shell_add_comment_script_arguments=None,
-            power_shell_add_comment_script_id=None,
-            power_shell_add_ticket_comment_script_arguments=None,
-            power_shell_add_ticket_comment_script_id=None,
-            power_shell_run_as_account_secret_id=None,
-            power_shell_ticket_status_script_arguments=None,
-            power_shell_ticket_status_script_id=None,
-            service_now_allowed_statuses=None,
-            service_now_domain_name=None,
-            site_id=None,
-            system_credential_secret_id=None,
-            ticket_number_error_message=None,
-            ticket_number_validation=None,
+            name="name_example",
+            power_shell_add_comment_script_arguments="power_shell_add_comment_script_arguments_example",
+            power_shell_add_comment_script_id=1,
+            power_shell_add_ticket_comment_script_arguments="power_shell_add_ticket_comment_script_arguments_example",
+            power_shell_add_ticket_comment_script_id=1,
+            power_shell_run_as_account_secret_id=1,
+            power_shell_ticket_status_script_arguments="power_shell_ticket_status_script_arguments_example",
+            power_shell_ticket_status_script_id=1,
+            service_now_allowed_statuses="service_now_allowed_statuses_example",
+            service_now_domain_name="service_now_domain_name_example",
+            site_id=1,
+            system_credential_secret_id=1,
+            ticket_number_error_message="ticket_number_error_message_example",
+            ticket_number_validation="ticket_number_validation_example",
             ticket_system_type=TicketSystemTypes("{}"),
-            view_ticket_url=None,
+            view_ticket_url="view_ticket_url_example",
         ),
     ) # TicketSystemCreateArgs | Ticket System Create Args (optional)
 
@@ -168,7 +168,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ticket_systems_api.TicketSystemsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Ticket System ID
+    id = 1 # int | Ticket System ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -184,7 +184,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Ticket System ID |
+ **id** | **int**| Ticket System ID |
 
 ### Return type
 
@@ -252,7 +252,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ticket_systems_api.TicketSystemsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Ticket System ID
+    id = 1 # int | Ticket System ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -268,7 +268,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Ticket System ID |
+ **id** | **int**| Ticket System ID |
 
 ### Return type
 
@@ -422,11 +422,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ticket_systems_api.TicketSystemsApi(api_client)
     include_inactive = True # bool | includeInactive (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -444,11 +444,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include_inactive** | **bool**| includeInactive | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -517,7 +517,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ticket_systems_api.TicketSystemsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     ticket_system_patch_args = TicketSystemPatchArgs(
         data=TicketSystemPatchModel(
             active=UpdateFieldValueOfBoolean(
@@ -530,27 +530,27 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             bmc_change_management_comment_work_type=UpdateFieldValueOfOptionalBmcChangeManagementCommentWorkType(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             bmc_incident_management_comment_work_type=UpdateFieldValueOfOptionalBmcIncidentManagementCommentWorkType(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             bmc_remedy_authentication=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             bmc_remedy_url_endpoint=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             description=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             display_message=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             force_require_ticket_number=UpdateFieldValueOfForceRequireTicketSystemOptions(
                 dirty=True,
@@ -562,68 +562,68 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             power_shell_add_comment_script_arguments=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             power_shell_add_comment_script_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             power_shell_add_ticket_comment_script_arguments=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             power_shell_add_ticket_comment_script_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             power_shell_run_as_account_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             power_shell_ticket_status_script_arguments=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             power_shell_ticket_status_script_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             service_now_allowed_statuses=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             service_now_domain_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             site_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             system_credential_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             ticket_number_error_message=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             ticket_number_validation=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
-            ticket_system_id=None,
+            ticket_system_id=1,
             ticket_system_type=UpdateFieldValueOfTicketSystemTypes(
                 dirty=True,
                 value=TicketSystemTypes("{}"),
             ),
             view_ticket_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # TicketSystemPatchArgs | Ticket System Patch Args (optional)
@@ -651,7 +651,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **ticket_system_patch_args** | [**TicketSystemPatchArgs**](TicketSystemPatchArgs.md)| Ticket System Patch Args | [optional]
 
 ### Return type

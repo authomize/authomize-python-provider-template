@@ -57,10 +57,8 @@ class SecretEraseRequestSecretModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class SecretEraseRequestSecretModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'time_erased': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'request_id': (int, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'time_erased': (datetime, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class SecretEraseRequestSecretModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            request_id (bool, date, datetime, dict, float, int, list, str, none_type): RequestId. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretId. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): SecretName. [optional]  # noqa: E501
-            time_erased (bool, date, datetime, dict, float, int, list, str, none_type): TimeErased. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            request_id (int): RequestId. [optional]  # noqa: E501
+            secret_id (int): SecretId. [optional]  # noqa: E501
+            secret_name (str): SecretName. [optional]  # noqa: E501
+            time_erased (datetime): TimeErased. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class SecretEraseRequestSecretModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            request_id (bool, date, datetime, dict, float, int, list, str, none_type): RequestId. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): SecretId. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): SecretName. [optional]  # noqa: E501
-            time_erased (bool, date, datetime, dict, float, int, list, str, none_type): TimeErased. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            request_id (int): RequestId. [optional]  # noqa: E501
+            secret_id (int): SecretId. [optional]  # noqa: E501
+            secret_name (str): SecretName. [optional]  # noqa: E501
+            time_erased (datetime): TimeErased. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

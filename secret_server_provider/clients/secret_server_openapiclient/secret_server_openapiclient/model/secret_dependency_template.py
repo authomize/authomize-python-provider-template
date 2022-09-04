@@ -61,10 +61,8 @@ class SecretDependencyTemplate(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,31 +71,28 @@ class SecretDependencyTemplate(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'changer_script_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dependency_scan_item_fields': ([SecretDependencyScanItemField],),  # noqa: E501
-            'script_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_dependency_changer_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_dependency_template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'changer_script_id': (int, none_type,),  # noqa: E501
+            'dependency_scan_item_fields': ([SecretDependencyScanItemField], none_type,),  # noqa: E501
+            'script_name': (str, none_type,),  # noqa: E501
+            'secret_dependency_changer_id': (int, none_type,),  # noqa: E501
+            'secret_dependency_template_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,11 +144,11 @@ class SecretDependencyTemplate(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            changer_script_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the script (if any) used by the Dependency Template. [optional]  # noqa: E501
+            changer_script_id (int): The id of the script (if any) used by the Dependency Template. [optional]  # noqa: E501
             dependency_scan_item_fields ([SecretDependencyScanItemField]): The Scan Item Fields used by the Dependency Template. [optional]  # noqa: E501
-            script_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the script (if any) used by the Dependency Template. [optional]  # noqa: E501
-            secret_dependency_changer_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the Dependency Changer used by the Dependency Template. [optional]  # noqa: E501
-            secret_dependency_template_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the Dependency Template. [optional]  # noqa: E501
+            script_name (str): The name of the script (if any) used by the Dependency Template. [optional]  # noqa: E501
+            secret_dependency_changer_id (int): The id of the Dependency Changer used by the Dependency Template. [optional]  # noqa: E501
+            secret_dependency_template_id (int): The id of the Dependency Template. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,11 +234,11 @@ class SecretDependencyTemplate(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            changer_script_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the script (if any) used by the Dependency Template. [optional]  # noqa: E501
+            changer_script_id (int): The id of the script (if any) used by the Dependency Template. [optional]  # noqa: E501
             dependency_scan_item_fields ([SecretDependencyScanItemField]): The Scan Item Fields used by the Dependency Template. [optional]  # noqa: E501
-            script_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the script (if any) used by the Dependency Template. [optional]  # noqa: E501
-            secret_dependency_changer_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the Dependency Changer used by the Dependency Template. [optional]  # noqa: E501
-            secret_dependency_template_id (bool, date, datetime, dict, float, int, list, str, none_type): The id of the Dependency Template. [optional]  # noqa: E501
+            script_name (str): The name of the script (if any) used by the Dependency Template. [optional]  # noqa: E501
+            secret_dependency_changer_id (int): The id of the Dependency Changer used by the Dependency Template. [optional]  # noqa: E501
+            secret_dependency_template_id (int): The id of the Dependency Template. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

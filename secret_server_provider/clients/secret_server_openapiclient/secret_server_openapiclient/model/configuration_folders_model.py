@@ -61,10 +61,8 @@ class ConfigurationFoldersModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,32 +71,29 @@ class ConfigurationFoldersModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'enable_personal_folders': (bool,),  # noqa: E501
-            'personal_folder_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'personal_folder_name_option': (PersonalFolderNameOptionType,),  # noqa: E501
-            'personal_folder_warning': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'require_view_folder_permission': (bool,),  # noqa: E501
-            'show_personal_folder_warning': (bool,),  # noqa: E501
+            'enable_personal_folders': (bool, none_type,),  # noqa: E501
+            'personal_folder_name': (str, none_type,),  # noqa: E501
+            'personal_folder_name_option': (PersonalFolderNameOptionType, none_type,),  # noqa: E501
+            'personal_folder_warning': (str, none_type,),  # noqa: E501
+            'require_view_folder_permission': (bool, none_type,),  # noqa: E501
+            'show_personal_folder_warning': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -152,9 +147,9 @@ class ConfigurationFoldersModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             enable_personal_folders (bool): Each user will have a personal folder created and assigned to them. [optional]  # noqa: E501
-            personal_folder_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the root personal folder.  Each user's personal folder will be named based on the user. [optional]  # noqa: E501
+            personal_folder_name (str): The name of the root personal folder.  Each user's personal folder will be named based on the user. [optional]  # noqa: E501
             personal_folder_name_option (PersonalFolderNameOptionType): [optional]  # noqa: E501
-            personal_folder_warning (bool, date, datetime, dict, float, int, list, str, none_type): Warning to be shown when creating Secrets if ShowPersonalFolderWarning is true. [optional]  # noqa: E501
+            personal_folder_warning (str): Warning to be shown when creating Secrets if ShowPersonalFolderWarning is true. [optional]  # noqa: E501
             require_view_folder_permission (bool): Users will only see folders they have View permissions on. [optional]  # noqa: E501
             show_personal_folder_warning (bool): When true the PersonalFolderWarning will be shown when creating Secrets. [optional]  # noqa: E501
         """
@@ -243,9 +238,9 @@ class ConfigurationFoldersModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             enable_personal_folders (bool): Each user will have a personal folder created and assigned to them. [optional]  # noqa: E501
-            personal_folder_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the root personal folder.  Each user's personal folder will be named based on the user. [optional]  # noqa: E501
+            personal_folder_name (str): The name of the root personal folder.  Each user's personal folder will be named based on the user. [optional]  # noqa: E501
             personal_folder_name_option (PersonalFolderNameOptionType): [optional]  # noqa: E501
-            personal_folder_warning (bool, date, datetime, dict, float, int, list, str, none_type): Warning to be shown when creating Secrets if ShowPersonalFolderWarning is true. [optional]  # noqa: E501
+            personal_folder_warning (str): Warning to be shown when creating Secrets if ShowPersonalFolderWarning is true. [optional]  # noqa: E501
             require_view_folder_permission (bool): Users will only see folders they have View permissions on. [optional]  # noqa: E501
             show_personal_folder_warning (bool): When true the PersonalFolderWarning will be shown when creating Secrets. [optional]  # noqa: E501
         """

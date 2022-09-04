@@ -79,10 +79,8 @@ class ScheduleViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -91,50 +89,47 @@ class ScheduleViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'additional_email_addresses': (ViewFieldValueOfString,),  # noqa: E501
-            'change_type': (ViewFieldValueOfScheduleChangeType,),  # noqa: E501
-            'days': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'email_groups': (ViewFieldValueOfReportSubscriberArray,),  # noqa: E501
-            'friday': (ViewFieldValueOfOptionalBoolean,),  # noqa: E501
-            'health_check': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'history_size': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'monday': (ViewFieldValueOfOptionalBoolean,),  # noqa: E501
-            'monthly_day': (ViewFieldValueOfOptionalScheduleMonthlyDayType,),  # noqa: E501
-            'monthly_day_of_month': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'monthly_day_order': (ViewFieldValueOfOptionalScheduleMonthlyDayOrderType,),  # noqa: E501
-            'monthly_day_order_recurrence': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'monthly_day_recurrence': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'monthly_schedule_type': (ViewFieldValueOfOptionalScheduleMonthlyType,),  # noqa: E501
-            'saturday': (ViewFieldValueOfOptionalBoolean,),  # noqa: E501
-            'schedule_name': (ViewFieldValueOfString,),  # noqa: E501
-            'send_email': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'send_email_with_high_priority': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'starting_on': (ViewFieldValueOfDateTime,),  # noqa: E501
-            'sunday': (ViewFieldValueOfOptionalBoolean,),  # noqa: E501
-            'thursday': (ViewFieldValueOfOptionalBoolean,),  # noqa: E501
-            'tuesday': (ViewFieldValueOfOptionalBoolean,),  # noqa: E501
-            'wednesday': (ViewFieldValueOfOptionalBoolean,),  # noqa: E501
-            'weeks': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
+            'additional_email_addresses': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'change_type': (ViewFieldValueOfScheduleChangeType, none_type,),  # noqa: E501
+            'days': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'email_groups': (ViewFieldValueOfReportSubscriberArray, none_type,),  # noqa: E501
+            'friday': (ViewFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'health_check': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'history_size': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'monday': (ViewFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'monthly_day': (ViewFieldValueOfOptionalScheduleMonthlyDayType, none_type,),  # noqa: E501
+            'monthly_day_of_month': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'monthly_day_order': (ViewFieldValueOfOptionalScheduleMonthlyDayOrderType, none_type,),  # noqa: E501
+            'monthly_day_order_recurrence': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'monthly_day_recurrence': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'monthly_schedule_type': (ViewFieldValueOfOptionalScheduleMonthlyType, none_type,),  # noqa: E501
+            'saturday': (ViewFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'schedule_name': (ViewFieldValueOfString, none_type,),  # noqa: E501
+            'send_email': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'send_email_with_high_priority': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'starting_on': (ViewFieldValueOfDateTime, none_type,),  # noqa: E501
+            'sunday': (ViewFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'thursday': (ViewFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'tuesday': (ViewFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'wednesday': (ViewFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'weeks': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

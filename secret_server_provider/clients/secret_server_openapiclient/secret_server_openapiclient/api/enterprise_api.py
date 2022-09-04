@@ -73,7 +73,7 @@ class EnterpriseApi(object):
                 },
                 'openapi_types': {
                     'request_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'request_id': 'requestId',
@@ -158,7 +158,7 @@ class EnterpriseApi(object):
         >>> result = thread.get()
 
         Args:
-            request_id (bool, date, datetime, dict, float, int, list, str, none_type): requestId
+            request_id (int): requestId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

@@ -63,10 +63,8 @@ class DomainCreateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,40 +73,37 @@ class DomainCreateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (bool,),  # noqa: E501
-            'auth_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'client_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'client_secret': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'distinguished_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_type': (DomainType,),  # noqa: E501
-            'friendly_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'multifactor_authentication_provider': (MultifactorAuthenticationProviderTypes,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'synchronization_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'tenant_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_auth_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_secure_ldap': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'auth_type': (str, none_type,),  # noqa: E501
+            'client_id': (str, none_type,),  # noqa: E501
+            'client_secret': (str, none_type,),  # noqa: E501
+            'distinguished_name': (str, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'domain_type': (DomainType, none_type,),  # noqa: E501
+            'friendly_name': (str, none_type,),  # noqa: E501
+            'multifactor_authentication_provider': (MultifactorAuthenticationProviderTypes, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
+            'synchronization_secret_id': (int, none_type,),  # noqa: E501
+            'tenant_id': (str, none_type,),  # noqa: E501
+            'user_auth_type': (str, none_type,),  # noqa: E501
+            'use_secure_ldap': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -170,18 +165,18 @@ class DomainCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            auth_type (bool, date, datetime, dict, float, int, list, str, none_type): AuthType for OpenLdap. [optional]  # noqa: E501
-            client_id (bool, date, datetime, dict, float, int, list, str, none_type): Client ID. [optional]  # noqa: E501
-            client_secret (bool, date, datetime, dict, float, int, list, str, none_type): Client Secret. [optional]  # noqa: E501
-            distinguished_name (bool, date, datetime, dict, float, int, list, str, none_type): Domain Base DN. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the domain.. [optional]  # noqa: E501
+            auth_type (str): AuthType for OpenLdap. [optional]  # noqa: E501
+            client_id (str): Client ID. [optional]  # noqa: E501
+            client_secret (str): Client Secret. [optional]  # noqa: E501
+            distinguished_name (str): Domain Base DN. [optional]  # noqa: E501
+            domain_name (str): The name of the domain.. [optional]  # noqa: E501
             domain_type (DomainType): [optional]  # noqa: E501
-            friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): The friendly name of the domain.. [optional]  # noqa: E501
+            friendly_name (str): The friendly name of the domain.. [optional]  # noqa: E501
             multifactor_authentication_provider (MultifactorAuthenticationProviderTypes): [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Site Id. [optional]  # noqa: E501
-            synchronization_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Synchronization Secret. [optional]  # noqa: E501
-            tenant_id (bool, date, datetime, dict, float, int, list, str, none_type): Tenant ID. [optional]  # noqa: E501
-            user_auth_type (bool, date, datetime, dict, float, int, list, str, none_type): UserAuthType for OpenLdap. [optional]  # noqa: E501
+            site_id (int): Site Id. [optional]  # noqa: E501
+            synchronization_secret_id (int): Synchronization Secret. [optional]  # noqa: E501
+            tenant_id (str): Tenant ID. [optional]  # noqa: E501
+            user_auth_type (str): UserAuthType for OpenLdap. [optional]  # noqa: E501
             use_secure_ldap (bool): Use Secure LDAP. [optional]  # noqa: E501
         """
 
@@ -269,18 +264,18 @@ class DomainCreateModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            auth_type (bool, date, datetime, dict, float, int, list, str, none_type): AuthType for OpenLdap. [optional]  # noqa: E501
-            client_id (bool, date, datetime, dict, float, int, list, str, none_type): Client ID. [optional]  # noqa: E501
-            client_secret (bool, date, datetime, dict, float, int, list, str, none_type): Client Secret. [optional]  # noqa: E501
-            distinguished_name (bool, date, datetime, dict, float, int, list, str, none_type): Domain Base DN. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the domain.. [optional]  # noqa: E501
+            auth_type (str): AuthType for OpenLdap. [optional]  # noqa: E501
+            client_id (str): Client ID. [optional]  # noqa: E501
+            client_secret (str): Client Secret. [optional]  # noqa: E501
+            distinguished_name (str): Domain Base DN. [optional]  # noqa: E501
+            domain_name (str): The name of the domain.. [optional]  # noqa: E501
             domain_type (DomainType): [optional]  # noqa: E501
-            friendly_name (bool, date, datetime, dict, float, int, list, str, none_type): The friendly name of the domain.. [optional]  # noqa: E501
+            friendly_name (str): The friendly name of the domain.. [optional]  # noqa: E501
             multifactor_authentication_provider (MultifactorAuthenticationProviderTypes): [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): Site Id. [optional]  # noqa: E501
-            synchronization_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Synchronization Secret. [optional]  # noqa: E501
-            tenant_id (bool, date, datetime, dict, float, int, list, str, none_type): Tenant ID. [optional]  # noqa: E501
-            user_auth_type (bool, date, datetime, dict, float, int, list, str, none_type): UserAuthType for OpenLdap. [optional]  # noqa: E501
+            site_id (int): Site Id. [optional]  # noqa: E501
+            synchronization_secret_id (int): Synchronization Secret. [optional]  # noqa: E501
+            tenant_id (str): Tenant ID. [optional]  # noqa: E501
+            user_auth_type (str): UserAuthType for OpenLdap. [optional]  # noqa: E501
             use_secure_ldap (bool): Use Secure LDAP. [optional]  # noqa: E501
         """
 

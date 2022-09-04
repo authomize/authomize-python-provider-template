@@ -251,7 +251,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -302,7 +302,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_category_id': 'reportCategoryId',
@@ -353,7 +353,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_category_id': 'reportCategoryId',
@@ -404,7 +404,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_schedule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_schedule_id': 'reportScheduleId',
@@ -455,7 +455,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_schedule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_schedule_id': 'reportScheduleId',
@@ -506,7 +506,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -557,7 +557,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_schedule_history_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_schedule_history_id': 'reportScheduleHistoryId',
@@ -609,7 +609,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'report_email_args':
                         (ReportEmailArgs,),
                 },
@@ -685,7 +685,7 @@ class ReportsApi(object):
         )
         self.reports_service_export_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (str,),
                 'auth': [
                     'BearerToken'
                 ],
@@ -853,7 +853,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -909,15 +909,15 @@ class ReportsApi(object):
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'is_exporting': 'isExporting',
@@ -984,19 +984,19 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'is_exporting':
                         (bool,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1059,7 +1059,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_category_id': 'reportCategoryId',
@@ -1159,17 +1159,17 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_category_id': 'reportCategoryId',
@@ -1230,7 +1230,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1330,17 +1330,17 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_id': 'reportId',
@@ -1406,17 +1406,17 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_category_id': 'reportCategoryId',
@@ -1477,7 +1477,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_schedule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_schedule_id': 'reportScheduleId',
@@ -1528,7 +1528,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_schedule_history_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_schedule_history_id': 'reportScheduleHistoryId',
@@ -1585,23 +1585,23 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'filter_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_report_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_category_id': 'filter.categoryId',
@@ -1673,17 +1673,17 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_schedule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_schedule_id': 'reportScheduleId',
@@ -1750,17 +1750,17 @@ class ReportsApi(object):
                     'filter_include_deleted':
                         (bool,),
                     'filter_report_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_include_deleted': 'filter.includeDeleted',
@@ -1829,23 +1829,23 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'filter_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'filter_include_inactive':
                         (bool,),
                     'filter_report_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'filter_search_text':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'filter_category_id': 'filter.categoryId',
@@ -1912,7 +1912,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_id': 'reportId',
@@ -1963,7 +1963,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_schedule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_schedule_id': 'reportScheduleId',
@@ -2014,7 +2014,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                 },
                 'attribute_map': {
                     'report_id': 'reportId',
@@ -2066,7 +2066,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'report_update_args':
                         (ReportUpdateArgs,),
                 },
@@ -2123,7 +2123,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'report_category_update_args':
                         (ReportCategoryUpdateArgs,),
                 },
@@ -2185,17 +2185,17 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_category_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'report_category_permissions_update_args':
                         (ReportCategoryPermissionsUpdateArgs,),
                 },
@@ -2267,17 +2267,17 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'skip':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'sort_by_0_direction':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_name':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                     'sort_by_0_priority':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'take':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'report_permissions_update_args':
                         (ReportPermissionsUpdateArgs,),
                 },
@@ -2344,7 +2344,7 @@ class ReportsApi(object):
                 },
                 'openapi_types': {
                     'report_schedule_id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (int,),
                     'report_schedule_update_args':
                         (ReportScheduleUpdateArgs,),
                 },
@@ -2621,7 +2621,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Report ID
+            id (int): Report ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2704,7 +2704,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): reportCategoryId
+            report_category_id (int): reportCategoryId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2787,7 +2787,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): reportCategoryId
+            report_category_id (int): reportCategoryId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2870,7 +2870,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): reportScheduleId
+            report_schedule_id (int): reportScheduleId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -2953,7 +2953,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): reportScheduleId
+            report_schedule_id (int): reportScheduleId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3036,7 +3036,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Report ID
+            id (int): Report ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3119,7 +3119,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_schedule_history_id (bool, date, datetime, dict, float, int, list, str, none_type): reportScheduleHistoryId
+            report_schedule_history_id (int): reportScheduleHistoryId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3202,7 +3202,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Report Id
+            id (int): Report Id
 
         Keyword Args:
             report_email_args (ReportEmailArgs): Report email options. [optional]
@@ -3398,7 +3398,7 @@ class ReportsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            str
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -3600,7 +3600,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Report ID
+            id (int): Report ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3684,11 +3684,11 @@ class ReportsApi(object):
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3767,15 +3767,15 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): id
+            id (int): id
 
         Keyword Args:
             is_exporting (bool): isExporting. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3856,7 +3856,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): reportCategoryId
+            report_category_id (int): reportCategoryId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4017,14 +4017,14 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): reportCategoryId
+            report_category_id (int): reportCategoryId
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4105,7 +4105,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Report ID
+            id (int): Report ID
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4266,14 +4266,14 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_id (bool, date, datetime, dict, float, int, list, str, none_type): reportId
+            report_id (int): reportId
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4354,14 +4354,14 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): reportCategoryId
+            report_category_id (int): reportCategoryId
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4442,7 +4442,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): reportScheduleId
+            report_schedule_id (int): reportScheduleId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4525,7 +4525,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_schedule_history_id (bool, date, datetime, dict, float, int, list, str, none_type): reportScheduleHistoryId
+            report_schedule_history_id (int): reportScheduleHistoryId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4608,15 +4608,15 @@ class ReportsApi(object):
 
 
         Keyword Args:
-            filter_category_id (bool, date, datetime, dict, float, int, list, str, none_type): Category ID. [optional]
+            filter_category_id (int): Category ID. [optional]
             filter_include_inactive (bool): Whether to include inactive Reports in the results. [optional]
-            filter_report_name (bool, date, datetime, dict, float, int, list, str, none_type): Report Name - Searching by report name ignores other filters. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_report_name (str): Report Name - Searching by report name ignores other filters. [optional]
+            filter_search_text (str): Search text. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4695,14 +4695,14 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): reportScheduleId
+            report_schedule_id (int): reportScheduleId
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4784,12 +4784,12 @@ class ReportsApi(object):
 
         Keyword Args:
             filter_include_deleted (bool): When set, deleted reports will be included. [optional]
-            filter_report_id (bool, date, datetime, dict, float, int, list, str, none_type): Report Id. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_report_id (int): Report Id. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4868,15 +4868,15 @@ class ReportsApi(object):
 
 
         Keyword Args:
-            filter_category_id (bool, date, datetime, dict, float, int, list, str, none_type): Category ID. [optional]
+            filter_category_id (int): Category ID. [optional]
             filter_include_inactive (bool): Whether to include inactive Reports in the results. [optional]
-            filter_report_name (bool, date, datetime, dict, float, int, list, str, none_type): Report Name - Searching by report name ignores other filters. [optional]
-            filter_search_text (bool, date, datetime, dict, float, int, list, str, none_type): Search text. [optional]
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            filter_report_name (str): Report Name - Searching by report name ignores other filters. [optional]
+            filter_search_text (str): Search text. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4955,7 +4955,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_id (bool, date, datetime, dict, float, int, list, str, none_type): reportId
+            report_id (int): reportId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -5038,7 +5038,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): reportScheduleId
+            report_schedule_id (int): reportScheduleId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -5121,7 +5121,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_id (bool, date, datetime, dict, float, int, list, str, none_type): reportId
+            report_id (int): reportId
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -5204,7 +5204,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Report ID
+            id (int): Report ID
 
         Keyword Args:
             report_update_args (ReportUpdateArgs): Report update options. [optional]
@@ -5288,7 +5288,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): reportCategoryId
+            report_category_id (int): reportCategoryId
 
         Keyword Args:
             report_category_update_args (ReportCategoryUpdateArgs): args. [optional]
@@ -5372,14 +5372,14 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_category_id (bool, date, datetime, dict, float, int, list, str, none_type): reportCategoryId
+            report_category_id (int): reportCategoryId
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             report_category_permissions_update_args (ReportCategoryPermissionsUpdateArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -5461,14 +5461,14 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_id (bool, date, datetime, dict, float, int, list, str, none_type): reportId
+            report_id (int): reportId
 
         Keyword Args:
-            skip (bool, date, datetime, dict, float, int, list, str, none_type): Number of records to skip before taking results. [optional]
-            sort_by_0_direction (bool, date, datetime, dict, float, int, list, str, none_type): Sort direction. [optional]
-            sort_by_0_name (bool, date, datetime, dict, float, int, list, str, none_type): Sort field name. [optional]
-            sort_by_0_priority (bool, date, datetime, dict, float, int, list, str, none_type): Priority index. Sorts with lower values are executed earlier. [optional]
-            take (bool, date, datetime, dict, float, int, list, str, none_type): Maximum number of records to include in results. [optional]
+            skip (int): Number of records to skip before taking results. [optional]
+            sort_by_0_direction (str): Sort direction. [optional]
+            sort_by_0_name (str): Sort field name. [optional]
+            sort_by_0_priority (int): Priority index. Sorts with lower values are executed earlier. [optional]
+            take (int): Maximum number of records to include in results. [optional]
             report_permissions_update_args (ReportPermissionsUpdateArgs): args. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -5550,7 +5550,7 @@ class ReportsApi(object):
         >>> result = thread.get()
 
         Args:
-            report_schedule_id (bool, date, datetime, dict, float, int, list, str, none_type): reportScheduleId
+            report_schedule_id (int): reportScheduleId
 
         Keyword Args:
             report_schedule_update_args (ReportScheduleUpdateArgs): args. [optional]

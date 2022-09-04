@@ -57,10 +57,8 @@ class SecretEraseRequestModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,40 +66,37 @@ class SecretEraseRequestModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'can_approve_or_deny': (bool,),  # noqa: E501
-            'can_cancel': (bool,),  # noqa: E501
-            'erase_after': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'request_user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'response_comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'review_status_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'status_description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'time_erased': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'workflow_instance_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'can_approve_or_deny': (bool, none_type,),  # noqa: E501
+            'can_cancel': (bool, none_type,),  # noqa: E501
+            'erase_after': (datetime, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'request_comment': (str, none_type,),  # noqa: E501
+            'request_date': (datetime, none_type,),  # noqa: E501
+            'request_user_id': (int, none_type,),  # noqa: E501
+            'request_user_name': (str, none_type,),  # noqa: E501
+            'response_comment': (str, none_type,),  # noqa: E501
+            'review_status_message': (str, none_type,),  # noqa: E501
+            'secret_count': (int, none_type,),  # noqa: E501
+            'status': (int, none_type,),  # noqa: E501
+            'status_description': (str, none_type,),  # noqa: E501
+            'time_erased': (datetime, none_type,),  # noqa: E501
+            'workflow_instance_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -165,19 +160,19 @@ class SecretEraseRequestModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             can_approve_or_deny (bool): CanApproveOrDeny. [optional]  # noqa: E501
             can_cancel (bool): CanCancel. [optional]  # noqa: E501
-            erase_after (bool, date, datetime, dict, float, int, list, str, none_type): EraseAfter. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            request_comment (bool, date, datetime, dict, float, int, list, str, none_type): RequestComment. [optional]  # noqa: E501
-            request_date (bool, date, datetime, dict, float, int, list, str, none_type): RequestDate. [optional]  # noqa: E501
-            request_user_id (bool, date, datetime, dict, float, int, list, str, none_type): RequestUserId. [optional]  # noqa: E501
-            request_user_name (bool, date, datetime, dict, float, int, list, str, none_type): RequestUserName. [optional]  # noqa: E501
-            response_comment (bool, date, datetime, dict, float, int, list, str, none_type): ResponseComment. [optional]  # noqa: E501
-            review_status_message (bool, date, datetime, dict, float, int, list, str, none_type): ReviewStatusMessage. [optional]  # noqa: E501
-            secret_count (bool, date, datetime, dict, float, int, list, str, none_type): SecretCount. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]  # noqa: E501
-            status_description (bool, date, datetime, dict, float, int, list, str, none_type): StatusDescription. [optional]  # noqa: E501
-            time_erased (bool, date, datetime, dict, float, int, list, str, none_type): TimeErased. [optional]  # noqa: E501
-            workflow_instance_id (bool, date, datetime, dict, float, int, list, str, none_type): WorkflowInstanceId. [optional]  # noqa: E501
+            erase_after (datetime): EraseAfter. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            request_comment (str): RequestComment. [optional]  # noqa: E501
+            request_date (datetime): RequestDate. [optional]  # noqa: E501
+            request_user_id (int): RequestUserId. [optional]  # noqa: E501
+            request_user_name (str): RequestUserName. [optional]  # noqa: E501
+            response_comment (str): ResponseComment. [optional]  # noqa: E501
+            review_status_message (str): ReviewStatusMessage. [optional]  # noqa: E501
+            secret_count (int): SecretCount. [optional]  # noqa: E501
+            status (int): Status. [optional]  # noqa: E501
+            status_description (str): StatusDescription. [optional]  # noqa: E501
+            time_erased (datetime): TimeErased. [optional]  # noqa: E501
+            workflow_instance_id (int): WorkflowInstanceId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -265,19 +260,19 @@ class SecretEraseRequestModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             can_approve_or_deny (bool): CanApproveOrDeny. [optional]  # noqa: E501
             can_cancel (bool): CanCancel. [optional]  # noqa: E501
-            erase_after (bool, date, datetime, dict, float, int, list, str, none_type): EraseAfter. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id. [optional]  # noqa: E501
-            request_comment (bool, date, datetime, dict, float, int, list, str, none_type): RequestComment. [optional]  # noqa: E501
-            request_date (bool, date, datetime, dict, float, int, list, str, none_type): RequestDate. [optional]  # noqa: E501
-            request_user_id (bool, date, datetime, dict, float, int, list, str, none_type): RequestUserId. [optional]  # noqa: E501
-            request_user_name (bool, date, datetime, dict, float, int, list, str, none_type): RequestUserName. [optional]  # noqa: E501
-            response_comment (bool, date, datetime, dict, float, int, list, str, none_type): ResponseComment. [optional]  # noqa: E501
-            review_status_message (bool, date, datetime, dict, float, int, list, str, none_type): ReviewStatusMessage. [optional]  # noqa: E501
-            secret_count (bool, date, datetime, dict, float, int, list, str, none_type): SecretCount. [optional]  # noqa: E501
-            status (bool, date, datetime, dict, float, int, list, str, none_type): Status. [optional]  # noqa: E501
-            status_description (bool, date, datetime, dict, float, int, list, str, none_type): StatusDescription. [optional]  # noqa: E501
-            time_erased (bool, date, datetime, dict, float, int, list, str, none_type): TimeErased. [optional]  # noqa: E501
-            workflow_instance_id (bool, date, datetime, dict, float, int, list, str, none_type): WorkflowInstanceId. [optional]  # noqa: E501
+            erase_after (datetime): EraseAfter. [optional]  # noqa: E501
+            id (int): Id. [optional]  # noqa: E501
+            request_comment (str): RequestComment. [optional]  # noqa: E501
+            request_date (datetime): RequestDate. [optional]  # noqa: E501
+            request_user_id (int): RequestUserId. [optional]  # noqa: E501
+            request_user_name (str): RequestUserName. [optional]  # noqa: E501
+            response_comment (str): ResponseComment. [optional]  # noqa: E501
+            review_status_message (str): ReviewStatusMessage. [optional]  # noqa: E501
+            secret_count (int): SecretCount. [optional]  # noqa: E501
+            status (int): Status. [optional]  # noqa: E501
+            status_description (str): StatusDescription. [optional]  # noqa: E501
+            time_erased (datetime): TimeErased. [optional]  # noqa: E501
+            workflow_instance_id (int): WorkflowInstanceId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

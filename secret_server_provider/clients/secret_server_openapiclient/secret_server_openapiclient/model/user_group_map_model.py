@@ -61,10 +61,8 @@ class UserGroupMapModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,29 +71,26 @@ class UserGroupMapModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'group_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_group_map_type': (UserGroupMapType,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'group_id': (int, none_type,),  # noqa: E501
+            'user_group_map_type': (UserGroupMapType, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,8 +140,8 @@ class UserGroupMapModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Group Name. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group Id. [optional]  # noqa: E501
+            display_name (str): Group Name. [optional]  # noqa: E501
+            group_id (int): Group Id. [optional]  # noqa: E501
             user_group_map_type (UserGroupMapType): [optional]  # noqa: E501
         """
 
@@ -233,8 +228,8 @@ class UserGroupMapModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Group Name. [optional]  # noqa: E501
-            group_id (bool, date, datetime, dict, float, int, list, str, none_type): Group Id. [optional]  # noqa: E501
+            display_name (str): Group Name. [optional]  # noqa: E501
+            group_id (int): Group Id. [optional]  # noqa: E501
             user_group_map_type (UserGroupMapType): [optional]  # noqa: E501
         """
 

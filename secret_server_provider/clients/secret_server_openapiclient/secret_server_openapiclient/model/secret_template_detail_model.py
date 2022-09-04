@@ -57,10 +57,8 @@ class SecretTemplateDetailModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,44 +66,41 @@ class SecretTemplateDetailModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_change_required_on_field_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name_pattern': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name_pattern_error_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'one_time_password_duration': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'one_time_password_enabled': (bool,),  # noqa: E501
-            'one_time_password_hash': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'one_time_password_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'save_all_name_history': (bool,),  # noqa: E501
-            'secret_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name_history_length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_key_format': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ssh_key_size': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'validate_password_requirements_on_create': (bool,),  # noqa: E501
-            'validate_password_requirements_on_edit': (bool,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'expiration_change_required_on_field_id': (int, none_type,),  # noqa: E501
+            'expiration_days': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'name_pattern': (str, none_type,),  # noqa: E501
+            'name_pattern_error_message': (str, none_type,),  # noqa: E501
+            'one_time_password_duration': (int, none_type,),  # noqa: E501
+            'one_time_password_enabled': (bool, none_type,),  # noqa: E501
+            'one_time_password_hash': (str, none_type,),  # noqa: E501
+            'one_time_password_length': (int, none_type,),  # noqa: E501
+            'save_all_name_history': (bool, none_type,),  # noqa: E501
+            'secret_count': (int, none_type,),  # noqa: E501
+            'secret_name_history_length': (int, none_type,),  # noqa: E501
+            'ssh_key_format': (str, none_type,),  # noqa: E501
+            'ssh_key_size': (str, none_type,),  # noqa: E501
+            'validate_password_requirements_on_create': (bool, none_type,),  # noqa: E501
+            'validate_password_requirements_on_edit': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -172,22 +167,22 @@ class SecretTemplateDetailModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Is Secret Template active. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Description. [optional]  # noqa: E501
-            expiration_change_required_on_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Field Id that will require change on Expiration. [optional]  # noqa: E501
-            expiration_days (bool, date, datetime, dict, float, int, list, str, none_type): Expiration days, populated when ExpirationChangeRequiredOnFieldId is populated. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Name. [optional]  # noqa: E501
-            name_pattern (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Name Pattern. [optional]  # noqa: E501
-            name_pattern_error_message (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Name Pattern Error Message. [optional]  # noqa: E501
-            one_time_password_duration (bool, date, datetime, dict, float, int, list, str, none_type): Duration in seconds that the One Time Password is valid, populated when one time password is enabled. [optional]  # noqa: E501
+            description (str): Secret Template Description. [optional]  # noqa: E501
+            expiration_change_required_on_field_id (int): Secret Template Field Id that will require change on Expiration. [optional]  # noqa: E501
+            expiration_days (int): Expiration days, populated when ExpirationChangeRequiredOnFieldId is populated. [optional]  # noqa: E501
+            id (int): Secret Template Id. [optional]  # noqa: E501
+            name (str): Secret Template Name. [optional]  # noqa: E501
+            name_pattern (str): Secret Template Name Pattern. [optional]  # noqa: E501
+            name_pattern_error_message (str): Secret Template Name Pattern Error Message. [optional]  # noqa: E501
+            one_time_password_duration (int): Duration in seconds that the One Time Password is valid, populated when one time password is enabled. [optional]  # noqa: E501
             one_time_password_enabled (bool): One time password enabled. [optional]  # noqa: E501
-            one_time_password_hash (bool, date, datetime, dict, float, int, list, str, none_type): Hash to be used when generating the One Time Password, populated when one time password is enabled. [optional]  # noqa: E501
-            one_time_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Length of the generated One Time Password, populated when one time password is enabled. [optional]  # noqa: E501
+            one_time_password_hash (str): Hash to be used when generating the One Time Password, populated when one time password is enabled. [optional]  # noqa: E501
+            one_time_password_length (int): Length of the generated One Time Password, populated when one time password is enabled. [optional]  # noqa: E501
             save_all_name_history (bool): Indicates that all Secret Name history will be saved. This will be reset if the SecretNameHistoryLength is updated.. [optional]  # noqa: E501
-            secret_count (bool, date, datetime, dict, float, int, list, str, none_type): The number of Secrets that use this template. [optional]  # noqa: E501
-            secret_name_history_length (bool, date, datetime, dict, float, int, list, str, none_type): The number of Secret Names to be saved. If SaveAllNameHistory is true, this will return null.. [optional]  # noqa: E501
-            ssh_key_format (bool, date, datetime, dict, float, int, list, str, none_type): Format of the SSH Key, populated when the template contains a private SSH Key. [optional]  # noqa: E501
-            ssh_key_size (bool, date, datetime, dict, float, int, list, str, none_type): Size of the SSH Key in bits, populated when the template contains a private SSH Key. [optional]  # noqa: E501
+            secret_count (int): The number of Secrets that use this template. [optional]  # noqa: E501
+            secret_name_history_length (int): The number of Secret Names to be saved. If SaveAllNameHistory is true, this will return null.. [optional]  # noqa: E501
+            ssh_key_format (str): Format of the SSH Key, populated when the template contains a private SSH Key. [optional]  # noqa: E501
+            ssh_key_size (str): Size of the SSH Key in bits, populated when the template contains a private SSH Key. [optional]  # noqa: E501
             validate_password_requirements_on_create (bool): Validate password requirements on create. [optional]  # noqa: E501
             validate_password_requirements_on_edit (bool): Validate password requirements on edit. [optional]  # noqa: E501
         """
@@ -276,22 +271,22 @@ class SecretTemplateDetailModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Is Secret Template active. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Description. [optional]  # noqa: E501
-            expiration_change_required_on_field_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Field Id that will require change on Expiration. [optional]  # noqa: E501
-            expiration_days (bool, date, datetime, dict, float, int, list, str, none_type): Expiration days, populated when ExpirationChangeRequiredOnFieldId is populated. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Id. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Name. [optional]  # noqa: E501
-            name_pattern (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Name Pattern. [optional]  # noqa: E501
-            name_pattern_error_message (bool, date, datetime, dict, float, int, list, str, none_type): Secret Template Name Pattern Error Message. [optional]  # noqa: E501
-            one_time_password_duration (bool, date, datetime, dict, float, int, list, str, none_type): Duration in seconds that the One Time Password is valid, populated when one time password is enabled. [optional]  # noqa: E501
+            description (str): Secret Template Description. [optional]  # noqa: E501
+            expiration_change_required_on_field_id (int): Secret Template Field Id that will require change on Expiration. [optional]  # noqa: E501
+            expiration_days (int): Expiration days, populated when ExpirationChangeRequiredOnFieldId is populated. [optional]  # noqa: E501
+            id (int): Secret Template Id. [optional]  # noqa: E501
+            name (str): Secret Template Name. [optional]  # noqa: E501
+            name_pattern (str): Secret Template Name Pattern. [optional]  # noqa: E501
+            name_pattern_error_message (str): Secret Template Name Pattern Error Message. [optional]  # noqa: E501
+            one_time_password_duration (int): Duration in seconds that the One Time Password is valid, populated when one time password is enabled. [optional]  # noqa: E501
             one_time_password_enabled (bool): One time password enabled. [optional]  # noqa: E501
-            one_time_password_hash (bool, date, datetime, dict, float, int, list, str, none_type): Hash to be used when generating the One Time Password, populated when one time password is enabled. [optional]  # noqa: E501
-            one_time_password_length (bool, date, datetime, dict, float, int, list, str, none_type): Length of the generated One Time Password, populated when one time password is enabled. [optional]  # noqa: E501
+            one_time_password_hash (str): Hash to be used when generating the One Time Password, populated when one time password is enabled. [optional]  # noqa: E501
+            one_time_password_length (int): Length of the generated One Time Password, populated when one time password is enabled. [optional]  # noqa: E501
             save_all_name_history (bool): Indicates that all Secret Name history will be saved. This will be reset if the SecretNameHistoryLength is updated.. [optional]  # noqa: E501
-            secret_count (bool, date, datetime, dict, float, int, list, str, none_type): The number of Secrets that use this template. [optional]  # noqa: E501
-            secret_name_history_length (bool, date, datetime, dict, float, int, list, str, none_type): The number of Secret Names to be saved. If SaveAllNameHistory is true, this will return null.. [optional]  # noqa: E501
-            ssh_key_format (bool, date, datetime, dict, float, int, list, str, none_type): Format of the SSH Key, populated when the template contains a private SSH Key. [optional]  # noqa: E501
-            ssh_key_size (bool, date, datetime, dict, float, int, list, str, none_type): Size of the SSH Key in bits, populated when the template contains a private SSH Key. [optional]  # noqa: E501
+            secret_count (int): The number of Secrets that use this template. [optional]  # noqa: E501
+            secret_name_history_length (int): The number of Secret Names to be saved. If SaveAllNameHistory is true, this will return null.. [optional]  # noqa: E501
+            ssh_key_format (str): Format of the SSH Key, populated when the template contains a private SSH Key. [optional]  # noqa: E501
+            ssh_key_size (str): Size of the SSH Key in bits, populated when the template contains a private SSH Key. [optional]  # noqa: E501
             validate_password_requirements_on_create (bool): Validate password requirements on create. [optional]  # noqa: E501
             validate_password_requirements_on_edit (bool): Validate password requirements on edit. [optional]  # noqa: E501
         """

@@ -71,9 +71,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = bulk_user_operations_api.BulkUserOperationsApi(api_client)
     add_users_to_group_args = AddUsersToGroupArgs(
         data=AddUsersToGroupModel(
-            group_id=None,
+            group_id=1,
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # AddUsersToGroupArgs | args (optional)
@@ -164,9 +164,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = bulk_user_operations_api.BulkUserOperationsApi(api_client)
     add_users_to_team_args = AddUsersToTeamArgs(
         data=AddUsersToTeamModel(
-            team_id=None,
+            team_id=1,
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # AddUsersToTeamArgs | args (optional)
@@ -258,7 +258,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_duo_auth_for_users_args = DisableDuoAuthForUsersArgs(
         data=DisableDuoAuthForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableDuoAuthForUsersArgs | args (optional)
@@ -350,7 +350,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_email_two_factor_for_users_args = DisableEmailTwoFactorForUsersArgs(
         data=DisableEmailTwoFactorForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableEmailTwoFactorForUsersArgs | args (optional)
@@ -442,7 +442,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_fido2_two_factor_for_users_args = DisableFido2TwoFactorForUsersArgs(
         data=DisableFido2TwoFactorForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableFido2TwoFactorForUsersArgs | args (optional)
@@ -534,7 +534,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_radius_two_factor_for_users_args = DisableRadiusTwoFactorForUsersArgs(
         data=DisableRadiusTwoFactorForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableRadiusTwoFactorForUsersArgs | args (optional)
@@ -626,7 +626,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_totp_auth_for_users_args = DisableTOTPAuthForUsersArgs(
         data=DisableTOTPAuthForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableTOTPAuthForUsersArgs | args (optional)
@@ -718,7 +718,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     disable_users_args = DisableUsersArgs(
         data=DisableUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # DisableUsersArgs | args (optional)
@@ -810,7 +810,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_duo_auth_for_users_args = EnableDuoAuthForUsersArgs(
         data=EnableDuoAuthForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableDuoAuthForUsersArgs | args (optional)
@@ -902,7 +902,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_email_two_factor_for_users_args = EnableEmailTwoFactorForUsersArgs(
         data=EnableEmailTwoFactorForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableEmailTwoFactorForUsersArgs | args (optional)
@@ -994,7 +994,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_fido2_two_factor_for_users_args = EnableFido2TwoFactorForUsersArgs(
         data=EnableFido2TwoFactorForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableFido2TwoFactorForUsersArgs | args (optional)
@@ -1086,7 +1086,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_radius_two_factor_for_users_args = EnableRadiusTwoFactorForUsersArgs(
         data=EnableRadiusTwoFactorForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableRadiusTwoFactorForUsersArgs | args (optional)
@@ -1178,7 +1178,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_totp_auth_for_users_args = EnableTOTPAuthForUsersArgs(
         data=EnableTOTPAuthForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableTOTPAuthForUsersArgs | args (optional)
@@ -1270,7 +1270,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     enable_users_args = EnableUsersArgs(
         data=EnableUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # EnableUsersArgs | args (optional)
@@ -1362,7 +1362,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     force_logout_for_users_args = ForceLogoutForUsersArgs(
         data=ForceLogoutForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # ForceLogoutForUsersArgs | args (optional)
@@ -1454,7 +1454,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     lock_users_args = LockUsersArgs(
         data=LockUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # LockUsersArgs | args (optional)
@@ -1545,9 +1545,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = bulk_user_operations_api.BulkUserOperationsApi(api_client)
     remove_users_from_group_args = RemoveUsersFromGroupArgs(
         data=RemoveUsersFromGroupModel(
-            group_id=None,
+            group_id=1,
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # RemoveUsersFromGroupArgs | args (optional)
@@ -1638,9 +1638,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = bulk_user_operations_api.BulkUserOperationsApi(api_client)
     remove_users_from_team_args = RemoveUsersFromTeamArgs(
         data=RemoveUsersFromTeamModel(
-            team_id=None,
+            team_id=1,
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # RemoveUsersFromTeamArgs | args (optional)
@@ -1732,7 +1732,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     reset_fido2_two_factor_for_users_args = ResetFido2TwoFactorForUsersArgs(
         data=ResetFido2TwoFactorForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # ResetFido2TwoFactorForUsersArgs | args (optional)
@@ -1824,7 +1824,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     reset_totp_auth_for_users_args = ResetTOTPAuthForUsersArgs(
         data=ResetTOTPAuthForUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # ResetTOTPAuthForUsersArgs | args (optional)
@@ -1916,7 +1916,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     unlock_users_args = UnlockUsersArgs(
         data=UnlockUsersModel(
             user_ids=[
-                None,
+                1,
             ],
         ),
     ) # UnlockUsersArgs | args (optional)

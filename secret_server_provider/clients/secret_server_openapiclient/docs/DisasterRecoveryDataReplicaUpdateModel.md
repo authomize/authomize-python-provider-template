@@ -5,7 +5,7 @@ Data
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data_replica_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | DataReplicaId | [optional] 
+**data_replica_id** | **str** | DataReplicaId | [optional] 
 **folder_ids** | [**UpdateFieldValueOfInt32Array**](UpdateFieldValueOfInt32Array.md) |  | [optional] 
 **name** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
 **status** | [**UpdateFieldValueOfDisasterRecoveryDataReplicaStatus**](UpdateFieldValueOfDisasterRecoveryDataReplicaStatus.md) |  | [optional] 

@@ -65,10 +65,8 @@ class SecretPolicyRpcItemsUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -77,33 +75,30 @@ class SecretPolicyRpcItemsUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'associated_secret_id1': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32,),  # noqa: E501
-            'associated_secret_id2': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32,),  # noqa: E501
-            'auto_change_on_expiration': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'auto_change_schedule': (UpdateFieldValueOfSecretPolicyDataItemOfAutoChangeScheduleDataModel,),  # noqa: E501
-            'heart_beat_enabled': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean,),  # noqa: E501
-            'password_type_web_script_id': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32,),  # noqa: E501
-            'privileged_secret_id': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32,),  # noqa: E501
+            'associated_secret_id1': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32, none_type,),  # noqa: E501
+            'associated_secret_id2': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32, none_type,),  # noqa: E501
+            'auto_change_on_expiration': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'auto_change_schedule': (UpdateFieldValueOfSecretPolicyDataItemOfAutoChangeScheduleDataModel, none_type,),  # noqa: E501
+            'heart_beat_enabled': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalBoolean, none_type,),  # noqa: E501
+            'password_type_web_script_id': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32, none_type,),  # noqa: E501
+            'privileged_secret_id': (UpdateFieldValueOfSecretPolicyDataItemOfOptionalInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

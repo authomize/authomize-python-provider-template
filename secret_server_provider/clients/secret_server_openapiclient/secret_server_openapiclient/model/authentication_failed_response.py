@@ -57,10 +57,8 @@ class AuthenticationFailedResponse(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,26 +66,23 @@ class AuthenticationFailedResponse(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'message': (str,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -105,7 +100,7 @@ class AuthenticationFailedResponse(ModelNormal):
         """AuthenticationFailedResponse - a model defined in OpenAPI
 
         Args:
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Error message
+            message (str): Error message
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -194,7 +189,7 @@ class AuthenticationFailedResponse(ModelNormal):
         """AuthenticationFailedResponse - a model defined in OpenAPI
 
         Args:
-            message (bool, date, datetime, dict, float, int, list, str, none_type): Error message
+            message (str): Error message
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

@@ -60,7 +60,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
-    replica_id = None # bool, date, datetime, dict, float, int, list, str, none_type | replicaId
+    replica_id = "replicaId_example" # str | replicaId
 
     # example passing only required values which don't have defaults set
     try:
@@ -76,7 +76,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **replica_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| replicaId |
+ **replica_id** | **str**| replicaId |
 
 ### Return type
 
@@ -144,13 +144,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
-    audit_type = None # bool, date, datetime, dict, float, int, list, str, none_type | auditType (optional)
+    audit_type = "auditType_example" # str | auditType (optional)
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -167,13 +167,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **audit_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| auditType | [optional]
+ **audit_type** | **str**| auditType | [optional]
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -241,7 +241,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
-    replica_id = None # bool, date, datetime, dict, float, int, list, str, none_type | replicaId
+    replica_id = "replicaId_example" # str | replicaId
 
     # example passing only required values which don't have defaults set
     try:
@@ -257,7 +257,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **replica_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| replicaId |
+ **replica_id** | **str**| replicaId |
 
 ### Return type
 
@@ -325,12 +325,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
-    log_type = None # bool, date, datetime, dict, float, int, list, str, none_type | logType (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    log_type = "logType_example" # str | logType (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -347,12 +347,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **log_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| logType | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **log_type** | **str**| logType | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -500,13 +500,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
-    filter_location = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return data replicas with locations containing this text. (optional)
-    filter_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return data replicas with names containing this text. (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_location = "filter.location_example" # str | Only return data replicas with locations containing this text. (optional)
+    filter_name = "filter.name_example" # str | Only return data replicas with names containing this text. (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -523,13 +523,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_location** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return data replicas with locations containing this text. | [optional]
- **filter_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return data replicas with names containing this text. | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_location** | **str**| Only return data replicas with locations containing this text. | [optional]
+ **filter_name** | **str**| Only return data replicas with names containing this text. | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -598,19 +598,19 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
-    replica_id = None # bool, date, datetime, dict, float, int, list, str, none_type | replicaId
+    replica_id = "replicaId_example" # str | replicaId
     disaster_recovery_data_replica_args = DisasterRecoveryDataReplicaArgs(
         data=DisasterRecoveryDataReplicaUpdateModel(
-            data_replica_id=None,
+            data_replica_id="data_replica_id_example",
             folder_ids=UpdateFieldValueOfInt32Array(
                 dirty=True,
                 value=[
-                    None,
+                    1,
                 ],
             ),
             name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             status=UpdateFieldValueOfDisasterRecoveryDataReplicaStatus(
                 dirty=True,
@@ -642,7 +642,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **replica_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| replicaId |
+ **replica_id** | **str**| replicaId |
  **disaster_recovery_data_replica_args** | [**DisasterRecoveryDataReplicaArgs**](DisasterRecoveryDataReplicaArgs.md)| Disaster Recovery Data Replica Update Settings | [optional]
 
 ### Return type
@@ -716,7 +716,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=DisasterRecoveryConfigurationUpdateModel(
             data_package_storage_path=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             data_replication_enabled=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -724,19 +724,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             data_replication_group_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             data_source_key=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             data_source_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             replication_interval_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # DisasterRecoveryConfigurationArgs | Disaster Recovery Incoming Configuration Update Settings (optional)
@@ -827,7 +827,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
     disaster_recovery_handshake_args = DisasterRecoveryHandshakeArgs(
         encrypted_parts=[
-            None,
+            "encrypted_parts_example",
         ],
     ) # DisasterRecoveryHandshakeArgs | Disaster Recovery Handshake arguments encrypted using the data source's public key. (optional)
 
@@ -916,8 +916,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
     disaster_recovery_data_replica_to_data_source_args = DisasterRecoveryDataReplicaToDataSourceArgs(
-        data_replica_id=None,
-        encrypted_request=None,
+        data_replica_id="data_replica_id_example",
+        encrypted_request="encrypted_request_example",
     ) # DisasterRecoveryDataReplicaToDataSourceArgs | Disaster Recovery Data Replica to Data Source request encrypted using the symmetric key from the data replica. (optional)
 
     # example passing only required values which don't have defaults set
@@ -1005,8 +1005,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
     disaster_recovery_data_replica_to_data_source_args = DisasterRecoveryDataReplicaToDataSourceArgs(
-        data_replica_id=None,
-        encrypted_request=None,
+        data_replica_id="data_replica_id_example",
+        encrypted_request="encrypted_request_example",
     ) # DisasterRecoveryDataReplicaToDataSourceArgs | Disaster Recovery Data Replica to Data Source request encrypted using the symmetric key from the data replica. (optional)
 
     # example passing only required values which don't have defaults set
@@ -1094,8 +1094,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
     disaster_recovery_data_replica_to_data_source_args = DisasterRecoveryDataReplicaToDataSourceArgs(
-        data_replica_id=None,
-        encrypted_request=None,
+        data_replica_id="data_replica_id_example",
+        encrypted_request="encrypted_request_example",
     ) # DisasterRecoveryDataReplicaToDataSourceArgs | Disaster Recovery Data Replica to Data Source request encrypted using the symmetric key from the data replica. (optional)
 
     # example passing only required values which don't have defaults set
@@ -1261,7 +1261,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = disaster_recovery_api.DisasterRecoveryApi(api_client)
-    minutes = None # bool, date, datetime, dict, float, int, list, str, none_type | minutes (optional)
+    minutes = 1 # int | minutes (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1278,7 +1278,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **minutes** | **bool, date, datetime, dict, float, int, list, str, none_type**| minutes | [optional]
+ **minutes** | **int**| minutes | [optional]
 
 ### Return type
 

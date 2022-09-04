@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **workflow_templates_service_cancel_request**
-> bool, date, datetime, dict, float, int, list, str, none_type workflow_templates_service_cancel_request(id)
+> str workflow_templates_service_cancel_request(id)
 
 Cancel Workflow Requests
 
@@ -54,7 +54,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_templates_api.WorkflowTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template Id
+    id = 1 # int | Workflow Template Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -70,11 +70,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template Id |
+ **id** | **int**| Workflow Template Id |
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**str**
 
 ### Authorization
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **workflow_templates_service_create_workflow_template**
-> bool, date, datetime, dict, float, int, list, str, none_type workflow_templates_service_create_workflow_template()
+> int workflow_templates_service_create_workflow_template()
 
 Create a Workflow Template
 
@@ -139,10 +139,10 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_templates_api.WorkflowTemplatesApi(api_client)
     workflow_template_create_args = WorkflowTemplateCreateArgs(
-        configuration_json=None,
-        description=None,
-        expiration_minutes=None,
-        name=None,
+        configuration_json="configuration_json_example",
+        description="description_example",
+        expiration_minutes=1,
+        name="name_example",
         workflow_type=WorkflowType("{}"),
     ) # WorkflowTemplateCreateArgs | Workflow Template creation options (optional)
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**int**
 
 ### Authorization
 
@@ -229,7 +229,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_templates_api.WorkflowTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template Id
+    id = 1 # int | Workflow Template Id
 
     # example passing only required values which don't have defaults set
     try:
@@ -245,7 +245,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template Id |
+ **id** | **int**| Workflow Template Id |
 
 ### Return type
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **workflow_templates_service_get_workflow_entities**
-> bool, date, datetime, dict, float, int, list, str, none_type workflow_templates_service_get_workflow_entities(id, include_all)
+> int workflow_templates_service_get_workflow_entities(id, include_all)
 
 Count of Entities using a Workflow Template
 
@@ -312,7 +312,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_templates_api.WorkflowTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template Id
+    id = 1 # int | Workflow Template Id
     include_all = True # bool | includeAll
 
     # example passing only required values which don't have defaults set
@@ -329,12 +329,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template Id |
+ **id** | **int**| Workflow Template Id |
  **include_all** | **bool**| includeAll |
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+**int**
 
 ### Authorization
 
@@ -398,13 +398,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_templates_api.WorkflowTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template Id
+    id = 1 # int | Workflow Template Id
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -429,13 +429,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template Id |
+ **id** | **int**| Workflow Template Id |
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -504,12 +504,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_templates_api.WorkflowTemplatesApi(api_client)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    filter_workflow_type = None # bool, date, datetime, dict, float, int, list, str, none_type | WorkflowType (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_workflow_type = "filter.workflowType_example" # str | WorkflowType (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -527,12 +527,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **filter_workflow_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| WorkflowType | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_workflow_type** | **str**| WorkflowType | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -681,7 +681,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workflow_templates_api.WorkflowTemplatesApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Workflow Template ID
+    id = 1 # int | Workflow Template ID
     workflow_template_update_model = WorkflowTemplateUpdateModel(
         active=UpdateFieldValueOfBoolean(
             dirty=True,
@@ -689,15 +689,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         ),
         configuration_json=UpdateFieldValueOfString(
             dirty=True,
-            value=None,
+            value="value_example",
         ),
         description=UpdateFieldValueOfString(
             dirty=True,
-            value=None,
+            value="value_example",
         ),
         expiration_minutes=UpdateFieldValueOfOptionalInt32(
             dirty=True,
-            value=None,
+            value=1,
         ),
         is_copy=UpdateFieldValueOfOptionalBoolean(
             dirty=True,
@@ -705,7 +705,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         ),
         name=UpdateFieldValueOfString(
             dirty=True,
-            value=None,
+            value="value_example",
         ),
     ) # WorkflowTemplateUpdateModel | Workflow Template update options (optional)
 
@@ -732,7 +732,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Workflow Template ID |
+ **id** | **int**| Workflow Template ID |
  **workflow_template_update_model** | [**WorkflowTemplateUpdateModel**](WorkflowTemplateUpdateModel.md)| Workflow Template update options | [optional]
 
 ### Return type

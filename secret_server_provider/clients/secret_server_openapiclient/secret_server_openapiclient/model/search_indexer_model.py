@@ -63,10 +63,8 @@ class SearchIndexerModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,34 +73,31 @@ class SearchIndexerModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'days_to_keep_logs': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'indexing_separators': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'index_mode': (SearchIndexMode,),  # noqa: E501
-            'index_percent_complete': (float,),  # noqa: E501
-            'last_index_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'log_available': (bool,),  # noqa: E501
-            'status': (SearchIndexStatus,),  # noqa: E501
+            'days_to_keep_logs': (int, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'indexing_separators': ([str], none_type,),  # noqa: E501
+            'index_mode': (SearchIndexMode, none_type,),  # noqa: E501
+            'index_percent_complete': (float, none_type,),  # noqa: E501
+            'last_index_date': (datetime, none_type,),  # noqa: E501
+            'log_available': (bool, none_type,),  # noqa: E501
+            'status': (SearchIndexStatus, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -157,12 +152,12 @@ class SearchIndexerModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            days_to_keep_logs (bool, date, datetime, dict, float, int, list, str, none_type): How many days to keep the logs for the search indexer. [optional]  # noqa: E501
+            days_to_keep_logs (int): How many days to keep the logs for the search indexer. [optional]  # noqa: E501
             enabled (bool): Whether or not the search indexer is enabled. [optional]  # noqa: E501
-            indexing_separators ([bool, date, datetime, dict, float, int, list, str, none_type]): Characters that split keys to be indexed. [optional]  # noqa: E501
+            indexing_separators ([str]): Characters that split keys to be indexed. [optional]  # noqa: E501
             index_mode (SearchIndexMode): [optional]  # noqa: E501
             index_percent_complete (float): The percent of the index that is built. [optional]  # noqa: E501
-            last_index_date (bool, date, datetime, dict, float, int, list, str, none_type): The time of the last indexing. [optional]  # noqa: E501
+            last_index_date (datetime): The time of the last indexing. [optional]  # noqa: E501
             log_available (bool): Whether or not a log is available for the Secret Search Indexer. [optional]  # noqa: E501
             status (SearchIndexStatus): [optional]  # noqa: E501
         """
@@ -250,12 +245,12 @@ class SearchIndexerModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            days_to_keep_logs (bool, date, datetime, dict, float, int, list, str, none_type): How many days to keep the logs for the search indexer. [optional]  # noqa: E501
+            days_to_keep_logs (int): How many days to keep the logs for the search indexer. [optional]  # noqa: E501
             enabled (bool): Whether or not the search indexer is enabled. [optional]  # noqa: E501
-            indexing_separators ([bool, date, datetime, dict, float, int, list, str, none_type]): Characters that split keys to be indexed. [optional]  # noqa: E501
+            indexing_separators ([str]): Characters that split keys to be indexed. [optional]  # noqa: E501
             index_mode (SearchIndexMode): [optional]  # noqa: E501
             index_percent_complete (float): The percent of the index that is built. [optional]  # noqa: E501
-            last_index_date (bool, date, datetime, dict, float, int, list, str, none_type): The time of the last indexing. [optional]  # noqa: E501
+            last_index_date (datetime): The time of the last indexing. [optional]  # noqa: E501
             log_available (bool): Whether or not a log is available for the Secret Search Indexer. [optional]  # noqa: E501
             status (SearchIndexStatus): [optional]  # noqa: E501
         """

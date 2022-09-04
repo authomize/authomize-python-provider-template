@@ -57,10 +57,8 @@ class SecretTemplateSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class SecretTemplateSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'password_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'password_type_id': (int, none_type,),  # noqa: E501
+            'secret_count': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -144,10 +139,10 @@ class SecretTemplateSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Is Secret template active. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret template name. [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type that the secret template uses for password change. [optional]  # noqa: E501
-            secret_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of Secrets associated to the template. Only populated when IncludeCount is set to true.. [optional]  # noqa: E501
+            id (int): Secret template ID. [optional]  # noqa: E501
+            name (str): Secret template name. [optional]  # noqa: E501
+            password_type_id (int): Password Type that the secret template uses for password change. [optional]  # noqa: E501
+            secret_count (int): Number of Secrets associated to the template. Only populated when IncludeCount is set to true.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,10 +229,10 @@ class SecretTemplateSummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Is Secret template active. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret template ID. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Secret template name. [optional]  # noqa: E501
-            password_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Password Type that the secret template uses for password change. [optional]  # noqa: E501
-            secret_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of Secrets associated to the template. Only populated when IncludeCount is set to true.. [optional]  # noqa: E501
+            id (int): Secret template ID. [optional]  # noqa: E501
+            name (str): Secret template name. [optional]  # noqa: E501
+            password_type_id (int): Password Type that the secret template uses for password change. [optional]  # noqa: E501
+            secret_count (int): Number of Secrets associated to the template. Only populated when IncludeCount is set to true.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

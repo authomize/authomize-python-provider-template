@@ -58,12 +58,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
     secret_access_create_args = SecretAccessCreateArgs(
-        expiration_date=None,
-        request_comment=None,
-        secret_id=None,
-        start_date=None,
-        ticket_number=None,
-        ticket_system_id=None,
+        expiration_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        request_comment="request_comment_example",
+        secret_id=1,
+        start_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
     ) # SecretAccessCreateArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -149,11 +149,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
     secret_access_view_comment_args = SecretAccessViewCommentArgs(
-        comment=None,
-        ticket_number=None,
-        ticket_system_id=None,
+        comment="comment_example",
+        ticket_number="ticket_number_example",
+        ticket_system_id=1,
     ) # SecretAccessViewCommentArgs | args (optional)
 
     # example passing only required values which don't have defaults set
@@ -179,7 +179,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
  **secret_access_view_comment_args** | [**SecretAccessViewCommentArgs**](SecretAccessViewCommentArgs.md)| args | [optional]
 
 ### Return type
@@ -248,12 +248,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Access Request Id
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | Secret Access Request Id
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -278,12 +278,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Access Request Id |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| Secret Access Request Id |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -351,7 +351,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
+    id = 1 # int | Secret ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -367,7 +367,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
+ **id** | **int**| Secret ID |
 
 ### Return type
 
@@ -435,7 +435,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Access ID
+    id = 1 # int | Secret Access ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -451,7 +451,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Access ID |
+ **id** | **int**| Secret Access ID |
 
 ### Return type
 
@@ -519,7 +519,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret Access ID
+    id = 1 # int | Secret Access ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -535,7 +535,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret Access ID |
+ **id** | **int**| Secret Access ID |
 
 ### Return type
 
@@ -603,12 +603,12 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Secret ID
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | Secret ID
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -633,12 +633,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Secret ID |
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| Secret ID |
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -707,12 +707,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
     filter_is_my_request = True # bool | IsMyRequest (optional)
-    filter_status = None # bool, date, datetime, dict, float, int, list, str, none_type | Status (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_status = "filter.status_example" # str | Status (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -730,12 +730,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_is_my_request** | **bool**| IsMyRequest | [optional]
- **filter_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| Status | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_status** | **str**| Status | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -806,44 +806,44 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = secret_access_requests_api.SecretAccessRequestsApi(api_client)
     secret_access_update_args = SecretAccessUpdateArgs(
         expiration_date=DateTimeOffset(
-            date=None,
-            date_time=None,
-            day=None,
+            date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            day=1,
             day_of_week=DayOfWeek("{}"),
-            day_of_year=None,
-            hour=None,
-            local_date_time=None,
-            millisecond=None,
-            minute=None,
-            month=None,
-            offset=None,
-            second=None,
-            ticks=None,
-            time_of_day=None,
-            utc_date_time=None,
-            utc_ticks=None,
-            year=None,
+            day_of_year=1,
+            hour=1,
+            local_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            millisecond=1,
+            minute=1,
+            month=1,
+            offset="offset_example",
+            second=1,
+            ticks=1,
+            time_of_day="time_of_day_example",
+            utc_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            utc_ticks=1,
+            year=1,
         ),
-        response_comment=None,
-        secret_access_request_id=None,
+        response_comment="response_comment_example",
+        secret_access_request_id=1,
         start_date=DateTimeOffset(
-            date=None,
-            date_time=None,
-            day=None,
+            date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            day=1,
             day_of_week=DayOfWeek("{}"),
-            day_of_year=None,
-            hour=None,
-            local_date_time=None,
-            millisecond=None,
-            minute=None,
-            month=None,
-            offset=None,
-            second=None,
-            ticks=None,
-            time_of_day=None,
-            utc_date_time=None,
-            utc_ticks=None,
-            year=None,
+            day_of_year=1,
+            hour=1,
+            local_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            millisecond=1,
+            minute=1,
+            month=1,
+            offset="offset_example",
+            second=1,
+            ticks=1,
+            time_of_day="time_of_day_example",
+            utc_date_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            utc_ticks=1,
+            year=1,
         ),
         status=SecretAccessModelStatus("Pending"),
     ) # SecretAccessUpdateArgs | args (optional)

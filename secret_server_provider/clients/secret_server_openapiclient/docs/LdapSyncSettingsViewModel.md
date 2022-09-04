@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **actions** | [**[DomainActionType]**](DomainActionType.md) | Valid Actions | [optional] 
 **base_dn_code** | [**ViewFieldDropDownValueOfString**](ViewFieldDropDownValueOfString.md) |  | [optional] 
 **display_name_attribute** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
-**domain_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | Domain Id | [optional] 
+**domain_id** | **int** | Domain Id | [optional] 
 **email_attribute** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
 **group_member_attribute** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 
 **group_name_attribute** | [**ViewFieldValueOfString**](ViewFieldValueOfString.md) |  | [optional] 

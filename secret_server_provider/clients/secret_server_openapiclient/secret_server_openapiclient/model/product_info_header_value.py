@@ -61,10 +61,8 @@ class ProductInfoHeaderValue(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,28 +71,25 @@ class ProductInfoHeaderValue(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'comment': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'product': (ProductHeaderValue,),  # noqa: E501
+            'comment': (str, none_type,),  # noqa: E501
+            'product': (ProductHeaderValue, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,7 +138,7 @@ class ProductInfoHeaderValue(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): Comment. [optional]  # noqa: E501
+            comment (str): Comment. [optional]  # noqa: E501
             product (ProductHeaderValue): [optional]  # noqa: E501
         """
 
@@ -230,7 +225,7 @@ class ProductInfoHeaderValue(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            comment (bool, date, datetime, dict, float, int, list, str, none_type): Comment. [optional]  # noqa: E501
+            comment (str): Comment. [optional]  # noqa: E501
             product (ProductHeaderValue): [optional]  # noqa: E501
         """
 

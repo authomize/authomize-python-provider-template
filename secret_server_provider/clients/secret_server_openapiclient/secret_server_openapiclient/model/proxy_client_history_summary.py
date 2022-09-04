@@ -61,10 +61,8 @@ class ProxyClientHistorySummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,30 +71,27 @@ class ProxyClientHistorySummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'authenticate_result': (TerminalAuthenticateResult,),  # noqa: E501
-            'created_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'engine_identity_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ip_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'authenticate_result': (TerminalAuthenticateResult, none_type,),  # noqa: E501
+            'created_date': (datetime, none_type,),  # noqa: E501
+            'engine_identity_guid': (str, none_type,),  # noqa: E501
+            'ip_address': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -148,9 +143,9 @@ class ProxyClientHistorySummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             authenticate_result (TerminalAuthenticateResult): [optional]  # noqa: E501
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): CreatedDate. [optional]  # noqa: E501
-            engine_identity_guid (bool, date, datetime, dict, float, int, list, str, none_type): EngineIdentityGuid. [optional]  # noqa: E501
-            ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]  # noqa: E501
+            created_date (datetime): CreatedDate. [optional]  # noqa: E501
+            engine_identity_guid (str): EngineIdentityGuid. [optional]  # noqa: E501
+            ip_address (str): IpAddress. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,9 +232,9 @@ class ProxyClientHistorySummary(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             authenticate_result (TerminalAuthenticateResult): [optional]  # noqa: E501
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): CreatedDate. [optional]  # noqa: E501
-            engine_identity_guid (bool, date, datetime, dict, float, int, list, str, none_type): EngineIdentityGuid. [optional]  # noqa: E501
-            ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]  # noqa: E501
+            created_date (datetime): CreatedDate. [optional]  # noqa: E501
+            engine_identity_guid (str): EngineIdentityGuid. [optional]  # noqa: E501
+            ip_address (str): IpAddress. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

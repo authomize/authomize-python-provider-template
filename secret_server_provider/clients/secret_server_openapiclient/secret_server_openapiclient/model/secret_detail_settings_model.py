@@ -69,10 +69,8 @@ class SecretDetailSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,37 +79,34 @@ class SecretDetailSettingsModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'expiration_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_day_interval': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_template_text': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'expiration_type': (SecretDetailExpirationType,),  # noqa: E501
-            'jumpbox_route_selection': (JumpboxRouteSummaryModel,),  # noqa: E501
-            'one_time_password_settings': (OneTimePasswordSettingsModel,),  # noqa: E501
-            'rdp_launcher_settings': (RdpLauncherSettingsModel,),  # noqa: E501
-            'send_email_when_changed': (bool,),  # noqa: E501
-            'send_email_when_heartbeat_fails': (bool,),  # noqa: E501
-            'send_email_when_viewed': (bool,),  # noqa: E501
-            'ssh_launcher_settings': (SshLauncherSettingsModel,),  # noqa: E501
+            'expiration_date': (datetime, none_type,),  # noqa: E501
+            'expiration_day_interval': (int, none_type,),  # noqa: E501
+            'expiration_template_text': (str, none_type,),  # noqa: E501
+            'expiration_type': (SecretDetailExpirationType, none_type,),  # noqa: E501
+            'jumpbox_route_selection': (JumpboxRouteSummaryModel, none_type,),  # noqa: E501
+            'one_time_password_settings': (OneTimePasswordSettingsModel, none_type,),  # noqa: E501
+            'rdp_launcher_settings': (RdpLauncherSettingsModel, none_type,),  # noqa: E501
+            'send_email_when_changed': (bool, none_type,),  # noqa: E501
+            'send_email_when_heartbeat_fails': (bool, none_type,),  # noqa: E501
+            'send_email_when_viewed': (bool, none_type,),  # noqa: E501
+            'ssh_launcher_settings': (SshLauncherSettingsModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -169,9 +164,9 @@ class SecretDetailSettingsModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            expiration_date (bool, date, datetime, dict, float, int, list, str, none_type): Expiration Date. [optional]  # noqa: E501
-            expiration_day_interval (bool, date, datetime, dict, float, int, list, str, none_type): Expiration Day Interval. [optional]  # noqa: E501
-            expiration_template_text (bool, date, datetime, dict, float, int, list, str, none_type): Expiration Template Text. [optional]  # noqa: E501
+            expiration_date (datetime): Expiration Date. [optional]  # noqa: E501
+            expiration_day_interval (int): Expiration Day Interval. [optional]  # noqa: E501
+            expiration_template_text (str): Expiration Template Text. [optional]  # noqa: E501
             expiration_type (SecretDetailExpirationType): [optional]  # noqa: E501
             jumpbox_route_selection (JumpboxRouteSummaryModel): [optional]  # noqa: E501
             one_time_password_settings (OneTimePasswordSettingsModel): [optional]  # noqa: E501
@@ -265,9 +260,9 @@ class SecretDetailSettingsModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            expiration_date (bool, date, datetime, dict, float, int, list, str, none_type): Expiration Date. [optional]  # noqa: E501
-            expiration_day_interval (bool, date, datetime, dict, float, int, list, str, none_type): Expiration Day Interval. [optional]  # noqa: E501
-            expiration_template_text (bool, date, datetime, dict, float, int, list, str, none_type): Expiration Template Text. [optional]  # noqa: E501
+            expiration_date (datetime): Expiration Date. [optional]  # noqa: E501
+            expiration_day_interval (int): Expiration Day Interval. [optional]  # noqa: E501
+            expiration_template_text (str): Expiration Template Text. [optional]  # noqa: E501
             expiration_type (SecretDetailExpirationType): [optional]  # noqa: E501
             jumpbox_route_selection (JumpboxRouteSummaryModel): [optional]  # noqa: E501
             one_time_password_settings (OneTimePasswordSettingsModel): [optional]  # noqa: E501

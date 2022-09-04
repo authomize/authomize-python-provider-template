@@ -54,22 +54,22 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     recurring_schedule_create_args = RecurringScheduleCreateArgs(
         data=RecurringScheduleCreateModel(
             active=True,
-            duration=None,
-            duration_start_date=None,
+            duration=1,
+            duration_start_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
             entity=RecurringScheduleEntityModel(
-                entity_id=None,
+                entity_id=1,
                 entity_type=RecurringScheduleEntityType("{}"),
-                id=None,
+                id=1,
             ),
-            notes=None,
+            notes="notes_example",
             recurring_schedule_type=RecurringScheduleType("{}"),
             schedule_constraints=[
                 RecurringScheduleValueModel(
-                    recurrence_value=None,
+                    recurrence_value=1,
                     recurrence_value_type=RecurringScheduleValueType("{}"),
                 ),
             ],
-            time_zone_id=None,
+            time_zone_id="time_zone_id_example",
         ),
     ) # RecurringScheduleCreateArgs | args (optional)
 
@@ -156,7 +156,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
-    schedule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | scheduleId
+    schedule_id = 1 # int | scheduleId
 
     # example passing only required values which don't have defaults set
     try:
@@ -172,7 +172,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| scheduleId |
+ **schedule_id** | **int**| scheduleId |
 
 ### Return type
 
@@ -241,7 +241,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
-    schedule_id = None # bool, date, datetime, dict, float, int, list, str, none_type | scheduleId
+    schedule_id = 1 # int | scheduleId
     recurring_schedule_update_args = RecurringScheduleUpdateArgs(
         data=RecurringScheduleUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -250,17 +250,17 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             duration=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             duration_start_date=UpdateFieldValueOfDateTime(
                 dirty=True,
-                value=None,
+                value=dateutil_parser('1970-01-01T00:00:00.00Z'),
             ),
             notes=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
-            recurring_schedule_id=None,
+            recurring_schedule_id=1,
             recurring_schedule_type=UpdateFieldValueOfRecurringScheduleType(
                 dirty=True,
                 value=RecurringScheduleType("{}"),
@@ -269,14 +269,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
                 dirty=True,
                 value=[
                     RecurringScheduleValueModel(
-                        recurrence_value=None,
+                        recurrence_value=1,
                         recurrence_value_type=RecurringScheduleValueType("{}"),
                     ),
                 ],
             ),
             time_zone_id=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # RecurringScheduleUpdateArgs | args (optional)
@@ -304,7 +304,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| scheduleId |
+ **schedule_id** | **int**| scheduleId |
  **recurring_schedule_update_args** | [**RecurringScheduleUpdateArgs**](RecurringScheduleUpdateArgs.md)| args | [optional]
 
 ### Return type

@@ -57,10 +57,8 @@ class SecretPermissionUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,28 +66,25 @@ class SecretPermissionUpdateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_access_role_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'id': (int,),  # noqa: E501
+            'secret_access_role_name': (str,),  # noqa: E501
+            'secret_id': (int,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -109,9 +104,9 @@ class SecretPermissionUpdateArgs(ModelNormal):
         """SecretPermissionUpdateArgs - a model defined in OpenAPI
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret permission ID. Must match ID in path
-            secret_access_role_name (bool, date, datetime, dict, float, int, list, str, none_type): Granted role name
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret permission ID. Must match ID in path
+            secret_access_role_name (str): Granted role name
+            secret_id (int): Secret ID
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -202,9 +197,9 @@ class SecretPermissionUpdateArgs(ModelNormal):
         """SecretPermissionUpdateArgs - a model defined in OpenAPI
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Secret permission ID. Must match ID in path
-            secret_access_role_name (bool, date, datetime, dict, float, int, list, str, none_type): Granted role name
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID
+            id (int): Secret permission ID. Must match ID in path
+            secret_access_role_name (str): Granted role name
+            secret_id (int): Secret ID
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

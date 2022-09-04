@@ -57,10 +57,8 @@ class ReportModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,37 +66,34 @@ class ReportModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'category_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'chart_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'description': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'enable_inherit_permissions': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is3_d_report': (bool,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'page_size': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'report_sql': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'system_report': (bool,),  # noqa: E501
-            'use_database_paging': (bool,),  # noqa: E501
+            'category_id': (int, none_type,),  # noqa: E501
+            'chart_type': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'enable_inherit_permissions': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is3_d_report': (bool, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'page_size': (int, none_type,),  # noqa: E501
+            'report_sql': (str, none_type,),  # noqa: E501
+            'system_report': (bool, none_type,),  # noqa: E501
+            'use_database_paging': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -157,16 +152,16 @@ class ReportModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            category_id (bool, date, datetime, dict, float, int, list, str, none_type): The Report Category Id. [optional]  # noqa: E501
-            chart_type (bool, date, datetime, dict, float, int, list, str, none_type): The report chart Type.  Null if no chart. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Report Description. [optional]  # noqa: E501
+            category_id (int): The Report Category Id. [optional]  # noqa: E501
+            chart_type (str): The report chart Type.  Null if no chart. [optional]  # noqa: E501
+            description (str): Report Description. [optional]  # noqa: E501
             enabled (bool): Whether the Report is active. [optional]  # noqa: E501
             enable_inherit_permissions (bool): When true, permissions will be inherited from the report category in which the report resides.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Report ID. [optional]  # noqa: E501
+            id (int): Report ID. [optional]  # noqa: E501
             is3_d_report (bool): Whether the Report chart is displayed in 3d. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Report name. [optional]  # noqa: E501
-            page_size (bool, date, datetime, dict, float, int, list, str, none_type): The page size of the report. [optional]  # noqa: E501
-            report_sql (bool, date, datetime, dict, float, int, list, str, none_type): The SQL used to generate the report. [optional]  # noqa: E501
+            name (str): Report name. [optional]  # noqa: E501
+            page_size (int): The page size of the report. [optional]  # noqa: E501
+            report_sql (str): The SQL used to generate the report. [optional]  # noqa: E501
             system_report (bool): Whether the Report is a system Report. [optional]  # noqa: E501
             use_database_paging (bool): When true paging of a report will be done in SQL server.  Not all SQL is compatible with this option.. [optional]  # noqa: E501
         """
@@ -254,16 +249,16 @@ class ReportModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            category_id (bool, date, datetime, dict, float, int, list, str, none_type): The Report Category Id. [optional]  # noqa: E501
-            chart_type (bool, date, datetime, dict, float, int, list, str, none_type): The report chart Type.  Null if no chart. [optional]  # noqa: E501
-            description (bool, date, datetime, dict, float, int, list, str, none_type): Report Description. [optional]  # noqa: E501
+            category_id (int): The Report Category Id. [optional]  # noqa: E501
+            chart_type (str): The report chart Type.  Null if no chart. [optional]  # noqa: E501
+            description (str): Report Description. [optional]  # noqa: E501
             enabled (bool): Whether the Report is active. [optional]  # noqa: E501
             enable_inherit_permissions (bool): When true, permissions will be inherited from the report category in which the report resides.. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Report ID. [optional]  # noqa: E501
+            id (int): Report ID. [optional]  # noqa: E501
             is3_d_report (bool): Whether the Report chart is displayed in 3d. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Report name. [optional]  # noqa: E501
-            page_size (bool, date, datetime, dict, float, int, list, str, none_type): The page size of the report. [optional]  # noqa: E501
-            report_sql (bool, date, datetime, dict, float, int, list, str, none_type): The SQL used to generate the report. [optional]  # noqa: E501
+            name (str): Report name. [optional]  # noqa: E501
+            page_size (int): The page size of the report. [optional]  # noqa: E501
+            report_sql (str): The SQL used to generate the report. [optional]  # noqa: E501
             system_report (bool): Whether the Report is a system Report. [optional]  # noqa: E501
             use_database_paging (bool): When true paging of a report will be done in SQL server.  Not all SQL is compatible with this option.. [optional]  # noqa: E501
         """

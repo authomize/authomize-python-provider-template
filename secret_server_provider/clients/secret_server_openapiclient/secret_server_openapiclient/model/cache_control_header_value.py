@@ -61,10 +61,8 @@ class CacheControlHeaderValue(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,42 +71,39 @@ class CacheControlHeaderValue(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'extensions': ([NameValueHeaderValue],),  # noqa: E501
-            'max_age': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'max_stale': (bool,),  # noqa: E501
-            'max_stale_limit': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'min_fresh': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'must_revalidate': (bool,),  # noqa: E501
-            'no_cache': (bool,),  # noqa: E501
-            'no_cache_headers': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'no_store': (bool,),  # noqa: E501
-            'no_transform': (bool,),  # noqa: E501
-            'only_if_cached': (bool,),  # noqa: E501
-            'private': (bool,),  # noqa: E501
-            'private_headers': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'proxy_revalidate': (bool,),  # noqa: E501
-            'public': (bool,),  # noqa: E501
-            'shared_max_age': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'extensions': ([NameValueHeaderValue], none_type,),  # noqa: E501
+            'max_age': (str, none_type,),  # noqa: E501
+            'max_stale': (bool, none_type,),  # noqa: E501
+            'max_stale_limit': (str, none_type,),  # noqa: E501
+            'min_fresh': (str, none_type,),  # noqa: E501
+            'must_revalidate': (bool, none_type,),  # noqa: E501
+            'no_cache': (bool, none_type,),  # noqa: E501
+            'no_cache_headers': ([str], none_type,),  # noqa: E501
+            'no_store': (bool, none_type,),  # noqa: E501
+            'no_transform': (bool, none_type,),  # noqa: E501
+            'only_if_cached': (bool, none_type,),  # noqa: E501
+            'private': (bool, none_type,),  # noqa: E501
+            'private_headers': ([str], none_type,),  # noqa: E501
+            'proxy_revalidate': (bool, none_type,),  # noqa: E501
+            'public': (bool, none_type,),  # noqa: E501
+            'shared_max_age': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -172,21 +167,21 @@ class CacheControlHeaderValue(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             extensions ([NameValueHeaderValue]): Extensions. [optional]  # noqa: E501
-            max_age (bool, date, datetime, dict, float, int, list, str, none_type): MaxAge. [optional]  # noqa: E501
+            max_age (str): MaxAge. [optional]  # noqa: E501
             max_stale (bool): MaxStale. [optional]  # noqa: E501
-            max_stale_limit (bool, date, datetime, dict, float, int, list, str, none_type): MaxStaleLimit. [optional]  # noqa: E501
-            min_fresh (bool, date, datetime, dict, float, int, list, str, none_type): MinFresh. [optional]  # noqa: E501
+            max_stale_limit (str): MaxStaleLimit. [optional]  # noqa: E501
+            min_fresh (str): MinFresh. [optional]  # noqa: E501
             must_revalidate (bool): MustRevalidate. [optional]  # noqa: E501
             no_cache (bool): NoCache. [optional]  # noqa: E501
-            no_cache_headers ([bool, date, datetime, dict, float, int, list, str, none_type]): NoCacheHeaders. [optional]  # noqa: E501
+            no_cache_headers ([str]): NoCacheHeaders. [optional]  # noqa: E501
             no_store (bool): NoStore. [optional]  # noqa: E501
             no_transform (bool): NoTransform. [optional]  # noqa: E501
             only_if_cached (bool): OnlyIfCached. [optional]  # noqa: E501
             private (bool): Private. [optional]  # noqa: E501
-            private_headers ([bool, date, datetime, dict, float, int, list, str, none_type]): PrivateHeaders. [optional]  # noqa: E501
+            private_headers ([str]): PrivateHeaders. [optional]  # noqa: E501
             proxy_revalidate (bool): ProxyRevalidate. [optional]  # noqa: E501
             public (bool): Public. [optional]  # noqa: E501
-            shared_max_age (bool, date, datetime, dict, float, int, list, str, none_type): SharedMaxAge. [optional]  # noqa: E501
+            shared_max_age (str): SharedMaxAge. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -273,21 +268,21 @@ class CacheControlHeaderValue(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             extensions ([NameValueHeaderValue]): Extensions. [optional]  # noqa: E501
-            max_age (bool, date, datetime, dict, float, int, list, str, none_type): MaxAge. [optional]  # noqa: E501
+            max_age (str): MaxAge. [optional]  # noqa: E501
             max_stale (bool): MaxStale. [optional]  # noqa: E501
-            max_stale_limit (bool, date, datetime, dict, float, int, list, str, none_type): MaxStaleLimit. [optional]  # noqa: E501
-            min_fresh (bool, date, datetime, dict, float, int, list, str, none_type): MinFresh. [optional]  # noqa: E501
+            max_stale_limit (str): MaxStaleLimit. [optional]  # noqa: E501
+            min_fresh (str): MinFresh. [optional]  # noqa: E501
             must_revalidate (bool): MustRevalidate. [optional]  # noqa: E501
             no_cache (bool): NoCache. [optional]  # noqa: E501
-            no_cache_headers ([bool, date, datetime, dict, float, int, list, str, none_type]): NoCacheHeaders. [optional]  # noqa: E501
+            no_cache_headers ([str]): NoCacheHeaders. [optional]  # noqa: E501
             no_store (bool): NoStore. [optional]  # noqa: E501
             no_transform (bool): NoTransform. [optional]  # noqa: E501
             only_if_cached (bool): OnlyIfCached. [optional]  # noqa: E501
             private (bool): Private. [optional]  # noqa: E501
-            private_headers ([bool, date, datetime, dict, float, int, list, str, none_type]): PrivateHeaders. [optional]  # noqa: E501
+            private_headers ([str]): PrivateHeaders. [optional]  # noqa: E501
             proxy_revalidate (bool): ProxyRevalidate. [optional]  # noqa: E501
             public (bool): Public. [optional]  # noqa: E501
-            shared_max_age (bool, date, datetime, dict, float, int, list, str, none_type): SharedMaxAge. [optional]  # noqa: E501
+            shared_max_age (str): SharedMaxAge. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

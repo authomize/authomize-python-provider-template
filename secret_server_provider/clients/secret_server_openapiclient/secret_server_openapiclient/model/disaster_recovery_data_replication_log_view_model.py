@@ -57,10 +57,8 @@ class DisasterRecoveryDataReplicationLogViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,30 +66,27 @@ class DisasterRecoveryDataReplicationLogViewModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'data_replica_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'data_source_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'success': (bool,),  # noqa: E501
-            'text': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'created': (datetime, none_type,),  # noqa: E501
+            'data_replica_name': (str, none_type,),  # noqa: E501
+            'data_source_url': (str, none_type,),  # noqa: E501
+            'success': (bool, none_type,),  # noqa: E501
+            'text': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -143,11 +138,11 @@ class DisasterRecoveryDataReplicationLogViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created (bool, date, datetime, dict, float, int, list, str, none_type): Created. [optional]  # noqa: E501
-            data_replica_name (bool, date, datetime, dict, float, int, list, str, none_type): DataReplicaName. [optional]  # noqa: E501
-            data_source_url (bool, date, datetime, dict, float, int, list, str, none_type): DataSourceUrl. [optional]  # noqa: E501
+            created (datetime): Created. [optional]  # noqa: E501
+            data_replica_name (str): DataReplicaName. [optional]  # noqa: E501
+            data_source_url (str): DataSourceUrl. [optional]  # noqa: E501
             success (bool): Success. [optional]  # noqa: E501
-            text (bool, date, datetime, dict, float, int, list, str, none_type): Text. [optional]  # noqa: E501
+            text (str): Text. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +228,11 @@ class DisasterRecoveryDataReplicationLogViewModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created (bool, date, datetime, dict, float, int, list, str, none_type): Created. [optional]  # noqa: E501
-            data_replica_name (bool, date, datetime, dict, float, int, list, str, none_type): DataReplicaName. [optional]  # noqa: E501
-            data_source_url (bool, date, datetime, dict, float, int, list, str, none_type): DataSourceUrl. [optional]  # noqa: E501
+            created (datetime): Created. [optional]  # noqa: E501
+            data_replica_name (str): DataReplicaName. [optional]  # noqa: E501
+            data_source_url (str): DataSourceUrl. [optional]  # noqa: E501
             success (bool): Success. [optional]  # noqa: E501
-            text (bool, date, datetime, dict, float, int, list, str, none_type): Text. [optional]  # noqa: E501
+            text (str): Text. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

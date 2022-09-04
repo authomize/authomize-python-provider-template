@@ -61,10 +61,8 @@ class EventPipelineFilterSettingMapSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,34 +71,31 @@ class EventPipelineFilterSettingMapSummary(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'event_pipeline_filter_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_pipeline_filter_setting_map_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting': (SettingForDisplay,),  # noqa: E501
-            'setting_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'setting_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sort_order': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'using_default': (bool,),  # noqa: E501
+            'event_pipeline_filter_id': (int, none_type,),  # noqa: E501
+            'event_pipeline_filter_setting_map_id': (int, none_type,),  # noqa: E501
+            'setting': (SettingForDisplay, none_type,),  # noqa: E501
+            'setting_display': (str, none_type,),  # noqa: E501
+            'setting_id': (int, none_type,),  # noqa: E501
+            'setting_value': (str, none_type,),  # noqa: E501
+            'sort_order': (int, none_type,),  # noqa: E501
+            'using_default': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,13 +150,13 @@ class EventPipelineFilterSettingMapSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_pipeline_filter_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter ID. [optional]  # noqa: E501
-            event_pipeline_filter_setting_map_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Setting Map ID. [optional]  # noqa: E501
+            event_pipeline_filter_id (int): Event Pipeline Filter ID. [optional]  # noqa: E501
+            event_pipeline_filter_setting_map_id (int): Event Pipeline Filter Setting Map ID. [optional]  # noqa: E501
             setting (SettingForDisplay): [optional]  # noqa: E501
-            setting_display (bool, date, datetime, dict, float, int, list, str, none_type): Setting Display. [optional]  # noqa: E501
-            setting_id (bool, date, datetime, dict, float, int, list, str, none_type): Setting ID. [optional]  # noqa: E501
-            setting_value (bool, date, datetime, dict, float, int, list, str, none_type): Setting Value. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order. [optional]  # noqa: E501
+            setting_display (str): Setting Display. [optional]  # noqa: E501
+            setting_id (int): Setting ID. [optional]  # noqa: E501
+            setting_value (str): Setting Value. [optional]  # noqa: E501
+            sort_order (int): Sort Order. [optional]  # noqa: E501
             using_default (bool): Using Default. [optional]  # noqa: E501
         """
 
@@ -248,13 +243,13 @@ class EventPipelineFilterSettingMapSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            event_pipeline_filter_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter ID. [optional]  # noqa: E501
-            event_pipeline_filter_setting_map_id (bool, date, datetime, dict, float, int, list, str, none_type): Event Pipeline Filter Setting Map ID. [optional]  # noqa: E501
+            event_pipeline_filter_id (int): Event Pipeline Filter ID. [optional]  # noqa: E501
+            event_pipeline_filter_setting_map_id (int): Event Pipeline Filter Setting Map ID. [optional]  # noqa: E501
             setting (SettingForDisplay): [optional]  # noqa: E501
-            setting_display (bool, date, datetime, dict, float, int, list, str, none_type): Setting Display. [optional]  # noqa: E501
-            setting_id (bool, date, datetime, dict, float, int, list, str, none_type): Setting ID. [optional]  # noqa: E501
-            setting_value (bool, date, datetime, dict, float, int, list, str, none_type): Setting Value. [optional]  # noqa: E501
-            sort_order (bool, date, datetime, dict, float, int, list, str, none_type): Sort Order. [optional]  # noqa: E501
+            setting_display (str): Setting Display. [optional]  # noqa: E501
+            setting_id (int): Setting ID. [optional]  # noqa: E501
+            setting_value (str): Setting Value. [optional]  # noqa: E501
+            sort_order (int): Sort Order. [optional]  # noqa: E501
             using_default (bool): Using Default. [optional]  # noqa: E501
         """
 

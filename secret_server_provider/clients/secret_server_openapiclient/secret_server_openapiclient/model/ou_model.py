@@ -57,10 +57,8 @@ class OUModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class OUModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'distinguished_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'parent_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'distinguished_name': (str, none_type,),  # noqa: E501
+            'guid': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'parent_guid': (str, none_type,),  # noqa: E501
+            'type': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,12 +140,12 @@ class OUModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name of the OU. [optional]  # noqa: E501
-            distinguished_name (bool, date, datetime, dict, float, int, list, str, none_type): The distinguished name of the OU. [optional]  # noqa: E501
-            guid (bool, date, datetime, dict, float, int, list, str, none_type): The GUID of the OU. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The Secret Server ID of the OU. [optional]  # noqa: E501
-            parent_guid (bool, date, datetime, dict, float, int, list, str, none_type): The parent GUID of the OU. [optional]  # noqa: E501
-            type (bool, date, datetime, dict, float, int, list, str, none_type): The type of the OU. [optional]  # noqa: E501
+            display_name (str): The display name of the OU. [optional]  # noqa: E501
+            distinguished_name (str): The distinguished name of the OU. [optional]  # noqa: E501
+            guid (str): The GUID of the OU. [optional]  # noqa: E501
+            id (int): The Secret Server ID of the OU. [optional]  # noqa: E501
+            parent_guid (str): The parent GUID of the OU. [optional]  # noqa: E501
+            type (str): The type of the OU. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,12 +231,12 @@ class OUModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): The display name of the OU. [optional]  # noqa: E501
-            distinguished_name (bool, date, datetime, dict, float, int, list, str, none_type): The distinguished name of the OU. [optional]  # noqa: E501
-            guid (bool, date, datetime, dict, float, int, list, str, none_type): The GUID of the OU. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): The Secret Server ID of the OU. [optional]  # noqa: E501
-            parent_guid (bool, date, datetime, dict, float, int, list, str, none_type): The parent GUID of the OU. [optional]  # noqa: E501
-            type (bool, date, datetime, dict, float, int, list, str, none_type): The type of the OU. [optional]  # noqa: E501
+            display_name (str): The display name of the OU. [optional]  # noqa: E501
+            distinguished_name (str): The distinguished name of the OU. [optional]  # noqa: E501
+            guid (str): The GUID of the OU. [optional]  # noqa: E501
+            id (int): The Secret Server ID of the OU. [optional]  # noqa: E501
+            parent_guid (str): The parent GUID of the OU. [optional]  # noqa: E501
+            type (str): The type of the OU. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

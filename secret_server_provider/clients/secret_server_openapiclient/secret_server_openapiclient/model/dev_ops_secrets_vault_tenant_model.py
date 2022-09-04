@@ -57,10 +57,8 @@ class DevOpsSecretsVaultTenantModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class DevOpsSecretsVaultTenantModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'active': (bool,),  # noqa: E501
-            'date_added': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'dsv_tenant_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'last_synced': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'sync_interval': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'tenant_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'date_added': (datetime, none_type,),  # noqa: E501
+            'dsv_tenant_id': (int, none_type,),  # noqa: E501
+            'last_synced': (datetime, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'sync_interval': (int, none_type,),  # noqa: E501
+            'tenant_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -150,13 +145,13 @@ class DevOpsSecretsVaultTenantModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            date_added (bool, date, datetime, dict, float, int, list, str, none_type): Date Added. [optional]  # noqa: E501
-            dsv_tenant_id (bool, date, datetime, dict, float, int, list, str, none_type): DSV Tenant Id. [optional]  # noqa: E501
-            last_synced (bool, date, datetime, dict, float, int, list, str, none_type): Last Synchronized. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Id. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Name. [optional]  # noqa: E501
-            sync_interval (bool, date, datetime, dict, float, int, list, str, none_type): Synchronization Interval. [optional]  # noqa: E501
-            tenant_name (bool, date, datetime, dict, float, int, list, str, none_type): Tenant Name. [optional]  # noqa: E501
+            date_added (datetime): Date Added. [optional]  # noqa: E501
+            dsv_tenant_id (int): DSV Tenant Id. [optional]  # noqa: E501
+            last_synced (datetime): Last Synchronized. [optional]  # noqa: E501
+            secret_id (int): Secret Id. [optional]  # noqa: E501
+            secret_name (str): Secret Name. [optional]  # noqa: E501
+            sync_interval (int): Synchronization Interval. [optional]  # noqa: E501
+            tenant_name (str): Tenant Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -243,13 +238,13 @@ class DevOpsSecretsVaultTenantModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             active (bool): Active. [optional]  # noqa: E501
-            date_added (bool, date, datetime, dict, float, int, list, str, none_type): Date Added. [optional]  # noqa: E501
-            dsv_tenant_id (bool, date, datetime, dict, float, int, list, str, none_type): DSV Tenant Id. [optional]  # noqa: E501
-            last_synced (bool, date, datetime, dict, float, int, list, str, none_type): Last Synchronized. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret Id. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret Name. [optional]  # noqa: E501
-            sync_interval (bool, date, datetime, dict, float, int, list, str, none_type): Synchronization Interval. [optional]  # noqa: E501
-            tenant_name (bool, date, datetime, dict, float, int, list, str, none_type): Tenant Name. [optional]  # noqa: E501
+            date_added (datetime): Date Added. [optional]  # noqa: E501
+            dsv_tenant_id (int): DSV Tenant Id. [optional]  # noqa: E501
+            last_synced (datetime): Last Synchronized. [optional]  # noqa: E501
+            secret_id (int): Secret Id. [optional]  # noqa: E501
+            secret_name (str): Secret Name. [optional]  # noqa: E501
+            sync_interval (int): Synchronization Interval. [optional]  # noqa: E501
+            tenant_name (str): Tenant Name. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

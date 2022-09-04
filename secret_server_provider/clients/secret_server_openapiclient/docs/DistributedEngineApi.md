@@ -82,13 +82,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             enable_cred_ssp_for_win_rm=True,
             enable_rdp_proxy=True,
             enable_ssh_proxy=True,
-            heartbeat_interval=None,
-            powershell_secret_id=None,
-            rdp_proxy_port=None,
-            site_connector_id=None,
-            site_name=None,
-            ssh_proxy_port=None,
-            win_rm_end_point_url=None,
+            heartbeat_interval=1,
+            powershell_secret_id=1,
+            rdp_proxy_port=1,
+            site_connector_id=1,
+            site_name="site_name_example",
+            ssh_proxy_port=1,
+            win_rm_end_point_url="win_rm_end_point_url_example",
         ),
     ) # SiteCreateArgs | args (optional)
 
@@ -179,13 +179,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     site_connector_create_args = SiteConnectorCreateArgs(
         data=SiteConnectorCreateModel(
             active=True,
-            host_name=None,
-            port=None,
+            host_name="host_name_example",
+            port=1,
             queue_type=MessageQueueType("{}"),
-            shared_access_key_name=None,
-            shared_access_key_value=None,
-            site_connector_name=None,
-            ssl_certificate_thumbprint=None,
+            shared_access_key_name="shared_access_key_name_example",
+            shared_access_key_value="shared_access_key_value_example",
+            site_connector_name="site_connector_name_example",
+            ssl_certificate_thumbprint="ssl_certificate_thumbprint_example",
             use_ssl=True,
         ),
     ) # SiteConnectorCreateArgs | args (optional)
@@ -274,7 +274,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
     is64_bit = True # bool | is64Bit (optional)
-    site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | siteId (optional)
+    site_id = 1 # int | siteId (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -292,7 +292,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **is64_bit** | **bool**| is64Bit | [optional]
- **site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| siteId | [optional]
+ **site_id** | **int**| siteId | [optional]
 
 ### Return type
 
@@ -360,7 +360,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -376,7 +376,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -524,15 +524,15 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | siteId
+    site_id = 1 # int | siteId
     is_exporting = True # bool | isExporting (optional)
-    filter_engine_id = None # bool, date, datetime, dict, float, int, list, str, none_type | EngineId (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | SearchTerm (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_engine_id = 1 # int | EngineId (optional)
+    filter_search_term = "filter.searchTerm_example" # str | SearchTerm (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -557,15 +557,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| siteId |
+ **site_id** | **int**| siteId |
  **is_exporting** | **bool**| isExporting | [optional]
- **filter_engine_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| EngineId | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| SearchTerm | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_engine_id** | **int**| EngineId | [optional]
+ **filter_search_term** | **str**| SearchTerm | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -633,7 +633,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    engine_id = None # bool, date, datetime, dict, float, int, list, str, none_type | engineId
+    engine_id = 1 # int | engineId
 
     # example passing only required values which don't have defaults set
     try:
@@ -649,7 +649,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **engine_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| engineId |
+ **engine_id** | **int**| engineId |
 
 ### Return type
 
@@ -717,7 +717,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | siteId
+    site_id = 1 # int | siteId
 
     # example passing only required values which don't have defaults set
     try:
@@ -733,7 +733,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| siteId |
+ **site_id** | **int**| siteId |
 
 ### Return type
 
@@ -801,7 +801,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -817,7 +817,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -885,7 +885,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -901,7 +901,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -969,13 +969,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     is_exporting = True # bool | isExporting (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1000,13 +1000,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **is_exporting** | **bool**| isExporting | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -1074,7 +1074,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
 
     # example passing only required values which don't have defaults set
     try:
@@ -1090,7 +1090,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
 
 ### Return type
 
@@ -1158,7 +1158,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    site_connector_id = None # bool, date, datetime, dict, float, int, list, str, none_type | siteConnectorId
+    site_connector_id = 1 # int | siteConnectorId
 
     # example passing only required values which don't have defaults set
     try:
@@ -1174,7 +1174,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_connector_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| siteConnectorId |
+ **site_connector_id** | **int**| siteConnectorId |
 
 ### Return type
 
@@ -1242,7 +1242,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    queue_type = None # bool, date, datetime, dict, float, int, list, str, none_type | QueueType (optional)
+    queue_type = "queueType_example" # str | QueueType (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -1259,7 +1259,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_type** | **bool, date, datetime, dict, float, int, list, str, none_type**| QueueType | [optional]
+ **queue_type** | **str**| QueueType | [optional]
 
 ### Return type
 
@@ -1416,15 +1416,15 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             callback_port=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             callback_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             default_callback_interval_seconds=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             enable_distributed_engines=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -1436,23 +1436,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             response_bus_site_connector_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             secret_heartbeat_message_minutes_to_live=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             secret_heartbeat_message_retry_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             secret_password_change_message_minutes_to_live=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             secret_password_change_message_retry_minutes=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
         ),
     ) # DistributedEngineConfigurationUpdateArgs | args (optional)
@@ -1541,7 +1541,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    engine_settings_id = None # bool, date, datetime, dict, float, int, list, str, none_type | engineSettingsId
+    engine_settings_id = 1 # int | engineSettingsId
     engine_settings_update_args = EngineSettingsUpdateArgs(
         data=EngineSettingsUpdateModel(
             ad_sync_enabled=UpdateFieldValueOfOptionalBoolean(
@@ -1558,7 +1558,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             log_level=UpdateFieldValueOfOptionalLog4NetLevel(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             password_changing_enabled=UpdateFieldValueOfOptionalBoolean(
                 dirty=True,
@@ -1614,7 +1614,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **engine_settings_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| engineSettingsId |
+ **engine_settings_id** | **int**| engineSettingsId |
  **engine_settings_update_args** | [**EngineSettingsUpdateArgs**](EngineSettingsUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -1684,7 +1684,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    engine_id = None # bool, date, datetime, dict, float, int, list, str, none_type | engineId
+    engine_id = 1 # int | engineId
     engine_settings_update_args = EngineSettingsUpdateArgs(
         data=EngineSettingsUpdateModel(
             ad_sync_enabled=UpdateFieldValueOfOptionalBoolean(
@@ -1701,7 +1701,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             log_level=UpdateFieldValueOfOptionalLog4NetLevel(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             password_changing_enabled=UpdateFieldValueOfOptionalBoolean(
                 dirty=True,
@@ -1757,7 +1757,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **engine_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| engineId |
+ **engine_id** | **int**| engineId |
  **engine_settings_update_args** | [**EngineSettingsUpdateArgs**](EngineSettingsUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -1827,7 +1827,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     site_update_args = SiteUpdateArgs(
         data=SiteUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -1848,11 +1848,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             heartbeat_interval=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             powershell_secret_id=UpdateFieldValueOfOptionalInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             processing_location=UpdateFieldValueOfProcessingLocationType(
                 dirty=True,
@@ -1860,23 +1860,23 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             rdp_proxy_port=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             site_connector_id=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             site_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             ssh_proxy_port=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             win_rm_end_point_url=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
         ),
     ) # SiteUpdateArgs | args (optional)
@@ -1904,7 +1904,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **site_update_args** | [**SiteUpdateArgs**](SiteUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -1974,11 +1974,11 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     reassign_secrets_args = ReassignSecretsArgs(
         data=ReassignSecretsModel(
             disable_site=True,
-            new_site_id=None,
+            new_site_id=1,
         ),
     ) # ReassignSecretsArgs | args (optional)
 
@@ -2005,7 +2005,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **reassign_secrets_args** | [**ReassignSecretsArgs**](ReassignSecretsArgs.md)| args | [optional]
 
 ### Return type
@@ -2074,16 +2074,16 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    filter_activation_status = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return engines with this activation status (optional)
-    filter_connection_status = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return engines with this connection status (optional)
-    filter_friendly_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return engines with a friendly name that contains this text (optional)
+    filter_activation_status = "filter.activationStatus_example" # str | Only return engines with this activation status (optional)
+    filter_connection_status = "filter.connectionStatus_example" # str | Only return engines with this connection status (optional)
+    filter_friendly_name = "filter.friendlyName_example" # str | Only return engines with a friendly name that contains this text (optional)
     filter_only_include_requiring_action = True # bool | Only include engines that require action.  For example, pending but not deleted or no site assigned. (optional)
-    filter_site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Only return engines for this site (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_site_id = 1 # int | Only return engines for this site (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2100,16 +2100,16 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter_activation_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return engines with this activation status | [optional]
- **filter_connection_status** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return engines with this connection status | [optional]
- **filter_friendly_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return engines with a friendly name that contains this text | [optional]
+ **filter_activation_status** | **str**| Only return engines with this activation status | [optional]
+ **filter_connection_status** | **str**| Only return engines with this connection status | [optional]
+ **filter_friendly_name** | **str**| Only return engines with a friendly name that contains this text | [optional]
  **filter_only_include_requiring_action** | **bool**| Only include engines that require action.  For example, pending but not deleted or no site assigned. | [optional]
- **filter_site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Only return engines for this site | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_site_id** | **int**| Only return engines for this site | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2178,11 +2178,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
     filter_include_inactive = True # bool | IncludeInactive (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2200,11 +2200,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_include_inactive** | **bool**| IncludeInactive | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2272,14 +2272,14 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
-    filter_engine_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by a specific engine ID (optional)
-    filter_search_term = None # bool, date, datetime, dict, float, int, list, str, none_type | Term used to search the Engine Name and/or the Message of the Site Log (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = 1 # int | id
+    filter_engine_id = 1 # int | Filter by a specific engine ID (optional)
+    filter_search_term = "filter.searchTerm_example" # str | Term used to search the Engine Name and/or the Message of the Site Log (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2304,14 +2304,14 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
- **filter_engine_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by a specific engine ID | [optional]
- **filter_search_term** | **bool, date, datetime, dict, float, int, list, str, none_type**| Term used to search the Engine Name and/or the Message of the Site Log | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **int**| id |
+ **filter_engine_id** | **int**| Filter by a specific engine ID | [optional]
+ **filter_search_term** | **str**| Term used to search the Engine Name and/or the Message of the Site Log | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2382,13 +2382,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     filter_include_inactive = True # bool | Include inactive sites (optional)
     filter_include_site_metrics = True # bool | When true metrics are included for returned sites such as how many inactive or active sites (optional)
     filter_only_include_sites_that_can_add_new_engines = True # bool | Only returns sites that can have new engines added (optional)
-    filter_site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Return the site with this ID (optional)
-    filter_site_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Return sites that partially match this name (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    filter_site_id = 1 # int | Return the site with this ID (optional)
+    filter_site_name = "filter.siteName_example" # str | Return sites that partially match this name (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -2408,13 +2408,13 @@ Name | Type | Description  | Notes
  **filter_include_inactive** | **bool**| Include inactive sites | [optional]
  **filter_include_site_metrics** | **bool**| When true metrics are included for returned sites such as how many inactive or active sites | [optional]
  **filter_only_include_sites_that_can_add_new_engines** | **bool**| Only returns sites that can have new engines added | [optional]
- **filter_site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Return the site with this ID | [optional]
- **filter_site_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Return sites that partially match this name | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_site_id** | **int**| Return the site with this ID | [optional]
+ **filter_site_name** | **str**| Return sites that partially match this name | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -2487,12 +2487,12 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
         data=EngineActivationRequestModel(
             engines=[
                 EngineStatusChangeModel(
-                    callback_interval=None,
+                    callback_interval=1,
                     change_type=EngineStatusChangeType("Activate"),
-                    engine_id=None,
-                    site_connector_id=None,
-                    site_id=None,
-                    site_name=None,
+                    engine_id=1,
+                    site_connector_id=1,
+                    site_id=1,
+                    site_name="site_name_example",
                 ),
             ],
         ),
@@ -2582,7 +2582,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | id
+    id = 1 # int | id
     site_connector_update_args = SiteConnectorUpdateArgs(
         data=SiteConnectorUpdateModel(
             active=UpdateFieldValueOfBoolean(
@@ -2591,11 +2591,11 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             host_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             port=UpdateFieldValueOfInt32(
                 dirty=True,
-                value=None,
+                value=1,
             ),
             queue_type=UpdateFieldValueOfMessageQueueType(
                 dirty=True,
@@ -2603,19 +2603,19 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
             ),
             shared_access_key_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             shared_access_key_value=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             site_connector_name=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             ssl_certificate_thumbprint=UpdateFieldValueOfString(
                 dirty=True,
-                value=None,
+                value="value_example",
             ),
             use_ssl=UpdateFieldValueOfBoolean(
                 dirty=True,
@@ -2647,7 +2647,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| id |
+ **id** | **int**| id |
  **site_connector_update_args** | [**SiteConnectorUpdateArgs**](SiteConnectorUpdateArgs.md)| args | [optional]
 
 ### Return type
@@ -2717,10 +2717,10 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Id of Site
+    site_id = 1 # int | Id of Site
     site_connectivity_validation_args = SiteConnectivityValidationArgs(
         data=SiteConnectivityValidationModel(
-            timeout=None,
+            timeout=1,
         ),
     ) # SiteConnectivityValidationArgs | args (optional)
 
@@ -2747,7 +2747,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Id of Site |
+ **site_id** | **int**| Id of Site |
  **site_connectivity_validation_args** | [**SiteConnectivityValidationArgs**](SiteConnectivityValidationArgs.md)| args | [optional]
 
 ### Return type
@@ -2816,7 +2816,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = distributed_engine_api.DistributedEngineApi(api_client)
-    site_connector_id = None # bool, date, datetime, dict, float, int, list, str, none_type | siteConnectorId
+    site_connector_id = 1 # int | siteConnectorId
 
     # example passing only required values which don't have defaults set
     try:
@@ -2832,7 +2832,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_connector_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| siteConnectorId |
+ **site_connector_id** | **int**| siteConnectorId |
 
 ### Return type
 

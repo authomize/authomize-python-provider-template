@@ -61,10 +61,8 @@ class FileStream(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -73,38 +71,35 @@ class FileStream(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'can_read': (bool,),  # noqa: E501
-            'can_seek': (bool,),  # noqa: E501
-            'can_timeout': (bool,),  # noqa: E501
-            'can_write': (bool,),  # noqa: E501
-            'handle': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'is_async': (bool,),  # noqa: E501
-            'length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'position': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'read_timeout': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'safe_file_handle': (SafeFileHandle,),  # noqa: E501
-            'write_timeout': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'can_read': (bool, none_type,),  # noqa: E501
+            'can_seek': (bool, none_type,),  # noqa: E501
+            'can_timeout': (bool, none_type,),  # noqa: E501
+            'can_write': (bool, none_type,),  # noqa: E501
+            'handle': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
+            'is_async': (bool, none_type,),  # noqa: E501
+            'length': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'position': (int, none_type,),  # noqa: E501
+            'read_timeout': (int, none_type,),  # noqa: E501
+            'safe_file_handle': (SafeFileHandle, none_type,),  # noqa: E501
+            'write_timeout': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -169,12 +164,12 @@ class FileStream(ModelNormal):
             can_write (bool): CanWrite. [optional]  # noqa: E501
             handle ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): Handle. [optional]  # noqa: E501
             is_async (bool): IsAsync. [optional]  # noqa: E501
-            length (bool, date, datetime, dict, float, int, list, str, none_type): Length. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            position (bool, date, datetime, dict, float, int, list, str, none_type): Position. [optional]  # noqa: E501
-            read_timeout (bool, date, datetime, dict, float, int, list, str, none_type): ReadTimeout. [optional]  # noqa: E501
+            length (int): Length. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            position (int): Position. [optional]  # noqa: E501
+            read_timeout (int): ReadTimeout. [optional]  # noqa: E501
             safe_file_handle (SafeFileHandle): [optional]  # noqa: E501
-            write_timeout (bool, date, datetime, dict, float, int, list, str, none_type): WriteTimeout. [optional]  # noqa: E501
+            write_timeout (int): WriteTimeout. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -266,12 +261,12 @@ class FileStream(ModelNormal):
             can_write (bool): CanWrite. [optional]  # noqa: E501
             handle ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): Handle. [optional]  # noqa: E501
             is_async (bool): IsAsync. [optional]  # noqa: E501
-            length (bool, date, datetime, dict, float, int, list, str, none_type): Length. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Name. [optional]  # noqa: E501
-            position (bool, date, datetime, dict, float, int, list, str, none_type): Position. [optional]  # noqa: E501
-            read_timeout (bool, date, datetime, dict, float, int, list, str, none_type): ReadTimeout. [optional]  # noqa: E501
+            length (int): Length. [optional]  # noqa: E501
+            name (str): Name. [optional]  # noqa: E501
+            position (int): Position. [optional]  # noqa: E501
+            read_timeout (int): ReadTimeout. [optional]  # noqa: E501
             safe_file_handle (SafeFileHandle): [optional]  # noqa: E501
-            write_timeout (bool, date, datetime, dict, float, int, list, str, none_type): WriteTimeout. [optional]  # noqa: E501
+            write_timeout (int): WriteTimeout. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

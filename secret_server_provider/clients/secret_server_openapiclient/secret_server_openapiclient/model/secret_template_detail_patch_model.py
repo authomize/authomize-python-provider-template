@@ -69,10 +69,8 @@ class SecretTemplateDetailPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,44 +79,41 @@ class SecretTemplateDetailPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'description': (UpdateFieldValueOfString,),  # noqa: E501
-            'expiration_change_required_on_field_id': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'expiration_days': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'expiration_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'name': (UpdateFieldValueOfString,),  # noqa: E501
-            'name_pattern': (UpdateFieldValueOfString,),  # noqa: E501
-            'name_pattern_error_message': (UpdateFieldValueOfString,),  # noqa: E501
-            'one_time_password_duration': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'one_time_password_enabled': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'one_time_password_hash': (UpdateFieldValueOfPasswordHashType,),  # noqa: E501
-            'one_time_password_length': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'save_all_name_history': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'secret_name_history_length': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'ssh_key_format': (UpdateFieldValueOfString,),  # noqa: E501
-            'ssh_key_size': (UpdateFieldValueOfSshKeySizeType,),  # noqa: E501
-            'validate_password_requirements_on_create': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'validate_password_requirements_on_edit': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'description': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'expiration_change_required_on_field_id': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'expiration_days': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'expiration_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'name_pattern': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'name_pattern_error_message': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'one_time_password_duration': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'one_time_password_enabled': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'one_time_password_hash': (UpdateFieldValueOfPasswordHashType, none_type,),  # noqa: E501
+            'one_time_password_length': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'save_all_name_history': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'secret_name_history_length': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'ssh_key_format': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'ssh_key_size': (UpdateFieldValueOfSshKeySizeType, none_type,),  # noqa: E501
+            'validate_password_requirements_on_create': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'validate_password_requirements_on_edit': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

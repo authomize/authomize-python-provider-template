@@ -67,10 +67,8 @@ class ConfigurationLoginTwoFactorRadiusPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,45 +77,42 @@ class ConfigurationLoginTwoFactorRadiusPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'attempt_user_password': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'client_port_range': (UpdateFieldValueOfString,),  # noqa: E501
-            'default_username': (UpdateFieldValueOfString,),  # noqa: E501
-            'disable_nas_ip_address_attribute': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'enable': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_failover_server': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_radius_nas_id': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'failover_server_ip': (UpdateFieldValueOfString,),  # noqa: E501
-            'failover_server_port': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'failover_shared_secret': (UpdateFieldValueOfString,),  # noqa: E501
-            'failover_timeout_seconds': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'login_explanation': (UpdateFieldValueOfString,),  # noqa: E501
-            'nas_id': (UpdateFieldValueOfString,),  # noqa: E501
-            'protocol': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'server_ip': (UpdateFieldValueOfString,),  # noqa: E501
-            'server_port': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'shared_secret': (UpdateFieldValueOfString,),  # noqa: E501
-            'shared_secret_same_for_all_users': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'timeout_seconds': (UpdateFieldValueOfInt32,),  # noqa: E501
+            'attempt_user_password': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'client_port_range': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'default_username': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'disable_nas_ip_address_attribute': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'enable': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_failover_server': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_radius_nas_id': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'failover_server_ip': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'failover_server_port': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'failover_shared_secret': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'failover_timeout_seconds': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'login_explanation': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'nas_id': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'protocol': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'server_ip': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'server_port': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'shared_secret': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'shared_secret_same_for_all_users': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'timeout_seconds': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

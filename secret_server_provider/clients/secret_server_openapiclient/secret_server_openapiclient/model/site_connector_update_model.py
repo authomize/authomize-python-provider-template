@@ -67,10 +67,8 @@ class SiteConnectorUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -79,35 +77,32 @@ class SiteConnectorUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'active': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'host_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'port': (UpdateFieldValueOfInt32,),  # noqa: E501
-            'queue_type': (UpdateFieldValueOfMessageQueueType,),  # noqa: E501
-            'shared_access_key_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'shared_access_key_value': (UpdateFieldValueOfString,),  # noqa: E501
-            'site_connector_name': (UpdateFieldValueOfString,),  # noqa: E501
-            'ssl_certificate_thumbprint': (UpdateFieldValueOfString,),  # noqa: E501
-            'use_ssl': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'active': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'host_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'port': (UpdateFieldValueOfInt32, none_type,),  # noqa: E501
+            'queue_type': (UpdateFieldValueOfMessageQueueType, none_type,),  # noqa: E501
+            'shared_access_key_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'shared_access_key_value': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'site_connector_name': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'ssl_certificate_thumbprint': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'use_ssl': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

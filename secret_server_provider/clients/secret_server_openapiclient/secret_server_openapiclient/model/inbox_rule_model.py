@@ -57,10 +57,8 @@ class InboxRuleModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,27 +66,24 @@ class InboxRuleModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'inbox_rule_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_rule_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'inbox_rule_id': (int, none_type,),  # noqa: E501
+            'inbox_rule_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -137,8 +132,8 @@ class InboxRuleModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Rule Id. [optional]  # noqa: E501
-            inbox_rule_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the rule. [optional]  # noqa: E501
+            inbox_rule_id (int): Inbox Rule Id. [optional]  # noqa: E501
+            inbox_rule_name (str): The name of the rule. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -224,8 +219,8 @@ class InboxRuleModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            inbox_rule_id (bool, date, datetime, dict, float, int, list, str, none_type): Inbox Rule Id. [optional]  # noqa: E501
-            inbox_rule_name (bool, date, datetime, dict, float, int, list, str, none_type): The name of the rule. [optional]  # noqa: E501
+            inbox_rule_id (int): Inbox Rule Id. [optional]  # noqa: E501
+            inbox_rule_name (str): The name of the rule. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

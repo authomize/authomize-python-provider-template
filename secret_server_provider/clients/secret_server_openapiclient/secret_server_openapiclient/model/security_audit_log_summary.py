@@ -57,10 +57,8 @@ class SecurityAuditLogSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class SecurityAuditLogSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'action': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'by_user_display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'database_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'date_recorded': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'date_recorded_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'event_entity_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ip_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'log_source_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'machine_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'notes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'action': (str, none_type,),  # noqa: E501
+            'by_user_display_name': (str, none_type,),  # noqa: E501
+            'database_name': (str, none_type,),  # noqa: E501
+            'date_recorded': (datetime, none_type,),  # noqa: E501
+            'date_recorded_display': (str, none_type,),  # noqa: E501
+            'event_entity_type': (str, none_type,),  # noqa: E501
+            'ip_address': (str, none_type,),  # noqa: E501
+            'log_source_name': (str, none_type,),  # noqa: E501
+            'machine_name': (str, none_type,),  # noqa: E501
+            'notes': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -153,16 +148,16 @@ class SecurityAuditLogSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
-            by_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): ByUserDisplayName. [optional]  # noqa: E501
-            database_name (bool, date, datetime, dict, float, int, list, str, none_type): DatabaseName. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): DateRecorded. [optional]  # noqa: E501
-            date_recorded_display (bool, date, datetime, dict, float, int, list, str, none_type): DateRecordedDisplay. [optional]  # noqa: E501
-            event_entity_type (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityType. [optional]  # noqa: E501
-            ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]  # noqa: E501
-            log_source_name (bool, date, datetime, dict, float, int, list, str, none_type): LogSourceName. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): MachineName. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
+            by_user_display_name (str): ByUserDisplayName. [optional]  # noqa: E501
+            database_name (str): DatabaseName. [optional]  # noqa: E501
+            date_recorded (datetime): DateRecorded. [optional]  # noqa: E501
+            date_recorded_display (str): DateRecordedDisplay. [optional]  # noqa: E501
+            event_entity_type (str): EventEntityType. [optional]  # noqa: E501
+            ip_address (str): IpAddress. [optional]  # noqa: E501
+            log_source_name (str): LogSourceName. [optional]  # noqa: E501
+            machine_name (str): MachineName. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -248,16 +243,16 @@ class SecurityAuditLogSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            action (bool, date, datetime, dict, float, int, list, str, none_type): Action. [optional]  # noqa: E501
-            by_user_display_name (bool, date, datetime, dict, float, int, list, str, none_type): ByUserDisplayName. [optional]  # noqa: E501
-            database_name (bool, date, datetime, dict, float, int, list, str, none_type): DatabaseName. [optional]  # noqa: E501
-            date_recorded (bool, date, datetime, dict, float, int, list, str, none_type): DateRecorded. [optional]  # noqa: E501
-            date_recorded_display (bool, date, datetime, dict, float, int, list, str, none_type): DateRecordedDisplay. [optional]  # noqa: E501
-            event_entity_type (bool, date, datetime, dict, float, int, list, str, none_type): EventEntityType. [optional]  # noqa: E501
-            ip_address (bool, date, datetime, dict, float, int, list, str, none_type): IpAddress. [optional]  # noqa: E501
-            log_source_name (bool, date, datetime, dict, float, int, list, str, none_type): LogSourceName. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): MachineName. [optional]  # noqa: E501
-            notes (bool, date, datetime, dict, float, int, list, str, none_type): Notes. [optional]  # noqa: E501
+            action (str): Action. [optional]  # noqa: E501
+            by_user_display_name (str): ByUserDisplayName. [optional]  # noqa: E501
+            database_name (str): DatabaseName. [optional]  # noqa: E501
+            date_recorded (datetime): DateRecorded. [optional]  # noqa: E501
+            date_recorded_display (str): DateRecordedDisplay. [optional]  # noqa: E501
+            event_entity_type (str): EventEntityType. [optional]  # noqa: E501
+            ip_address (str): IpAddress. [optional]  # noqa: E501
+            log_source_name (str): LogSourceName. [optional]  # noqa: E501
+            machine_name (str): MachineName. [optional]  # noqa: E501
+            notes (str): Notes. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

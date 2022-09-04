@@ -63,10 +63,8 @@ class EngineSettingsUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,37 +73,34 @@ class EngineSettingsUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'ad_sync_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'advanced_auditing_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'local_account_discovery_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'log_level': (UpdateFieldValueOfOptionalLog4NetLevel,),  # noqa: E501
-            'password_changing_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'rdp_proxy_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'secret_workflow_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'security_analytics_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'service_account_management_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'ssh_proxy_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
-            'ssh_terminal_enabled': (UpdateFieldValueOfOptionalBoolean,),  # noqa: E501
+            'ad_sync_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'advanced_auditing_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'local_account_discovery_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'log_level': (UpdateFieldValueOfOptionalLog4NetLevel, none_type,),  # noqa: E501
+            'password_changing_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'rdp_proxy_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'secret_workflow_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'security_analytics_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'service_account_management_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'ssh_proxy_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
+            'ssh_terminal_enabled': (UpdateFieldValueOfOptionalBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

@@ -57,10 +57,8 @@ class LaunchedSecretModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class LaunchedSecretModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'api_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'base_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'encoded_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'session_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'ss_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'api_version': (int, none_type,),  # noqa: E501
+            'base_url': (str, none_type,),  # noqa: E501
+            'encoded_url': (str, none_type,),  # noqa: E501
+            'guid': (str, none_type,),  # noqa: E501
+            'launcher_type': (str, none_type,),  # noqa: E501
+            'launcher_type_id': (int, none_type,),  # noqa: E501
+            'session_guid': (str, none_type,),  # noqa: E501
+            'ss_url': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -149,14 +144,14 @@ class LaunchedSecretModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            api_version (bool, date, datetime, dict, float, int, list, str, none_type): The version of the Launcher API used.. [optional]  # noqa: E501
-            base_url (bool, date, datetime, dict, float, int, list, str, none_type): The url to the launcher. [optional]  # noqa: E501
-            encoded_url (bool, date, datetime, dict, float, int, list, str, none_type): The url to Secret Server. [optional]  # noqa: E501
-            guid (bool, date, datetime, dict, float, int, list, str, none_type): The launcher request guid. [optional]  # noqa: E501
-            launcher_type (bool, date, datetime, dict, float, int, list, str, none_type): The name of the launcher used.. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the launcher used.. [optional]  # noqa: E501
-            session_guid (bool, date, datetime, dict, float, int, list, str, none_type): The Id for a running session.. [optional]  # noqa: E501
-            ss_url (bool, date, datetime, dict, float, int, list, str, none_type): The query string for the launcher.. [optional]  # noqa: E501
+            api_version (int): The version of the Launcher API used.. [optional]  # noqa: E501
+            base_url (str): The url to the launcher. [optional]  # noqa: E501
+            encoded_url (str): The url to Secret Server. [optional]  # noqa: E501
+            guid (str): The launcher request guid. [optional]  # noqa: E501
+            launcher_type (str): The name of the launcher used.. [optional]  # noqa: E501
+            launcher_type_id (int): The Id of the launcher used.. [optional]  # noqa: E501
+            session_guid (str): The Id for a running session.. [optional]  # noqa: E501
+            ss_url (str): The query string for the launcher.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -242,14 +237,14 @@ class LaunchedSecretModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            api_version (bool, date, datetime, dict, float, int, list, str, none_type): The version of the Launcher API used.. [optional]  # noqa: E501
-            base_url (bool, date, datetime, dict, float, int, list, str, none_type): The url to the launcher. [optional]  # noqa: E501
-            encoded_url (bool, date, datetime, dict, float, int, list, str, none_type): The url to Secret Server. [optional]  # noqa: E501
-            guid (bool, date, datetime, dict, float, int, list, str, none_type): The launcher request guid. [optional]  # noqa: E501
-            launcher_type (bool, date, datetime, dict, float, int, list, str, none_type): The name of the launcher used.. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the launcher used.. [optional]  # noqa: E501
-            session_guid (bool, date, datetime, dict, float, int, list, str, none_type): The Id for a running session.. [optional]  # noqa: E501
-            ss_url (bool, date, datetime, dict, float, int, list, str, none_type): The query string for the launcher.. [optional]  # noqa: E501
+            api_version (int): The version of the Launcher API used.. [optional]  # noqa: E501
+            base_url (str): The url to the launcher. [optional]  # noqa: E501
+            encoded_url (str): The url to Secret Server. [optional]  # noqa: E501
+            guid (str): The launcher request guid. [optional]  # noqa: E501
+            launcher_type (str): The name of the launcher used.. [optional]  # noqa: E501
+            launcher_type_id (int): The Id of the launcher used.. [optional]  # noqa: E501
+            session_guid (str): The Id for a running session.. [optional]  # noqa: E501
+            ss_url (str): The query string for the launcher.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

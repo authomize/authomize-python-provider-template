@@ -71,7 +71,7 @@ class BulkOperationsApi(object):
                 },
                 'openapi_types': {
                     'id':
-                        (bool, date, datetime, dict, float, int, list, str, none_type,),
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -106,7 +106,7 @@ class BulkOperationsApi(object):
         >>> result = thread.get()
 
         Args:
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of Bulk operation to retrieve.
+            id (str): Id of Bulk operation to retrieve.
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status

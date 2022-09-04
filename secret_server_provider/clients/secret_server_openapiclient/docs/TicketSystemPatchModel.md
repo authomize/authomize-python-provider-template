@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **system_credential_secret_id** | [**UpdateFieldValueOfOptionalInt32**](UpdateFieldValueOfOptionalInt32.md) |  | [optional] 
 **ticket_number_error_message** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
 **ticket_number_validation** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
-**ticket_system_id** | **bool, date, datetime, dict, float, int, list, str, none_type** | TicketSystemId | [optional] 
+**ticket_system_id** | **int** | TicketSystemId | [optional] 
 **ticket_system_type** | [**UpdateFieldValueOfTicketSystemTypes**](UpdateFieldValueOfTicketSystemTypes.md) |  | [optional] 
 **view_ticket_url** | [**UpdateFieldValueOfString**](UpdateFieldValueOfString.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

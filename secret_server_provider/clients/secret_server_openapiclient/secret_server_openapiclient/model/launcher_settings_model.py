@@ -57,10 +57,8 @@ class LauncherSettingsModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,33 +66,30 @@ class LauncherSettingsModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'allow_clipboard': (bool,),  # noqa: E501
-            'allow_drives': (bool,),  # noqa: E501
-            'allow_printers': (bool,),  # noqa: E501
-            'allow_smart_cards': (bool,),  # noqa: E501
-            'connect_to_console': (bool,),  # noqa: E501
-            'launcher_height': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_width': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'use_custom_launcher_resolution': (bool,),  # noqa: E501
+            'allow_clipboard': (bool, none_type,),  # noqa: E501
+            'allow_drives': (bool, none_type,),  # noqa: E501
+            'allow_printers': (bool, none_type,),  # noqa: E501
+            'allow_smart_cards': (bool, none_type,),  # noqa: E501
+            'connect_to_console': (bool, none_type,),  # noqa: E501
+            'launcher_height': (int, none_type,),  # noqa: E501
+            'launcher_width': (int, none_type,),  # noqa: E501
+            'use_custom_launcher_resolution': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -154,8 +149,8 @@ class LauncherSettingsModel(ModelNormal):
             allow_printers (bool): Allow Printers. [optional]  # noqa: E501
             allow_smart_cards (bool): Allow SmartCards. [optional]  # noqa: E501
             connect_to_console (bool): Connect To Console. [optional]  # noqa: E501
-            launcher_height (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Height. [optional]  # noqa: E501
-            launcher_width (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Height. [optional]  # noqa: E501
+            launcher_height (int): Launcher Height. [optional]  # noqa: E501
+            launcher_width (int): Launcher Height. [optional]  # noqa: E501
             use_custom_launcher_resolution (bool): Use Custom Launcher Resolution. [optional]  # noqa: E501
         """
 
@@ -247,8 +242,8 @@ class LauncherSettingsModel(ModelNormal):
             allow_printers (bool): Allow Printers. [optional]  # noqa: E501
             allow_smart_cards (bool): Allow SmartCards. [optional]  # noqa: E501
             connect_to_console (bool): Connect To Console. [optional]  # noqa: E501
-            launcher_height (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Height. [optional]  # noqa: E501
-            launcher_width (bool, date, datetime, dict, float, int, list, str, none_type): Launcher Height. [optional]  # noqa: E501
+            launcher_height (int): Launcher Height. [optional]  # noqa: E501
+            launcher_width (int): Launcher Height. [optional]  # noqa: E501
             use_custom_launcher_resolution (bool): Use Custom Launcher Resolution. [optional]  # noqa: E501
         """
 

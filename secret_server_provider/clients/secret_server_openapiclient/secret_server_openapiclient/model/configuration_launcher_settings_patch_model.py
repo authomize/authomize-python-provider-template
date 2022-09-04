@@ -63,10 +63,8 @@ class ConfigurationLauncherSettingsPatchModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,35 +73,32 @@ class ConfigurationLauncherSettingsPatchModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'check_in_secret_on_last_launcher_close': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'close_launcher_on_check_in_secret': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_domain_download': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_domain_upload': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_launcher': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_launcher_auto_update': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'enable_web_parsing': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'launcher_deployment_type': (UpdateFieldValueOfLauncherDeploymentType,),  # noqa: E501
-            'send_secret_url_to_launcher': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'check_in_secret_on_last_launcher_close': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'close_launcher_on_check_in_secret': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_domain_download': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_domain_upload': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_launcher': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_launcher_auto_update': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'enable_web_parsing': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'launcher_deployment_type': (UpdateFieldValueOfLauncherDeploymentType, none_type,),  # noqa: E501
+            'send_secret_url_to_launcher': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

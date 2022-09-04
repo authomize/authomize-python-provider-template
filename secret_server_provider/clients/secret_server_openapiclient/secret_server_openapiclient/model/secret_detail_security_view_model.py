@@ -83,10 +83,8 @@ class SecretDetailSecurityViewModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -95,50 +93,47 @@ class SecretDetailSecurityViewModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_owners_unrestricted_ssh_commands': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'approval_workflow': (ViewFieldValueOfWorkflowTemplate,),  # noqa: E501
-            'approval_workflow_options': (ViewFieldValueOfWorkflowTemplateArray,),  # noqa: E501
-            'approvers': (ViewFieldValueOfSecretDetailUserViewModelArray,),  # noqa: E501
-            'available_double_locks': (ViewFieldValueReadOnlyOfViewTemplateFieldDropDownOptionArray,),  # noqa: E501
-            'available_require_approval_types': (ViewFieldValueOfSecretDetailApprovalTypeArray,),  # noqa: E501
-            'check_out_change_password_enabled': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'check_out_default_interval_display': (ViewFieldValueReadOnlyOfString,),  # noqa: E501
-            'check_out_enabled': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'check_out_interval_display': (ViewFieldValueReadOnlyOfString,),  # noqa: E501
-            'check_out_interval_minutes': (ViewFieldValueOfOptionalInt32,),  # noqa: E501
-            'command_restriction_type': (ViewFieldValueOfCommandRestrictionType,),  # noqa: E501
-            'double_lock_id': (ViewFieldValueOfInt32,),  # noqa: E501
-            'double_lock_name': (ViewFieldValueReadOnlyOfString,),  # noqa: E501
-            'hide_launcher_password': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'is_double_lock': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'password_requirements': (SecretDetailSecurityPasswordRequirements,),  # noqa: E501
-            'proxy_enabled': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'require_approval_type': (ViewFieldValueOfSecretDetailApprovalType,),  # noqa: E501
-            'requires_comment': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'restricted_ssh_command_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'restrict_ssh_commands': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'session_recording_enabled': (ViewFieldValueOfBoolean,),  # noqa: E501
-            'web_launcher_requires_incognito_mode': (ViewFieldValueOfBoolean,),  # noqa: E501
+            'allow_owners_unrestricted_ssh_commands': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'approval_workflow': (ViewFieldValueOfWorkflowTemplate, none_type,),  # noqa: E501
+            'approval_workflow_options': (ViewFieldValueOfWorkflowTemplateArray, none_type,),  # noqa: E501
+            'approvers': (ViewFieldValueOfSecretDetailUserViewModelArray, none_type,),  # noqa: E501
+            'available_double_locks': (ViewFieldValueReadOnlyOfViewTemplateFieldDropDownOptionArray, none_type,),  # noqa: E501
+            'available_require_approval_types': (ViewFieldValueOfSecretDetailApprovalTypeArray, none_type,),  # noqa: E501
+            'check_out_change_password_enabled': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'check_out_default_interval_display': (ViewFieldValueReadOnlyOfString, none_type,),  # noqa: E501
+            'check_out_enabled': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'check_out_interval_display': (ViewFieldValueReadOnlyOfString, none_type,),  # noqa: E501
+            'check_out_interval_minutes': (ViewFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'command_restriction_type': (ViewFieldValueOfCommandRestrictionType, none_type,),  # noqa: E501
+            'double_lock_id': (ViewFieldValueOfInt32, none_type,),  # noqa: E501
+            'double_lock_name': (ViewFieldValueReadOnlyOfString, none_type,),  # noqa: E501
+            'hide_launcher_password': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'is_double_lock': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'password_requirements': (SecretDetailSecurityPasswordRequirements, none_type,),  # noqa: E501
+            'proxy_enabled': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'require_approval_type': (ViewFieldValueOfSecretDetailApprovalType, none_type,),  # noqa: E501
+            'requires_comment': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'restricted_ssh_command_count': (int, none_type,),  # noqa: E501
+            'restrict_ssh_commands': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'session_recording_enabled': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
+            'web_launcher_requires_incognito_mode': (ViewFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -229,7 +224,7 @@ class SecretDetailSecurityViewModel(ModelNormal):
             proxy_enabled (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             require_approval_type (ViewFieldValueOfSecretDetailApprovalType): [optional]  # noqa: E501
             requires_comment (ViewFieldValueOfBoolean): [optional]  # noqa: E501
-            restricted_ssh_command_count (bool, date, datetime, dict, float, int, list, str, none_type): RestrictedSshCommandCount. [optional]  # noqa: E501
+            restricted_ssh_command_count (int): RestrictedSshCommandCount. [optional]  # noqa: E501
             restrict_ssh_commands (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             session_recording_enabled (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             web_launcher_requires_incognito_mode (ViewFieldValueOfBoolean): [optional]  # noqa: E501
@@ -338,7 +333,7 @@ class SecretDetailSecurityViewModel(ModelNormal):
             proxy_enabled (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             require_approval_type (ViewFieldValueOfSecretDetailApprovalType): [optional]  # noqa: E501
             requires_comment (ViewFieldValueOfBoolean): [optional]  # noqa: E501
-            restricted_ssh_command_count (bool, date, datetime, dict, float, int, list, str, none_type): RestrictedSshCommandCount. [optional]  # noqa: E501
+            restricted_ssh_command_count (int): RestrictedSshCommandCount. [optional]  # noqa: E501
             restrict_ssh_commands (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             session_recording_enabled (ViewFieldValueOfBoolean): [optional]  # noqa: E501
             web_launcher_requires_incognito_mode (ViewFieldValueOfBoolean): [optional]  # noqa: E501

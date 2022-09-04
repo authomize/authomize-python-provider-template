@@ -57,10 +57,8 @@ class KeyManagementConfigUpdateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,35 +66,32 @@ class KeyManagementConfigUpdateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'aws_kms_access_key_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'aws_kms_key_arn': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'aws_kms_key_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'aws_kms_secret_access_key': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'azure_key_vault_base_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'azure_key_vault_key_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'azure_key_vault_key_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'azure_key_vault_principal_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'azure_key_vault_principal_secret': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'key_management_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'aws_kms_access_key_id': (str, none_type,),  # noqa: E501
+            'aws_kms_key_arn': (str, none_type,),  # noqa: E501
+            'aws_kms_key_id': (str, none_type,),  # noqa: E501
+            'aws_kms_secret_access_key': (str, none_type,),  # noqa: E501
+            'azure_key_vault_base_url': (str, none_type,),  # noqa: E501
+            'azure_key_vault_key_name': (str, none_type,),  # noqa: E501
+            'azure_key_vault_key_version': (str, none_type,),  # noqa: E501
+            'azure_key_vault_principal_id': (str, none_type,),  # noqa: E501
+            'azure_key_vault_principal_secret': (str, none_type,),  # noqa: E501
+            'key_management_type_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -153,16 +148,16 @@ class KeyManagementConfigUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            aws_kms_access_key_id (bool, date, datetime, dict, float, int, list, str, none_type): AwsKmsAccessKeyId. [optional]  # noqa: E501
-            aws_kms_key_arn (bool, date, datetime, dict, float, int, list, str, none_type): AwsKmsKeyArn. [optional]  # noqa: E501
-            aws_kms_key_id (bool, date, datetime, dict, float, int, list, str, none_type): AwsKmsKeyId. [optional]  # noqa: E501
-            aws_kms_secret_access_key (bool, date, datetime, dict, float, int, list, str, none_type): AwsKmsSecretAccessKey. [optional]  # noqa: E501
-            azure_key_vault_base_url (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultBaseUrl. [optional]  # noqa: E501
-            azure_key_vault_key_name (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultKeyName. [optional]  # noqa: E501
-            azure_key_vault_key_version (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultKeyVersion. [optional]  # noqa: E501
-            azure_key_vault_principal_id (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultPrincipalId. [optional]  # noqa: E501
-            azure_key_vault_principal_secret (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultPrincipalSecret. [optional]  # noqa: E501
-            key_management_type_id (bool, date, datetime, dict, float, int, list, str, none_type): KeyManagementTypeId. [optional]  # noqa: E501
+            aws_kms_access_key_id (str): AwsKmsAccessKeyId. [optional]  # noqa: E501
+            aws_kms_key_arn (str): AwsKmsKeyArn. [optional]  # noqa: E501
+            aws_kms_key_id (str): AwsKmsKeyId. [optional]  # noqa: E501
+            aws_kms_secret_access_key (str): AwsKmsSecretAccessKey. [optional]  # noqa: E501
+            azure_key_vault_base_url (str): AzureKeyVaultBaseUrl. [optional]  # noqa: E501
+            azure_key_vault_key_name (str): AzureKeyVaultKeyName. [optional]  # noqa: E501
+            azure_key_vault_key_version (str): AzureKeyVaultKeyVersion. [optional]  # noqa: E501
+            azure_key_vault_principal_id (str): AzureKeyVaultPrincipalId. [optional]  # noqa: E501
+            azure_key_vault_principal_secret (str): AzureKeyVaultPrincipalSecret. [optional]  # noqa: E501
+            key_management_type_id (int): KeyManagementTypeId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -248,16 +243,16 @@ class KeyManagementConfigUpdateArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            aws_kms_access_key_id (bool, date, datetime, dict, float, int, list, str, none_type): AwsKmsAccessKeyId. [optional]  # noqa: E501
-            aws_kms_key_arn (bool, date, datetime, dict, float, int, list, str, none_type): AwsKmsKeyArn. [optional]  # noqa: E501
-            aws_kms_key_id (bool, date, datetime, dict, float, int, list, str, none_type): AwsKmsKeyId. [optional]  # noqa: E501
-            aws_kms_secret_access_key (bool, date, datetime, dict, float, int, list, str, none_type): AwsKmsSecretAccessKey. [optional]  # noqa: E501
-            azure_key_vault_base_url (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultBaseUrl. [optional]  # noqa: E501
-            azure_key_vault_key_name (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultKeyName. [optional]  # noqa: E501
-            azure_key_vault_key_version (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultKeyVersion. [optional]  # noqa: E501
-            azure_key_vault_principal_id (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultPrincipalId. [optional]  # noqa: E501
-            azure_key_vault_principal_secret (bool, date, datetime, dict, float, int, list, str, none_type): AzureKeyVaultPrincipalSecret. [optional]  # noqa: E501
-            key_management_type_id (bool, date, datetime, dict, float, int, list, str, none_type): KeyManagementTypeId. [optional]  # noqa: E501
+            aws_kms_access_key_id (str): AwsKmsAccessKeyId. [optional]  # noqa: E501
+            aws_kms_key_arn (str): AwsKmsKeyArn. [optional]  # noqa: E501
+            aws_kms_key_id (str): AwsKmsKeyId. [optional]  # noqa: E501
+            aws_kms_secret_access_key (str): AwsKmsSecretAccessKey. [optional]  # noqa: E501
+            azure_key_vault_base_url (str): AzureKeyVaultBaseUrl. [optional]  # noqa: E501
+            azure_key_vault_key_name (str): AzureKeyVaultKeyName. [optional]  # noqa: E501
+            azure_key_vault_key_version (str): AzureKeyVaultKeyVersion. [optional]  # noqa: E501
+            azure_key_vault_principal_id (str): AzureKeyVaultPrincipalId. [optional]  # noqa: E501
+            azure_key_vault_principal_secret (str): AzureKeyVaultPrincipalSecret. [optional]  # noqa: E501
+            key_management_type_id (int): KeyManagementTypeId. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

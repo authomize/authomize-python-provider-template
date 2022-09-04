@@ -57,10 +57,8 @@ class BackupConfigurationModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,40 +66,37 @@ class BackupConfigurationModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'backup_database_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'backup_failure_notification': (bool,),  # noqa: E501
-            'backup_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'backup_start_date_time': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'configuration_sql_backup_timeout_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'copy_only_database_backup': (bool,),  # noqa: E501
-            'enable_database_backup': (bool,),  # noqa: E501
-            'enable_scheduled_backup': (bool,),  # noqa: E501
-            'enable_tms_backup': (bool,),  # noqa: E501
-            'enable_web_application_backup': (bool,),  # noqa: E501
-            'number_of_backups_to_keep': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'repeat_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'repeat_hours': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'repeat_minutes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'tms_installation_path': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'backup_database_path': (str, none_type,),  # noqa: E501
+            'backup_failure_notification': (bool, none_type,),  # noqa: E501
+            'backup_path': (str, none_type,),  # noqa: E501
+            'backup_start_date_time': (datetime, none_type,),  # noqa: E501
+            'configuration_sql_backup_timeout_minutes': (int, none_type,),  # noqa: E501
+            'copy_only_database_backup': (bool, none_type,),  # noqa: E501
+            'enable_database_backup': (bool, none_type,),  # noqa: E501
+            'enable_scheduled_backup': (bool, none_type,),  # noqa: E501
+            'enable_tms_backup': (bool, none_type,),  # noqa: E501
+            'enable_web_application_backup': (bool, none_type,),  # noqa: E501
+            'number_of_backups_to_keep': (int, none_type,),  # noqa: E501
+            'repeat_days': (int, none_type,),  # noqa: E501
+            'repeat_hours': (int, none_type,),  # noqa: E501
+            'repeat_minutes': (int, none_type,),  # noqa: E501
+            'tms_installation_path': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -163,21 +158,21 @@ class BackupConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            backup_database_path (bool, date, datetime, dict, float, int, list, str, none_type): Where to backup the database. [optional]  # noqa: E501
+            backup_database_path (str): Where to backup the database. [optional]  # noqa: E501
             backup_failure_notification (bool): Whether or not to send an email if backup fails. [optional]  # noqa: E501
-            backup_path (bool, date, datetime, dict, float, int, list, str, none_type): Where to store the web application backup files. [optional]  # noqa: E501
-            backup_start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time the backup will run. [optional]  # noqa: E501
-            configuration_sql_backup_timeout_minutes (bool, date, datetime, dict, float, int, list, str, none_type): SQL Timeout when running the backup. [optional]  # noqa: E501
+            backup_path (str): Where to store the web application backup files. [optional]  # noqa: E501
+            backup_start_date_time (datetime): The next time the backup will run. [optional]  # noqa: E501
+            configuration_sql_backup_timeout_minutes (int): SQL Timeout when running the backup. [optional]  # noqa: E501
             copy_only_database_backup (bool): Backup type. [optional]  # noqa: E501
             enable_database_backup (bool): Whether or not the backup the database. [optional]  # noqa: E501
             enable_scheduled_backup (bool): Is the backup enabled. [optional]  # noqa: E501
             enable_tms_backup (bool): Whether or not the TMS web files are backed up. [optional]  # noqa: E501
             enable_web_application_backup (bool): Whether or not the web application is set to backup. [optional]  # noqa: E501
-            number_of_backups_to_keep (bool, date, datetime, dict, float, int, list, str, none_type): How many backups should be kept (deletes oldest). [optional]  # noqa: E501
-            repeat_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days between backups. [optional]  # noqa: E501
-            repeat_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours between backups. [optional]  # noqa: E501
-            repeat_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes between backups. [optional]  # noqa: E501
-            tms_installation_path (bool, date, datetime, dict, float, int, list, str, none_type): Where TMS is installed. [optional]  # noqa: E501
+            number_of_backups_to_keep (int): How many backups should be kept (deletes oldest). [optional]  # noqa: E501
+            repeat_days (int): How many days between backups. [optional]  # noqa: E501
+            repeat_hours (int): How many hours between backups. [optional]  # noqa: E501
+            repeat_minutes (int): How many minutes between backups. [optional]  # noqa: E501
+            tms_installation_path (str): Where TMS is installed. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -263,21 +258,21 @@ class BackupConfigurationModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            backup_database_path (bool, date, datetime, dict, float, int, list, str, none_type): Where to backup the database. [optional]  # noqa: E501
+            backup_database_path (str): Where to backup the database. [optional]  # noqa: E501
             backup_failure_notification (bool): Whether or not to send an email if backup fails. [optional]  # noqa: E501
-            backup_path (bool, date, datetime, dict, float, int, list, str, none_type): Where to store the web application backup files. [optional]  # noqa: E501
-            backup_start_date_time (bool, date, datetime, dict, float, int, list, str, none_type): The next time the backup will run. [optional]  # noqa: E501
-            configuration_sql_backup_timeout_minutes (bool, date, datetime, dict, float, int, list, str, none_type): SQL Timeout when running the backup. [optional]  # noqa: E501
+            backup_path (str): Where to store the web application backup files. [optional]  # noqa: E501
+            backup_start_date_time (datetime): The next time the backup will run. [optional]  # noqa: E501
+            configuration_sql_backup_timeout_minutes (int): SQL Timeout when running the backup. [optional]  # noqa: E501
             copy_only_database_backup (bool): Backup type. [optional]  # noqa: E501
             enable_database_backup (bool): Whether or not the backup the database. [optional]  # noqa: E501
             enable_scheduled_backup (bool): Is the backup enabled. [optional]  # noqa: E501
             enable_tms_backup (bool): Whether or not the TMS web files are backed up. [optional]  # noqa: E501
             enable_web_application_backup (bool): Whether or not the web application is set to backup. [optional]  # noqa: E501
-            number_of_backups_to_keep (bool, date, datetime, dict, float, int, list, str, none_type): How many backups should be kept (deletes oldest). [optional]  # noqa: E501
-            repeat_days (bool, date, datetime, dict, float, int, list, str, none_type): How many days between backups. [optional]  # noqa: E501
-            repeat_hours (bool, date, datetime, dict, float, int, list, str, none_type): How many hours between backups. [optional]  # noqa: E501
-            repeat_minutes (bool, date, datetime, dict, float, int, list, str, none_type): How many minutes between backups. [optional]  # noqa: E501
-            tms_installation_path (bool, date, datetime, dict, float, int, list, str, none_type): Where TMS is installed. [optional]  # noqa: E501
+            number_of_backups_to_keep (int): How many backups should be kept (deletes oldest). [optional]  # noqa: E501
+            repeat_days (int): How many days between backups. [optional]  # noqa: E501
+            repeat_hours (int): How many hours between backups. [optional]  # noqa: E501
+            repeat_minutes (int): How many minutes between backups. [optional]  # noqa: E501
+            tms_installation_path (str): Where TMS is installed. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

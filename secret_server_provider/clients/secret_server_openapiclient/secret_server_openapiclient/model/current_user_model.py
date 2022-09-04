@@ -63,10 +63,8 @@ class CurrentUserModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -75,37 +73,34 @@ class CurrentUserModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'admin_links': ([MenuLink],),  # noqa: E501
-            'date_option_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'display_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'email_address': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'permissions': ([RestRolePermission],),  # noqa: E501
-            'profile_links': ([MenuLink],),  # noqa: E501
-            'time_option_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_lcid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_theme': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'admin_links': ([MenuLink], none_type,),  # noqa: E501
+            'date_option_id': (int, none_type,),  # noqa: E501
+            'display_name': (str, none_type,),  # noqa: E501
+            'email_address': (str, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'permissions': ([RestRolePermission], none_type,),  # noqa: E501
+            'profile_links': ([MenuLink], none_type,),  # noqa: E501
+            'time_option_id': (int, none_type,),  # noqa: E501
+            'user_lcid': (int, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
+            'user_theme': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -164,16 +159,16 @@ class CurrentUserModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             admin_links ([MenuLink]): List of admin link options for current user. [optional]  # noqa: E501
-            date_option_id (bool, date, datetime, dict, float, int, list, str, none_type): Date option of current user. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display Name of current user. [optional]  # noqa: E501
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): Email Address of current user. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of current user. [optional]  # noqa: E501
+            date_option_id (int): Date option of current user. [optional]  # noqa: E501
+            display_name (str): Display Name of current user. [optional]  # noqa: E501
+            email_address (str): Email Address of current user. [optional]  # noqa: E501
+            id (int): Id of current user. [optional]  # noqa: E501
             permissions ([RestRolePermission]): Permissions assigned to current user. [optional]  # noqa: E501
             profile_links ([MenuLink]): List of profile options for current user. [optional]  # noqa: E501
-            time_option_id (bool, date, datetime, dict, float, int, list, str, none_type): Time option of current user. [optional]  # noqa: E501
-            user_lcid (bool, date, datetime, dict, float, int, list, str, none_type): Language of current user. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User Name of current user. [optional]  # noqa: E501
-            user_theme (bool, date, datetime, dict, float, int, list, str, none_type): The current users theme. [optional]  # noqa: E501
+            time_option_id (int): Time option of current user. [optional]  # noqa: E501
+            user_lcid (int): Language of current user. [optional]  # noqa: E501
+            user_name (str): User Name of current user. [optional]  # noqa: E501
+            user_theme (str): The current users theme. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -260,16 +255,16 @@ class CurrentUserModel(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             admin_links ([MenuLink]): List of admin link options for current user. [optional]  # noqa: E501
-            date_option_id (bool, date, datetime, dict, float, int, list, str, none_type): Date option of current user. [optional]  # noqa: E501
-            display_name (bool, date, datetime, dict, float, int, list, str, none_type): Display Name of current user. [optional]  # noqa: E501
-            email_address (bool, date, datetime, dict, float, int, list, str, none_type): Email Address of current user. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Id of current user. [optional]  # noqa: E501
+            date_option_id (int): Date option of current user. [optional]  # noqa: E501
+            display_name (str): Display Name of current user. [optional]  # noqa: E501
+            email_address (str): Email Address of current user. [optional]  # noqa: E501
+            id (int): Id of current user. [optional]  # noqa: E501
             permissions ([RestRolePermission]): Permissions assigned to current user. [optional]  # noqa: E501
             profile_links ([MenuLink]): List of profile options for current user. [optional]  # noqa: E501
-            time_option_id (bool, date, datetime, dict, float, int, list, str, none_type): Time option of current user. [optional]  # noqa: E501
-            user_lcid (bool, date, datetime, dict, float, int, list, str, none_type): Language of current user. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User Name of current user. [optional]  # noqa: E501
-            user_theme (bool, date, datetime, dict, float, int, list, str, none_type): The current users theme. [optional]  # noqa: E501
+            time_option_id (int): Time option of current user. [optional]  # noqa: E501
+            user_lcid (int): Language of current user. [optional]  # noqa: E501
+            user_name (str): User Name of current user. [optional]  # noqa: E501
+            user_theme (str): The current users theme. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

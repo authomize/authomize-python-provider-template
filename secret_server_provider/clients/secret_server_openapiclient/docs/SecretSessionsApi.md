@@ -54,7 +54,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_sessions_api.SecretSessionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Recorded session ID
+    id = "id_example" # str | Recorded session ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -70,7 +70,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Recorded session ID |
+ **id** | **str**| Recorded session ID |
 
 ### Return type
 
@@ -137,7 +137,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_sessions_api.SecretSessionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Recorded session ID
+    id = "id_example" # str | Recorded session ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -153,7 +153,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Recorded session ID |
+ **id** | **str**| Recorded session ID |
 
 ### Return type
 
@@ -221,7 +221,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_sessions_api.SecretSessionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Recorded session ID
+    id = "id_example" # str | Recorded session ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -237,7 +237,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Recorded session ID |
+ **id** | **str**| Recorded session ID |
 
 ### Return type
 
@@ -304,7 +304,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_sessions_api.SecretSessionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Recorded session ID
+    id = "id_example" # str | Recorded session ID
 
     # example passing only required values which don't have defaults set
     try:
@@ -319,7 +319,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Recorded session ID |
+ **id** | **str**| Recorded session ID |
 
 ### Return type
 
@@ -387,13 +387,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_sessions_api.SecretSessionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Recorded session ID
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = "id_example" # str | Recorded session ID
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -418,13 +418,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Recorded session ID |
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **str**| Recorded session ID |
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -492,13 +492,13 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_sessions_api.SecretSessionsApi(api_client)
-    id = None # bool, date, datetime, dict, float, int, list, str, none_type | Recorded session ID
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+    id = "id_example" # str | Recorded session ID
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -523,13 +523,13 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Recorded session ID |
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **id** | **str**| Recorded session ID |
+ **filter_search_text** | **str**| Search text | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 
@@ -598,36 +598,36 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = secret_sessions_api.SecretSessionsApi(api_client)
     filter_active = True # bool | Filter by active or inactive status (optional)
-    filter_date_range = None # bool, date, datetime, dict, float, int, list, str, none_type | Return sessions within a certain number of days (optional)
-    filter_end_date = None # bool, date, datetime, dict, float, int, list, str, none_type | EndDate (optional)
-    filter_end_time = None # bool, date, datetime, dict, float, int, list, str, none_type | EndTime (optional)
-    filter_folder_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by folder (optional)
+    filter_date_range = "filter.dateRange_example" # str | Return sessions within a certain number of days (optional)
+    filter_end_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | EndDate (optional)
+    filter_end_time = "filter.endTime_example" # str | EndTime (optional)
+    filter_folder_id = 1 # int | Filter by folder (optional)
     filter_group_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | Return sessions for specific groups (optional)
+        1,
+    ] # [int] | Return sessions for specific groups (optional)
     filter_include_non_secret_server_sessions = True # bool | IncludeNonSecretServerSessions (optional)
     filter_include_only_launched_successfully = True # bool | Return only sessions that launched successfully (optional)
     filter_include_restricted = True # bool | Whether to include restricted secret sessions (optional)
     filter_include_sub_folders = True # bool | Whether to include subfolders in a folder search (optional)
-    filter_launcher_type_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Filter by launcher type (optional)
-    filter_search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text (optional)
+    filter_launcher_type_id = 1 # int | Filter by launcher type (optional)
+    filter_search_text = "filter.searchText_example" # str | Search text (optional)
     filter_search_types = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | Specifies the sources of information you want to search across, can be many of (SecretItems, Username, Hostname, Domain, RdpKeystroke, RdpApplication, ProxyClient) (optional)
+        "filter.searchTypes_example",
+    ] # [str] | Specifies the sources of information you want to search across, can be many of (SecretItems, Username, Hostname, Domain, RdpKeystroke, RdpApplication, ProxyClient) (optional)
     filter_secret_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | Return sessions for specific secrets (optional)
-    filter_site_id = None # bool, date, datetime, dict, float, int, list, str, none_type | SiteId (optional)
-    filter_start_date = None # bool, date, datetime, dict, float, int, list, str, none_type | StartDate (optional)
-    filter_start_time = None # bool, date, datetime, dict, float, int, list, str, none_type | StartTime (optional)
+        1,
+    ] # [int] | Return sessions for specific secrets (optional)
+    filter_site_id = 1 # int | SiteId (optional)
+    filter_start_date = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | StartDate (optional)
+    filter_start_time = "filter.startTime_example" # str | StartTime (optional)
     filter_user_ids = [
-        None,
-    ] # [bool, date, datetime, dict, float, int, list, str, none_type] | Return sessions for specific users (optional)
-    skip = None # bool, date, datetime, dict, float, int, list, str, none_type | Number of records to skip before taking results (optional)
-    sort_by_0_direction = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort direction (optional)
-    sort_by_0_name = None # bool, date, datetime, dict, float, int, list, str, none_type | Sort field name (optional)
-    sort_by_0_priority = None # bool, date, datetime, dict, float, int, list, str, none_type | Priority index. Sorts with lower values are executed earlier (optional)
-    take = None # bool, date, datetime, dict, float, int, list, str, none_type | Maximum number of records to include in results (optional)
+        1,
+    ] # [int] | Return sessions for specific users (optional)
+    skip = 1 # int | Number of records to skip before taking results (optional)
+    sort_by_0_direction = "sortBy[0].direction_example" # str | Sort direction (optional)
+    sort_by_0_name = "sortBy[0].name_example" # str | Sort field name (optional)
+    sort_by_0_priority = 1 # int | Priority index. Sorts with lower values are executed earlier (optional)
+    take = 1 # int | Maximum number of records to include in results (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -645,28 +645,28 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_active** | **bool**| Filter by active or inactive status | [optional]
- **filter_date_range** | **bool, date, datetime, dict, float, int, list, str, none_type**| Return sessions within a certain number of days | [optional]
- **filter_end_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| EndDate | [optional]
- **filter_end_time** | **bool, date, datetime, dict, float, int, list, str, none_type**| EndTime | [optional]
- **filter_folder_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by folder | [optional]
- **filter_group_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| Return sessions for specific groups | [optional]
+ **filter_date_range** | **str**| Return sessions within a certain number of days | [optional]
+ **filter_end_date** | **datetime**| EndDate | [optional]
+ **filter_end_time** | **str**| EndTime | [optional]
+ **filter_folder_id** | **int**| Filter by folder | [optional]
+ **filter_group_ids** | **[int]**| Return sessions for specific groups | [optional]
  **filter_include_non_secret_server_sessions** | **bool**| IncludeNonSecretServerSessions | [optional]
  **filter_include_only_launched_successfully** | **bool**| Return only sessions that launched successfully | [optional]
  **filter_include_restricted** | **bool**| Whether to include restricted secret sessions | [optional]
  **filter_include_sub_folders** | **bool**| Whether to include subfolders in a folder search | [optional]
- **filter_launcher_type_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| Filter by launcher type | [optional]
- **filter_search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text | [optional]
- **filter_search_types** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| Specifies the sources of information you want to search across, can be many of (SecretItems, Username, Hostname, Domain, RdpKeystroke, RdpApplication, ProxyClient) | [optional]
- **filter_secret_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| Return sessions for specific secrets | [optional]
- **filter_site_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| SiteId | [optional]
- **filter_start_date** | **bool, date, datetime, dict, float, int, list, str, none_type**| StartDate | [optional]
- **filter_start_time** | **bool, date, datetime, dict, float, int, list, str, none_type**| StartTime | [optional]
- **filter_user_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| Return sessions for specific users | [optional]
- **skip** | **bool, date, datetime, dict, float, int, list, str, none_type**| Number of records to skip before taking results | [optional]
- **sort_by_0_direction** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort direction | [optional]
- **sort_by_0_name** | **bool, date, datetime, dict, float, int, list, str, none_type**| Sort field name | [optional]
- **sort_by_0_priority** | **bool, date, datetime, dict, float, int, list, str, none_type**| Priority index. Sorts with lower values are executed earlier | [optional]
- **take** | **bool, date, datetime, dict, float, int, list, str, none_type**| Maximum number of records to include in results | [optional]
+ **filter_launcher_type_id** | **int**| Filter by launcher type | [optional]
+ **filter_search_text** | **str**| Search text | [optional]
+ **filter_search_types** | **[str]**| Specifies the sources of information you want to search across, can be many of (SecretItems, Username, Hostname, Domain, RdpKeystroke, RdpApplication, ProxyClient) | [optional]
+ **filter_secret_ids** | **[int]**| Return sessions for specific secrets | [optional]
+ **filter_site_id** | **int**| SiteId | [optional]
+ **filter_start_date** | **datetime**| StartDate | [optional]
+ **filter_start_time** | **str**| StartTime | [optional]
+ **filter_user_ids** | **[int]**| Return sessions for specific users | [optional]
+ **skip** | **int**| Number of records to skip before taking results | [optional]
+ **sort_by_0_direction** | **str**| Sort direction | [optional]
+ **sort_by_0_name** | **str**| Sort field name | [optional]
+ **sort_by_0_priority** | **int**| Priority index. Sorts with lower values are executed earlier | [optional]
+ **take** | **int**| Maximum number of records to include in results | [optional]
 
 ### Return type
 

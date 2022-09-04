@@ -57,10 +57,8 @@ class SecretSessionModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,57 +66,54 @@ class SecretSessionModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'accessed_by_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'active': (bool,),  # noqa: E501
-            'audit_secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'duration': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'end_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'end_date_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'error_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_extension': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_key_strokes': (bool,),  # noqa: E501
-            'has_processes': (bool,),  # noqa: E501
-            'has_processing_error': (bool,),  # noqa: E501
-            'is_deleted': (bool,),  # noqa: E501
-            'is_launcher': (bool,),  # noqa: E501
-            'launched_successfully': (bool,),  # noqa: E501
-            'launcher_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_session_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_session_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'launcher_type_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'machine_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'matching_search_types': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pba_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_session_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_session_user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'session_movie_process_complete': (bool,),  # noqa: E501
-            'start_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'start_date_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'user_name_for_display': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'accessed_by_name': (str, none_type,),  # noqa: E501
+            'active': (bool, none_type,),  # noqa: E501
+            'audit_secret_id': (int, none_type,),  # noqa: E501
+            'duration': (int, none_type,),  # noqa: E501
+            'end_date': (datetime, none_type,),  # noqa: E501
+            'end_date_display': (str, none_type,),  # noqa: E501
+            'error_message': (str, none_type,),  # noqa: E501
+            'file_extension': (str, none_type,),  # noqa: E501
+            'has_key_strokes': (bool, none_type,),  # noqa: E501
+            'has_processes': (bool, none_type,),  # noqa: E501
+            'has_processing_error': (bool, none_type,),  # noqa: E501
+            'is_deleted': (bool, none_type,),  # noqa: E501
+            'is_launcher': (bool, none_type,),  # noqa: E501
+            'launched_successfully': (bool, none_type,),  # noqa: E501
+            'launcher_name': (str, none_type,),  # noqa: E501
+            'launcher_session_guid': (str, none_type,),  # noqa: E501
+            'launcher_session_status': (int, none_type,),  # noqa: E501
+            'launcher_type_id': (int, none_type,),  # noqa: E501
+            'machine_name': (str, none_type,),  # noqa: E501
+            'matching_search_types': (str, none_type,),  # noqa: E501
+            'pba_id': (int, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'secret_name': (str, none_type,),  # noqa: E501
+            'secret_session_id': (int, none_type,),  # noqa: E501
+            'secret_session_user_name': (str, none_type,),  # noqa: E501
+            'session_movie_process_complete': (bool, none_type,),  # noqa: E501
+            'start_date': (datetime, none_type,),  # noqa: E501
+            'start_date_display': (str, none_type,),  # noqa: E501
+            'user_domain_name': (str, none_type,),  # noqa: E501
+            'user_id': (int, none_type,),  # noqa: E501
+            'user_name': (str, none_type,),  # noqa: E501
+            'user_name_for_display': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -197,38 +192,38 @@ class SecretSessionModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            accessed_by_name (bool, date, datetime, dict, float, int, list, str, none_type): AccessedByName. [optional]  # noqa: E501
+            accessed_by_name (str): AccessedByName. [optional]  # noqa: E501
             active (bool): Whether the recorded session is active. [optional]  # noqa: E501
-            audit_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Associated access audit record. [optional]  # noqa: E501
-            duration (bool, date, datetime, dict, float, int, list, str, none_type): Duration of recorded session, in seconds. [optional]  # noqa: E501
-            end_date (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session end time. [optional]  # noqa: E501
-            end_date_display (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session end time (display format). [optional]  # noqa: E501
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): Processing error message. [optional]  # noqa: E501
-            file_extension (bool, date, datetime, dict, float, int, list, str, none_type): FileExtension. [optional]  # noqa: E501
+            audit_secret_id (int): Associated access audit record. [optional]  # noqa: E501
+            duration (int): Duration of recorded session, in seconds. [optional]  # noqa: E501
+            end_date (datetime): Recorded session end time. [optional]  # noqa: E501
+            end_date_display (str): Recorded session end time (display format). [optional]  # noqa: E501
+            error_message (str): Processing error message. [optional]  # noqa: E501
+            file_extension (str): FileExtension. [optional]  # noqa: E501
             has_key_strokes (bool): Whether the recorded session has logged keystrokes. [optional]  # noqa: E501
             has_processes (bool): Whether the recorded session has info about running processes. [optional]  # noqa: E501
             has_processing_error (bool): Whether an error occurred during video processing. [optional]  # noqa: E501
             is_deleted (bool): Whether the recorded session has been deleted. [optional]  # noqa: E501
             is_launcher (bool): IsLauncher. [optional]  # noqa: E501
             launched_successfully (bool): Whether the session reached a state where it was active and not expired and had no other errors. [optional]  # noqa: E501
-            launcher_name (bool, date, datetime, dict, float, int, list, str, none_type): LauncherName. [optional]  # noqa: E501
-            launcher_session_guid (bool, date, datetime, dict, float, int, list, str, none_type): Launcher session unique identifier. [optional]  # noqa: E501
-            launcher_session_status (bool, date, datetime, dict, float, int, list, str, none_type): LauncherSessionStatus. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Launcher type. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): Machine name. [optional]  # noqa: E501
-            matching_search_types (bool, date, datetime, dict, float, int, list, str, none_type): MatchingSearchTypes. [optional]  # noqa: E501
-            pba_id (bool, date, datetime, dict, float, int, list, str, none_type): Pba Event Id if session was caused by an access challenge. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret name. [optional]  # noqa: E501
-            secret_session_id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID. [optional]  # noqa: E501
-            secret_session_user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name from the recorded session. [optional]  # noqa: E501
+            launcher_name (str): LauncherName. [optional]  # noqa: E501
+            launcher_session_guid (str): Launcher session unique identifier. [optional]  # noqa: E501
+            launcher_session_status (int): LauncherSessionStatus. [optional]  # noqa: E501
+            launcher_type_id (int): Launcher type. [optional]  # noqa: E501
+            machine_name (str): Machine name. [optional]  # noqa: E501
+            matching_search_types (str): MatchingSearchTypes. [optional]  # noqa: E501
+            pba_id (int): Pba Event Id if session was caused by an access challenge. [optional]  # noqa: E501
+            secret_id (int): Secret ID. [optional]  # noqa: E501
+            secret_name (str): Secret name. [optional]  # noqa: E501
+            secret_session_id (int): Recorded session ID. [optional]  # noqa: E501
+            secret_session_user_name (str): User name from the recorded session. [optional]  # noqa: E501
             session_movie_process_complete (bool): Whether video processing is complete. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session start time. [optional]  # noqa: E501
-            start_date_display (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session start time (display format). [optional]  # noqa: E501
-            user_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain name. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name. [optional]  # noqa: E501
-            user_name_for_display (bool, date, datetime, dict, float, int, list, str, none_type): Display name for user. [optional]  # noqa: E501
+            start_date (datetime): Recorded session start time. [optional]  # noqa: E501
+            start_date_display (str): Recorded session start time (display format). [optional]  # noqa: E501
+            user_domain_name (str): Active Directory domain name. [optional]  # noqa: E501
+            user_id (int): User ID. [optional]  # noqa: E501
+            user_name (str): User name. [optional]  # noqa: E501
+            user_name_for_display (str): Display name for user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -314,38 +309,38 @@ class SecretSessionModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            accessed_by_name (bool, date, datetime, dict, float, int, list, str, none_type): AccessedByName. [optional]  # noqa: E501
+            accessed_by_name (str): AccessedByName. [optional]  # noqa: E501
             active (bool): Whether the recorded session is active. [optional]  # noqa: E501
-            audit_secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Associated access audit record. [optional]  # noqa: E501
-            duration (bool, date, datetime, dict, float, int, list, str, none_type): Duration of recorded session, in seconds. [optional]  # noqa: E501
-            end_date (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session end time. [optional]  # noqa: E501
-            end_date_display (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session end time (display format). [optional]  # noqa: E501
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): Processing error message. [optional]  # noqa: E501
-            file_extension (bool, date, datetime, dict, float, int, list, str, none_type): FileExtension. [optional]  # noqa: E501
+            audit_secret_id (int): Associated access audit record. [optional]  # noqa: E501
+            duration (int): Duration of recorded session, in seconds. [optional]  # noqa: E501
+            end_date (datetime): Recorded session end time. [optional]  # noqa: E501
+            end_date_display (str): Recorded session end time (display format). [optional]  # noqa: E501
+            error_message (str): Processing error message. [optional]  # noqa: E501
+            file_extension (str): FileExtension. [optional]  # noqa: E501
             has_key_strokes (bool): Whether the recorded session has logged keystrokes. [optional]  # noqa: E501
             has_processes (bool): Whether the recorded session has info about running processes. [optional]  # noqa: E501
             has_processing_error (bool): Whether an error occurred during video processing. [optional]  # noqa: E501
             is_deleted (bool): Whether the recorded session has been deleted. [optional]  # noqa: E501
             is_launcher (bool): IsLauncher. [optional]  # noqa: E501
             launched_successfully (bool): Whether the session reached a state where it was active and not expired and had no other errors. [optional]  # noqa: E501
-            launcher_name (bool, date, datetime, dict, float, int, list, str, none_type): LauncherName. [optional]  # noqa: E501
-            launcher_session_guid (bool, date, datetime, dict, float, int, list, str, none_type): Launcher session unique identifier. [optional]  # noqa: E501
-            launcher_session_status (bool, date, datetime, dict, float, int, list, str, none_type): LauncherSessionStatus. [optional]  # noqa: E501
-            launcher_type_id (bool, date, datetime, dict, float, int, list, str, none_type): Launcher type. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): Machine name. [optional]  # noqa: E501
-            matching_search_types (bool, date, datetime, dict, float, int, list, str, none_type): MatchingSearchTypes. [optional]  # noqa: E501
-            pba_id (bool, date, datetime, dict, float, int, list, str, none_type): Pba Event Id if session was caused by an access challenge. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): Secret ID. [optional]  # noqa: E501
-            secret_name (bool, date, datetime, dict, float, int, list, str, none_type): Secret name. [optional]  # noqa: E501
-            secret_session_id (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session ID. [optional]  # noqa: E501
-            secret_session_user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name from the recorded session. [optional]  # noqa: E501
+            launcher_name (str): LauncherName. [optional]  # noqa: E501
+            launcher_session_guid (str): Launcher session unique identifier. [optional]  # noqa: E501
+            launcher_session_status (int): LauncherSessionStatus. [optional]  # noqa: E501
+            launcher_type_id (int): Launcher type. [optional]  # noqa: E501
+            machine_name (str): Machine name. [optional]  # noqa: E501
+            matching_search_types (str): MatchingSearchTypes. [optional]  # noqa: E501
+            pba_id (int): Pba Event Id if session was caused by an access challenge. [optional]  # noqa: E501
+            secret_id (int): Secret ID. [optional]  # noqa: E501
+            secret_name (str): Secret name. [optional]  # noqa: E501
+            secret_session_id (int): Recorded session ID. [optional]  # noqa: E501
+            secret_session_user_name (str): User name from the recorded session. [optional]  # noqa: E501
             session_movie_process_complete (bool): Whether video processing is complete. [optional]  # noqa: E501
-            start_date (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session start time. [optional]  # noqa: E501
-            start_date_display (bool, date, datetime, dict, float, int, list, str, none_type): Recorded session start time (display format). [optional]  # noqa: E501
-            user_domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain name. [optional]  # noqa: E501
-            user_id (bool, date, datetime, dict, float, int, list, str, none_type): User ID. [optional]  # noqa: E501
-            user_name (bool, date, datetime, dict, float, int, list, str, none_type): User name. [optional]  # noqa: E501
-            user_name_for_display (bool, date, datetime, dict, float, int, list, str, none_type): Display name for user. [optional]  # noqa: E501
+            start_date (datetime): Recorded session start time. [optional]  # noqa: E501
+            start_date_display (str): Recorded session start time (display format). [optional]  # noqa: E501
+            user_domain_name (str): Active Directory domain name. [optional]  # noqa: E501
+            user_id (int): User ID. [optional]  # noqa: E501
+            user_name (str): User name. [optional]  # noqa: E501
+            user_name_for_display (str): Display name for user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -57,10 +57,8 @@ class LaunchSecretArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class LaunchSecretArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'launcher_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'prompt_field_value': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'secret_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'site_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'launcher_id': (int, none_type,),  # noqa: E501
+            'prompt_field_value': (str, none_type,),  # noqa: E501
+            'secret_id': (int, none_type,),  # noqa: E501
+            'site_id': (int, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class LaunchSecretArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            launcher_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the launcher to use.. [optional]  # noqa: E501
-            prompt_field_value (bool, date, datetime, dict, float, int, list, str, none_type): The value to apply to the prompted field.. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the secret to launch.. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The site used to launch when using RDP proxy. [optional]  # noqa: E501
+            launcher_id (int): The Id of the launcher to use.. [optional]  # noqa: E501
+            prompt_field_value (str): The value to apply to the prompted field.. [optional]  # noqa: E501
+            secret_id (int): The Id of the secret to launch.. [optional]  # noqa: E501
+            site_id (int): The site used to launch when using RDP proxy. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class LaunchSecretArgs(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            launcher_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the launcher to use.. [optional]  # noqa: E501
-            prompt_field_value (bool, date, datetime, dict, float, int, list, str, none_type): The value to apply to the prompted field.. [optional]  # noqa: E501
-            secret_id (bool, date, datetime, dict, float, int, list, str, none_type): The Id of the secret to launch.. [optional]  # noqa: E501
-            site_id (bool, date, datetime, dict, float, int, list, str, none_type): The site used to launch when using RDP proxy. [optional]  # noqa: E501
+            launcher_id (int): The Id of the launcher to use.. [optional]  # noqa: E501
+            prompt_field_value (str): The value to apply to the prompted field.. [optional]  # noqa: E501
+            secret_id (int): The Id of the secret to launch.. [optional]  # noqa: E501
+            site_id (int): The site used to launch when using RDP proxy. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

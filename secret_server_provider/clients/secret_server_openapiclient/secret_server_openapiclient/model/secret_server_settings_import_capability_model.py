@@ -93,10 +93,8 @@ class SecretServerSettingsImportCapabilityModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -105,45 +103,42 @@ class SecretServerSettingsImportCapabilityModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'advanced_settings': (ViewFieldValueOfConfigurationAdvancedModelArray,),  # noqa: E501
-            'application_settings': (ViewFieldValueOfConfigurationApplicationSettingsModel,),  # noqa: E501
-            'configuration_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'email': (ViewFieldValueOfConfigurationEmailModel,),  # noqa: E501
-            'external_instance_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'folder_settings': (ViewFieldValueOfConfigurationFoldersModel,),  # noqa: E501
-            'launcher_settings': (ViewFieldValueOfConfigurationLauncherSettingsModel,),  # noqa: E501
-            'licenses': (ViewFieldValueOfLicenseModelArray,),  # noqa: E501
-            'local_user_passwords': (ViewFieldValueOfConfigurationLocalUserPasswordsModel,),  # noqa: E501
-            'login': (ViewFieldValueOfConfigurationLoginModel,),  # noqa: E501
-            'permission_options': (ViewFieldValueOfConfigurationPermissionOptionsModel,),  # noqa: E501
-            'protocol_handler_settings': (ViewFieldValueOfConfigurationProtocolHandlerSettingsModel,),  # noqa: E501
-            'saml': (ViewFieldValueOfConfigurationSamlModel,),  # noqa: E501
-            'security': (ViewFieldValueOfConfigurationSecurityModel,),  # noqa: E501
-            'session_recording': (ViewFieldValueOfConfigurationSessionRecordingModel,),  # noqa: E501
-            'ssh_commands': (ViewFieldValueOfConfigurationSshCommandExportModel,),  # noqa: E501
-            'ticket_system': (ViewFieldValueOfConfigurationTicketSystemModel,),  # noqa: E501
-            'user_experience': (ViewFieldValueOfConfigurationUserExperienceModel,),  # noqa: E501
-            'user_interface': (ViewFieldValueOfConfigurationUserInterfaceModel,),  # noqa: E501
+            'advanced_settings': (ViewFieldValueOfConfigurationAdvancedModelArray, none_type,),  # noqa: E501
+            'application_settings': (ViewFieldValueOfConfigurationApplicationSettingsModel, none_type,),  # noqa: E501
+            'configuration_version': (str, none_type,),  # noqa: E501
+            'email': (ViewFieldValueOfConfigurationEmailModel, none_type,),  # noqa: E501
+            'external_instance_id': (str, none_type,),  # noqa: E501
+            'folder_settings': (ViewFieldValueOfConfigurationFoldersModel, none_type,),  # noqa: E501
+            'launcher_settings': (ViewFieldValueOfConfigurationLauncherSettingsModel, none_type,),  # noqa: E501
+            'licenses': (ViewFieldValueOfLicenseModelArray, none_type,),  # noqa: E501
+            'local_user_passwords': (ViewFieldValueOfConfigurationLocalUserPasswordsModel, none_type,),  # noqa: E501
+            'login': (ViewFieldValueOfConfigurationLoginModel, none_type,),  # noqa: E501
+            'permission_options': (ViewFieldValueOfConfigurationPermissionOptionsModel, none_type,),  # noqa: E501
+            'protocol_handler_settings': (ViewFieldValueOfConfigurationProtocolHandlerSettingsModel, none_type,),  # noqa: E501
+            'saml': (ViewFieldValueOfConfigurationSamlModel, none_type,),  # noqa: E501
+            'security': (ViewFieldValueOfConfigurationSecurityModel, none_type,),  # noqa: E501
+            'session_recording': (ViewFieldValueOfConfigurationSessionRecordingModel, none_type,),  # noqa: E501
+            'ssh_commands': (ViewFieldValueOfConfigurationSshCommandExportModel, none_type,),  # noqa: E501
+            'ticket_system': (ViewFieldValueOfConfigurationTicketSystemModel, none_type,),  # noqa: E501
+            'user_experience': (ViewFieldValueOfConfigurationUserExperienceModel, none_type,),  # noqa: E501
+            'user_interface': (ViewFieldValueOfConfigurationUserInterfaceModel, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -211,9 +206,9 @@ class SecretServerSettingsImportCapabilityModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             advanced_settings (ViewFieldValueOfConfigurationAdvancedModelArray): [optional]  # noqa: E501
             application_settings (ViewFieldValueOfConfigurationApplicationSettingsModel): [optional]  # noqa: E501
-            configuration_version (bool, date, datetime, dict, float, int, list, str, none_type): Export Configuration Version. [optional]  # noqa: E501
+            configuration_version (str): Export Configuration Version. [optional]  # noqa: E501
             email (ViewFieldValueOfConfigurationEmailModel): [optional]  # noqa: E501
-            external_instance_id (bool, date, datetime, dict, float, int, list, str, none_type): ID for specific instance. [optional]  # noqa: E501
+            external_instance_id (str): ID for specific instance. [optional]  # noqa: E501
             folder_settings (ViewFieldValueOfConfigurationFoldersModel): [optional]  # noqa: E501
             launcher_settings (ViewFieldValueOfConfigurationLauncherSettingsModel): [optional]  # noqa: E501
             licenses (ViewFieldValueOfLicenseModelArray): [optional]  # noqa: E501
@@ -315,9 +310,9 @@ class SecretServerSettingsImportCapabilityModel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             advanced_settings (ViewFieldValueOfConfigurationAdvancedModelArray): [optional]  # noqa: E501
             application_settings (ViewFieldValueOfConfigurationApplicationSettingsModel): [optional]  # noqa: E501
-            configuration_version (bool, date, datetime, dict, float, int, list, str, none_type): Export Configuration Version. [optional]  # noqa: E501
+            configuration_version (str): Export Configuration Version. [optional]  # noqa: E501
             email (ViewFieldValueOfConfigurationEmailModel): [optional]  # noqa: E501
-            external_instance_id (bool, date, datetime, dict, float, int, list, str, none_type): ID for specific instance. [optional]  # noqa: E501
+            external_instance_id (str): ID for specific instance. [optional]  # noqa: E501
             folder_settings (ViewFieldValueOfConfigurationFoldersModel): [optional]  # noqa: E501
             launcher_settings (ViewFieldValueOfConfigurationLauncherSettingsModel): [optional]  # noqa: E501
             licenses (ViewFieldValueOfLicenseModelArray): [optional]  # noqa: E501

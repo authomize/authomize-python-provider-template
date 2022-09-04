@@ -134,8 +134,8 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     api_instance = platform_api.PlatformApi(api_client)
     link_external_group_args = LinkExternalGroupArgs(
         data=LinkExternalGroupSettings(
-            domain_identifier=None,
-            name=None,
+            domain_identifier="domain_identifier_example",
+            name="name_example",
         ),
     ) # LinkExternalGroupArgs | args (optional)
 
@@ -222,7 +222,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = platform_api.PlatformApi(api_client)
-    search_text = None # bool, date, datetime, dict, float, int, list, str, none_type | Search text. Use * for wildcards, ex: Admin*. Leave empty to return all. (optional)
+    search_text = "searchText_example" # str | Search text. Use * for wildcards, ex: Admin*. Leave empty to return all. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -239,7 +239,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search_text** | **bool, date, datetime, dict, float, int, list, str, none_type**| Search text. Use * for wildcards, ex: Admin*. Leave empty to return all. | [optional]
+ **search_text** | **str**| Search text. Use * for wildcards, ex: Admin*. Leave empty to return all. | [optional]
 
 ### Return type
 
@@ -385,7 +385,7 @@ configuration.api_key['BearerToken'] = 'YOUR_API_KEY'
 with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = platform_api.PlatformApi(api_client)
-    group_id = None # bool, date, datetime, dict, float, int, list, str, none_type | groupId
+    group_id = 1 # int | groupId
 
     # example passing only required values which don't have defaults set
     try:
@@ -401,7 +401,7 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **bool, date, datetime, dict, float, int, list, str, none_type**| groupId |
+ **group_id** | **int**| groupId |
 
 ### Return type
 

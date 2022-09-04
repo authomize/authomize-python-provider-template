@@ -57,10 +57,8 @@ class ServerNodeModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,42 +66,39 @@ class ServerNodeModel(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'background_worker_error': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'binary_version': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'database': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enable_background_worker': (bool,),  # noqa: E501
-            'enable_engine_worker': (bool,),  # noqa: E501
-            'enable_session_recording_worker': (bool,),  # noqa: E501
-            'engine_worker_error': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'error_message': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'in_cluster': (bool,),  # noqa: E501
-            'is_current_node': (bool,),  # noqa: E501
-            'last_connected': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'log_level': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'machine_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'node_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'readonly_mode_enabled': (bool,),  # noqa: E501
-            'readonly_mode_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'session_recording_worker_error': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'background_worker_error': (str, none_type,),  # noqa: E501
+            'binary_version': (str, none_type,),  # noqa: E501
+            'database': (str, none_type,),  # noqa: E501
+            'enable_background_worker': (bool, none_type,),  # noqa: E501
+            'enable_engine_worker': (bool, none_type,),  # noqa: E501
+            'enable_session_recording_worker': (bool, none_type,),  # noqa: E501
+            'engine_worker_error': (str, none_type,),  # noqa: E501
+            'error_message': (str, none_type,),  # noqa: E501
+            'in_cluster': (bool, none_type,),  # noqa: E501
+            'is_current_node': (bool, none_type,),  # noqa: E501
+            'last_connected': (str, none_type,),  # noqa: E501
+            'log_level': (str, none_type,),  # noqa: E501
+            'machine_name': (str, none_type,),  # noqa: E501
+            'node_id': (int, none_type,),  # noqa: E501
+            'readonly_mode_enabled': (bool, none_type,),  # noqa: E501
+            'readonly_mode_status': (str, none_type,),  # noqa: E501
+            'session_recording_worker_error': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -167,23 +162,23 @@ class ServerNodeModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            background_worker_error (bool, date, datetime, dict, float, int, list, str, none_type): Background Worker Error. [optional]  # noqa: E501
-            binary_version (bool, date, datetime, dict, float, int, list, str, none_type): Binary Version. [optional]  # noqa: E501
-            database (bool, date, datetime, dict, float, int, list, str, none_type): Database. [optional]  # noqa: E501
+            background_worker_error (str): Background Worker Error. [optional]  # noqa: E501
+            binary_version (str): Binary Version. [optional]  # noqa: E501
+            database (str): Database. [optional]  # noqa: E501
             enable_background_worker (bool): Background Worker Role Enabled. [optional]  # noqa: E501
             enable_engine_worker (bool): Engine Worker Role Enabled. [optional]  # noqa: E501
             enable_session_recording_worker (bool): Session Recording Worker Role Enabled. [optional]  # noqa: E501
-            engine_worker_error (bool, date, datetime, dict, float, int, list, str, none_type): Engine Worker Error. [optional]  # noqa: E501
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): The node configuration error if one exists. [optional]  # noqa: E501
+            engine_worker_error (str): Engine Worker Error. [optional]  # noqa: E501
+            error_message (str): The node configuration error if one exists. [optional]  # noqa: E501
             in_cluster (bool): In Cluster. [optional]  # noqa: E501
             is_current_node (bool): Whether or not this node is the one which handled the request. [optional]  # noqa: E501
-            last_connected (bool, date, datetime, dict, float, int, list, str, none_type): The date of the last time the node connected. [optional]  # noqa: E501
-            log_level (bool, date, datetime, dict, float, int, list, str, none_type): Log Level. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): Machine Name. [optional]  # noqa: E501
-            node_id (bool, date, datetime, dict, float, int, list, str, none_type): Node Id. [optional]  # noqa: E501
+            last_connected (str): The date of the last time the node connected. [optional]  # noqa: E501
+            log_level (str): Log Level. [optional]  # noqa: E501
+            machine_name (str): Machine Name. [optional]  # noqa: E501
+            node_id (int): Node Id. [optional]  # noqa: E501
             readonly_mode_enabled (bool): Readonly Mode Enabled. [optional]  # noqa: E501
-            readonly_mode_status (bool, date, datetime, dict, float, int, list, str, none_type): The status of readonly mode if it is being disabled or enabled. [optional]  # noqa: E501
-            session_recording_worker_error (bool, date, datetime, dict, float, int, list, str, none_type): Session Recording Worker Error. [optional]  # noqa: E501
+            readonly_mode_status (str): The status of readonly mode if it is being disabled or enabled. [optional]  # noqa: E501
+            session_recording_worker_error (str): Session Recording Worker Error. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -269,23 +264,23 @@ class ServerNodeModel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            background_worker_error (bool, date, datetime, dict, float, int, list, str, none_type): Background Worker Error. [optional]  # noqa: E501
-            binary_version (bool, date, datetime, dict, float, int, list, str, none_type): Binary Version. [optional]  # noqa: E501
-            database (bool, date, datetime, dict, float, int, list, str, none_type): Database. [optional]  # noqa: E501
+            background_worker_error (str): Background Worker Error. [optional]  # noqa: E501
+            binary_version (str): Binary Version. [optional]  # noqa: E501
+            database (str): Database. [optional]  # noqa: E501
             enable_background_worker (bool): Background Worker Role Enabled. [optional]  # noqa: E501
             enable_engine_worker (bool): Engine Worker Role Enabled. [optional]  # noqa: E501
             enable_session_recording_worker (bool): Session Recording Worker Role Enabled. [optional]  # noqa: E501
-            engine_worker_error (bool, date, datetime, dict, float, int, list, str, none_type): Engine Worker Error. [optional]  # noqa: E501
-            error_message (bool, date, datetime, dict, float, int, list, str, none_type): The node configuration error if one exists. [optional]  # noqa: E501
+            engine_worker_error (str): Engine Worker Error. [optional]  # noqa: E501
+            error_message (str): The node configuration error if one exists. [optional]  # noqa: E501
             in_cluster (bool): In Cluster. [optional]  # noqa: E501
             is_current_node (bool): Whether or not this node is the one which handled the request. [optional]  # noqa: E501
-            last_connected (bool, date, datetime, dict, float, int, list, str, none_type): The date of the last time the node connected. [optional]  # noqa: E501
-            log_level (bool, date, datetime, dict, float, int, list, str, none_type): Log Level. [optional]  # noqa: E501
-            machine_name (bool, date, datetime, dict, float, int, list, str, none_type): Machine Name. [optional]  # noqa: E501
-            node_id (bool, date, datetime, dict, float, int, list, str, none_type): Node Id. [optional]  # noqa: E501
+            last_connected (str): The date of the last time the node connected. [optional]  # noqa: E501
+            log_level (str): Log Level. [optional]  # noqa: E501
+            machine_name (str): Machine Name. [optional]  # noqa: E501
+            node_id (int): Node Id. [optional]  # noqa: E501
             readonly_mode_enabled (bool): Readonly Mode Enabled. [optional]  # noqa: E501
-            readonly_mode_status (bool, date, datetime, dict, float, int, list, str, none_type): The status of readonly mode if it is being disabled or enabled. [optional]  # noqa: E501
-            session_recording_worker_error (bool, date, datetime, dict, float, int, list, str, none_type): Session Recording Worker Error. [optional]  # noqa: E501
+            readonly_mode_status (str): The status of readonly mode if it is being disabled or enabled. [optional]  # noqa: E501
+            session_recording_worker_error (str): Session Recording Worker Error. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

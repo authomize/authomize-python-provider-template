@@ -57,10 +57,8 @@ class InboxData(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,29 +66,26 @@ class InboxData(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'created_by_user_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'created_date': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_data_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'inbox_data_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'created_by_user_id': (int, none_type,),  # noqa: E501
+            'created_date': (datetime, none_type,),  # noqa: E501
+            'inbox_data_id': (int, none_type,),  # noqa: E501
+            'inbox_data_name': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -141,10 +136,10 @@ class InboxData(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_by_user_id (bool, date, datetime, dict, float, int, list, str, none_type): CreatedByUserId. [optional]  # noqa: E501
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): CreatedDate. [optional]  # noqa: E501
-            inbox_data_id (bool, date, datetime, dict, float, int, list, str, none_type): InboxDataId. [optional]  # noqa: E501
-            inbox_data_name (bool, date, datetime, dict, float, int, list, str, none_type): InboxDataName. [optional]  # noqa: E501
+            created_by_user_id (int): CreatedByUserId. [optional]  # noqa: E501
+            created_date (datetime): CreatedDate. [optional]  # noqa: E501
+            inbox_data_id (int): InboxDataId. [optional]  # noqa: E501
+            inbox_data_name (str): InboxDataName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,10 +225,10 @@ class InboxData(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_by_user_id (bool, date, datetime, dict, float, int, list, str, none_type): CreatedByUserId. [optional]  # noqa: E501
-            created_date (bool, date, datetime, dict, float, int, list, str, none_type): CreatedDate. [optional]  # noqa: E501
-            inbox_data_id (bool, date, datetime, dict, float, int, list, str, none_type): InboxDataId. [optional]  # noqa: E501
-            inbox_data_name (bool, date, datetime, dict, float, int, list, str, none_type): InboxDataName. [optional]  # noqa: E501
+            created_by_user_id (int): CreatedByUserId. [optional]  # noqa: E501
+            created_date (datetime): CreatedDate. [optional]  # noqa: E501
+            inbox_data_id (int): InboxDataId. [optional]  # noqa: E501
+            inbox_data_name (str): InboxDataName. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

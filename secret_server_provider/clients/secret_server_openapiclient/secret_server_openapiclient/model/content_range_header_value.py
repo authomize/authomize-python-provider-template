@@ -57,10 +57,8 @@ class ContentRangeHeaderValue(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,31 +66,28 @@ class ContentRangeHeaderValue(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            '_from': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'has_length': (bool,),  # noqa: E501
-            'has_range': (bool,),  # noqa: E501
-            'length': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'to': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'unit': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            '_from': (int, none_type,),  # noqa: E501
+            'has_length': (bool, none_type,),  # noqa: E501
+            'has_range': (bool, none_type,),  # noqa: E501
+            'length': (int, none_type,),  # noqa: E501
+            'to': (int, none_type,),  # noqa: E501
+            'unit': (str, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -145,12 +140,12 @@ class ContentRangeHeaderValue(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            _from (bool, date, datetime, dict, float, int, list, str, none_type): From. [optional]  # noqa: E501
+            _from (int): From. [optional]  # noqa: E501
             has_length (bool): HasLength. [optional]  # noqa: E501
             has_range (bool): HasRange. [optional]  # noqa: E501
-            length (bool, date, datetime, dict, float, int, list, str, none_type): Length. [optional]  # noqa: E501
-            to (bool, date, datetime, dict, float, int, list, str, none_type): To. [optional]  # noqa: E501
-            unit (bool, date, datetime, dict, float, int, list, str, none_type): Unit. [optional]  # noqa: E501
+            length (int): Length. [optional]  # noqa: E501
+            to (int): To. [optional]  # noqa: E501
+            unit (str): Unit. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,12 +231,12 @@ class ContentRangeHeaderValue(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            _from (bool, date, datetime, dict, float, int, list, str, none_type): From. [optional]  # noqa: E501
+            _from (int): From. [optional]  # noqa: E501
             has_length (bool): HasLength. [optional]  # noqa: E501
             has_range (bool): HasRange. [optional]  # noqa: E501
-            length (bool, date, datetime, dict, float, int, list, str, none_type): Length. [optional]  # noqa: E501
-            to (bool, date, datetime, dict, float, int, list, str, none_type): To. [optional]  # noqa: E501
-            unit (bool, date, datetime, dict, float, int, list, str, none_type): Unit. [optional]  # noqa: E501
+            length (int): Length. [optional]  # noqa: E501
+            to (int): To. [optional]  # noqa: E501
+            unit (str): Unit. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

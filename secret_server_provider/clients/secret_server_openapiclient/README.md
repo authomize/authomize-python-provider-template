@@ -82,9 +82,9 @@ with secret_server_openapiclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = activations_api.ActivationsApi(api_client)
     online_activation_args = OnlineActivationArgs(
-        email=None,
-        name=None,
-        phone_number=None,
+        email="email_example",
+        name="name_example",
+        phone_number="phone_number_example",
     ) # OnlineActivationArgs | args (optional)
 
     try:

@@ -57,10 +57,8 @@ class GroupSummary(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -68,36 +66,33 @@ class GroupSummary(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'created': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_guid': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'domain_name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'enabled': (bool,),  # noqa: E501
-            'id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'is_platform': (bool,),  # noqa: E501
-            'member_count': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'name': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'synchronized': (bool,),  # noqa: E501
-            'synchronize_now': (bool,),  # noqa: E501
+            'created': (datetime, none_type,),  # noqa: E501
+            'domain_guid': (str, none_type,),  # noqa: E501
+            'domain_id': (int, none_type,),  # noqa: E501
+            'domain_name': (str, none_type,),  # noqa: E501
+            'enabled': (bool, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'is_platform': (bool, none_type,),  # noqa: E501
+            'member_count': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'synchronized': (bool, none_type,),  # noqa: E501
+            'synchronize_now': (bool, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -155,15 +150,15 @@ class GroupSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created (bool, date, datetime, dict, float, int, list, str, none_type): Created Date. [optional]  # noqa: E501
-            domain_guid (bool, date, datetime, dict, float, int, list, str, none_type): If this a synchronized group and the user requesting access has access this will be populated with the unique guid for the directory with a group search.. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain name. [optional]  # noqa: E501
+            created (datetime): Created Date. [optional]  # noqa: E501
+            domain_guid (str): If this a synchronized group and the user requesting access has access this will be populated with the unique guid for the directory with a group search.. [optional]  # noqa: E501
+            domain_id (int): Active Directory domain ID. [optional]  # noqa: E501
+            domain_name (str): Active Directory domain name. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
+            id (int): Group ID. [optional]  # noqa: E501
             is_platform (bool): If this is synchronized with Platform. [optional]  # noqa: E501
-            member_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of members in group. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
+            member_count (int): Number of members in group. [optional]  # noqa: E501
+            name (str): Group name. [optional]  # noqa: E501
             synchronized (bool): Whether the group is synchronized with Active Directory. [optional]  # noqa: E501
             synchronize_now (bool): Active Directory Sync will only pull in members for domain groups that have this set to true.. [optional]  # noqa: E501
         """
@@ -251,15 +246,15 @@ class GroupSummary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created (bool, date, datetime, dict, float, int, list, str, none_type): Created Date. [optional]  # noqa: E501
-            domain_guid (bool, date, datetime, dict, float, int, list, str, none_type): If this a synchronized group and the user requesting access has access this will be populated with the unique guid for the directory with a group search.. [optional]  # noqa: E501
-            domain_id (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain ID. [optional]  # noqa: E501
-            domain_name (bool, date, datetime, dict, float, int, list, str, none_type): Active Directory domain name. [optional]  # noqa: E501
+            created (datetime): Created Date. [optional]  # noqa: E501
+            domain_guid (str): If this a synchronized group and the user requesting access has access this will be populated with the unique guid for the directory with a group search.. [optional]  # noqa: E501
+            domain_id (int): Active Directory domain ID. [optional]  # noqa: E501
+            domain_name (str): Active Directory domain name. [optional]  # noqa: E501
             enabled (bool): Whether the group is active. [optional]  # noqa: E501
-            id (bool, date, datetime, dict, float, int, list, str, none_type): Group ID. [optional]  # noqa: E501
+            id (int): Group ID. [optional]  # noqa: E501
             is_platform (bool): If this is synchronized with Platform. [optional]  # noqa: E501
-            member_count (bool, date, datetime, dict, float, int, list, str, none_type): Number of members in group. [optional]  # noqa: E501
-            name (bool, date, datetime, dict, float, int, list, str, none_type): Group name. [optional]  # noqa: E501
+            member_count (int): Number of members in group. [optional]  # noqa: E501
+            name (str): Group name. [optional]  # noqa: E501
             synchronized (bool): Whether the group is synchronized with Active Directory. [optional]  # noqa: E501
             synchronize_now (bool): Active Directory Sync will only pull in members for domain groups that have this set to true.. [optional]  # noqa: E501
         """

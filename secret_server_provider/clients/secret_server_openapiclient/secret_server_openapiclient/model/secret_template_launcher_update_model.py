@@ -69,10 +69,8 @@ class SecretTemplateLauncherUpdateModel(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -81,38 +79,35 @@ class SecretTemplateLauncherUpdateModel(ModelNormal):
         """
         lazy_import()
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         lazy_import()
         return {
-            'allow_list': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'connect_as_command': (UpdateFieldValueOfString,),  # noqa: E501
-            'connect_as_command_response': (UpdateFieldValueOfString,),  # noqa: E501
-            'connect_as_timeout_in_seconds': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'deny_list': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'expected_prompt_ending': (UpdateFieldValueOfString,),  # noqa: E501
-            'fields': (UpdateFieldValueOfSecretTemplateLauncherFieldValueModelArray,),  # noqa: E501
-            'include_machines_from_dependencies': (UpdateFieldValueOfBoolean,),  # noqa: E501
-            'line_ending': (UpdateFieldValueOfOptionalLauncherConnectAsLineEnding,),  # noqa: E501
-            'restrict_as': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'restrict_by_secret_field': (UpdateFieldValueOfOptionalInt32,),  # noqa: E501
-            'restrict_user_input': (UpdateFieldValueOfBoolean,),  # noqa: E501
+            'allow_list': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'connect_as_command': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'connect_as_command_response': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'connect_as_timeout_in_seconds': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'deny_list': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'expected_prompt_ending': (UpdateFieldValueOfString, none_type,),  # noqa: E501
+            'fields': (UpdateFieldValueOfSecretTemplateLauncherFieldValueModelArray, none_type,),  # noqa: E501
+            'include_machines_from_dependencies': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
+            'line_ending': (UpdateFieldValueOfOptionalLauncherConnectAsLineEnding, none_type,),  # noqa: E501
+            'restrict_as': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'restrict_by_secret_field': (UpdateFieldValueOfOptionalInt32, none_type,),  # noqa: E501
+            'restrict_user_input': (UpdateFieldValueOfBoolean, none_type,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {

@@ -57,7 +57,6 @@ class FolderTemplateArgs(ModelNormal):
 
     allowed_values = {
     }
-
     validations = {
         ('folder_id',): {
             'inclusive_minimum': 1,
@@ -66,7 +65,6 @@ class FolderTemplateArgs(ModelNormal):
             'inclusive_minimum': 1,
         },
     }
-
     @cached_property
     def additional_properties_type():
         """
@@ -74,27 +72,24 @@ class FolderTemplateArgs(ModelNormal):
         of type self, this must run after the class is loaded
         """
         return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
-
     _nullable = False
-
     @cached_property
     def openapi_types():
         """
         This must be a method because a model may have properties that are
         of type self, this must run after the class is loaded
-
         Returns
             openapi_types (dict): The key is attribute name
                 and the value is attribute type.
         """
         return {
-            'folder_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'template_id': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'folder_id': (int,),  # noqa: E501
+            'template_id': (int,),  # noqa: E501
         }
-
     @cached_property
     def discriminator():
         return None
+
 
 
     attribute_map = {
@@ -113,8 +108,8 @@ class FolderTemplateArgs(ModelNormal):
         """FolderTemplateArgs - a model defined in OpenAPI
 
         Args:
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID to associate. Must match ID in path
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): Template ID to associate
+            folder_id (int): Folder ID to associate. Must match ID in path
+            template_id (int): Template ID to associate
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -204,8 +199,8 @@ class FolderTemplateArgs(ModelNormal):
         """FolderTemplateArgs - a model defined in OpenAPI
 
         Args:
-            folder_id (bool, date, datetime, dict, float, int, list, str, none_type): Folder ID to associate. Must match ID in path
-            template_id (bool, date, datetime, dict, float, int, list, str, none_type): Template ID to associate
+            folder_id (int): Folder ID to associate. Must match ID in path
+            template_id (int): Template ID to associate
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
