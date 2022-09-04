@@ -17,7 +17,7 @@ class RolesExtractor(BaseExtractor):
 
     def extract_raw(self) -> Iterable[RoleModel]:
         data_provider_client: SecretServerClient = self.data_provider_client
-        api_instance = RolesApi(data_provider_client.client)
+        api_instance = RolesApi(data_provider_client.openapi_client)
 
         return self.__get_paginated_results(api_instance)
 

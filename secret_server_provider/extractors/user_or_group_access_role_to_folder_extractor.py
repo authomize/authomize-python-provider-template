@@ -21,9 +21,9 @@ class UserOrGroupAccessRoleToFolderExtractor(BaseExtractor):
 
     def extract_raw(self) -> Iterable[FolderPermissionSummary]:
         data_provider_client: SecretServerClient = self.data_provider_client
-        api_users_instance = UsersApi(data_provider_client.client)
-        api_groups_instance = GroupsApi(data_provider_client.client)
-        secret_instance = FolderPermissionsApi(data_provider_client.client)
+        api_users_instance = UsersApi(data_provider_client.openapi_client)
+        api_groups_instance = GroupsApi(data_provider_client.openapi_client)
+        secret_instance = FolderPermissionsApi(data_provider_client.openapi_client)
         for user in api_users_instance.users_service_search_users().records:
             yield from self.__get_paginated_results_user_or_group(secret_instance, user)
         for group in api_groups_instance.groups_service_search().records:

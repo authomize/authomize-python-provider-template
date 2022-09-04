@@ -16,7 +16,7 @@ class SimpleHttpClient(BaseClient):
         }
         self.url = "https://integrations.secretservercloud.com/internals/secret-audits"  # noqa: E501
 
-    def _post_internal_api(self, url_path, json_body):
+    def post_internal_api(self, url_path, json_body):
         url = f'{self.url}/{url_path}'
         return requests.post(url, headers=self.headers, json=json_body)
 
