@@ -1,7 +1,7 @@
+from secret_server_openapiclient import ApiClient, Configuration
+
 from base_provider.clients.base_client import BaseClient
 from secret_server_provider.configuration.client_configuration import SecretServerConfiguration
-from secret_server_openapiclient import Configuration
-from secret_server_openapiclient import ApiClient
 
 
 class SecretServerClient(BaseClient):

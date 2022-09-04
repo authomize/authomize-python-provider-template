@@ -1,4 +1,5 @@
 from contextlib import nullcontext
+
 from authomize.rest_api_client.generated.schemas import (
     NewPermissionRequestSchema,
     NewPrivilegeRequestSchema,
@@ -6,11 +7,10 @@ from authomize.rest_api_client.generated.schemas import (
     PrivilegeType,
     RequestsBundleSchema,
 )
+from secret_server_openapiclient.model.folder_permission_summary import FolderPermissionSummary
 
 from base_provider.transformers.base_transformer import BaseTransformer
 from secret_server_provider.normalize_id import normalize_id
-
-from secret_server_openapiclient.model.folder_permission_summary import FolderPermissionSummary
 
 
 class UserOrGroupAccessRoleToFolderTransformer(BaseTransformer):

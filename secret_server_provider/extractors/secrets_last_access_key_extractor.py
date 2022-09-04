@@ -1,16 +1,17 @@
 from asyncio.log import logger
-from urllib import response
-from pydantic import Field
 from typing import Iterable
+from urllib import response
 
-from base_provider.extractors.base_extractor import BaseExtractor
-from base_provider.extractors.base_internal_and_external_extractor import BaseInternalAndExternalExtractor
-from secret_server_provider.clients.secret_server_client import SecretServerClient
-
+from pydantic import Field
 from secret_server_openapiclient.apis import SecretsApi
 from secret_server_openapiclient.model.secret_model_v2 import SecretModelV2
-from secret_server_provider.clients.simple_http_client import SimpleHttpClient
 
+from base_provider.extractors.base_extractor import BaseExtractor
+from base_provider.extractors.base_internal_and_external_extractor import (
+    BaseInternalAndExternalExtractor,
+)
+from secret_server_provider.clients.secret_server_client import SecretServerClient
+from secret_server_provider.clients.simple_http_client import SimpleHttpClient
 from secret_server_provider.normalize_id import normalize_id
 
 

@@ -3,11 +3,10 @@ from authomize.rest_api_client.generated.schemas import (
     NewGroupingRequestSchema,
     RequestsBundleSchema,
 )
+from secret_server_openapiclient.model.group_model import GroupModel
 
 from base_provider.transformers.base_transformer import BaseTransformer
 from secret_server_provider.normalize_id import normalize_id
-
-from secret_server_openapiclient.model.group_model import GroupModel
 
 
 class GroupsTransformer(BaseTransformer):

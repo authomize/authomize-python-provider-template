@@ -1,15 +1,16 @@
 from locale import normalize
-import structlog
 from typing import Iterable
+
+import structlog
+from secret_server_openapiclient.apis import GroupsApi, SecretPermissionsApi, UsersApi
+from secret_server_openapiclient.model.group_model import GroupModel
+from secret_server_openapiclient.model.secret_permission_summary import SecretPermissionSummary
+from secret_server_openapiclient.model.user_model import UserModel
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
 from secret_server_provider.normalize_id import normalize_id
 
-from secret_server_openapiclient.apis import SecretPermissionsApi, UsersApi, GroupsApi
-from secret_server_openapiclient.model.secret_permission_summary import SecretPermissionSummary
-from secret_server_openapiclient.model.user_model import UserModel
-from secret_server_openapiclient.model.group_model import GroupModel
 logger = structlog.get_logger()
 
 class UserOrGroupAccessRoleToSecretExtractor(BaseExtractor):

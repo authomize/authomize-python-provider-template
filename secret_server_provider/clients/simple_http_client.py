@@ -1,6 +1,8 @@
+import requests
+
 from base_provider.clients.base_client import BaseClient
 from secret_server_provider.configuration.client_configuration import SecretServerConfiguration
-import requests
+
 
 class SimpleHttpClient(BaseClient):
     def __init__(

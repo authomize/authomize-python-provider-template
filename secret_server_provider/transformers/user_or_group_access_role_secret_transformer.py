@@ -5,11 +5,10 @@ from authomize.rest_api_client.generated.schemas import (
     PrivilegeType,
     RequestsBundleSchema,
 )
+from secret_server_openapiclient.model.secret_permission_summary import SecretPermissionSummary
 
 from base_provider.transformers.base_transformer import BaseTransformer
 from secret_server_provider.normalize_id import normalize_id
-
-from secret_server_openapiclient.model.secret_permission_summary import SecretPermissionSummary
 
 
 class UserOrGroupAccessRoleToSecretTransformer(BaseTransformer):

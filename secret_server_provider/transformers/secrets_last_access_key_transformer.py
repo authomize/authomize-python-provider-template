@@ -1,8 +1,12 @@
-from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema, NewAssetInheritanceRequestSchema, RequestsBundleSchema,AssetType
+from authomize.rest_api_client.generated.schemas import (
+    AssetType,
+    NewAssetInheritanceRequestSchema,
+    NewAssetRequestSchema,
+    RequestsBundleSchema,
+)
 
 from base_provider.transformers.base_transformer import BaseTransformer
 from secret_server_provider.normalize_id import normalize_id
-
 
 
 class SecretsLastAccessKeyTransformer(BaseTransformer):
