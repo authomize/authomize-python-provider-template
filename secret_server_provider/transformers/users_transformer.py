@@ -30,7 +30,7 @@ class UsersTransformer(BaseTransformer):
             lastLoginAt=user.last_login,
             display_name=user.display_name,
             status=UserStatus.Enabled if user.enabled is True else UserStatus.Disabled,
-            hasMFA=True if user.two_factor_method is True else False,
+            hasMFA=bool(user.two_factor_method),
             **(dict(email=user.email_address) if user.email_address else dict()),
         )
         bundle.new_users.append(new_user)

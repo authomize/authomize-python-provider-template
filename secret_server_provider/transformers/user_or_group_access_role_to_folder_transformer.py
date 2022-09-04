@@ -14,6 +14,8 @@ from secret_server_provider.normalize_id import normalize_id
 class UserOrGroupAccessRoleToFolderTransformer(BaseTransformer):
     """
     Transform a FolderPermissionModel relevant to users and folders.
+
+    See docs/UsersApi.md#xxx
     """
 
     def validate_item_schema(self, raw_item: FolderPermissionSummary) -> bool:
@@ -32,7 +34,7 @@ class UserOrGroupAccessRoleToFolderTransformer(BaseTransformer):
             isRole=False,
         )
         # check if AccessRole has already been handled
-        if privilege_id not in self.shared_memory.existing_priveleges_set:
+        if privilege_id not in self.shared_memory.existing_privileges_ids_set:
             privilege_type = self.get_privilege_type(raw_item.folder_access_role_name)
             privilege = NewPrivilegeRequestSchema(
                 uniqueId=privilege_id,
@@ -40,7 +42,7 @@ class UserOrGroupAccessRoleToFolderTransformer(BaseTransformer):
                 originName=raw_item.folder_access_role_name,
             )
             bundle.new_privileges.append(privilege)
-            self.shared_memory.existing_priveleges_set.add(privilege_id)
+            self.shared_memory.existing_privileges_ids_set.add(privilege_id)
         bundle.new_permissions.append(permission)
         return bundle
 

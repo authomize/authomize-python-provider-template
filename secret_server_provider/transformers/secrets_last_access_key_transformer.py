@@ -24,7 +24,8 @@ class SecretsLastAccessKeyTransformer(BaseTransformer):
         (normalized_secret_id, access_key_records) = raw_item
         asset = NewAssetRequestSchema(
             uniqueId=access_key_records['secretItemHistoryId'],
-            name=access_key_records['itemValueNew'],
+            name=f"Access Key: {access_key_records['itemValueNew']}",
+            description=access_key_records['itemValueNew'],
             # TODO need new type 'access_key"
             type=AssetType.Other,
         )

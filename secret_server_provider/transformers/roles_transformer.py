@@ -1,9 +1,11 @@
 from authomize.rest_api_client.generated.schemas import (
     GroupingType,
+    NewPermissionRequestSchema,
     NewGroupingRequestSchema,
     NewPrivilegeRequestSchema,
     PrivilegeType,
     RequestsBundleSchema,
+    PermissionSourceType,
 )
 from secret_server_openapiclient.model.role_model import RoleModel
 
@@ -37,12 +39,23 @@ class RolesTransformer(BaseTransformer):
             isRole=True,
         )
         bundle.new_groupings.append(new_group)
+
+        # Maybe duplicate?
         new_privilege = NewPrivilegeRequestSchema(
             uniqueId=role_id,
             type=self.get_privilege_type(raw_item.name),
             originPrivilegeName=raw_item.name,
         )
+        permission = NewPermissionRequestSchema(
+            sourceUniqueId=role_id,
+            sourceType=PermissionSourceType.Grouping,
+            privilegeId=role_id,
+            assetId=None,
+            isRole=True,
+        )
         bundle.new_privileges.append(new_privilege)
+        bundle.new_permissions.append(permission)
+
         return bundle
 
     def get_privilege_type(self, access_role_name: str) -> PrivilegeType:

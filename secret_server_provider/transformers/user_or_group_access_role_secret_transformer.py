@@ -25,6 +25,7 @@ class UserOrGroupAccessRoleToSecretTransformer(BaseTransformer):
         bundle = self.create_bundle()
         privilege_id = normalize_id(raw_item.secret_access_role_id)
         id = raw_item.group_id if raw_item.user_id is None else raw_item.user_id
+
         permission = NewPermissionRequestSchema(
             sourceUniqueId=normalize_id(id),
             sourceType=self._get_permission_type(raw_item.user_id),
@@ -33,7 +34,7 @@ class UserOrGroupAccessRoleToSecretTransformer(BaseTransformer):
             isRole=False,
         )
         # check if AccessRole has already been handled
-        if privilege_id not in self.shared_memory.existing_priveleges_set:
+        if privilege_id not in self.shared_memory.existing_privileges_ids_set:
             privilege_type = self.get_privilege_type(raw_item.secret_access_role_name)
             privilege = NewPrivilegeRequestSchema(
                 uniqueId=privilege_id,
@@ -41,7 +42,7 @@ class UserOrGroupAccessRoleToSecretTransformer(BaseTransformer):
                 originName=raw_item.secret_access_role_name,
             )
             bundle.new_privileges.append(privilege)
-            self.shared_memory.existing_priveleges_set.add(privilege_id)
+            self.shared_memory.existing_privileges_ids_set.add(privilege_id)
         bundle.new_permissions.append(permission)
         return bundle
 
@@ -56,6 +57,8 @@ class UserOrGroupAccessRoleToSecretTransformer(BaseTransformer):
             return PrivilegeType.Administrative
         if access_role_name == "View":
             return PrivilegeType.Read
+        if access_role_name == "Edit":
+            return PrivilegeType.Write
         self.logger.warning(
             "Unknown `secretAccessRoleName` - using `Uses` instead",
             secretAccessRoleName=access_role_name,

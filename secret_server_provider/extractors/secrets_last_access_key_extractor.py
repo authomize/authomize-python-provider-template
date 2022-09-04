@@ -18,8 +18,11 @@ class SecretsLastAccessKeyExtractor(BaseExtractor):
         api_instance = SecretsApi(data_provider_client.openapi_client)
         all_secrets = self.__get_paginated_results(api_instance)
         for secret in all_secrets:
-            for result in self.get_secret_access_key_history(normalize_id(secret.id))['records']:
-                yield (normalize_id(secret.id), result)
+            normalized_secret_id = normalize_id(secret.id)
+            access_key_history = self.get_secret_access_key_history(normalized_secret_id)
+            access_key_records = access_key_history['records']
+            for access_key_record in access_key_records:
+                yield (normalized_secret_id, access_key_record)
 
     def __get_paginated_results(self, api_instance: SecretsApi) -> Iterable[SecretModelV2]:
         cur_skip = 0
@@ -35,13 +38,17 @@ class SecretsLastAccessKeyExtractor(BaseExtractor):
         # TODO read slug from secret's template
         data_provider_client: SecretServerClient = self.data_provider_client
         slug = "access-key"
-        response = data_provider_client.internal_api_client.post_internal_api(f'{secret_id}/fields/{slug}', {})
+        response = data_provider_client.internal_api_client.post_internal_api(
+            url_path=f'/secret-audits/{secret_id}/fields/{slug}',
+        )
         try:
             response.raise_for_status()
             return response.json()
         except Exception as e:
             if "API_SecretFieldNotFound" in str(e):
                 self.logger.info("Secret {secret} has no access-keys", secret=secret_id)
-            else:
-                self.logger.info(str(e))
-            return {"records": []}
+                return {"records": []}
+            if "NoAccessKey" in str(e):
+                self.logger.info("Secret {secret} has no access-keys", secret=secret_id)
+                return {"records": []}
+            raise

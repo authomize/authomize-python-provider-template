@@ -14,12 +14,9 @@ class SimpleHttpClient(BaseClient):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {client_configuration.api_key}",
         }
-        self.url = "https://integrations.secretservercloud.com/internals/secret-audits"  # noqa: E501
+        self.url = "https://integrations.secretservercloud.com/internals"
 
-    def post_internal_api(self, url_path, json_body):
+    def post_internal_api(self, url_path, json_body=None):
+        json_body = json_body or {}
         url = f'{self.url}/{url_path}'
         return requests.post(url, headers=self.headers, json=json_body)
-
-    @staticmethod
-    def iter_all(callable, *args, **kwargs):
-        return callable(*args, **kwargs)

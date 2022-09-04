@@ -14,8 +14,6 @@ class FoldersTransformer(BaseTransformer):
     """
     Tramsform a list of all Apps in a OneLogin account.
 
-    See https://developers.onelogin.com/api-docs/1/apps/get-apps Get Apps documentation
-        https://developers.onelogin.com/api-docs/2/apps/list-apps
     """
 
     def validate_item_schema(self, raw_item: FolderModel) -> bool:
@@ -29,11 +27,12 @@ class FoldersTransformer(BaseTransformer):
             type=AssetType.Folder,
         )
         bundle.new_assets.append(asset)
-        inheritance = NewAssetInheritanceRequestSchema(
-            sourceId=normalize_id(raw_item.parent_folder_id),
-            targetId=normalize_id(raw_item.id),
-        )
 
         if raw_item.inherit_permissions is True:
+            inheritance = NewAssetInheritanceRequestSchema(
+                sourceId=normalize_id(raw_item.parent_folder_id),
+                targetId=normalize_id(raw_item.id),
+            )
             bundle.new_assets_inheritance.append(inheritance)
+
         return bundle

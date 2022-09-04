@@ -36,7 +36,7 @@ class UserOrGroupAccessRoleToSecretExtractor(BaseExtractor):
         cur_skip = 0
         has_next = True
         while (has_next):
-            if type(user) == UserModel:
+            if isinstance(user, UserModel):
                 api_response = api_instance.secret_permissions_service_search_secret_permissions(
                                             filter_user_id=user.id,
                                             skip=cur_skip)
