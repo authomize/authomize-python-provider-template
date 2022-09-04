@@ -22,7 +22,6 @@ class RolesTransformer(BaseTransformer):
     * Role (Groupping)
     * Role -> App permission
     * User -> Role inhertiance
-    # TODO - explain
     * Admin -> Role permission (in this context the role is an asset)
 
     See https://developers.onelogin.com/api-docs/1/roles/get-roles Get Roles documentation
