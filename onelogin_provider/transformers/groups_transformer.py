@@ -20,7 +20,7 @@ class GroupsTransformer(BaseTransformer):
     def transform_model(self, raw_item: Group) -> RequestsBundleSchema:
         bundle = self.create_bundle()
         new_group = NewGroupingRequestSchema(
-            unique_id=raw_item.id,
+            uniqueId=raw_item.id,
             name=raw_item.name,
             type=GroupingType.Group,
         )

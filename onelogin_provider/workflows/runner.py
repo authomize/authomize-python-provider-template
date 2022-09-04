@@ -7,11 +7,13 @@ from onelogin_provider.clients.onelogin_client import OneloginClient
 from onelogin_provider.configuration.client_configuration import OneloginClientConfiguration
 from onelogin_provider.extractors.applications_extractor import ApplicationsExtractor
 from onelogin_provider.extractors.groups_extractor import GroupsExtractor
+from onelogin_provider.extractors.privileges_extractor import PrivilegesExtractor
 from onelogin_provider.extractors.roles_extractor import RolesExtractor
 from onelogin_provider.extractors.users_extractor import UsersExtractor
 from onelogin_provider.models.shared_memory import OneloginProviderSharedMemory
 from onelogin_provider.transformers.applications_transformer import ApplicationsTransformer
 from onelogin_provider.transformers.groups_transformer import GroupsTransformer
+from onelogin_provider.transformers.privileges_transformer import PrivilegesTransformer
 from onelogin_provider.transformers.roles_transformer import RolesTransformer
 from onelogin_provider.transformers.users_transformer import UsersTransformer
 
@@ -25,6 +27,7 @@ class OneloginRunner(BaseAutoProviderRunner):
             (UsersExtractor, UsersTransformer),
             (ApplicationsExtractor, ApplicationsTransformer),
             (RolesExtractor, RolesTransformer),
+            (PrivilegesExtractor, PrivilegesTransformer),
         ]
 
     def create_client(self) -> OneloginClient:

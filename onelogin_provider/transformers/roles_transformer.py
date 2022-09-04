@@ -1,16 +1,18 @@
 from authomize.rest_api_client.generated.schemas import (
+    AssetType,
     GroupingType,
     NewAccountsAssociationRequestSchema,
+    NewAssetRequestSchema,
     NewGroupingRequestSchema,
     NewPermissionRequestSchema,
-    NewPrivilegeRequestSchema,
     PermissionSourceType,
-    PrivilegeType,
     RequestsBundleSchema,
 )
 from onelogin.api.models.role import Role
 
 from base_provider.transformers.base_transformer import BaseTransformer
+from onelogin_provider.models.const_models import ROLE_ADMIN_PRIVILEGE, USE_APP_PRIVILEGE
+from onelogin_provider.models.shared_memory import OneloginProviderSharedMemory
 
 
 class RolesTransformer(BaseTransformer):
@@ -31,31 +33,45 @@ class RolesTransformer(BaseTransformer):
         return True
 
     def transform_model(self, raw_item: Role) -> RequestsBundleSchema:
+        shared_memory: OneloginProviderSharedMemory = self.shared_memory
         bundle = self.create_bundle()
+
+        if USE_APP_PRIVILEGE.uniqueId not in shared_memory.saved_const_models_ids:
+            shared_memory.saved_const_models_ids.add(USE_APP_PRIVILEGE.uniqueId)
+            bundle.new_privileges.append(USE_APP_PRIVILEGE)
+
+        if ROLE_ADMIN_PRIVILEGE.uniqueId not in shared_memory.saved_const_models_ids:
+            shared_memory.saved_const_models_ids.add(ROLE_ADMIN_PRIVILEGE.uniqueId)
+            bundle.new_privileges.append(ROLE_ADMIN_PRIVILEGE)
+
         role_id = raw_item.id
-        new_group = NewGroupingRequestSchema(
-            unique_id=role_id,
+        new_role_group = NewGroupingRequestSchema(
+            uniqueId=role_id,
             name=raw_item.name,
-            # todo - make role
+            originType="Role",
             type=GroupingType.Group,
-            isRole=len(raw_item.name) != 0,
+            isRole=True,
         )
-        bundle.new_groupings.append(new_group)
-        new_privilege = NewPrivilegeRequestSchema(
-            uniqueId=raw_item.name,
-            type=PrivilegeType.Use,  # TODO: map oneLogin roles to canonical roles
-            originPrivilegeName=raw_item.name,
+        bundle.new_groupings.append(new_role_group)
+
+        new_role_asset = NewAssetRequestSchema(
+            uniqueId=role_id,
+            name=raw_item.name,
+            originType="Role",
+            type=AssetType.Other,
         )
-        bundle.new_privileges.append(new_privilege)
+        bundle.new_assets.append(new_role_asset)
+
         if raw_item.apps:
             for app_id in raw_item.apps:
-                permission = NewPermissionRequestSchema(
+                app_permission = NewPermissionRequestSchema(
                     sourceUniqueId=role_id,
                     sourceType=PermissionSourceType.Grouping,
                     assetId=app_id,
-                    privilegeId=raw_item.name,
+                    privilegeId=USE_APP_PRIVILEGE.uniqueId,
                 )
-                bundle.new_permissions.append(permission)
+                bundle.new_permissions.append(app_permission)
+
         if raw_item.users:
             for user_id in raw_item.users:
                 association = NewAccountsAssociationRequestSchema(
@@ -65,12 +81,13 @@ class RolesTransformer(BaseTransformer):
                 bundle.new_accounts_association.append(association)
         if raw_item.admins:
             for admin_user_id in raw_item.admins:
-                permission = NewPermissionRequestSchema(
+                role_admin_permission = NewPermissionRequestSchema(
                     sourceUniqueId=admin_user_id,
                     sourceType=PermissionSourceType.Account,
                     assetId=role_id,
-                    privilegeId=raw_item.name,
+                    privilegeId=ROLE_ADMIN_PRIVILEGE.uniqueId,
+                    isRole=False,
                 )
-                bundle.new_permissions.append(permission)
+                bundle.new_permissions.append(role_admin_permission)
 
         return bundle
