@@ -9,6 +9,7 @@ from onelogin_provider.clients.onelogin_client import OneloginClient
 class PrivilegesExtractor(BaseExtractor):
     """
     Gets a list of privilege resources.
+    Note: Is not working and shouldn't be used now (Because the API is not working)
     For every privilege, get roles ids that are assigned to it
     And also get users ids that are assigned to it
 

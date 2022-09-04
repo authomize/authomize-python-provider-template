@@ -15,7 +15,7 @@ from base_provider.transformers.base_transformer import BaseTransformer
 class PrivilegesTransformer(BaseTransformer):
     """
     Transform a list of privilege resources and roles + users assigned to it
-
+    Note: Is not working and shouldn't be used now (Because the API is not working)
     See https://developers.onelogin.com/api-docs/1/privileges/list-privileges
         https://developers.onelogin.com/api-docs/1/privileges/get-roles
         https://developers.onelogin.com/api-docs/1/privileges/get-users
