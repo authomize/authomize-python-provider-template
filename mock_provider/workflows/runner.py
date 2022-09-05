@@ -5,7 +5,7 @@ from base_provider.transformers.base_transformer import BaseTransformer
 from base_provider.workflows.base_auto_runner import BaseAutoProviderRunner
 from mock_provider.clients.client import MockProviderClient
 from mock_provider.configuration.client_configuration import MockProviderClientConfiguration
-from mock_provider.extractors.files_extractor import FilesExtactor
+from mock_provider.extractors.files_extractor import FilesExtractor
 from mock_provider.models.shared_memory import MockProviderSharedMemory
 from mock_provider.transformers.files_transformer import FilesTransformer
 
@@ -15,7 +15,7 @@ class MockProviderRunner(BaseAutoProviderRunner):
         self,
     ) -> list[Tuple[Type[BaseExtractor], Type[BaseTransformer]]]:
         return [
-            (FilesExtactor, FilesTransformer),
+            (FilesExtractor, FilesTransformer),
         ]
 
     def create_client(self) -> MockProviderClient:
