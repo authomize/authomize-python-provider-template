@@ -1,4 +1,3 @@
-from encodings import search_function
 from typing import Iterable
 
 from secret_server_openapiclient.apis import UsersApi
@@ -22,4 +21,3 @@ class UsersExtractor(BaseExtractor):
         # paginated results
         # return self.__get_paginated_results(api_instance)
         return get_paginated_results(api_instance.users_service_search_users)
-

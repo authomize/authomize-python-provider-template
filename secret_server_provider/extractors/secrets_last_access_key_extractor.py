@@ -1,7 +1,6 @@
 from typing import Iterable
 
 from secret_server_openapiclient.apis import SecretsApi
-from secret_server_openapiclient.model.secret_model_v2 import SecretModelV2
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
@@ -12,7 +11,7 @@ from secret_server_provider.paginator import get_paginated_results
 class SecretsLastAccessKeyExtractor(BaseExtractor):
     """
     Gets a history of the access-key field values through internal API
-    For now the access-key is assumed to exist in the secret's template which is not neccessary so 
+    For now the access-key is assumed to exist in the secret's template which is not neccessary so
     The field name should be fetched from the secret template
     The returned dictionary contains records looking like this :
     {

@@ -20,4 +20,3 @@ class RolesExtractor(BaseExtractor):
         api_instance = RolesApi(data_provider_client.openapi_client)
 
         return get_paginated_results(api_instance.roles_service_get_all)
-

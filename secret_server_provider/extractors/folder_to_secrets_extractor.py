@@ -18,4 +18,3 @@ class FolderToSecretsExtractor(BaseExtractor):
         api_instance = SecretsApi(data_provider_client.openapi_client)
 
         return get_paginated_results(api_instance.secrets_service_search_v2)
-

@@ -27,4 +27,3 @@ class UserHasRoleExtractor(BaseExtractor):
             user_roles = get_paginated_results_by_id(user.id, api_instance.users_service_get_roles)
             for role_record in user_roles:
                 yield (user, role_record)
-

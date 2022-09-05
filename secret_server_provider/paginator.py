@@ -1,7 +1,7 @@
 from typing import Iterable
 
 
-def get_paginated_results(api_function:classmethod) -> Iterable[object]:
+def get_paginated_results(api_function: classmethod) -> Iterable[object]:
     cur_skip = 0
     has_next = True
     while (has_next):
@@ -10,7 +10,8 @@ def get_paginated_results(api_function:classmethod) -> Iterable[object]:
         cur_skip += int(api_response.next_skip)
         yield from api_response.records
 
-def get_paginated_results_by_id(id:float, api_function_by_id:classmethod) -> Iterable[object]:
+
+def get_paginated_results_by_id(id: float, api_function_by_id: classmethod) -> Iterable[object]:
     cur_skip = 0
     has_next = True
     while (has_next):

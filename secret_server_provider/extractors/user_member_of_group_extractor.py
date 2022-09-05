@@ -8,6 +8,7 @@ from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
 from secret_server_provider.paginator import get_paginated_results, get_paginated_results_by_id
 
+
 class UserMemberOfGroupExtractor(BaseExtractor):
     """
     Gets a list of User records.
@@ -30,4 +31,3 @@ class UserMemberOfGroupExtractor(BaseExtractor):
 
     def _fetch_user_groups(self, api_instance: UsersApi, user: UserModel) -> Iterable[GroupUserSummary]:
         return get_paginated_results_by_id(user.id, api_instance.users_service_get_user_groups)
-

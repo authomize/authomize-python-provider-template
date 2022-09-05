@@ -5,7 +5,6 @@ from secret_server_openapiclient.apis import FolderPermissionsApi, GroupsApi, Us
 from secret_server_openapiclient.model.folder_permission_summary import FolderPermissionSummary
 from secret_server_openapiclient.model.group_model import GroupModel
 from secret_server_openapiclient.model.user_model import UserModel
-from secret_server_openapiclient.model.user_summary import UserSummary
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
@@ -46,4 +45,3 @@ class UserOrGroupAccessRoleToFolderExtractor(BaseExtractor):
             has_next = api_response.has_next
             cur_skip += int(api_response.next_skip)
             yield from api_response.records
-

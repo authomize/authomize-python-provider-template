@@ -79,4 +79,3 @@ class SecretServerRunner(BaseAutoProviderRunner):
 
     def create_shared_memory(self) -> SecretServerProviderSharedMemory:
         return SecretServerProviderSharedMemory()
-

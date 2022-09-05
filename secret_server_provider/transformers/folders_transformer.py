@@ -27,7 +27,7 @@ class FoldersTransformer(BaseTransformer):
         )
         bundle.new_assets.append(asset)
 
-        if raw_item.inherit_permissions is True and int(raw_item.parent_folder_id) > 0 :
+        if raw_item.inherit_permissions is True and int(raw_item.parent_folder_id) > 0:
             inheritance = NewAssetInheritanceRequestSchema(
                 sourceId=normalize_id(raw_item.parent_folder_id),
                 targetId=normalize_id(raw_item.id),
