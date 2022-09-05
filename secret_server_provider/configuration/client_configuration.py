@@ -8,3 +8,4 @@ class SecretServerConfiguration(BaseClientConfiguration):
     #        default="https://integrations.secretservercloud.com/api")
     host: str = Field(..., env="SECRET_SERVER_HOST")
     api_key: str = Field(..., env="SECRET_SERVER_API_KEY")
+    keys_to_fetch: str = Field(..., env="KEY_FIELD_NAMES")
