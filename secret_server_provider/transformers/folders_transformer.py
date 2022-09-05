@@ -12,8 +12,7 @@ from secret_server_provider.normalize_id import normalize_id
 
 class FoldersTransformer(BaseTransformer):
     """
-    Tramsform a list of all Apps in a OneLogin account.
-
+    Transformer for folders
     """
 
     def validate_item_schema(self, raw_item: FolderModel) -> bool:

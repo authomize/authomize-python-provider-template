@@ -7,10 +7,7 @@ from secret_server_provider.normalize_id import normalize_id
 
 class SecretsTransformer(BaseTransformer):
     """
-    Tramsform a list of all Apps in a OneLogin account.
-
-    See https://developers.onelogin.com/api-docs/1/apps/get-apps Get Apps documentation
-        https://developers.onelogin.com/api-docs/2/apps/list-apps
+    Tramsform a list secrets
     """
 
     def validate_item_schema(self, raw_item: SecretModelV2) -> bool:

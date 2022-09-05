@@ -10,10 +10,7 @@ from base_provider.transformers.base_transformer import BaseTransformer
 
 class SecretsLastAccessKeyTransformer(BaseTransformer):
     """
-    Tramsform a list of all Apps in a OneLogin account.
-
-    See https://developers.onelogin.com/api-docs/1/apps/get-apps Get Apps documentation
-        https://developers.onelogin.com/api-docs/2/apps/list-apps
+    Transformer for history of a found access keys
     """
 
     def validate_item_schema(self, raw_item: tuple[str, dict]) -> bool:

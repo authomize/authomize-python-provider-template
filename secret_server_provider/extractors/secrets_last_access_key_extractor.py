@@ -10,7 +10,17 @@ from secret_server_provider.normalize_id import normalize_id
 
 class SecretsLastAccessKeyExtractor(BaseExtractor):
     """
-    Gets a list of Secrets records.
+    Gets a history of the access-key field values through internal API
+    For now the access-key is assumed to exist in the secret's template which is not neccessary so 
+    The field name should be fetched from the secret template
+    The returned dictionary contains records looking like this :
+    {
+            "attachmentId": 0,
+            "secretItemHistoryId": 72,
+            "date": "2022-08-29T12:35:50.707",
+            "itemValueNew": "abc12345",
+            "itemFileSize": null
+    }
     """
 
     def extract_raw(self) -> Iterable[tuple[str, dict]]:

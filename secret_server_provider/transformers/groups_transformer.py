@@ -12,8 +12,6 @@ from secret_server_provider.normalize_id import normalize_id
 class GroupsTransformer(BaseTransformer):
     """
     Transorm a list of Group resources
-
-    See https://developers.onelogin.com/api-docs/1/groups/get-groups Get Groups documentation
     """
 
     def validate_item_schema(self, raw_item: GroupModel) -> bool:
