@@ -14,6 +14,7 @@ from secret_server_provider.extractors.secrets_last_access_key_extractor import 
     SecretsLastAccessKeyExtractor,
 )
 from secret_server_provider.extractors.user_has_role_extractor import UserHasRoleExtractor
+from secret_server_provider.extractors.group_has_role_extractor import GroupHasRoleExtractor
 from secret_server_provider.extractors.user_member_of_group_extractor import (
     UserMemberOfGroupExtractor,
 )
@@ -36,6 +37,7 @@ from secret_server_provider.transformers.secrets_last_access_key_transformer imp
 )
 from secret_server_provider.transformers.secrets_transformer import SecretsTransformer
 from secret_server_provider.transformers.user_has_role_transformer import UserHasRoleTransformer
+from secret_server_provider.transformers.group_has_role_transformer import GroupHasRoleTransformer
 from secret_server_provider.transformers.user_member_of_group_transformer import (
     UserMemberOfGroupTransformer,
 )
@@ -57,6 +59,7 @@ class SecretServerRunner(BaseAutoProviderRunner):
         (FoldersExtractor, FoldersTransformer),
         (UserMemberOfGroupExtractor, UserMemberOfGroupTransformer),
         (UserHasRoleExtractor, UserHasRoleTransformer),
+        (GroupHasRoleExtractor, GroupHasRoleTransformer),
         (UserOrGroupAccessRoleToSecretExtractor, UserOrGroupAccessRoleToSecretTransformer),
         (UserOrGroupAccessRoleToFolderExtractor, UserOrGroupAccessRoleToFolderTransformer),
         (FolderToSecretsExtractor, FoldersToSecretsTransformer),

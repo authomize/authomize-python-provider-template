@@ -29,14 +29,14 @@ class GroupHasRoleExtractor(BaseExtractor):
             for role_record in self._fetch_group_roles(api_instance, group):
                 yield (group, role_record)
 
-    def _fetch_group_roles(self, api_instance: GroupsApi, user: GroupModel) -> Iterable[RoleSummary]:
+    def _fetch_group_roles(self, api_instance: GroupsApi, group: GroupModel) -> Iterable[RoleSummary]:
         return self.__get_paginated_results_for_roles(api_instance, group)
 
-    def __get_paginated_results_for_roles(self, api_instance: GroupsApi, user: GroupModel) -> Iterable[RoleSummary]:
+    def __get_paginated_results_for_roles(self, api_instance: GroupsApi, group: GroupModel) -> Iterable[RoleSummary]:
         cur_skip = 0
         has_next = True
         while (has_next):
-            api_response = api_instance.group_service_get_roles(id=user.id,
+            api_response = api_instance.groups_service_get_roles(id=group.id,
                                                                 skip=cur_skip)
             has_next = api_response.has_next
             cur_skip += int(api_response.next_skip)
@@ -46,7 +46,7 @@ class GroupHasRoleExtractor(BaseExtractor):
         cur_skip = 0
         has_next = True
         while (has_next):
-            api_response = api_instance.groups_service_search_users(skip=cur_skip)
+            api_response = api_instance.groups_service_search(skip=cur_skip)
             has_next = api_response.has_next
             cur_skip += int(api_response.next_skip)
             yield from api_response.records

@@ -18,7 +18,7 @@ class UserHasRoleExtractor(BaseExtractor):
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = UsersApi(data_provider_client.openapi_client)
 
-        all_users = self.__get_paginated_results(api_instance)
+        all_users = self.__get_paginated_results_for_users(api_instance)
         return self._get_all_user_roles(api_instance, all_users)
 
     def _get_all_user_roles(self, api_instance: UsersApi,
@@ -40,7 +40,7 @@ class UserHasRoleExtractor(BaseExtractor):
             cur_skip += int(api_response.next_skip)
             yield from api_response.records
 
-    def __get_paginated_results_for_users(self, api_instance: UsersApi) -> Iterable[UserSummary]:
+    def __get_paginated_results_for_users(self, api_instance: UsersApi) -> Iterable[RoleSummary]:
         cur_skip = 0
         has_next = True
         while (has_next):

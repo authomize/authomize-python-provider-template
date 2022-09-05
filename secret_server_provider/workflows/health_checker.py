@@ -1,3 +1,4 @@
+from secret_server_openapiclient.api.users_api import UsersApi
 from base_provider.workflows.base_health_checker import BaseProviderHealthChecker
 from secret_server_provider.clients.secret_server_client import SecretServerClient
 
@@ -11,5 +12,7 @@ class SecretServerHealthChecker(BaseProviderHealthChecker):
         client = SecretServerClient(
             client_configuration=client_configuration,
         )
-        client.openapi_client.get_users(limit=1)
-        return True
+        
+        users = UsersApi(client.openapi_client).users_service_search_users().records
+        return bool(users)
+        

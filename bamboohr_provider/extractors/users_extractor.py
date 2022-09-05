@@ -25,5 +25,5 @@ class UsersExtractor(BaseExtractor):
         @return: Iterable[Dict]
         """
         data_provider_client: BamboohrClient = self.data_provider_client  # type: ignore
-        result = data_provider_client.get_users(fields_to_fetch=USER_MODEL_FIELDS)
+        result = openapi_client.get_users(fields_to_fetch=USER_MODEL_FIELDS)
         return result["employees"]

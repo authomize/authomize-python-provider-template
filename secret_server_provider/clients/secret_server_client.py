@@ -13,5 +13,7 @@ class SecretServerClient(BaseClient):
         super().__init__(client_configuration=client_configuration)
         configuration = Configuration(host=client_configuration.host)
         configuration.api_key['BearerToken'] = f'bearer {client_configuration.api_key}'
+        # openapi client needs this
+        self.configuration = configuration
         self.openapi_client = ApiClient(configuration=configuration)
         self.internal_api_client = SimpleHttpClient(client_configuration)

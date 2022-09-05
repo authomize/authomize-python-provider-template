@@ -21,7 +21,7 @@ class UserMemberOfGroupExtractor(BaseExtractor):
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = UsersApi(data_provider_client.openapi_client)
 
-        all_users = self.__get_paginated_users_results(api_instance).records
+        all_users = self.__get_paginated_users_results(api_instance)
         return self._get_all_user_groups(api_instance, all_users)
 
     def _get_all_user_groups(self,
