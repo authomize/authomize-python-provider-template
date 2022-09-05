@@ -22,7 +22,7 @@ class GroupHasRoleTransformer(BaseTransformer):
         (group, role_info) = raw_item
         group_id = normalize_id(group.id)
         role_id = normalize_id(role_info.role_id)
-        
+
         if role_id in self.shared_memory.non_system_role_ids_set:
             association = NewGroupingsAssociationRequestSchema(
                 sourceId=group_id,
