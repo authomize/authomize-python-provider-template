@@ -11,6 +11,9 @@ from base_provider.transformers.base_transformer import BaseTransformer
 class UsersTransformer(BaseTransformer):
     """
     Transform a list of User resources.
+
+    See https://developers.onelogin.com/api-docs/1/users/get-users Get Users documentation
+        https://developers.onelogin.com/api-docs/2/users/list-users
     """
 
     def validate_item_schema(self, raw_item: User) -> bool:

@@ -11,7 +11,6 @@ from authomize.rest_api_client.generated.schemas import (
 from onelogin.api.models.role import Role
 
 from base_provider.transformers.base_transformer import BaseTransformer
-from secret_server_provider.normalize_id import normalize_id
 
 
 class RolesTransformer(BaseTransformer):
@@ -27,14 +26,13 @@ class RolesTransformer(BaseTransformer):
     See https://developers.onelogin.com/api-docs/1/roles/get-roles Get Roles documentation
         https://developers.onelogin.com/api-docs/2/roles/list-roles
     """
+
     def validate_item_schema(self, raw_item: Role) -> bool:
         return True
 
     def transform_model(self, raw_item: Role) -> RequestsBundleSchema:
         bundle = self.create_bundle()
         role_id = raw_item.id
-        self.logger.info("myrole : {id}", id=role_id)
-        
         new_group = NewGroupingRequestSchema(
             unique_id=role_id,
             name=raw_item.name,
@@ -75,5 +73,4 @@ class RolesTransformer(BaseTransformer):
                 )
                 bundle.new_permissions.append(permission)
 
-        self.shared_memory.non_system_role_ids_set.add(normalize_id(role_id))
         return bundle
