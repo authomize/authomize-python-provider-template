@@ -6,7 +6,6 @@ from secret_server_openapiclient.model.user_model import UserModel
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
-from secret_server_provider.normalize_id import normalize_id
 
 
 class UserHasRoleExtractor(BaseExtractor):
@@ -30,7 +29,9 @@ class UserHasRoleExtractor(BaseExtractor):
     def _fetch_user_roles(self, api_instance: UsersApi, user: UserModel) -> Iterable[RoleSummary]:
         return self.__get_paginated_results_for_roles(api_instance, user)
 
-    def __get_paginated_results_for_roles(self, api_instance: UsersApi, user: UserModel) -> Iterable[RoleSummary]:
+    def __get_paginated_results_for_roles(self,
+                                          api_instance: UsersApi,
+                                          user: UserModel) -> Iterable[RoleSummary]:
         cur_skip = 0
         has_next = True
         while (has_next):

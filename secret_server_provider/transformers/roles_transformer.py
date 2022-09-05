@@ -1,11 +1,11 @@
 from authomize.rest_api_client.generated.schemas import (
     GroupingType,
-    NewPermissionRequestSchema,
     NewGroupingRequestSchema,
+    NewPermissionRequestSchema,
     NewPrivilegeRequestSchema,
+    PermissionSourceType,
     PrivilegeType,
     RequestsBundleSchema,
-    PermissionSourceType,
 )
 from secret_server_openapiclient.model.role_model import RoleModel
 

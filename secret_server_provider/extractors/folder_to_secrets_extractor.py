@@ -5,7 +5,6 @@ from secret_server_openapiclient.model.secret_model_v2 import SecretModelV2
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
-from secret_server_provider.normalize_id import normalize_id
 
 
 class FolderToSecretsExtractor(BaseExtractor):

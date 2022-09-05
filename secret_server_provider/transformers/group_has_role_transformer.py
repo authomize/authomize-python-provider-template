@@ -2,8 +2,8 @@ from authomize.rest_api_client.generated.schemas import (
     NewAccountsAssociationRequestSchema,
     RequestsBundleSchema,
 )
-from secret_server_openapiclient.model.role_summary import RoleSummary
 from secret_server_openapiclient.model.group_model import GroupModel
+from secret_server_openapiclient.model.role_summary import RoleSummary
 
 from base_provider.transformers.base_transformer import BaseTransformer
 from secret_server_provider.normalize_id import normalize_id

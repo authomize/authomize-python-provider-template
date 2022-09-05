@@ -1,8 +1,5 @@
-from authomize.rest_api_client.generated.schemas import NewGroupingRequestSchema, GroupingType
+from authomize.rest_api_client.generated.schemas import GroupingType, NewGroupingRequestSchema
 from hamcrest import assert_that, equal_to, is_
-from secret_server_openapiclient.model.multifactor_authentication_provider_types import (
-    MultifactorAuthenticationProviderTypes,
-)
 from secret_server_openapiclient.model.group_model import GroupModel
 
 from secret_server_provider.configuration.shared_configuration import (

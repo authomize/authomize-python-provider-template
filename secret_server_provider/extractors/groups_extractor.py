@@ -5,7 +5,6 @@ from secret_server_openapiclient.model.group_model import GroupModel
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
-from secret_server_provider.normalize_id import normalize_id
 
 
 class GroupsExtractor(BaseExtractor):
