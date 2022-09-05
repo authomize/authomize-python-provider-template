@@ -12,7 +12,7 @@ setup(
     include_package_data=True,
     python_requires='>=3.10.*',
     install_requires=[
-        'authomize-rest-api-client>=2.1.0',
+        'authomize-rest-api-client>=2.3.0',
         'more-itertools~=8.12',
         'pydantic>=1.9.1',
         'structlog~=22.1',
