@@ -28,7 +28,6 @@ class SecretsLastAccessKeyExtractor(BaseExtractor):
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = SecretsApi(data_provider_client.openapi_client)
         all_secrets = get_paginated_results(api_instance.secrets_service_search_v2)
-        breakpoint()
         for secret in all_secrets:
             normalized_secret_id = normalize_id(secret.id)
             for field_key in data_provider_client.client_configuration.keys_to_fetch.split(','):
