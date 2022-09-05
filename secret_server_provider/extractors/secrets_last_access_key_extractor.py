@@ -6,6 +6,7 @@ from secret_server_openapiclient.model.secret_model_v2 import SecretModelV2
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
 from secret_server_provider.normalize_id import normalize_id
+from secret_server_provider.paginator import get_paginated_results
 
 
 class SecretsLastAccessKeyExtractor(BaseExtractor):
@@ -26,22 +27,13 @@ class SecretsLastAccessKeyExtractor(BaseExtractor):
     def extract_raw(self) -> Iterable[tuple[str, dict]]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = SecretsApi(data_provider_client.openapi_client)
-        all_secrets = self.__get_paginated_results(api_instance)
+        all_secrets = get_paginated_results(api_instance.secrets_service_search_v2)
         for secret in all_secrets:
             normalized_secret_id = normalize_id(secret.id)
             access_key_history = self.get_secret_access_key_history(normalized_secret_id)
             access_key_records = access_key_history['records']
             for access_key_record in access_key_records:
                 yield (normalized_secret_id, access_key_record)
-
-    def __get_paginated_results(self, api_instance: SecretsApi) -> Iterable[SecretModelV2]:
-        cur_skip = 0
-        has_next = True
-        while (has_next):
-            api_response = api_instance.secrets_service_search_v2(skip=cur_skip)
-            has_next = api_response.has_next
-            cur_skip += int(api_response.next_skip)
-            yield from api_response.records
 
     def get_secret_access_key_history(self, secret_id: str) -> dict:
         """Get secret access key history"""

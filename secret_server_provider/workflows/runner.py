@@ -80,12 +80,3 @@ class SecretServerRunner(BaseAutoProviderRunner):
     def create_shared_memory(self) -> SecretServerProviderSharedMemory:
         return SecretServerProviderSharedMemory()
 
-
-# '''
-# - How to run all
-# - Skip doesn’t work
-# - Tests
-# - Errors handling
-# - Visualization
-# - Integration with Authomize
-# '''

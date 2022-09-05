@@ -9,6 +9,7 @@ from secret_server_openapiclient.model.user_summary import UserSummary
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
+from secret_server_provider.paginator import get_paginated_results
 
 logger = structlog.get_logger()
 
@@ -24,9 +25,9 @@ class UserOrGroupAccessRoleToFolderExtractor(BaseExtractor):
         api_users_instance = UsersApi(data_provider_client.openapi_client)
         api_groups_instance = GroupsApi(data_provider_client.openapi_client)
         secret_instance = FolderPermissionsApi(data_provider_client.openapi_client)
-        for user in self.__get_paginated_users_results(api_users_instance):
+        for user in get_paginated_results(api_users_instance.users_service_search_users):
             yield from self.__get_paginated_results_user_or_group(secret_instance, user)
-        for group in self.__get_paginated_groups_results(api_groups_instance):
+        for group in get_paginated_results(api_groups_instance.groups_service_search):
             yield from self.__get_paginated_results_user_or_group(secret_instance, group)
 
     def __get_paginated_results_user_or_group(self, api_instance: UsersApi, user:
@@ -46,20 +47,3 @@ class UserOrGroupAccessRoleToFolderExtractor(BaseExtractor):
             cur_skip += int(api_response.next_skip)
             yield from api_response.records
 
-    def __get_paginated_users_results(self, api_instance: UsersApi) -> Iterable[UserSummary]:
-        cur_skip = 0
-        has_next = True
-        while (has_next):
-            api_response = api_instance.users_service_search_users(skip=cur_skip)
-            has_next = api_response.has_next
-            cur_skip += int(api_response.next_skip)
-            yield from api_response.records
-
-    def __get_paginated_groups_results(self, api_instance: GroupsApi) -> Iterable[GroupModel]:
-        cur_skip = 0
-        has_next = True
-        while (has_next):
-            api_response = api_instance.groups_service_search(skip=cur_skip)
-            has_next = api_response.has_next
-            cur_skip += int(api_response.next_skip)
-            yield from api_response.records

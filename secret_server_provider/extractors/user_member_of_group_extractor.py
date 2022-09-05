@@ -3,11 +3,10 @@ from typing import Iterable
 from secret_server_openapiclient.apis import UsersApi
 from secret_server_openapiclient.model.group_user_summary import GroupUserSummary
 from secret_server_openapiclient.model.user_model import UserModel
-from secret_server_openapiclient.model.user_summary import UserSummary
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
-
+from secret_server_provider.paginator import get_paginated_results, get_paginated_results_by_id
 
 class UserMemberOfGroupExtractor(BaseExtractor):
     """
@@ -20,7 +19,7 @@ class UserMemberOfGroupExtractor(BaseExtractor):
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = UsersApi(data_provider_client.openapi_client)
 
-        all_users = self.__get_paginated_users_results(api_instance)
+        all_users = get_paginated_results(api_instance.users_service_search_users)
         return self._get_all_user_groups(api_instance, all_users)
 
     def _get_all_user_groups(self,
@@ -30,23 +29,5 @@ class UserMemberOfGroupExtractor(BaseExtractor):
             yield from self._fetch_user_groups(api_instance, user)
 
     def _fetch_user_groups(self, api_instance: UsersApi, user: UserModel) -> Iterable[GroupUserSummary]:
-        return self.__get_paginated_groups_results(api_instance, user)
+        return get_paginated_results_by_id(user.id, api_instance.users_service_get_user_groups)
 
-    def __get_paginated_groups_results(self, api_instance: UsersApi, user: UserModel) -> Iterable[UserModel]:
-        cur_skip = 0
-        has_next = True
-        while (has_next):
-            api_response = api_instance.users_service_get_user_groups(id=user.id,
-                                                                      skip=cur_skip)
-            has_next = api_response.has_next
-            cur_skip += int(api_response.next_skip)
-            yield from api_response.records
-
-    def __get_paginated_users_results(self, api_instance: UsersApi) -> Iterable[UserSummary]:
-        cur_skip = 0
-        has_next = True
-        while (has_next):
-            api_response = api_instance.users_service_search_users(skip=cur_skip)
-            has_next = api_response.has_next
-            cur_skip += int(api_response.next_skip)
-            yield from api_response.records
