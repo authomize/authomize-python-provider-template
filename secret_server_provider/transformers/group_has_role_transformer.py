@@ -1,5 +1,5 @@
 from authomize.rest_api_client.generated.schemas import (
-    NewAccountsAssociationRequestSchema,
+    NewGroupingsAssociationRequestSchema,
     RequestsBundleSchema,
 )
 from secret_server_openapiclient.model.group_model import GroupModel
@@ -22,9 +22,11 @@ class GroupHasRoleTransformer(BaseTransformer):
         (group, role_info) = raw_item
         group_id = normalize_id(group.id)
         role_id = normalize_id(role_info.role_id)
-        association = NewAccountsAssociationRequestSchema(
-            sourceId=group_id,
-            targetId=role_id,
-        )
-        bundle.new_accounts_association.append(association)
+        
+        if role_id in self.shared_memory.non_system_role_ids_set:
+            association = NewGroupingsAssociationRequestSchema(
+                sourceId=group_id,
+                targetId=role_id,
+            )
+            bundle.new_groupings_association.append(association)
         return bundle
