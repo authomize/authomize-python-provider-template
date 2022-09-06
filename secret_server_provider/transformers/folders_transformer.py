@@ -33,5 +33,4 @@ class FoldersTransformer(BaseTransformer):
                 targetId=normalize_id(raw_item.id),
             )
             bundle.new_assets_inheritance.append(inheritance)
-
         return bundle

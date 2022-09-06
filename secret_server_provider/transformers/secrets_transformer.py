@@ -1,4 +1,8 @@
-from authomize.rest_api_client.generated.schemas import NewAssetRequestSchema, RequestsBundleSchema
+from authomize.rest_api_client.generated.schemas import (
+    AssetType,
+    NewAssetRequestSchema,
+    RequestsBundleSchema,
+)
 from secret_server_openapiclient.model.secret_summary import SecretSummary
 
 from base_provider.transformers.base_transformer import BaseTransformer
@@ -22,6 +26,8 @@ class SecretsTransformer(BaseTransformer):
             lastUsedAt=raw_item.last_accessed,
             # storing the template name as description
             description=raw_item.secret_template_name,
+            type=AssetType.File,
+            originType="Secret",
 
         )
         bundle.new_assets.append(asset)
