@@ -1,7 +1,7 @@
 from typing import Iterable
 
 from secret_server_openapiclient.apis import SecretsApi
-from secret_server_openapiclient.model.secret_model_v2 import SecretModelV2
+from secret_server_openapiclient.model.secret_summary import SecretSummary
 
 from base_provider.extractors.base_extractor import BaseExtractor
 from secret_server_provider.clients.secret_server_client import SecretServerClient
@@ -13,7 +13,7 @@ class SecretsExtractor(BaseExtractor):
     Gets a list of Secrets records.
     """
 
-    def extract_raw(self) -> Iterable[SecretModelV2]:
+    def extract_raw(self) -> Iterable[SecretSummary]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = SecretsApi(data_provider_client.openapi_client)
 
