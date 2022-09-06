@@ -24,7 +24,8 @@ class SecretsLastAccessKeyTransformer(BaseTransformer):
             name=f"{field_name}: {access_key_records['itemValueNew']}",
             description=access_key_records['itemValueNew'],
             # TODO need new type 'access_key" and "secret_key"
-            type=AssetType.Other,
+            type=AssetType.File,
+            originType=field_name,
         )
         bundle.new_assets.append(asset)
         inheritance = NewAssetInheritanceRequestSchema(
