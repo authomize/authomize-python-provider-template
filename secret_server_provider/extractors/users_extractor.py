@@ -18,6 +18,4 @@ class UsersExtractor(BaseExtractor):
     def extract_raw(self) -> Iterable[UserSummary]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = UsersApi(data_provider_client.openapi_client)
-        # paginated results
-        # return self.__get_paginated_results(api_instance)
         return get_paginated_results(api_instance.users_service_search_users)

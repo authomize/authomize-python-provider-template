@@ -1,4 +1,3 @@
-from csv import field_size_limit
 from typing import Iterable
 
 from secret_server_openapiclient.apis import SecretsApi
@@ -24,7 +23,9 @@ class SecretsLastAccessKeyExtractor(BaseExtractor):
             "itemFileSize": null
     }
     """
+
     predefined_interesting_keys = ["access-key", "username"]
+
     def extract_raw(self) -> Iterable[tuple[str, dict, str]]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = SecretsApi(data_provider_client.openapi_client)
@@ -32,9 +33,11 @@ class SecretsLastAccessKeyExtractor(BaseExtractor):
         for secret in all_secrets:
             normalized_secret_id = normalize_id(secret.id)
             all_input_keys = []
-            for field_key in data_provider_client.client_configuration.keys_to_fetch.split(','):
-                all_input_keys.append(field_key)
-                yield from self.get_records_by_slug(normalized_secret_id, field_key)
+            input_fields = data_provider_client.client_configuration.keys_to_fetch
+            if input_fields != '':
+                for field_key in input_fields.split(','):
+                    all_input_keys.append(field_key)
+                    yield from self.get_records_by_slug(normalized_secret_id, field_key)
             for field_key in self.predefined_interesting_keys:
                 if field_key not in all_input_keys:
                     yield from self.get_records_by_slug(normalized_secret_id, field_key)

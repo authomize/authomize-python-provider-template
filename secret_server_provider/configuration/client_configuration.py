@@ -11,6 +11,8 @@ class SecretServerConfiguration(BaseClientConfiguration):
     api_host: str = Field(..., env="SECRET_SERVER_HOST")
     user_name: str = Field(..., env="SECRET_SERVER_USERNAME")
     password: str = Field(..., env="SECRET_SERVER_PASSWORD")
+    # pass empty string if no extra fields or list of fields
+    # access-key and username are by default fetched
     keys_to_fetch: str = Field(..., env="KEY_FIELD_NAMES")
     api_key: str = ""
 
