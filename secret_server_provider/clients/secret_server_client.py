@@ -11,8 +11,9 @@ class SecretServerClient(BaseClient):
         client_configuration: SecretServerConfiguration,
     ) -> None:
         super().__init__(client_configuration=client_configuration)
-        configuration = Configuration(host=client_configuration.host)
-        configuration.api_key['BearerToken'] = f'bearer {client_configuration.api_key}'
+        client_configuration.generate_authentication_token()
+        configuration = Configuration(host=client_configuration.api_host)
+        configuration.api_key['BearerToken'] = client_configuration.api_key
         # openapi client needs this
         self.configuration = configuration
         self.openapi_client = ApiClient(configuration=configuration)

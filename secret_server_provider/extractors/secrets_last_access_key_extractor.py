@@ -44,7 +44,7 @@ class SecretsLastAccessKeyExtractor(BaseExtractor):
         # TODO read slug from secret's template
         data_provider_client: SecretServerClient = self.data_provider_client
         response = data_provider_client.internal_api_client.post_internal_api(
-            url_path=f'/secret-audits/{secret_id}/fields/{slug}',
+            url_path=f'secret-audits/{secret_id}/fields/{slug}',
         )
         try:
             response.raise_for_status()
