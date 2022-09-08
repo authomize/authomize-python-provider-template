@@ -8,11 +8,12 @@ class SimpleHttpClient(BaseClient):
     def __init__(
         self,
         client_configuration: SecretServerConfiguration,
+        api_key: str,
     ) -> None:
         super().__init__(client_configuration=client_configuration)
         self.headers = {
             "Content-Type": "application/json",
-            "Authorization": client_configuration.api_key,
+            "Authorization": api_key,
         }
         self.url = "https://integrations.secretservercloud.com/internals"
 

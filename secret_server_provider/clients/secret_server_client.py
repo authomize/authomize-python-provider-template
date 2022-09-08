@@ -12,25 +12,24 @@ class SecretServerClient(BaseClient):
         client_configuration: SecretServerConfiguration,
     ) -> None:
         super().__init__(client_configuration=client_configuration)
-        self.generate_authentication_token_and_update_configuration()
-        configuration = Configuration(host=client_configuration.api_host)
-        configuration.api_key['BearerToken'] = client_configuration.api_key
+        (api_key, api_host) = self.generate_authentication_token()
+        configuration = Configuration(host=api_host)
+        configuration.api_key['BearerToken'] = api_key
         # openapi client needs this
         self.configuration = configuration
         self.openapi_client = ApiClient(configuration=configuration)
-        self.internal_api_client = SimpleHttpClient(client_configuration)
+        self.internal_api_client = SimpleHttpClient(client_configuration, api_key)
 
-    def generate_authentication_token_and_update_configuration(self):
-        if (self.client_configuration.api_key == ""):
-            headers = {"Content-Type": "application/x-www-form-urlencoded"}
-            data = {"username": "AuthomizeUser",
-                    "grant_type": "password",
-                    "password": "Authomize123!",
-                    }
-            url = f'{self.client_configuration.api_host}/oauth2/token'
-            response = requests.post(url, headers=headers, data=data)
-            response.raise_for_status()
-            bearer_token = response.json()['access_token']
-            # shared with http_simple_client for internal api and external api querying
-            self.client_configuration.set_new_host(f'{self.client_configuration.api_host}/api')
-            self.client_configuration.set_api_key(f'bearer {bearer_token}')
+    def generate_authentication_token(self) -> tuple[str, str]:
+        headers = {"Content-Type": "application/x-www-form-urlencoded"}
+        data = {
+            "grant_type": "password",
+            "username": self.client_configuration.user_name,
+            "password": self.client_configuration.password,
+        }
+        url = f'{self.client_configuration.api_host}/oauth2/token'
+        response = requests.post(url, headers=headers, data=data)
+        response.raise_for_status()
+        bearer_token = response.json()['access_token']
+        # shared with http_simple_client for internal api and external api querying
+        return (f'bearer {bearer_token}', f'{self.client_configuration.api_host}/api')
