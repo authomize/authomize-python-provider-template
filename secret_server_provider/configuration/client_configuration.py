@@ -1,11 +1,13 @@
+from typing import Optional
+
 from pydantic import Field
 
 from base_provider.configuration.base_client_configuration import BaseClientConfiguration
 
 
 class SecretServerConfiguration(BaseClientConfiguration):
-    # TODO : add default like host: str = Field(..., env="SECRET_SERVER_HOST",
-    #        default="https://integrations.secretservercloud.com/api")
-    host: str = Field(..., env="SECRET_SERVER_HOST")
-    api_key: str = Field(..., env="SECRET_SERVER_API_KEY")
-    keys_to_fetch: str = Field(..., env="KEY_FIELD_NAMES")
+    api_host: str = Field(..., env="SECRET_SERVER_HOST")
+    user_name: str = Field(..., env="SECRET_SERVER_USERNAME")
+    password: str = Field(..., env="SECRET_SERVER_PASSWORD")
+    # access-key and username are by default fetched
+    keys_to_fetch: Optional[str] = Field(default="access-key,username", env="KEY_FIELD_NAMES")
