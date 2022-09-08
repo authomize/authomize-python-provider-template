@@ -24,23 +24,14 @@ class SecretsLastAccessKeyExtractor(BaseExtractor):
     }
     """
 
-    predefined_interesting_keys = ["access-key", "username"]
-
     def extract_raw(self) -> Iterable[tuple[str, dict, str]]:
         data_provider_client: SecretServerClient = self.data_provider_client
         api_instance = SecretsApi(data_provider_client.openapi_client)
         all_secrets = get_paginated_results(api_instance.secrets_service_search_v2)
         for secret in all_secrets:
             normalized_secret_id = normalize_id(secret.id)
-            all_input_keys = []
-            input_fields = data_provider_client.client_configuration.keys_to_fetch
-            if input_fields != '':
-                for field_key in input_fields.split(','):
-                    all_input_keys.append(field_key)
-                    yield from self.get_records_by_slug(normalized_secret_id, field_key)
-            for field_key in self.predefined_interesting_keys:
-                if field_key not in all_input_keys:
-                    yield from self.get_records_by_slug(normalized_secret_id, field_key)
+            for field_key in data_provider_client.client_configuration.keys_to_fetch.split(','):
+                yield from self.get_records_by_slug(normalized_secret_id, field_key)
 
     def get_records_by_slug(self, secret_id: str, slug: str) -> Iterable[tuple[str, dict, str]]:
         key_history = self.get_secret_access_key_history(secret_id, slug)
