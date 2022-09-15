@@ -28,6 +28,7 @@ class SecretsTransformer(BaseTransformer):
             description=raw_item.secret_template_name,
             type=AssetType.File,
             originType="Secret",
+            tags=["Key Vault"],
 
         )
         bundle.new_assets.append(asset)

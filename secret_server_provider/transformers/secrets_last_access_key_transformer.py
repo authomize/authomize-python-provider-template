@@ -26,6 +26,7 @@ class SecretsLastAccessKeyTransformer(BaseTransformer):
             # TODO need new type 'access_key" and "secret_key"
             type=AssetType.File,
             originType=field_name,
+            tags=["Key Vault"],
         )
         bundle.new_assets.append(asset)
         inheritance = NewAssetInheritanceRequestSchema(
