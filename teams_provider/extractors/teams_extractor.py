@@ -7,8 +7,8 @@ from teams_provider.models.shared_memory import TeamsProviderSharedMemory
 
 class TeamsExtractor(BaseExtractor):
     """
-    Gets a list of Group resources
-    See https://developers.onelogin.com/api-docs/1/groups/get-groups Get Groups documentation
+    Gets a list of Teams in the organization.
+    See https://learn.microsoft.com/en-us/graph/teams-list-all-teams
     """
 
     def extract_raw(self) -> Iterator[Dict]:
@@ -20,5 +20,5 @@ class TeamsExtractor(BaseExtractor):
             params={'filter': "resourceProvisioningOptions/Any(x:x eq 'Team')"}
         )
         for team in teams:
-            shared_memory.teams.append(team['id'])
+            shared_memory.team_ids.append(team['id'])
             yield team

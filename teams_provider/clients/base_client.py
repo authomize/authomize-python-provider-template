@@ -20,9 +20,7 @@ logger = logging.getLogger(__name__)
 
 class BaseMicrosoftHttpClient:
     """
-    An HTTP base class for various Microsoft APIs.
-    Handles throttling and result pagination.
-
+    An HTTP base class for Microsoft APIs, copied from microsoft-provider.
     """
 
     def __init__(

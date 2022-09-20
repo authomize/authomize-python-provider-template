@@ -9,5 +9,6 @@ class MicrosoftClient(BaseClient):
             client_configuration: MicrosoftClientConfiguration,
     ) -> None:
         super().__init__(client_configuration=MicrosoftClientConfiguration())
-        self.client = MicrosoftGraphClient(client_configuration.tenant_id, client_configuration.client_id,
+        self.client = MicrosoftGraphClient(client_configuration.tenant_id,
+                                           client_configuration.client_id,
                                            client_configuration.client_secret)

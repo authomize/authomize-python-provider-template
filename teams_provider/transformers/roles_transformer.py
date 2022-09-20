@@ -4,18 +4,20 @@ from authomize.rest_api_client.generated.schemas import (
     NewAccountsAssociationRequestSchema,
     RequestsBundleSchema,
 )
-from onelogin.api.models.role import Role
 
 from base_provider.transformers.base_transformer import BaseTransformer
+from teams_provider.constants import OWNERS_ID_PREFIX
 
 
 class RolesTransformer(BaseTransformer):
     """
     Transform a list of Role resources.
-    If a user is a team or a channel owner, creates an association between it and the team/channel owners virtual group.
+    If a user is a team or a channel owner, creates an association between it and the team/channel
+    owners virtual group.
+    TODO: create rest of associations.
     """
 
-    def validate_item_schema(self, raw_item: Role) -> bool:
+    def validate_item_schema(self, raw_item: Dict) -> bool:
         return True
 
     def transform_model(self, raw_item: Dict) -> RequestsBundleSchema:
@@ -29,9 +31,9 @@ class RolesTransformer(BaseTransformer):
         if 'owner' in raw_item['roles']:
             user_id = raw_item['userId']
             if channel:
-                target = 'owners:' + channel
+                target = OWNERS_ID_PREFIX + channel
             else:
-                target = 'owners:' + team
+                target = OWNERS_ID_PREFIX + team
 
             association = NewAccountsAssociationRequestSchema(
                 sourceId=user_id,

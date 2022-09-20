@@ -48,6 +48,7 @@ class MicrosoftGraphClient(BaseMicrosoftHttpClient):
 
         Params:
             sub_uri: the uri to query under the graph API endpoint https://graph.microsoft.com/v1.0/
+                Each result is also tagged with the sub_uri so it can be identified by the caller.
             headers: additional request headers
             params: query parameters, converted to the $param=value& format
             complete_url: allows to override endpoint URL

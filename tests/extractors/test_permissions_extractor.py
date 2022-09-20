@@ -1,13 +1,8 @@
 """Tests for extractors"""
-from hamcrest import assert_that
 
 from extractors.testing_client import create_microsoft_client
 from mock_provider.configuration.shared_configuration import MockProviderSharedConfiguration
-from mock_provider.models.shared_memory import MockProviderSharedMemory
-from teams_provider.extractors.channels_extractor import ChannelsExtractor
-from teams_provider.extractors.teams_extractor import TeamsExtractor
 from teams_provider.extractors.permissions_extractor import PermissionsExtractor
-from teams_provider.extractors.roles_extractor import RolesExtractor
 from teams_provider.models.shared_memory import TeamsProviderSharedMemory
 
 
@@ -15,7 +10,7 @@ def _create_extractor(files_to_extract: int = 10) -> PermissionsExtractor:
     """'Create a NON MOCKED EXTRACTOR for manual testing"""
     client = create_microsoft_client()
     shared_memory = TeamsProviderSharedMemory()
-    shared_memory.teams.extend(['29696c03-336f-4cbc-b5af-34460786a955', 'daf1d88d-f80a-45e4-8f5e-d2afb9d7f4f4'])
+    shared_memory.team_ids.extend(['29696c03-336f-4cbc-b5af-34460786a955', 'daf1d88d-f80a-45e4-8f5e-d2afb9d7f4f4'])
     return PermissionsExtractor(
         client,
         shared_memory=shared_memory,
